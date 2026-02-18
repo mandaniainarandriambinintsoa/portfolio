@@ -1,0 +1,328 @@
+{
+  "meta": {
+    "home": {
+      "title": "Manda | Architecte IA & Automatisation - Expert N8N & Développeur No-Code Madagascar",
+      "description": "Mandaniaina Randriambinintsoa - Architecte IA, expert N8N, automatisation builder. Applications fullstack avec Claude Code, Bubble, Next.js, Supabase. Basé à Antananarivo, Madagascar."
+    },
+    "about": {
+      "title": "À propos de Manda | Architecte IA & Automatisation Builder",
+      "description": "Mandaniaina Randriambinintsoa - +4 ans d'expérience en développement No-Code/Low-Code et automatisation. Du React à l'architecture IA."
+    },
+    "contact": {
+      "title": "Contacter Manda | Démarrer un projet d'automatisation",
+      "description": "Contactez Mandaniaina Randriambinintsoa pour vos projets d'automatisation, développement No-Code et intégration IA."
+    }
+  },
+  "nav": {
+    "services": "Services",
+    "process": "Process",
+    "projects": "Projets",
+    "about": "À propos",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "hero": {
+    "line1": "J'AUTOMATISE.",
+    "line2": "JE DÉVELOPPE.",
+    "line3": "JE SCALE.",
+    "subtitle_prefix": "Manda —",
+    "subtitle_highlight": "Architecte IA & Automatisation Builder",
+    "subtitle_rest": ". Je conçois des applications intelligentes et des workflows avancés avec N8N, Claude Code et le No-Code.",
+    "cta_primary": "Démarrer un projet",
+    "cta_secondary": "Voir mes réalisations"
+  },
+  "command_center": {
+    "file_name": "workflow-engine.ts"
+  },
+  "services": {
+    "title": "SERVICES",
+    "items": [
+      {
+        "icon": "hub",
+        "title": "Conception de Workflows",
+        "description": "Automatisation de processus complexes avec N8N : API, webhooks, logique conditionnelle, intégrations SaaS.",
+        "slug": "conception-workflows",
+        "color": "indigo"
+      },
+      {
+        "icon": "deployed_code",
+        "title": "Développement d'Applications",
+        "description": "Apps fullstack assistées par IA. Bubble, Webflow, Next.js, Supabase.",
+        "slug": "developpement-applications",
+        "color": "emerald"
+      },
+      {
+        "icon": "psychology",
+        "title": "Intégration IA",
+        "description": "Agents IA personnalisés avec Claude Code et LLMs, intégrés dans vos opérations métier.",
+        "slug": "integration-ia",
+        "color": "blue"
+      },
+      {
+        "icon": "speed",
+        "title": "Passage à l'Échelle",
+        "description": "Architecture cloud-native : CI/CD, Vercel, Render, Redis Queue, Python backend.",
+        "slug": "passage-echelle",
+        "color": "purple"
+      }
+    ]
+  },
+  "process": {
+    "title": "LE PROCESSUS",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Idéation & Cartographie",
+        "description": "On dissèque vos workflows manuels et on conçoit une architecture digitale optimisée pour la vitesse.",
+        "color": "indigo"
+      },
+      {
+        "number": "02",
+        "title": "Intégration IA",
+        "description": "On embarque l'intelligence là où ça compte : automatisation des décisions, du contenu et du support client.",
+        "color": "emerald"
+      },
+      {
+        "number": "03",
+        "title": "Déploiement Global",
+        "description": "Mise en production de systèmes robustes, cloud-native, prêts pour le trafic mondial.",
+        "color": "blue"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "CE QU'ILS EN DISENT",
+    "items": [
+      {
+        "quote": "Manda n'a pas juste construit notre app — il a architecturé un écosystème entier qui pense pour nous. Notre efficacité a triplé en trois mois et on n'a plus touché à un tableur depuis.",
+        "author": "Julien Renard",
+        "role": "Directeur des Opérations",
+        "company": "ScalApp",
+        "project": "scalapp"
+      },
+      {
+        "quote": "On cherchait un dev capable de livrer une marketplace immobilière complète en moins de 8 semaines. Manda l'a fait en 5. La géolocalisation, le paiement Stripe, la messagerie — tout fonctionnait du premier coup.",
+        "author": "Camille Durand",
+        "role": "CEO & Fondatrice",
+        "company": "ImmoPrive",
+        "project": "immoprive"
+      },
+      {
+        "quote": "Je gère 12 unités locatives au Texas et avant Manda, tout passait par des emails et des fichiers Excel. Maintenant j'ai un dashboard complet : baux, paiements, maintenance. Un game changer.",
+        "author": "Brandon Mitchell",
+        "role": "Propriétaire",
+        "company": "Yalee Creek Ranch",
+        "project": "yalee-creek-ranch"
+      },
+      {
+        "quote": "Factumation nous a permis de passer de zéro à 200 factures par mois sans aucun bug. Le fait que ce soit 100% gratuit et développé entièrement par IA, c'est juste impressionnant.",
+        "author": "Nomena Rakoto",
+        "role": "Freelance Designer",
+        "company": "Studio Nomena",
+        "project": "factumation"
+      }
+    ],
+    "transmission_title": "TRANSMISSION ENTRANTE",
+    "transmission_text": "La satisfaction client n'est pas un objectif, c'est une",
+    "transmission_highlight": "exigence système",
+    "transmission_rest": ". Chaque projet est optimisé pour une performance absolue et une expérience utilisateur sans faille."
+  },
+  "tech_stack": {
+    "label": "TECHNOLOGIES DE RÉFÉRENCE"
+  },
+  "projects": {
+    "title": "Réalisations",
+    "view_all": "Voir tous les projets",
+    "category_all": "Tous",
+    "category_webapp": "Applications Web",
+    "category_workflow": "Workflows N8N",
+    "items": [
+      {
+        "slug": "scalapp",
+        "title": "ScalApp",
+        "subtitle": "Gestion d'investissements automatisée",
+        "description": "Plateforme complète conçue pour ScalApp, une agence de développement no-code basée en France. Le projet comprend un site vitrine premium avec animations fluides, un dashboard de gestion d'investissements permettant le suivi en temps réel des portefeuilles clients, ainsi que des ponts API automatisés connectant plusieurs sources de données financières. L'interface d'administration sur mesure offre une vue consolidée des performances. Design pixel-perfect réalisé sur Figma puis développé sur Webflow avec un souci constant du détail et de l'expérience utilisateur.",
+        "tags": ["ScalApp", "Webflow", "Figma"],
+        "link": "https://scalapp.fr",
+        "featured": true,
+        "category": "webapp",
+        "image": "/images/projects/scalapp-dashboard-gestion-investissements.png",
+        "workflowFile": null
+      },
+      {
+        "slug": "immoprive",
+        "title": "ImmoPrive",
+        "subtitle": "Marketplace immobilière",
+        "description": "Marketplace immobilière complète connectant acheteurs et vendeurs en temps réel sur le marché français. La plateforme intègre une recherche avancée par géolocalisation avec carte interactive, des fiches propriétés détaillées avec galeries photos HD, un système de messagerie intégré entre acheteurs et vendeurs, ainsi que des paiements sécurisés via Stripe. Le back-office permet aux agents de gérer leurs annonces, suivre les leads et analyser les performances. Plus de 200 annonces actives dès le premier mois de lancement. Développée entièrement sur Bubble.",
+        "tags": ["ImmoPrive", "Bubble", "Stripe"],
+        "link": "https://app.immoprive.fr",
+        "featured": false,
+        "category": "webapp",
+        "image": "/images/projects/immoprive-marketplace-immobiliere.png",
+        "workflowFile": null
+      },
+      {
+        "slug": "yalee-creek-ranch",
+        "title": "Yalee Creek Ranch",
+        "subtitle": "Gestion locative",
+        "description": "Application de gestion locative clé en main développée pour Yalee Creek Ranch, un domaine au Texas. Le tableau de bord propriétaire centralise le suivi des réservations avec calendrier interactif, l'encaissement automatique des loyers, la génération dynamique de contrats de bail personnalisés et les rappels de paiement automatisés par email. Le système gère également les demandes de maintenance et l'historique complet de chaque locataire. Conçue sur Bubble avec un design Figma pour simplifier la gestion quotidienne de plusieurs unités locatives sans aucune compétence technique.",
+        "tags": ["Yalee Creek Ranch", "Bubble", "Figma"],
+        "link": null,
+        "featured": true,
+        "category": "webapp",
+        "image": "/images/projects/yalee-creek-ranch-gestion-locative.avif",
+        "workflowFile": null
+      },
+      {
+        "slug": "alchiimy",
+        "title": "Alchiimy",
+        "subtitle": "App de rencontre IA",
+        "description": "Application de rencontre nouvelle génération qui va au-delà du physique. Alchiimy utilise un algorithme de matching avancé basé sur la compatibilité émotionnelle et intellectuelle, analysant les centres d'intérêt, les valeurs et les objectifs de vie de chaque utilisateur. La plateforme propose des profils vérifiés, un système de conversation guidée par étapes pour construire des connexions authentiques avant le premier rendez-vous, et des événements de groupe thématiques. L'UX a été entièrement pensée pour encourager les rencontres réelles plutôt que le swipe infini. Développée sur Bubble avec une attention particulière portée à la confidentialité des données.",
+        "tags": ["Alchiimy", "Bubble"],
+        "link": "https://alchiimy.fr",
+        "featured": false,
+        "category": "webapp",
+        "image": "/images/projects/alchiimy-app-rencontre-ia.avif",
+        "workflowFile": null
+      },
+      {
+        "slug": "artigen",
+        "title": "Artigen",
+        "subtitle": "Générateur d'images IA",
+        "description": "Générateur d'images par intelligence artificielle, entièrement gratuit et sans aucune limite de créations. L'utilisateur décrit son idée en texte et obtient une image HD en quelques secondes. L'architecture fullstack repose sur Next.js pour le frontend et FastAPI (Python) pour le backend, avec un système de file d'attente intelligent (queue system) capable de gérer 50 à 100 utilisateurs simultanés même sur un hébergement gratuit. Le projet inclut un historique de génération, des presets de styles artistiques et un mode haute résolution. Déployé sur Vercel (frontend) et Render (API), avec une disponibilité quasi permanente sans frais d'infrastructure.",
+        "tags": ["Next.js", "FastAPI", "Python", "Vercel", "Render"],
+        "link": "https://artigen-pro.vercel.app",
+        "featured": false,
+        "category": "webapp",
+        "image": "/images/projects/artigen-generateur-images-ia.png",
+        "workflowFile": null
+      },
+      {
+        "slug": "factumation",
+        "title": "Factumation",
+        "subtitle": "Logiciel de facturation",
+        "description": "Logiciel de facturation en ligne pensé pour les freelances, auto-entrepreneurs et PME à Madagascar et en Europe. Factumation permet de créer des factures et devis élégants en quelques secondes avec un éditeur intuitif, d'exporter en PDF professionnel prêt à envoyer, et de connecter ses outils métier via Webhook pour automatiser la comptabilité. Le logiciel est 100% gratuit, sans inscription complexe et sans carte bancaire requise. Il intègre la gestion multi-devises (Ariary, Euro), le suivi des paiements et les relances automatiques. Projet emblématique entièrement développé avec Claude Code et automatisé via N8N, démontrant la puissance de l'IA dans le développement logiciel.",
+        "tags": ["Claude Code", "N8N", "Automatisation"],
+        "link": "https://factumation.vercel.app",
+        "featured": false,
+        "category": "webapp",
+        "image": "/images/projects/factumation-logiciel-facturation.png",
+        "workflowFile": null
+      },
+      {
+        "slug": "scraping-flowremote",
+        "title": "Scraping FlowRemote",
+        "subtitle": "Automatisation offres d'emploi",
+        "description": "Workflow N8N complet qui scrape automatiquement les nouvelles offres d'emploi remote publiées sur FlowRemote. Le système extrait les données HTML de chaque annonce (titre, entreprise, salaire, localisation, date de publication), les structure proprement puis les filtre selon des critères personnalisés. Les offres pertinentes sont envoyées chaque jour par email via Gmail avec un formatage professionnel. Le workflow inclut un filtre de date pour ne remonter que les annonces récentes et éviter les doublons. Zéro intervention manuelle requise — le pipeline tourne en continu et s'adapte automatiquement aux changements de structure du site.",
+        "tags": ["N8N", "Automatisation"],
+        "link": null,
+        "featured": false,
+        "category": "workflow",
+        "image": "/images/projects/scraping-flowremote-automatisation-emploi.png",
+        "workflowFile": "scraping-flowremote"
+      },
+      {
+        "slug": "tracking-visiteurs",
+        "title": "Tracking Visiteurs",
+        "subtitle": "Suivi en temps réel",
+        "description": "Système de tracking visiteurs en temps réel conçu pour monitorer le trafic de sites web sans dépendre de Google Analytics. Chaque visite est automatiquement captée via un webhook, géolocalisée avec précision (pays, ville, adresse IP, fournisseur d'accès) et stockée dans une base Airtable structurée. Le workflow N8N filtre les IPs déjà connues pour éviter les doublons, enrichit les données avec des informations Webflow CMS et alimente un dashboard Airtable avec filtres avancés. Idéal pour analyser le trafic en temps réel, identifier les visiteurs récurrents, comprendre la provenance géographique de son audience et optimiser les taux de conversion.",
+        "tags": ["N8N", "Airtable"],
+        "link": null,
+        "featured": false,
+        "category": "workflow",
+        "image": "/images/projects/tracking-visiteurs-suivi-temps-reel.png",
+        "workflowFile": "tracking-visiteurs"
+      }
+    ]
+  },
+  "stats": {
+    "title": "EN CHIFFRES",
+    "items": [
+      { "value": 4, "suffix": "+", "label": "Ans d'expérience" },
+      { "value": 8, "suffix": "+", "label": "Projets livrés" },
+      { "value": 3, "suffix": "", "label": "Pays servis" },
+      { "value": 100, "suffix": "%", "label": "Satisfaction client" }
+    ]
+  },
+  "faq": {
+    "title": "QUESTIONS FRÉQUENTES",
+    "items": [
+      {
+        "question": "Quels sont vos tarifs pour un projet d'automatisation ?",
+        "answer": "Chaque projet est unique. Après un appel découverte gratuit de 30 minutes, je propose un devis détaillé adapté à la complexité du projet. Mes tarifs sont compétitifs grâce à ma localisation à Madagascar tout en offrant une qualité internationale."
+      },
+      {
+        "question": "Quels sont les délais de livraison habituels ?",
+        "answer": "Un workflow N8N simple est livré en 3 à 5 jours. Une application complète (type marketplace ou dashboard) prend entre 4 et 8 semaines. Je m'engage toujours sur un calendrier précis avant de démarrer."
+      },
+      {
+        "question": "Travaillez-vous avec des clients internationaux ?",
+        "answer": "Absolument. Je travaille avec des clients en France, aux États-Unis et à Madagascar. La communication se fait en français, avec des outils comme Slack, Notion et Google Meet pour un suivi en temps réel."
+      },
+      {
+        "question": "Quel support proposez-vous après la livraison ?",
+        "answer": "Chaque projet inclut 30 jours de support post-livraison gratuit pour les ajustements et corrections de bugs. Au-delà, je propose des contrats de maintenance mensuels pour garantir la pérennité de vos systèmes."
+      },
+      {
+        "question": "Quelles technologies utilisez-vous ?",
+        "answer": "Mon stack principal : N8N pour l'automatisation, Bubble et Webflow pour le No-Code, Next.js et Supabase pour le fullstack, Claude Code et les LLMs pour l'IA. Je choisis toujours la technologie la plus adaptée à votre besoin."
+      }
+    ]
+  },
+  "cta_final": {
+    "title": "Prêt à ",
+    "title_highlight": "automatiser votre business",
+    "title_end": " ?",
+    "subtitle": "Discutons de votre projet et transformons vos processus manuels en systèmes intelligents.",
+    "button": "Démarrer un projet",
+    "button_href": "/fr/contact"
+  },
+  "footer": {
+    "copyright": "© 2025 Manda. Automatisation & Architecture."
+  },
+  "about": {
+    "title": "À propos de Manda",
+    "subtitle": "Architecte IA & Automatisation Builder",
+    "bio": "Je suis Mandaniaina Randriambinintsoa, basé à Antananarivo, Madagascar. Formé en informatique (Master 1, ESTI) avec une spécialisation en développement, je conçois et construis des applications intelligentes et des automatisations avancées.",
+    "philosophy": "La création d'une œuvre d'art n'est pas le fruit du hasard, c'est le résultat de l'imagination, du travail et de la détermination.",
+    "approach_title": "Mon approche",
+    "approach_items": [
+      "Définir l'architecture technique des projets",
+      "Utiliser les AI builders (Claude Code, LLMs) pour générer rapidement les applications",
+      "Vérifier, tester et itérer jusqu'à obtenir des fonctionnalités fiables et scalables"
+    ],
+    "experience": "+4 ans d'expérience en développement No-Code/Low-Code et automatisation (GetHumanCall, ScalApp.fr, ARPON). Du React en alternance à l'architecture IA en passant par le No-Code — je combine le meilleur des deux mondes.",
+    "cta": "Ouvert à la collaboration mondiale.",
+    "timeline": [
+      {
+        "period": "2021-2023",
+        "title": "Développeur React Junior",
+        "company": "PRESCOI Service",
+        "description": "Contrat en alternance, développement React"
+      },
+      {
+        "period": "2023-2026",
+        "title": "Développeur No-Code",
+        "company": "GetHumanCall & ScalApp.fr",
+        "description": "Apps Bubble, sites Webflow, maintenance et mise à jour"
+      },
+      {
+        "period": "2026+",
+        "title": "Full Stack IA & Automatisation",
+        "company": "ARPON",
+        "description": "Applications intelligentes, automatisations avancées avec Claude Code et LLMs"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Démarrer un projet",
+    "subtitle": "Discutons de votre prochain projet d'automatisation ou de développement.",
+    "name_label": "Nom",
+    "email_label": "Email",
+    "message_label": "Message",
+    "submit": "Envoyer",
+    "info_email": "mandaniaina.randriambinintsoa@gmail.com",
+    "info_phone": "+261 34 65 186 95",
+    "info_location": "Antananarivo, Madagascar"
+  }
+}

@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@import "highlight.js/styles/github-dark-dimmed.css";
+
+@theme inline {
+  --color-primary: #6366f1;
+  --color-accent-emerald: #10b981;
+  --color-accent-indigo: #4f46e5;
+  --color-bg-dark: #050507;
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-glass-bg: rgba(255, 255, 255, 0.02);
+  --font-display: "Inter", sans-serif;
+}
+
+/* Base */
+body {
+  background-color: var(--color-bg-dark);
+  color: #e2e8f0;
+  font-family: var(--font-display);
+  overflow-x: hidden;
+}
+
+/* Mesh Gradient Background */
+.mesh-gradient-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #050507;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(79, 70, 229, 0.1) 0px, transparent 60%);
+}
+
+/* Glass Effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav {
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Command Center */
+.command-center-glow {
+  box-shadow: 0 0 50px -12px rgba(99, 102, 241, 0.4);
+}
+
+.code-gradient {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+/* Service card color borders */
+.border-service-indigo { border-color: rgba(99, 102, 241, 0.2); }
+.border-service-emerald { border-color: rgba(16, 185, 129, 0.2); }
+.border-service-blue { border-color: rgba(59, 130, 246, 0.2); }
+.border-service-purple { border-color: rgba(168, 85, 247, 0.2); }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(to bottom, #ffffff, #64748b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animation base states (no-JS fallback: visible) */
+.anim-hidden {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .anim-hidden {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.3);
+  border-radius: 3px;
+}
+
+/* Tech stack marquee */
+.marquee-track {
+  display: flex;
+  gap: 4rem;
+  animation: marquee 30s linear infinite;
+}
+
+/* Projects marquee - slower, wider cards */
+.projects-marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: marquee 40s linear infinite;
+}
+
+.projects-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Skip to content */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 100;
+  padding: 1rem 2rem;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
