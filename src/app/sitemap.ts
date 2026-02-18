@@ -9,12 +9,18 @@ const serviceSlugsFr = [
   "developpement-applications",
   "integration-ia",
   "passage-echelle",
+  "developpeur-no-code-madagascar",
+  "automatisation-n8n-madagascar",
+  "developpeur-low-code-madagascar",
 ];
 const serviceSlugsEn = [
   "workflow-design",
   "app-development",
   "ai-integration",
   "systems-scaling",
+  "no-code-developer-madagascar",
+  "n8n-automation-expert-madagascar",
+  "low-code-developer-madagascar",
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

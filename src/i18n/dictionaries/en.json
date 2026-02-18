@@ -64,6 +64,177 @@
         "description": "Cloud-native architecture: CI/CD, Vercel, Render, Redis Queue, Python backend.",
         "slug": "systems-scaling",
         "color": "purple"
+      },
+      {
+        "icon": "code_off",
+        "title": "No-Code Developer in Madagascar",
+        "description": "Expert no-code developer based in Antananarivo. Bubble apps, Webflow sites and N8N automations for French and international businesses.",
+        "slug": "no-code-developer-madagascar",
+        "color": "indigo",
+        "isLanding": true,
+        "seoTitle": "No-Code Developer Madagascar | Bubble & Webflow Expert — Manda",
+        "seoDescription": "Freelance no-code developer in Madagascar. Bubble apps, Webflow sites, N8N automations. Competitive rates, international quality. Free quote.",
+        "landing": {
+          "heroText": "Looking for a reliable, fast and cost-effective no-code developer for your next project? Based in Antananarivo, I build professional applications with Bubble, Webflow and the best no-code tools — without writing a single line of traditional code.",
+          "sections": [
+            {
+              "title": "Why hire a no-code developer from Madagascar?",
+              "content": "Madagascar has become an emerging tech hub for digital outsourcing. As a no-code developer based in Antananarivo, I combine international-level technical expertise with rates up to 3x more competitive than European freelancers.\n\nFluent in French and English, with the GMT+3 timezone enabling real-time collaboration with European businesses. Over 4 years of experience in no-code development for clients in France, the USA and Madagascar."
+            },
+            {
+              "title": "My no-code toolkit",
+              "content": "**Bubble** — For complex web applications: marketplaces, dashboards, SaaS, custom CRMs. Bubble enables building complete applications with databases, business logic and API integrations.\n\n**Webflow** — For premium showcase sites, high-conversion landing pages and corporate blogs. Pixel-perfect design with smooth animations and built-in CMS.\n\n**N8N** — For workflow automation: connecting your tools (CRM, email, billing), data scraping and automatic notifications.\n\n**Supabase** — For robust backends when no-code reaches its limits. PostgreSQL database, authentication and file storage."
+            },
+            {
+              "title": "Projects delivered",
+              "content": "**Marketplaces** — Buyer-seller matching platforms with integrated payments (ImmoPrive).\n\n**Management dashboards** — Investment tracking and operational monitoring dashboards (ScalApp).\n\n**Property management** — Lease tracking, payments and maintenance for landlords (Yalee Creek Ranch).\n\n**AI applications** — Dating apps with intelligent matching algorithms (Alchiimy).\n\n**SaaS software** — Free invoicing for freelancers and SMEs (Factumation)."
+            },
+            {
+              "title": "My work process",
+              "content": "**1. Discovery call (free)** — We define your needs, goals and project scope.\n\n**2. Figma mockup** — Interactive prototype to validate the design before development.\n\n**3. Development** — Building the application with Bubble or Webflow, continuous testing.\n\n**4. Delivery & support** — Production deployment + 30 days of included support."
+            }
+          ],
+          "features": [
+            { "icon": "rocket_launch", "title": "Fast delivery", "description": "3 to 8 weeks depending on complexity" },
+            { "icon": "savings", "title": "Competitive rates", "description": "2-3x cheaper than in Europe" },
+            { "icon": "translate", "title": "Bilingual", "description": "Fluent French and English" },
+            { "icon": "support_agent", "title": "30-day support", "description": "Included after every delivery" },
+            { "icon": "verified", "title": "International quality", "description": "8+ projects delivered successfully" },
+            { "icon": "schedule", "title": "GMT+3 timezone", "description": "Real-time collaboration with Europe" }
+          ],
+          "faq": [
+            {
+              "question": "What's the difference between no-code and low-code?",
+              "answer": "No-code lets you create applications without writing code, using visual interfaces (Bubble, Webflow). Low-code combines visual interfaces with custom code for more flexibility. I master both approaches and advise the best option for your project."
+            },
+            {
+              "question": "How much does a no-code project cost in Madagascar?",
+              "answer": "A Webflow site starts from €500, a Bubble application between €1,500 and €5,000 depending on complexity. My rates are 2-3x more competitive than a France-based freelancer, for equivalent quality."
+            },
+            {
+              "question": "Do you work with clients in France?",
+              "answer": "Yes, the majority of my clients are based in France and Europe. Madagascar's timezone (GMT+3) enables real-time collaboration during European business hours. Communication via Slack, Notion and Google Meet."
+            },
+            {
+              "question": "What are your delivery timelines?",
+              "answer": "A Webflow site is delivered in 1-2 weeks. A complete Bubble application takes 4-8 weeks. I always commit to a precise timeline from quote validation."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "precision_manufacturing",
+        "title": "N8N Automation Expert in Madagascar",
+        "description": "Custom automation workflows with N8N. Connect your business tools, scraping, AI agents and eliminate repetitive manual work.",
+        "slug": "n8n-automation-expert-madagascar",
+        "color": "emerald",
+        "isLanding": true,
+        "seoTitle": "N8N Expert & Automation Madagascar | Custom Workflows — Manda",
+        "seoDescription": "N8N automation expert in Madagascar. Custom workflows, API integrations, scraping and AI agents. Optimize your business processes. Free quote.",
+        "landing": {
+          "heroText": "Your teams are spending hours on repetitive tasks? As an N8N expert based in Antananarivo, I design custom automation workflows that eliminate manual work and connect all your business tools — CRM, billing, email, databases.",
+          "sections": [
+            {
+              "title": "Why automate with N8N?",
+              "content": "N8N is the most powerful open-source automation platform on the market. Unlike Zapier or Make, N8N offers total control over your data (self-hosted), 400+ native integrations and the ability to create complex logic with conditional branches, loops and sub-workflows.\n\nAs an N8N expert in Madagascar, I design automations that run continuously, without human intervention, and scale with your business growth."
+            },
+            {
+              "title": "What I automate",
+              "content": "**Sales prospecting** — Lead scraping, data enrichment, automatic personalized email outreach.\n\n**Billing & accounting** — Automatic invoice generation, payment reminders, accounting software sync.\n\n**Customer support** — Automatic ticket sorting, AI responses, intelligent escalation.\n\n**Marketing** — Auto-publishing on social media, personalized newsletters, campaign tracking.\n\n**Human resources** — Automated onboarding, application tracking, internal notifications.\n\n**Monitoring** — Real-time alerts, visitor tracking, automatic daily reports."
+            },
+            {
+              "title": "Workflow examples",
+              "content": "**FlowRemote Scraping** — Automatic extraction of remote job offers, intelligent filtering by criteria and daily email delivery. Zero manual intervention.\n\n**Visitor Tracking** — Web monitoring system with IP geolocation, Airtable storage and real-time analytics dashboard.\n\n**Factumation** — Automated billing pipeline connecting Claude Code for document generation and N8N for automatic distribution."
+            },
+            {
+              "title": "The Madagascar advantage",
+              "content": "Hiring an N8N expert based in Madagascar gives you access to top-tier technical expertise at significantly lower rates than the European market. My GMT+3 timezone perfectly covers French business hours, and I communicate fluently in both French and English.\n\nEvery workflow is documented, tested and delivered with a user guide for your team."
+            }
+          ],
+          "features": [
+            { "icon": "all_inclusive", "title": "400+ integrations", "description": "Gmail, Slack, Stripe, Airtable..." },
+            { "icon": "lock", "title": "Self-hosted", "description": "Your data stays on your server" },
+            { "icon": "smart_toy", "title": "AI agents included", "description": "Claude, GPT in your workflows" },
+            { "icon": "schedule", "title": "24/7 automatic", "description": "Workflows run non-stop" },
+            { "icon": "savings", "title": "Immediate ROI", "description": "Save hours every week" },
+            { "icon": "description", "title": "Documentation", "description": "Every workflow is documented" }
+          ],
+          "faq": [
+            {
+              "question": "What is N8N exactly?",
+              "answer": "N8N is an open-source workflow automation platform. It connects your applications (Gmail, Slack, Airtable, Stripe, etc.) and creates automatic processes without coding. It's like Zapier, but more powerful with total control over your data."
+            },
+            {
+              "question": "How much does an N8N workflow cost?",
+              "answer": "A simple workflow (2-3 steps) starts at €200. A complex automation system (scraping + processing + distribution) costs between €500 and €2,000. Each quote is tailored to the actual project complexity."
+            },
+            {
+              "question": "Is my data secure?",
+              "answer": "Absolutely. N8N can be hosted on your own server (self-hosted), meaning your data never passes through third-party servers. I configure secure workflows with encryption and access control."
+            },
+            {
+              "question": "Can N8N be combined with artificial intelligence?",
+              "answer": "Yes. I regularly integrate AI agents (Claude, GPT) into N8N workflows for text processing, automatic classification, content generation and data analysis."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "terminal",
+        "title": "Low-Code Developer in Madagascar",
+        "description": "Custom applications combining no-code speed with code power. Next.js, Supabase, Claude Code and advanced API integrations.",
+        "slug": "low-code-developer-madagascar",
+        "color": "blue",
+        "isLanding": true,
+        "seoTitle": "Low-Code Developer Madagascar | Custom Applications — Manda",
+        "seoDescription": "Low-code developer in Madagascar. Custom Next.js, Supabase and AI applications. No-code speed, code power. Free quote.",
+        "landing": {
+          "heroText": "No-code isn't always enough. When your project requires advanced features, optimal performance or complex integrations, low-code is the answer. Based in Antananarivo, I combine visual development speed with custom code power.",
+          "sections": [
+            {
+              "title": "No-Code vs Low-Code: what's the difference?",
+              "content": "No-code exclusively uses visual interfaces (drag-and-drop) to create applications. Low-code combines these visual tools with custom code to go further.\n\nIn practice, low-code handles complex business logic, optimizes performance and integrates services that no-code alone cannot reach. It's the best of both worlds."
+            },
+            {
+              "title": "When to choose low-code?",
+              "content": "**High performance** — Your application needs to load in under one second with a smooth experience.\n\n**Complex integrations** — You need advanced API connections or custom business logic.\n\n**Pixel-perfect design** — User experience must be flawless, down to the pixel.\n\n**Optimal SEO** — Pure no-code is limited for search ranking. Low-code with Next.js offers world-class SEO.\n\n**Scalability** — Your project needs to evolve and support thousands of simultaneous users."
+            },
+            {
+              "title": "My low-code stack",
+              "content": "**Next.js** — React framework for ultra-fast web applications with server-side rendering (SSR/SSG). Ideal for SEO and performance.\n\n**Supabase** — Complete backend: PostgreSQL database, authentication, file storage and real-time API.\n\n**Claude Code** — AI-assisted development to accelerate code writing while maintaining quality.\n\n**Vercel** — Instant deployment, global CDN and built-in monitoring.\n\n**Tailwind CSS** — Responsive design system for modern, consistent interfaces."
+            },
+            {
+              "title": "Low-code projects delivered",
+              "content": "**Artigen** — AI image generator (Next.js + FastAPI) handling 100 simultaneous users on free hosting.\n\n**Factumation** — Complete invoicing software developed with Claude Code, demonstrating the power of AI-assisted development.\n\n**This portfolio** — Built with Next.js 16, Tailwind v4, GSAP and Supabase. 56 statically generated pages with optimized SEO score."
+            }
+          ],
+          "features": [
+            { "icon": "bolt", "title": "Ultra fast", "description": "Loading < 1 second guaranteed" },
+            { "icon": "search", "title": "Optimal SEO", "description": "Next.js server rendering for Google" },
+            { "icon": "api", "title": "Unlimited APIs", "description": "Integrations without limits" },
+            { "icon": "trending_up", "title": "Scalable", "description": "From 10 to 100,000 users" },
+            { "icon": "smart_toy", "title": "AI integrated", "description": "Claude Code and LLMs embedded" },
+            { "icon": "savings", "title": "Optimized cost", "description": "2-3x cheaper than in Europe" }
+          ],
+          "faq": [
+            {
+              "question": "Is low-code more expensive than no-code?",
+              "answer": "Slightly, as it involves some traditional development. But the value is excellent: you get performance and flexibility impossible with pure no-code, while staying well below the cost of full traditional development."
+            },
+            {
+              "question": "Can I migrate my no-code app to low-code?",
+              "answer": "Yes. If your Bubble or Webflow application reaches its limits, I can migrate it to a low-code stack (Next.js + Supabase) while preserving your data and improving performance."
+            },
+            {
+              "question": "What are the benefits of working with a low-code developer in Madagascar?",
+              "answer": "International-level technical expertise, rates 2-3x more competitive than the European market, fluent French communication, compatible timezone (GMT+3) and transparent collaboration via Slack and Google Meet."
+            },
+            {
+              "question": "How long to develop a low-code application?",
+              "answer": "A functional MVP is delivered in 3-6 weeks. A complete application with authentication, dashboard and integrations takes 6-12 weeks depending on complexity."
+            }
+          ]
+        }
       }
     ]
   },

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { i18n } from "@/i18n/config";
+import { updateSession } from "@/lib/supabase/middleware";
 
 function getLocale(request: NextRequest): string {
   const acceptLanguage = request.headers.get("accept-language");
@@ -16,7 +17,7 @@ function getLocale(request: NextRequest): string {
   return i18n.defaultLocale;
 }
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Skip internal paths
@@ -29,15 +30,38 @@ export function middleware(request: NextRequest) {
     return;
   }
 
-  // Check if locale is already in the pathname
+  // Admin routes — check auth session
+  if (pathname.startsWith("/admin")) {
+    const { user, supabaseResponse } = await updateSession(request);
+
+    // Allow access to login page without auth
+    if (pathname === "/admin/login") {
+      if (user) {
+        // Already logged in, redirect to dashboard
+        const url = request.nextUrl.clone();
+        url.pathname = "/admin";
+        return NextResponse.redirect(url);
+      }
+      return supabaseResponse;
+    }
+
+    // All other /admin routes require auth
+    if (!user) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/admin/login";
+      return NextResponse.redirect(url);
+    }
+
+    return supabaseResponse;
+  }
+
+  // Public routes — i18n handling
   const pathnameHasLocale = i18n.locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
   if (pathnameHasLocale) return;
 
-  // Redirect to default locale (FR) without adding /fr/ prefix
-  // Only redirect /en/ paths explicitly
   const locale = getLocale(request);
 
   if (locale !== i18n.defaultLocale) {

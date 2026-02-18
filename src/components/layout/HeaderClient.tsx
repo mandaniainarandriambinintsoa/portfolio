@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 type NavLink = { label: string; href: string };
@@ -49,8 +50,15 @@ export default function HeaderClient({
           {/* Logo */}
           <Link
             href={locale === "fr" ? "/" : "/en"}
-            className="text-2xl font-black tracking-tighter text-white"
+            className="flex items-center gap-2 text-2xl font-black tracking-tighter text-white"
           >
+            <Image
+              src="/images/logo-manda-dark.svg"
+              alt="Logo Manda"
+              width={32}
+              height={32}
+              className="w-8 h-8"
+            />
             MANDA<span className="text-indigo-500">.</span>
           </Link>
 

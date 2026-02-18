@@ -1,4 +1,5 @@
 import { createServerClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/static";
 import type { Locale } from "@/i18n/config";
 
 export type BlogPost = {
@@ -52,7 +53,7 @@ function mapRow(
 }
 
 export async function getBlogPosts(locale: Locale): Promise<BlogPost[]> {
-  const supabase = createServerClient();
+  const supabase = await createServerClient();
   const { data, error } = await supabase
     .from("blog_posts")
     .select("*")
@@ -71,7 +72,7 @@ export async function getBlogPostBySlug(
   slug: string,
   locale: Locale
 ): Promise<BlogPost | null> {
-  const supabase = createServerClient();
+  const supabase = await createServerClient();
   const { data, error } = await supabase
     .from("blog_posts")
     .select("*")
@@ -84,7 +85,7 @@ export async function getBlogPostBySlug(
 }
 
 export async function getAllBlogSlugs(): Promise<string[]> {
-  const supabase = createServerClient();
+  const supabase = createStaticClient();
   const { data, error } = await supabase
     .from("blog_posts")
     .select("slug")

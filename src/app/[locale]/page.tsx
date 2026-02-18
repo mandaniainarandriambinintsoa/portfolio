@@ -40,7 +40,7 @@ export default async function HomePage({
       </CommandCenterAnim>
 
       <ServicesGridAnim>
-        <ServicesGrid items={dict.services.items} />
+        <ServicesGrid items={dict.services.items.filter((s: { isLanding?: boolean }) => !s.isLanding)} />
       </ServicesGridAnim>
 
       <ProcessAnim>

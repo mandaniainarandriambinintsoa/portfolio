@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
+import { revalidateContent } from "@/lib/admin/revalidate";
 
 export async function POST(request: NextRequest) {
   const authHeader = request.headers.get("authorization");
@@ -13,33 +14,12 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { type, slug } = body as { type?: string; slug?: string };
 
-    if (type === "blog" && slug) {
-      revalidatePath(`/blog/${slug}`);
-      revalidatePath(`/en/blog/${slug}`);
-      revalidatePath("/blog");
-      revalidatePath("/en/blog");
-    } else if (type === "project" && slug) {
-      revalidatePath(`/projects/${slug}`);
-      revalidatePath(`/en/projects/${slug}`);
-      revalidatePath("/projects");
-      revalidatePath("/en/projects");
-      revalidatePath("/");
-      revalidatePath("/en");
-    } else if (type === "blog") {
-      revalidatePath("/blog");
-      revalidatePath("/en/blog");
-    } else if (type === "project") {
-      revalidatePath("/projects");
-      revalidatePath("/en/projects");
-      revalidatePath("/");
-      revalidatePath("/en");
+    if (type === "blog" || type === "project") {
+      revalidateContent(type, slug);
     } else {
-      // Revalidate everything
       revalidatePath("/", "layout");
+      revalidatePath("/sitemap.xml");
     }
-
-    // Always revalidate sitemap
-    revalidatePath("/sitemap.xml");
 
     return NextResponse.json({ revalidated: true, type, slug });
   } catch {

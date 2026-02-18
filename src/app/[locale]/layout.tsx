@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import SetHtmlLang from "@/components/layout/SetHtmlLang";
 import PersonJsonLd from "@/components/seo/PersonJsonLd";
 import WebSiteJsonLd from "@/components/seo/WebSiteJsonLd";
+import LocalBusinessJsonLd from "@/components/seo/LocalBusinessJsonLd";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }));
@@ -75,6 +76,7 @@ export default async function LocaleLayout({
       </a>
       <PersonJsonLd />
       <WebSiteJsonLd />
+      <LocalBusinessJsonLd />
       <div className="mesh-gradient-bg" aria-hidden="true" />
       <Header locale={locale} />
       {children}

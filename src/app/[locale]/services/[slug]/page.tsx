@@ -5,7 +5,11 @@ import { SITE_URL } from "@/lib/constants";
 import { notFound } from "next/navigation";
 import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import Button from "@/components/ui/Button";
+import GlassCard from "@/components/ui/GlassCard";
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -26,19 +30,27 @@ export async function generateMetadata({
   const { locale: rawLocale, slug } = await params;
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
   const dict = await getDictionary(locale);
-  const service = dict.services.items.find((s: { slug: string }) => s.slug === slug);
+  const service = dict.services.items.find((s: any) => s.slug === slug);
 
   if (!service) return {};
 
   const prefix = locale === "fr" ? "" : "/en";
+  const otherLocale = locale === "fr" ? "en" : "fr";
+  const otherDict = await getDictionary(otherLocale as Locale);
+  const otherService = otherDict.services.items.find((s: any) => s.color === service.color && !!s.isLanding === !!service.isLanding);
+
   return {
-    title: service.title,
-    description: service.description,
+    title: service.seoTitle || service.title,
+    description: service.seoDescription || service.description,
     alternates: {
       canonical: `${SITE_URL}${prefix}/services/${slug}`,
       languages: {
-        fr: `${SITE_URL}/services/${dict.services.items.find((s: { color: string }) => s.color === service.color)?.slug || slug}`,
-        en: `${SITE_URL}/en/services/${slug}`,
+        fr: locale === "fr"
+          ? `${SITE_URL}/services/${slug}`
+          : `${SITE_URL}/services/${otherService?.slug || slug}`,
+        en: locale === "en"
+          ? `${SITE_URL}/en/services/${slug}`
+          : `${SITE_URL}/en/services/${otherService?.slug || slug}`,
       },
     },
   };
@@ -52,7 +64,7 @@ export default async function ServicePage({
   const { locale: rawLocale, slug } = await params;
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
   const dict = await getDictionary(locale);
-  const service = dict.services.items.find((s: { slug: string }) => s.slug === slug);
+  const service: any = dict.services.items.find((s: any) => s.slug === slug);
 
   if (!service) notFound();
 
@@ -64,33 +76,156 @@ export default async function ServicePage({
   ];
 
   const contactHref = locale === "fr" ? "/contact" : "/en/contact";
+  const isLanding = !!service.isLanding && !!service.landing;
+
+  const colorMap: Record<string, string> = {
+    indigo: "text-indigo-400",
+    emerald: "text-emerald-400",
+    blue: "text-blue-400",
+    purple: "text-purple-400",
+  };
+
+  const bgColorMap: Record<string, string> = {
+    indigo: "bg-indigo-500/10 border-indigo-500/20",
+    emerald: "bg-emerald-500/10 border-emerald-500/20",
+    blue: "bg-blue-500/10 border-blue-500/20",
+    purple: "bg-purple-500/10 border-purple-500/20",
+  };
+
+  if (!isLanding) {
+    return (
+      <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
+        <ServiceJsonLd name={service.title} description={service.description} locale={locale} />
+        <BreadcrumbJsonLd items={breadcrumbs} />
+        <div className="max-w-4xl mx-auto">
+          <span className={`material-symbols-outlined text-5xl mb-6 block ${colorMap[service.color] || "text-indigo-400"}`}>
+            {service.icon}
+          </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-6 gradient-text">
+            {service.title}
+          </h1>
+          <p className="text-xl text-slate-400 mb-12 max-w-2xl">
+            {service.description}
+          </p>
+          <div className="glass-card rounded-2xl p-8 md:p-12 mb-12">
+            <p className="text-slate-300 leading-relaxed">
+              {service.description}
+            </p>
+          </div>
+          <Button href={contactHref} variant="primary" icon="trending_up">
+            {dict.hero.cta_primary}
+          </Button>
+        </div>
+      </main>
+    );
+  }
+
+  const landing = service.landing;
 
   return (
     <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
       <ServiceJsonLd name={service.title} description={service.description} locale={locale} />
       <BreadcrumbJsonLd items={breadcrumbs} />
-      <div className="max-w-4xl mx-auto">
-        <span className={`material-symbols-outlined text-5xl mb-6 block ${
-          service.color === "indigo" ? "text-indigo-400" :
-          service.color === "emerald" ? "text-emerald-400" :
-          service.color === "blue" ? "text-blue-400" : "text-purple-400"
-        }`}>
-          {service.icon}
-        </span>
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-6 gradient-text">
-          {service.title}
-        </h1>
-        <p className="text-xl text-slate-400 mb-12 max-w-2xl">
-          {service.description}
-        </p>
-        <div className="glass-card rounded-2xl p-8 md:p-12 mb-12">
-          <p className="text-slate-300 leading-relaxed">
-            {service.description}
+      {landing.faq && <FAQJsonLd items={landing.faq} />}
+
+      <div className="max-w-5xl mx-auto">
+        {/* Hero */}
+        <div className="mb-20">
+          <span className={`material-symbols-outlined text-5xl mb-6 block ${colorMap[service.color] || "text-indigo-400"}`}>
+            {service.icon}
+          </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-8">
+            {service.title}
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-3xl">
+            {landing.heroText}
           </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Button href={contactHref} variant="primary" icon="trending_up">
+              {dict.hero.cta_primary}
+            </Button>
+          </div>
         </div>
-        <Button href={contactHref} variant="primary" icon="trending_up">
-          {dict.hero.cta_primary}
-        </Button>
+
+        {/* Features grid */}
+        {landing.features && (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-20">
+            {landing.features.map((f: any) => (
+              <div key={f.title} className={`rounded-xl border p-5 ${bgColorMap[service.color] || bgColorMap.indigo}`}>
+                <span className={`material-symbols-outlined text-2xl mb-2 block ${colorMap[service.color] || "text-indigo-400"}`}>
+                  {f.icon}
+                </span>
+                <h3 className="font-bold text-white text-sm mb-1">{f.title}</h3>
+                <p className="text-xs text-slate-400">{f.description}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Content sections */}
+        {landing.sections?.map((section: any, idx: number) => (
+          <div key={idx} className="mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-6 text-white">
+              {section.title}
+            </h2>
+            <GlassCard className="prose-content">
+              {section.content.split("\n\n").map((paragraph: string, pIdx: number) => {
+                const isBold = paragraph.startsWith("**");
+                if (isBold) {
+                  const parts = paragraph.split("**");
+                  return (
+                    <p key={pIdx} className="text-slate-300 leading-relaxed mb-4 last:mb-0">
+                      {parts.map((part: string, i: number) =>
+                        i % 2 === 1 ? (
+                          <strong key={i} className="text-white font-semibold">{part}</strong>
+                        ) : (
+                          <span key={i}>{part}</span>
+                        )
+                      )}
+                    </p>
+                  );
+                }
+                return (
+                  <p key={pIdx} className="text-slate-300 leading-relaxed mb-4 last:mb-0">
+                    {paragraph}
+                  </p>
+                );
+              })}
+            </GlassCard>
+          </div>
+        ))}
+
+        {/* FAQ */}
+        {landing.faq && (
+          <div className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8 text-white">
+              {locale === "fr" ? "Questions fréquentes" : "Frequently asked questions"}
+            </h2>
+            <div className="space-y-4">
+              {landing.faq.map((item: any, idx: number) => (
+                <GlassCard key={idx}>
+                  <h3 className="font-bold text-white mb-3">{item.question}</h3>
+                  <p className="text-slate-400 leading-relaxed">{item.answer}</p>
+                </GlassCard>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Final CTA */}
+        <div className="glass-card rounded-2xl p-8 md:p-12 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            {locale === "fr" ? "Prêt à démarrer votre projet ?" : "Ready to start your project?"}
+          </h2>
+          <p className="text-slate-400 mb-8 max-w-xl mx-auto">
+            {locale === "fr"
+              ? "Discutons de vos besoins lors d'un appel découverte gratuit de 30 minutes."
+              : "Let's discuss your needs in a free 30-minute discovery call."}
+          </p>
+          <Button href={contactHref} variant="primary" icon="trending_up">
+            {dict.hero.cta_primary}
+          </Button>
+        </div>
       </div>
     </main>
   );

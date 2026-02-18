@@ -1,4 +1,5 @@
 import { createServerClient } from "@/lib/supabase/server";
+import { createStaticClient } from "@/lib/supabase/static";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import type { ProjectItem } from "@/lib/types";
@@ -37,7 +38,7 @@ function mapRow(
 
 async function fetchFromSupabase(locale: Locale): Promise<ProjectItem[] | null> {
   try {
-    const supabase = createServerClient();
+    const supabase = await createServerClient();
     const { data, error } = await supabase
       .from("projects")
       .select("*")
@@ -67,7 +68,7 @@ export async function getProjectBySlug(
   locale: Locale
 ): Promise<ProjectItem | null> {
   try {
-    const supabase = createServerClient();
+    const supabase = await createServerClient();
     const { data, error } = await supabase
       .from("projects")
       .select("*")
@@ -87,7 +88,7 @@ export async function getProjectBySlug(
 
 export async function getAllProjectSlugs(): Promise<string[]> {
   try {
-    const supabase = createServerClient();
+    const supabase = createStaticClient();
     const { data, error } = await supabase
       .from("projects")
       .select("slug")
