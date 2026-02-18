@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Manda — Portfolio
 
-## Getting Started
+![Hero Preview](public/images/readme/hero-preview.png)
 
-First, run the development server:
+Portfolio personnel de **Mandaniaina Randriambinintsoa** — Architecte IA & Automatisation Builder, basé à Antananarivo, Madagascar.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack technique
+
+| Technologie | Rôle |
+|-------------|------|
+| **Next.js 16** | Framework React (App Router, SSG/ISR, Turbopack) |
+| **Tailwind CSS v4** | Styling utility-first + Typography plugin |
+| **GSAP 3** | Animations scroll-triggered, parallax, stagger |
+| **Supabase** | Base de données PostgreSQL, RLS, API temps réel |
+| **TypeScript** | Typage strict sur tout le projet |
+
+## Fonctionnalites
+
+- **10 sections homepage** : Hero, Command Center, Services, Process, Testimonials, Stats, Tech Stack, Projects (bento layout), FAQ, CTA Final
+- **Blog dynamique** : Articles Markdown stockes dans Supabase, rendu avec `react-markdown` + syntax highlighting
+- **8 projets** : Web apps & workflows N8N, stockes dans Supabase avec fallback JSON
+- **i18n FR/EN** : Francais par defaut (`/`), anglais secondaire (`/en/`)
+- **SEO optimise** : JSON-LD (Person, FAQ, BlogPosting, BreadcrumbList), sitemap dynamique, meta tags OpenGraph
+- **ISR** : Revalidation automatique toutes les heures + API de revalidation on-demand
+- **Design** : Dark glassmorphism, animations fluides, responsive mobile-first
+
+## Architecture
+
+```
+src/
+  app/
+    [locale]/          # Pages i18n (blog, projects, services, about, contact)
+    api/revalidate/    # API ISR on-demand
+    sitemap.ts         # Sitemap dynamique (blog + projets Supabase)
+  components/
+    animations/        # Wrappers GSAP (useGSAP + matchMedia)
+    blog/              # BlogListingClient, MarkdownRenderer
+    layout/            # Header, Footer, LanguageSwitcher
+    sections/          # 10 sections homepage
+    seo/               # JSON-LD components
+    ui/                # GlassCard, Button, N8nWorkflowViewer
+  lib/
+    data/              # Data fetching (blog.ts, projects.ts, workflows/)
+    supabase/          # Client serveur/browser, types auto-generes
+  i18n/                # Config + dictionnaires FR/EN
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demarrage rapide
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Installer les dependances
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Configurer les variables d'environnement
+cp .env.example .env.local
+# Remplir NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, REVALIDATION_SECRET
 
-## Learn More
+# Lancer en developpement
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# Build production
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deploiement
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Le site est deploye sur **Vercel** avec :
+- Build automatique sur push `main`
+- Variables d'environnement configurees dans le dashboard Vercel
+- ISR pour le blog et les projets (revalidation 1h)
 
-## Deploy on Vercel
+## Auteur
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Mandaniaina Randriambinintsoa**
+- Architecte IA & Automatisation Builder
+- Expert N8N, Claude Code, Next.js, Supabase
+- Antananarivo, Madagascar
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+Ce projet est sous licence MIT.
