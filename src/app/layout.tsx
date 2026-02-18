@@ -7,6 +7,12 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+export const metadata = {
+  verification: {
+    google: "UbNg_cK0lvlfEnXfKtQaZfHEm_sCVWL6qDD8m5_eTLo",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
