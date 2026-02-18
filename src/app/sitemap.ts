@@ -1,8 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllBlogSlugs } from "@/lib/data/blog";
 import { getAllProjectSlugs } from "@/lib/data/projects";
-
-const SITE_URL = "https://manda.dev";
+import { SITE_URL } from "@/lib/constants";
 
 const serviceSlugsFr = [
   "conception-workflows",

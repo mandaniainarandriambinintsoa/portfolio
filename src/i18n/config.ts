@@ -5,4 +5,4 @@ export const i18n = {
 
 export type Locale = (typeof i18n)["locales"][number];
 
-export const SITE_URL = "https://manda.dev";
+// SITE_URL centralisé dans src/lib/constants.ts
