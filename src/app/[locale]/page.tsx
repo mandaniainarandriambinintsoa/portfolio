@@ -80,6 +80,8 @@ export default async function HomePage({
           subtitle={dict.cta_final.subtitle}
           button={dict.cta_final.button}
           buttonHref={dict.cta_final.button_href}
+          quizButton={dict.cta_final.quiz_button}
+          quizHref={dict.cta_final.quiz_href}
         />
       </CTAFinalAnim>
     </main>

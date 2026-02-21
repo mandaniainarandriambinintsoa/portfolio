@@ -7,6 +7,8 @@ type CTAFinalProps = {
   subtitle: string;
   button: string;
   buttonHref: string;
+  quizButton?: string;
+  quizHref?: string;
 };
 
 export default function CTAFinal({
@@ -16,6 +18,8 @@ export default function CTAFinal({
   subtitle,
   button,
   buttonHref,
+  quizButton,
+  quizHref,
 }: CTAFinalProps) {
   return (
     <section className="relative py-16 md:py-20 overflow-hidden">
@@ -35,9 +39,16 @@ export default function CTAFinal({
           {subtitle}
         </p>
 
-        <Button href={buttonHref} variant="primary" icon="arrow_forward">
-          {button}
-        </Button>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <Button href={buttonHref} variant="primary" icon="arrow_forward">
+            {button}
+          </Button>
+          {quizButton && quizHref && (
+            <Button href={quizHref} variant="glass" icon="quiz">
+              {quizButton}
+            </Button>
+          )}
+        </div>
       </div>
     </section>
   );

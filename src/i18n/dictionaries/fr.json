@@ -450,7 +450,9 @@
     "title_end": " ?",
     "subtitle": "Discutons ensemble et transformons vos processus manuels en systèmes intelligents.",
     "button": "Démarrer un projet",
-    "button_href": "/fr/contact"
+    "button_href": "/fr/contact",
+    "quiz_button": "Quel service pour moi ?",
+    "quiz_href": "/quiz"
   },
   "footer": {
     "copyright": "© 2025 Manda. Automatisation & Architecture."
