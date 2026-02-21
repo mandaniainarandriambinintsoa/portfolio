@@ -66,12 +66,8 @@ export async function GET() {
         },
       }
     );
-  } catch (err: unknown) {
-    const message = err instanceof Error ? err.message : String(err);
-    console.error("GA4 Realtime API error:", message);
-    return NextResponse.json(
-      { visitors: [], activeUsers: 0, debug: { error: message, hasKey: !!process.env.GA4_PRIVATE_KEY, hasEmail: !!process.env.GA4_CLIENT_EMAIL, propertyId } },
-      { status: 200 }
-    );
+  } catch (err) {
+    console.error("GA4 Realtime API error:", err);
+    return NextResponse.json({ visitors: [], activeUsers: 0 }, { status: 200 });
   }
 }
