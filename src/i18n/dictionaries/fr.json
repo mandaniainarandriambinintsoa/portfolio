@@ -11,6 +11,10 @@
     "contact": {
       "title": "Contacter Manda | Démarrer un projet d'automatisation",
       "description": "Contactez Mandaniaina Randriambinintsoa pour vos projets d'automatisation, développement No-Code et intégration IA."
+    },
+    "quiz": {
+      "title": "Quiz Automatisation | Trouvez la solution idéale pour votre business — Manda",
+      "description": "Répondez à 5 questions et découvrez quel type d'automatisation correspond le mieux à votre business. Résultat personnalisé en 2 minutes."
     }
   },
   "nav": {
@@ -495,5 +499,123 @@
     "info_email": "mandaniaina.randriambinintsoa@gmail.com",
     "info_phone": "+261 34 65 186 95",
     "info_location": "Antananarivo, Madagascar"
+  },
+  "quiz": {
+    "page_title": "Quelle automatisation pour votre business ?",
+    "page_subtitle": "Répondez à 5 questions et découvrez la solution idéale pour transformer vos processus.",
+    "badge": "2 min · 5 questions",
+    "start": "Commencer le quiz",
+    "next": "Suivante",
+    "email_title": "Votre résultat est prêt !",
+    "email_subtitle": "Entrez votre email pour découvrir votre profil d'automatisation personnalisé.",
+    "email_placeholder": "votre@email.com",
+    "email_submit": "Voir mon résultat",
+    "email_error": "Veuillez entrer un email valide",
+    "result_title": "Votre profil d'automatisation",
+    "result_cta_contact": "Discuter de mon projet",
+    "result_cta_service": "En savoir plus",
+    "result_restart": "Refaire le quiz",
+    "questions": [
+      {
+        "icon": "business",
+        "title": "Quel type d'organisation représentez-vous ?",
+        "options": [
+          { "label": "Freelance / solopreneur", "scores": { "workflow": 2, "custom_app": 1, "ai_integration": 0, "full_scale": 0 } },
+          { "label": "Startup / petite équipe", "scores": { "workflow": 1, "custom_app": 2, "ai_integration": 0, "full_scale": 0 } },
+          { "label": "PME établie (10-50 personnes)", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 2, "full_scale": 1 } },
+          { "label": "Grande entreprise", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 0, "full_scale": 3 } }
+        ]
+      },
+      {
+        "icon": "target",
+        "title": "Quel est votre plus grand défi au quotidien ?",
+        "options": [
+          { "label": "Tâches répétitives qui me font perdre du temps", "scores": { "workflow": 3, "custom_app": 0, "ai_integration": 0, "full_scale": 0 } },
+          { "label": "Besoin d'une app sur mesure qui n'existe pas", "scores": { "workflow": 0, "custom_app": 3, "ai_integration": 0, "full_scale": 0 } },
+          { "label": "Exploiter l'IA pour mon business", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 3, "full_scale": 0 } },
+          { "label": "Mes systèmes actuels ne tiennent plus la charge", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 0, "full_scale": 3 } }
+        ]
+      },
+      {
+        "icon": "code",
+        "title": "Quel est votre niveau technique ?",
+        "options": [
+          { "label": "Aucun, je veux du clé en main", "scores": { "workflow": 1, "custom_app": 2, "ai_integration": 0, "full_scale": 0 } },
+          { "label": "J'utilise des outils no-code", "scores": { "workflow": 2, "custom_app": 1, "ai_integration": 0, "full_scale": 0 } },
+          { "label": "Bases en dev / équipe technique", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 2, "full_scale": 1 } },
+          { "label": "Développeur / CTO", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 2, "full_scale": 2 } }
+        ]
+      },
+      {
+        "icon": "payments",
+        "title": "Quel est votre budget et délai idéal ?",
+        "options": [
+          { "label": "Budget réduit, rapide (1-2 semaines)", "scores": { "workflow": 3, "custom_app": 0, "ai_integration": 0, "full_scale": 0 } },
+          { "label": "Budget moyen, 1-2 mois", "scores": { "workflow": 1, "custom_app": 2, "ai_integration": 0, "full_scale": 0 } },
+          { "label": "Budget confortable, solution avancée", "scores": { "workflow": 0, "custom_app": 1, "ai_integration": 2, "full_scale": 0 } },
+          { "label": "Budget important, transformation complète", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 0, "full_scale": 3 } }
+        ]
+      },
+      {
+        "icon": "emoji_objects",
+        "title": "Quel résultat attendez-vous en priorité ?",
+        "options": [
+          { "label": "Gagner du temps sur les tâches répétitives", "scores": { "workflow": 3, "custom_app": 0, "ai_integration": 0, "full_scale": 0 } },
+          { "label": "Une plateforme professionnelle pour mes clients", "scores": { "workflow": 0, "custom_app": 3, "ai_integration": 0, "full_scale": 0 } },
+          { "label": "Un business plus intelligent avec l'IA", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 3, "full_scale": 0 } },
+          { "label": "Scaler sans multiplier les coûts", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 0, "full_scale": 3 } }
+        ]
+      }
+    ],
+    "results": {
+      "workflow": {
+        "title": "Automatisation de Workflows",
+        "color": "indigo",
+        "description": "Votre priorité est d'éliminer les tâches répétitives et de gagner du temps. Les workflows automatisés avec N8N sont la solution idéale pour connecter vos outils et faire tourner vos processus en pilote automatique.",
+        "benefits": [
+          "Élimination des tâches manuelles répétitives",
+          "Connexion de tous vos outils métier (CRM, email, facturation)",
+          "Workflows qui tournent 24/7 sans intervention",
+          "ROI immédiat dès la première semaine"
+        ],
+        "service_slug": "conception-workflows"
+      },
+      "custom_app": {
+        "title": "Application Sur Mesure",
+        "color": "emerald",
+        "description": "Vous avez besoin d'une plateforme unique qui correspond exactement à vos besoins. Une application sur mesure vous permettra de vous démarquer et d'offrir une expérience client exceptionnelle.",
+        "benefits": [
+          "Application 100% adaptée à vos besoins spécifiques",
+          "Interface utilisateur professionnelle et intuitive",
+          "Intégrations API sur mesure",
+          "Propriété totale de votre outil"
+        ],
+        "service_slug": "developpement-applications"
+      },
+      "ai_integration": {
+        "title": "Intégration IA",
+        "color": "blue",
+        "description": "Vous êtes prêt à exploiter la puissance de l'intelligence artificielle pour rendre votre business plus intelligent. Des agents IA et des automatisations intelligentes vous donneront un avantage compétitif majeur.",
+        "benefits": [
+          "Agents IA personnalisés pour votre métier",
+          "Automatisation intelligente des décisions",
+          "Traitement et analyse de données avancés",
+          "Avantage compétitif grâce à l'IA"
+        ],
+        "service_slug": "integration-ia"
+      },
+      "full_scale": {
+        "title": "Passage à l'Échelle",
+        "color": "purple",
+        "description": "Votre entreprise a besoin d'une infrastructure robuste capable de supporter sa croissance. Une architecture cloud-native et des systèmes scalables sont la clé pour passer au niveau supérieur.",
+        "benefits": [
+          "Architecture cloud-native robuste",
+          "Scalabilité automatique selon la charge",
+          "CI/CD et déploiement continu",
+          "Monitoring et alertes en temps réel"
+        ],
+        "service_slug": "passage-echelle"
+      }
+    }
   }
 }

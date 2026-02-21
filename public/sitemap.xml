@@ -49,6 +49,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/quiz</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/quiz"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/en/quiz"/>
+    <lastmod>2026-02-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/services/conception-workflows</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/services/conception-workflows"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/en/services/workflow-design"/>

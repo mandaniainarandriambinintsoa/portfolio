@@ -78,6 +78,33 @@ export type Database = {
         }
         Relationships: []
       }
+      quiz_leads: {
+        Row: {
+          id: string
+          email: string
+          answers: Json
+          result_type: string
+          locale: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          email: string
+          answers?: Json
+          result_type: string
+          locale?: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          email?: string
+          answers?: Json
+          result_type?: string
+          locale?: string
+          created_at?: string
+        }
+        Relationships: []
+      }
       projects: {
         Row: {
           category: string

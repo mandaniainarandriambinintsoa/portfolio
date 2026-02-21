@@ -8,6 +8,7 @@ const navItems = [
   { href: "/admin", label: "Dashboard", icon: "📊" },
   { href: "/admin/blog", label: "Blog", icon: "📝" },
   { href: "/admin/projects", label: "Projets", icon: "🚀" },
+  { href: "/admin/quiz", label: "Quiz Leads", icon: "🎯" },
 ];
 
 export default function AdminSidebar() {
