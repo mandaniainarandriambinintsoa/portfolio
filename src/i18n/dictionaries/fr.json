@@ -385,6 +385,18 @@
         "workflowFile": null
       },
       {
+        "slug": "portfolio-webflow",
+        "title": "Portfolio Webflow",
+        "subtitle": "Mon ancien portfolio personnel",
+        "description": "Premier portfolio professionnel conçu sur Webflow, présentant mes services de développement no-code, automatisation N8N et intégration IA. Le site inclut une section réalisations, un aperçu de mes outils techniques et un système de contact. Design épuré avec accents rouges et typographie bold, optimisé pour la conversion client. Ce portfolio a servi de vitrine principale sur LinkedIn et les plateformes freelance avant la refonte complète en Next.js.",
+        "tags": ["Webflow", "Figma"],
+        "link": "https://portofolio-manda.webflow.io/",
+        "featured": false,
+        "category": "webapp",
+        "image": "/images/projects/portfolio-webflow-manda.webp",
+        "workflowFile": null
+      },
+      {
         "slug": "scraping-flowremote",
         "title": "Scraping FlowRemote",
         "subtitle": "Automatisation offres d'emploi",
