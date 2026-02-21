@@ -10,6 +10,7 @@ import TechStack from "@/components/sections/TechStack";
 import Projects from "@/components/sections/Projects";
 import FAQ from "@/components/sections/FAQ";
 import CTAFinal from "@/components/sections/CTAFinal";
+import VisitorTracking from "@/components/sections/VisitorTracking";
 import { getProjects } from "@/lib/data/projects";
 import HeroAnimations from "@/components/animations/HeroAnimations";
 import CommandCenterAnim from "@/components/animations/CommandCenterAnim";
@@ -18,6 +19,7 @@ import ProcessAnim from "@/components/animations/ProcessAnim";
 import StatsAnim from "@/components/animations/StatsAnim";
 import TechStackAnim from "@/components/animations/TechStackAnim";
 import FAQAnim from "@/components/animations/FAQAnim";
+import VisitorTrackingAnim from "@/components/animations/VisitorTrackingAnim";
 import CTAFinalAnim from "@/components/animations/CTAFinalAnim";
 export default async function HomePage({
   params,
@@ -67,6 +69,13 @@ export default async function HomePage({
           workflow: dict.projects.category_workflow,
         }}
       />
+
+      <VisitorTrackingAnim>
+        <VisitorTracking
+          dict={dict.visitor_tracking}
+          locale={locale}
+        />
+      </VisitorTrackingAnim>
 
       <FAQAnim>
         <FAQ title={dict.faq.title} items={dict.faq.items} />

@@ -456,6 +456,16 @@
       }
     ]
   },
+  "visitor_tracking": {
+    "badge": "EN DIRECT",
+    "title": "SHOWCASE D'AUTOMATISATION",
+    "showcase_text": "V1 : sur mon ancien portfolio Webflow, j'utilisais N8N pour afficher les visiteurs en temps réel. V2 : ici, c'est Supabase Realtime qui prend le relais — zéro webhook, zéro polling, juste du temps réel natif. Ce tableau est une démo live de mes compétences en automatisation.",
+    "col_city": "Ville",
+    "col_country": "Pays",
+    "col_users": "Utilisateurs",
+    "active_now": "actifs maintenant",
+    "empty": "En attente du premier visiteur..."
+  },
   "cta_final": {
     "title": "Prêt à ",
     "title_highlight": "développer votre projet ou automatiser votre business",

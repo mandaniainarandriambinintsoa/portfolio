@@ -456,6 +456,16 @@
       }
     ]
   },
+  "visitor_tracking": {
+    "badge": "LIVE",
+    "title": "AUTOMATION SHOWCASE",
+    "showcase_text": "V1: on my old Webflow portfolio, I used N8N to display visitors in real time. V2: here, Supabase Realtime takes over — zero webhooks, zero polling, just native real-time. This table is a live demo of my automation skills.",
+    "col_city": "City",
+    "col_country": "Country",
+    "col_users": "Users",
+    "active_now": "active now",
+    "empty": "Waiting for the first visitor..."
+  },
   "cta_final": {
     "title": "Ready to ",
     "title_highlight": "develop your project or automate your business",

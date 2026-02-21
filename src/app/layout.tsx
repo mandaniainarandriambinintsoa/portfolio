@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,6 +29,13 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} font-[family-name:var(--font-inter)] antialiased`}>
         {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2Q177TH3CR"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-2Q177TH3CR');`}
+        </Script>
       </body>
     </html>
   );
