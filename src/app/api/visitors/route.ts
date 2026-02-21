@@ -43,8 +43,9 @@ export async function GET() {
       limit: 15,
     });
 
-    const visitors: VisitorGA4[] = [];
     let totalActiveUsers = 0;
+    // Aggregate by city+country, keep most recent minutesAgo
+    const grouped = new Map<string, VisitorGA4>();
 
     if (response.rows) {
       for (const row of response.rows) {
@@ -56,9 +57,17 @@ export async function GET() {
 
         totalActiveUsers += users;
 
-        visitors.push({ city, country, countryCode, minutesAgo });
+        const key = `${city}-${country}`;
+        const existing = grouped.get(key);
+        if (!existing || minutesAgo < existing.minutesAgo) {
+          grouped.set(key, { city, country, countryCode, minutesAgo });
+        }
       }
     }
+
+    const visitors = Array.from(grouped.values())
+      .sort((a, b) => a.minutesAgo - b.minutesAgo)
+      .slice(0, 15);
 
     return NextResponse.json(
       { visitors, activeUsers: totalActiveUsers },

@@ -4,12 +4,20 @@ import { useEffect, useState, useRef, useCallback } from "react";
 import { gsap } from "@/lib/gsap-register";
 import type { VisitorGA4 } from "@/app/api/visitors/route";
 
-function countryCodeToFlag(code: string): string {
-  if (!code || code.length !== 2) return "🌍";
-  const codePoints = [...code.toUpperCase()].map(
-    (c) => 0x1f1e6 - 65 + c.charCodeAt(0)
+function FlagIcon({ code }: { code: string }) {
+  if (!code || code.length !== 2) {
+    return <span className="text-base leading-none">🌍</span>;
+  }
+  return (
+    <img
+      src={`https://flagcdn.com/20x15/${code.toLowerCase()}.png`}
+      srcSet={`https://flagcdn.com/40x30/${code.toLowerCase()}.png 2x`}
+      width="20"
+      height="15"
+      alt={code}
+      className="inline-block"
+    />
   );
-  return String.fromCodePoint(...codePoints);
 }
 
 function formatTimeAgo(minutesAgo: number, locale: string): string {
@@ -159,9 +167,7 @@ export default function VisitorTracking({
                   >
                     <span className="text-white/70 truncate">{v.city}</span>
                     <span className="text-white/50 flex items-center gap-2">
-                      <span className="text-base leading-none">
-                        {countryCodeToFlag(v.countryCode)}
-                      </span>
+                      <FlagIcon code={v.countryCode} />
                       <span className="truncate">{v.country}</span>
                     </span>
                     <span className="text-white/30 text-right">
