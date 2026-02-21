@@ -20,6 +20,7 @@ export type VisitorGA4 = {
   city: string;
   country: string;
   countryCode: string;
+  minutesAgo: number;
 };
 
 export async function GET() {
@@ -36,6 +37,7 @@ export async function GET() {
         { name: "city" },
         { name: "country" },
         { name: "countryId" },
+        { name: "minutesAgo" },
       ],
       metrics: [{ name: "activeUsers" }],
       limit: 15,
@@ -49,12 +51,12 @@ export async function GET() {
         const city = row.dimensionValues?.[0]?.value || "Inconnu";
         const country = row.dimensionValues?.[1]?.value || "Inconnu";
         const countryCode = row.dimensionValues?.[2]?.value || "";
+        const minutesAgo = parseInt(row.dimensionValues?.[3]?.value || "0", 10);
         const users = parseInt(row.metricValues?.[0]?.value || "0", 10);
 
         totalActiveUsers += users;
 
-        // One entry per row (each city/country combo)
-        visitors.push({ city, country, countryCode });
+        visitors.push({ city, country, countryCode, minutesAgo });
       }
     }
 

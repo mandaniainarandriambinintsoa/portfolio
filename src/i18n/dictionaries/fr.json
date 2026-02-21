@@ -462,7 +462,7 @@
     "showcase_text": "Ce tableau est connecté en temps réel à Google Analytics. Les données de localisation sont récupérées automatiquement via les informations IP de chaque visiteur, puis affichées ici. Sur mon ancien portfolio Webflow, j'utilisais N8N pour ce même résultat — ici, c'est l'API Realtime de GA4 qui fait le travail. Une démo live de mes compétences en automatisation et intégration d'APIs.",
     "col_city": "Ville",
     "col_country": "Pays",
-    "col_users": "Utilisateurs",
+    "col_when": "Quand",
     "active_now": "actifs maintenant",
     "empty": "En attente du premier visiteur..."
   },

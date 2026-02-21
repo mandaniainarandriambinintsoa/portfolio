@@ -12,6 +12,23 @@ function countryCodeToFlag(code: string): string {
   return String.fromCodePoint(...codePoints);
 }
 
+function formatTimeAgo(minutesAgo: number, locale: string): string {
+  if (locale === "fr") {
+    if (minutesAgo === 0) return "à l'instant";
+    if (minutesAgo === 1) return "il y a 1 min";
+    if (minutesAgo < 60) return `il y a ${minutesAgo} min`;
+    const hours = Math.floor(minutesAgo / 60);
+    if (hours === 1) return "il y a 1h";
+    return `il y a ${hours}h`;
+  }
+  if (minutesAgo === 0) return "just now";
+  if (minutesAgo === 1) return "1 min ago";
+  if (minutesAgo < 60) return `${minutesAgo} min ago`;
+  const hours = Math.floor(minutesAgo / 60);
+  if (hours === 1) return "1h ago";
+  return `${hours}h ago`;
+}
+
 type VisitorTrackingProps = {
   dict: {
     badge: string;
@@ -19,7 +36,7 @@ type VisitorTrackingProps = {
     showcase_text: string;
     col_city: string;
     col_country: string;
-    col_users: string;
+    col_when: string;
     empty: string;
     active_now: string;
   };
@@ -62,14 +79,13 @@ export default function VisitorTracking({
       setActiveUsers(data.activeUsers || 0);
 
       setVisitors((prev) => {
-        const oldKeys = new Set(prev.map((v) => `${v.city}-${v.country}`));
+        const oldKeys = new Set(prev.map((v) => `${v.city}-${v.country}-${v.minutesAgo}`));
         setPrevKeys(oldKeys);
         return newVisitors;
       });
 
-      // Animate new entries after render
       requestAnimationFrame(() => {
-        const currentKeys = newVisitors.map((v) => `${v.city}-${v.country}`);
+        const currentKeys = newVisitors.map((v) => `${v.city}-${v.country}-${v.minutesAgo}`);
         const added = currentKeys.filter((k) => !prevKeys.has(k));
         if (added.length > 0 && added.length < currentKeys.length) {
           animateNewRows(added);
@@ -120,9 +136,10 @@ export default function VisitorTracking({
           className="glass-card rounded-2xl border border-white/[0.06] overflow-hidden"
         >
           {/* Table header */}
-          <div className="grid grid-cols-2 px-6 py-3 border-b border-white/[0.06] text-xs font-mono tracking-wider text-white/30 uppercase">
+          <div className="grid grid-cols-3 px-6 py-3 border-b border-white/[0.06] text-xs font-mono tracking-wider text-white/30 uppercase">
             <span>{dict.col_city}</span>
             <span>{dict.col_country}</span>
+            <span className="text-right">{dict.col_when}</span>
           </div>
 
           {/* Rows */}
@@ -133,12 +150,12 @@ export default function VisitorTracking({
           ) : (
             <div className="divide-y divide-white/[0.04]">
               {visitors.map((v) => {
-                const key = `${v.city}-${v.country}`;
+                const key = `${v.city}-${v.country}-${v.minutesAgo}`;
                 return (
                   <div
                     key={key}
                     data-visitor-key={key}
-                    className="visitor-row grid grid-cols-2 px-6 py-3 text-sm"
+                    className="visitor-row grid grid-cols-3 px-6 py-3 text-sm"
                   >
                     <span className="text-white/70 truncate">{v.city}</span>
                     <span className="text-white/50 flex items-center gap-2">
@@ -146,6 +163,9 @@ export default function VisitorTracking({
                         {countryCodeToFlag(v.countryCode)}
                       </span>
                       <span className="truncate">{v.country}</span>
+                    </span>
+                    <span className="text-white/30 text-right">
+                      {formatTimeAgo(v.minutesAgo, locale)}
                     </span>
                   </div>
                 );
