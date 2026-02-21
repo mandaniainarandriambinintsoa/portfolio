@@ -1,13 +1,17 @@
 import { NextResponse } from "next/server";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 
-const propertyId = process.env.GA4_PROPERTY_ID;
+const propertyId = process.env.GA4_PROPERTY_ID?.trim();
 
 function getAnalyticsClient() {
+  const rawKey = process.env.GA4_PRIVATE_KEY?.trim() || "";
+  // Handle both escaped \n (from .env files) and real newlines (from Vercel)
+  const privateKey = rawKey.includes("\\n") ? rawKey.replace(/\\n/g, "\n") : rawKey;
+
   return new BetaAnalyticsDataClient({
     credentials: {
-      client_email: process.env.GA4_CLIENT_EMAIL,
-      private_key: process.env.GA4_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+      client_email: process.env.GA4_CLIENT_EMAIL?.trim(),
+      private_key: privateKey,
     },
   });
 }
