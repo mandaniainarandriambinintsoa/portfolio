@@ -459,7 +459,7 @@
   "visitor_tracking": {
     "badge": "EN DIRECT",
     "title": "SHOWCASE D'AUTOMATISATION",
-    "showcase_text": "V1 : sur mon ancien portfolio Webflow, j'utilisais N8N pour afficher les visiteurs en temps réel. V2 : ici, c'est Supabase Realtime qui prend le relais — zéro webhook, zéro polling, juste du temps réel natif. Ce tableau est une démo live de mes compétences en automatisation.",
+    "showcase_text": "Ce tableau est connecté en temps réel à Google Analytics. Les données de localisation sont récupérées automatiquement via les informations IP de chaque visiteur, puis affichées ici. Sur mon ancien portfolio Webflow, j'utilisais N8N pour ce même résultat — ici, c'est l'API Realtime de GA4 qui fait le travail. Une démo live de mes compétences en automatisation et intégration d'APIs.",
     "col_city": "Ville",
     "col_country": "Pays",
     "col_users": "Utilisateurs",
