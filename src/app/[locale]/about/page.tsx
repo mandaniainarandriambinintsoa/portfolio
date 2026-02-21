@@ -25,6 +25,14 @@ export async function generateMetadata({
         en: `${SITE_URL}/en/about`,
       },
     },
+    openGraph: {
+      title: dict.meta.about.title,
+      description: dict.meta.about.description,
+      url: `${SITE_URL}${path}`,
+      type: "profile",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      images: [{ url: `${SITE_URL}/images/manda-photo2.webp`, width: 288, height: 336, alt: "Mandaniaina Randriambinintsoa" }],
+    },
   };
 }
 

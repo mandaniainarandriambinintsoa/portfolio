@@ -13,15 +13,25 @@ export async function generateMetadata({
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
   const dict = await getDictionary(locale);
 
+  const prefix = locale === "fr" ? "" : "/en";
+
   return {
     title: dict.meta.contact.title,
     description: dict.meta.contact.description,
     alternates: {
-      canonical: `${SITE_URL}${locale === "fr" ? "/contact" : "/en/contact"}`,
+      canonical: `${SITE_URL}${prefix}/contact`,
       languages: {
         fr: `${SITE_URL}/contact`,
         en: `${SITE_URL}/en/contact`,
       },
+    },
+    openGraph: {
+      title: dict.meta.contact.title,
+      description: dict.meta.contact.description,
+      url: `${SITE_URL}${prefix}/contact`,
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      images: [{ url: `${SITE_URL}/images/manda-photo2.webp`, width: 288, height: 336, alt: "Manda - Contact" }],
     },
   };
 }

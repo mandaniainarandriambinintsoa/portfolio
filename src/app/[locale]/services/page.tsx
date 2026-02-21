@@ -20,15 +20,25 @@ export async function generateMetadata({
     ? "Découvrez mes services : automatisation N8N, développement No-Code et Low-Code, intégration IA, architecture scalable. Basé à Madagascar, qualité internationale."
     : "Discover my services: N8N automation, No-Code and Low-Code development, AI integration, scalable architecture. Based in Madagascar, international quality.";
 
+  const prefix = locale === "fr" ? "" : "/en";
+
   return {
     title,
     description,
     alternates: {
-      canonical: `${SITE_URL}${locale === "fr" ? "/services" : "/en/services"}`,
+      canonical: `${SITE_URL}${prefix}/services`,
       languages: {
         fr: `${SITE_URL}/services`,
         en: `${SITE_URL}/en/services`,
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}${prefix}/services`,
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      images: [{ url: `${SITE_URL}/images/manda-photo2.webp`, width: 288, height: 336, alt: "Manda - Services" }],
     },
   };
 }

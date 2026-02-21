@@ -20,15 +20,25 @@ export async function generateMetadata({
     ? "Découvrez les projets réalisés par Manda : applications, automatisations, sites web et intégrations IA."
     : "Discover Manda's projects: applications, automations, websites and AI integrations.";
 
+  const prefix = locale === "fr" ? "" : "/en";
+
   return {
     title,
     description,
     alternates: {
-      canonical: `${SITE_URL}${locale === "fr" ? "/projects" : "/en/projects"}`,
+      canonical: `${SITE_URL}${prefix}/projects`,
       languages: {
         fr: `${SITE_URL}/projects`,
         en: `${SITE_URL}/en/projects`,
       },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}${prefix}/projects`,
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      images: [{ url: `${SITE_URL}/images/manda-photo2.webp`, width: 288, height: 336, alt: "Manda - Projects" }],
     },
   };
 }

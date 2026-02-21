@@ -99,7 +99,7 @@
             { "icon": "savings", "title": "Tarifs compétitifs", "description": "2-3x moins cher qu'en Europe" },
             { "icon": "translate", "title": "Français natif", "description": "Communication fluide garantie" },
             { "icon": "support_agent", "title": "Support 30 jours", "description": "Inclus après chaque livraison" },
-            { "icon": "verified", "title": "Qualité internationale", "description": "+8 projets livrés avec succès" },
+            { "icon": "verified", "title": "Qualité internationale", "description": "+20 projets livrés avec succès" },
             { "icon": "schedule", "title": "Fuseau GMT+3", "description": "Collaboration temps réel avec l'Europe" }
           ],
           "faq": [
@@ -410,7 +410,7 @@
     "title": "EN CHIFFRES",
     "items": [
       { "value": 4, "suffix": "+", "label": "Ans d'expérience" },
-      { "value": 8, "suffix": "+", "label": "Projets livrés" },
+      { "value": 20, "suffix": "+", "label": "Projets livrés" },
       { "value": 3, "suffix": "", "label": "Pays servis" },
       { "value": 100, "suffix": "%", "label": "Satisfaction client" }
     ]
@@ -442,9 +442,9 @@
   },
   "cta_final": {
     "title": "Prêt à ",
-    "title_highlight": "automatiser votre business",
+    "title_highlight": "développer votre projet ou automatiser votre business",
     "title_end": " ?",
-    "subtitle": "Discutons de votre projet et transformons vos processus manuels en systèmes intelligents.",
+    "subtitle": "Discutons ensemble et transformons vos processus manuels en systèmes intelligents.",
     "button": "Démarrer un projet",
     "button_href": "/fr/contact"
   },

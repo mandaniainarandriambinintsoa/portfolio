@@ -32,6 +32,14 @@ export async function generateMetadata({
         en: `${SITE_URL}/en/blog`,
       },
     },
+    openGraph: {
+      title,
+      description,
+      url: `${SITE_URL}${prefix}/blog`,
+      type: "website",
+      locale: locale === "fr" ? "fr_FR" : "en_US",
+      images: [{ url: `${SITE_URL}/images/manda-photo2.webp`, width: 288, height: 336, alt: "Manda - Blog" }],
+    },
   };
 }
 

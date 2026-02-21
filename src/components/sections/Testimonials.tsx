@@ -197,7 +197,7 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
           {/* Stats mini */}
           <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-white/[0.06]">
             <div>
-              <p className="text-2xl font-bold text-white">8+</p>
+              <p className="text-2xl font-bold text-white">20+</p>
               <p className="text-xs text-slate-500 mt-1">
                 {locale === "fr" ? "Projets livrés" : "Projects delivered"}
               </p>
