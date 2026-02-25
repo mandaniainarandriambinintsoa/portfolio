@@ -105,6 +105,30 @@ export type Database = {
         }
         Relationships: []
       }
+      visitor_logs: {
+        Row: {
+          id: string
+          city: string
+          country: string
+          country_code: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          city: string
+          country: string
+          country_code?: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          city?: string
+          country?: string
+          country_code?: string
+          created_at?: string
+        }
+        Relationships: []
+      }
       projects: {
         Row: {
           category: string

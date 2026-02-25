@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, useCallback } from "react";
 import { gsap } from "@/lib/gsap-register";
-import type { VisitorGA4 } from "@/app/api/visitors/route";
+import type { VisitorRow } from "@/app/api/visitors/route";
 
 function FlagIcon({ code }: { code: string }) {
   if (!code || code.length !== 2) {
@@ -20,21 +20,19 @@ function FlagIcon({ code }: { code: string }) {
   );
 }
 
-function formatTimeAgo(minutesAgo: number, locale: string): string {
+function formatTimeAgo(createdAt: string, locale: string): string {
+  const diff = Math.floor((Date.now() - new Date(createdAt).getTime()) / 1000);
+
   if (locale === "fr") {
-    if (minutesAgo === 0) return "à l'instant";
-    if (minutesAgo === 1) return "il y a 1 min";
-    if (minutesAgo < 60) return `il y a ${minutesAgo} min`;
-    const hours = Math.floor(minutesAgo / 60);
-    if (hours === 1) return "il y a 1h";
-    return `il y a ${hours}h`;
+    if (diff < 60) return "à l'instant";
+    if (diff < 3600) return `il y a ${Math.floor(diff / 60)} min`;
+    if (diff < 86400) return `il y a ${Math.floor(diff / 3600)}h`;
+    return `il y a ${Math.floor(diff / 86400)}j`;
   }
-  if (minutesAgo === 0) return "just now";
-  if (minutesAgo === 1) return "1 min ago";
-  if (minutesAgo < 60) return `${minutesAgo} min ago`;
-  const hours = Math.floor(minutesAgo / 60);
-  if (hours === 1) return "1h ago";
-  return `${hours}h ago`;
+  if (diff < 60) return "just now";
+  if (diff < 3600) return `${Math.floor(diff / 60)} min ago`;
+  if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+  return `${Math.floor(diff / 86400)}d ago`;
 }
 
 type VisitorTrackingProps = {
@@ -55,8 +53,7 @@ export default function VisitorTracking({
   dict,
   locale,
 }: VisitorTrackingProps) {
-  const [visitors, setVisitors] = useState<VisitorGA4[]>([]);
-  const [activeUsers, setActiveUsers] = useState(0);
+  const [visitors, setVisitors] = useState<VisitorRow[]>([]);
   const [prevKeys, setPrevKeys] = useState<Set<string>>(new Set());
   const tableRef = useRef<HTMLDivElement>(null);
 
@@ -83,17 +80,16 @@ export default function VisitorTracking({
       const res = await fetch("/api/visitors");
       if (!res.ok) return;
       const data = await res.json();
-      const newVisitors: VisitorGA4[] = data.visitors || [];
-      setActiveUsers(data.activeUsers || 0);
+      const newVisitors: VisitorRow[] = data.visitors || [];
 
       setVisitors((prev) => {
-        const oldKeys = new Set(prev.map((v) => `${v.city}-${v.country}-${v.minutesAgo}`));
+        const oldKeys = new Set(prev.map((v) => `${v.city}-${v.country}-${v.created_at}`));
         setPrevKeys(oldKeys);
         return newVisitors;
       });
 
       requestAnimationFrame(() => {
-        const currentKeys = newVisitors.map((v) => `${v.city}-${v.country}-${v.minutesAgo}`);
+        const currentKeys = newVisitors.map((v) => `${v.city}-${v.country}-${v.created_at}`);
         const added = currentKeys.filter((k) => !prevKeys.has(k));
         if (added.length > 0 && added.length < currentKeys.length) {
           animateNewRows(added);
@@ -126,11 +122,6 @@ export default function VisitorTracking({
             </span>
             {dict.badge}
           </span>
-          {activeUsers > 0 && (
-            <span className="text-xs text-white/30 font-mono">
-              {activeUsers} {dict.active_now}
-            </span>
-          )}
         </div>
 
         {/* Showcase text */}
@@ -158,7 +149,7 @@ export default function VisitorTracking({
           ) : (
             <div className="divide-y divide-white/[0.04]">
               {visitors.map((v) => {
-                const key = `${v.city}-${v.country}-${v.minutesAgo}`;
+                const key = `${v.city}-${v.country}-${v.created_at}`;
                 return (
                   <div
                     key={key}
@@ -167,11 +158,11 @@ export default function VisitorTracking({
                   >
                     <span className="text-white/70 truncate">{v.city}</span>
                     <span className="text-white/50 flex items-center gap-2">
-                      <FlagIcon code={v.countryCode} />
+                      <FlagIcon code={v.country_code} />
                       <span className="truncate">{v.country}</span>
                     </span>
                     <span className="text-white/30 text-right">
-                      {formatTimeAgo(v.minutesAgo, locale)}
+                      {formatTimeAgo(v.created_at, locale)}
                     </span>
                   </div>
                 );

@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 const propertyId = process.env.GA4_PROPERTY_ID?.trim();
 
 function getAnalyticsClient() {
   const rawKey = process.env.GA4_PRIVATE_KEY?.trim() || "";
-  // Handle both escaped \n (from .env files) and real newlines (from Vercel)
   const privateKey = rawKey.includes("\\n") ? rawKey.replace(/\\n/g, "\n") : rawKey;
 
   return new BetaAnalyticsDataClient({
@@ -16,69 +16,85 @@ function getAnalyticsClient() {
   });
 }
 
-export type VisitorGA4 = {
+export type VisitorRow = {
   city: string;
   country: string;
-  countryCode: string;
-  minutesAgo: number;
+  country_code: string;
+  created_at: string;
 };
 
 export async function GET() {
-  if (!propertyId || !process.env.GA4_CLIENT_EMAIL || !process.env.GA4_PRIVATE_KEY) {
-    return NextResponse.json({ visitors: [], activeUsers: 0 });
-  }
+  const supabase = createAdminClient();
 
-  try {
-    const client = getAnalyticsClient();
+  // 1. Fetch GA4 Realtime visitors and insert new ones into Supabase
+  if (propertyId && process.env.GA4_CLIENT_EMAIL && process.env.GA4_PRIVATE_KEY) {
+    try {
+      const client = getAnalyticsClient();
 
-    const [response] = await client.runRealtimeReport({
-      property: `properties/${propertyId}`,
-      dimensions: [
-        { name: "city" },
-        { name: "country" },
-        { name: "countryId" },
-        { name: "minutesAgo" },
-      ],
-      metrics: [{ name: "activeUsers" }],
-      limit: 15,
-    });
+      const [response] = await client.runRealtimeReport({
+        property: `properties/${propertyId}`,
+        dimensions: [
+          { name: "city" },
+          { name: "country" },
+          { name: "countryId" },
+        ],
+        metrics: [{ name: "activeUsers" }],
+        limit: 15,
+      });
 
-    let totalActiveUsers = 0;
-    // Aggregate by city+country, keep most recent minutesAgo
-    const grouped = new Map<string, VisitorGA4>();
+      if (response.rows) {
+        // Deduplicate by city+country
+        const seen = new Set<string>();
+        const toInsert: { city: string; country: string; country_code: string }[] = [];
 
-    if (response.rows) {
-      for (const row of response.rows) {
-        const city = row.dimensionValues?.[0]?.value || "Inconnu";
-        const country = row.dimensionValues?.[1]?.value || "Inconnu";
-        const countryCode = row.dimensionValues?.[2]?.value || "";
-        const minutesAgo = parseInt(row.dimensionValues?.[3]?.value || "0", 10);
-        const users = parseInt(row.metricValues?.[0]?.value || "0", 10);
+        for (const row of response.rows) {
+          const city = row.dimensionValues?.[0]?.value || "Inconnu";
+          const country = row.dimensionValues?.[1]?.value || "Inconnu";
+          const countryCode = row.dimensionValues?.[2]?.value || "";
+          const key = `${city}-${country}`;
 
-        totalActiveUsers += users;
+          if (!seen.has(key)) {
+            seen.add(key);
+            toInsert.push({ city, country, country_code: countryCode });
+          }
+        }
 
-        const key = `${city}-${country}`;
-        const existing = grouped.get(key);
-        if (!existing || minutesAgo < existing.minutesAgo) {
-          grouped.set(key, { city, country, countryCode, minutesAgo });
+        if (toInsert.length > 0) {
+          // Avoid duplicates: don't re-insert same city+country within last 5 min
+          for (const v of toInsert) {
+            const fiveMinAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
+            const { data: existing } = await supabase
+              .from("visitor_logs")
+              .select("id")
+              .eq("city", v.city)
+              .eq("country", v.country)
+              .gte("created_at", fiveMinAgo)
+              .limit(1);
+
+            if (!existing || existing.length === 0) {
+              await supabase.from("visitor_logs").insert(v);
+            }
+          }
         }
       }
+    } catch (err) {
+      console.error("GA4 Realtime API error:", err);
     }
-
-    const visitors = Array.from(grouped.values())
-      .sort((a, b) => a.minutesAgo - b.minutesAgo)
-      .slice(0, 15);
-
-    return NextResponse.json(
-      { visitors, activeUsers: totalActiveUsers },
-      {
-        headers: {
-          "Cache-Control": "s-maxage=30, stale-while-revalidate=15",
-        },
-      }
-    );
-  } catch (err) {
-    console.error("GA4 Realtime API error:", err);
-    return NextResponse.json({ visitors: [], activeUsers: 0 }, { status: 200 });
   }
+
+  // 2. Always return the 6 most recent visitors from Supabase
+  const { data: visitors } = await supabase
+    .from("visitor_logs")
+    .select("city, country, country_code, created_at")
+    .order("created_at", { ascending: false })
+    .limit(6);
+
+  return NextResponse.json(
+    { visitors: visitors || [] },
+    {
+      headers: {
+        "Cache-Control": "s-maxage=30, stale-while-revalidate=15",
+      },
+    }
+  );
 }
