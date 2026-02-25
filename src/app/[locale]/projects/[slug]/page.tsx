@@ -6,7 +6,7 @@ import { SITE_URL } from "@/lib/constants";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/data/projects";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
-import CreativeWorkJsonLd from "@/components/seo/CreativeWorkJsonLd";
+import SoftwareAppJsonLd from "@/components/seo/SoftwareAppJsonLd";
 import Button from "@/components/ui/Button";
 import { workflows } from "@/lib/data/workflows";
 import N8nWorkflowSection from "@/components/ui/N8nWorkflowSection";
@@ -86,12 +86,13 @@ export default async function ProjectPage({
   return (
     <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
       <BreadcrumbJsonLd items={breadcrumbs} />
-      <CreativeWorkJsonLd
+      <SoftwareAppJsonLd
         name={project.title}
         description={project.description}
         image={project.image}
         url={`${prefix}/projects/${slug}`}
         keywords={project.tags}
+        category={isWorkflow ? "workflow" : "webapp"}
       />
       <div className="max-w-4xl mx-auto">
         {/* Tags */}
