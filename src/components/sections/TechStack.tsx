@@ -18,7 +18,7 @@ export default function TechStack({ label }: { label: string }) {
           {items.map((tech, i) => (
             <span
               key={`${tech}-${i}`}
-              className="text-2xl md:text-3xl font-black text-white/10 whitespace-nowrap tracking-wider"
+              className="text-2xl md:text-3xl font-black text-white/40 whitespace-nowrap tracking-wider"
             >
               {tech}
             </span>
