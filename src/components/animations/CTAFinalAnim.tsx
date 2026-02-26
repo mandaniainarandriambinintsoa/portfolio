@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap-register";
+import { useLazyGSAP } from "@/hooks/useLazyGSAP";
 
 export default function CTAFinalAnim({
   children,
@@ -11,7 +11,7 @@ export default function CTAFinalAnim({
 }) {
   const container = useRef<HTMLDivElement>(null);
 
-  useGSAP(() => {
+  useLazyGSAP(() => {
     if (!container.current) return;
 
     const mm = gsap.matchMedia();
@@ -50,7 +50,7 @@ export default function CTAFinalAnim({
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
-  }, { scope: container });
+  }, container);
 
   return <div ref={container}>{children}</div>;
 }

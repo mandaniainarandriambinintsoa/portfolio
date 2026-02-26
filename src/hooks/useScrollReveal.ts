@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap-register";
+import { useLazyGSAP } from "./useLazyGSAP";
 
 export function useScrollReveal<T extends HTMLElement>(
   options: {
@@ -15,7 +15,7 @@ export function useScrollReveal<T extends HTMLElement>(
   const ref = useRef<T>(null);
   const { y = 40, duration = 0.8, delay = 0, start = "top 85%" } = options;
 
-  useGSAP(() => {
+  useLazyGSAP(() => {
     if (!ref.current) return;
 
     const mm = gsap.matchMedia();
@@ -41,7 +41,7 @@ export function useScrollReveal<T extends HTMLElement>(
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
-  }, { scope: ref });
+  }, ref);
 
   return ref;
 }

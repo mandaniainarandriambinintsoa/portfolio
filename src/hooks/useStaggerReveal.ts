@@ -1,8 +1,8 @@
 "use client";
 
 import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "@/lib/gsap-register";
+import { useLazyGSAP } from "./useLazyGSAP";
 
 export function useStaggerReveal<T extends HTMLElement>(
   childSelector: string,
@@ -21,7 +21,7 @@ export function useStaggerReveal<T extends HTMLElement>(
     start = "top 85%",
   } = options;
 
-  useGSAP(() => {
+  useLazyGSAP(() => {
     if (!ref.current) return;
 
     const mm = gsap.matchMedia();
@@ -50,7 +50,7 @@ export function useStaggerReveal<T extends HTMLElement>(
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
-  }, { scope: ref });
+  }, ref);
 
   return ref;
 }
