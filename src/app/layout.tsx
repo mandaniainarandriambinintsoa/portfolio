@@ -36,15 +36,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preload" href={materialSymbolsUrl} as="style" />
-        {/* Non-render-blocking: loads as print then swaps to all */}
-        <link
-          rel="stylesheet"
-          href={materialSymbolsUrl}
-          media="print"
-          // @ts-expect-error - string onLoad for SSR HTML
-          onLoad="this.media='all'"
-        />
+        <link rel="stylesheet" href={materialSymbolsUrl} />
       </head>
       <body className={`${inter.variable} font-[family-name:var(--font-inter)] antialiased`}>
         {children}
