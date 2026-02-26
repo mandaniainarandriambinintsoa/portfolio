@@ -26,6 +26,12 @@
   -webkit-font-smoothing: antialiased;
 }
 
+/* Skip rendering off-screen sections until near viewport — reduces initial layout work */
+.below-fold {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
 /* Base */
 body {
   background-color: var(--color-bg-dark);

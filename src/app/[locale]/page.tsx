@@ -45,62 +45,82 @@ export default async function HomePage({
         <Hero dict={dict.hero} locale={locale} />
       </HeroAnimations>
 
-      <CommandCenterAnim>
-        <CommandCenter fileName={dict.command_center.file_name} />
-      </CommandCenterAnim>
+      <div className="below-fold">
+        <CommandCenterAnim>
+          <CommandCenter fileName={dict.command_center.file_name} />
+        </CommandCenterAnim>
+      </div>
 
-      <ServicesGridAnim>
-        <ServicesGrid items={dict.services.items.filter((s: { isLanding?: boolean }) => !s.isLanding)} />
-      </ServicesGridAnim>
+      <div className="below-fold">
+        <ServicesGridAnim>
+          <ServicesGrid items={dict.services.items.filter((s: { isLanding?: boolean }) => !s.isLanding)} />
+        </ServicesGridAnim>
+      </div>
 
-      <ProcessAnim>
-        <Process title={dict.process.title} steps={dict.process.steps} />
-      </ProcessAnim>
+      <div className="below-fold">
+        <ProcessAnim>
+          <Process title={dict.process.title} steps={dict.process.steps} />
+        </ProcessAnim>
+      </div>
 
-      <Testimonials dict={dict.testimonials} locale={locale} />
+      <div className="below-fold">
+        <Testimonials dict={dict.testimonials} locale={locale} />
+      </div>
 
-      <StatsAnim>
-        <Stats title={dict.stats.title} items={dict.stats.items} />
-      </StatsAnim>
+      <div className="below-fold">
+        <StatsAnim>
+          <Stats title={dict.stats.title} items={dict.stats.items} />
+        </StatsAnim>
+      </div>
 
-      <TechStackAnim>
-        <TechStack label={dict.tech_stack.label} />
-      </TechStackAnim>
+      <div className="below-fold">
+        <TechStackAnim>
+          <TechStack label={dict.tech_stack.label} />
+        </TechStackAnim>
+      </div>
 
-      <Projects
-        title={dict.projects.title}
-        viewAll={dict.projects.view_all}
-        items={projects}
-        locale={locale}
-        categoryLabels={{
-          webapp: dict.projects.category_webapp,
-          workflow: dict.projects.category_workflow,
-        }}
-      />
-
-      <VisitorTrackingAnim>
-        <VisitorTracking
-          dict={dict.visitor_tracking}
+      <div className="below-fold">
+        <Projects
+          title={dict.projects.title}
+          viewAll={dict.projects.view_all}
+          items={projects}
           locale={locale}
+          categoryLabels={{
+            webapp: dict.projects.category_webapp,
+            workflow: dict.projects.category_workflow,
+          }}
         />
-      </VisitorTrackingAnim>
+      </div>
 
-      <FAQAnim>
-        <FAQ title={dict.faq.title} items={dict.faq.items} />
-      </FAQAnim>
+      <div className="below-fold">
+        <VisitorTrackingAnim>
+          <VisitorTracking
+            dict={dict.visitor_tracking}
+            locale={locale}
+          />
+        </VisitorTrackingAnim>
+      </div>
 
-      <CTAFinalAnim>
-        <CTAFinal
-          title={dict.cta_final.title}
-          titleHighlight={dict.cta_final.title_highlight}
-          titleEnd={dict.cta_final.title_end}
-          subtitle={dict.cta_final.subtitle}
-          button={dict.cta_final.button}
-          buttonHref={dict.cta_final.button_href}
-          quizButton={dict.cta_final.quiz_button}
-          quizHref={dict.cta_final.quiz_href}
-        />
-      </CTAFinalAnim>
+      <div className="below-fold">
+        <FAQAnim>
+          <FAQ title={dict.faq.title} items={dict.faq.items} />
+        </FAQAnim>
+      </div>
+
+      <div className="below-fold">
+        <CTAFinalAnim>
+          <CTAFinal
+            title={dict.cta_final.title}
+            titleHighlight={dict.cta_final.title_highlight}
+            titleEnd={dict.cta_final.title_end}
+            subtitle={dict.cta_final.subtitle}
+            button={dict.cta_final.button}
+            buttonHref={dict.cta_final.button_href}
+            quizButton={dict.cta_final.quiz_button}
+            quizHref={dict.cta_final.quiz_href}
+          />
+        </CTAFinalAnim>
+      </div>
     </main>
   );
 }
