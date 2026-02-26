@@ -28,10 +28,12 @@ export default function HeroAnimations({
           { opacity: 1, y: 0, duration: 1, stagger: 0.15 }
         );
 
+        // Paragraph is the LCP element — never hide it (opacity stays 1)
+        // Only animate movement so LCP fires at first paint
         tl.fromTo(
           container.current!.querySelector("p"),
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.8 },
+          { y: 20 },
+          { y: 0, duration: 0.8 },
           "-=0.4"
         );
 
