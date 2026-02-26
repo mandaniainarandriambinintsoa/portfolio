@@ -131,7 +131,7 @@ export default function BlogListingClient({
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   {/* Reading time badge */}
-                  <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-indigo-600 text-white">
+                  <span className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase bg-indigo-600 text-white">
                     {post.readingTime} {labels.minRead}
                   </span>
                 </div>
@@ -143,7 +143,7 @@ export default function BlogListingClient({
                     {post.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-0.5 bg-indigo-600/20 border border-indigo-500/30 rounded text-[10px] font-bold tracking-wider uppercase text-indigo-300"
+                        className="px-2 py-0.5 bg-indigo-600/20 border border-indigo-500/30 rounded text-xs font-bold tracking-wider uppercase text-indigo-300"
                       >
                         {tag}
                       </span>

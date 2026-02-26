@@ -110,7 +110,7 @@ export default function ProjectsListing({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 {/* Category badge */}
                 <span
-                  className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase ${
+                  className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase ${
                     project.category === "workflow"
                       ? "bg-emerald-600 text-white"
                       : "bg-indigo-600 text-white"
@@ -141,7 +141,7 @@ export default function ProjectsListing({
                   {project.tags.map((tag: string) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 bg-white/5 rounded text-[10px] font-bold tracking-wider uppercase text-slate-500"
+                      className="px-2 py-0.5 bg-white/5 rounded text-xs font-bold tracking-wider uppercase text-slate-500"
                     >
                       {tag}
                     </span>

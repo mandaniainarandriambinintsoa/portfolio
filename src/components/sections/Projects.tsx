@@ -320,7 +320,7 @@ export default function Projects({
                   {/* Badges */}
                   <div className="flex gap-2 mb-3 flex-wrap">
                     <span
-                      className={`px-3 py-1 backdrop-blur-sm rounded-full text-[10px] font-semibold tracking-wider uppercase text-white ${
+                      className={`px-3 py-1 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider uppercase text-white ${
                         isWorkflow ? "bg-emerald-500/60" : "bg-indigo-500/60"
                       }`}
                     >
@@ -333,7 +333,7 @@ export default function Projects({
                       .map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 bg-white/8 backdrop-blur-sm rounded-full text-[10px] font-medium tracking-wider uppercase text-white/70"
+                          className="px-3 py-1 bg-white/8 backdrop-blur-sm rounded-full text-xs font-medium tracking-wider uppercase text-white/70"
                         >
                           {tag}
                         </span>
