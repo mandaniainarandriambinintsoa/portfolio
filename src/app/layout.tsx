@@ -7,8 +7,8 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// Self-hosted Material Symbols subset (40 icons, 11.8 kB woff2)
-// Eliminates entire fonts.gstatic.com round-trip from critical path
+// Self-hosted Material Symbols subset (42 icons, 6.5 kB woff2, weight 400 fixed)
+// Loaded lazily (no preload) — not needed above the fold
 const materialSymbolsFontFace = `@font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/material-symbols-outlined.woff2) format('woff2')}`;
 
 // GTM loaded on first user interaction only (scroll/click/touch)
@@ -29,7 +29,6 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="preload" href="/fonts/material-symbols-outlined.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{ __html: materialSymbolsFontFace }} />
       </head>
       <body className={`${inter.variable} font-[family-name:var(--font-inter)] antialiased`}>
