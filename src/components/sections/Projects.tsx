@@ -89,6 +89,7 @@ export default function Projects({
     ]).then(([gsapMod, stMod]) => {
       const gsap = gsapMod.default;
       gsap.registerPlugin(stMod.ScrollTrigger);
+      stMod.ScrollTrigger.config({ ignoreMobileResize: true });
       gsapRef.current = gsap;
     });
   }, []);

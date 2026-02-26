@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -8,9 +7,13 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// Inlined Material Symbols @font-face (eliminates render-blocking request to fonts.googleapis.com)
-// Subset: 40 icons via icon_names param — woff2 served from fonts.gstatic.com
-const materialSymbolsFontFace = `@font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=kJF4BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZZLsYEpzC_1ver5Y0J1LlfqY9TzVIEO6LAILISxktAtLt378WP7NqkFPshezkPUW2kj9keDVeDOq7G-pegO02YiWtoQ96yTPjvxsQvHL2wBi3YuNj3Oe45YF3gSidBAdBStfF8QM35qYF5NNI&skey=b8dc2088854b122f&v=v316) format('woff2')}`;
+// Self-hosted Material Symbols subset (40 icons, 11.8 kB woff2)
+// Eliminates entire fonts.gstatic.com round-trip from critical path
+const materialSymbolsFontFace = `@font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/material-symbols-outlined.woff2) format('woff2')}`;
+
+// GTM loaded on first user interaction only (scroll/click/touch)
+// Keeps 455 kB + 100ms main thread out of initial load entirely
+const gtmOnInteraction = `(function(){var d=!1;function l(){if(!d){d=!0;var s=document.createElement('script');s.src='https://www.googletagmanager.com/gtag/js?id=G-2Q177TH3CR';s.async=!0;document.head.appendChild(s);s.onload=function(){window.dataLayer=window.dataLayer||[];function g(){dataLayer.push(arguments)}g('js',new Date());g('config','G-2Q177TH3CR')};['scroll','click','touchstart'].forEach(function(e){document.removeEventListener(e,l)})}}['scroll','click','touchstart'].forEach(function(e){document.addEventListener(e,l,{once:!0,passive:!0})})})();`;
 
 export const metadata = {
   verification: {
@@ -26,18 +29,12 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/material-symbols-outlined.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <style dangerouslySetInnerHTML={{ __html: materialSymbolsFontFace }} />
       </head>
       <body className={`${inter.variable} font-[family-name:var(--font-inter)] antialiased`}>
         {children}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-2Q177TH3CR"
-          strategy="lazyOnload"
-        />
-        <Script id="gtag-init" strategy="lazyOnload">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-2Q177TH3CR');`}
-        </Script>
+        <script dangerouslySetInnerHTML={{ __html: gtmOnInteraction }} />
       </body>
     </html>
   );
