@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import Hero from "@/components/sections/Hero";
@@ -12,15 +13,19 @@ import FAQ from "@/components/sections/FAQ";
 import CTAFinal from "@/components/sections/CTAFinal";
 import VisitorTracking from "@/components/sections/VisitorTracking";
 import { getProjects } from "@/lib/data/projects";
+
+// Above-fold: static import (needed for LCP)
 import HeroAnimations from "@/components/animations/HeroAnimations";
-import CommandCenterAnim from "@/components/animations/CommandCenterAnim";
-import ServicesGridAnim from "@/components/animations/ServicesGridAnim";
-import ProcessAnim from "@/components/animations/ProcessAnim";
-import StatsAnim from "@/components/animations/StatsAnim";
-import TechStackAnim from "@/components/animations/TechStackAnim";
-import FAQAnim from "@/components/animations/FAQAnim";
-import VisitorTrackingAnim from "@/components/animations/VisitorTrackingAnim";
-import CTAFinalAnim from "@/components/animations/CTAFinalAnim";
+
+// Below-fold: dynamic imports (code-split GSAP ScrollTrigger out of initial bundle)
+const CommandCenterAnim = dynamic(() => import("@/components/animations/CommandCenterAnim"));
+const ServicesGridAnim = dynamic(() => import("@/components/animations/ServicesGridAnim"));
+const ProcessAnim = dynamic(() => import("@/components/animations/ProcessAnim"));
+const StatsAnim = dynamic(() => import("@/components/animations/StatsAnim"));
+const TechStackAnim = dynamic(() => import("@/components/animations/TechStackAnim"));
+const FAQAnim = dynamic(() => import("@/components/animations/FAQAnim"));
+const VisitorTrackingAnim = dynamic(() => import("@/components/animations/VisitorTrackingAnim"));
+const CTAFinalAnim = dynamic(() => import("@/components/animations/CTAFinalAnim"));
 export default async function HomePage({
   params,
 }: {

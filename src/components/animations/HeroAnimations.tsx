@@ -1,8 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "@/lib/gsap-register";
+import { useRef, useEffect, useState } from "react";
 
 export default function HeroAnimations({
   children,
@@ -10,38 +8,46 @@ export default function HeroAnimations({
   children: React.ReactNode;
 }) {
   const container = useRef<HTMLDivElement>(null);
+  const [animated, setAnimated] = useState(false);
 
-  useGSAP(() => {
-    if (!container.current) return;
+  useEffect(() => {
+    if (animated || !container.current) return;
 
-    const mm = gsap.matchMedia();
-    mm.add("(prefers-reduced-motion: no-preference)", () => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    // Defer GSAP import out of the critical render path
+    const runAnimation = async () => {
+      const { gsap } = await import("@/lib/gsap-register");
+      if (!container.current) return;
 
-      // H1 lines stagger
-      tl.fromTo(
-        container.current!.querySelectorAll("h1 span"),
-        { opacity: 0, y: 60 },
-        { opacity: 1, y: 0, duration: 1, stagger: 0.15 }
-      );
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      // Subtitle fade
-      tl.fromTo(
-        container.current!.querySelector("p"),
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8 },
-        "-=0.4"
-      );
+        tl.fromTo(
+          container.current!.querySelectorAll("h1 span"),
+          { opacity: 0, y: 60 },
+          { opacity: 1, y: 0, duration: 1, stagger: 0.15 }
+        );
 
-      // CTAs slide in
-      tl.fromTo(
-        container.current!.querySelectorAll("a, button"),
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6, stagger: 0.1 },
-        "-=0.3"
-      );
-    });
-  }, { scope: container });
+        tl.fromTo(
+          container.current!.querySelector("p"),
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.8 },
+          "-=0.4"
+        );
+
+        tl.fromTo(
+          container.current!.querySelectorAll("a, button"),
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6, stagger: 0.1 },
+          "-=0.3"
+        );
+      });
+
+      setAnimated(true);
+    };
+
+    requestAnimationFrame(runAnimation);
+  }, [animated]);
 
   return <div ref={container}>{children}</div>;
 }
