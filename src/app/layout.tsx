@@ -29,6 +29,9 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
+        {/* Low priority preload — prevents CLS from icon swap without competing with critical resources */}
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link rel="preload" href="/fonts/material-symbols-outlined.woff2" as="font" type="font/woff2" crossOrigin="anonymous" fetchPriority="low" />
         <style dangerouslySetInnerHTML={{ __html: materialSymbolsFontFace }} />
       </head>
       <body className={`${inter.variable} font-[family-name:var(--font-inter)] antialiased`}>
