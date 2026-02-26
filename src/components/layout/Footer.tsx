@@ -11,10 +11,14 @@ export default function Footer({
 }) {
   const prefix = locale === "fr" ? "" : "/en";
 
-  const siteLinks = [
+  const siteLinks: { label: string; href: string; ariaLabel?: string }[] = [
     { label: "Blog", href: `${prefix}/blog` },
     { label: "Services", href: `${prefix}/services` },
-    { label: locale === "fr" ? "Projets" : "Projects", href: `${prefix}/projects` },
+    {
+      label: locale === "fr" ? "Projets" : "Projects",
+      href: `${prefix}/projects`,
+      ariaLabel: locale === "fr" ? "Voir tous les projets" : "View all projects",
+    },
     { label: locale === "fr" ? "À propos" : "About", href: `${prefix}/about` },
     { label: "Contact", href: `${prefix}/contact` },
   ];
@@ -44,6 +48,7 @@ export default function Footer({
             <Link
               key={link.href}
               href={link.href}
+              aria-label={link.ariaLabel}
               className="text-xs text-slate-400 hover:text-white transition-colors hover:underline underline-offset-4 decoration-white/30"
             >
               {link.label}

@@ -145,7 +145,7 @@ body {
   left: 0;
   z-index: 100;
   padding: 1rem 2rem;
-  background: var(--color-primary);
+  background: var(--color-accent-indigo);
   color: white;
   font-weight: 600;
   transition: top 0.2s;
