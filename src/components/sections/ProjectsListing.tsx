@@ -141,7 +141,7 @@ export default function ProjectsListing({
                   {project.tags.map((tag: string) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 bg-white/5 rounded text-xs font-bold tracking-wider uppercase text-slate-500"
+                      className="px-2 py-0.5 bg-white/5 rounded text-xs font-bold tracking-wider uppercase text-slate-400"
                     >
                       {tag}
                     </span>

@@ -47,7 +47,7 @@ export default function CommandCenter({
               <span className="text-pink-400">export default async function</span>{" "}
               <span className="text-blue-400">orchestrate</span>() {"{"}
             </p>
-            <p className="pl-4 text-slate-500">
+            <p className="pl-4 text-slate-400">
               {"// Initialize high-scale workflow"}
             </p>
             <p className="pl-4">
@@ -91,7 +91,7 @@ export default function CommandCenter({
               </div>
               <div>
                 <p className="font-bold text-white text-xs">Webhook Receiver</p>
-                <p className="text-slate-500 text-xs">Listening for events...</p>
+                <p className="text-slate-400 text-xs">Listening for events...</p>
               </div>
             </div>
 
@@ -113,7 +113,7 @@ export default function CommandCenter({
               </div>
               <div>
                 <p className="font-bold text-white text-xs">Vector Database</p>
-                <p className="text-slate-500 text-xs">Syncing 1.2k records</p>
+                <p className="text-slate-400 text-xs">Syncing 1.2k records</p>
               </div>
             </div>
           </div>

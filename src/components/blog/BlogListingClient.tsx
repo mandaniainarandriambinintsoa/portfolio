@@ -158,7 +158,7 @@ export default function BlogListingClient({
                   </p>
 
                   {/* Footer: date + read more */}
-                  <div className="flex items-center justify-between text-xs text-slate-500">
+                  <div className="flex items-center justify-between text-xs text-slate-400">
                     <time dateTime={post.publishedAt ?? undefined}>
                       {formatDate(post.publishedAt)}
                     </time>
