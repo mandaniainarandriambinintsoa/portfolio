@@ -26,22 +26,6 @@ export default function Footer({
   return (
     <footer className="w-full border-t border-white/5 py-12 px-6 md:px-10">
       <div className="max-w-7xl mx-auto flex flex-col gap-8">
-        {/* CTA */}
-        <div className="text-center">
-          <p className="text-lg font-bold text-white mb-1">
-            {locale === "fr"
-              ? "Prêt à développer votre projet ou automatiser votre business ?"
-              : "Ready to develop your project or automate your business?"}
-          </p>
-          <p className="text-sm text-slate-400">
-            {locale === "fr" ? "20+ projets livrés" : "20+ projects delivered"}
-            {" · "}
-            <Link href={`${prefix}/contact`} className="text-indigo-400 hover:text-indigo-300 transition-colors underline underline-offset-4 decoration-indigo-400/40 hover:decoration-indigo-300/60">
-              {locale === "fr" ? "Discutons ensemble" : "Let's talk"}
-            </Link>
-          </p>
-        </div>
-
         {/* Site links */}
         <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {siteLinks.map((link) => (
