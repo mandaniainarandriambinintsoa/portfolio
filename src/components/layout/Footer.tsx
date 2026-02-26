@@ -69,14 +69,6 @@ export default function Footer({
             >
               GitHub
             </a>
-            <a
-              href={SOCIAL_LINKS.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/40"
-            >
-              X / Twitter
-            </a>
           </div>
         </div>
       </div>

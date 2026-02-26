@@ -3,8 +3,7 @@ export const SITE_NAME = "Manda";
 
 export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/mandaniaina-randriambinintsoa-a75553178/",
-  github: "https://github.com/mandaniaina.randriambinintoa",
-  twitter: "https://x.com/",
+  github: "https://github.com/mandaniainarandriambinintsoa",
 } as const;
 
 export const PERSONAL_INFO = {
