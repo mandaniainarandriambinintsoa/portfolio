@@ -21,7 +21,8 @@ export default function ServicesGrid({
   items: ServiceItem[];
 }) {
   return (
-    <section id="services" className="max-w-6xl w-full mx-auto mb-16 md:mb-32 px-6">
+    <section id="services" aria-label="Services" className="max-w-6xl w-full mx-auto mb-16 md:mb-32 px-6">
+      <h2 className="sr-only">Services</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {items.map((service) => {
           const colors = colorMap[service.color] || colorMap.indigo;

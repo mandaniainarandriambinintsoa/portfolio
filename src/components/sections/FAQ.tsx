@@ -16,7 +16,7 @@ export default function FAQ({ title, items }: FAQProps) {
       <FAQJsonLd items={items} />
 
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="text-sm font-mono tracking-[0.3em] text-white/40 mb-10 uppercase">
+        <h2 className="text-sm font-mono tracking-[0.3em] text-white/60 mb-10 uppercase">
           {title}
         </h2>
 
@@ -30,7 +30,7 @@ export default function FAQ({ title, items }: FAQProps) {
                 <span className="text-base md:text-lg font-medium text-white pr-4">
                   {item.question}
                 </span>
-                <span className="faq-icon flex-shrink-0 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-white/40 transition-colors group-open:text-indigo-400 group-open:border-indigo-400/30">
+                <span className="faq-icon flex-shrink-0 w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 transition-colors group-open:text-indigo-400 group-open:border-indigo-400/30">
                   <svg
                     width="14"
                     height="14"
@@ -48,7 +48,7 @@ export default function FAQ({ title, items }: FAQProps) {
                 </span>
               </summary>
               <div className="faq-content px-8 pb-6">
-                <p className="text-white/50 leading-relaxed">{item.answer}</p>
+                <p className="text-white/70 leading-relaxed">{item.answer}</p>
               </div>
             </details>
           ))}

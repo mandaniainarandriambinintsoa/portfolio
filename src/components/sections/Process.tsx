@@ -30,13 +30,13 @@ export default function Process({
               {step.number}
             </div>
             <div className="relative z-10">
-              <h4
+              <h3
                 className={`text-xl font-bold mb-4 ${
                   colorMap[step.color] || "text-indigo-400"
                 }`}
               >
                 {step.title}
-              </h4>
+              </h3>
               <p className="text-slate-400">{step.description}</p>
             </div>
           </div>

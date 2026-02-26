@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef, useCallback } from "react";
-import { gsap } from "@/lib/gsap-register";
+import type { gsap as GsapType } from "gsap";
 import type { VisitorRow } from "@/app/api/visitors/route";
 
 function FlagIcon({ code }: { code: string }) {
@@ -56,9 +56,18 @@ export default function VisitorTracking({
   const [visitors, setVisitors] = useState<VisitorRow[]>([]);
   const [prevKeys, setPrevKeys] = useState<Set<string>>(new Set());
   const tableRef = useRef<HTMLDivElement>(null);
+  const gsapRef = useRef<typeof GsapType | null>(null);
+
+  // Lazy-load GSAP (keeps it out of initial bundle)
+  useEffect(() => {
+    import("gsap").then((mod) => {
+      gsapRef.current = mod.default;
+    });
+  }, []);
 
   const animateNewRows = useCallback((newKeys: string[]) => {
-    if (!tableRef.current || newKeys.length === 0) return;
+    const gsap = gsapRef.current;
+    if (!gsap || !tableRef.current || newKeys.length === 0) return;
     for (const key of newKeys) {
       const row = tableRef.current.querySelector(`[data-visitor-key="${CSS.escape(key)}"]`);
       if (!row) continue;
@@ -112,7 +121,7 @@ export default function VisitorTracking({
       <div className="mx-auto max-w-4xl px-6">
         {/* Header */}
         <div className="flex items-center gap-3 mb-3">
-          <h2 className="text-sm font-mono tracking-[0.3em] text-white/40 uppercase">
+          <h2 className="text-sm font-mono tracking-[0.3em] text-white/60 uppercase">
             {dict.title}
           </h2>
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-medium text-emerald-400">
@@ -125,7 +134,7 @@ export default function VisitorTracking({
         </div>
 
         {/* Showcase text */}
-        <p className="text-white/50 text-sm md:text-base leading-relaxed mb-8 max-w-2xl">
+        <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8 max-w-2xl">
           {dict.showcase_text}
         </p>
 
@@ -135,7 +144,7 @@ export default function VisitorTracking({
           className="glass-card rounded-2xl border border-white/[0.06] overflow-hidden"
         >
           {/* Table header */}
-          <div className="grid grid-cols-3 px-6 py-3 border-b border-white/[0.06] text-xs font-mono tracking-wider text-white/30 uppercase">
+          <div className="grid grid-cols-3 px-6 py-3 border-b border-white/[0.06] text-xs font-mono tracking-wider text-white/50 uppercase">
             <span>{dict.col_city}</span>
             <span>{dict.col_country}</span>
             <span className="text-right">{dict.col_when}</span>
@@ -143,7 +152,7 @@ export default function VisitorTracking({
 
           {/* Rows */}
           {visitors.length === 0 ? (
-            <div className="px-6 py-8 text-center text-white/30 text-sm">
+            <div className="px-6 py-8 text-center text-white/50 text-sm">
               {dict.empty}
             </div>
           ) : (
@@ -157,11 +166,11 @@ export default function VisitorTracking({
                     className="visitor-row grid grid-cols-3 px-6 py-3 text-sm"
                   >
                     <span className="text-white/70 truncate">{v.city}</span>
-                    <span className="text-white/50 flex items-center gap-2">
+                    <span className="text-white/70 flex items-center gap-2">
                       <FlagIcon code={v.country_code} />
                       <span className="truncate">{v.country}</span>
                     </span>
-                    <span className="text-white/30 text-right">
+                    <span className="text-white/50 text-right">
                       {formatTimeAgo(v.created_at, locale)}
                     </span>
                   </div>

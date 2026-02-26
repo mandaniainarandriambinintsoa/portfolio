@@ -13,7 +13,7 @@ export default function Stats({ title, items }: StatsProps) {
   return (
     <section className="relative py-12 md:py-16 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="text-sm font-mono tracking-[0.3em] text-white/40 mb-10 uppercase">
+        <h2 className="text-sm font-mono tracking-[0.3em] text-white/60 mb-10 uppercase">
           {title}
         </h2>
 
@@ -31,7 +31,7 @@ export default function Stats({ title, items }: StatsProps) {
                   {item.suffix}
                 </span>
               </div>
-              <p className="text-sm md:text-base text-white/50 font-medium">
+              <p className="text-sm md:text-base text-white/70 font-medium">
                 {item.label}
               </p>
             </div>

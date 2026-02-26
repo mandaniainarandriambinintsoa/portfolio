@@ -68,7 +68,7 @@ export default function HeaderClient({
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                className="text-sm font-medium text-slate-400 hover:text-white transition-colors hover:underline underline-offset-4 decoration-white/30"
               >
                 {item.label}
               </Link>
@@ -84,7 +84,7 @@ export default function HeaderClient({
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2 relative z-50"
+            className="md:hidden flex flex-col gap-1.5 p-3 relative z-50"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}

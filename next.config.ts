@@ -15,6 +15,14 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  turbopack: {
+    resolveAlias: {
+      // Remove built-in polyfills (Array.at, Array.flat, Object.fromEntries, Object.hasOwn)
+      // All target browsers (Chrome 111+, Edge 111+, Firefox 111+, Safari 16.4+) support these natively
+      "../build/polyfills/polyfill-module": "./src/lib/empty-polyfill.js",
+      "next/dist/build/polyfills/polyfill-module": "./src/lib/empty-polyfill.js",
+    },
+  },
 };
 
 export default nextConfig;

@@ -8,17 +8,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const materialSymbolsIcons = [
-  "all_inclusive","api","arrow_forward","bolt","business","calendar_today",
-  "chat","check_circle","code","code_off","deployed_code","description",
-  "emoji_objects","home","hub","link","location_on","lock","mail",
-  "north_east","payments","person","precision_manufacturing",
-  "progress_activity","psychology","quiz","rocket_launch","savings",
-  "schedule","search","smart_toy","speed","storage","support_agent",
-  "target","terminal","timer","translate","trending_up","verified",
-].join(",");
-
-const materialSymbolsUrl = `https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,400,0&icon_names=${materialSymbolsIcons}&display=swap`;
+// Inlined Material Symbols @font-face (eliminates render-blocking request to fonts.googleapis.com)
+// Subset: 40 icons via icon_names param — woff2 served from fonts.gstatic.com
+const materialSymbolsFontFace = `@font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/l/font?kit=kJF4BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZZLsYEpzC_1ver5Y0J1LlfqY9TzVIEO6LAILISxktAtLt378WP7NqkFPshezkPUW2kj9keDVeDOq7G-pegO02YiWtoQ96yTPjvxsQvHL2wBi3YuNj3Oe45YF3gSidBAdBStfF8QM35qYF5NNI&skey=b8dc2088854b122f&v=v316) format('woff2')}`;
 
 export const metadata = {
   verification: {
@@ -34,9 +26,8 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="stylesheet" href={materialSymbolsUrl} />
+        <style dangerouslySetInnerHTML={{ __html: materialSymbolsFontFace }} />
       </head>
       <body className={`${inter.variable} font-[family-name:var(--font-inter)] antialiased`}>
         {children}

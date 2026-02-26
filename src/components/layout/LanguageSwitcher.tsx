@@ -27,7 +27,7 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
   return (
     <Link
       href={getTargetPath()}
-      className="px-3 py-1.5 text-xs font-bold tracking-widest uppercase text-slate-400 hover:text-white border border-white/10 rounded-full transition-colors"
+      className="px-4 py-2 text-xs font-bold tracking-widest uppercase text-slate-400 hover:text-white border border-white/10 rounded-full transition-colors"
       aria-label={`Switch to ${targetLocale === "fr" ? "French" : "English"}`}
     >
       {targetLocale.toUpperCase()}

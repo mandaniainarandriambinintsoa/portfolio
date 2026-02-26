@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import gsap from "gsap";
+import type { gsap as GsapType } from "gsap";
 
 type TestimonialItem = {
   quote: string;
@@ -26,10 +26,19 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
   const [active, setActive] = useState(0);
   const cardRef = useRef<HTMLDivElement>(null);
   const timerRef = useRef<ReturnType<typeof setInterval>>(undefined);
+  const gsapRef = useRef<typeof GsapType | null>(null);
   const items = dict.items;
 
+  // Lazy-load GSAP (keeps it out of initial bundle)
+  useEffect(() => {
+    import("gsap").then((mod) => {
+      gsapRef.current = mod.default;
+    });
+  }, []);
+
   const animateIn = useCallback(() => {
-    if (!cardRef.current) return;
+    const gsap = gsapRef.current;
+    if (!gsap || !cardRef.current) return;
     const quote = cardRef.current.querySelector(".t-quote");
     const meta = cardRef.current.querySelector(".t-meta");
     const tl = gsap.timeline();
@@ -47,7 +56,8 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
 
   const goTo = useCallback(
     (index: number) => {
-      if (!cardRef.current) return;
+      const gsap = gsapRef.current;
+      if (!gsap || !cardRef.current) return;
       const quote = cardRef.current.querySelector(".t-quote");
       const meta = cardRef.current.querySelector(".t-meta");
       gsap.to([quote, meta], {
@@ -73,8 +83,8 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
     timerRef.current = setInterval(() => {
       setActive((prev) => {
         const next = (prev + 1) % items.length;
-        // Animate out then set
-        if (cardRef.current) {
+        const gsap = gsapRef.current;
+        if (gsap && cardRef.current) {
           const quote = cardRef.current.querySelector(".t-quote");
           const meta = cardRef.current.querySelector(".t-meta");
           gsap.to([quote, meta], {
@@ -112,7 +122,7 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
   return (
     <section className="max-w-6xl w-full mx-auto mb-16 md:mb-32 px-6">
       {/* Section title */}
-      <h2 className="text-xs font-bold tracking-[0.3em] text-slate-500 uppercase mb-10">
+      <h2 className="text-xs font-bold tracking-[0.3em] text-slate-400 uppercase mb-10">
         {dict.title}
       </h2>
 
@@ -136,8 +146,8 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
             {/* Author meta */}
             <div className="t-meta flex items-center justify-between relative z-10">
               <div className="flex items-center gap-3">
-                <div className="w-11 h-11 rounded-full bg-black/[0.06] flex items-center justify-center">
-                  <span className="text-lg font-bold text-black/30">
+                <div className="w-11 h-11 rounded-full bg-black/[0.15] flex items-center justify-center">
+                  <span className="text-lg font-bold text-black/60">
                     {current.author
                       .split(" ")
                       .map((n) => n[0])
@@ -146,14 +156,14 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
                 </div>
                 <div>
                   <p className="font-bold text-sm">{current.author}</p>
-                  <p className="text-xs text-black/50">
+                  <p className="text-xs text-black/70">
                     {current.role} — {current.company}
                   </p>
                 </div>
               </div>
 
               {/* Navigation dots */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
                 {items.map((item, i) => (
                   <button
                     key={i}
@@ -161,13 +171,17 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
                       clearInterval(timerRef.current);
                       if (i !== active) goTo(i);
                     }}
-                    className={`transition-all duration-300 rounded-full cursor-pointer ${
-                      i === active
-                        ? `w-8 h-2.5 ${dotColors[item.project] ?? "bg-indigo-400"}`
-                        : "w-2.5 h-2.5 bg-black/10 hover:bg-black/20"
-                    }`}
+                    className="flex items-center justify-center min-w-6 min-h-6 cursor-pointer"
                     aria-label={`Testimonial ${i + 1}`}
-                  />
+                  >
+                    <span
+                      className={`block transition-all duration-300 rounded-full ${
+                        i === active
+                          ? `w-8 h-2.5 ${dotColors[item.project] ?? "bg-indigo-400"}`
+                          : "w-2.5 h-2.5 bg-black/20 hover:bg-black/30"
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
             </div>
@@ -198,13 +212,13 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
           <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-white/[0.06]">
             <div>
               <p className="text-2xl font-bold text-white">20+</p>
-              <p className="text-xs text-slate-500 mt-1">
+              <p className="text-xs text-slate-400 mt-1">
                 {locale === "fr" ? "Projets livrés" : "Projects delivered"}
               </p>
             </div>
             <div>
               <p className="text-2xl font-bold text-white">100%</p>
-              <p className="text-xs text-slate-500 mt-1">
+              <p className="text-xs text-slate-400 mt-1">
                 {locale === "fr" ? "Clients satisfaits" : "Client satisfaction"}
               </p>
             </div>

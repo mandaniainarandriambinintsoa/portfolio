@@ -32,7 +32,7 @@ export default function Footer({
           <p className="text-sm text-slate-400">
             {locale === "fr" ? "20+ projets livrés" : "20+ projects delivered"}
             {" · "}
-            <Link href={`${prefix}/contact`} className="text-indigo-400 hover:text-indigo-300 transition-colors">
+            <Link href={`${prefix}/contact`} className="text-indigo-400 hover:text-indigo-300 transition-colors underline underline-offset-4 decoration-indigo-400/40 hover:decoration-indigo-300/60">
               {locale === "fr" ? "Discutons ensemble" : "Let's talk"}
             </Link>
           </p>
@@ -44,20 +44,20 @@ export default function Footer({
             <Link
               key={link.href}
               href={link.href}
-              className="text-xs text-slate-400 hover:text-white transition-colors"
+              className="text-xs text-slate-400 hover:text-white transition-colors hover:underline underline-offset-4 decoration-white/30"
             >
               {link.label}
             </Link>
           ))}
         </div>
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 opacity-50">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 opacity-60">
           <p className="text-sm font-medium">{copyright}</p>
           <div className="flex gap-8">
             <a
               href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs hover:text-white transition-colors"
+              className="text-xs hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/40"
             >
               LinkedIn
             </a>
@@ -65,7 +65,7 @@ export default function Footer({
               href={SOCIAL_LINKS.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs hover:text-white transition-colors"
+              className="text-xs hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/40"
             >
               GitHub
             </a>
@@ -73,7 +73,7 @@ export default function Footer({
               href={SOCIAL_LINKS.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs hover:text-white transition-colors"
+              className="text-xs hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/40"
             >
               X / Twitter
             </a>

@@ -3,12 +3,9 @@
 import { useState, useRef, useEffect, useMemo, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import type { gsap as GsapType } from "gsap";
 import type { Locale } from "@/i18n/config";
 import type { ProjectItem, ProjectCategory } from "@/lib/types";
-
-gsap.registerPlugin(ScrollTrigger);
 
 type FilterType = "all" | ProjectCategory;
 
@@ -72,6 +69,7 @@ export default function Projects({
   const [filter, setFilter] = useState<FilterType>("all");
   const gridRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const gsapRef = useRef<typeof GsapType | null>(null);
   const prefix = locale === "fr" ? "" : "/en";
   const allLabel = locale === "fr" ? "Tous" : "All";
 
@@ -83,9 +81,22 @@ export default function Projects({
 
   const isBentoLayout = filter === "all" && filtered.length >= 6;
 
+  // Lazy-load GSAP + ScrollTrigger (keeps them out of initial bundle)
+  useEffect(() => {
+    Promise.all([
+      import("gsap"),
+      import("gsap/ScrollTrigger"),
+    ]).then(([gsapMod, stMod]) => {
+      const gsap = gsapMod.default;
+      gsap.registerPlugin(stMod.ScrollTrigger);
+      gsapRef.current = gsap;
+    });
+  }, []);
+
   /* ── GSAP scroll-triggered reveal ── */
   useEffect(() => {
-    if (!gridRef.current) return;
+    const gsap = gsapRef.current;
+    if (!gsap || !gridRef.current) return;
 
     const cards = gridRef.current.querySelectorAll(".project-card");
     if (!cards.length) return;
@@ -129,10 +140,12 @@ export default function Projects({
     }, gridRef);
 
     return () => ctx.revert();
-  }, [filter]);
+  }, [filter, gsapRef.current]);
 
   /* ── Hover tilt effect ── */
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    const gsap = gsapRef.current;
+    if (!gsap) return;
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -159,6 +172,8 @@ export default function Projects({
   }, []);
 
   const handleMouseLeave = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
+    const gsap = gsapRef.current;
+    if (!gsap) return;
     const card = e.currentTarget;
     gsap.to(card, {
       rotateY: 0,
@@ -193,10 +208,10 @@ export default function Projects({
                 <button
                   key={f.key}
                   onClick={() => setFilter(f.key)}
-                  className={`relative px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
+                  className={`relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
                     filter === f.key
                       ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/20"
-                      : "text-slate-500 hover:text-slate-300"
+                      : "text-slate-400 hover:text-slate-200"
                   }`}
                 >
                   {f.label}
@@ -206,7 +221,7 @@ export default function Projects({
 
             <Link
               href={`${prefix}/projects`}
-              className="text-slate-500 hover:text-indigo-400 transition-colors text-sm font-medium hidden sm:flex items-center gap-1"
+              className="text-slate-400 hover:text-indigo-400 transition-colors text-sm font-medium hidden sm:flex items-center gap-1 underline underline-offset-4 decoration-slate-400/30 hover:decoration-indigo-400/50"
             >
               {viewAll}
               <span className="material-symbols-outlined text-base">
@@ -317,7 +332,7 @@ export default function Projects({
                       .map((tag) => (
                         <span
                           key={tag}
-                          className="px-3 py-1 bg-white/8 backdrop-blur-sm rounded-full text-[10px] font-medium tracking-wider uppercase text-white/50"
+                          className="px-3 py-1 bg-white/8 backdrop-blur-sm rounded-full text-[10px] font-medium tracking-wider uppercase text-white/70"
                         >
                           {tag}
                         </span>

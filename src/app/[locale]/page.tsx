@@ -5,13 +5,16 @@ import Hero from "@/components/sections/Hero";
 import CommandCenter from "@/components/sections/CommandCenter";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import Process from "@/components/sections/Process";
-import Testimonials from "@/components/sections/Testimonials";
+// Testimonials uses GSAP directly — dynamic import to keep it out of initial bundle
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
 import Stats from "@/components/sections/Stats";
 import TechStack from "@/components/sections/TechStack";
-import Projects from "@/components/sections/Projects";
+// Projects uses GSAP directly — dynamic import to keep it out of initial bundle
+const Projects = dynamic(() => import("@/components/sections/Projects"));
 import FAQ from "@/components/sections/FAQ";
 import CTAFinal from "@/components/sections/CTAFinal";
-import VisitorTracking from "@/components/sections/VisitorTracking";
+// VisitorTracking is a client component with GSAP — dynamic import keeps GSAP out of initial bundle
+const VisitorTracking = dynamic(() => import("@/components/sections/VisitorTracking"));
 import { getProjects } from "@/lib/data/projects";
 
 // Above-fold: static import (needed for LCP)
