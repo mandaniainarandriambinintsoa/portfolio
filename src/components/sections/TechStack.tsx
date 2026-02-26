@@ -6,7 +6,7 @@ export default function TechStack({ label }: { label: string }) {
 
   return (
     <section className="w-full mb-16 md:mb-32 overflow-hidden">
-      <p className="text-center text-xs font-bold tracking-[0.3em] text-slate-600 uppercase mb-8">
+      <p className="text-center text-xs font-bold tracking-[0.3em] text-slate-400 uppercase mb-8">
         {label}
       </p>
       <div className="relative">
@@ -14,7 +14,7 @@ export default function TechStack({ label }: { label: string }) {
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#050507] to-transparent z-10" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#050507] to-transparent z-10" />
 
-        <div className="marquee-track">
+        <div className="marquee-track" aria-hidden="true">
           {items.map((tech, i) => (
             <span
               key={`${tech}-${i}`}

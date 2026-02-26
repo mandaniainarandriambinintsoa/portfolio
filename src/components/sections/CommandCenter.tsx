@@ -86,7 +86,7 @@ export default function CommandCenter({
           <div className="relative z-10 flex flex-col gap-8 md:gap-10">
             {/* Webhook */}
             <div className="flex items-center gap-4 glass-card p-4 rounded-xl border-indigo-500/30 shadow-lg shadow-indigo-500/10">
-              <div className="w-10 h-10 bg-indigo-500 rounded flex items-center justify-center text-xs font-bold shrink-0">
+              <div className="w-10 h-10 bg-indigo-700 rounded flex items-center justify-center text-xs font-bold shrink-0">
                 WEB
               </div>
               <div>

@@ -327,7 +327,7 @@ export default function QuizClient({
                 value={email}
                 onChange={(e) => { setEmail(e.target.value); setEmailError(""); }}
                 placeholder={dict.email_placeholder}
-                className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-slate-600 focus:outline-none focus:border-indigo-500/50 transition-all"
+                className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder:text-slate-400 focus:outline-none focus:border-indigo-500/50 transition-all"
                 onKeyDown={(e) => e.key === "Enter" && handleEmailSubmit()}
               />
               {emailError && (
