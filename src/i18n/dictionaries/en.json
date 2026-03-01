@@ -31,7 +31,7 @@
     "line3": "I SCALE.",
     "subtitle_prefix": "Manda —",
     "subtitle_highlight": "AI Architect & Automation Builder",
-    "subtitle_rest": ". I design intelligent applications and advanced workflows with N8N, Claude Code and No-Code.",
+    "subtitle_rest": ". Freelance developer in Madagascar, I design intelligent applications and advanced workflows with N8N, Claude Code and No-Code.",
     "cta_primary": "Start a Project",
     "cta_secondary": "View My Work"
   },
@@ -352,8 +352,8 @@
         "slug": "alchiimy",
         "title": "Alchiimy",
         "subtitle": "AI Dating App",
-        "description": "Next-generation dating app that goes beyond appearances. Alchiimy uses an advanced matching algorithm based on emotional and intellectual compatibility, analyzing each user's interests, values, and life goals. The platform offers verified profiles, a step-by-step guided conversation system to build authentic connections before the first date, and themed group events. The UX was entirely designed to encourage real-life meetups over endless swiping. Built on Bubble with special attention to data privacy and security.",
-        "tags": ["Alchiimy", "Bubble"],
+        "description": "Alchiimy is a next-generation dating app that goes beyond appearances. The Alchiimy app uses an advanced AI matching algorithm based on emotional and intellectual compatibility, analyzing each user's interests, values, and life goals. The Alchiimy platform offers verified profiles, a step-by-step guided conversation system to build authentic connections before the first date, and themed group events. The UX was entirely designed to encourage real-life meetups over endless swiping. Built on Bubble with special attention to data privacy and security.",
+        "tags": ["Alchiimy", "Bubble", "AI Dating App"],
         "link": "https://alchiimy.fr",
         "featured": false,
         "category": "webapp",
@@ -482,7 +482,7 @@
   "about": {
     "title": "About Manda",
     "subtitle": "AI Architect & Automation Builder",
-    "bio": "I'm Mandaniaina Randriambinintsoa, based in Antananarivo, Madagascar. Trained in Computer Science (Master's, ESTI) with a development specialization, I design and build intelligent applications and advanced automations.",
+    "bio": "I'm Mandaniaina Randriambinintsoa, freelance developer based in Antananarivo, Madagascar. Trained in Computer Science (Master's, ESTI) with a development specialization, I design and build intelligent applications and advanced automations with N8N, Bubble, Webflow and AI tools.",
     "philosophy": "Creating a work of art is not the result of chance—it's the result of imagination, hard work, and determination.",
     "approach_title": "My approach",
     "approach_items": [
@@ -490,7 +490,7 @@
       "Use AI builders (Claude Code, LLMs) to rapidly generate applications",
       "Verify, test and iterate until features are reliable, scalable and production-ready"
     ],
-    "experience": "4+ years of experience in No-Code/Low-Code development and automation (GetHumanCall, ScalApp.fr, ARPON). From React internship to AI architecture through No-Code—I combine the best of both worlds.",
+    "experience": "4+ years of experience in No-Code/Low-Code development and automation (GetHumanCall, ScalApp.fr, ARPON). From React internship to AI architecture through No-Code—I combine the best of both worlds. My portfolio spans Bubble apps, Webflow sites, N8N workflows and fullstack Next.js + Supabase applications.",
     "cta": "Open to global collaboration.",
     "timeline": [
       {
@@ -509,7 +509,7 @@
         "period": "2026+",
         "title": "Full Stack AI & Automation",
         "company": "ARPON",
-        "description": "Intelligent applications, advanced automations with Claude Code and LLMs"
+        "description": "Intelligent applications, advanced N8N automations, AI integrations with Claude Code and LLMs"
       }
     ]
   },

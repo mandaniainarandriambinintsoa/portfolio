@@ -31,7 +31,7 @@
     "line3": "JE SCALE.",
     "subtitle_prefix": "Manda —",
     "subtitle_highlight": "Architecte IA & Automatisation Builder",
-    "subtitle_rest": ". Je conçois des applications intelligentes et des workflows avancés avec N8N, Claude Code et le No-Code.",
+    "subtitle_rest": ". Développeur freelance à Madagascar, je conçois des applications intelligentes et des workflows avancés avec N8N, Claude Code et le No-Code.",
     "cta_primary": "Démarrer un projet",
     "cta_secondary": "Voir mes réalisations"
   },
@@ -352,8 +352,8 @@
         "slug": "alchiimy",
         "title": "Alchiimy",
         "subtitle": "App de rencontre IA",
-        "description": "Application de rencontre nouvelle génération qui va au-delà du physique. Alchiimy utilise un algorithme de matching avancé basé sur la compatibilité émotionnelle et intellectuelle, analysant les centres d'intérêt, les valeurs et les objectifs de vie de chaque utilisateur. La plateforme propose des profils vérifiés, un système de conversation guidée par étapes pour construire des connexions authentiques avant le premier rendez-vous, et des événements de groupe thématiques. L'UX a été entièrement pensée pour encourager les rencontres réelles plutôt que le swipe infini. Développée sur Bubble avec une attention particulière portée à la confidentialité des données.",
-        "tags": ["Alchiimy", "Bubble"],
+        "description": "Alchiimy est une application de rencontre nouvelle génération qui va au-delà du physique. L'app Alchiimy utilise un algorithme de matching IA avancé basé sur la compatibilité émotionnelle et intellectuelle, analysant les centres d'intérêt, les valeurs et les objectifs de vie de chaque utilisateur. La plateforme Alchiimy propose des profils vérifiés, un système de conversation guidée par étapes pour construire des connexions authentiques avant le premier rendez-vous, et des événements de groupe thématiques. L'UX a été entièrement pensée pour encourager les rencontres réelles plutôt que le swipe infini. Développée sur Bubble avec une attention particulière portée à la confidentialité des données.",
+        "tags": ["Alchiimy", "Bubble", "App rencontre IA"],
         "link": "https://alchiimy.fr",
         "featured": false,
         "category": "webapp",
@@ -482,7 +482,7 @@
   "about": {
     "title": "À propos de Manda",
     "subtitle": "Architecte IA & Automatisation Builder",
-    "bio": "Je suis Mandaniaina Randriambinintsoa, basé à Antananarivo, Madagascar. Formé en informatique (Master 1, ESTI) avec une spécialisation en développement, je conçois et construis des applications intelligentes et des automatisations avancées.",
+    "bio": "Je suis Mandaniaina Randriambinintsoa, développeur freelance basé à Antananarivo, Madagascar. Formé en informatique (Master 1, ESTI) avec une spécialisation en développement, je conçois et construis des applications intelligentes et des automatisations avancées avec N8N, Bubble, Webflow et les outils IA.",
     "philosophy": "La création d'une œuvre d'art n'est pas le fruit du hasard, c'est le résultat de l'imagination, du travail et de la détermination.",
     "approach_title": "Mon approche",
     "approach_items": [
@@ -490,7 +490,7 @@
       "Utiliser les AI builders (Claude Code, LLMs) pour générer rapidement les applications",
       "Vérifier, tester et itérer jusqu'à obtenir des fonctionnalités fiables et scalables"
     ],
-    "experience": "+4 ans d'expérience en développement No-Code/Low-Code et automatisation (GetHumanCall, ScalApp.fr, ARPON). Du React en alternance à l'architecture IA en passant par le No-Code — je combine le meilleur des deux mondes.",
+    "experience": "+4 ans d'expérience en développement No-Code/Low-Code et automatisation (GetHumanCall, ScalApp.fr, ARPON). Du React en alternance à l'architecture IA en passant par le No-Code — je combine le meilleur des deux mondes. Mon portfolio reflète des projets variés : apps Bubble, sites Webflow, workflows N8N et applications fullstack Next.js + Supabase.",
     "cta": "Ouvert à la collaboration mondiale.",
     "timeline": [
       {
@@ -509,7 +509,7 @@
         "period": "2026+",
         "title": "Full Stack IA & Automatisation",
         "company": "ARPON",
-        "description": "Applications intelligentes, automatisations avancées avec Claude Code et LLMs"
+        "description": "Applications intelligentes, automatisations N8N avancées, intégrations IA avec Claude Code et LLMs"
       }
     ]
   },
