@@ -4,6 +4,7 @@ export const SITE_NAME = "Manda";
 export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/mandaniaina-randriambinintsoa-a75553178/",
   github: "https://github.com/mandaniainarandriambinintsoa",
+  malt: "https://www.malt.fr/profile/mandaniaina",
 } as const;
 
 export const PERSONAL_INFO = {

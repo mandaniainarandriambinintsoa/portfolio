@@ -46,7 +46,7 @@ export default function LocalBusinessJsonLd() {
           name: PERSONAL_INFO.name,
           url: SITE_URL,
         },
-        sameAs: [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.github],
+        sameAs: [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.github, SOCIAL_LINKS.malt],
         knowsAbout: [
           "N8N Automation",
           "No-Code Development",

@@ -23,6 +23,19 @@ export default function Footer({
     { label: "Contact", href: `${prefix}/contact` },
   ];
 
+  const expertiseLinks: { label: string; href: string }[] =
+    locale === "fr"
+      ? [
+          { label: "Développeur No-Code Madagascar", href: "/services/developpeur-no-code-madagascar" },
+          { label: "Expert N8N Madagascar", href: "/services/automatisation-n8n-madagascar" },
+          { label: "Développeur Low-Code Madagascar", href: "/services/developpeur-low-code-madagascar" },
+        ]
+      : [
+          { label: "No-Code Developer Madagascar", href: "/en/services/no-code-developer-madagascar" },
+          { label: "N8N Expert Madagascar", href: "/en/services/n8n-automation-expert-madagascar" },
+          { label: "Low-Code Developer Madagascar", href: "/en/services/low-code-developer-madagascar" },
+        ];
+
   return (
     <footer className="w-full border-t border-white/5 py-12 px-6 md:px-10">
       <div className="max-w-7xl mx-auto flex flex-col gap-8">
@@ -34,6 +47,18 @@ export default function Footer({
               href={link.href}
               aria-label={link.ariaLabel}
               className="text-xs text-slate-400 hover:text-white transition-colors hover:underline underline-offset-4 decoration-white/30"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+        {/* Expertise links — SEO internal linking to landing pages */}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+          {expertiseLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-[11px] text-slate-500 hover:text-slate-300 transition-colors"
             >
               {link.label}
             </Link>
