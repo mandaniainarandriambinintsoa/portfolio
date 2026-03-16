@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 import { createAdminClient } from "@/lib/supabase/admin";
 
@@ -24,8 +24,17 @@ export type VisitorRow = {
   created_at: string;
 };
 
-export async function GET() {
+function getClientIp(request: NextRequest): string {
+  return (
+    request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
+    request.headers.get("x-real-ip") ||
+    "unknown"
+  );
+}
+
+export async function GET(request: NextRequest) {
   const supabase = createAdminClient();
+  const visitorIp = getClientIp(request);
 
   // 1. Fetch GA4 Realtime visitors and insert new ones into Supabase
   if (propertyId && process.env.GA4_CLIENT_EMAIL && process.env.GA4_PRIVATE_KEY) {
@@ -61,9 +70,36 @@ export async function GET() {
         }
 
         if (toInsert.length > 0) {
-          // Avoid duplicates: don't re-insert same city+country within last 30 min
+          // Check if this IP was already seen in the last 30 min
+          const thirtyMinAgo = new Date(Date.now() - 30 * 60 * 1000).toISOString();
+
+          if (visitorIp !== "unknown") {
+            const { data: ipExists } = await supabase
+              .from("visitor_logs")
+              .select("id")
+              .eq("ip", visitorIp)
+              .gte("created_at", thirtyMinAgo)
+              .limit(1);
+
+            if (ipExists && ipExists.length > 0) {
+              // This visitor was already logged recently, skip insert
+              // but still return the latest visitors
+              const { data: visitors } = await supabase
+                .from("visitor_logs")
+                .select("city, country, country_code, created_at")
+                .order("created_at", { ascending: false })
+                .limit(6);
+
+              return NextResponse.json(
+                { visitors: visitors || [] },
+                { headers: { "Cache-Control": "s-maxage=30, stale-while-revalidate=15" } }
+              );
+            }
+          }
+
+          // IP not seen recently — insert new visitors
           for (const v of toInsert) {
-            const thirtyMinAgo = new Date(Date.now() - 30 * 60 * 1000).toISOString();
+            // Also check city+country dedup for other visitors' polls
             const { data: existing } = await supabase
               .from("visitor_logs")
               .select("id")
@@ -73,7 +109,10 @@ export async function GET() {
               .limit(1);
 
             if (!existing || existing.length === 0) {
-              await supabase.from("visitor_logs").insert(v);
+              await supabase.from("visitor_logs").insert({
+                ...v,
+                ip: visitorIp !== "unknown" ? visitorIp : null,
+              });
 
               // Notify via n8n webhook (fire & forget)
               if (n8nWebhookUrl) {
