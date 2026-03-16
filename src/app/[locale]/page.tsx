@@ -53,7 +53,7 @@ export default async function HomePage({
 
       <div className="below-fold">
         <ServicesGridAnim>
-          <ServicesGrid items={dict.services.items.filter((s: { isLanding?: boolean }) => !s.isLanding)} />
+          <ServicesGrid items={dict.services.items.filter((s: { isLanding?: boolean }) => !s.isLanding)} locale={locale} />
         </ServicesGridAnim>
       </div>
 
