@@ -3,6 +3,7 @@ import { BetaAnalyticsDataClient } from "@google-analytics/data";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 const propertyId = process.env.GA4_PROPERTY_ID?.trim();
+const n8nWebhookUrl = process.env.N8N_WEBHOOK_URL?.trim();
 
 function getAnalyticsClient() {
   const rawKey = process.env.GA4_PRIVATE_KEY?.trim() || "";
@@ -73,6 +74,23 @@ export async function GET() {
 
             if (!existing || existing.length === 0) {
               await supabase.from("visitor_logs").insert(v);
+
+              // Notify via n8n webhook (fire & forget)
+              if (n8nWebhookUrl) {
+                fetch(n8nWebhookUrl, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "webhook-visitor-header": "n8nvisitor",
+                  },
+                  body: JSON.stringify({
+                    city: v.city,
+                    country: v.country,
+                    country_code: v.country_code,
+                    timestamp: new Date().toISOString(),
+                  }),
+                }).catch(() => {});
+              }
             }
           }
         }
