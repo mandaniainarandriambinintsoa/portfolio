@@ -61,15 +61,15 @@ export async function GET() {
         }
 
         if (toInsert.length > 0) {
-          // Avoid duplicates: don't re-insert same city+country within last 5 min
+          // Avoid duplicates: don't re-insert same city+country within last 30 min
           for (const v of toInsert) {
-            const fiveMinAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString();
+            const thirtyMinAgo = new Date(Date.now() - 30 * 60 * 1000).toISOString();
             const { data: existing } = await supabase
               .from("visitor_logs")
               .select("id")
               .eq("city", v.city)
               .eq("country", v.country)
-              .gte("created_at", fiveMinAgo)
+              .gte("created_at", thirtyMinAgo)
               .limit(1);
 
             if (!existing || existing.length === 0) {
