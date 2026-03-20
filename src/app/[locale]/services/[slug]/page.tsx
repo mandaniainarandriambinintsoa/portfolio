@@ -6,10 +6,46 @@ import { notFound } from "next/navigation";
 import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
+
+function renderInlineMarkdown(text: string) {
+  const parts: React.ReactNode[] = [];
+  let remaining = text;
+  let key = 0;
+
+  while (remaining.length > 0) {
+    const linkMatch = remaining.match(/\[([^\]]+)\]\(([^)]+)\)/);
+    const boldMatch = remaining.match(/\*\*([^*]+)\*\*/);
+
+    const linkIdx = linkMatch ? remaining.indexOf(linkMatch[0]) : Infinity;
+    const boldIdx = boldMatch ? remaining.indexOf(boldMatch[0]) : Infinity;
+
+    if (linkIdx === Infinity && boldIdx === Infinity) {
+      parts.push(<span key={key++}>{remaining}</span>);
+      break;
+    }
+
+    if (linkIdx <= boldIdx && linkMatch) {
+      if (linkIdx > 0) parts.push(<span key={key++}>{remaining.slice(0, linkIdx)}</span>);
+      parts.push(
+        <Link key={key++} href={linkMatch[2]} className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">
+          {linkMatch[1]}
+        </Link>
+      );
+      remaining = remaining.slice(linkIdx + linkMatch[0].length);
+    } else if (boldMatch) {
+      if (boldIdx > 0) parts.push(<span key={key++}>{remaining.slice(0, boldIdx)}</span>);
+      parts.push(<strong key={key++} className="text-white font-semibold">{boldMatch[1]}</strong>);
+      remaining = remaining.slice(boldIdx + boldMatch[0].length);
+    }
+  }
+
+  return parts;
+}
 
 export async function generateStaticParams() {
   const params: { locale: string; slug: string }[] = [];
@@ -169,28 +205,11 @@ export default async function ServicePage({
               {section.title}
             </h2>
             <GlassCard className="prose-content">
-              {section.content.split("\n\n").map((paragraph: string, pIdx: number) => {
-                const isBold = paragraph.startsWith("**");
-                if (isBold) {
-                  const parts = paragraph.split("**");
-                  return (
-                    <p key={pIdx} className="text-slate-300 leading-relaxed mb-4 last:mb-0">
-                      {parts.map((part: string, i: number) =>
-                        i % 2 === 1 ? (
-                          <strong key={i} className="text-white font-semibold">{part}</strong>
-                        ) : (
-                          <span key={i}>{part}</span>
-                        )
-                      )}
-                    </p>
-                  );
-                }
-                return (
-                  <p key={pIdx} className="text-slate-300 leading-relaxed mb-4 last:mb-0">
-                    {paragraph}
-                  </p>
-                );
-              })}
+              {section.content.split("\n\n").map((paragraph: string, pIdx: number) => (
+                <p key={pIdx} className="text-slate-300 leading-relaxed mb-4 last:mb-0">
+                  {renderInlineMarkdown(paragraph)}
+                </p>
+              ))}
             </GlassCard>
           </div>
         ))}
