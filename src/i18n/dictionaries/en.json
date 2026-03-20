@@ -79,23 +79,31 @@
         "seoTitle": "No-Code Developer in Madagascar | Bubble, Webflow & N8N — Manda",
         "seoDescription": "Freelance no-code developer in Antananarivo, Madagascar. Bubble apps, Webflow sites, N8N automations. 20+ projects delivered, rates 2-3x lower than Europe. Free quote.",
         "landing": {
-          "heroText": "Looking for a reliable, fast and cost-effective no-code developer for your next project? Based in Antananarivo, I build professional applications with Bubble, Webflow and the best no-code tools — without writing a single line of traditional code.",
+          "heroText": "Looking for a reliable, fast and cost-effective no-code developer for your next project? Based in Antananarivo, I build professional applications with Bubble, Webflow and N8N — the three pillars of no-code in 2026. Over 20 projects delivered, rates 2-3x lower than European freelancers, and proven AI automation expertise.",
           "sections": [
             {
+              "title": "What is no-code development?",
+              "content": "No-code is a development approach that allows building applications, websites and automations without writing source code. No-code platforms use visual drag-and-drop interfaces, ready-made connectors and built-in databases.\n\nIn 2026, the global no-code and low-code market is worth over $66 billion, growing at 32.7% annually (source: Fortune Business Insights). According to Gartner, 70% of new enterprise applications will use no-code or low-code technologies by the end of 2026, up from less than 25% in 2020.\n\nNo-code reduces development time by up to 90% compared to traditional methods. A project that took 6-8 months in traditional development can be completed in 3-8 weeks with the right no-code tools."
+            },
+            {
+              "title": "No-code vs low-code vs traditional development",
+              "content": "**No-code** — Zero programming skills required. Ideal for MVPs, showcase sites, simple business apps, automations. Tools: Bubble, Webflow, Glide, Adalo. Average timeline: 2-6 weeks. Cost: €500-€5,000.\n\n**Low-code** — Combines visual interfaces with code snippets for more flexibility. Suited for complex applications requiring advanced API integrations or specific business logic. Tools: Retool, OutSystems, Next.js + Supabase. Average timeline: 4-12 weeks. Cost: €2,000-€15,000.\n\n**Traditional development** — Code written entirely by developers. Necessary for very high-performance products, real-time applications or embedded systems. Technologies: React, Node.js, Python, Java. Average timeline: 3-12 months. Cost: €10,000-€100,000+.\n\nCompanies adopting no-code reduce their development costs by an average of 70% and free up IT teams to focus on high-value projects."
+            },
+            {
               "title": "Why hire a no-code developer from Madagascar?",
-              "content": "Madagascar has become an emerging tech hub for digital outsourcing. As a no-code developer based in Antananarivo, I combine international-level technical expertise with rates up to 3x more competitive than European freelancers.\n\nFluent in French and English, with the GMT+3 timezone enabling real-time collaboration with European businesses. Over 4 years of experience in no-code development for clients in France, the USA and Madagascar."
+              "content": "Madagascar has become an emerging tech hub for digital outsourcing. As a no-code developer based in Antananarivo, I combine international-level technical expertise with rates up to 3x more competitive than European freelancers.\n\nFluent in French and English, with the GMT+3 timezone enabling real-time collaboration with European businesses. Over 4 years of experience in no-code development for clients in France, the USA and Madagascar.\n\n71% of companies using no-code report at least a 50% reduction in development time compared to traditional methods (source: Adalo, 2025). By outsourcing to Madagascar, you combine this advantage with some of the most competitive rates in the French-speaking market."
             },
             {
               "title": "My no-code toolkit",
-              "content": "**Bubble** — For complex web applications: marketplaces, dashboards, SaaS, custom CRMs. Bubble enables building complete applications with databases, business logic and API integrations.\n\n**Webflow** — For premium showcase sites, high-conversion landing pages and corporate blogs. Pixel-perfect design with smooth animations and built-in CMS.\n\n**N8N** — For workflow automation: connecting your tools (CRM, email, billing), data scraping and automatic notifications.\n\n**Supabase** — For robust backends when no-code reaches its limits. PostgreSQL database, authentication and file storage."
+              "content": "**Bubble** — The world's leading platform for complex web applications: marketplaces, dashboards, SaaS, custom CRMs. Bubble enables building complete applications with databases, business logic and API integrations. In 2026, Bubble remains the leader for rapid MVP prototyping and deploying scalable applications.\n\n**Webflow** — The best solution for premium showcase sites, high-conversion landing pages and corporate blogs. Pixel-perfect design with smooth animations and built-in CMS. Webflow generates clean, SEO-optimized code.\n\n**N8N** — Open-source workflow automation platform: connecting your tools (CRM, email, billing), data scraping, automatic notifications and AI agents. N8N gives you full control over your data through self-hosting.\n\n**Supabase** — For robust backends when no-code reaches its limits. PostgreSQL database, authentication, file storage and serverless functions. An open-source Firebase alternative adopted by thousands of developers."
             },
             {
               "title": "Projects delivered",
-              "content": "**Marketplaces** — Buyer-seller matching platforms with integrated payments (ImmoPrive).\n\n**Management dashboards** — Investment tracking and operational monitoring dashboards (ScalApp).\n\n**Property management** — Lease tracking, payments and maintenance for landlords (Yalee Creek Ranch).\n\n**AI applications** — Dating apps with intelligent matching algorithms (Alchiimy).\n\n**SaaS software** — Free invoicing for freelancers and SMEs (Factumation)."
+              "content": "**Marketplaces** — Buyer-seller matching platforms with integrated payments (ImmoPrive).\n\n**Management dashboards** — Investment tracking and operational monitoring dashboards (ScalApp).\n\n**Property management** — Lease tracking, payments and maintenance for landlords (Yalee Creek Ranch).\n\n**AI applications** — Dating apps with intelligent matching algorithms (Alchiimy).\n\n**SaaS software** — Free invoicing for freelancers and SMEs (Factumation).\n\n**AI automations** — Intelligent agents with N8N, automated scraping, real-time notifications and workflows connected to ChatGPT and Claude."
             },
             {
               "title": "My work process",
-              "content": "**1. Discovery call (free)** — We define your needs, goals and project scope.\n\n**2. Figma mockup** — Interactive prototype to validate the design before development.\n\n**3. Development** — Building the application with Bubble or Webflow, continuous testing.\n\n**4. Delivery & support** — Production deployment + 30 days of included support."
+              "content": "**1. Discovery call (free)** — We define your needs, goals and project scope. Duration: 30 minutes, no commitment.\n\n**2. Figma mockup** — Interactive prototype to validate the design before development. You visualize every screen and approve the user experience.\n\n**3. Development** — Building the application with Bubble, Webflow or Next.js depending on needs. Continuous testing and regular demos.\n\n**4. Delivery & support** — Production deployment, usage training and 30 days of included technical support. Optional maintenance available."
             }
           ],
           "features": [
@@ -109,11 +117,11 @@
           "faq": [
             {
               "question": "What's the difference between no-code and low-code?",
-              "answer": "No-code lets you create applications without writing code, using visual interfaces (Bubble, Webflow). Low-code combines visual interfaces with custom code for more flexibility. I master both approaches and advise the best option for your project."
+              "answer": "No-code lets you create applications without writing code, using visual interfaces like Bubble or Webflow. Low-code combines visual interfaces with code snippets for more flexibility, for example with Retool or Next.js + Supabase. I master both approaches and advise the best option based on your project's complexity."
             },
             {
               "question": "How much does a no-code project cost in Madagascar?",
-              "answer": "A Webflow site starts from €500, a Bubble application between €1,500 and €5,000 depending on complexity. My rates are 2-3x more competitive than a France-based freelancer, for equivalent quality."
+              "answer": "A Webflow site starts from €500, a Bubble application between €1,500 and €5,000 depending on complexity. An N8N automation costs between €300 and €1,500. My rates are 2-3x more competitive than a France-based freelancer, for equivalent quality."
             },
             {
               "question": "Do you work with clients in France?",
@@ -121,7 +129,19 @@
             },
             {
               "question": "What are your delivery timelines?",
-              "answer": "A Webflow site is delivered in 1-2 weeks. A complete Bubble application takes 4-8 weeks. I always commit to a precise timeline from quote validation."
+              "answer": "A Webflow site is delivered in 1-2 weeks. A complete Bubble application takes 4-8 weeks. An N8N automation is set up in 3-5 days. I always commit to a precise timeline from quote validation."
+            },
+            {
+              "question": "What types of projects are suited for no-code?",
+              "answer": "No-code is perfectly suited for MVPs and prototypes, showcase sites and e-commerce, internal management apps (CRM, ERP), marketplaces, dashboards, business process automations and AI chatbots. For applications requiring real-time performance or massive data processing, low-code or traditional development remains preferable."
+            },
+            {
+              "question": "Is no-code secure for sensitive data?",
+              "answer": "Yes. No-code platforms like Bubble and Supabase include SSL encryption, multi-factor authentication and role-based access control (RBAC). For N8N, self-hosting ensures your data stays on your own servers without passing through third-party services."
+            },
+            {
+              "question": "Why outsource no-code development to Madagascar?",
+              "answer": "Madagascar combines three advantages for French-speaking businesses: qualified developers fluent in French, rates 2-3x lower than European prices, and a timezone (GMT+3) compatible with French business hours. The country has a growing tech community trained to international standards."
             }
           ]
         }

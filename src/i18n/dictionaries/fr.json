@@ -79,23 +79,31 @@
         "seoTitle": "Développeur No-Code à Madagascar | Bubble, Webflow & N8N — Manda",
         "seoDescription": "Développeur no-code freelance à Antananarivo, Madagascar. Apps Bubble, sites Webflow, automatisations N8N. 20+ projets livrés, tarifs 2-3x moins chers qu'en Europe. Devis gratuit.",
         "landing": {
-          "heroText": "Vous cherchez un développeur no-code fiable, rapide et compétitif pour votre prochain projet ? Basé à Antananarivo, je conçois des applications professionnelles avec Bubble, Webflow et les meilleurs outils no-code du marché — sans écrire une seule ligne de code traditionnel.",
+          "heroText": "Vous cherchez un développeur no-code fiable, rapide et compétitif pour votre prochain projet ? Basé à Antananarivo, je conçois des applications professionnelles avec Bubble, Webflow et N8N — les trois piliers du no-code en 2026. Plus de 20 projets livrés, des tarifs 2 à 3 fois inférieurs aux freelances européens, et une expertise reconnue en automatisation IA.",
           "sections": [
             {
+              "title": "Qu'est-ce que le no-code ?",
+              "content": "Le no-code est une méthode de développement qui permet de créer des applications, des sites web et des automatisations sans écrire de code source. Les plateformes no-code utilisent des interfaces visuelles de type glisser-déposer, des connecteurs prêts à l'emploi et des bases de données intégrées.\n\nEn 2026, le marché mondial du no-code et low-code représente plus de 66 milliards de dollars, avec une croissance annuelle de 32,7 % (source : Fortune Business Insights). Selon Gartner, 70 % des nouvelles applications d'entreprise utiliseront des technologies no-code ou low-code d'ici fin 2026, contre moins de 25 % en 2020.\n\nLe no-code réduit le temps de développement jusqu'à 90 % par rapport aux méthodes traditionnelles. Un projet qui prenait 6 à 8 mois en développement classique se réalise en 3 à 8 semaines avec les bons outils no-code."
+            },
+            {
+              "title": "No-code vs low-code vs développement traditionnel",
+              "content": "**No-code** — Aucune compétence en programmation requise. Idéal pour les MVP, sites vitrine, applications métier simples, automatisations. Outils : Bubble, Webflow, Glide, Adalo. Délai moyen : 2 à 6 semaines. Coût : 500€ à 5 000€.\n\n**Low-code** — Combine interfaces visuelles et portions de code pour plus de flexibilité. Adapté aux applications complexes nécessitant des intégrations API avancées ou une logique métier spécifique. Outils : Retool, OutSystems, Next.js + Supabase. Délai moyen : 4 à 12 semaines. Coût : 2 000€ à 15 000€.\n\n**Développement traditionnel** — Code écrit intégralement par des développeurs. Nécessaire pour les produits à très haute performance, les applications temps réel ou les systèmes embarqués. Technologies : React, Node.js, Python, Java. Délai moyen : 3 à 12 mois. Coût : 10 000€ à 100 000€+.\n\nLes entreprises qui adoptent le no-code réduisent leurs coûts de développement de 70 % en moyenne et libèrent leurs équipes IT pour se concentrer sur les projets à forte valeur ajoutée."
+            },
+            {
               "title": "Pourquoi choisir un développeur no-code à Madagascar ?",
-              "content": "Madagascar est devenu un hub technologique émergent pour l'externalisation de services digitaux. En tant que développeur no-code basé à Antananarivo, je combine une expertise technique de niveau international avec des tarifs jusqu'à 3 fois plus compétitifs que les freelances européens.\n\nLa maîtrise du français et le fuseau horaire GMT+3 facilitent la collaboration en temps réel avec les entreprises françaises et européennes. Plus de 4 ans d'expérience dans le développement no-code pour des clients en France, aux États-Unis et à Madagascar."
+              "content": "Madagascar est devenu un hub technologique émergent pour l'externalisation de services digitaux. En tant que développeur no-code basé à Antananarivo, je combine une expertise technique de niveau international avec des tarifs jusqu'à 3 fois plus compétitifs que les freelances européens.\n\nLa maîtrise du français et le fuseau horaire GMT+3 facilitent la collaboration en temps réel avec les entreprises françaises et européennes. Plus de 4 ans d'expérience dans le développement no-code pour des clients en France, aux États-Unis et à Madagascar.\n\n71 % des entreprises utilisant le no-code rapportent une réduction du temps de développement d'au moins 50 % par rapport aux méthodes traditionnelles (source : Adalo, 2025). En externalisant à Madagascar, vous cumulez cet avantage avec des tarifs parmi les plus compétitifs du marché francophone."
             },
             {
               "title": "Mes outils no-code de prédilection",
-              "content": "**Bubble** — Pour les applications web complexes : marketplaces, dashboards, SaaS, CRM personnalisés. Bubble permet de créer des applications complètes avec base de données, logique métier et intégrations API.\n\n**Webflow** — Pour les sites vitrine premium, les landing pages à haute conversion et les blogs d'entreprise. Design pixel-perfect avec animations fluides et CMS intégré.\n\n**N8N** — Pour l'automatisation des workflows : connexion entre vos outils (CRM, email, facturation), scraping de données et notifications automatiques.\n\n**Supabase** — Pour les backends robustes quand le no-code atteint ses limites. Base de données PostgreSQL, authentification et stockage fichiers."
+              "content": "**Bubble** — Référence mondiale pour les applications web complexes : marketplaces, dashboards, SaaS, CRM personnalisés. Bubble permet de créer des applications complètes avec base de données, logique métier et intégrations API. En 2026, Bubble reste le leader pour le prototypage rapide de MVP et le déploiement d'applications évolutives.\n\n**Webflow** — Meilleure solution pour les sites vitrine premium, les landing pages à haute conversion et les blogs d'entreprise. Design pixel-perfect avec animations fluides et CMS intégré. Webflow génère un code propre et optimisé pour le SEO.\n\n**N8N** — Plateforme open-source d'automatisation des workflows : connexion entre vos outils (CRM, email, facturation), scraping de données, notifications automatiques et agents IA. N8N offre un contrôle total sur vos données grâce à l'auto-hébergement.\n\n**Supabase** — Pour les backends robustes quand le no-code atteint ses limites. Base de données PostgreSQL, authentification, stockage fichiers et fonctions serverless. Alternative open-source à Firebase adoptée par des milliers de développeurs."
             },
             {
               "title": "Types de projets réalisés",
-              "content": "**Marketplaces** — Plateformes de mise en relation acheteurs-vendeurs avec paiement intégré (ImmoPrive).\n\n**Dashboards de gestion** — Tableaux de bord d'investissement et de suivi opérationnel (ScalApp).\n\n**Applications de gestion locative** — Suivi des baux, paiements et maintenance pour propriétaires (Yalee Creek Ranch).\n\n**Applications IA** — Apps de rencontre avec algorithme de matching intelligent (Alchiimy).\n\n**Logiciels SaaS** — Facturation gratuite pour freelances et PME (Factumation)."
+              "content": "**Marketplaces** — Plateformes de mise en relation acheteurs-vendeurs avec paiement intégré (ImmoPrive).\n\n**Dashboards de gestion** — Tableaux de bord d'investissement et de suivi opérationnel (ScalApp).\n\n**Applications de gestion locative** — Suivi des baux, paiements et maintenance pour propriétaires (Yalee Creek Ranch).\n\n**Applications IA** — Apps de rencontre avec algorithme de matching intelligent (Alchiimy).\n\n**Logiciels SaaS** — Facturation gratuite pour freelances et PME (Factumation).\n\n**Automatisations IA** — Agents intelligents avec N8N, scraping automatisé, notifications temps réel et workflows connectés à ChatGPT et Claude."
             },
             {
               "title": "Mon processus de travail",
-              "content": "**1. Appel découverte (gratuit)** — On définit vos besoins, vos objectifs et le périmètre du projet.\n\n**2. Maquettage Figma** — Prototype interactif pour valider le design avant le développement.\n\n**3. Développement** — Construction de l'application avec Bubble ou Webflow, tests continus.\n\n**4. Livraison & support** — Mise en production + 30 jours de support inclus."
+              "content": "**1. Appel découverte (gratuit)** — On définit vos besoins, vos objectifs et le périmètre du projet. Durée : 30 minutes, sans engagement.\n\n**2. Maquettage Figma** — Prototype interactif pour valider le design avant le développement. Vous visualisez chaque écran et validez l'expérience utilisateur.\n\n**3. Développement** — Construction de l'application avec Bubble, Webflow ou Next.js selon le besoin. Tests continus et démonstrations régulières.\n\n**4. Livraison & support** — Mise en production, formation à l'utilisation et 30 jours de support technique inclus. Maintenance optionnelle disponible."
             }
           ],
           "features": [
@@ -109,11 +117,11 @@
           "faq": [
             {
               "question": "Quelle est la différence entre no-code et low-code ?",
-              "answer": "Le no-code permet de créer des applications sans écrire de code, via des interfaces visuelles (Bubble, Webflow). Le low-code combine des interfaces visuelles avec des portions de code pour plus de flexibilité. Je maîtrise les deux approches et vous conseille la meilleure option selon votre projet."
+              "answer": "Le no-code permet de créer des applications sans écrire de code, via des interfaces visuelles comme Bubble ou Webflow. Le low-code combine des interfaces visuelles avec des portions de code pour plus de flexibilité, par exemple avec Retool ou Next.js + Supabase. Je maîtrise les deux approches et vous conseille la meilleure option selon la complexité de votre projet."
             },
             {
               "question": "Combien coûte un projet no-code à Madagascar ?",
-              "answer": "Un site Webflow démarre à partir de 500€, une application Bubble entre 1 500€ et 5 000€ selon la complexité. Mes tarifs sont 2 à 3 fois plus compétitifs qu'un freelance basé en France, pour une qualité équivalente."
+              "answer": "Un site Webflow démarre à partir de 500€, une application Bubble entre 1 500€ et 5 000€ selon la complexité. Une automatisation N8N coûte entre 300€ et 1 500€. Mes tarifs sont 2 à 3 fois plus compétitifs qu'un freelance basé en France, pour une qualité équivalente."
             },
             {
               "question": "Travaillez-vous avec des clients en France ?",
@@ -121,7 +129,19 @@
             },
             {
               "question": "Quels sont vos délais de livraison ?",
-              "answer": "Un site Webflow est livré en 1 à 2 semaines. Une application Bubble complète prend 4 à 8 semaines. Je m'engage systématiquement sur un calendrier précis dès la validation du devis."
+              "answer": "Un site Webflow est livré en 1 à 2 semaines. Une application Bubble complète prend 4 à 8 semaines. Une automatisation N8N se met en place en 3 à 5 jours. Je m'engage systématiquement sur un calendrier précis dès la validation du devis."
+            },
+            {
+              "question": "Quels types de projets conviennent au no-code ?",
+              "answer": "Le no-code convient parfaitement aux MVP et prototypes, sites vitrine et e-commerce, applications de gestion interne (CRM, ERP), marketplaces, dashboards, automatisations de processus métier et chatbots IA. Pour les applications nécessitant des performances temps réel ou un traitement de données massif, le low-code ou le code traditionnel reste préférable."
+            },
+            {
+              "question": "Le no-code est-il sécurisé pour les données sensibles ?",
+              "answer": "Oui. Les plateformes no-code comme Bubble et Supabase intègrent le chiffrement SSL, l'authentification multi-facteurs et le contrôle d'accès par rôles (RBAC). Pour N8N, l'auto-hébergement garantit que vos données restent sur vos propres serveurs, sans transiter par des services tiers."
+            },
+            {
+              "question": "Pourquoi externaliser le développement no-code à Madagascar ?",
+              "answer": "Madagascar combine trois avantages pour les entreprises francophones : des développeurs qualifiés maîtrisant le français, des tarifs 2 à 3 fois inférieurs aux prix européens, et un fuseau horaire (GMT+3) compatible avec les horaires de bureau en France. Le pays compte une communauté tech en croissance, formée aux standards internationaux."
             }
           ]
         }
