@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
+import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
@@ -181,6 +182,20 @@ export default async function ServicePage({
               {dict.hero.cta_primary}
             </Button>
           </div>
+
+          {/* Hero image */}
+          {landing.heroImage && (
+            <div className="mt-12 relative aspect-video rounded-2xl overflow-hidden border border-white/10">
+              <Image
+                src={landing.heroImage.src}
+                alt={landing.heroImage.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 896px"
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
         </div>
 
         {/* Features grid */}
@@ -226,6 +241,34 @@ export default async function ServicePage({
                   <h3 className="font-bold text-white mb-3">{item.question}</h3>
                   <p className="text-slate-400 leading-relaxed">{item.answer}</p>
                 </GlassCard>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Project showcase images */}
+        {landing.showcase && (
+          <div className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8 text-white">
+              {locale === "fr" ? "Projets réalisés en no-code" : "No-code projects delivered"}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {landing.showcase.map((item: any, idx: number) => (
+                <div key={idx} className="group rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                  <div className="relative aspect-video">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 448px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-bold text-white text-sm">{item.title}</h3>
+                    <p className="text-xs text-slate-400 mt-1">{item.description}</p>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

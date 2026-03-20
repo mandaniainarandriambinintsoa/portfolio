@@ -80,6 +80,36 @@
         "seoDescription": "Freelance no-code developer in Antananarivo, Madagascar. Bubble apps, Webflow sites, N8N automations. 20+ projects delivered, rates 2-3x lower than Europe. Free quote.",
         "landing": {
           "heroText": "Looking for a reliable, fast and cost-effective no-code developer for your next project? Based in Antananarivo, I build professional applications with Bubble, Webflow and N8N — the three pillars of no-code in 2026. Over 20 projects delivered, rates 2-3x lower than European freelancers, and proven AI automation expertise.",
+          "heroImage": {
+            "src": "/images/blog/choisir-developpeur-no-code-madagascar.webp",
+            "alt": "No-code developer in Madagascar - Bubble and Webflow development interface"
+          },
+          "showcase": [
+            {
+              "src": "/images/projects/scalapp-dashboard-gestion-investissements.png",
+              "alt": "Investment management dashboard built with no-code Bubble platform - ScalApp Madagascar",
+              "title": "ScalApp — Bubble Dashboard",
+              "description": "Investment tracking dashboard with real-time charts and operational monitoring."
+            },
+            {
+              "src": "/images/projects/immoprive-marketplace-immobiliere.png",
+              "alt": "No-code Bubble real estate marketplace with integrated payments - ImmoPrive",
+              "title": "ImmoPrive — Bubble Marketplace",
+              "description": "Buyer-seller matching platform with integrated payment system."
+            },
+            {
+              "src": "/images/projects/factumation-logiciel-facturation.png",
+              "alt": "Free SaaS invoicing software built with Claude Code and Next.js - Factumation",
+              "title": "Factumation — Claude Code SaaS",
+              "description": "Free invoicing software for freelancers, built with AI-assisted development."
+            },
+            {
+              "src": "/images/projects/scraping-flowremote-automatisation-emploi.png",
+              "alt": "N8N automation scraping remote job listings - FlowRemote Madagascar",
+              "title": "FlowRemote — N8N Automation",
+              "description": "Automated scraping of remote job offers with intelligent filtering and email delivery."
+            }
+          ],
           "sections": [
             {
               "title": "What is no-code development?",
