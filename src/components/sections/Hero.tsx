@@ -24,7 +24,7 @@ export default function Hero({
 
   return (
     <section className="max-w-7xl w-full mx-auto text-center pt-16 md:pt-40 pb-8 md:pb-24 px-6 relative">
-      <h1 className="text-2xl sm:text-4xl md:text-[50px] lg:text-[68px] xl:text-[85px] font-extrabold tracking-tighter leading-[0.85] mb-4 md:mb-12">
+      <h1 className="text-2xl sm:text-3xl md:text-[42px] lg:text-[55px] xl:text-[65px] font-extrabold tracking-tighter leading-[0.85] mb-4 md:mb-12 whitespace-nowrap">
         <span className="block gradient-text">{dict.line1}</span>
         <span className="block gradient-text">{dict.line2}</span>
         <span className="block gradient-text">{dict.line3}</span>
