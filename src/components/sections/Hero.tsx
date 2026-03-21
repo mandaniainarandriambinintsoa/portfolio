@@ -24,10 +24,10 @@ export default function Hero({
 
   return (
     <section className="max-w-7xl w-full mx-auto text-center pt-16 md:pt-40 pb-8 md:pb-24 px-6 relative">
-      <h1 className="font-extrabold tracking-tighter leading-[0.85] mb-4 md:mb-12">
-        <span className="block gradient-text text-[22px] sm:text-[32px] md:text-[42px] lg:text-[56px] xl:text-[68px] whitespace-nowrap">{dict.line1}</span>
-        <span className="block gradient-text text-[34px] sm:text-[52px] md:text-[68px] lg:text-[90px] xl:text-[110px]">{dict.line2}</span>
-        <span className="block gradient-text text-[40px] sm:text-[60px] md:text-[80px] lg:text-[105px] xl:text-[130px]">{dict.line3}</span>
+      <h1 className="text-3xl sm:text-5xl md:text-[65px] lg:text-[90px] xl:text-[113px] font-extrabold tracking-tighter leading-[0.85] mb-4 md:mb-12">
+        <span className="block gradient-text">{dict.line1}</span>
+        <span className="block gradient-text">{dict.line2}</span>
+        <span className="block gradient-text">{dict.line3}</span>
       </h1>
       <p className="text-sm sm:text-lg md:text-xl text-slate-400 max-w-6xl mx-auto mb-6 md:mb-12 font-light">
         {dict.subtitle_prefix}{" "}
