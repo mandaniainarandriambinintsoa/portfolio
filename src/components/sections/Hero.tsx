@@ -29,7 +29,7 @@ export default function Hero({
         <span className="block gradient-text text-3xl sm:text-5xl md:text-[65px] lg:text-[90px] xl:text-[113px]">{dict.line2}</span>
         <span className="block gradient-text text-3xl sm:text-5xl md:text-[65px] lg:text-[90px] xl:text-[113px]">{dict.line3}</span>
       </h1>
-      <p className="text-sm sm:text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto mb-6 md:mb-12 font-light">
+      <p className="text-sm sm:text-xl md:text-2xl text-slate-400 max-w-5xl mx-auto mb-6 md:mb-12 font-light">
         {dict.subtitle_prefix}{" "}
         <span className="text-white font-medium">
           {dict.subtitle_highlight}
