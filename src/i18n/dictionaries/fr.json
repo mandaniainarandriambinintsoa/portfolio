@@ -26,12 +26,12 @@
     "blog": "Blog"
   },
   "hero": {
-    "line1": "J'AUTOMATISE.",
-    "line2": "JE DÉVELOPPE.",
+    "line1": "JE DÉVELOPPE DES SITES & SAAS.",
+    "line2": "J'AUTOMATISE.",
     "line3": "JE SCALE.",
     "subtitle_prefix": "Manda —",
-    "subtitle_highlight": "Architecte IA & Automatisation Builder",
-    "subtitle_rest": ". Développeur freelance spécialisé en développement informatique à Madagascar, je conçois des applications intelligentes et des workflows avancés avec N8N, Claude Code et le No-Code.",
+    "subtitle_highlight": "Développeur Full Stack · Architecte IA · Automatisation Builder",
+    "subtitle_rest": ". J'ai fait du code, du No-Code, et je suis revenu au code quand l'IA a rendu ça plus rapide que tout le reste. Je choisis le bon outil pour chaque projet. React, Next.js, Supabase, n8n, Python.",
     "cta_primary": "Démarrer un projet",
     "cta_secondary": "Voir mes réalisations"
   },
@@ -42,31 +42,31 @@
     "title": "SERVICES",
     "items": [
       {
-        "icon": "hub",
-        "title": "Conception de Workflows",
-        "description": "Automatisation de processus complexes avec N8N : API, webhooks, logique conditionnelle, intégrations SaaS.",
-        "slug": "conception-workflows",
-        "color": "indigo"
-      },
-      {
         "icon": "deployed_code",
-        "title": "Développement d'Applications",
-        "description": "Apps fullstack assistées par IA. Bubble, Webflow, Next.js, Supabase.",
-        "slug": "developpement-applications",
+        "title": "Développement Sites & SaaS",
+        "description": "Applications web complètes et SaaS sur mesure. React, Next.js, Supabase — du MVP au produit en production.",
+        "slug": "developpement-sites-saas",
         "color": "emerald"
       },
       {
         "icon": "psychology",
         "title": "Intégration IA",
-        "description": "Agents IA personnalisés avec Claude Code et LLMs, intégrés dans vos opérations métier.",
+        "description": "Agents IA et LLMs intégrés dans vos sites et SaaS. Claude Code, GPT, automatisation intelligente de vos opérations.",
         "slug": "integration-ia",
         "color": "blue"
       },
       {
+        "icon": "hub",
+        "title": "Automatisation n8n",
+        "description": "Workflows sur mesure avec n8n : connexion de vos outils, scraping, notifications, agents IA — zéro intervention manuelle.",
+        "slug": "automatisation-n8n",
+        "color": "indigo"
+      },
+      {
         "icon": "speed",
-        "title": "Passage à l'Échelle",
-        "description": "Architecture cloud-native : CI/CD, Vercel, Render, Redis Queue, Python backend.",
-        "slug": "passage-echelle",
+        "title": "Scaling SaaS & Workflows",
+        "description": "Architecture cloud-native pour la montée en charge : CI/CD, Vercel, Render, Redis Queue, monitoring.",
+        "slug": "scaling-saas-workflows",
         "color": "purple"
       },
       {
@@ -535,8 +535,8 @@
   },
   "about": {
     "title": "À propos de Manda",
-    "subtitle": "Architecte IA & Automatisation Builder",
-    "bio": "Je suis Mandaniaina Randriambinintsoa, développeur freelance basé à Antananarivo, Madagascar. Formé en informatique (Master 1, ESTI) avec une spécialisation en développement, je conçois et construis des applications intelligentes et des automatisations avancées avec N8N, Bubble, Webflow et les outils IA.",
+    "subtitle": "Développeur Full Stack · Architecte IA · Automatisation Builder",
+    "bio": "Je suis Mandaniaina Randriambinintsoa, développeur freelance à Antananarivo. Formé en développement informatique (Master 1, ESTI), j'ai commencé par du JavaScript en alternance. En 2023 je suis passé au No-Code, Bubble et Webflow, parce que ça permettait de sortir des projets livrables en quelques semaines. Ça a bien marché pendant trois ans. Fin 2025, le développement assisté par IA a changé la donne. Je suis revenu au code pur, parce que le code reste ce qu'il y a de plus flexible quand on veut configurer des serveurs, poser une vraie architecture et tenir la montée en charge. Ma stack aujourd'hui : React et Next.js côté front, Supabase et Neon côté back, n8n et Python pour l'automatisation.",
     "philosophy": "La création d'une œuvre d'art n'est pas le fruit du hasard, c'est le résultat de l'imagination, du travail et de la détermination.",
     "approach_title": "Mon approche",
     "approach_items": [
@@ -544,26 +544,26 @@
       "Utiliser les AI builders (Claude Code, LLMs) pour générer rapidement les applications",
       "Vérifier, tester et itérer jusqu'à obtenir des fonctionnalités fiables et scalables"
     ],
-    "experience": "+4 ans d'expérience en développement No-Code/Low-Code et automatisation (GetHumanCall, ScalApp.fr, ARPON). Du React en alternance à l'architecture IA en passant par le No-Code — je combine le meilleur des deux mondes. Mon portfolio reflète des projets variés : apps Bubble, sites Webflow, workflows N8N et applications fullstack Next.js + Supabase.",
+    "experience": "+4 ans de développement. JavaScript en alternance, puis No-Code chez GetHumanCall et ScalApp.fr, et maintenant full stack IA chez ARPON. De chaque phase j'ai gardé ce qui marchait : la rapidité du No-Code, le contrôle du code, la vitesse de l'IA.",
     "cta": "Ouvert à la collaboration mondiale.",
     "timeline": [
       {
         "period": "2021-2023",
-        "title": "Développeur React Junior",
+        "title": "Développeur JavaScript",
         "company": "PRESCOI Service",
-        "description": "Contrat en alternance, développement React"
+        "description": "Alternance, développement React, bases en architecture web"
       },
       {
         "period": "2023-2026",
         "title": "Développeur No-Code",
         "company": "GetHumanCall & ScalApp.fr",
-        "description": "Apps Bubble, sites Webflow, maintenance et mise à jour"
+        "description": "Apps Bubble, sites Webflow, livraison rapide de solutions clients"
       },
       {
         "period": "2026+",
-        "title": "Full Stack IA & Automatisation",
+        "title": "Développeur Full Stack & Architecte IA",
         "company": "ARPON",
-        "description": "Applications intelligentes, automatisations N8N avancées, intégrations IA avec Claude Code et LLMs"
+        "description": "Retour au code pur : sites, SaaS, automatisations n8n, intégrations IA avec Claude Code"
       }
     ]
   },
