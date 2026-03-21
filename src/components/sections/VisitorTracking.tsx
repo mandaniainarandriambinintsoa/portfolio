@@ -134,7 +134,7 @@ export default function VisitorTracking({
         </div>
 
         {/* Showcase text */}
-        <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8 max-w-2xl">
+        <p className="text-white/70 text-sm md:text-base leading-relaxed mb-8">
           {dict.showcase_text}
         </p>
 
