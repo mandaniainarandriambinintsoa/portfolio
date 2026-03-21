@@ -301,20 +301,20 @@
     "steps": [
       {
         "number": "01",
-        "title": "Ideation & Mapping",
-        "description": "We dissect your manual workflows and design a digital architecture optimized for speed.",
+        "title": "Design & Development",
+        "description": "We define the need, set up the architecture and build the site or SaaS.",
         "color": "indigo"
       },
       {
         "number": "02",
-        "title": "AI Integration",
-        "description": "Embedding intelligence where it matters most—automating decisions, content, and customer support.",
+        "title": "AI Integration & Automation",
+        "description": "If needed, we plug in AI and n8n workflows to automate what can be automated.",
         "color": "emerald"
       },
       {
         "number": "03",
-        "title": "Global Scaling",
-        "description": "Deploying robust, cloud-native systems ready for worldwide traffic.",
+        "title": "Deployment & Scaling",
+        "description": "Production release, monitoring and scaling up.",
         "color": "blue"
       }
     ]

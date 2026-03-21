@@ -301,20 +301,20 @@
     "steps": [
       {
         "number": "01",
-        "title": "Idéation & Cartographie",
-        "description": "On dissèque vos workflows manuels et on conçoit une architecture digitale optimisée pour la vitesse.",
+        "title": "Conception & Développement",
+        "description": "On définit le besoin, on pose l'architecture et on construit le site ou le SaaS.",
         "color": "indigo"
       },
       {
         "number": "02",
-        "title": "Intégration IA",
-        "description": "On embarque l'intelligence là où ça compte : automatisation des décisions, du contenu et du support client.",
+        "title": "Intégration IA & Automatisation",
+        "description": "Si besoin, on branche l'IA et les workflows n8n pour automatiser ce qui peut l'être.",
         "color": "emerald"
       },
       {
         "number": "03",
-        "title": "Déploiement Global",
-        "description": "Mise en production de systèmes robustes, cloud-native, prêts pour le trafic mondial.",
+        "title": "Déploiement & Scaling",
+        "description": "Mise en production, monitoring et montée en charge.",
         "color": "blue"
       }
     ]
