@@ -46,7 +46,7 @@ export default function Footer({
               key={link.href}
               href={link.href}
               aria-label={link.ariaLabel}
-              className="text-xs text-slate-400 hover:text-white transition-colors hover:underline underline-offset-4 decoration-white/30"
+              className="text-sm py-2 text-slate-400 hover:text-white transition-colors hover:underline underline-offset-4 decoration-white/30"
             >
               {link.label}
             </Link>
@@ -58,7 +58,7 @@ export default function Footer({
             <Link
               key={link.href}
               href={link.href}
-              className="text-[11px] text-slate-500 hover:text-slate-300 transition-colors"
+              className="text-xs py-2 text-slate-500 hover:text-slate-300 transition-colors"
             >
               {link.label}
             </Link>
@@ -71,7 +71,7 @@ export default function Footer({
               href={SOCIAL_LINKS.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/40"
+              className="text-sm py-3 px-1 hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/40"
             >
               LinkedIn
             </a>
@@ -79,7 +79,7 @@ export default function Footer({
               href={SOCIAL_LINKS.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/40"
+              className="text-sm py-3 px-1 hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/40"
             >
               GitHub
             </a>

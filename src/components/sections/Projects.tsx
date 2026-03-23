@@ -305,7 +305,7 @@ export default function Projects({
                 )}
 
                 {/* Arrow indicator */}
-                <div className="absolute top-5 right-5 z-10 size-10 rounded-full bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-y-2 group-hover:translate-y-0">
+                <div className="absolute top-4 right-4 z-10 size-12 rounded-full bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-y-2 group-hover:translate-y-0">
                   <span className="material-symbols-outlined text-lg text-white/80">
                     north_east
                   </span>
