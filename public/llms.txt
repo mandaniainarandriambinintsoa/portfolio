@@ -4,41 +4,41 @@
 
 ## Services
 
-- [Conception de workflows](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/services/conception-workflows): Automatisation de processus métier avec N8N — workflows sur mesure, intégrations API, orchestration de données
-- [Développement d'applications](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/services/developpement-applications): Applications No-Code (Bubble, Webflow) et fullstack (Next.js, Supabase) pour entreprises
-- [Intégration IA](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/services/integration-ia): Agents IA autonomes, Claude Code, GPT — intégration d'intelligence artificielle dans vos processus
-- [Passage à l'échelle](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/services/passage-echelle): Architecture scalable, migration No-Code vers code, optimisation performance
+- [Conception de workflows](https://manda-ia.com/services/conception-workflows): Automatisation de processus métier avec N8N — workflows sur mesure, intégrations API, orchestration de données
+- [Développement d'applications](https://manda-ia.com/services/developpement-applications): Applications No-Code (Bubble, Webflow) et fullstack (Next.js, Supabase) pour entreprises
+- [Intégration IA](https://manda-ia.com/services/integration-ia): Agents IA autonomes, Claude Code, GPT — intégration d'intelligence artificielle dans vos processus
+- [Passage à l'échelle](https://manda-ia.com/services/passage-echelle): Architecture scalable, migration No-Code vers code, optimisation performance
 
 ## Expertise locale
 
-- [Développeur No-Code Madagascar](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/services/developpeur-no-code-madagascar): Expert Bubble et Webflow à Antananarivo, tarifs compétitifs, qualité internationale
-- [Expert N8N Madagascar](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/services/automatisation-n8n-madagascar): Spécialiste automatisation N8N pour PME et entreprises à Madagascar
-- [Développeur Low-Code Madagascar](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/services/developpeur-low-code-madagascar): Applications Next.js et Supabase avec IA intégrée
+- [Développeur No-Code Madagascar](https://manda-ia.com/services/developpeur-no-code-madagascar): Expert Bubble et Webflow à Antananarivo, tarifs compétitifs, qualité internationale
+- [Expert N8N Madagascar](https://manda-ia.com/services/automatisation-n8n-madagascar): Spécialiste automatisation N8N pour PME et entreprises à Madagascar
+- [Développeur Low-Code Madagascar](https://manda-ia.com/services/developpeur-low-code-madagascar): Applications Next.js et Supabase avec IA intégrée
 
 ## Projets
 
-- [ScalApp](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/projects/scalapp): Plateforme SaaS de scaling pour freelances
-- [ImmoPrive](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/projects/immoprive): Marketplace immobilière avec IA
-- [Yalee Creek Ranch](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/projects/yalee-creek-ranch): Site vitrine pour ranch américain
-- [Alchiimy](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/projects/alchiimy): Plateforme de formation en ligne
-- [ArtiGen](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/projects/artigen): Générateur d'images IA
-- [Factumation](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/projects/factumation): Logiciel de facturation automatisé
-- [Scraping FlowRemote](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/projects/scraping-flowremote): Scraping automatisé d'offres d'emploi
-- [Tracking Visiteurs](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/projects/tracking-visiteurs): Système de tracking en temps réel GA4 + Supabase
+- [ScalApp](https://manda-ia.com/projects/scalapp): Plateforme SaaS de scaling pour freelances
+- [ImmoPrive](https://manda-ia.com/projects/immoprive): Marketplace immobilière avec IA
+- [Yalee Creek Ranch](https://manda-ia.com/projects/yalee-creek-ranch): Site vitrine pour ranch américain
+- [Alchiimy](https://manda-ia.com/projects/alchiimy): Plateforme de formation en ligne
+- [ArtiGen](https://manda-ia.com/projects/artigen): Générateur d'images IA
+- [Factumation](https://manda-ia.com/projects/factumation): Logiciel de facturation automatisé
+- [Scraping FlowRemote](https://manda-ia.com/projects/scraping-flowremote): Scraping automatisé d'offres d'emploi
+- [Tracking Visiteurs](https://manda-ia.com/projects/tracking-visiteurs): Système de tracking en temps réel GA4 + Supabase
 
 ## Blog
 
-- [Automatiser son business avec N8N](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/blog/automatiser-business-n8n-guide-complet): Guide complet pour automatiser son business avec N8N
-- [Développer avec Claude Code](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/blog/claude-code-developper-avec-ia): Comment Claude Code révolutionne le développement
-- [Pourquoi Supabase remplace Firebase](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/blog/pourquoi-supabase-remplace-firebase): Comparaison Supabase vs Firebase en 2026
-- [Automatisation N8N pour business à Madagascar](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/blog/pourquoi-automatiser-business-madagascar-n8n): Pourquoi automatiser son business à Madagascar
-- [No-Code vs Low-Code](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/blog/no-code-vs-low-code-guide-entreprises-malgaches): Guide pour entreprises malgaches
-- [5 workflows N8N pour PME](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/blog/5-workflows-n8n-indispensables-pme-madagascar): Les 5 workflows N8N indispensables pour les PME à Madagascar
-- [Comment choisir un développeur No-Code](https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/blog/comment-choisir-developpeur-no-code-madagascar): Guide pour choisir son développeur No-Code à Madagascar
+- [Automatiser son business avec N8N](https://manda-ia.com/blog/automatiser-business-n8n-guide-complet): Guide complet pour automatiser son business avec N8N
+- [Développer avec Claude Code](https://manda-ia.com/blog/claude-code-developper-avec-ia): Comment Claude Code révolutionne le développement
+- [Pourquoi Supabase remplace Firebase](https://manda-ia.com/blog/pourquoi-supabase-remplace-firebase): Comparaison Supabase vs Firebase en 2026
+- [Automatisation N8N pour business à Madagascar](https://manda-ia.com/blog/pourquoi-automatiser-business-madagascar-n8n): Pourquoi automatiser son business à Madagascar
+- [No-Code vs Low-Code](https://manda-ia.com/blog/no-code-vs-low-code-guide-entreprises-malgaches): Guide pour entreprises malgaches
+- [5 workflows N8N pour PME](https://manda-ia.com/blog/5-workflows-n8n-indispensables-pme-madagascar): Les 5 workflows N8N indispensables pour les PME à Madagascar
+- [Comment choisir un développeur No-Code](https://manda-ia.com/blog/comment-choisir-developpeur-no-code-madagascar): Guide pour choisir son développeur No-Code à Madagascar
 
 ## Contact
 
-- Website: https://portfolio-manda-developpeur-nocode-madagascar.vercel.app
+- Website: https://manda-ia.com
 - Email: mandaniaina.randriambinintsoa@gmail.com
 - LinkedIn: https://www.linkedin.com/in/mandaniaina-randriambinintsoa-a75553178/
 - GitHub: https://github.com/mandaniainarandriambinintsoa

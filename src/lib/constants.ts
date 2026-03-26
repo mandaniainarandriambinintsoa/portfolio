@@ -1,4 +1,4 @@
-export const SITE_URL = "https://portfolio-manda-developpeur-nocode-madagascar.vercel.app";
+export const SITE_URL = "https://manda-ia.com";
 export const SITE_NAME = "Manda";
 
 export const SOCIAL_LINKS = {

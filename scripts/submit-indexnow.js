@@ -12,8 +12,8 @@ const https = require("https");
 const fs = require("fs");
 const path = require("path");
 
-const SITE_URL = "https://portfolio-manda-developpeur-nocode-madagascar.vercel.app";
-const HOST = "portfolio-manda-developpeur-nocode-madagascar.vercel.app";
+const SITE_URL = "https://manda-ia.com";
+const HOST = "manda-ia.com";
 
 // IndexNow key — also needs to be accessible at /{key}.txt on the site
 const INDEXNOW_KEY = "manda-indexnow-2026-portfolio";

@@ -18,7 +18,7 @@ const { google } = require("googleapis");
 const path = require("path");
 const fs = require("fs");
 
-const SITE_URL = "https://portfolio-manda-developpeur-nocode-madagascar.vercel.app";
+const SITE_URL = "https://manda-ia.com";
 
 // Use existing GSC service account key, fallback to local file
 const KEY_FILE = process.env.GSC_CREDENTIALS_PATH

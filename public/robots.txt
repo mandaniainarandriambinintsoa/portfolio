@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-manda-developpeur-nocode-madagascar.vercel.app/sitemap.xml
+Sitemap: https://manda-ia.com/sitemap.xml
