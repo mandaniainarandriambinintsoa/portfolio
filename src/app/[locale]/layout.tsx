@@ -44,11 +44,20 @@ export async function generateMetadata({
       siteName: "Manda",
       locale: locale === "fr" ? "fr_FR" : "en_US",
       type: "website",
+      images: [
+        {
+          url: `${SITE_URL}/images/og-default.png`,
+          width: 1200,
+          height: 630,
+          alt: "Manda — Développeur Full Stack & Architecte IA",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: dict.meta.home.title,
       description: dict.meta.home.description,
+      images: [`${SITE_URL}/images/og-default.png`],
     },
     robots: {
       index: true,

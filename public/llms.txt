@@ -1,40 +1,41 @@
 # Mandaniaina Randriambinintsoa — Portfolio
 
-> Développeur fullstack et expert automatisation basé à Antananarivo, Madagascar. Spécialisé en N8N, Claude Code, Bubble, Next.js et Supabase. Je conçois des applications intelligentes et des workflows qui boostent votre business. 4+ ans d'expérience, clients en France, USA et Madagascar.
+> Développeur Full Stack et Architecte IA basé à Antananarivo, Madagascar. Spécialisé en automatisation N8N, développement No-Code/Low-Code (Bubble, Webflow) et fullstack (Next.js, Supabase), et intégration IA (Claude Code, LLMs). 4+ ans d'expérience, clients en France, USA et Madagascar.
+
+## About
+
+Mandaniaina Randriambinintsoa (alias Manda) est un développeur freelance basé à Antananarivo, Madagascar. Diplômé en développement informatique (Master 1, ESTI), il a commencé par du JavaScript en alternance, puis s'est spécialisé en No-Code (Bubble, Webflow) de 2023 à 2026. Fin 2025, il est revenu au code pur assisté par IA (Claude Code), avec une stack React/Next.js, Supabase/Neon, n8n et Python. Il sert des clients en France, aux États-Unis et à Madagascar.
 
 ## Services
 
-- [Conception de workflows](https://manda-ia.com/services/conception-workflows): Automatisation de processus métier avec N8N — workflows sur mesure, intégrations API, orchestration de données
-- [Développement d'applications](https://manda-ia.com/services/developpement-applications): Applications No-Code (Bubble, Webflow) et fullstack (Next.js, Supabase) pour entreprises
-- [Intégration IA](https://manda-ia.com/services/integration-ia): Agents IA autonomes, Claude Code, GPT — intégration d'intelligence artificielle dans vos processus
-- [Passage à l'échelle](https://manda-ia.com/services/passage-echelle): Architecture scalable, migration No-Code vers code, optimisation performance
-
-## Expertise locale
-
-- [Développeur No-Code Madagascar](https://manda-ia.com/services/developpeur-no-code-madagascar): Expert Bubble et Webflow à Antananarivo, tarifs compétitifs, qualité internationale
-- [Expert N8N Madagascar](https://manda-ia.com/services/automatisation-n8n-madagascar): Spécialiste automatisation N8N pour PME et entreprises à Madagascar
+- [Développeur No-Code Madagascar](https://manda-ia.com/services/developpeur-no-code-madagascar): Expert Bubble et Webflow à Antananarivo — applications sur mesure, tarifs compétitifs, qualité internationale
+- [Expert N8N Madagascar](https://manda-ia.com/services/automatisation-n8n-madagascar): Spécialiste automatisation N8N pour PME et entreprises — workflows sur mesure, intégrations API, orchestration de données
 - [Développeur Low-Code Madagascar](https://manda-ia.com/services/developpeur-low-code-madagascar): Applications Next.js et Supabase avec IA intégrée
+- [Conception de workflows](https://manda-ia.com/services/conception-workflows): Automatisation de processus métier avec N8N
+- [Développement d'applications](https://manda-ia.com/services/developpement-applications): Applications No-Code et fullstack pour entreprises
+- [Intégration IA](https://manda-ia.com/services/integration-ia): Agents IA autonomes, Claude Code, GPT — intégration d'intelligence artificielle
+- [Passage à l'échelle](https://manda-ia.com/services/passage-echelle): Architecture scalable, migration No-Code vers code, optimisation performance
 
 ## Projets
 
-- [ScalApp](https://manda-ia.com/projects/scalapp): Plateforme SaaS de scaling pour freelances
-- [ImmoPrive](https://manda-ia.com/projects/immoprive): Marketplace immobilière avec IA
-- [Yalee Creek Ranch](https://manda-ia.com/projects/yalee-creek-ranch): Site vitrine pour ranch américain
-- [Alchiimy](https://manda-ia.com/projects/alchiimy): Plateforme de formation en ligne
-- [ArtiGen](https://manda-ia.com/projects/artigen): Générateur d'images IA
-- [Factumation](https://manda-ia.com/projects/factumation): Logiciel de facturation automatisé
-- [Scraping FlowRemote](https://manda-ia.com/projects/scraping-flowremote): Scraping automatisé d'offres d'emploi
-- [Tracking Visiteurs](https://manda-ia.com/projects/tracking-visiteurs): Système de tracking en temps réel GA4 + Supabase
+- [ScalApp](https://manda-ia.com/projects/scalapp): Plateforme SaaS de scaling pour freelances — dashboard Bubble avec gestion d'investissements
+- [ImmoPrive](https://manda-ia.com/projects/immoprive): Marketplace immobilière avec IA — Bubble, filtres avancés, matching intelligent
+- [Yalee Creek Ranch](https://manda-ia.com/projects/yalee-creek-ranch): Site vitrine pour ranch américain — gestion locative, design premium
+- [Alchiimy](https://manda-ia.com/projects/alchiimy): Plateforme de formation en ligne — Bubble, paiements, contenu interactif
+- [ArtiGen](https://manda-ia.com/projects/artigen): Générateur d'images IA — Next.js, API IA, galerie utilisateur
+- [Factumation](https://manda-ia.com/projects/factumation): Logiciel de facturation automatisé — construit en 3 jours avec Claude Code (vs 3-4 semaines traditionnel)
+- [Scraping FlowRemote](https://manda-ia.com/projects/scraping-flowremote): Scraping automatisé d'offres d'emploi — N8N, extraction multi-sites, notifications
+- [Tracking Visiteurs](https://manda-ia.com/projects/tracking-visiteurs): Système de tracking en temps réel GA4 + Supabase — démonstration live sur la homepage
 
 ## Blog
 
-- [Automatiser son business avec N8N](https://manda-ia.com/blog/automatiser-business-n8n-guide-complet): Guide complet pour automatiser son business avec N8N
-- [Développer avec Claude Code](https://manda-ia.com/blog/claude-code-developper-avec-ia): Comment Claude Code révolutionne le développement
-- [Pourquoi Supabase remplace Firebase](https://manda-ia.com/blog/pourquoi-supabase-remplace-firebase): Comparaison Supabase vs Firebase en 2026
-- [Automatisation N8N pour business à Madagascar](https://manda-ia.com/blog/pourquoi-automatiser-business-madagascar-n8n): Pourquoi automatiser son business à Madagascar
-- [No-Code vs Low-Code](https://manda-ia.com/blog/no-code-vs-low-code-guide-entreprises-malgaches): Guide pour entreprises malgaches
-- [5 workflows N8N pour PME](https://manda-ia.com/blog/5-workflows-n8n-indispensables-pme-madagascar): Les 5 workflows N8N indispensables pour les PME à Madagascar
-- [Comment choisir un développeur No-Code](https://manda-ia.com/blog/comment-choisir-developpeur-no-code-madagascar): Guide pour choisir son développeur No-Code à Madagascar
+- [Automatiser son business avec N8N](https://manda-ia.com/blog/automatiser-business-n8n-guide-complet): Guide complet — 5 workflows essentiels, ROI (5h automatisées = 1000 EUR/mois), bonnes pratiques
+- [Développer avec Claude Code](https://manda-ia.com/blog/claude-code-developper-avec-ia): Retour d'expérience — Factumation en 3 jours, limites de l'IA, workflow AI-driven
+- [Pourquoi Supabase remplace Firebase](https://manda-ia.com/blog/pourquoi-supabase-remplace-firebase): Comparaison technique Supabase vs Firebase en 2026 — prix, performance, open-source
+- [Automatisation N8N pour business à Madagascar](https://manda-ia.com/blog/pourquoi-automatiser-business-madagascar-n8n): Cas d'usage locaux, PME malgaches, retour sur investissement
+- [No-Code vs Low-Code](https://manda-ia.com/blog/no-code-vs-low-code-guide-entreprises-malgaches): Guide comparatif pour entreprises malgaches — coûts, délais, cas d'usage
+- [5 workflows N8N pour PME](https://manda-ia.com/blog/5-workflows-n8n-indispensables-pme-madagascar): Les 5 workflows indispensables — facturation, relance, scraping, reporting, onboarding
+- [Comment choisir un développeur No-Code](https://manda-ia.com/blog/comment-choisir-developpeur-no-code-madagascar): Critères de sélection, questions à poser, pièges à éviter
 
 ## Contact
 

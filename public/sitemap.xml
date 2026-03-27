@@ -472,4 +472,36 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://manda-ia.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://manda-ia.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://manda-ia.com/en/privacy"/>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://manda-ia.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://manda-ia.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://manda-ia.com/en/privacy"/>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://manda-ia.com/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://manda-ia.com/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://manda-ia.com/en/mentions-legales"/>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://manda-ia.com/en/mentions-legales</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://manda-ia.com/mentions-legales"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://manda-ia.com/en/mentions-legales"/>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

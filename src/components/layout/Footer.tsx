@@ -64,6 +64,21 @@ export default function Footer({
             </Link>
           ))}
         </div>
+        {/* Legal links */}
+        <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+          <Link
+            href={`${prefix}/privacy`}
+            className="text-xs py-2 text-slate-500 hover:text-slate-300 transition-colors"
+          >
+            {locale === "fr" ? "Politique de confidentialité" : "Privacy Policy"}
+          </Link>
+          <Link
+            href={`${prefix}/mentions-legales`}
+            className="text-xs py-2 text-slate-500 hover:text-slate-300 transition-colors"
+          >
+            {locale === "fr" ? "Mentions légales" : "Legal Notice"}
+          </Link>
+        </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 opacity-60">
           <p className="text-sm font-medium">{copyright}</p>
           <div className="flex gap-8">

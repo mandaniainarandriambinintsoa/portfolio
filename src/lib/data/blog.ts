@@ -14,6 +14,7 @@ export type BlogPost = {
   author: string;
   readingTime: number;
   publishedAt: string | null;
+  updatedAt: string | null;
 };
 
 function mapRow(
@@ -34,6 +35,7 @@ function mapRow(
     author: string;
     reading_time: number;
     published_at: string | null;
+    updated_at: string | null;
   },
   locale: Locale
 ): BlogPost {
@@ -49,6 +51,7 @@ function mapRow(
     author: row.author,
     readingTime: row.reading_time,
     publishedAt: row.published_at,
+    updatedAt: row.updated_at,
   };
 }
 

@@ -46,6 +46,20 @@ export default function LocalBusinessJsonLd() {
           name: PERSONAL_INFO.name,
           url: SITE_URL,
         },
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/favicon.svg`,
+          width: 512,
+          height: 512,
+        },
+        foundingDate: "2023",
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: PERSONAL_INFO.phone,
+          email: PERSONAL_INFO.email,
+          contactType: "customer service",
+          availableLanguage: ["French", "English"],
+        },
         sameAs: [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.github, SOCIAL_LINKS.malt],
         knowsAbout: [
           "N8N Automation",

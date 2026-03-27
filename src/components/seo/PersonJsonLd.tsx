@@ -10,17 +10,27 @@ export default function PersonJsonLd() {
         name: PERSONAL_INFO.name,
         alternateName: PERSONAL_INFO.shortName,
         url: SITE_URL,
+        image: `${SITE_URL}/images/manda-photo2.webp`,
+        description:
+          "Développeur Full Stack et Architecte IA basé à Antananarivo, Madagascar. Spécialisé en automatisation N8N, développement No-Code/Low-Code et intégration IA.",
         email: `mailto:${PERSONAL_INFO.email}`,
         telephone: PERSONAL_INFO.phone,
         jobTitle: PERSONAL_INFO.jobTitle.en,
         address: {
           "@type": "PostalAddress",
           addressLocality: "Antananarivo",
+          addressRegion: "Analamanga",
           addressCountry: "MG",
+        },
+        worksFor: {
+          "@type": "ProfessionalService",
+          name: "Manda — Automatisation & Développement No-Code",
+          url: SITE_URL,
         },
         sameAs: [
           SOCIAL_LINKS.linkedin,
           SOCIAL_LINKS.github,
+          SOCIAL_LINKS.malt,
         ],
         knowsAbout: [
           "N8N",
@@ -31,6 +41,8 @@ export default function PersonJsonLd() {
           "Webflow",
           "Next.js",
           "Claude Code",
+          "Supabase",
+          "Python",
         ],
       }}
     />

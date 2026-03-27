@@ -107,6 +107,7 @@ export default async function BlogPostPage({
         slug={slug}
         locale={locale}
         publishedAt={post.publishedAt}
+        updatedAt={post.updatedAt}
         author={post.author}
         coverImage={post.coverImage}
       />
