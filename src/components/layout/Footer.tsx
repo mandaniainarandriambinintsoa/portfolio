@@ -26,11 +26,17 @@ export default function Footer({
   const expertiseLinks: { label: string; href: string }[] =
     locale === "fr"
       ? [
+          { label: "Développeur React / Next.js Madagascar", href: "/services/developpeur-react-nextjs-madagascar" },
+          { label: "Développeur Next.js + Supabase", href: "/services/developpeur-nextjs-supabase-madagascar" },
+          { label: "Développeur Python & IA Madagascar", href: "/services/developpeur-python-ia-madagascar" },
           { label: "Développeur No-Code Madagascar", href: "/services/developpeur-no-code-madagascar" },
           { label: "Expert N8N Madagascar", href: "/services/automatisation-n8n-madagascar" },
           { label: "Développeur Low-Code Madagascar", href: "/services/developpeur-low-code-madagascar" },
         ]
       : [
+          { label: "React / Next.js Developer Madagascar", href: "/en/services/hire-react-nextjs-developer-madagascar" },
+          { label: "Next.js + Supabase Developer", href: "/en/services/nextjs-supabase-developer-madagascar" },
+          { label: "Python & AI Developer Madagascar", href: "/en/services/python-ai-developer-madagascar" },
           { label: "No-Code Developer Madagascar", href: "/en/services/no-code-developer-madagascar" },
           { label: "N8N Expert Madagascar", href: "/en/services/n8n-automation-expert-madagascar" },
           { label: "Low-Code Developer Madagascar", href: "/en/services/low-code-developer-madagascar" },
