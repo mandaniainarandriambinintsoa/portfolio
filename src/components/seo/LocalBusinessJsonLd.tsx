@@ -11,7 +11,7 @@ export default function LocalBusinessJsonLd() {
         alternateName: "Manda Dev",
         url: SITE_URL,
         telephone: PERSONAL_INFO.phone,
-        email: `mailto:${PERSONAL_INFO.email}`,
+        email: PERSONAL_INFO.email,
         description:
           "Expert en automatisation N8N, développement No-Code (Bubble, Webflow) et Low-Code (Next.js, Supabase) basé à Antananarivo, Madagascar. Applications sur mesure et workflows intelligents pour entreprises françaises et internationales.",
         image: `${SITE_URL}/images/manda-photo2.webp`,
@@ -52,7 +52,7 @@ export default function LocalBusinessJsonLd() {
           width: 512,
           height: 512,
         },
-        foundingDate: "2023",
+        foundingDate: "2023-01-01",
         contactPoint: {
           "@type": "ContactPoint",
           telephone: PERSONAL_INFO.phone,

@@ -67,6 +67,10 @@ export default function BlogPostJsonLd({
           "@type": "WebPage",
           "@id": url,
         },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["article h1", "article > p:first-of-type", ".blog-summary"],
+        },
       }}
     />
   );

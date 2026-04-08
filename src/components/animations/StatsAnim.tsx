@@ -40,6 +40,7 @@ export default function StatsAnim({
       const numbers = container.current!.querySelectorAll(".stat-number");
       numbers.forEach((el) => {
         const target = parseInt(el.getAttribute("data-target") || "0", 10);
+        el.textContent = "0";
         const obj = { val: 0 };
 
         gsap.to(obj, {

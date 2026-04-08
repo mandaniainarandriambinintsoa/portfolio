@@ -25,7 +25,7 @@ export default function Stats({ title, items }: StatsProps) {
             >
               <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3">
                 <span className="stat-number" data-target={item.value}>
-                  0
+                  {item.value}
                 </span>
                 <span className="stat-suffix text-indigo-400">
                   {item.suffix}
