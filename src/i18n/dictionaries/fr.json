@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Développeur No-Code & Fullstack IA à Madagascar",
-      "description": "Développeur fullstack et expert automatisation basé à Antananarivo. N8N, Claude Code, Bubble, Next.js, Supabase — je conçois des apps intelligentes et des workflows qui boostent votre business."
+      "title": "Développeur Fullstack JavaScript à Madagascar | React, Next.js, Node.js",
+      "description": "Développeur fullstack JavaScript freelance à Antananarivo, Madagascar. React, Next.js, Node.js, Supabase, Python — applications web performantes et automatisation IA. Tarifs 2-3x moins chers qu'en Europe. 20+ projets livrés."
     },
     "about": {
       "title": "Manda Randriambinintsoa | Développeur No-Code & Expert N8N à Madagascar",
@@ -290,6 +290,117 @@
             {
               "question": "Combien de temps pour développer une application low-code ?",
               "answer": "Un MVP fonctionnel est livré en 3 à 6 semaines. Une application complète avec authentification, dashboard et intégrations prend 6 à 12 semaines selon la complexité."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "code",
+        "title": "Développeur React & Next.js à Madagascar",
+        "description": "Applications web performantes en React et Next.js. SSR, API Routes, TypeScript, Supabase — du MVP au SaaS en production, avec des tarifs freelance compétitifs depuis Madagascar.",
+        "slug": "developpeur-react-nextjs-madagascar",
+        "color": "sky",
+        "isLanding": true,
+        "seoTitle": "Développeur React & Next.js Freelance à Madagascar | Manda",
+        "seoDescription": "Développeur React et Next.js freelance à Antananarivo, Madagascar. Applications web performantes, SSR, TypeScript, Supabase. TJM compétitif, 20+ projets livrés. Devis gratuit.",
+        "landing": {
+          "heroText": "Vous cherchez un développeur React / Next.js fiable et compétitif pour votre application web ? Basé à Antananarivo, je conçois des applications fullstack JavaScript performantes — du MVP au SaaS en production. Plus de 20 projets livrés, un TJM 2 à 3 fois inférieur aux freelances européens, et une expertise confirmée sur l'écosystème React moderne.",
+          "heroImage": {
+            "src": "/images/projects/factumation-logiciel-facturation.png",
+            "alt": "Application web React Next.js développée par Manda - Factumation SaaS"
+          },
+          "showcase": [
+            {
+              "src": "/images/projects/factumation-logiciel-facturation.png",
+              "alt": "SaaS de facturation développé en Next.js et Supabase - Factumation",
+              "title": "Factumation — SaaS Next.js",
+              "description": "Logiciel de facturation complet : génération PDF, gestion clients, tableau de bord. Next.js 16 + Supabase."
+            },
+            {
+              "src": "/images/projects/scalapp-dashboard-gestion-investissements.png",
+              "alt": "Dashboard React de gestion d'investissements - ScalApp",
+              "title": "ScalApp — Dashboard React",
+              "description": "Tableau de bord d'investissement avec graphiques temps réel et suivi opérationnel."
+            },
+            {
+              "src": "/images/projects/artigen-generateur-images-ia.png",
+              "alt": "Générateur d'images IA construit en Next.js et FastAPI - Artigen",
+              "title": "Artigen — App IA Next.js",
+              "description": "Générateur d'images IA capable de gérer 100 utilisateurs simultanés."
+            },
+            {
+              "src": "/images/projects/scraping-flowremote-automatisation-emploi.png",
+              "alt": "Application fullstack JavaScript avec automatisation N8N - FlowRemote",
+              "title": "FlowRemote — Fullstack JS + N8N",
+              "description": "Scraping automatisé d'offres d'emploi remote avec dashboard de suivi."
+            }
+          ],
+          "sections": [
+            {
+              "title": "Pourquoi React et Next.js en 2026 ?",
+              "content": "React est la bibliothèque JavaScript la plus utilisée au monde pour construire des interfaces utilisateur. Selon le sondage Stack Overflow 2025, React est utilisé par 42 % des développeurs professionnels, loin devant Angular (17 %) et Vue.js (16 %).\n\nNext.js, le framework React de Vercel, ajoute le rendu serveur (SSR/SSG), le routage automatique, l'optimisation d'images et le déploiement instantané. En 2026, Next.js propulse les sites de Netflix, TikTok, Twitch, Notion et des milliers de SaaS.\n\nPourquoi ça compte pour votre projet : une application Next.js charge en moins d'une seconde (LCP < 1s), se référence parfaitement sur Google grâce au rendu serveur, et scale de 10 à 100 000 utilisateurs sans changement d'architecture."
+            },
+            {
+              "title": "Ma stack technique",
+              "content": "**React 19 + Next.js 16** — Framework principal. App Router, Server Components, Streaming SSR. Performance maximale avec Turbopack.\n\n**TypeScript** — Typage statique pour un code robuste, maintenable et sans bugs en production.\n\n**Supabase** — Backend complet : PostgreSQL, authentification, stockage, API temps réel. Alternative open-source à Firebase.\n\n**Tailwind CSS v4** — Design system utility-first pour des interfaces modernes, responsives et cohérentes.\n\n**Node.js + Python** — Backend et scripting : API REST, microservices, scripts d'automatisation, intégrations IA.\n\n**Vercel + Render** — Déploiement : CDN mondial, CI/CD automatique, monitoring et scaling.\n\n**N8N** — Automatisation des workflows métier : connexion d'outils, scraping, notifications, agents IA.\n\n**GSAP** — Animations fluides et performantes pour des interfaces à fort impact visuel."
+            },
+            {
+              "title": "React vs Angular vs Vue : pourquoi je choisis React",
+              "content": "**React** — Écosystème le plus large, plus de packages npm disponibles, communauté massive. Flexible : fonctionne avec Next.js (SSR), React Native (mobile), Electron (desktop). Courbe d'apprentissage accessible. Idéal pour les startups et les SaaS.\n\n**Angular** — Framework complet (batteries included), adapté aux grandes entreprises avec des équipes structurées. Plus rigide, plus lourd, courbe d'apprentissage plus longue. TJM souvent plus bas que React.\n\n**Vue.js** — Framework progressif, excellent pour les petits projets et la montée en compétence. Écosystème plus petit que React. Moins demandé sur le marché freelance international.\n\nEn 2026, React + Next.js est le choix dominant pour les applications web modernes. C'est là que la demande est la plus forte, les TJM les plus élevés (400-600€/jour en France), et l'écosystème le plus mature."
+            },
+            {
+              "title": "Pourquoi un développeur React à Madagascar ?",
+              "content": "Madagascar est devenu un hub tech émergent pour l'externalisation de services digitaux qualifiés. En tant que développeur React / Next.js basé à Antananarivo, j'offre :\n\n**Tarifs compétitifs** — TJM 2 à 3 fois inférieur aux freelances européens, pour une qualité de code équivalente. Un projet qui coûte 15 000€ à 30 000€ avec un freelance parisien revient à 5 000€ à 12 000€ avec moi.\n\n**Français natif** — Communication fluide, pas de barrière linguistique. Réunions, documentation et code reviews en français.\n\n**Fuseau horaire GMT+3** — Compatible avec les horaires de bureau européens (9h-18h Paris = 11h-20h Antananarivo). Collaboration en temps réel via Slack, Notion et Google Meet.\n\n**Qualité internationale** — 20+ projets livrés avec un score PageSpeed de 98-100/100. Code TypeScript typé, tests, CI/CD, documentation technique.\n\n**Développement assisté par IA** — J'utilise Claude Code et GitHub Copilot pour accélérer le développement tout en maintenant une qualité de code professionnelle. Un MVP qui prenait 6 semaines se livre en 2-3 semaines."
+            },
+            {
+              "title": "Types de projets React / Next.js",
+              "content": "**SaaS (Software as a Service)** — Applications métier complètes avec authentification, dashboard, facturation et API. Exemples : Factumation (facturation), ScalApp (gestion d'investissements).\n\n**Marketplaces** — Plateformes de mise en relation avec paiement intégré, recherche avancée et profils utilisateurs. Exemple : ImmoPrive (immobilier).\n\n**Dashboards & Back-offices** — Interfaces d'administration avec graphiques temps réel, CRUD avancé et gestion des rôles.\n\n**Sites vitrine premium** — Sites corporate et portfolios avec animations GSAP, SEO optimal et score PageSpeed 100/100. Exemple : ce portfolio.\n\n**Applications IA** — Intégration de modèles IA (Claude, GPT) dans des interfaces React. Chatbots, générateurs de contenu, outils d'analyse. Exemple : Artigen (génération d'images).\n\n**Applications mobiles** — Avec React Native, la même base de code JavaScript fonctionne sur iOS et Android."
+            },
+            {
+              "title": "Mon processus de travail",
+              "content": "**1. Appel découverte gratuit (30 min)** — On définit vos besoins, vos objectifs business et le périmètre technique. Je vous conseille sur la stack la plus adaptée.\n\n**2. Proposition et maquettes** — Devis détaillé avec planning. Prototype interactif Figma pour valider le design et l'UX avant de coder.\n\n**3. Développement itératif** — Sprints de 1-2 semaines avec démo à chaque étape. Vous suivez l'avancement en temps réel sur un repo Git partagé.\n\n**4. Tests et optimisation** — Tests unitaires, tests d'intégration, audit PageSpeed et SEO. Objectif : 95+ sur tous les critères.\n\n**5. Déploiement et support** — Mise en production sur Vercel ou Render. 30 jours de support technique inclus. Documentation complète pour votre équipe."
+            },
+            {
+              "title": "Performances et résultats",
+              "content": "**PageSpeed** — Score moyen de mes projets : 98/100 mobile, 100/100 desktop. LCP < 1 seconde.\n\n**SEO** — Rendu serveur Next.js, métadonnées dynamiques, sitemap automatique, schema.org. Score SEO 100/100 sur Lighthouse.\n\n**Temps de livraison** — MVP en 2-4 semaines. Application complète en 6-10 semaines.\n\n**Disponibilité** — 99.9% uptime sur Vercel CDN. Déploiement automatique à chaque commit.\n\n**Code quality** — TypeScript strict, ESLint, Prettier, commits conventionnels. Code maintenable et documenté."
+            }
+          ],
+          "features": [
+            { "icon": "bolt", "title": "LCP < 1 seconde", "description": "Next.js SSR + Vercel CDN mondial" },
+            { "icon": "search", "title": "SEO 100/100", "description": "Rendu serveur, métadonnées, schema.org" },
+            { "icon": "savings", "title": "TJM compétitif", "description": "2-3x moins cher qu'en Europe" },
+            { "icon": "code", "title": "TypeScript strict", "description": "Code typé, testé, maintenable" },
+            { "icon": "smart_toy", "title": "IA intégrée", "description": "Claude Code, GPT dans vos apps" },
+            { "icon": "schedule", "title": "Fuseau GMT+3", "description": "Temps réel avec l'Europe" }
+          ],
+          "faq": [
+            {
+              "question": "Combien coûte un projet React / Next.js à Madagascar ?",
+              "answer": "Un site vitrine Next.js démarre à 1 500€. Un MVP SaaS complet avec authentification et dashboard coûte entre 3 000€ et 8 000€. Une application complexe avec intégrations IA et automatisations se situe entre 8 000€ et 15 000€. C'est 2 à 3 fois moins cher qu'un freelance basé en France pour une qualité équivalente."
+            },
+            {
+              "question": "Quelle est la différence entre React et Next.js ?",
+              "answer": "React est une bibliothèque JavaScript pour construire des interfaces utilisateur. Next.js est un framework construit sur React qui ajoute le rendu serveur (SSR), le routage automatique, l'optimisation d'images et le déploiement simplifié. En pratique, Next.js est le standard pour les applications React en production en 2026."
+            },
+            {
+              "question": "Travaillez-vous avec des clients en France et à l'international ?",
+              "answer": "Oui, la majorité de mes clients sont en France et en Europe. Je travaille aussi avec des clients aux États-Unis et au Canada. Le fuseau horaire Madagascar (GMT+3) couvre les heures de bureau européennes. Communication en français ou en anglais via Slack, Notion et Google Meet."
+            },
+            {
+              "question": "Quels sont vos délais de livraison ?",
+              "answer": "Un site vitrine Next.js est livré en 1 à 3 semaines. Un MVP SaaS prend 3 à 6 semaines. Une application complète avec toutes les fonctionnalités se développe en 6 à 12 semaines. Chaque projet démarre avec un planning précis validé ensemble."
+            },
+            {
+              "question": "Pourquoi choisir un freelance plutôt qu'une agence ?",
+              "answer": "Avec un freelance senior, vous travaillez directement avec la personne qui code votre projet — pas d'intermédiaire, pas de commercial, pas de junior débutant. Communication directe, itérations rapides, et un interlocuteur unique qui connaît chaque ligne de code de votre application."
+            },
+            {
+              "question": "Le code est-il maintenable après la livraison ?",
+              "answer": "Absolument. Je livre du code TypeScript strict avec ESLint, Prettier et des conventions de commits. La documentation technique est incluse. Vous ou un autre développeur pouvez reprendre le code sans difficulté. Je propose aussi un contrat de maintenance mensuel si vous le souhaitez."
+            },
+            {
+              "question": "Pouvez-vous reprendre un projet React existant ?",
+              "answer": "Oui. Je peux auditer votre application existante, corriger les bugs, améliorer les performances, ajouter des fonctionnalités ou migrer vers Next.js. Un audit technique initial (payant) permet d'identifier les priorités avant de commencer."
             }
           ]
         }
