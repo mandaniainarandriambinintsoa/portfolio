@@ -400,6 +400,208 @@
             }
           ]
         }
+      },
+      {
+        "icon": "database",
+        "title": "Next.js & Supabase Developer in Madagascar",
+        "description": "Complete SaaS applications with Next.js and Supabase. Authentication, PostgreSQL database, real-time API, storage — from prototype to scalable product.",
+        "slug": "nextjs-supabase-developer-madagascar",
+        "color": "emerald",
+        "isLanding": true,
+        "seoTitle": "Next.js & Supabase Developer in Madagascar | Custom SaaS — Manda",
+        "seoDescription": "Freelance Next.js and Supabase developer in Madagascar. Complete SaaS apps: auth, PostgreSQL, real-time API, dashboard. Open-source Firebase alternative. Free quote.",
+        "landing": {
+          "heroText": "Want to launch a SaaS or web application with a solid backend without breaking the budget? Next.js + Supabase is the most efficient stack in 2026 for building scalable products. Based in Antananarivo, I build complete applications — authentication, database, real-time API — at rates 2-3x lower than US/European freelancers.",
+          "heroImage": {
+            "src": "/images/projects/factumation-logiciel-facturation.png",
+            "alt": "SaaS application built with Next.js and Supabase - Factumation"
+          },
+          "showcase": [
+            {
+              "src": "/images/projects/factumation-logiciel-facturation.png",
+              "alt": "Next.js Supabase billing SaaS - Factumation",
+              "title": "Factumation — Billing SaaS",
+              "description": "Complete invoicing: auth, PDF generation, client management, dashboard. Next.js 16 + Supabase."
+            },
+            {
+              "src": "/images/projects/scalapp-dashboard-gestion-investissements.png",
+              "alt": "Real-time dashboard with Supabase and React - ScalApp",
+              "title": "ScalApp — Real-Time Dashboard",
+              "description": "Investment dashboard with real-time data via Supabase Realtime."
+            },
+            {
+              "src": "/images/projects/artigen-generateur-images-ia.png",
+              "alt": "AI application with Next.js and Supabase backend - Artigen",
+              "title": "Artigen — AI App + Supabase",
+              "description": "AI image generator with Supabase storage and user auth."
+            },
+            {
+              "src": "/images/projects/immoprive-marketplace-immobiliere.png",
+              "alt": "Marketplace with Supabase database - ImmoPrive",
+              "title": "ImmoPrive — Marketplace",
+              "description": "Matching platform with advanced search and user profiles."
+            }
+          ],
+          "sections": [
+            {
+              "title": "Why Next.js + Supabase in 2026?",
+              "content": "Next.js + Supabase has become the go-to stack for startups and SaaS in 2026. This duo replaces traditional architectures (Express + MongoDB, Django + PostgreSQL) with 3-5x higher productivity.\n\n**Next.js** provides the frontend and server: server-side rendering (SSR), API Routes, Server Components, automatic image and code optimization. Average PageSpeed score: 98/100.\n\n**Supabase** provides the complete backend: PostgreSQL database, authentication (email, OAuth, magic links), file storage, REST and real-time API, Edge Functions. It's the open-source Firebase alternative, adopted by over 1 million developers.\n\nTogether, they let you launch a functional MVP in 2-4 weeks, with an architecture that scales from 10 to 100,000 users without refactoring."
+            },
+            {
+              "title": "What Supabase replaces",
+              "content": "**Firebase** — Supabase offers the same features (auth, database, storage, real-time) but with PostgreSQL instead of Firestore. Advantage: standard SQL queries, no vendor lock-in, data exportable at any time.\n\n**Custom backend (Express/NestJS)** — Supabase auto-generates REST and GraphQL APIs from your database schema. No need to write hundreds of CRUD routes manually.\n\n**Auth0 / Clerk** — Supabase authentication is built-in and free: email/password, OAuth (Google, GitHub, Apple), magic links, 2FA. No third-party service to pay for.\n\n**AWS S3** — Supabase storage handles uploads, image resizing and access permissions. Simple interface, consistent API with the rest of the stack.\n\nFor a deeper comparison, check my article: [Why Supabase replaces Firebase](/en/blog/pourquoi-supabase-remplace-firebase)."
+            },
+            {
+              "title": "Why hire a Next.js + Supabase developer from Madagascar?",
+              "content": "This is my daily stack — every project I've shipped since late 2025 uses Next.js + Supabase. This portfolio, Factumation, the visitor tracking system — all built on this stack.\n\n**Proven expertise** — 15+ projects delivered with Next.js + Supabase. Row Level Security, migrations, Edge Functions, Realtime — I master every component.\n\n**Competitive rates** — A SaaS MVP that costs $18,000-30,000 with a US-based freelancer comes to $4,500-12,000 with me. Same code quality, strict TypeScript, complete documentation.\n\n**AI-powered development** — I use Claude Code daily to write code faster and cleaner. An MVP that used to take 6 weeks ships in 2-3 weeks.\n\n**GMT+3 timezone** — Real-time collaboration with Europe during business hours. Overlaps with US East Coast mornings."
+            },
+            {
+              "title": "Security and best practices",
+              "content": "**Row Level Security (RLS)** — Every table has PostgreSQL policies ensuring users only access their own data. No authorization vulnerabilities possible.\n\n**Strict TypeScript** — All code is typed. Errors are caught at compile time, not in production.\n\n**Environment variables** — API keys and secrets are stored server-side, never exposed to the client.\n\n**HTTPS + HSTS** — End-to-end encryption. Complete security headers (CSP, X-Frame-Options, Referrer-Policy).\n\n**Automatic backups** — Supabase performs daily database backups. One-click restore."
+            },
+            {
+              "title": "Measured performance",
+              "content": "**This portfolio (Next.js 16 + Supabase)**:\n- PageSpeed Desktop: 100/100\n- PageSpeed Mobile: 98/100\n- LCP: 943ms\n- CLS: 0.00\n- 62 statically generated pages\n\n**Factumation (SaaS Next.js + Supabase)**:\n- Developed in 3 days with Claude Code\n- Auth + dashboard + PDF generation\n- Load time < 1 second\n\n**Average delivery times**:\n- Landing page: 1-2 weeks\n- SaaS MVP: 2-4 weeks\n- Full application: 6-10 weeks"
+            }
+          ],
+          "features": [
+            { "icon": "database", "title": "PostgreSQL", "description": "Relational database, not limited NoSQL" },
+            { "icon": "lock", "title": "Built-in RLS", "description": "Row-level security" },
+            { "icon": "sync", "title": "Real-time", "description": "Supabase Realtime for live data" },
+            { "icon": "key", "title": "Complete auth", "description": "Email, OAuth, magic links, 2FA" },
+            { "icon": "cloud_upload", "title": "Storage", "description": "Built-in file and image uploads" },
+            { "icon": "savings", "title": "Open-source", "description": "No vendor lock-in, portable data" }
+          ],
+          "faq": [
+            {
+              "question": "How much does a Next.js + Supabase SaaS cost?",
+              "answer": "A SaaS MVP with authentication, dashboard and full CRUD starts at $3,500. A complete application with third-party integrations, automations and custom design ranges from $7,000 to $14,000. That's 2-3x less than a developer based in the US or Europe."
+            },
+            {
+              "question": "Is Supabase reliable for production?",
+              "answer": "Yes. Supabase hosts over 1 million production projects. Infrastructure runs on AWS with a 99.9% SLA. Backups are automatic and restoration is one-click. It's standard PostgreSQL — the world's most reliable database."
+            },
+            {
+              "question": "Can you migrate from Firebase to Supabase?",
+              "answer": "Yes. I handle Firebase → Supabase migrations: exporting Firestore data to PostgreSQL, migrating authentication, and adapting frontend code. The process typically takes 2-4 weeks depending on complexity."
+            },
+            {
+              "question": "Is Supabase free?",
+              "answer": "Supabase offers a generous free tier: 500 MB database, 1 GB storage, 50,000 monthly active users and 2 million Edge Function invocations. For most MVPs and small SaaS products, the free tier is sufficient. Paid plans start at $25/month."
+            },
+            {
+              "question": "What's the difference with Firebase?",
+              "answer": "Firebase uses Firestore (NoSQL) while Supabase uses PostgreSQL (relational SQL). PostgreSQL enables complex queries (JOINs, aggregations) impossible on Firestore. Supabase is open-source — your data is never locked to a vendor. And authentication is included for free without limits."
+            },
+            {
+              "question": "Do you offer maintenance after delivery?",
+              "answer": "Yes. 30 days of technical support are included after each delivery. I also offer monthly maintenance contracts for updates, bug fixes and new features."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "smart_toy",
+        "title": "Python & AI Developer in Madagascar",
+        "description": "Artificial intelligence applications, automation scripts and backend APIs with Python and FastAPI. Integration of AI models (Claude, GPT) into your products.",
+        "slug": "python-ai-developer-madagascar",
+        "color": "amber",
+        "isLanding": true,
+        "seoTitle": "Python & AI Developer in Madagascar | FastAPI, Claude, GPT — Manda",
+        "seoDescription": "Freelance Python and AI developer in Antananarivo, Madagascar. FastAPI, Claude Code, GPT, automation, scraping, AI agents. Competitive rates. Free quote.",
+        "landing": {
+          "heroText": "Want to integrate artificial intelligence into your product or automate complex processes with Python? Based in Antananarivo, I build AI applications, high-performance APIs with FastAPI, and intelligent agents connected to Claude and GPT. 20+ projects delivered, rates 2-3x lower than US/European freelancers.",
+          "heroImage": {
+            "src": "/images/projects/artigen-generateur-images-ia.png",
+            "alt": "AI application developed in Python by Manda - Artigen image generator"
+          },
+          "showcase": [
+            {
+              "src": "/images/projects/artigen-generateur-images-ia.png",
+              "alt": "AI image generator Python FastAPI - Artigen",
+              "title": "Artigen — AI Generator",
+              "description": "AI image generator (Next.js + FastAPI Python) handling 100 concurrent users."
+            },
+            {
+              "src": "/images/projects/scraping-flowremote-automatisation-emploi.png",
+              "alt": "Python automated scraping script with N8N - FlowRemote",
+              "title": "FlowRemote — Python Scraping",
+              "description": "Automated job scraping with AI processing and email distribution."
+            },
+            {
+              "src": "/images/projects/factumation-logiciel-facturation.png",
+              "alt": "SaaS developed with AI assistance Claude Code - Factumation",
+              "title": "Factumation — AI-Assisted Dev",
+              "description": "Complete SaaS developed in 3 days using AI-assisted development with Claude Code."
+            },
+            {
+              "src": "/images/projects/scalapp-dashboard-gestion-investissements.png",
+              "alt": "Dashboard with AI integration for data analysis - ScalApp",
+              "title": "ScalApp — Dashboard + AI",
+              "description": "Dashboard with automated data analysis and AI recommendations."
+            }
+          ],
+          "sections": [
+            {
+              "title": "Why Python for AI in 2026?",
+              "content": "Python dominates AI and data science development. According to the TIOBE Index 2026, Python is the #1 programming language worldwide, used by 90% of artificial intelligence projects.\n\n**Unmatched AI ecosystem** — TensorFlow, PyTorch, LangChain, scikit-learn, Hugging Face. All major AI libraries are in Python.\n\n**FastAPI** — The fastest Python framework for REST APIs. Performance comparable to Node.js and Go, with Python's simplicity. Automatic documentation (Swagger), data validation (Pydantic), native async support.\n\n**LLM integration** — Anthropic (Claude) and OpenAI (GPT) SDKs are Python-first. Building AI agents, chatbots or RAG systems is done natively in Python.\n\nPython + FastAPI is the natural choice when your project involves AI, data processing or complex automations."
+            },
+            {
+              "title": "What I build with Python",
+              "content": "**AI applications** — Intelligent chatbots, content generators, recommendation systems, sentiment analysis. Integration of Claude, GPT-4, Mistral and open-source models.\n\n**Backend APIs (FastAPI)** — High-performance REST APIs for your web and mobile applications. Authentication, validation, rate limiting, automatic documentation.\n\n**Autonomous AI agents** — Agents that execute complex tasks: web research, document analysis, decision-making, interaction with third-party APIs. Built with LangChain and Claude.\n\n**Scraping & Data** — Web data extraction, cleaning, transformation and database loading. BeautifulSoup, Scrapy, Selenium.\n\n**Automation** — Python scripts connected to N8N for complex workflows: file processing, email sending, data synchronization, automatic reporting.\n\n**Computer Vision** — Image processing, OCR, object detection with OpenCV and pre-trained models."
+            },
+            {
+              "title": "Python + JavaScript: the winning duo",
+              "content": "I don't just do Python. My strength is combining Python (AI backend) with JavaScript/Next.js (frontend) for complete applications.\n\n**Typical architecture**:\n- **Frontend**: Next.js + React + Tailwind CSS — modern, performant user interface\n- **AI Backend**: FastAPI Python — AI processing, ML, scraping\n- **Database**: Supabase (PostgreSQL) — structured data, auth, real-time\n- **Automation**: N8N — workflow orchestration between services\n\n**Concrete example — Artigen**:\n- Next.js frontend for the image generation interface\n- FastAPI Python backend for AI model calls\n- Supabase for image storage and authentication\n- Result: 100 concurrent users on free hosting (Render)\n\nThis fullstack architecture delivers complete AI products, not just isolated Python scripts."
+            },
+            {
+              "title": "Why a Python & AI developer from Madagascar?",
+              "content": "**Applied AI expertise** — I'm not a theoretical data scientist. I build functional AI products that end users actually use. Every project ships with a user interface, not just a Jupyter notebook.\n\n**Competitive rates** — An AI project costing $12,000-24,000 with a US-based freelancer comes to $3,500-9,000 with me. AI shouldn't be reserved for companies with big budgets.\n\n**AI-assisted development** — I use Claude Code daily to write code faster and cleaner. An AI developer who builds with the help of other AIs — it's meta, but it works.\n\n**Complete stack** — Python for AI + Next.js for frontend + Supabase for backend + N8N for automation. One point of contact for your entire project, not 3 different freelancers.\n\n**GMT+3 timezone** — Real-time collaboration with Europe. Communication in French and English."
+            },
+            {
+              "title": "AI use cases for businesses",
+              "content": "**AI customer service** — Chatbot connected to your knowledge base that answers FAQs 24/7. 60-80% reduction in support ticket volume.\n\n**Content generation** — Automatic writing of product descriptions, SEO content, marketing emails. Supervised by humans, produced by AI.\n\n**Document analysis** — Automatic extraction of information from PDFs, invoices, contracts. OCR + LLM to transform unstructured documents into actionable data.\n\n**Personalized recommendations** — Matching and recommendation algorithms for marketplaces, e-commerce and content platforms.\n\n**Automated monitoring** — Scraping of competitor sites, social media, news sources. Daily AI summaries delivered via email or Slack.\n\n**Process automation** — Replacing repetitive manual tasks with AI workflows: email classification, application sorting, lead scoring."
+            },
+            {
+              "title": "Technologies and tools",
+              "content": "**Languages** — Python 3.12+, TypeScript, SQL\n\n**Frameworks** — FastAPI, Flask, Next.js, React\n\n**AI & ML** — Claude API (Anthropic), OpenAI API, LangChain, Hugging Face Transformers, scikit-learn\n\n**Data** — Pandas, NumPy, PostgreSQL (Supabase/Neon), Redis\n\n**Scraping** — BeautifulSoup, Scrapy, Selenium, Playwright\n\n**Automation** — N8N, cron scripts, GitHub Actions\n\n**Deployment** — Render, Vercel, Docker, Railway\n\n**Dev tools** — Claude Code, GitHub Copilot, VS Code, Git"
+            }
+          ],
+          "features": [
+            { "icon": "smart_toy", "title": "Claude & GPT", "description": "Native integration of top LLMs" },
+            { "icon": "bolt", "title": "FastAPI", "description": "Ultra-fast Python APIs" },
+            { "icon": "auto_awesome", "title": "AI Agents", "description": "Autonomous agents with LangChain" },
+            { "icon": "manage_search", "title": "Scraping", "description": "Automated data extraction" },
+            { "icon": "psychology", "title": "Applied ML", "description": "Recommendations, classification, NLP" },
+            { "icon": "savings", "title": "Competitive rates", "description": "2-3x more affordable than US/EU" }
+          ],
+          "faq": [
+            {
+              "question": "How much does a Python AI project cost?",
+              "answer": "A simple AI chatbot connected to your documentation starts at $1,800. A complex AI agent with scraping, analysis and decision-making costs between $3,500 and $9,000. A complete AI application with user interface ranges from $6,000 to $18,000."
+            },
+            {
+              "question": "Do I need big data to use AI?",
+              "answer": "No. With pre-trained models like Claude and GPT, you can create powerful AI applications without training data. Fine-tuning is optional and reserved for cases where you have very specific needs."
+            },
+            {
+              "question": "Can AI replace my employees?",
+              "answer": "AI augments your teams, it doesn't replace them. An AI chatbot handles repetitive questions so your team focuses on complex problems. A scraping agent collects data continuously so your team analyzes and decides. Humans remain at the center of decision-making."
+            },
+            {
+              "question": "Which AI models do you use?",
+              "answer": "I primarily work with Claude (Anthropic) and GPT-4 (OpenAI) for text processing, content generation and AI agents. For computer vision, I use open-source models via Hugging Face. Model choice depends on your use case and budget."
+            },
+            {
+              "question": "Is my company data secure?",
+              "answer": "Yes. I configure architectures where your data stays on your own servers. API calls to AI services (Claude, GPT) are encrypted in transit. For sensitive data, I use self-hosted open-source models that don't share anything with third parties."
+            },
+            {
+              "question": "Do you offer AI system maintenance?",
+              "answer": "Yes. AI systems require monitoring: model updates, prompt adjustments, performance monitoring. I offer monthly maintenance contracts adapted to your system's complexity."
+            }
+          ]
+        }
       }
     ]
   },

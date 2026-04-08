@@ -404,6 +404,212 @@
             }
           ]
         }
+      },
+      {
+        "icon": "database",
+        "title": "Développeur Next.js & Supabase à Madagascar",
+        "description": "Applications SaaS complètes avec Next.js et Supabase. Authentification, base de données PostgreSQL, API temps réel, stockage — du prototype au produit scalable.",
+        "slug": "developpeur-nextjs-supabase-madagascar",
+        "color": "emerald",
+        "isLanding": true,
+        "seoTitle": "Développeur Next.js & Supabase à Madagascar | SaaS Sur Mesure — Manda",
+        "seoDescription": "Développeur Next.js et Supabase freelance à Madagascar. Applications SaaS complètes : auth, PostgreSQL, API temps réel, dashboard. Alternative Firebase open-source. Devis gratuit.",
+        "landing": {
+          "heroText": "Vous voulez lancer un SaaS ou une application web avec un backend solide, sans exploser votre budget ? Next.js + Supabase est le stack le plus efficace en 2026 pour construire des produits scalables. Basé à Antananarivo, je conçois des applications complètes — authentification, base de données, API temps réel — avec des tarifs 2 à 3 fois inférieurs aux freelances européens.",
+          "heroImage": {
+            "src": "/images/projects/factumation-logiciel-facturation.png",
+            "alt": "Application SaaS développée avec Next.js et Supabase - Factumation"
+          },
+          "showcase": [
+            {
+              "src": "/images/projects/factumation-logiciel-facturation.png",
+              "alt": "SaaS de facturation Next.js Supabase - Factumation",
+              "title": "Factumation — SaaS Facturation",
+              "description": "Facturation complète : auth, génération PDF, gestion clients, dashboard. Next.js 16 + Supabase."
+            },
+            {
+              "src": "/images/projects/scalapp-dashboard-gestion-investissements.png",
+              "alt": "Dashboard de gestion avec Supabase et React - ScalApp",
+              "title": "ScalApp — Dashboard Temps Réel",
+              "description": "Tableau de bord d'investissement avec données temps réel via Supabase Realtime."
+            },
+            {
+              "src": "/images/projects/artigen-generateur-images-ia.png",
+              "alt": "Application IA avec Next.js backend Supabase - Artigen",
+              "title": "Artigen — App IA + Supabase",
+              "description": "Générateur d'images IA avec stockage Supabase et auth utilisateur."
+            },
+            {
+              "src": "/images/projects/immoprive-marketplace-immobiliere.png",
+              "alt": "Marketplace immobilière avec base de données Supabase - ImmoPrive",
+              "title": "ImmoPrive — Marketplace",
+              "description": "Plateforme de mise en relation avec recherche avancée et profils utilisateurs."
+            }
+          ],
+          "sections": [
+            {
+              "title": "Pourquoi Next.js + Supabase en 2026 ?",
+              "content": "Next.js + Supabase est devenu le stack de référence pour les startups et les SaaS en 2026. Ce duo remplace les architectures traditionnelles (Express + MongoDB, Django + PostgreSQL) avec une productivité 3 à 5 fois supérieure.\n\n**Next.js** fournit le frontend et le serveur : rendu côté serveur (SSR), API Routes, Server Components, optimisation automatique des images et du code. Score PageSpeed moyen : 98/100.\n\n**Supabase** fournit le backend complet : base de données PostgreSQL, authentification (email, OAuth, magic links), stockage de fichiers, API REST et temps réel, fonctions Edge. C'est l'alternative open-source à Firebase, adoptée par plus de 1 million de développeurs.\n\nEnsemble, ils permettent de lancer un MVP fonctionnel en 2 à 4 semaines, avec une architecture qui scale de 10 à 100 000 utilisateurs sans refactoring."
+            },
+            {
+              "title": "Ce que Supabase remplace",
+              "content": "**Firebase** — Supabase offre les mêmes fonctionnalités (auth, base de données, stockage, temps réel) mais avec PostgreSQL au lieu de Firestore. Avantage : requêtes SQL standard, pas de vendor lock-in, données exportables à tout moment.\n\n**Backend custom (Express/NestJS)** — Supabase génère automatiquement des API REST et GraphQL depuis votre schéma de base de données. Plus besoin d'écrire des centaines de routes CRUD manuellement.\n\n**Auth0 / Clerk** — L'authentification Supabase est intégrée et gratuite : email/password, OAuth (Google, GitHub, Apple), magic links, 2FA. Pas de service tiers à payer.\n\n**AWS S3** — Le stockage Supabase gère les uploads, le redimensionnement d'images et les permissions d'accès. Interface simple, API cohérente avec le reste du stack.\n\nPour approfondir cette comparaison, consultez mon article : [Pourquoi Supabase remplace Firebase](/blog/pourquoi-supabase-remplace-firebase)."
+            },
+            {
+              "title": "Architecture type d'un SaaS Next.js + Supabase",
+              "content": "**Frontend** — Next.js App Router avec React Server Components. Pages statiques (SSG) pour le marketing, pages dynamiques (SSR) pour le dashboard. Tailwind CSS pour le design.\n\n**Authentification** — Supabase Auth avec Row Level Security (RLS). Chaque utilisateur ne voit que ses propres données. Pas de middleware custom nécessaire.\n\n**Base de données** — PostgreSQL avec migrations versionnées. Relations, indexes, vues matérialisées. Les requêtes complexes sont possibles contrairement à Firebase/Firestore.\n\n**API** — API REST auto-générée par Supabase + API Routes Next.js pour la logique métier complexe (webhooks, intégrations tierces, traitements IA).\n\n**Temps réel** — Supabase Realtime pour les notifications, le chat, les dashboards live. Les changements en base de données sont poussés instantanément au frontend.\n\n**Déploiement** — Vercel (frontend) + Supabase Cloud (backend). CI/CD automatique, CDN mondial, 99.9% uptime."
+            },
+            {
+              "title": "Pourquoi un développeur Next.js + Supabase à Madagascar ?",
+              "content": "C'est mon stack quotidien — chaque projet que je livre depuis fin 2025 utilise Next.js + Supabase. Ce portfolio, Factumation, le système de tracking visiteurs, tout est construit sur ce stack.\n\n**Expertise confirmée** — 15+ projets livrés avec Next.js + Supabase. Row Level Security, migrations, Edge Functions, Realtime — je maîtrise chaque composant.\n\n**Tarifs compétitifs** — Un SaaS MVP qui coûte 15 000€ à 25 000€ avec un freelance parisien revient à 4 000€ à 10 000€ avec moi. Même qualité de code, TypeScript strict, documentation complète.\n\n**Développement IA-assisté** — J'utilise Claude Code pour accélérer chaque étape. Un MVP qui prenait 6 semaines se livre en 2-3 semaines.\n\n**Fuseau GMT+3** — Collaboration en temps réel avec l'Europe pendant les heures de bureau."
+            },
+            {
+              "title": "Sécurité et bonnes pratiques",
+              "content": "**Row Level Security (RLS)** — Chaque table a des policies PostgreSQL qui garantissent que les utilisateurs n'accèdent qu'à leurs propres données. Pas de faille d'autorisation possible.\n\n**TypeScript strict** — Tout le code est typé. Les erreurs sont détectées à la compilation, pas en production.\n\n**Variables d'environnement** — Les clés API et secrets sont stockés côté serveur, jamais exposés au client.\n\n**HTTPS + HSTS** — Chiffrement de bout en bout. Headers de sécurité complets (CSP, X-Frame-Options, Referrer-Policy).\n\n**Backups automatiques** — Supabase effectue des backups quotidiens de la base de données. Restauration en un clic."
+            },
+            {
+              "title": "Performances mesurées",
+              "content": "**Ce portfolio (Next.js 16 + Supabase)** :\n- PageSpeed Desktop : 100/100\n- PageSpeed Mobile : 98/100\n- LCP : 943ms\n- CLS : 0.00\n- 62 pages générées statiquement\n\n**Factumation (SaaS Next.js + Supabase)** :\n- Développé en 3 jours avec Claude Code\n- Auth + dashboard + génération PDF\n- Temps de chargement < 1 seconde\n\n**Temps de livraison moyens** :\n- Site vitrine : 1-2 semaines\n- MVP SaaS : 2-4 semaines\n- Application complète : 6-10 semaines"
+            }
+          ],
+          "features": [
+            { "icon": "database", "title": "PostgreSQL", "description": "Base de données relationnelle, pas de NoSQL limité" },
+            { "icon": "lock", "title": "RLS intégré", "description": "Sécurité au niveau des lignes" },
+            { "icon": "sync", "title": "Temps réel", "description": "Supabase Realtime pour les données live" },
+            { "icon": "key", "title": "Auth complète", "description": "Email, OAuth, magic links, 2FA" },
+            { "icon": "cloud_upload", "title": "Stockage", "description": "Upload fichiers et images intégré" },
+            { "icon": "savings", "title": "Open-source", "description": "Pas de vendor lock-in, données portables" }
+          ],
+          "faq": [
+            {
+              "question": "Combien coûte un SaaS Next.js + Supabase ?",
+              "answer": "Un MVP SaaS avec authentification, dashboard et CRUD complet démarre à 3 000€. Une application complète avec intégrations tierces, automatisations et design custom se situe entre 6 000€ et 12 000€. C'est 2-3x moins cher qu'un développeur basé en France."
+            },
+            {
+              "question": "Supabase est-il fiable pour la production ?",
+              "answer": "Oui. Supabase héberge plus de 1 million de projets en production. L'infrastructure tourne sur AWS avec un SLA de 99.9%. Les backups sont automatiques et la restauration se fait en un clic. C'est du PostgreSQL standard — la base de données la plus fiable au monde."
+            },
+            {
+              "question": "Peut-on migrer depuis Firebase vers Supabase ?",
+              "answer": "Oui. Je réalise des migrations Firebase → Supabase : export des données Firestore vers PostgreSQL, migration de l'authentification, et adaptation du code frontend. Le processus prend généralement 2 à 4 semaines selon la complexité."
+            },
+            {
+              "question": "Supabase est-il gratuit ?",
+              "answer": "Supabase offre un plan gratuit généreux : 500 MB de base de données, 1 GB de stockage, 50 000 utilisateurs actifs par mois et 2 millions de requêtes Edge Functions. Pour la plupart des MVP et petits SaaS, le plan gratuit suffit. Les plans payants démarrent à 25$/mois."
+            },
+            {
+              "question": "Quelle est la différence avec Firebase ?",
+              "answer": "Firebase utilise Firestore (NoSQL) tandis que Supabase utilise PostgreSQL (SQL relationnel). PostgreSQL permet des requêtes complexes (JOINs, agrégations) impossibles sur Firestore. Supabase est open-source — vos données ne sont jamais verrouillées chez un fournisseur. Et l'authentification est incluse gratuitement sans limite."
+            },
+            {
+              "question": "Proposez-vous la maintenance après livraison ?",
+              "answer": "Oui. 30 jours de support technique sont inclus après chaque livraison. Je propose aussi des contrats de maintenance mensuels pour les mises à jour, corrections de bugs et nouvelles fonctionnalités."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "smart_toy",
+        "title": "Développeur Python & IA à Madagascar",
+        "description": "Applications d'intelligence artificielle, scripts d'automatisation et API backend avec Python et FastAPI. Intégration de modèles IA (Claude, GPT) dans vos produits.",
+        "slug": "developpeur-python-ia-madagascar",
+        "color": "amber",
+        "isLanding": true,
+        "seoTitle": "Développeur Python & IA à Madagascar | FastAPI, Claude, GPT — Manda",
+        "seoDescription": "Développeur Python et IA freelance à Antananarivo, Madagascar. FastAPI, Claude Code, GPT, automatisation, scraping, agents IA. Tarifs compétitifs. Devis gratuit.",
+        "landing": {
+          "heroText": "Vous voulez intégrer l'intelligence artificielle dans votre produit ou automatiser des processus complexes avec Python ? Basé à Antananarivo, je développe des applications IA, des API performantes avec FastAPI, et des agents intelligents connectés à Claude et GPT. Plus de 20 projets livrés, tarifs 2-3x inférieurs aux freelances européens.",
+          "heroImage": {
+            "src": "/images/projects/artigen-generateur-images-ia.png",
+            "alt": "Application IA développée en Python par Manda - Artigen générateur d'images"
+          },
+          "showcase": [
+            {
+              "src": "/images/projects/artigen-generateur-images-ia.png",
+              "alt": "Générateur d'images IA Python FastAPI - Artigen",
+              "title": "Artigen — Générateur IA",
+              "description": "Générateur d'images IA (Next.js + FastAPI Python) gérant 100 utilisateurs simultanés."
+            },
+            {
+              "src": "/images/projects/scraping-flowremote-automatisation-emploi.png",
+              "alt": "Script Python de scraping automatisé avec N8N - FlowRemote",
+              "title": "FlowRemote — Scraping Python",
+              "description": "Scraping automatisé d'offres d'emploi avec traitement IA et distribution email."
+            },
+            {
+              "src": "/images/projects/factumation-logiciel-facturation.png",
+              "alt": "SaaS développé avec assistance IA Claude Code - Factumation",
+              "title": "Factumation — Dev IA-Assisté",
+              "description": "SaaS complet développé en 3 jours grâce au développement assisté par Claude Code."
+            },
+            {
+              "src": "/images/projects/scalapp-dashboard-gestion-investissements.png",
+              "alt": "Dashboard avec intégration IA pour analyse de données - ScalApp",
+              "title": "ScalApp — Dashboard + IA",
+              "description": "Tableau de bord avec analyse de données automatisée et recommandations IA."
+            }
+          ],
+          "sections": [
+            {
+              "title": "Pourquoi Python pour l'IA en 2026 ?",
+              "content": "Python domine le développement IA et data science. Selon l'index TIOBE 2026, Python est le langage de programmation #1 mondial, utilisé par 90 % des projets d'intelligence artificielle.\n\n**Écosystème IA inégalé** — TensorFlow, PyTorch, LangChain, scikit-learn, Hugging Face. Toutes les bibliothèques IA majeures sont en Python.\n\n**FastAPI** — Le framework Python le plus rapide pour les API REST. Performances comparables à Node.js et Go, avec la simplicité de Python. Documentation automatique (Swagger), validation des données (Pydantic), support async natif.\n\n**Intégration LLM** — Les SDK d'Anthropic (Claude) et OpenAI (GPT) sont Python-first. Construire des agents IA, des chatbots ou des systèmes RAG se fait nativement en Python.\n\nPython + FastAPI est le choix naturel quand votre projet implique de l'IA, du traitement de données ou des automatisations complexes."
+            },
+            {
+              "title": "Ce que je développe en Python",
+              "content": "**Applications IA** — Chatbots intelligents, générateurs de contenu, systèmes de recommandation, analyse de sentiment. Intégration de Claude, GPT-4, Mistral et modèles open-source.\n\n**API Backend (FastAPI)** — API REST performantes pour vos applications web et mobiles. Authentification, validation, rate limiting, documentation automatique.\n\n**Agents IA autonomes** — Agents qui exécutent des tâches complexes : recherche web, analyse de documents, prise de décision, interaction avec des API tierces. Construits avec LangChain et Claude.\n\n**Scraping & Data** — Extraction de données web, nettoyage, transformation et chargement en base de données. BeautifulSoup, Scrapy, Selenium.\n\n**Automatisation** — Scripts Python connectés à N8N pour des workflows complexes : traitement de fichiers, envoi d'emails, synchronisation de données, reporting automatique.\n\n**Computer Vision** — Traitement d'images, OCR, détection d'objets avec OpenCV et modèles pré-entraînés."
+            },
+            {
+              "title": "Python + JavaScript : le duo gagnant",
+              "content": "Je ne fais pas QUE du Python. Ma force est de combiner Python (backend IA) avec JavaScript/Next.js (frontend) pour des applications complètes.\n\n**Architecture type** :\n- **Frontend** : Next.js + React + Tailwind CSS — interface utilisateur moderne et performante\n- **Backend IA** : FastAPI Python — traitement IA, ML, scraping\n- **Base de données** : Supabase (PostgreSQL) — données structurées, auth, temps réel\n- **Automatisation** : N8N — orchestration des workflows entre les services\n\n**Exemple concret — Artigen** :\n- Frontend Next.js pour l'interface de génération d'images\n- Backend FastAPI Python pour l'appel aux modèles IA\n- Supabase pour le stockage des images et l'authentification\n- Résultat : 100 utilisateurs simultanés sur un hébergement gratuit (Render)\n\nCette architecture fullstack permet de livrer des produits IA complets, pas juste des scripts Python isolés."
+            },
+            {
+              "title": "Pourquoi un développeur Python & IA à Madagascar ?",
+              "content": "**Expertise IA appliquée** — Je ne suis pas un data scientist théorique. Je construis des produits IA fonctionnels que les utilisateurs finaux utilisent vraiment. Chaque projet est livré avec une interface utilisateur, pas juste un notebook Jupyter.\n\n**Tarifs compétitifs** — Un projet IA qui coûte 10 000€ à 20 000€ avec un freelance parisien revient à 3 000€ à 8 000€ avec moi. L'IA ne devrait pas être réservée aux entreprises avec de gros budgets.\n\n**Développement IA-assisté** — J'utilise Claude Code quotidiennement pour écrire du code plus vite et plus propre. Un agent IA qui développe avec l'aide d'autres IA — c'est méta, mais c'est efficace.\n\n**Stack complet** — Python pour l'IA + Next.js pour le frontend + Supabase pour le backend + N8N pour l'automatisation. Un seul interlocuteur pour tout votre projet, pas 3 freelances différents.\n\n**Fuseau GMT+3** — Collaboration en temps réel avec l'Europe. Communication en français et en anglais."
+            },
+            {
+              "title": "Cas d'usage IA pour les entreprises",
+              "content": "**Service client IA** — Chatbot connecté à votre base de connaissances qui répond aux questions fréquentes 24/7. Réduction de 60-80% du volume de tickets de support.\n\n**Génération de contenu** — Rédaction automatique de fiches produit, descriptions SEO, emails marketing. Supervisé par un humain, produit par l'IA.\n\n**Analyse de documents** — Extraction automatique d'informations depuis des PDF, factures, contrats. OCR + LLM pour transformer des documents non structurés en données exploitables.\n\n**Recommandations personnalisées** — Algorithmes de matching et de recommandation pour les marketplaces, e-commerce et plateformes de contenu.\n\n**Veille automatisée** — Scraping de sites concurrents, réseaux sociaux, sources d'actualités. Résumés IA quotidiens livrés par email ou Slack.\n\n**Automatisation de processus** — Remplacement des tâches manuelles répétitives par des workflows IA : classification d'emails, tri de candidatures, scoring de leads."
+            },
+            {
+              "title": "Technologies et outils",
+              "content": "**Langages** — Python 3.12+, TypeScript, SQL\n\n**Frameworks** — FastAPI, Flask, Next.js, React\n\n**IA & ML** — Claude API (Anthropic), OpenAI API, LangChain, Hugging Face Transformers, scikit-learn\n\n**Data** — Pandas, NumPy, PostgreSQL (Supabase/Neon), Redis\n\n**Scraping** — BeautifulSoup, Scrapy, Selenium, Playwright\n\n**Automatisation** — N8N, scripts cron, GitHub Actions\n\n**Déploiement** — Render, Vercel, Docker, Railway\n\n**Outils de dev** — Claude Code, GitHub Copilot, VS Code, Git"
+            }
+          ],
+          "features": [
+            { "icon": "smart_toy", "title": "Claude & GPT", "description": "Intégration native des meilleurs LLMs" },
+            { "icon": "bolt", "title": "FastAPI", "description": "API Python ultra-rapides" },
+            { "icon": "auto_awesome", "title": "Agents IA", "description": "Agents autonomes avec LangChain" },
+            { "icon": "manage_search", "title": "Scraping", "description": "Extraction de données automatisée" },
+            { "icon": "psychology", "title": "ML appliqué", "description": "Recommandations, classification, NLP" },
+            { "icon": "savings", "title": "Tarifs compétitifs", "description": "2-3x moins cher qu'en Europe" }
+          ],
+          "faq": [
+            {
+              "question": "Combien coûte un projet IA avec Python ?",
+              "answer": "Un chatbot IA simple connecté à votre documentation démarre à 1 500€. Un agent IA complexe avec scraping, analyse et prise de décision coûte entre 3 000€ et 8 000€. Une application IA complète avec interface utilisateur se situe entre 5 000€ et 15 000€."
+            },
+            {
+              "question": "Faut-il de grosses données pour utiliser l'IA ?",
+              "answer": "Non. Avec les modèles pré-entraînés comme Claude et GPT, vous pouvez créer des applications IA puissantes sans données d'entraînement. Le fine-tuning est optionnel et réservé aux cas où vous avez des besoins très spécifiques."
+            },
+            {
+              "question": "L'IA peut-elle remplacer mes employés ?",
+              "answer": "L'IA augmente vos équipes, elle ne les remplace pas. Un chatbot IA gère les questions répétitives pour que votre équipe se concentre sur les problèmes complexes. Un agent de scraping collecte des données en continu pour que votre équipe analyse et décide. L'humain reste au centre de la décision."
+            },
+            {
+              "question": "Quels modèles IA utilisez-vous ?",
+              "answer": "Je travaille principalement avec Claude (Anthropic) et GPT-4 (OpenAI) pour le traitement de texte, la génération de contenu et les agents IA. Pour la vision par ordinateur, j'utilise des modèles open-source via Hugging Face. Le choix du modèle dépend de votre cas d'usage et de votre budget."
+            },
+            {
+              "question": "Les données de mon entreprise sont-elles sécurisées ?",
+              "answer": "Oui. Je configure des architectures où vos données restent sur vos propres serveurs. Les appels aux API IA (Claude, GPT) sont chiffrés en transit. Pour les données sensibles, j'utilise des modèles open-source auto-hébergés qui ne partagent rien avec des tiers."
+            },
+            {
+              "question": "Proposez-vous la maintenance des systèmes IA ?",
+              "answer": "Oui. Les systèmes IA nécessitent un suivi : mise à jour des modèles, ajustement des prompts, monitoring des performances. Je propose des contrats de maintenance mensuels adaptés à la complexité de votre système."
+            }
+          ]
+        }
       }
     ]
   },
