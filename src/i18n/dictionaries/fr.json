@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Développeur Fullstack JavaScript à Madagascar | React, Next.js, Node.js",
-      "description": "Développeur fullstack JavaScript freelance à Antananarivo, Madagascar. React, Next.js, Node.js, Supabase, Python — applications web performantes et automatisation IA. Tarifs 2-3x moins chers qu'en Europe. 20+ projets livrés."
+      "title": "Développeur Fullstack Next.js · Architecte IA & Automatisation",
+      "description": "Développeur fullstack freelance spécialisé Next.js, React et Node.js. J'accompagne startups et scale-ups sur leurs SaaS, MVP et intégrations IA — du prototype à la production. 20+ projets livrés, stack moderne, livraison rapide."
     },
     "about": {
       "title": "Manda Randriambinintsoa | Développeur No-Code & Expert N8N à Madagascar",
@@ -301,8 +301,8 @@
         "slug": "developpeur-react-nextjs-madagascar",
         "color": "sky",
         "isLanding": true,
-        "seoTitle": "Développeur React & Next.js Freelance à Madagascar | Manda",
-        "seoDescription": "Développeur React et Next.js freelance à Antananarivo, Madagascar. Applications web performantes, SSR, TypeScript, Supabase. TJM compétitif, 20+ projets livrés. Devis gratuit.",
+        "seoTitle": "Développeur React / Next.js à Madagascar — #1 Freelance Fullstack",
+        "seoDescription": "Développeur React et Next.js freelance #1 à Antananarivo, Madagascar. Applications web performantes, SSR, TypeScript, Supabase. TJM compétitif pour le marché EU/US, 20+ projets livrés. Devis gratuit sous 24h.",
         "landing": {
           "heroText": "Vous cherchez un développeur React / Next.js fiable et compétitif pour votre application web ? Basé à Antananarivo, je conçois des applications fullstack JavaScript performantes — du MVP au SaaS en production. Plus de 20 projets livrés, un TJM 2 à 3 fois inférieur aux freelances européens, et une expertise confirmée sur l'écosystème React moderne.",
           "heroImage": {
