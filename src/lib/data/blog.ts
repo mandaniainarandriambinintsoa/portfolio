@@ -97,3 +97,20 @@ export async function getAllBlogSlugs(): Promise<string[]> {
   if (error) return [];
   return (data ?? []).map((row) => row.slug);
 }
+
+export async function getAllBlogSitemapEntries(): Promise<
+  { slug: string; updatedAt: string | null; publishedAt: string | null }[]
+> {
+  const supabase = createStaticClient();
+  const { data, error } = await supabase
+    .from("blog_posts")
+    .select("slug, updated_at, published_at")
+    .eq("published", true);
+
+  if (error) return [];
+  return (data ?? []).map((row) => ({
+    slug: row.slug,
+    updatedAt: row.updated_at,
+    publishedAt: row.published_at,
+  }));
+}

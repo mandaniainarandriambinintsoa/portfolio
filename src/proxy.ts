@@ -2,22 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { i18n } from "@/i18n/config";
 import { updateSession } from "@/lib/supabase/middleware";
 
-function getLocale(request: NextRequest): string {
-  const acceptLanguage = request.headers.get("accept-language");
-  if (acceptLanguage) {
-    const preferred = acceptLanguage
-      .split(",")
-      .map((lang) => lang.split(";")[0].trim().substring(0, 2));
-    for (const lang of preferred) {
-      if (i18n.locales.includes(lang as typeof i18n.locales[number])) {
-        return lang;
-      }
-    }
-  }
-  return i18n.defaultLocale;
-}
-
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Skip internal paths
@@ -55,21 +40,17 @@ export async function middleware(request: NextRequest) {
     return supabaseResponse;
   }
 
-  // Public routes — i18n handling
+  // Public routes — EN has explicit /en/ prefix, FR is the default (no prefix).
+  // No Accept-Language redirect: Google Search Central explicitly recommends NOT redirecting
+  // based on Accept-Language (breaks crawling from Googlebot US which sends en-US and would
+  // be redirected to /en/<fr-slug> that doesn't exist → 404). Users switch language via navbar.
   const pathnameHasLocale = i18n.locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
   if (pathnameHasLocale) return;
 
-  const locale = getLocale(request);
-
-  if (locale !== i18n.defaultLocale) {
-    request.nextUrl.pathname = `/${locale}${pathname}`;
-    return NextResponse.redirect(request.nextUrl);
-  }
-
-  // For default locale (FR), rewrite internally to /fr/... without changing URL
+  // Default locale (FR): internal rewrite to /fr/... without changing the visible URL
   request.nextUrl.pathname = `/${i18n.defaultLocale}${pathname}`;
   return NextResponse.rewrite(request.nextUrl);
 }

@@ -2,31 +2,51 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { i18n } from "@/i18n/config";
+
+// FR path → EN path for routes where slugs differ (services, one project).
+// Paths are stored without leading "/", matched against the cleaned pathname.
+const SLUG_MAP_FR_TO_EN: Record<string, string> = {
+  "services/developpement-sites-saas": "services/sites-saas-development",
+  "services/integration-ia": "services/ai-integration",
+  "services/automatisation-n8n": "services/n8n-automation",
+  "services/scaling-saas-workflows": "services/saas-workflow-scaling",
+  "services/developpeur-no-code-madagascar": "services/no-code-developer-madagascar",
+  "services/automatisation-n8n-madagascar": "services/n8n-automation-expert-madagascar",
+  "services/developpeur-low-code-madagascar": "services/low-code-developer-madagascar",
+  "services/developpeur-react-nextjs-madagascar": "services/hire-react-nextjs-developer-madagascar",
+  "services/developpeur-nextjs-supabase-madagascar": "services/nextjs-supabase-developer-madagascar",
+  "services/developpeur-python-ia-madagascar": "services/python-ai-developer-madagascar",
+  "projects/tracking-visiteurs": "projects/visitor-tracking",
+};
+
+const SLUG_MAP_EN_TO_FR: Record<string, string> = Object.fromEntries(
+  Object.entries(SLUG_MAP_FR_TO_EN).map(([fr, en]) => [en, fr]),
+);
+
+function getTargetPath(pathname: string, currentLocale: string): string {
+  // Strip internal /fr/ or /en/ prefix (SSR path uses internal rewrite) to get the
+  // canonical public path. Ensures SSR and client hydration produce the same href.
+  const stripped = pathname.replace(/^\/(?:fr|en)(?=\/|$)/, "") || "/";
+  const key = stripped.replace(/^\//, "");
+
+  if (currentLocale === "fr") {
+    const mapped = SLUG_MAP_FR_TO_EN[key];
+    if (mapped) return `/en/${mapped}`;
+    return stripped === "/" ? "/en" : `/en${stripped}`;
+  }
+  const mapped = SLUG_MAP_EN_TO_FR[key];
+  if (mapped) return `/${mapped}`;
+  return stripped;
+}
 
 export default function LanguageSwitcher({ locale }: { locale: string }) {
   const pathname = usePathname();
-
-  function getTargetPath() {
-    if (locale === "fr") {
-      // Currently FR → switch to EN
-      // If path is "/" or "/fr", go to "/en"
-      // If path is "/something", go to "/en/something"
-      const cleanPath = pathname === "/" ? "" : pathname;
-      return `/en${cleanPath}`;
-    } else {
-      // Currently EN → switch to FR
-      // Remove /en prefix
-      const cleanPath = pathname.replace(/^\/en/, "") || "/";
-      return cleanPath;
-    }
-  }
-
   const targetLocale = locale === "fr" ? "en" : "fr";
 
   return (
     <Link
-      href={getTargetPath()}
+      href={getTargetPath(pathname, locale)}
+      hrefLang={targetLocale}
       className="px-4 py-2 text-xs font-bold tracking-widest uppercase text-slate-400 hover:text-white border border-white/10 rounded-full transition-colors"
       aria-label={`Switch to ${targetLocale === "fr" ? "French" : "English"}`}
     >

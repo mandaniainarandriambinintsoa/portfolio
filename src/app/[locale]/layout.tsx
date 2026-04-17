@@ -4,7 +4,6 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SetHtmlLang from "@/components/layout/SetHtmlLang";
 import PersonJsonLd from "@/components/seo/PersonJsonLd";
 import WebSiteJsonLd from "@/components/seo/WebSiteJsonLd";
 import LocalBusinessJsonLd from "@/components/seo/LocalBusinessJsonLd";
@@ -80,7 +79,6 @@ export default async function LocaleLayout({
 
   return (
     <>
-      <SetHtmlLang locale={locale} />
       <a href="#main-content" className="skip-to-content">
         {locale === "fr" ? "Aller au contenu" : "Skip to content"}
       </a>

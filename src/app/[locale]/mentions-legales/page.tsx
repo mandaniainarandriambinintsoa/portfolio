@@ -26,6 +26,7 @@ export async function generateMetadata({
       languages: {
         fr: `${SITE_URL}/mentions-legales`,
         en: `${SITE_URL}/en/mentions-legales`,
+        "x-default": `${SITE_URL}/mentions-legales`,
       },
     },
   };

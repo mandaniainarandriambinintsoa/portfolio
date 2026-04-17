@@ -46,6 +46,7 @@ export async function generateMetadata({
       languages: {
         fr: `${SITE_URL}/blog/${slug}`,
         en: `${SITE_URL}/en/blog/${slug}`,
+        "x-default": `${SITE_URL}/blog/${slug}`,
       },
     },
     openGraph: {

@@ -74,7 +74,11 @@ export async function generateMetadata({
   const prefix = locale === "fr" ? "" : "/en";
   const otherLocale = locale === "fr" ? "en" : "fr";
   const otherDict = await getDictionary(otherLocale as Locale);
-  const otherService = otherDict.services.items.find((s: any) => s.color === service.color && !!s.isLanding === !!service.isLanding);
+  // Match FR/EN services by array index — both dicts keep items in the same order.
+  // Matching by color+isLanding is unreliable (emerald has two landing pages).
+  const currentIndex = (dict.services.items as any[]).findIndex((s: any) => s.slug === slug);
+  const otherService =
+    currentIndex >= 0 ? (otherDict.services.items as any[])[currentIndex] : undefined;
 
   return {
     title: service.seoTitle || service.title,
@@ -88,6 +92,9 @@ export async function generateMetadata({
         en: locale === "en"
           ? `${SITE_URL}/en/services/${slug}`
           : `${SITE_URL}/en/services/${otherService?.slug || slug}`,
+        "x-default": locale === "fr"
+          ? `${SITE_URL}/services/${slug}`
+          : `${SITE_URL}/services/${otherService?.slug || slug}`,
       },
     },
   };

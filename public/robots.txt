@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://manda-ia.com/sitemap.xml

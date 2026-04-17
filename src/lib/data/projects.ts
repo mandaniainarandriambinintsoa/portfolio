@@ -104,3 +104,31 @@ export async function getAllProjectSlugs(): Promise<string[]> {
   const dict = await getDictionary("fr");
   return (dict.projects.items as ProjectItem[]).map((p) => p.slug);
 }
+
+export async function getAllProjectSitemapEntries(): Promise<
+  { slug: string; updatedAt: string | null; createdAt: string | null }[]
+> {
+  try {
+    const supabase = createStaticClient();
+    const { data, error } = await supabase
+      .from("projects")
+      .select("slug, updated_at, created_at")
+      .eq("published", true);
+
+    if (!error && data && data.length > 0) {
+      return data.map((row) => ({
+        slug: row.slug,
+        updatedAt: row.updated_at,
+        createdAt: row.created_at,
+      }));
+    }
+  } catch {
+    // fallback
+  }
+  const dict = await getDictionary("fr");
+  return (dict.projects.items as ProjectItem[]).map((p) => ({
+    slug: p.slug,
+    updatedAt: null,
+    createdAt: null,
+  }));
+}
