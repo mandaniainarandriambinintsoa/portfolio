@@ -23,7 +23,7 @@ export default function Hero({
   const contactHref = locale === "fr" ? "/contact" : "/en/contact";
 
   return (
-    <section className="max-w-7xl w-full mx-auto text-center pt-16 md:pt-40 pb-8 md:pb-24 px-6 relative">
+    <section className="max-w-7xl w-full mx-auto text-center pt-28 md:pt-40 pb-8 md:pb-24 px-6 relative">
       <h1 className="text-lg sm:text-[22px] md:text-4xl lg:text-[39px] xl:text-5xl font-extrabold tracking-tight leading-[1.1] mb-4 md:mb-12">
         <span className="block bg-gradient-to-b from-white to-slate-300 bg-clip-text text-transparent">{dict.line1}</span>
         {dict.line2 && (
