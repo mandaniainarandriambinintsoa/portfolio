@@ -16,29 +16,70 @@ type CollaborationGuidesProps = {
   items: GuideItem[];
 };
 
-const iconMap: Record<string, string> = {
-  site: "language",
-  saas: "dashboard",
-  n8n: "account_tree",
-};
-
-const accentMap: Record<string, { icon: string; ring: string; glow: string }> = {
+const accentMap: Record<string, { text: string; ring: string; glow: string }> = {
   site: {
-    icon: "text-indigo-400",
+    text: "text-indigo-400",
     ring: "border-indigo-400/30 hover:border-indigo-400/60",
     glow: "from-indigo-500/10",
   },
   saas: {
-    icon: "text-pink-400",
+    text: "text-pink-400",
     ring: "border-pink-400/30 hover:border-pink-400/60",
     glow: "from-pink-500/10",
   },
   n8n: {
-    icon: "text-emerald-400",
+    text: "text-emerald-400",
     ring: "border-emerald-400/30 hover:border-emerald-400/60",
     glow: "from-emerald-500/10",
   },
 };
+
+function PdfIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"
+        fill="#ef4444"
+      />
+      <path d="M14 2v6h6" fill="#fca5a5" />
+      <text
+        x="12"
+        y="17"
+        textAnchor="middle"
+        fontSize="6.5"
+        fontWeight="700"
+        fill="#fff"
+        fontFamily="system-ui, sans-serif"
+      >
+        PDF
+      </text>
+    </svg>
+  );
+}
+
+function DownloadIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+      <polyline points="7 10 12 15 17 10" />
+      <line x1="12" y1="15" x2="12" y2="3" />
+    </svg>
+  );
+}
 
 export default function CollaborationGuides({
   badge,
@@ -69,7 +110,6 @@ export default function CollaborationGuides({
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {items.map((item) => {
           const accent = accentMap[item.key] || accentMap.site;
-          const icon = iconMap[item.key] || "description";
           return (
             <a
               key={item.key}
@@ -82,13 +122,7 @@ export default function CollaborationGuides({
                 aria-hidden="true"
               />
 
-              <div className="relative z-10 flex items-center justify-between mb-6">
-                <span
-                  className={`material-symbols-outlined ${accent.icon} text-4xl`}
-                  aria-hidden="true"
-                >
-                  {icon}
-                </span>
+              <div className="relative z-10 flex items-center justify-end mb-6">
                 <span className="text-xs font-mono tracking-[0.2em] text-white/40">
                   {item.tag}
                 </span>
@@ -102,19 +136,15 @@ export default function CollaborationGuides({
               </p>
 
               <div className="relative z-10 flex items-center justify-between pt-4 border-t border-white/5">
-                <span className="text-xs font-mono tracking-wider text-white/40 uppercase">
-                  PDF · {item.pages} {pagesLabel}
+                <span className="inline-flex items-center gap-2 text-xs font-mono tracking-wider text-white/50 uppercase">
+                  <PdfIcon className="w-5 h-5" />
+                  {item.pages} {pagesLabel}
                 </span>
                 <span
-                  className={`inline-flex items-center gap-1.5 text-sm font-medium ${accent.icon} group-hover:gap-2.5 transition-all`}
+                  className={`inline-flex items-center gap-1.5 text-sm font-medium ${accent.text} group-hover:gap-2.5 transition-all`}
                 >
                   {downloadLabel}
-                  <span
-                    className="material-symbols-outlined text-base"
-                    aria-hidden="true"
-                  >
-                    download
-                  </span>
+                  <DownloadIcon className="w-4 h-4" />
                 </span>
               </div>
             </a>
