@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Collaboration guide — n8n Workflow | Manda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;background:#0a0a12;color:#e8e8f0;line-height:1.55;font-size:11pt}
+  .page{width:210mm;min-height:297mm;padding:18mm 16mm;margin:0 auto;background:linear-gradient(180deg,#0a0a12 0%,#0f1a14 100%);position:relative;overflow:hidden;page-break-after:always;break-after:page}
+  .page:last-child{page-break-after:auto}
+  .page::before{content:"";position:absolute;top:-20%;right:-10%;width:60%;height:60%;background:radial-gradient(circle,rgba(52,211,153,0.15) 0%,transparent 70%);pointer-events:none}
+  .page::after{content:"";position:absolute;bottom:-10%;left:-10%;width:50%;height:50%;background:radial-gradient(circle,rgba(99,102,241,0.08) 0%,transparent 70%);pointer-events:none}
+  .page > *{position:relative;z-index:1}
+  .cover{display:flex;flex-direction:column;justify-content:space-between;min-height:261mm}
+  .cover-badge{display:inline-block;padding:6px 14px;border:1px solid rgba(52,211,153,0.4);border-radius:999px;font-family:"SF Mono",Consolas,monospace;font-size:9pt;letter-spacing:0.2em;text-transform:uppercase;color:#6ee7b7;background:rgba(52,211,153,0.08)}
+  .cover-title{font-size:38pt;font-weight:800;line-height:1.05;margin:28mm 0 10mm;letter-spacing:-0.02em}
+  .cover-title .accent{background:linear-gradient(135deg,#34d399 0%,#818cf8 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .cover-sub{font-size:13pt;color:#a8a8b8;max-width:150mm;line-height:1.5}
+  .cover-meta{margin-top:auto;padding:16px 18px;border:1px solid rgba(255,255,255,0.08);border-radius:12px;background:rgba(255,255,255,0.02);backdrop-filter:blur(8px)}
+  .cover-meta h3{font-size:9pt;letter-spacing:0.25em;text-transform:uppercase;color:#6ee7b7;margin-bottom:10px;font-weight:600}
+  .cover-meta-row{display:flex;flex-wrap:wrap;gap:14px 28px;font-size:10.5pt}
+  .cover-meta-row strong{color:#fff;font-weight:600}
+  .cover-meta-row span{color:#a8a8b8}
+  .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .section-num{font-family:"SF Mono",Consolas,monospace;font-size:10pt;color:#6ee7b7;padding:4px 10px;border:1px solid rgba(52,211,153,0.35);border-radius:6px;background:rgba(52,211,153,0.08)}
+  h1{font-size:22pt;font-weight:700;color:#fff;letter-spacing:-0.01em}
+  h2{font-size:14pt;font-weight:700;color:#fff;margin:18px 0 10px;letter-spacing:-0.01em}
+  h3{font-size:11.5pt;font-weight:600;color:#e8e8f0;margin:12px 0 6px}
+  p{color:#c8c8d0;margin-bottom:10px}
+  p + p{margin-top:0}
+  .intro{color:#a8a8b8;font-size:11pt;margin-bottom:18px;max-width:170mm}
+  .tool-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
+  .tool{border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px 14px;background:rgba(255,255,255,0.02);page-break-inside:avoid;break-inside:avoid}
+  .tool-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+  .tool-name{font-size:12pt;font-weight:700;color:#fff}
+  .tool-tag{font-family:"SF Mono",Consolas,monospace;font-size:8pt;letter-spacing:0.15em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+  .tag-required{background:rgba(244,114,182,0.12);color:#f472b6;border:1px solid rgba(244,114,182,0.3)}
+  .tag-optional{background:rgba(148,163,184,0.12);color:#94a3b8;border:1px solid rgba(148,163,184,0.3)}
+  .tag-recommended{background:rgba(52,211,153,0.12);color:#34d399;border:1px solid rgba(52,211,153,0.3)}
+  .tool-desc{color:#b8b8c4;font-size:10pt;margin-bottom:8px;line-height:1.5}
+  .tool-meta{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:9.5pt;color:#94a3b8}
+  .tool-meta strong{color:#cbd5e1;font-weight:600}
+  .tool-meta a{color:#a5b4fc;text-decoration:none;word-break:break-all}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+  .split-col{border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;background:rgba(255,255,255,0.02)}
+  .split-col.me{border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.05)}
+  .split-col.you{border-color:rgba(52,211,153,0.3);background:rgba(52,211,153,0.05)}
+  .split-col h3{font-size:10pt;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 10px}
+  .split-col.me h3{color:#a5b4fc}
+  .split-col.you h3{color:#6ee7b7}
+  .split-col ul{list-style:none;padding:0}
+  .split-col li{position:relative;padding:4px 0 4px 18px;font-size:10pt;color:#d0d0d8}
+  .split-col li::before{content:"";position:absolute;left:2px;top:11px;width:8px;height:8px;border-radius:50%}
+  .split-col.me li::before{background:#818cf8}
+  .split-col.you li::before{background:#34d399}
+  .steps{counter-reset:step;margin-top:8px}
+  .step{position:relative;padding:10px 12px 10px 44px;margin-bottom:8px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;background:rgba(255,255,255,0.02);page-break-inside:avoid;break-inside:avoid}
+  .step::before{counter-increment:step;content:counter(step);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#34d399,#818cf8);color:#0a0a12;font-weight:700;font-size:10pt;display:flex;align-items:center;justify-content:center}
+  .step strong{color:#fff;font-weight:600}
+  .step p{font-size:10pt;color:#c8c8d0;margin:0}
+  .page-footer{position:absolute;bottom:10mm;left:16mm;right:16mm;display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid rgba(255,255,255,0.06);font-size:8.5pt;color:#6b6b80;font-family:"SF Mono",Consolas,monospace;letter-spacing:0.1em}
+  .page-footer a{color:#a5b4fc;text-decoration:none}
+  .note{margin-top:10px;padding:10px 14px;border-left:3px solid #34d399;background:rgba(52,211,153,0.06);border-radius:0 8px 8px 0;font-size:10pt;color:#c8c8d0}
+  .note strong{color:#6ee7b7}
+  .option-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+  .option{border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:16px;background:rgba(255,255,255,0.02);page-break-inside:avoid;break-inside:avoid}
+  .option.recommended{border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.06)}
+  .option-badge{font-family:"SF Mono",Consolas,monospace;font-size:8pt;letter-spacing:0.2em;text-transform:uppercase;color:#6ee7b7;margin-bottom:8px}
+  .option.self .option-badge{color:#94a3b8}
+  .option h3{font-size:13pt;color:#fff;margin-bottom:6px}
+  .option p{font-size:10pt;color:#c8c8d0;margin:0 0 10px}
+  .option ul{list-style:none;padding:0;margin-top:6px}
+  .option li{font-size:10pt;color:#d0d0d8;padding:3px 0 3px 16px;position:relative}
+  .option li.pro::before{content:"+";position:absolute;left:0;color:#34d399;font-weight:700}
+  .option li.con::before{content:"−";position:absolute;left:0;color:#f472b6;font-weight:700}
+  @page{size:A4;margin:0}
+  @media print{body{background:#0a0a12}.page{margin:0;box-shadow:none}}
+</style>
+</head>
+<body>
+
+<div class="page cover">
+  <div>
+    <span class="cover-badge">Collaboration guide · 03</span>
+    <h1 class="cover-title">Your <span class="accent">n8n workflows</span><br>white-labeled</h1>
+    <p class="cover-sub">Everything you need to prepare so your automations run reliably and under your full control — n8n instance, API keys, webhooks, and data storage.</p>
+  </div>
+  <div class="cover-meta">
+    <h3>Your contact</h3>
+    <div class="cover-meta-row"><div><strong>Manda</strong> <span>· AI & Automation Architect</span></div></div>
+    <div class="cover-meta-row" style="margin-top:8px">
+      <div><span>Email</span> <strong>mandaniaina.randriambinintsoa@gmail.com</strong></div>
+      <div><span>WhatsApp</span> <strong>+261 32 99 20 699</strong></div>
+      <div><span>Site</span> <strong>manda-ia.com</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="section-head"><span class="section-num">01</span><h1>What we'll automate</h1></div>
+  <p class="intro">Workflows that replace hours of manual work: email parsing, data routing, lead enrichment, multi-channel publishing, tool sync, smart notifications, AI agents.</p>
+
+  <h2>Concrete examples</h2>
+  <div class="tool-grid">
+    <div class="tool"><div class="tool-head"><span class="tool-name">Inbound lead → enriched CRM + Slack alert</span></div><p class="tool-desc">Form submitted → enrichment via Apollo/Hunter → CRM record creation → scoring → real-time sales alert.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Customer support AI agent</span></div><p class="tool-desc">Incoming email → AI classification → drafted reply → human escalation if complex → archiving with tags.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Multi-channel publishing</span></div><p class="tool-desc">1 piece of content in Notion → platform-specific formatting → publish to LinkedIn / X / Facebook / blog with optimized images per platform.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Automated reporting</span></div><p class="tool-desc">Data aggregation (Stripe + GA4 + HubSpot) → weekly PDF report → sent to stakeholders.</p></div>
+  </div>
+
+  <div class="note"><strong>White label:</strong> the n8n instance, the database, the API keys of connected services — everything is in your name. I hold nothing in mine.</div>
+
+  <div class="page-footer"><span>N8N GUIDE · 01</span><span><a href="https://manda-ia.com">manda-ia.com</a></span><span>PAGE 02</span></div>
+</div>
+
+<div class="page">
+  <div class="section-head"><span class="section-num">02</span><h1>Where to host n8n</h1></div>
+  <p class="intro">Two options. I strongly recommend the first unless you have specific constraints.</p>
+
+  <div class="option-grid">
+    <div class="option recommended">
+      <div class="option-badge">Recommended</div>
+      <h3>n8n Cloud</h3>
+      <p>Official hosting by the n8n team. You pay, you focus on the business.</p>
+      <ul>
+        <li class="pro">Zero maintenance (updates, security, automatic backups)</li>
+        <li class="pro">SSL, uptime managed by n8n, official support</li>
+        <li class="pro">No server to monitor or patch</li>
+        <li class="pro">Automatic scaling under load</li>
+        <li class="pro">Single, predictable billing</li>
+        <li class="con">Starter plan: ~$20/month (2,500 executions)</li>
+        <li class="con">Vendor dependency</li>
+      </ul>
+    </div>
+
+    <div class="option self">
+      <div class="option-badge">Advanced</div>
+      <h3>Self-hosted (Render, VPS, Hetzner)</h3>
+      <p>You host the n8n instance on your own infrastructure.</p>
+      <ul>
+        <li class="pro">Cheaper baseline (~$7–15/month on Render or VPS)</li>
+        <li class="pro">Full control, no execution limits</li>
+        <li class="pro">Sensitive data 100% on your infra</li>
+        <li class="con">Maintenance on you (monthly updates)</li>
+        <li class="con">SSL, backups, monitoring to configure yourself</li>
+        <li class="con">A crash = workflows down until intervention</li>
+        <li class="con">Long-term technical debt risk</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note"><strong>My advice:</strong> start with n8n Cloud. The $10–15/month price difference is absorbed the first time an incident is avoided. Move to self-hosted only if you exceed Cloud quotas or have strict regulatory constraints (mandatory local hosting).</div>
+
+  <div class="page-footer"><span>N8N GUIDE · 02</span><span><a href="https://manda-ia.com">manda-ia.com</a></span><span>PAGE 03</span></div>
+</div>
+
+<div class="page">
+  <div class="section-head"><span class="section-num">03</span><h1>Accounts & services to prepare</h1></div>
+  <p class="intro">Depending on your workflows, some accounts are mandatory, others optional. I'll tell you exactly which ones after analyzing your needs.</p>
+
+  <div class="tool-grid">
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">n8n Cloud (or host)</span><span class="tool-tag tag-required">Required</span></div><p class="tool-desc">Instance running your workflows. I recommend n8n Cloud (see p. 02).</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://n8n.io/cloud">n8n.io/cloud</a></span><span><strong>Plan:</strong> Starter $20/month (2,500 executions)</span><span><strong>My role:</strong> Member Editor</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Database for storage</span><span class="tool-tag tag-recommended">Often required</span></div><p class="tool-desc">To store data your workflows produce (leads, logs, intermediate states). Options: Supabase, Airtable, Google Sheets, Notion. I help you choose based on the case.</p><div class="tool-meta"><span><strong>Supabase:</strong> <a href="https://supabase.com">supabase.com</a> (DB + API)</span><span><strong>Airtable:</strong> <a href="https://airtable.com">airtable.com</a> (spreadsheet UI)</span><span><strong>Plan:</strong> Free to start</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Email workspace</span><span class="tool-tag tag-recommended">Depending on use</span></div><p class="tool-desc">If your workflows send or read emails: <strong>Google Workspace</strong>, <strong>Microsoft 365</strong>, <strong>Zoho Mail</strong>, or <strong>Resend</strong> (transactional only). I use whichever system you already have — no migration needed.</p><div class="tool-meta"><span><strong>Gmail:</strong> OAuth in n8n</span><span><strong>Outlook/Office 365:</strong> OAuth in n8n</span><span><strong>Resend:</strong> API key</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">API keys of integrated tools</span><span class="tool-tag tag-required">Required</span></div><p class="tool-desc">For every tool your workflows will control, you generate an API key from <em>your</em> account. I provide the exact procedure for each.</p><div class="tool-meta"><span><strong>Examples:</strong> Stripe, Slack, Notion, Airtable, HubSpot, Calendly, Typeform, Google Sheets, OpenAI, Anthropic, Telegram, WhatsApp Business, etc.</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Webhooks of source tools</span><span class="tool-tag tag-recommended">Depending on triggers</span></div><p class="tool-desc">A webhook = URL provided by n8n, pasted into the config of the tool that triggers the workflow (e.g. new Typeform lead, new Stripe payment, new Slack message). The source service automatically pushes data to n8n when the event happens.</p><div class="tool-meta"><span><strong>I provide:</strong> the n8n webhook URL</span><span><strong>You configure:</strong> the destination inside your source tool</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">OpenAI / Anthropic</span><span class="tool-tag tag-optional">Optional (if AI)</span></div><p class="tool-desc">If your workflows use AI (classification, writing, extraction, RAG). Account to create, API key to generate, monthly cap to set to avoid overspending.</p><div class="tool-meta"><span><strong>OpenAI:</strong> <a href="https://platform.openai.com">platform.openai.com</a></span><span><strong>Anthropic:</strong> <a href="https://console.anthropic.com">console.anthropic.com</a></span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">cron-job.org</span><span class="tool-tag tag-optional">Optional (if Supabase Free DB)</span></div><p class="tool-desc">If your workflows use a Supabase Free DB, it pauses after 7 days of inactivity. A free cron pings the health URL every 3–5 days to keep it active. Not needed with Supabase Pro or another DB.</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://cron-job.org">cron-job.org</a></span><span><strong>Plan:</strong> Free</span></div></div>
+
+  </div>
+
+  <div class="page-footer"><span>N8N GUIDE · 03</span><span><a href="https://manda-ia.com">manda-ia.com</a></span><span>PAGE 04</span></div>
+</div>
+
+<div class="page">
+  <div class="section-head"><span class="section-num">04</span><h1>Who does what</h1></div>
+  <p class="intro">Clear split. You provide access and business logic; I design and implement the workflows.</p>
+
+  <div class="split">
+    <div class="split-col me">
+      <h3>What I do</h3>
+      <ul>
+        <li>Needs analysis & workflow mapping</li>
+        <li>Architecture choices (sync/async, queues, retry)</li>
+        <li>Building workflows in n8n</li>
+        <li>Integrating your tools (OAuth, API keys)</li>
+        <li>Error handling, logs, notifications</li>
+        <li>Testing with real data before go-live</li>
+        <li>Per-workflow documentation (input, output, logic)</li>
+        <li>Training for reading / basic editing</li>
+      </ul>
+    </div>
+    <div class="split-col you">
+      <h3>What you do</h3>
+      <ul>
+        <li>Create the n8n Cloud account (or host)</li>
+        <li>Create the required tool accounts</li>
+        <li>Generate API keys from your accounts</li>
+        <li>Configure webhooks on the source tool side</li>
+        <li>Provide business rules (e.g. "if lead &gt; 50 pts → alert Sophie")</li>
+        <li>Validate workflows with real use cases</li>
+        <li>Handle n8n + third-party billing</li>
+        <li>Decide on future iterations</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 style="margin-top:24px">API key security</h2>
+  <div class="tool-grid">
+    <div class="tool"><p class="tool-desc"><strong>Principle:</strong> the API keys you generate give me access to <em>your</em> accounts. Use keys with the minimum permissions needed, and revoke them if you remove my access.</p></div>
+    <div class="tool"><p class="tool-desc"><strong>Storage:</strong> all keys are stored encrypted inside n8n, never in code or Git. At delivery, you keep full control of credentials.</p></div>
+    <div class="tool"><p class="tool-desc"><strong>Audit:</strong> every service (Stripe, Google, etc.) lets you view active access and revoke it anytime from their console.</p></div>
+  </div>
+
+  <div class="page-footer"><span>N8N GUIDE · 04</span><span><a href="https://manda-ia.com">manda-ia.com</a></span><span>PAGE 05</span></div>
+</div>
+
+<div class="page">
+  <div class="section-head"><span class="section-num">05</span><h1>Delivery & costs</h1></div>
+  <p class="intro">Handover flow and typical recurring costs.</p>
+
+  <h2>Delivery flow</h2>
+  <div class="steps">
+    <div class="step"><p><strong>Real-world testing</strong> — each workflow runs 7 to 14 days with your real data to catch edge cases.</p></div>
+    <div class="step"><p><strong>Documentation</strong> — a PDF per workflow: diagram, inputs/outputs, business rules, debug procedure, service contacts.</p></div>
+    <div class="step"><p><strong>Training (1 h)</strong> — video call to learn how to read executions, re-run a workflow, change a threshold or add a recipient.</p></div>
+    <div class="step"><p><strong>Ownership transfer</strong> — you already own the n8n instance and tool accounts. I remove my access or keep it for maintenance (your call).</p></div>
+    <div class="step"><p><strong>Warranty</strong> — 30 days of bug fixes included after delivery for anything within the agreed scope.</p></div>
+    <div class="step"><p><strong>Maintenance (optional)</strong> — monthly retainer to monitor executions, fix bugs from third-party API changes, add small iterations.</p></div>
+  </div>
+
+  <h2 style="margin-top:20px">Typical recurring costs</h2>
+  <div class="tool-grid">
+    <div class="tool"><div class="tool-head"><span class="tool-name">n8n Cloud Starter</span><span class="tool-tag tag-required">~$20/month</span></div><p class="tool-desc">2,500 executions / month. Smooth scaling if your usage grows.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Database</span><span class="tool-tag tag-recommended">$0–25/month</span></div><p class="tool-desc">Supabase Free to start, Pro ($25/month) for serious production.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Tool API keys</span><span class="tool-tag tag-recommended">Variable</span></div><p class="tool-desc">Most are free. Some have quotas (e.g. OpenAI pay-as-you-go, WhatsApp Business per message).</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">AI (OpenAI / Anthropic)</span><span class="tool-tag tag-optional">Pay-as-you-go</span></div><p class="tool-desc">Usage-based billing. Example: GPT-4o-mini ≈ $0.15 / 1M input tokens. Set a monthly cap in the console.</p></div>
+  </div>
+
+  <div class="note"><strong>Typical estimate:</strong> $25–60/month for a pack of 3 to 5 active workflows, depending on volume and AI usage.</div>
+
+  <div class="note"><strong>Questions?</strong> WhatsApp (+261 32 99 20 699) or email. Reply within 24 h on weekdays.</div>
+
+  <div class="page-footer"><span>N8N GUIDE · 05</span><span><a href="https://manda-ia.com">manda-ia.com</a></span><span>END</span></div>
+</div>
+
+</body>
+</html>

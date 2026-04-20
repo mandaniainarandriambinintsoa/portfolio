@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Collaboration guide — SaaS | Manda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;background:#0a0a12;color:#e8e8f0;line-height:1.55;font-size:11pt}
+  .page{width:210mm;min-height:297mm;padding:18mm 16mm;margin:0 auto;background:linear-gradient(180deg,#0a0a12 0%,#0f0f1a 100%);position:relative;overflow:hidden;page-break-after:always;break-after:page}
+  .page:last-child{page-break-after:auto}
+  .page::before{content:"";position:absolute;top:-20%;right:-10%;width:60%;height:60%;background:radial-gradient(circle,rgba(99,102,241,0.15) 0%,transparent 70%);pointer-events:none}
+  .page::after{content:"";position:absolute;bottom:-10%;left:-10%;width:50%;height:50%;background:radial-gradient(circle,rgba(244,114,182,0.08) 0%,transparent 70%);pointer-events:none}
+  .page > *{position:relative;z-index:1}
+  .cover{display:flex;flex-direction:column;justify-content:space-between;min-height:261mm}
+  .cover-badge{display:inline-block;padding:6px 14px;border:1px solid rgba(244,114,182,0.4);border-radius:999px;font-family:"SF Mono",Consolas,monospace;font-size:9pt;letter-spacing:0.2em;text-transform:uppercase;color:#f9a8d4;background:rgba(244,114,182,0.08)}
+  .cover-title{font-size:38pt;font-weight:800;line-height:1.05;margin:28mm 0 10mm;letter-spacing:-0.02em}
+  .cover-title .accent{background:linear-gradient(135deg,#f472b6 0%,#818cf8 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .cover-sub{font-size:13pt;color:#a8a8b8;max-width:150mm;line-height:1.5}
+  .cover-meta{margin-top:auto;padding:16px 18px;border:1px solid rgba(255,255,255,0.08);border-radius:12px;background:rgba(255,255,255,0.02);backdrop-filter:blur(8px)}
+  .cover-meta h3{font-size:9pt;letter-spacing:0.25em;text-transform:uppercase;color:#f9a8d4;margin-bottom:10px;font-weight:600}
+  .cover-meta-row{display:flex;flex-wrap:wrap;gap:14px 28px;font-size:10.5pt}
+  .cover-meta-row strong{color:#fff;font-weight:600}
+  .cover-meta-row span{color:#a8a8b8}
+  .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08)}
+  .section-num{font-family:"SF Mono",Consolas,monospace;font-size:10pt;color:#f9a8d4;padding:4px 10px;border:1px solid rgba(244,114,182,0.35);border-radius:6px;background:rgba(244,114,182,0.08)}
+  h1{font-size:22pt;font-weight:700;color:#fff;letter-spacing:-0.01em}
+  h2{font-size:14pt;font-weight:700;color:#fff;margin:18px 0 10px;letter-spacing:-0.01em}
+  h3{font-size:11.5pt;font-weight:600;color:#e8e8f0;margin:12px 0 6px}
+  p{color:#c8c8d0;margin-bottom:10px}
+  p + p{margin-top:0}
+  .intro{color:#a8a8b8;font-size:11pt;margin-bottom:18px;max-width:170mm}
+  .tool-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
+  .tool{border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px 14px;background:rgba(255,255,255,0.02);page-break-inside:avoid;break-inside:avoid}
+  .tool-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+  .tool-name{font-size:12pt;font-weight:700;color:#fff}
+  .tool-tag{font-family:"SF Mono",Consolas,monospace;font-size:8pt;letter-spacing:0.15em;text-transform:uppercase;padding:3px 8px;border-radius:4px}
+  .tag-required{background:rgba(244,114,182,0.12);color:#f472b6;border:1px solid rgba(244,114,182,0.3)}
+  .tag-optional{background:rgba(148,163,184,0.12);color:#94a3b8;border:1px solid rgba(148,163,184,0.3)}
+  .tag-recommended{background:rgba(52,211,153,0.12);color:#34d399;border:1px solid rgba(52,211,153,0.3)}
+  .tool-desc{color:#b8b8c4;font-size:10pt;margin-bottom:8px;line-height:1.5}
+  .tool-meta{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:9.5pt;color:#94a3b8}
+  .tool-meta strong{color:#cbd5e1;font-weight:600}
+  .tool-meta a{color:#a5b4fc;text-decoration:none;word-break:break-all}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+  .split-col{border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;background:rgba(255,255,255,0.02)}
+  .split-col.me{border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.05)}
+  .split-col.you{border-color:rgba(52,211,153,0.3);background:rgba(52,211,153,0.05)}
+  .split-col h3{font-size:10pt;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 10px}
+  .split-col.me h3{color:#a5b4fc}
+  .split-col.you h3{color:#6ee7b7}
+  .split-col ul{list-style:none;padding:0}
+  .split-col li{position:relative;padding:4px 0 4px 18px;font-size:10pt;color:#d0d0d8}
+  .split-col li::before{content:"";position:absolute;left:2px;top:11px;width:8px;height:8px;border-radius:50%}
+  .split-col.me li::before{background:#818cf8}
+  .split-col.you li::before{background:#34d399}
+  .steps{counter-reset:step;margin-top:8px}
+  .step{position:relative;padding:10px 12px 10px 44px;margin-bottom:8px;border:1px solid rgba(255,255,255,0.08);border-radius:8px;background:rgba(255,255,255,0.02);page-break-inside:avoid;break-inside:avoid}
+  .step::before{counter-increment:step;content:counter(step);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#f472b6,#818cf8);color:#0a0a12;font-weight:700;font-size:10pt;display:flex;align-items:center;justify-content:center}
+  .step strong{color:#fff;font-weight:600}
+  .step p{font-size:10pt;color:#c8c8d0;margin:0}
+  .page-footer{position:absolute;bottom:10mm;left:16mm;right:16mm;display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid rgba(255,255,255,0.06);font-size:8.5pt;color:#6b6b80;font-family:"SF Mono",Consolas,monospace;letter-spacing:0.1em}
+  .page-footer a{color:#a5b4fc;text-decoration:none}
+  .note{margin-top:10px;padding:10px 14px;border-left:3px solid #f472b6;background:rgba(244,114,182,0.06);border-radius:0 8px 8px 0;font-size:10pt;color:#c8c8d0}
+  .note strong{color:#f9a8d4}
+  @page{size:A4;margin:0}
+  @media print{body{background:#0a0a12}.page{margin:0;box-shadow:none}}
+</style>
+</head>
+<body>
+
+<div class="page cover">
+  <div>
+    <span class="cover-badge">Collaboration guide · 02</span>
+    <h1 class="cover-title">Your <span class="accent">SaaS</span><br>white-labeled</h1>
+    <p class="cover-sub">Everything you need to prepare before we start — accounts, third-party services, APIs, and responsibility split. At delivery, you own 100% of your product and its revenue.</p>
+  </div>
+  <div class="cover-meta">
+    <h3>Your contact</h3>
+    <div class="cover-meta-row"><div><strong>Manda</strong> <span>· Fullstack Developer & AI Architect</span></div></div>
+    <div class="cover-meta-row" style="margin-top:8px">
+      <div><span>Email</span> <strong>mandaniaina.randriambinintsoa@gmail.com</strong></div>
+      <div><span>WhatsApp</span> <strong>+261 32 99 20 699</strong></div>
+      <div><span>Site</span> <strong>manda-ia.com</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="section-head"><span class="section-num">01</span><h1>What we'll build together</h1></div>
+  <p class="intro">A complete SaaS application — authentication, database, payments, user dashboard and monitoring — ready to accept paying customers.</p>
+
+  <h2>What's included</h2>
+  <div class="tool-grid">
+    <div class="tool"><div class="tool-head"><span class="tool-name">Authentication & user accounts</span></div><p class="tool-desc">Sign-up, sign-in, password reset, email verification, Google/GitHub OAuth, secure session management.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Database & API</span></div><p class="tool-desc">Schema tailored to your business, Row-Level Security (each user only sees their data), REST or GraphQL API.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Payments & subscriptions</span></div><p class="tool-desc">Stripe integration: recurring subscriptions, coupons, free trials, customer portal (upgrade/downgrade/cancel).</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Production monitoring</span></div><p class="tool-desc">Real-time error alerts, product analytics (funnels, feature usage), centralized server logs.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Admin panel</span></div><p class="tool-desc">Interface so you can manage users, view payments, export data, moderate content.</p></div>
+  </div>
+
+  <div class="note"><strong>White label:</strong> every account is created by you and remains your property. I hold nothing in my name — not the app, not the revenue, not the customer data.</div>
+
+  <div class="page-footer"><span>SAAS GUIDE · 01</span><span><a href="https://manda-ia.com">manda-ia.com</a></span><span>PAGE 02</span></div>
+</div>
+
+<div class="page">
+  <div class="section-head"><span class="section-num">02</span><h1>Essential accounts (by you)</h1></div>
+  <p class="intro">The technical foundation of your SaaS. All created in your name. I guide the configuration, but you keep ownership.</p>
+
+  <div class="tool-grid">
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">GitHub</span><span class="tool-tag tag-required">Required</span></div><p class="tool-desc">Source code hosting, version history, CI/CD. Your account = you own the code.</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://github.com/signup">github.com/signup</a></span><span><strong>Plan:</strong> Free or Pro ($4/month for unlimited private repos)</span><span><strong>My role:</strong> Collaborator (Write)</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Vercel</span><span class="tool-tag tag-required">Required</span></div><p class="tool-desc">App hosting. Automatic CI/CD, SSL, global CDN, branch previews. Pro often needed for a growing SaaS.</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://vercel.com/signup">vercel.com/signup</a></span><span><strong>Plan:</strong> Hobby free at start, Pro $20/month/user once traffic grows</span><span><strong>My role:</strong> Member</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Domain name</span><span class="tool-tag tag-required">Required</span></div><p class="tool-desc">Your web address. Buy it in your name — it's your most valuable asset.</p><div class="tool-meta"><span><strong>Recommended registrars:</strong> <a href="https://porkbun.com">porkbun.com</a>, <a href="https://namecheap.com">namecheap.com</a></span><span><strong>Budget:</strong> $10–15/year</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Supabase</span><span class="tool-tag tag-required">Required</span></div><p class="tool-desc">PostgreSQL database + authentication + file storage + Row-Level Security. Modern, open-source, hosted alternative to Firebase.</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://supabase.com">supabase.com</a></span><span><strong>Plan:</strong> Free to start (see note below), Pro $25/month for prod</span><span><strong>My role:</strong> Member (Developer)</span></div></div>
+
+    <div class="note"><strong>Important about Supabase Free plan:</strong> the project is <em>automatically paused after 7 days of inactivity</em>. Fine for dev, but in production you either upgrade to Pro ($25/month), or set up a cron job pinging your app every 3 to 5 days (see <strong>cron-job.org</strong> below).</div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Stripe</span><span class="tool-tag tag-required">Required if payments</span></div><p class="tool-desc">Payment processing, subscriptions, invoices, refunds. Revenue goes directly to your bank account.</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://stripe.com">stripe.com</a></span><span><strong>Plan:</strong> Free (2.9% + $0.30 per successful charge)</span><span><strong>My role:</strong> Developer (test access + webhooks, no payouts)</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Resend</span><span class="tool-tag tag-required">Required</span></div><p class="tool-desc">Transactional email: sign-up confirmation, password reset, invoices, notifications. Essential for a SaaS.</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://resend.com">resend.com</a></span><span><strong>Plan:</strong> Free (3,000 emails/month), Pro $20/month (50,000 emails)</span></div></div>
+
+  </div>
+
+  <div class="page-footer"><span>SAAS GUIDE · 02</span><span><a href="https://manda-ia.com">manda-ia.com</a></span><span>PAGE 03</span></div>
+</div>
+
+<div class="page">
+  <div class="section-head"><span class="section-num">03</span><h1>Monitoring & product analytics</h1></div>
+  <p class="intro">To run your SaaS seriously, you need to <em>see</em> what's happening: bugs in prod, user journeys, which features work.</p>
+
+  <div class="tool-grid">
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Sentry</span><span class="tool-tag tag-recommended">Recommended</span></div><p class="tool-desc"><strong>What it does:</strong> when a user hits a bug in production, Sentry captures the crash with full stacktrace, context (browser, URL, actions), and alerts me. Without Sentry, you only discover bugs through customer complaints — too late.</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://sentry.io">sentry.io</a></span><span><strong>Plan:</strong> Free (5,000 errors/month) is enough to start</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">PostHog</span><span class="tool-tag tag-recommended">Recommended</span></div><p class="tool-desc"><strong>What it does:</strong> <em>product</em> analytics (not just marketing). Funnels (where users drop off in onboarding), feature flags (enable a feature for 10% of users first), session replay (watch what a user did before a bug), A/B tests. GA4 measures traffic; PostHog measures behavior.</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://posthog.com">posthog.com</a></span><span><strong>Plan:</strong> Free (1M events/month), paid above</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Google Analytics 4</span><span class="tool-tag tag-recommended">Recommended</span></div><p class="tool-desc">Marketing traffic: acquisition sources, page views, conversions. Complementary to PostHog (which covers product).</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://analytics.google.com">analytics.google.com</a></span><span><strong>Plan:</strong> Free</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">Google Search Console</span><span class="tool-tag tag-recommended">Recommended</span></div><p class="tool-desc">For the public SaaS landing page. Indexing and ranking monitoring.</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://search.google.com/search-console">search.google.com/search-console</a></span><span><strong>Plan:</strong> Free</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">cron-job.org</span><span class="tool-tag tag-optional">Optional (if Supabase Free)</span></div><p class="tool-desc"><strong>What it does:</strong> Supabase pauses Free projects after 7 days of inactivity. This service freely pings a health URL of your SaaS every 3–5 days to keep the DB active. Not needed if you move to Supabase Pro.</p><div class="tool-meta"><span><strong>Link:</strong> <a href="https://cron-job.org">cron-job.org</a></span><span><strong>Plan:</strong> Free</span><span><strong>Endpoint:</strong> I create <code>/api/health</code> pointing at the DB</span></div></div>
+
+    <div class="tool"><div class="tool-head"><span class="tool-name">OpenAI / Anthropic</span><span class="tool-tag tag-optional">Optional (if AI integration)</span></div><p class="tool-desc">For SaaS with AI features: chatbots, summarization, content generation, semantic search. You pay usage-based.</p><div class="tool-meta"><span><strong>OpenAI:</strong> <a href="https://platform.openai.com">platform.openai.com</a></span><span><strong>Anthropic:</strong> <a href="https://console.anthropic.com">console.anthropic.com</a></span><span><strong>Plan:</strong> Pay-as-you-go + monthly cap to set</span></div></div>
+
+  </div>
+
+  <div class="page-footer"><span>SAAS GUIDE · 03</span><span><a href="https://manda-ia.com">manda-ia.com</a></span><span>PAGE 04</span></div>
+</div>
+
+<div class="page">
+  <div class="section-head"><span class="section-num">04</span><h1>Who does what</h1></div>
+  <p class="intro">Clear split. You own the business decisions; I deliver the technical build.</p>
+
+  <div class="split">
+    <div class="split-col me">
+      <h3>What I do</h3>
+      <ul>
+        <li>Technical architecture & data schema</li>
+        <li>Front-end, back-end, API development</li>
+        <li>Stripe integration (plans, webhooks, customer portal)</li>
+        <li>Supabase setup (auth, RLS, policies)</li>
+        <li>Sentry + PostHog + GA4 installation</li>
+        <li>Admin panel for your daily operations</li>
+        <li>Technical docs & environments (dev/prod)</li>
+        <li>Testing, deployment, go-live</li>
+      </ul>
+    </div>
+    <div class="split-col you">
+      <h3>What you do</h3>
+      <ul>
+        <li>Creating all listed accounts</li>
+        <li>Validating your business on Stripe (KYC)</li>
+        <li>Buying the domain in your name</li>
+        <li>Providing content (texts, logo, terms of service)</li>
+        <li>Defining pricing plans (free/pro/enterprise)</li>
+        <li>Adding me as collaborator with the shown roles</li>
+        <li>Paying recurring services (see p. 05)</li>
+        <li>Product decisions & feature prioritization</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 style="margin-top:24px">Legal content to prepare</h2>
+  <div class="tool-grid">
+    <div class="tool"><p class="tool-desc"><strong>Terms of Service (ToS)</strong> — essential. A lawyer can draft them, or a generator like Termly/iubenda.</p></div>
+    <div class="tool"><p class="tool-desc"><strong>Privacy policy (GDPR)</strong> — mandatory from the first European user.</p></div>
+    <div class="tool"><p class="tool-desc"><strong>Refund policy</strong> — clear and displayed before payment, compliant with local regulations.</p></div>
+    <div class="tool"><p class="tool-desc"><strong>DPA (Data Processing Agreement)</strong> — if you handle personal data on behalf of B2B customers.</p></div>
+  </div>
+
+  <div class="page-footer"><span>SAAS GUIDE · 04</span><span><a href="https://manda-ia.com">manda-ia.com</a></span><span>PAGE 05</span></div>
+</div>
+
+<div class="page">
+  <div class="section-head"><span class="section-num">05</span><h1>Costs & white-label handover</h1></div>
+  <p class="intro">Anticipate recurring costs and the handover flow.</p>
+
+  <h2>Typical recurring costs (early stage)</h2>
+  <div class="tool-grid">
+    <div class="tool"><div class="tool-head"><span class="tool-name">Domain name</span><span class="tool-tag tag-required">~$12/year</span></div></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Vercel</span><span class="tool-tag tag-recommended">$0–20/month</span></div><p class="tool-desc">Hobby free at start, Pro as soon as you have traffic or multiple collaborators.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Supabase</span><span class="tool-tag tag-required">$0–25/month</span></div><p class="tool-desc">Free with cron keep-alive for testing, Pro from serious production.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Stripe</span><span class="tool-tag tag-recommended">2.9% + $0.30/tx</span></div><p class="tool-desc">Only on successful charges, no fixed subscription.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Resend</span><span class="tool-tag tag-recommended">$0–20/month</span></div></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">Sentry</span><span class="tool-tag tag-recommended">$0–26/month</span></div><p class="tool-desc">Free up to 5k errors/month. Team $26/month if you need more.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">PostHog</span><span class="tool-tag tag-recommended">$0+</span></div><p class="tool-desc">Free up to 1M events/month.</p></div>
+    <div class="tool"><div class="tool-head"><span class="tool-name">OpenAI / Anthropic</span><span class="tool-tag tag-optional">Pay-as-you-go</span></div><p class="tool-desc">If AI integration. Set a monthly cap in the console.</p></div>
+  </div>
+
+  <div class="note"><strong>Typical early-stage estimate:</strong> $30–50/month while traffic is moderate and DB light. Costs scale with your usage — the scale-to-zero model.</div>
+
+  <h2 style="margin-top:20px">Delivery flow</h2>
+  <div class="steps">
+    <div class="step"><p><strong>Load & security tests</strong> — auth audit, injections, RLS permissions, XSS/CSRF protection, API limits.</p></div>
+    <div class="step"><p><strong>Production switch</strong> — Stripe live keys, Supabase Pro if needed, monitoring enabled, alerts configured.</p></div>
+    <div class="step"><p><strong>Full documentation</strong> — PDF with DB schema, webhooks list, environment variables, emergency procedures.</p></div>
+    <div class="step"><p><strong>Admin training (1 h)</strong> — video call to show you how to manage users, payments, Supabase, Sentry/PostHog dashboards.</p></div>
+    <div class="step"><p><strong>Warranty</strong> — 30 days of bug fixes included after delivery for anything within the agreed scope.</p></div>
+    <div class="step"><p><strong>Maintenance (optional)</strong> — monthly retainer for monitoring, security updates, small changes, tier-2 user support.</p></div>
+  </div>
+
+  <div class="note"><strong>Questions?</strong> WhatsApp (+261 32 99 20 699) or email. Reply within 24 h on weekdays.</div>
+
+  <div class="page-footer"><span>SAAS GUIDE · 05</span><span><a href="https://manda-ia.com">manda-ia.com</a></span><span>END</span></div>
+</div>
+
+</body>
+</html>

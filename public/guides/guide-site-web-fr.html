@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Guide collaboration — Site web | Manda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html,body{-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+    background:#0a0a12;color:#e8e8f0;line-height:1.55;font-size:11pt;
+  }
+  .page{
+    width:210mm;min-height:297mm;padding:18mm 16mm;margin:0 auto;
+    background:linear-gradient(180deg,#0a0a12 0%,#0f0f1a 100%);
+    position:relative;overflow:hidden;
+    page-break-after:always;break-after:page;
+  }
+  .page:last-child{page-break-after:auto}
+  .page::before{
+    content:"";position:absolute;top:-20%;right:-10%;width:60%;height:60%;
+    background:radial-gradient(circle,rgba(99,102,241,0.15) 0%,transparent 70%);
+    pointer-events:none;
+  }
+  .page::after{
+    content:"";position:absolute;bottom:-10%;left:-10%;width:50%;height:50%;
+    background:radial-gradient(circle,rgba(52,211,153,0.08) 0%,transparent 70%);
+    pointer-events:none;
+  }
+  .page > *{position:relative;z-index:1}
+
+  /* Cover */
+  .cover{display:flex;flex-direction:column;justify-content:space-between;min-height:261mm}
+  .cover-badge{
+    display:inline-block;padding:6px 14px;border:1px solid rgba(99,102,241,0.4);
+    border-radius:999px;font-family:"SF Mono",Consolas,monospace;font-size:9pt;
+    letter-spacing:0.2em;text-transform:uppercase;color:#a5b4fc;
+    background:rgba(99,102,241,0.08);
+  }
+  .cover-title{font-size:38pt;font-weight:800;line-height:1.05;margin:28mm 0 10mm;letter-spacing:-0.02em}
+  .cover-title .accent{background:linear-gradient(135deg,#818cf8 0%,#34d399 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .cover-sub{font-size:13pt;color:#a8a8b8;max-width:150mm;line-height:1.5}
+  .cover-meta{
+    margin-top:auto;padding:16px 18px;border:1px solid rgba(255,255,255,0.08);
+    border-radius:12px;background:rgba(255,255,255,0.02);backdrop-filter:blur(8px);
+  }
+  .cover-meta h3{font-size:9pt;letter-spacing:0.25em;text-transform:uppercase;color:#818cf8;margin-bottom:10px;font-weight:600}
+  .cover-meta-row{display:flex;flex-wrap:wrap;gap:14px 28px;font-size:10.5pt}
+  .cover-meta-row strong{color:#fff;font-weight:600}
+  .cover-meta-row span{color:#a8a8b8}
+
+  /* Section pages */
+  .section-head{
+    display:flex;align-items:baseline;gap:14px;margin-bottom:18px;
+    padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .section-num{
+    font-family:"SF Mono",Consolas,monospace;font-size:10pt;color:#818cf8;
+    padding:4px 10px;border:1px solid rgba(99,102,241,0.35);border-radius:6px;
+    background:rgba(99,102,241,0.08);
+  }
+  h1{font-size:22pt;font-weight:700;color:#fff;letter-spacing:-0.01em}
+  h2{font-size:14pt;font-weight:700;color:#fff;margin:18px 0 10px;letter-spacing:-0.01em}
+  h3{font-size:11.5pt;font-weight:600;color:#e8e8f0;margin:12px 0 6px}
+  p{color:#c8c8d0;margin-bottom:10px}
+  p + p{margin-top:0}
+
+  .intro{color:#a8a8b8;font-size:11pt;margin-bottom:18px;max-width:170mm}
+
+  /* Tool cards */
+  .tool-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px}
+  .tool{
+    border:1px solid rgba(255,255,255,0.08);border-radius:10px;
+    padding:12px 14px;background:rgba(255,255,255,0.02);
+    page-break-inside:avoid;break-inside:avoid;
+  }
+  .tool-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+  .tool-name{font-size:12pt;font-weight:700;color:#fff}
+  .tool-tag{
+    font-family:"SF Mono",Consolas,monospace;font-size:8pt;letter-spacing:0.15em;
+    text-transform:uppercase;padding:3px 8px;border-radius:4px;
+  }
+  .tag-required{background:rgba(244,114,182,0.12);color:#f472b6;border:1px solid rgba(244,114,182,0.3)}
+  .tag-optional{background:rgba(148,163,184,0.12);color:#94a3b8;border:1px solid rgba(148,163,184,0.3)}
+  .tag-recommended{background:rgba(52,211,153,0.12);color:#34d399;border:1px solid rgba(52,211,153,0.3)}
+  .tool-desc{color:#b8b8c4;font-size:10pt;margin-bottom:8px;line-height:1.5}
+  .tool-meta{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:9.5pt;color:#94a3b8}
+  .tool-meta strong{color:#cbd5e1;font-weight:600}
+  .tool-meta a{color:#a5b4fc;text-decoration:none;word-break:break-all}
+
+  /* Split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+  .split-col{
+    border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px;
+    background:rgba(255,255,255,0.02);
+  }
+  .split-col.me{border-color:rgba(99,102,241,0.3);background:rgba(99,102,241,0.05)}
+  .split-col.you{border-color:rgba(52,211,153,0.3);background:rgba(52,211,153,0.05)}
+  .split-col h3{font-size:10pt;letter-spacing:0.2em;text-transform:uppercase;margin:0 0 10px}
+  .split-col.me h3{color:#a5b4fc}
+  .split-col.you h3{color:#6ee7b7}
+  .split-col ul{list-style:none;padding:0}
+  .split-col li{
+    position:relative;padding:4px 0 4px 18px;font-size:10pt;color:#d0d0d8;
+  }
+  .split-col li::before{
+    content:"";position:absolute;left:2px;top:11px;width:8px;height:8px;border-radius:50%;
+  }
+  .split-col.me li::before{background:#818cf8}
+  .split-col.you li::before{background:#34d399}
+
+  /* Steps */
+  .steps{counter-reset:step;margin-top:8px}
+  .step{
+    position:relative;padding:10px 12px 10px 44px;margin-bottom:8px;
+    border:1px solid rgba(255,255,255,0.08);border-radius:8px;
+    background:rgba(255,255,255,0.02);
+    page-break-inside:avoid;break-inside:avoid;
+  }
+  .step::before{
+    counter-increment:step;content:counter(step);
+    position:absolute;left:12px;top:50%;transform:translateY(-50%);
+    width:24px;height:24px;border-radius:50%;
+    background:linear-gradient(135deg,#818cf8,#34d399);
+    color:#0a0a12;font-weight:700;font-size:10pt;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .step strong{color:#fff;font-weight:600}
+  .step p{font-size:10pt;color:#c8c8d0;margin:0}
+
+  /* Footer */
+  .page-footer{
+    position:absolute;bottom:10mm;left:16mm;right:16mm;
+    display:flex;justify-content:space-between;align-items:center;
+    padding-top:8px;border-top:1px solid rgba(255,255,255,0.06);
+    font-size:8.5pt;color:#6b6b80;font-family:"SF Mono",Consolas,monospace;
+    letter-spacing:0.1em;
+  }
+  .page-footer a{color:#a5b4fc;text-decoration:none}
+
+  /* Note callout */
+  .note{
+    margin-top:10px;padding:10px 14px;border-left:3px solid #818cf8;
+    background:rgba(99,102,241,0.06);border-radius:0 8px 8px 0;
+    font-size:10pt;color:#c8c8d0;
+  }
+  .note strong{color:#a5b4fc}
+
+  @page{size:A4;margin:0}
+  @media print{
+    body{background:#0a0a12}
+    .page{margin:0;box-shadow:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="page cover">
+  <div>
+    <span class="cover-badge">Guide collaboration · 01</span>
+    <h1 class="cover-title">Votre <span class="accent">site web</span><br>en white label</h1>
+    <p class="cover-sub">Tout ce que vous devez préparer avant qu'on commence — comptes, accès, et répartition des responsabilités. À la fin du projet, vous êtes 100% propriétaire de votre infrastructure.</p>
+  </div>
+
+  <div class="cover-meta">
+    <h3>Votre interlocuteur</h3>
+    <div class="cover-meta-row">
+      <div><strong>Manda</strong> <span>· Développeur Fullstack & Architecte IA</span></div>
+    </div>
+    <div class="cover-meta-row" style="margin-top:8px">
+      <div><span>Email</span> <strong>mandaniaina.randriambinintsoa@gmail.com</strong></div>
+      <div><span>WhatsApp</span> <strong>+261 32 99 20 699</strong></div>
+      <div><span>Site</span> <strong>manda-ia.com</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 1 : Objectif -->
+<div class="page">
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <h1>Ce qu'on va construire ensemble</h1>
+  </div>
+
+  <p class="intro">Un site web professionnel, rapide, optimisé SEO, hébergé sur une infrastructure moderne — et entièrement à votre nom à la livraison.</p>
+
+  <h2>Ce qui est inclus</h2>
+  <div class="tool-grid">
+    <div class="tool">
+      <div class="tool-head"><span class="tool-name">Design & intégration</span></div>
+      <p class="tool-desc">Maquette sur mesure ou adaptation d'une maquette existante, intégration responsive pixel-perfect, animations (GSAP), accessibilité WCAG AA.</p>
+    </div>
+    <div class="tool">
+      <div class="tool-head"><span class="tool-name">Performance & SEO</span></div>
+      <p class="tool-desc">Core Web Vitals 90+ (Lighthouse), SSR/SSG, sitemap, robots.txt, schema JSON-LD, OpenGraph/Twitter Cards, hreflang si multilingue.</p>
+    </div>
+    <div class="tool">
+      <div class="tool-head"><span class="tool-name">Déploiement & monitoring</span></div>
+      <p class="tool-desc">CI/CD automatique via Git, déploiements de prévisualisation par branche, rollback 1-clic, SSL & CDN inclus.</p>
+    </div>
+  </div>
+
+  <div class="note"><strong>White label :</strong> tous les comptes cités dans ce guide sont créés par vous et restent votre propriété. Je ne détiens rien en mon nom.</div>
+
+  <div class="page-footer">
+    <span>GUIDE SITE WEB · 01</span>
+    <span><a href="https://manda-ia.com">manda-ia.com</a></span>
+    <span>PAGE 02</span>
+  </div>
+</div>
+
+<!-- PAGE 2 : Comptes à créer -->
+<div class="page">
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <h1>Comptes à créer (par vous)</h1>
+  </div>
+  <p class="intro">Créez ces comptes à votre nom ou au nom de votre entreprise. Ajoutez-moi ensuite comme collaborateur avec le rôle indiqué — je n'ai besoin que des accès nécessaires, rien de plus.</p>
+
+  <div class="tool-grid">
+
+    <div class="tool">
+      <div class="tool-head">
+        <span class="tool-name">GitHub</span>
+        <span class="tool-tag tag-required">Requis</span>
+      </div>
+      <p class="tool-desc">Hébergement du code source. Votre compte = vous êtes propriétaire du code. Un repo privé suffit pour un site.</p>
+      <div class="tool-meta">
+        <span><strong>Lien :</strong> <a href="https://github.com/signup">github.com/signup</a></span>
+        <span><strong>Plan :</strong> Free</span>
+        <span><strong>Mon rôle :</strong> Collaborator (Write)</span>
+      </div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-head">
+        <span class="tool-name">Vercel</span>
+        <span class="tool-tag tag-required">Requis</span>
+      </div>
+      <p class="tool-desc">Hébergement du site. Connecté à votre GitHub : chaque push déploie automatiquement. SSL, CDN mondial et preview par branche inclus gratuitement.</p>
+      <div class="tool-meta">
+        <span><strong>Lien :</strong> <a href="https://vercel.com/signup">vercel.com/signup</a></span>
+        <span><strong>Plan :</strong> Hobby (gratuit) suffit pour la plupart des sites</span>
+        <span><strong>Mon rôle :</strong> Member</span>
+      </div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-head">
+        <span class="tool-name">Nom de domaine</span>
+        <span class="tool-tag tag-required">Requis</span>
+      </div>
+      <p class="tool-desc">Votre adresse web (ex : <em>votreentreprise.com</em>). Achetez-le à votre nom — c'est votre actif le plus précieux. Évitez les domaines offerts par un hébergeur.</p>
+      <div class="tool-meta">
+        <span><strong>Registrars recommandés :</strong> <a href="https://porkbun.com">porkbun.com</a>, <a href="https://namecheap.com">namecheap.com</a>, <a href="https://cloudflare.com/products/registrar">cloudflare.com</a></span>
+        <span><strong>Budget :</strong> 10–15 €/an</span>
+      </div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-head">
+        <span class="tool-name">Google Search Console</span>
+        <span class="tool-tag tag-required">Requis</span>
+      </div>
+      <p class="tool-desc">Vérifie votre propriété auprès de Google et suit l'indexation, les requêtes, les erreurs SEO. Indispensable pour exister sur Google.</p>
+      <div class="tool-meta">
+        <span><strong>Lien :</strong> <a href="https://search.google.com/search-console">search.google.com/search-console</a></span>
+        <span><strong>Plan :</strong> Gratuit</span>
+        <span><strong>Mon rôle :</strong> Utilisateur délégué (Full)</span>
+      </div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-head">
+        <span class="tool-name">Google Analytics 4</span>
+        <span class="tool-tag tag-recommended">Recommandé</span>
+      </div>
+      <p class="tool-desc">Mesure le trafic : visiteurs, sources, pages populaires, conversions. Gratuit et standard du marché.</p>
+      <div class="tool-meta">
+        <span><strong>Lien :</strong> <a href="https://analytics.google.com">analytics.google.com</a></span>
+        <span><strong>Plan :</strong> Gratuit</span>
+        <span><strong>Mon rôle :</strong> Éditeur</span>
+      </div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-head">
+        <span class="tool-name">Resend (ou équivalent)</span>
+        <span class="tool-tag tag-recommended">Recommandé si formulaire de contact</span>
+      </div>
+      <p class="tool-desc">Service d'envoi d'emails transactionnels (formulaires de contact, notifications). Plus fiable qu'un SMTP classique : délivrabilité optimisée.</p>
+      <div class="tool-meta">
+        <span><strong>Lien :</strong> <a href="https://resend.com">resend.com</a></span>
+        <span><strong>Plan :</strong> Free (3 000 emails/mois)</span>
+        <span><strong>Alternative :</strong> Brevo, Mailgun, Postmark</span>
+      </div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-head">
+        <span class="tool-name">Google Business Profile</span>
+        <span class="tool-tag tag-recommended">Recommandé si activité locale</span>
+      </div>
+      <p class="tool-desc">Fiche Google Maps / Google Search pour votre entreprise. Essentiel pour le SEO local et la crédibilité (avis clients).</p>
+      <div class="tool-meta">
+        <span><strong>Lien :</strong> <a href="https://business.google.com">business.google.com</a></span>
+        <span><strong>Plan :</strong> Gratuit</span>
+      </div>
+    </div>
+
+    <div class="tool">
+      <div class="tool-head">
+        <span class="tool-name">Cloudflare</span>
+        <span class="tool-tag tag-optional">Optionnel (avancé)</span>
+      </div>
+      <p class="tool-desc">Seulement utile si vous voulez : DNS centralisé avec emails personnalisés, protection DDoS renforcée, ou cache agressif. Vercel inclut déjà CDN + SSL — Cloudflare est rarement nécessaire pour un site simple.</p>
+      <div class="tool-meta">
+        <span><strong>Lien :</strong> <a href="https://cloudflare.com">cloudflare.com</a></span>
+        <span><strong>Plan :</strong> Free</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="page-footer">
+    <span>GUIDE SITE WEB · 02</span>
+    <span><a href="https://manda-ia.com">manda-ia.com</a></span>
+    <span>PAGE 03</span>
+  </div>
+</div>
+
+<!-- PAGE 3 : Qui fait quoi -->
+<div class="page">
+  <div class="section-head">
+    <span class="section-num">03</span>
+    <h1>Qui fait quoi</h1>
+  </div>
+  <p class="intro">Répartition claire pour qu'on avance vite, sans blocages ni malentendus.</p>
+
+  <div class="split">
+    <div class="split-col me">
+      <h3>Ce que je fais</h3>
+      <ul>
+        <li>Design & maquettes (ou intégration d'une maquette fournie)</li>
+        <li>Développement front-end & back-end complet</li>
+        <li>Configuration technique : DNS, domaine, SSL, emails</li>
+        <li>Connexion GitHub ↔ Vercel, CI/CD</li>
+        <li>SEO technique : sitemap, robots, schema, meta, OG tags</li>
+        <li>Installation GA4 / GSC / Resend</li>
+        <li>Tests Lighthouse, responsive, accessibilité</li>
+        <li>Mise en production & vérifications finales</li>
+      </ul>
+    </div>
+    <div class="split-col you">
+      <h3>Ce que vous faites</h3>
+      <ul>
+        <li>Création des comptes listés (p. 02)</li>
+        <li>Achat du nom de domaine à votre nom</li>
+        <li>M'ajouter comme collaborateur aux rôles indiqués</li>
+        <li>Fournir contenu : textes, logo, photos, mentions légales</li>
+        <li>Valider les étapes clés (design, mise en ligne)</li>
+        <li>Répondre aux demandes d'accès Google (validation par email)</li>
+        <li>Paiement des services tiers (domaine, Vercel Pro si besoin)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 style="margin-top:24px">Contenu à préparer</h2>
+  <p>Plus vous préparez en amont, plus vite on livre. Idéalement avant le démarrage :</p>
+  <div class="tool-grid">
+    <div class="tool">
+      <p class="tool-desc"><strong>Textes</strong> — page d'accueil, à propos, services, contact, mentions légales / politique de confidentialité.</p>
+    </div>
+    <div class="tool">
+      <p class="tool-desc"><strong>Médias</strong> — logo (SVG si possible), photos HD, vidéos si besoin, icônes de marque.</p>
+    </div>
+    <div class="tool">
+      <p class="tool-desc"><strong>Identité</strong> — palette de couleurs, polices préférées, exemples de sites qui vous inspirent.</p>
+    </div>
+    <div class="tool">
+      <p class="tool-desc"><strong>SEO</strong> — mots-clés cibles, zones géographiques, concurrents principaux.</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>GUIDE SITE WEB · 03</span>
+    <span><a href="https://manda-ia.com">manda-ia.com</a></span>
+    <span>PAGE 04</span>
+  </div>
+</div>
+
+<!-- PAGE 4 : Livraison -->
+<div class="page">
+  <div class="section-head">
+    <span class="section-num">04</span>
+    <h1>Livraison & transfert white label</h1>
+  </div>
+  <p class="intro">À la fin du projet, tout est à votre nom. Voici le déroulé de la passation.</p>
+
+  <div class="steps">
+    <div class="step">
+      <p><strong>Validation finale</strong> — parcours complet du site en production, vérification responsive mobile/desktop, tests formulaires et emails.</p>
+    </div>
+    <div class="step">
+      <p><strong>Transfert de propriété</strong> — vous êtes déjà propriétaire de tous les comptes. Je retire mes accès de collaborateur si vous le souhaitez, ou je les conserve pour la maintenance (à votre choix).</p>
+    </div>
+    <div class="step">
+      <p><strong>Documentation technique</strong> — un document PDF listant : URLs, comptes liés, variables d'environnement, procédure de déploiement, contacts d'urgence.</p>
+    </div>
+    <div class="step">
+      <p><strong>Formation (30 min)</strong> — visio pour vous montrer comment modifier les textes vous-même, consulter les stats, gérer les formulaires reçus.</p>
+    </div>
+    <div class="step">
+      <p><strong>Garantie</strong> — 30 jours de corrections incluses après livraison pour tout bug lié au périmètre convenu.</p>
+    </div>
+    <div class="step">
+      <p><strong>Maintenance (optionnelle)</strong> — forfait mensuel si vous voulez que je maintienne le site (mises à jour, petites évolutions, monitoring). Sinon, tout fonctionne en autonomie.</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:24px">Coûts récurrents à votre charge</h2>
+  <div class="tool-grid">
+    <div class="tool">
+      <div class="tool-head"><span class="tool-name">Nom de domaine</span><span class="tool-tag tag-required">Obligatoire</span></div>
+      <p class="tool-desc">~10–15 €/an. Renouvellement automatique recommandé pour éviter la perte du domaine.</p>
+    </div>
+    <div class="tool">
+      <div class="tool-head"><span class="tool-name">Vercel Hobby</span><span class="tool-tag tag-recommended">Gratuit</span></div>
+      <p class="tool-desc">Suffit pour la grande majorité des sites. Passage au Pro ($20/mois) seulement si trafic important ou fonctions avancées.</p>
+    </div>
+    <div class="tool">
+      <div class="tool-head"><span class="tool-name">Email transactionnel</span><span class="tool-tag tag-optional">Gratuit sous quota</span></div>
+      <p class="tool-desc">Resend Free = 3 000 emails/mois. Largement suffisant pour un formulaire de contact.</p>
+    </div>
+  </div>
+
+  <div class="note"><strong>Question ?</strong> Contactez-moi directement par WhatsApp (+261 32 99 20 699) ou email. Je réponds généralement sous 24 h en semaine.</div>
+
+  <div class="page-footer">
+    <span>GUIDE SITE WEB · 04</span>
+    <span><a href="https://manda-ia.com">manda-ia.com</a></span>
+    <span>FIN</span>
+  </div>
+</div>
+
+</body>
+</html>

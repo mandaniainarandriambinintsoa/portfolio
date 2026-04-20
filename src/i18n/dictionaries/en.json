@@ -794,6 +794,39 @@
       { "value": 100, "suffix": "%", "label": "Client Satisfaction" }
     ]
   },
+  "collaboration_guides": {
+    "badge": "COLLABORATION GUIDES",
+    "title": "Working with me, fully transparent",
+    "subtitle": "These guides list everything you need to prepare before we start — accounts, access, responsibilities. At delivery, everything is in your name: 100% white-label ownership.",
+    "download_label": "Download PDF",
+    "pages_label": "pages",
+    "items": [
+      {
+        "key": "site",
+        "tag": "01",
+        "title": "Website",
+        "description": "GitHub, Vercel, domain, Google Search Console, Analytics, Resend, Google Business. Everything you need for a professional, fast, indexed website.",
+        "pages": 5,
+        "href": "/guides/guide-site-web-en.pdf"
+      },
+      {
+        "key": "saas",
+        "tag": "02",
+        "title": "SaaS",
+        "description": "Supabase, Stripe, Sentry, PostHog, OpenAI/Anthropic. The full infrastructure to ship a SaaS product with payments, monitoring and product analytics.",
+        "pages": 6,
+        "href": "/guides/guide-saas-en.pdf"
+      },
+      {
+        "key": "n8n",
+        "tag": "03",
+        "title": "n8n Workflow",
+        "description": "n8n Cloud, API keys, webhooks, storage DB, cron. To automate your business processes with reliable workflows, fully under your control.",
+        "pages": 6,
+        "href": "/guides/guide-n8n-en.pdf"
+      }
+    ]
+  },
   "faq": {
     "title": "FREQUENTLY ASKED",
     "items": [

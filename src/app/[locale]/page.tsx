@@ -8,6 +8,7 @@ import Process from "@/components/sections/Process";
 // Testimonials uses GSAP directly — dynamic import to keep it out of initial bundle
 const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
 import Stats from "@/components/sections/Stats";
+import CollaborationGuides from "@/components/sections/CollaborationGuides";
 import TechStack from "@/components/sections/TechStack";
 // Projects uses GSAP directly — dynamic import to keep it out of initial bundle
 const Projects = dynamic(() => import("@/components/sections/Projects"));
@@ -25,6 +26,7 @@ const CommandCenterAnim = dynamic(() => import("@/components/animations/CommandC
 const ServicesGridAnim = dynamic(() => import("@/components/animations/ServicesGridAnim"));
 const ProcessAnim = dynamic(() => import("@/components/animations/ProcessAnim"));
 const StatsAnim = dynamic(() => import("@/components/animations/StatsAnim"));
+const CollaborationGuidesAnim = dynamic(() => import("@/components/animations/CollaborationGuidesAnim"));
 const TechStackAnim = dynamic(() => import("@/components/animations/TechStackAnim"));
 const FAQAnim = dynamic(() => import("@/components/animations/FAQAnim"));
 const VisitorTrackingAnim = dynamic(() => import("@/components/animations/VisitorTrackingAnim"));
@@ -71,6 +73,19 @@ export default async function HomePage({
         <StatsAnim>
           <Stats title={dict.stats.title} items={dict.stats.items} />
         </StatsAnim>
+      </div>
+
+      <div className="below-fold">
+        <CollaborationGuidesAnim>
+          <CollaborationGuides
+            badge={dict.collaboration_guides.badge}
+            title={dict.collaboration_guides.title}
+            subtitle={dict.collaboration_guides.subtitle}
+            downloadLabel={dict.collaboration_guides.download_label}
+            pagesLabel={dict.collaboration_guides.pages_label}
+            items={dict.collaboration_guides.items}
+          />
+        </CollaborationGuidesAnim>
       </div>
 
       <div className="below-fold">

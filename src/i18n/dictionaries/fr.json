@@ -802,6 +802,39 @@
       { "value": 100, "suffix": "%", "label": "Satisfaction client" }
     ]
   },
+  "collaboration_guides": {
+    "badge": "GUIDES COLLABORATION",
+    "title": "Travailler avec moi, en toute transparence",
+    "subtitle": "Ces guides listent tout ce que vous devez préparer avant qu'on démarre — comptes, accès, responsabilités. À la livraison, tout est à votre nom : propriété 100% white label.",
+    "download_label": "Télécharger le PDF",
+    "pages_label": "pages",
+    "items": [
+      {
+        "key": "site",
+        "tag": "01",
+        "title": "Site web",
+        "description": "GitHub, Vercel, domaine, Google Search Console, Analytics, Resend, Google Business. Tout ce qu'il faut pour un site professionnel, rapide et référencé.",
+        "pages": 5,
+        "href": "/guides/guide-site-web-fr.pdf"
+      },
+      {
+        "key": "saas",
+        "tag": "02",
+        "title": "SaaS",
+        "description": "Supabase, Stripe, Sentry, PostHog, OpenAI/Anthropic. L'infrastructure complète pour lancer un produit SaaS avec paiements, monitoring et analytics produit.",
+        "pages": 6,
+        "href": "/guides/guide-saas-fr.pdf"
+      },
+      {
+        "key": "n8n",
+        "tag": "03",
+        "title": "Workflow n8n",
+        "description": "n8n Cloud, clés API, webhooks, base de stockage, cron. Pour automatiser vos processus métier avec des workflows fiables et sous votre contrôle total.",
+        "pages": 6,
+        "href": "/guides/guide-n8n-fr.pdf"
+      }
+    ]
+  },
   "faq": {
     "title": "QUESTIONS FRÉQUENTES",
     "items": [
