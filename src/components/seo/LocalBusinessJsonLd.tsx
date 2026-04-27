@@ -8,6 +8,7 @@ export default function LocalBusinessJsonLd() {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         name: "Manda — Automatisation & Développement No-Code",
+        legalName: PERSONAL_INFO.legalName,
         alternateName: "Manda Dev",
         url: SITE_URL,
         telephone: PERSONAL_INFO.phone,
@@ -18,9 +19,11 @@ export default function LocalBusinessJsonLd() {
         priceRange: "€€",
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Antananarivo",
-          addressRegion: "Analamanga",
-          addressCountry: "MG",
+          streetAddress: PERSONAL_INFO.legalAddress.street,
+          addressLocality: PERSONAL_INFO.legalAddress.city,
+          addressRegion: PERSONAL_INFO.legalAddress.region,
+          postalCode: PERSONAL_INFO.legalAddress.postalCode,
+          addressCountry: PERSONAL_INFO.legalAddress.countryCode,
         },
         geo: {
           "@type": "GeoCoordinates",

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
-import { SOCIAL_LINKS } from "@/lib/constants";
+import { SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
 
 export default function Footer({
   locale,
@@ -109,6 +109,16 @@ export default function Footer({
             </li>
           </ul>
         </nav>
+
+        {/* Legal entity — required for Meta Business Verification */}
+        <div className="text-center text-xs text-slate-500 leading-relaxed">
+          <p>
+            {locale === "fr" ? "Édité par " : "Published by "}
+            <strong className="text-slate-400">{PERSONAL_INFO.legalName}</strong>
+            {locale === "fr" ? " — entrepreneur individuel" : " — sole proprietor"}
+          </p>
+          <p>{PERSONAL_INFO.legalAddress.full}</p>
+        </div>
 
         {/* Copyright + social */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 opacity-60">

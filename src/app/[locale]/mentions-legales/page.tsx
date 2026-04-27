@@ -66,9 +66,10 @@ function MentionsFR() {
 
       <h2>1. Éditeur du site</h2>
       <p>
-        <strong>Nom :</strong> {PERSONAL_INFO.name}
-        <br /><strong>Statut :</strong> Développeur freelance (auto-entrepreneur)
-        <br /><strong>Adresse :</strong> Antananarivo, Analamanga, Madagascar
+        <strong>Nom légal :</strong> {PERSONAL_INFO.legalName}
+        <br /><strong>Nom usuel :</strong> {PERSONAL_INFO.name}
+        <br /><strong>Statut :</strong> Entrepreneur individuel (développeur freelance)
+        <br /><strong>Adresse :</strong> {PERSONAL_INFO.legalAddress.full}
         <br /><strong>Email :</strong> {PERSONAL_INFO.email}
         <br /><strong>Téléphone :</strong> {PERSONAL_INFO.phone}
         <br /><strong>Site web :</strong> https://manda-ia.com
@@ -133,9 +134,10 @@ function MentionsEN() {
 
       <h2>1. Site Publisher</h2>
       <p>
-        <strong>Name:</strong> {PERSONAL_INFO.name}
-        <br /><strong>Status:</strong> Freelance developer (sole proprietor)
-        <br /><strong>Address:</strong> Antananarivo, Analamanga, Madagascar
+        <strong>Legal name:</strong> {PERSONAL_INFO.legalName}
+        <br /><strong>Common name:</strong> {PERSONAL_INFO.name}
+        <br /><strong>Status:</strong> Sole proprietor (freelance developer)
+        <br /><strong>Address:</strong> {PERSONAL_INFO.legalAddress.full}
         <br /><strong>Email:</strong> {PERSONAL_INFO.email}
         <br /><strong>Phone:</strong> {PERSONAL_INFO.phone}
         <br /><strong>Website:</strong> https://manda-ia.com

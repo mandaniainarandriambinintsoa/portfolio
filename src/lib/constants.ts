@@ -9,10 +9,20 @@ export const SOCIAL_LINKS = {
 
 export const PERSONAL_INFO = {
   name: "Mandaniaina Randriambinintsoa",
+  legalName: "RANDRIAMBININTSOA MANDANIAINA",
   shortName: "Manda",
   email: "mandaniaina.randriambinintsoa@gmail.com",
   phone: "+261 34 65 186 95",
   location: "Antananarivo, Madagascar",
+  legalAddress: {
+    street: "LOT VT 85 HE BIS DB ANDOHANIMANDROSEZA",
+    city: "Antananarivo",
+    region: "Analamanga",
+    postalCode: "101",
+    country: "Madagascar",
+    countryCode: "MG",
+    full: "LOT VT 85 HE BIS DB ANDOHANIMANDROSEZA, Antananarivo, Analamanga, 101, Madagascar",
+  },
   jobTitle: {
     fr: "Architecte IA & Automatisation Builder",
     en: "AI Architect & Automation Builder",
