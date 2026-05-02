@@ -58,6 +58,8 @@ type ServiceItem = {
   slug: string;
   color: string;
   isLanding?: boolean;
+  cardTitle?: string;
+  cardDescription?: string;
 };
 
 export default async function ServicesPage({
@@ -123,8 +125,8 @@ export default async function ServicesPage({
                       <span className={`material-symbols-outlined ${colors.icon} mb-3 text-3xl block`}>
                         {service.icon}
                       </span>
-                      <h3 className="text-lg font-bold mb-2">{service.title}</h3>
-                      <p className="text-sm text-slate-400">{service.description}</p>
+                      <h3 className="text-lg font-bold mb-2">{service.cardTitle || service.title}</h3>
+                      <p className="text-sm text-slate-400">{service.cardDescription || service.description}</p>
                     </GlassCard>
                   </Link>
                 );
