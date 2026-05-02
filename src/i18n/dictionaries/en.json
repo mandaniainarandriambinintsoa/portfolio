@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Fullstack Next.js Developer · AI Architect & Automation Builder",
-      "description": "Freelance fullstack developer specialized in Next.js, React and Node.js. I partner with startups and scale-ups on SaaS, MVPs and AI integrations — from prototype to production. 20+ projects delivered, modern stack, fast delivery."
+      "title": "Fullstack React/Next.js & No-Code Developer in Madagascar · AI + n8n",
+      "description": "Fullstack and no-code freelance developer based in Madagascar. Websites, SaaS MVPs, AI integration (Claude/OpenAI) and n8n automation. 20+ projects delivered in 4 years, international quality."
     },
     "about": {
       "title": "Manda Randriambinintsoa | No-Code Developer & N8N Expert from Madagascar",
@@ -626,6 +626,15 @@
         "description": "Production release, monitoring and scaling up.",
         "color": "blue"
       }
+    ]
+  },
+  "approach": {
+    "title": "THE APPROACH",
+    "heading": "From Webflow and Bubble to Claude Code: a no-code developer's approach, based in Madagascar",
+    "paragraphs": [
+      "For four years, I delivered from Madagascar dozens of marketing sites and SaaS MVPs entirely in no-code. Webflow for premium sites, Bubble for business apps, n8n to plug everything into client tools. An approach proven with my French and international clients: iteration in days rather than months, clean delivery, and pricing that stays grounded.",
+      "Late 2025, Claude Code changed the game. After months of daily use on production projects, I watched pure code regain the speed of no-code, without any of its technical ceilings. Today I build with Next.js, React and Python, with an AI agent as permanent copilot. Same delivery speed as before, depth of a real fullstack dev.",
+      "Current positioning: fullstack JavaScript developer based in Madagascar, with a no-code and pure-code dual culture few freelancers combine. Whether you're aiming for a high-performance website, well-ranked on Google and cited by AI (SEO + GEO), a SaaS to ship in weeks, or AI agents integrated into your existing product, that's exactly what I deliver daily from Madagascar."
     ]
   },
   "testimonials": {

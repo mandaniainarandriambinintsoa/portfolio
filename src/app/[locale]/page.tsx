@@ -5,6 +5,7 @@ import Hero from "@/components/sections/Hero";
 import CommandCenter from "@/components/sections/CommandCenter";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import Process from "@/components/sections/Process";
+import Approach from "@/components/sections/Approach";
 // Testimonials uses GSAP directly — dynamic import to keep it out of initial bundle
 const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
 import Stats from "@/components/sections/Stats";
@@ -25,6 +26,7 @@ import HeroAnimations from "@/components/animations/HeroAnimations";
 const CommandCenterAnim = dynamic(() => import("@/components/animations/CommandCenterAnim"));
 const ServicesGridAnim = dynamic(() => import("@/components/animations/ServicesGridAnim"));
 const ProcessAnim = dynamic(() => import("@/components/animations/ProcessAnim"));
+const ApproachAnim = dynamic(() => import("@/components/animations/ApproachAnim"));
 const StatsAnim = dynamic(() => import("@/components/animations/StatsAnim"));
 const CollaborationGuidesAnim = dynamic(() => import("@/components/animations/CollaborationGuidesAnim"));
 const TechStackAnim = dynamic(() => import("@/components/animations/TechStackAnim"));
@@ -63,6 +65,12 @@ export default async function HomePage({
         <ProcessAnim>
           <Process title={dict.process.title} steps={dict.process.steps} />
         </ProcessAnim>
+      </div>
+
+      <div className="below-fold">
+        <ApproachAnim>
+          <Approach dict={dict.approach} />
+        </ApproachAnim>
       </div>
 
       <div className="below-fold">

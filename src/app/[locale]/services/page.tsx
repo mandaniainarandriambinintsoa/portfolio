@@ -14,11 +14,11 @@ export async function generateMetadata({
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
 
   const title = locale === "fr"
-    ? "Services | Développeur No-Code & Automatisation Madagascar — Manda"
-    : "Services | No-Code Developer & Automation Madagascar — Manda";
+    ? "Mes services freelance : Développement, IA & Automatisation"
+    : "My freelance services: Development, AI & Automation";
   const description = locale === "fr"
-    ? "Découvrez mes services : automatisation N8N, développement No-Code et Low-Code, intégration IA, architecture scalable. Basé à Madagascar, qualité internationale."
-    : "Discover my services: N8N automation, No-Code and Low-Code development, AI integration, scalable architecture. Based in Madagascar, international quality.";
+    ? "Mes prestations freelance : développement de sites et SaaS, intégration IA, automatisation n8n, scaling cloud. Index complet pour explorer chaque service en détail."
+    : "My freelance services: site and SaaS development, AI integration, n8n automation, cloud scaling. Full index to explore each service in detail.";
 
   const prefix = locale === "fr" ? "" : "/en";
 
