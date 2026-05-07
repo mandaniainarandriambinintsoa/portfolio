@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Développeur Fullstack React/Next.js & No-Code à Madagascar · IA + n8n",
-      "description": "Développeur fullstack et no-code freelance basé à Madagascar. Sites web, MVP SaaS, intégration IA (Claude/OpenAI) et automatisation n8n. 20+ projets livrés en 4 ans, qualité internationale."
+      "title": "Product Builder · Fullstack JavaScript No-Code · IA n8n Madagascar",
+      "description": "Product Builder freelance à Madagascar. De l'idée au produit fini : sites, MVP SaaS, fullstack JavaScript, no-code, IA et n8n. 20+ projets en 4 ans."
     },
     "about": {
       "title": "Manda Randriambinintsoa | Développeur No-Code & Expert N8N à Madagascar",
@@ -30,7 +30,7 @@
     "line2": "JE CONÇOIS DES WORKFLOWS N8N SCALABLES.",
     "line3": "",
     "subtitle_prefix": "Manda —",
-    "subtitle_highlight": "Développeur Fullstack React/Next.js · Architecte IA & Automatisation n8n · Développeur No-Code",
+    "subtitle_highlight": "Product Builder · Développeur Fullstack JavaScript · No-Code · IA & n8n",
     "subtitle_rest": ", basé à Madagascar. Je sors des MVP SaaS en quelques semaines avec React, Next.js, Supabase, Neon et Python. 4+ ans d'expérience, 20+ projets livrés.",
     "cta_primary": "Démarrer un projet",
     "cta_secondary": "Voir mes réalisations"

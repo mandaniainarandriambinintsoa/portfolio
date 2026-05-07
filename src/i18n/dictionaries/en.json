@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Fullstack React/Next.js & No-Code Developer in Madagascar · AI + n8n",
-      "description": "Fullstack and no-code freelance developer based in Madagascar. Websites, SaaS MVPs, AI integration (Claude/OpenAI) and n8n automation. 20+ projects delivered in 4 years, international quality."
+      "title": "Product Builder · Fullstack JavaScript No-Code · AI n8n Madagascar",
+      "description": "Freelance Product Builder in Madagascar. From idea to shipped product: websites, SaaS MVPs, fullstack JavaScript, no-code, AI and n8n. 20+ projects in 4 years."
     },
     "about": {
       "title": "Manda Randriambinintsoa | No-Code Developer & N8N Expert from Madagascar",
@@ -30,7 +30,7 @@
     "line2": "I AUTOMATE.",
     "line3": "I SCALE.",
     "subtitle_prefix": "Manda —",
-    "subtitle_highlight": "Full Stack Developer · AI Architect",
+    "subtitle_highlight": "Product Builder · Fullstack JavaScript Developer · No-Code · AI & n8n",
     "subtitle_rest": ", no-code and n8n automation workflow developer based in Antananarivo, Madagascar. Trained in software engineering, I have strong foundations in architecture and digital project security. I started with JavaScript, then in 2023 I switched to no-code — Bubble, Webflow — to ship client MVPs in weeks from Madagascar. It worked well. Late 2025, AI made coding faster and more consistent than no-code, so I switched back. Code is still the best option when you need to configure your servers and handle scale. My stack: React, Next.js, Supabase, Neon, n8n, Python.",
     "cta_primary": "Start a Project",
     "cta_secondary": "View My Work"
