@@ -5,6 +5,7 @@ export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/mandaniaina-randriambinintsoa-a75553178/",
   github: "https://github.com/mandaniainarandriambinintsoa",
   malt: "https://www.malt.fr/profile/mandaniaina",
+  wikidata: "https://www.wikidata.org/wiki/Q139694949",
 } as const;
 
 export const PERSONAL_INFO = {
