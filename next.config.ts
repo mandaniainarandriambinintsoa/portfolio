@@ -69,6 +69,27 @@ const nextConfig: NextConfig = {
         destination: "https://manda-ia.com/:path*",
         permanent: true,
       },
+      // Retired no-code/low-code landings — 301 to React/Next.js landing (closest topical match)
+      {
+        source: "/services/developpeur-no-code-madagascar",
+        destination: "/services/developpeur-react-nextjs-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/services/developpeur-low-code-madagascar",
+        destination: "/services/developpeur-react-nextjs-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/en/services/no-code-developer-madagascar",
+        destination: "/en/services/hire-react-nextjs-developer-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/en/services/low-code-developer-madagascar",
+        destination: "/en/services/hire-react-nextjs-developer-madagascar",
+        permanent: true,
+      },
     ];
   },
   async headers() {

@@ -1,16 +1,16 @@
 # Mandaniaina Randriambinintsoa — Portfolio
 
-> Développeur Full Stack et Architecte IA basé à Antananarivo, Madagascar. Spécialisé en automatisation N8N, développement No-Code/Low-Code (Bubble, Webflow) et fullstack (Next.js, Supabase), et intégration IA (Claude Code, LLMs). 4+ ans d'expérience, clients en France, USA et Madagascar.
+> Product Builder freelance basé à Antananarivo, Madagascar. Spécialisé en développement fullstack JavaScript (Next.js, Supabase), automatisation N8N et intégration IA (Claude Code, LLMs). 4+ ans d'expérience, 20+ projets livrés, clients en France, USA et Madagascar.
 
 ## About
 
-Mandaniaina Randriambinintsoa (alias Manda) est un développeur freelance basé à Antananarivo, Madagascar. Diplômé en développement informatique (Master 1, ESTI), il a commencé par du JavaScript en alternance, puis s'est spécialisé en No-Code (Bubble, Webflow) de 2023 à 2026. Fin 2025, il est revenu au code pur assisté par IA (Claude Code), avec une stack React/Next.js, Supabase/Neon, n8n et Python. Il sert des clients en France, aux États-Unis et à Madagascar.
+Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance basé à Antananarivo, Madagascar. Diplômé en développement informatique (Master 1, ESTI), il a commencé par du JavaScript en alternance, puis s'est spécialisé en No-Code (Bubble, Webflow) de 2023 à 2025 pour livrer des MVP en quelques semaines. Fin 2025, il est revenu au code pur assisté par IA (Claude Code), avec une stack Next.js, Supabase/Neon, n8n et Python. Il sert des clients en France, aux États-Unis et à Madagascar.
 
 ## Services
 
-- [Développeur No-Code Madagascar](https://manda-ia.com/services/developpeur-no-code-madagascar): Expert Bubble et Webflow à Antananarivo — applications sur mesure, tarifs compétitifs, qualité internationale
 - [Expert N8N Madagascar](https://manda-ia.com/services/automatisation-n8n-madagascar): Spécialiste automatisation N8N pour PME et entreprises — workflows sur mesure, intégrations API, orchestration de données
-- [Développeur Low-Code Madagascar](https://manda-ia.com/services/developpeur-low-code-madagascar): Applications Next.js et Supabase avec IA intégrée
+- [Développeur React & Next.js Madagascar](https://manda-ia.com/services/developpeur-react-nextjs-madagascar): Applications web performantes — SSR, TypeScript, perf 95+
+- [Développeur Next.js + Supabase](https://manda-ia.com/services/developpeur-nextjs-supabase-madagascar): MVP SaaS clé en main avec auth, dashboard et paiements Stripe
 - [Conception de workflows](https://manda-ia.com/services/conception-workflows): Automatisation de processus métier avec N8N
 - [Développement d'applications](https://manda-ia.com/services/developpement-applications): Applications No-Code et fullstack pour entreprises
 - [Intégration IA](https://manda-ia.com/services/integration-ia): Agents IA autonomes, Claude Code, GPT — intégration d'intelligence artificielle

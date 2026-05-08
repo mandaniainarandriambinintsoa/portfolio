@@ -26,9 +26,9 @@ const KEY_FILE = process.env.GSC_CREDENTIALS_PATH
 
 // URLs to submit for indexing
 const URLS_TO_INDEX = [
-  `${SITE_URL}/services/developpeur-no-code-madagascar`,
   `${SITE_URL}/services/automatisation-n8n-madagascar`,
-  `${SITE_URL}/services/developpeur-low-code-madagascar`,
+  `${SITE_URL}/services/developpeur-react-nextjs-madagascar`,
+  `${SITE_URL}/services/developpeur-nextjs-supabase-madagascar`,
   `${SITE_URL}/blog`,
   `${SITE_URL}/contact`,
   `${SITE_URL}/services`,

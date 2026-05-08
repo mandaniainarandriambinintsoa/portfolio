@@ -32,16 +32,12 @@ export default function Footer({
           { label: "Next.js + Supabase", href: "/services/developpeur-nextjs-supabase-madagascar" },
           { label: "Python & IA", href: "/services/developpeur-python-ia-madagascar" },
           { label: "Automatisation N8N", href: "/services/automatisation-n8n-madagascar" },
-          { label: "Développement No-Code", href: "/services/developpeur-no-code-madagascar" },
-          { label: "Low-Code", href: "/services/developpeur-low-code-madagascar" },
         ]
       : [
           { label: "React / Next.js", href: "/en/services/hire-react-nextjs-developer-madagascar" },
           { label: "Next.js + Supabase", href: "/en/services/nextjs-supabase-developer-madagascar" },
           { label: "Python & AI", href: "/en/services/python-ai-developer-madagascar" },
           { label: "N8N Automation", href: "/en/services/n8n-automation-expert-madagascar" },
-          { label: "No-Code Development", href: "/en/services/no-code-developer-madagascar" },
-          { label: "Low-Code", href: "/en/services/low-code-developer-madagascar" },
         ];
 
   const expertiseHeading = locale === "fr" ? "Expertise" : "Expertise";

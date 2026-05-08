@@ -24,14 +24,14 @@ const colorMap: Record<string, { icon: string; border: string }> = {
 
 const landingLinks: Record<Locale, LandingLink[]> = {
   fr: [
-    { label: "Développeur No-Code à Madagascar", href: "/services/developpeur-no-code-madagascar" },
     { label: "Expert N8N & Automatisation", href: "/services/automatisation-n8n-madagascar" },
-    { label: "Développeur Low-Code", href: "/services/developpeur-low-code-madagascar" },
+    { label: "Développeur React & Next.js", href: "/services/developpeur-react-nextjs-madagascar" },
+    { label: "Next.js + Supabase", href: "/services/developpeur-nextjs-supabase-madagascar" },
   ],
   en: [
-    { label: "No-Code Developer in Madagascar", href: "/en/services/no-code-developer-madagascar" },
     { label: "N8N Automation Expert", href: "/en/services/n8n-automation-expert-madagascar" },
-    { label: "Low-Code Developer", href: "/en/services/low-code-developer-madagascar" },
+    { label: "React & Next.js Developer", href: "/en/services/hire-react-nextjs-developer-madagascar" },
+    { label: "Next.js + Supabase", href: "/en/services/nextjs-supabase-developer-madagascar" },
   ],
 };
 

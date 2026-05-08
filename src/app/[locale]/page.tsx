@@ -2,8 +2,10 @@ import dynamic from "next/dynamic";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import Hero from "@/components/sections/Hero";
+import ClientLogos from "@/components/sections/ClientLogos";
 import CommandCenter from "@/components/sections/CommandCenter";
 import ServicesGrid from "@/components/sections/ServicesGrid";
+import Pricing from "@/components/sections/Pricing";
 import Process from "@/components/sections/Process";
 import Approach from "@/components/sections/Approach";
 // Testimonials uses GSAP directly — dynamic import to keep it out of initial bundle
@@ -25,6 +27,7 @@ import HeroAnimations from "@/components/animations/HeroAnimations";
 // Below-fold: dynamic imports (code-split GSAP ScrollTrigger out of initial bundle)
 const CommandCenterAnim = dynamic(() => import("@/components/animations/CommandCenterAnim"));
 const ServicesGridAnim = dynamic(() => import("@/components/animations/ServicesGridAnim"));
+const PricingAnim = dynamic(() => import("@/components/animations/PricingAnim"));
 const ProcessAnim = dynamic(() => import("@/components/animations/ProcessAnim"));
 const ApproachAnim = dynamic(() => import("@/components/animations/ApproachAnim"));
 const StatsAnim = dynamic(() => import("@/components/animations/StatsAnim"));
@@ -48,6 +51,8 @@ export default async function HomePage({
       <HeroAnimations>
         <Hero dict={dict.hero} locale={locale} />
       </HeroAnimations>
+
+      <ClientLogos dict={dict.client_logos} />
 
       <div className="below-fold">
         <CommandCenterAnim>
@@ -94,6 +99,12 @@ export default async function HomePage({
             items={dict.collaboration_guides.items}
           />
         </CollaborationGuidesAnim>
+      </div>
+
+      <div className="below-fold">
+        <PricingAnim>
+          <Pricing dict={dict.pricing} />
+        </PricingAnim>
       </div>
 
       <div className="below-fold">

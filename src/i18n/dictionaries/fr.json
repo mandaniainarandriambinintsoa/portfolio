@@ -35,6 +35,27 @@
     "cta_primary": "Démarrer un projet",
     "cta_secondary": "Voir mes réalisations"
   },
+  "client_logos": {
+    "label": "Ils m'ont fait confiance",
+    "items": [
+      {
+        "name": "ScalApp",
+        "color": "emerald"
+      },
+      {
+        "name": "ImmoPrive",
+        "color": "blue"
+      },
+      {
+        "name": "Yalee Creek Ranch",
+        "color": "purple"
+      },
+      {
+        "name": "GetHumanCall",
+        "color": "emerald"
+      }
+    ]
+  },
   "command_center": {
     "file_name": "workflow-engine.ts"
   },
@@ -70,119 +91,6 @@
         "color": "purple"
       },
       {
-        "icon": "code_off",
-        "title": "Développeur No-Code à Madagascar",
-        "description": "Expert en développement No-Code basé à Antananarivo. Applications Bubble, sites Webflow et automatisations N8N pour entreprises françaises et internationales.",
-        "slug": "developpeur-no-code-madagascar",
-        "color": "indigo",
-        "cardTitle": "No-Code (Bubble, Webflow, N8N)",
-        "cardDescription": "Sites Webflow, apps Bubble et workflows N8N. Itération rapide, livraison en semaines.",
-        "isLanding": true,
-        "seoTitle": "Développeur No-Code à Madagascar | Bubble, Webflow & N8N — Manda",
-        "seoDescription": "Développeur no-code freelance à Antananarivo, Madagascar. Apps Bubble, sites Webflow, automatisations N8N. 20+ projets livrés, tarifs 2-3x moins chers qu'en Europe. Devis gratuit.",
-        "landing": {
-          "heroText": "Vous cherchez un développeur no-code fiable, rapide et compétitif pour votre prochain projet ? Basé à Antananarivo, je conçois des applications professionnelles avec Bubble, Webflow et N8N — les trois piliers du no-code en 2026. Plus de 20 projets livrés, des tarifs 2 à 3 fois inférieurs aux freelances européens, et une expertise reconnue en automatisation IA.",
-          "heroImage": {
-            "src": "/images/blog/choisir-developpeur-no-code-madagascar.webp",
-            "alt": "Développeur no-code à Madagascar - interface de développement Bubble et Webflow"
-          },
-          "showcase": [
-            {
-              "src": "/images/projects/scalapp-dashboard-gestion-investissements.png",
-              "alt": "Dashboard de gestion d'investissements développé en no-code avec Bubble - ScalApp Madagascar",
-              "title": "ScalApp — Dashboard Bubble",
-              "description": "Tableau de bord d'investissement avec graphiques et suivi opérationnel en temps réel."
-            },
-            {
-              "src": "/images/projects/immoprive-marketplace-immobiliere.png",
-              "alt": "Marketplace immobilière no-code Bubble avec paiement intégré - ImmoPrive",
-              "title": "ImmoPrive — Marketplace Bubble",
-              "description": "Plateforme de mise en relation acheteurs-vendeurs avec paiement intégré."
-            },
-            {
-              "src": "/images/projects/factumation-logiciel-facturation.png",
-              "alt": "Logiciel SaaS de facturation gratuit développé avec Claude Code et Next.js - Factumation",
-              "title": "Factumation — SaaS Claude Code",
-              "description": "Logiciel de facturation gratuit pour freelances, développé avec l'IA Claude Code."
-            },
-            {
-              "src": "/images/projects/scraping-flowremote-automatisation-emploi.png",
-              "alt": "Automatisation N8N scraping offres emploi remote - FlowRemote Madagascar",
-              "title": "FlowRemote — Automatisation N8N",
-              "description": "Scraping automatisé des offres d'emploi remote avec filtrage intelligent et envoi email."
-            }
-          ],
-          "sections": [
-            {
-              "title": "Qu'est-ce que le no-code ?",
-              "content": "Le no-code est une méthode de développement qui permet de créer des applications, des sites web et des automatisations sans écrire de code source. Les plateformes no-code utilisent des interfaces visuelles de type glisser-déposer, des connecteurs prêts à l'emploi et des bases de données intégrées.\n\nEn 2026, le marché mondial du no-code et low-code représente plus de 66 milliards de dollars, avec une croissance annuelle de 32,7 % (source : Fortune Business Insights). Selon Gartner, 70 % des nouvelles applications d'entreprise utiliseront des technologies no-code ou low-code d'ici fin 2026, contre moins de 25 % en 2020.\n\nLe no-code réduit le temps de développement jusqu'à 90 % par rapport aux méthodes traditionnelles. Un projet qui prenait 6 à 8 mois en développement classique se réalise en 3 à 8 semaines avec les bons outils no-code."
-            },
-            {
-              "title": "No-code vs low-code vs développement traditionnel",
-              "content": "**No-code** — Aucune compétence en programmation requise. Idéal pour les MVP, sites vitrine, applications métier simples, automatisations. Outils : Bubble, Webflow, Glide, Adalo. Délai moyen : 2 à 6 semaines. Coût : 500€ à 5 000€.\n\n**Low-code** — Combine interfaces visuelles et portions de code pour plus de flexibilité. Adapté aux applications complexes nécessitant des intégrations API avancées ou une logique métier spécifique. Outils : Retool, OutSystems, Next.js + Supabase. Délai moyen : 4 à 12 semaines. Coût : 2 000€ à 15 000€.\n\n**Développement traditionnel** — Code écrit intégralement par des développeurs. Nécessaire pour les produits à très haute performance, les applications temps réel ou les systèmes embarqués. Technologies : React, Node.js, Python, Java. Délai moyen : 3 à 12 mois. Coût : 10 000€ à 100 000€+.\n\nLes entreprises qui adoptent le no-code réduisent leurs coûts de développement de 70 % en moyenne et libèrent leurs équipes IT pour se concentrer sur les projets à forte valeur ajoutée. Pour approfondir ce sujet, consultez notre [guide no-code vs low-code pour les entreprises](/blog/no-code-vs-low-code-guide-entreprises-malgaches)."
-            },
-            {
-              "title": "Pourquoi choisir un développeur no-code à Madagascar ?",
-              "content": "Madagascar est devenu un hub technologique émergent pour l'externalisation de services digitaux. En tant que développeur no-code basé à Antananarivo, je combine une expertise technique de niveau international avec des tarifs jusqu'à 3 fois plus compétitifs que les freelances européens.\n\nLa maîtrise du français et le fuseau horaire GMT+3 facilitent la collaboration en temps réel avec les entreprises françaises et européennes. Plus de 4 ans d'expérience dans le développement no-code pour des clients en France, aux États-Unis et à Madagascar.\n\n71 % des entreprises utilisant le no-code rapportent une réduction du temps de développement d'au moins 50 % par rapport aux méthodes traditionnelles (source : Adalo, 2025). En externalisant à Madagascar, vous cumulez cet avantage avec des tarifs parmi les plus compétitifs du marché francophone."
-            },
-            {
-              "title": "Mes outils no-code de prédilection",
-              "content": "**Bubble** — Référence mondiale pour les applications web complexes : marketplaces, dashboards, SaaS, CRM personnalisés. Bubble permet de créer des applications complètes avec base de données, logique métier et intégrations API. En 2026, Bubble reste le leader pour le prototypage rapide de MVP et le déploiement d'applications évolutives.\n\n**Webflow** — Meilleure solution pour les sites vitrine premium, les landing pages à haute conversion et les blogs d'entreprise. Design pixel-perfect avec animations fluides et CMS intégré. Webflow génère un code propre et optimisé pour le SEO.\n\n**N8N** — Plateforme open-source d'automatisation des workflows : connexion entre vos outils (CRM, email, facturation), scraping de données, notifications automatiques et agents IA. N8N offre un contrôle total sur vos données grâce à l'auto-hébergement.\n\n**Supabase** — Pour les backends robustes quand le no-code atteint ses limites. Base de données PostgreSQL, authentification, stockage fichiers et fonctions serverless. Alternative open-source à Firebase adoptée par des milliers de développeurs."
-            },
-            {
-              "title": "Types de projets réalisés",
-              "content": "**Marketplaces** — Plateformes de mise en relation acheteurs-vendeurs avec paiement intégré (ImmoPrive).\n\n**Dashboards de gestion** — Tableaux de bord d'investissement et de suivi opérationnel (ScalApp).\n\n**Applications de gestion locative** — Suivi des baux, paiements et maintenance pour propriétaires (Yalee Creek Ranch).\n\n**Applications IA** — Apps de rencontre avec algorithme de matching intelligent (Alchiimy).\n\n**Logiciels SaaS** — Facturation gratuite pour freelances et PME (Factumation).\n\n**Automatisations IA** — Agents intelligents avec N8N, scraping automatisé, notifications temps réel et workflows connectés à ChatGPT et Claude."
-            },
-            {
-              "title": "Développement AI-driven : construire plus vite avec Claude Code",
-              "content": "En 2026, le développement no-code ne se limite plus aux interfaces visuelles. J'utilise Claude Code, l'assistant IA d'Anthropic, pour accélérer chaque étape du développement : génération de code, debugging, optimisation SEO et création de workflows complexes.\n\n**Factumation** — Ce logiciel SaaS de facturation gratuit pour freelances et PME a été entièrement développé avec Claude Code. De la conception de la base de données à l'interface utilisateur, l'IA a permis de livrer un produit complet en une fraction du temps habituel. Résultat : une application fonctionnelle avec génération PDF, gestion clients et tableau de bord.\n\n**Artigen** — Générateur d'images IA construit avec Next.js et FastAPI, capable de gérer 100 utilisateurs simultanés sur un hébergement gratuit. Ce projet démontre comment combiner le no-code pour le frontend et l'IA pour le backend.\n\n**Ce portfolio** — Le site que vous consultez a été construit avec Next.js 16, Tailwind CSS, GSAP et Supabase, assisté par Claude Code à chaque étape. Score PageSpeed : 100/100 sur desktop, 98/100 sur mobile. 73 pages générées avec un SEO score parfait.\n\nLe développement assisté par IA permet de diviser les délais par 3 tout en maintenant une qualité de code professionnelle. Pour en savoir plus, consultez mon article : [Claude Code — Développer avec l'IA](/blog/claude-code-developper-avec-ia). Voir aussi : [Comment choisir son développeur no-code à Madagascar](/blog/comment-choisir-developpeur-no-code-madagascar)."
-            },
-            {
-              "title": "Mon processus de travail",
-              "content": "**1. Appel découverte (gratuit)** — On définit vos besoins, vos objectifs et le périmètre du projet. Durée : 30 minutes, sans engagement.\n\n**2. Maquettage Figma** — Prototype interactif pour valider le design avant le développement. Vous visualisez chaque écran et validez l'expérience utilisateur.\n\n**3. Développement** — Construction de l'application avec Bubble, Webflow ou Next.js selon le besoin. Tests continus et démonstrations régulières.\n\n**4. Livraison & support** — Mise en production, formation à l'utilisation et 30 jours de support technique inclus. Maintenance optionnelle disponible."
-            }
-          ],
-          "features": [
-            { "icon": "rocket_launch", "title": "Livraison rapide", "description": "3 à 8 semaines selon la complexité" },
-            { "icon": "savings", "title": "Tarifs compétitifs", "description": "2-3x moins cher qu'en Europe" },
-            { "icon": "translate", "title": "Français natif", "description": "Communication fluide garantie" },
-            { "icon": "support_agent", "title": "Support 30 jours", "description": "Inclus après chaque livraison" },
-            { "icon": "verified", "title": "Qualité internationale", "description": "+20 projets livrés avec succès" },
-            { "icon": "schedule", "title": "Fuseau GMT+3", "description": "Collaboration temps réel avec l'Europe" }
-          ],
-          "faq": [
-            {
-              "question": "Quelle est la différence entre no-code et low-code ?",
-              "answer": "Le no-code permet de créer des applications sans écrire de code, via des interfaces visuelles comme Bubble ou Webflow. Le low-code combine des interfaces visuelles avec des portions de code pour plus de flexibilité, par exemple avec Retool ou Next.js + Supabase. Je maîtrise les deux approches et vous conseille la meilleure option selon la complexité de votre projet."
-            },
-            {
-              "question": "Combien coûte un projet no-code à Madagascar ?",
-              "answer": "Un site Webflow démarre à partir de 500€, une application Bubble entre 1 500€ et 5 000€ selon la complexité. Une automatisation N8N coûte entre 300€ et 1 500€. Mes tarifs sont 2 à 3 fois plus compétitifs qu'un freelance basé en France, pour une qualité équivalente."
-            },
-            {
-              "question": "Travaillez-vous avec des clients en France ?",
-              "answer": "Oui, la majorité de mes clients sont basés en France et en Europe. Le fuseau horaire Madagascar (GMT+3) permet une collaboration en temps réel pendant les heures de bureau européennes. Communication via Slack, Notion et Google Meet."
-            },
-            {
-              "question": "Quels sont vos délais de livraison ?",
-              "answer": "Un site Webflow est livré en 1 à 2 semaines. Une application Bubble complète prend 4 à 8 semaines. Une automatisation N8N se met en place en 3 à 5 jours. Je m'engage systématiquement sur un calendrier précis dès la validation du devis."
-            },
-            {
-              "question": "Quels types de projets conviennent au no-code ?",
-              "answer": "Le no-code convient parfaitement aux MVP et prototypes, sites vitrine et e-commerce, applications de gestion interne (CRM, ERP), marketplaces, dashboards, automatisations de processus métier et chatbots IA. Pour les applications nécessitant des performances temps réel ou un traitement de données massif, le low-code ou le code traditionnel reste préférable."
-            },
-            {
-              "question": "Le no-code est-il sécurisé pour les données sensibles ?",
-              "answer": "Oui. Les plateformes no-code comme Bubble et Supabase intègrent le chiffrement SSL, l'authentification multi-facteurs et le contrôle d'accès par rôles (RBAC). Pour N8N, l'auto-hébergement garantit que vos données restent sur vos propres serveurs, sans transiter par des services tiers."
-            },
-            {
-              "question": "Pourquoi externaliser le développement no-code à Madagascar ?",
-              "answer": "Madagascar combine trois avantages pour les entreprises francophones : des développeurs qualifiés maîtrisant le français, des tarifs 2 à 3 fois inférieurs aux prix européens, et un fuseau horaire (GMT+3) compatible avec les horaires de bureau en France. Le pays compte une communauté tech en croissance, formée aux standards internationaux."
-            }
-          ]
-        }
-      },
-      {
         "icon": "precision_manufacturing",
         "title": "Expert Automatisation & N8N à Madagascar",
         "description": "Workflows d'automatisation sur mesure avec N8N. Connexion de vos outils métier, scraping, agents IA et élimination du travail manuel répétitif.",
@@ -214,12 +122,36 @@
             }
           ],
           "features": [
-            { "icon": "all_inclusive", "title": "+400 intégrations", "description": "Gmail, Slack, Stripe, Airtable..." },
-            { "icon": "lock", "title": "Self-hosted", "description": "Vos données restent sur votre serveur" },
-            { "icon": "smart_toy", "title": "Agents IA intégrés", "description": "Claude, GPT dans vos workflows" },
-            { "icon": "schedule", "title": "24/7 automatique", "description": "Workflows qui tournent non-stop" },
-            { "icon": "savings", "title": "ROI immédiat", "description": "Économisez des heures chaque semaine" },
-            { "icon": "description", "title": "Documentation", "description": "Chaque workflow est documenté" }
+            {
+              "icon": "all_inclusive",
+              "title": "+400 intégrations",
+              "description": "Gmail, Slack, Stripe, Airtable..."
+            },
+            {
+              "icon": "lock",
+              "title": "Self-hosted",
+              "description": "Vos données restent sur votre serveur"
+            },
+            {
+              "icon": "smart_toy",
+              "title": "Agents IA intégrés",
+              "description": "Claude, GPT dans vos workflows"
+            },
+            {
+              "icon": "schedule",
+              "title": "24/7 automatique",
+              "description": "Workflows qui tournent non-stop"
+            },
+            {
+              "icon": "savings",
+              "title": "ROI immédiat",
+              "description": "Économisez des heures chaque semaine"
+            },
+            {
+              "icon": "description",
+              "title": "Documentation",
+              "description": "Chaque workflow est documenté"
+            }
           ],
           "faq": [
             {
@@ -228,7 +160,7 @@
             },
             {
               "question": "Combien coûte un workflow N8N ?",
-              "answer": "Un workflow simple (2-3 étapes) démarre à 200€. Un système d'automatisation complexe (scraping + traitement + distribution) coûte entre 500€ et 2 000€. Chaque devis est adapté à la complexité réelle du projet."
+              "answer": "Workflow Starter (1 workflow simple : scraping, notification, sync) à partir de 500€. Pro (3-5 workflows connectés + dashboard) à 1 000€. Agent IA (Claude/GPT + n8n + intégrations CRM/email) à 1 500€. Voir la grille complète sur la page d'accueil."
             },
             {
               "question": "Mes données sont-elles sécurisées ?",
@@ -237,65 +169,6 @@
             {
               "question": "Peut-on combiner N8N avec de l'intelligence artificielle ?",
               "answer": "Oui. J'intègre régulièrement des agents IA (Claude, GPT) dans les workflows N8N pour le traitement de texte, la classification automatique, la génération de contenu et l'analyse de données."
-            }
-          ]
-        }
-      },
-      {
-        "icon": "terminal",
-        "title": "Développeur Low-Code à Madagascar",
-        "description": "Applications sur mesure combinant la rapidité du no-code avec la puissance du code. Next.js, Supabase, Claude Code et intégrations API avancées.",
-        "slug": "developpeur-low-code-madagascar",
-        "color": "blue",
-        "cardTitle": "Low-Code (Next.js + IA)",
-        "cardDescription": "Apps sur mesure mêlant rapidité no-code et puissance du code, avec IA intégrée.",
-        "isLanding": true,
-        "seoTitle": "Développeur Low-Code Madagascar | Applications Sur Mesure — Manda",
-        "seoDescription": "Développeur low-code à Madagascar. Applications sur mesure Next.js, Supabase et IA. Rapidité du no-code, puissance du code. Devis gratuit.",
-        "landing": {
-          "heroText": "Le no-code ne suffit pas toujours. Quand votre projet nécessite des fonctionnalités avancées, des performances optimales ou des intégrations complexes, le low-code est la solution. Basé à Antananarivo, je combine la rapidité du développement visuel avec la puissance du code sur mesure.",
-          "sections": [
-            {
-              "title": "No-Code vs Low-Code : quelle différence ?",
-              "content": "Le no-code utilise exclusivement des interfaces visuelles (glisser-déposer) pour créer des applications. Le low-code combine ces outils visuels avec du code personnalisé pour aller plus loin.\n\nConcrètement, le low-code permet de gérer des logiques métier complexes, d'optimiser les performances et d'intégrer des services que le no-code seul ne peut pas atteindre. C'est le meilleur des deux mondes."
-            },
-            {
-              "title": "Quand choisir le low-code ?",
-              "content": "**Performances élevées** — Votre application doit charger en moins d'une seconde et offrir une expérience fluide.\n\n**Intégrations complexes** — Vous avez besoin de connecter des API avancées ou de logique métier sur mesure.\n\n**Design pixel-perfect** — L'expérience utilisateur doit être irréprochable, au pixel près.\n\n**SEO optimal** — Le no-code pur est limité en référencement. Le low-code avec Next.js offre un SEO de premier plan.\n\n**Scalabilité** — Votre projet doit évoluer et supporter des milliers d'utilisateurs simultanés."
-            },
-            {
-              "title": "Mon stack low-code",
-              "content": "**Next.js** — Framework React pour des applications web ultra-rapides avec rendu serveur (SSR/SSG). Idéal pour le SEO et les performances.\n\n**Supabase** — Backend complet : base de données PostgreSQL, authentification, stockage fichiers et API temps réel.\n\n**Claude Code** — Développement assisté par IA pour accélérer l'écriture de code tout en maintenant la qualité.\n\n**Vercel** — Déploiement instantané, CDN mondial et monitoring intégré.\n\n**Tailwind CSS** — Design system responsive pour des interfaces modernes et cohérentes."
-            },
-            {
-              "title": "Projets low-code réalisés",
-              "content": "**Artigen** — Générateur d'images IA (Next.js + FastAPI) capable de gérer 100 utilisateurs simultanés sur un hébergement gratuit.\n\n**Factumation** — Logiciel de facturation complet développé avec Claude Code, démontrant la puissance du développement assisté par IA.\n\n**Ce portfolio** — Site construit avec Next.js 16, Tailwind v4, GSAP et Supabase. 56 pages générées statiquement avec un score SEO optimisé."
-            }
-          ],
-          "features": [
-            { "icon": "bolt", "title": "Ultra performant", "description": "Chargement < 1 seconde garanti" },
-            { "icon": "search", "title": "SEO optimal", "description": "Rendu serveur Next.js pour Google" },
-            { "icon": "api", "title": "API illimitées", "description": "Intégrations sans limites" },
-            { "icon": "trending_up", "title": "Scalable", "description": "De 10 à 100 000 utilisateurs" },
-            { "icon": "smart_toy", "title": "IA intégrée", "description": "Claude Code et LLMs embarqués" },
-            { "icon": "savings", "title": "Coût optimisé", "description": "2-3x moins cher qu'en Europe" }
-          ],
-          "faq": [
-            {
-              "question": "Le low-code est-il plus cher que le no-code ?",
-              "answer": "Légèrement, car il implique une part de développement traditionnel. Mais le rapport qualité-prix est excellent : vous obtenez des performances et une flexibilité impossibles en no-code pur, tout en restant bien en dessous du coût d'un développement traditionnel complet."
-            },
-            {
-              "question": "Puis-je migrer mon application no-code vers du low-code ?",
-              "answer": "Oui. Si votre application Bubble ou Webflow atteint ses limites, je peux la migrer vers un stack low-code (Next.js + Supabase) tout en préservant vos données et en améliorant les performances."
-            },
-            {
-              "question": "Quels sont les avantages de travailler avec un développeur low-code à Madagascar ?",
-              "answer": "Expertise technique de niveau international, tarifs 2-3x plus compétitifs que le marché européen, communication en français, fuseau horaire compatible (GMT+3) et collaboration transparente via Slack et Google Meet."
-            },
-            {
-              "question": "Combien de temps pour développer une application low-code ?",
-              "answer": "Un MVP fonctionnel est livré en 3 à 6 semaines. Une application complète avec authentification, dashboard et intégrations prend 6 à 12 semaines selon la complexité."
             }
           ]
         }
@@ -312,7 +185,7 @@
         "seoTitle": "Développeur React / Next.js à Madagascar — #1 Freelance Fullstack",
         "seoDescription": "Développeur React et Next.js freelance #1 à Antananarivo, Madagascar. Applications web performantes, SSR, TypeScript, Supabase. TJM compétitif pour le marché EU/US, 20+ projets livrés. Devis gratuit sous 24h.",
         "landing": {
-          "heroText": "Vous cherchez un développeur React / Next.js fiable et compétitif pour votre application web ? Basé à Antananarivo, je conçois des applications fullstack JavaScript performantes — du MVP au SaaS en production. Plus de 20 projets livrés, un TJM 2 à 3 fois inférieur aux freelances européens, et une expertise confirmée sur l'écosystème React moderne.",
+          "heroText": "Vous cherchez un développeur React / Next.js fiable et compétitif pour votre application web ? Basé à Antananarivo, je conçois des applications fullstack JavaScript performantes — du MVP au SaaS en production. Plus de 20 projets livrés, un TJM jusqu'à 2 fois inférieur aux freelances européens, et une expertise confirmée sur l'écosystème React moderne.",
           "heroImage": {
             "src": "/images/projects/factumation-logiciel-facturation.png",
             "alt": "Application web React Next.js développée par Manda - Factumation SaaS"
@@ -358,7 +231,7 @@
             },
             {
               "title": "Pourquoi un développeur React à Madagascar ?",
-              "content": "Madagascar est devenu un hub tech émergent pour l'externalisation de services digitaux qualifiés. En tant que développeur React / Next.js basé à Antananarivo, j'offre :\n\n**Tarifs compétitifs** — TJM 2 à 3 fois inférieur aux freelances européens, pour une qualité de code équivalente. Un projet qui coûte 15 000€ à 30 000€ avec un freelance parisien revient à 5 000€ à 12 000€ avec moi.\n\n**Français natif** — Communication fluide, pas de barrière linguistique. Réunions, documentation et code reviews en français.\n\n**Fuseau horaire GMT+3** — Compatible avec les horaires de bureau européens (9h-18h Paris = 11h-20h Antananarivo). Collaboration en temps réel via Slack, Notion et Google Meet.\n\n**Qualité internationale** — 20+ projets livrés avec un score PageSpeed de 98-100/100. Code TypeScript typé, tests, CI/CD, documentation technique.\n\n**Développement assisté par IA** — J'utilise Claude Code et GitHub Copilot pour accélérer le développement tout en maintenant une qualité de code professionnelle. Un MVP qui prenait 6 semaines se livre en 2-3 semaines."
+              "content": "Madagascar est devenu un hub tech émergent pour l'externalisation de services digitaux qualifiés. En tant que développeur React / Next.js basé à Antananarivo, j'offre :\n\n**Tarifs compétitifs** — TJM 350€/jour, jusqu'à 2 fois inférieur aux freelances européens (400-600€/j), pour une qualité de code équivalente. Un site Next.js qui coûte 1 500€ à 5 000€ avec un freelance parisien démarre à 500€ chez moi (palier Starter). Un MVP SaaS qui coûte 8 000€ à 25 000€ à Paris démarre à 2 000€ chez moi.\n\n**Français natif** — Communication fluide, pas de barrière linguistique. Réunions, documentation et code reviews en français.\n\n**Fuseau horaire GMT+3** — Compatible avec les horaires de bureau européens (9h-18h Paris = 11h-20h Antananarivo). Collaboration en temps réel via Slack, Notion et Google Meet.\n\n**Qualité internationale** — 20+ projets livrés avec un score PageSpeed de 98-100/100. Code TypeScript typé, tests, CI/CD, documentation technique.\n\n**Développement assisté par IA** — J'utilise Claude Code et GitHub Copilot pour accélérer le développement tout en maintenant une qualité de code professionnelle. Un MVP qui prenait 6 semaines se livre en 2-3 semaines."
             },
             {
               "title": "Types de projets React / Next.js",
@@ -373,18 +246,102 @@
               "content": "**PageSpeed** — Score moyen de mes projets : 98/100 mobile, 100/100 desktop. LCP < 1 seconde.\n\n**SEO** — Rendu serveur Next.js, métadonnées dynamiques, sitemap automatique, schema.org. Score SEO 100/100 sur Lighthouse.\n\n**Temps de livraison** — MVP en 2-4 semaines. Application complète en 6-10 semaines.\n\n**Disponibilité** — 99.9% uptime sur Vercel CDN. Déploiement automatique à chaque commit.\n\n**Code quality** — TypeScript strict, ESLint, Prettier, commits conventionnels. Code maintenable et documenté."
             }
           ],
+          "comparisonTable": {
+            "title": "Next.js vs No-Code (Bubble, Webflow) : ce que vous gagnez",
+            "intro": "J'ai livré 3 ans en no-code avant de revenir au code pur. Voici pourquoi ce pivot, sur les critères qui comptent vraiment pour un projet sérieux en 2026.",
+            "headers": [
+              "Critère",
+              "No-Code (Bubble / Webflow)",
+              "Next.js (mon choix)"
+            ],
+            "rows": [
+              {
+                "criterion": "SEO technique",
+                "noCode": "HTML rendu côté client, balises limitées, schema partiel",
+                "nextjs": "SSR/SSG natif, métadonnées dynamiques, sitemap auto, schema.org complet",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "GEO — citation par les IA (ChatGPT, Claude, Perplexity)",
+                "noCode": "Crawlers IA galèrent sur le rendu JS, contenu peu cité",
+                "nextjs": "HTML SSR servi direct, contenu structuré indexable, llms.txt facile",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Core Web Vitals (LCP, INP, CLS)",
+                "noCode": "LCP 2-4s, JS bundle lourd, score PageSpeed 50-75",
+                "nextjs": "LCP < 1s, code-splitting auto, score PageSpeed 95-100",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Personnalisation",
+                "noCode": "Bloqué par les capacités de la plateforme",
+                "nextjs": "Aucun plafond, code source 100% maîtrisé",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Coût total sur 3 ans",
+                "noCode": "Abonnement Bubble/Webflow récurrent (600-2400€/an) + plugins",
+                "nextjs": "Hébergement Vercel ou Render (0-50€/mois), pas de licence",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Ownership & vendor lock-in",
+                "noCode": "Migration impossible, données prisonnières de la plateforme",
+                "nextjs": "Code et base de données 100% à vous, déployable partout",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Scaling > 10k utilisateurs",
+                "noCode": "Plafond technique vite atteint, perfs qui s'effondrent",
+                "nextjs": "Scaling cloud illimité, edge functions, CDN mondial",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Time-to-market initial (MVP)",
+                "noCode": "2-4 semaines (avantage historique du no-code)",
+                "nextjs": "1-3 semaines avec Claude Code en copilote — équivalent voire mieux",
+                "winner": "tie"
+              }
+            ],
+            "conclusion": "Le no-code reste pertinent pour des prototypes très simples. Pour tout projet pensé pour durer, croître ou être trouvé sur Google et cité par les IA, Next.js gagne sur tous les critères qui comptent."
+          },
           "features": [
-            { "icon": "bolt", "title": "LCP < 1 seconde", "description": "Next.js SSR + Vercel CDN mondial" },
-            { "icon": "search", "title": "SEO 100/100", "description": "Rendu serveur, métadonnées, schema.org" },
-            { "icon": "savings", "title": "TJM compétitif", "description": "2-3x moins cher qu'en Europe" },
-            { "icon": "code", "title": "TypeScript strict", "description": "Code typé, testé, maintenable" },
-            { "icon": "smart_toy", "title": "IA intégrée", "description": "Claude Code, GPT dans vos apps" },
-            { "icon": "schedule", "title": "Fuseau GMT+3", "description": "Temps réel avec l'Europe" }
+            {
+              "icon": "bolt",
+              "title": "LCP < 1 seconde",
+              "description": "Next.js SSR + Vercel CDN mondial"
+            },
+            {
+              "icon": "search",
+              "title": "SEO 100/100",
+              "description": "Rendu serveur, métadonnées, schema.org"
+            },
+            {
+              "icon": "savings",
+              "title": "TJM compétitif",
+              "description": "Jusqu'à 2x moins cher qu'en Europe"
+            },
+            {
+              "icon": "code",
+              "title": "TypeScript strict",
+              "description": "Code typé, testé, maintenable"
+            },
+            {
+              "icon": "smart_toy",
+              "title": "IA intégrée",
+              "description": "Claude Code, GPT dans vos apps"
+            },
+            {
+              "icon": "schedule",
+              "title": "Fuseau GMT+3",
+              "description": "Temps réel avec l'Europe"
+            }
           ],
           "faq": [
             {
               "question": "Combien coûte un projet React / Next.js à Madagascar ?",
-              "answer": "Un site vitrine Next.js démarre à 1 500€. Un MVP SaaS complet avec authentification et dashboard coûte entre 3 000€ et 8 000€. Une application complexe avec intégrations IA et automatisations se situe entre 8 000€ et 15 000€. C'est 2 à 3 fois moins cher qu'un freelance basé en France pour une qualité équivalente."
+              "answer": "Un site Next.js démarre à 500€ (Starter, 5 pages), 1 000€ (Pro, 10 pages design custom) ou 1 500€ (Avancé, multilingue + CMS). Un MVP SaaS démarre à 2 000€ (Starter avec auth + 1 feature core), 4 000€ pour la version Pro avec Stripe et admin. Au-delà c'est sur devis. Le détail complet des paliers est sur la home, section Tarifs."
             },
             {
               "question": "Quelle est la différence entre React et Next.js ?",
@@ -425,7 +382,7 @@
         "seoTitle": "Développeur Next.js & Supabase à Madagascar | SaaS Sur Mesure — Manda",
         "seoDescription": "Développeur Next.js et Supabase freelance à Madagascar. Applications SaaS complètes : auth, PostgreSQL, API temps réel, dashboard. Alternative Firebase open-source. Devis gratuit.",
         "landing": {
-          "heroText": "Vous voulez lancer un SaaS ou une application web avec un backend solide, sans exploser votre budget ? Next.js + Supabase est le stack le plus efficace en 2026 pour construire des produits scalables. Basé à Antananarivo, je conçois des applications complètes — authentification, base de données, API temps réel — avec des tarifs 2 à 3 fois inférieurs aux freelances européens.",
+          "heroText": "Vous voulez lancer un SaaS ou une application web avec un backend solide, sans exploser votre budget ? Next.js + Supabase est le stack le plus efficace en 2026 pour construire des produits scalables. Basé à Antananarivo, je conçois des applications complètes — authentification, base de données, API temps réel — avec des tarifs jusqu'à 2 fois inférieurs aux freelances européens.",
           "heroImage": {
             "src": "/images/projects/factumation-logiciel-facturation.png",
             "alt": "Application SaaS développée avec Next.js et Supabase - Factumation"
@@ -471,7 +428,7 @@
             },
             {
               "title": "Pourquoi un développeur Next.js + Supabase à Madagascar ?",
-              "content": "C'est mon stack quotidien — chaque projet que je livre depuis fin 2025 utilise Next.js + Supabase. Ce portfolio, Factumation, le système de tracking visiteurs, tout est construit sur ce stack.\n\n**Expertise confirmée** — 15+ projets livrés avec Next.js + Supabase. Row Level Security, migrations, Edge Functions, Realtime — je maîtrise chaque composant.\n\n**Tarifs compétitifs** — Un SaaS MVP qui coûte 15 000€ à 25 000€ avec un freelance parisien revient à 4 000€ à 10 000€ avec moi. Même qualité de code, TypeScript strict, documentation complète.\n\n**Développement IA-assisté** — J'utilise Claude Code pour accélérer chaque étape. Un MVP qui prenait 6 semaines se livre en 2-3 semaines.\n\n**Fuseau GMT+3** — Collaboration en temps réel avec l'Europe pendant les heures de bureau."
+              "content": "C'est mon stack quotidien — chaque projet que je livre depuis fin 2025 utilise Next.js + Supabase. Ce portfolio, Factumation, le système de tracking visiteurs, tout est construit sur ce stack.\n\n**Expertise confirmée** — 15+ projets livrés avec Next.js + Supabase. Row Level Security, migrations, Edge Functions, Realtime — je maîtrise chaque composant.\n\n**Tarifs compétitifs** — Un SaaS MVP qui coûte 8 000€ à 25 000€ avec un freelance parisien démarre à 2 000€ chez moi (palier Starter, auth + 1 feature core + dashboard). 4 000€ pour la version Pro avec Stripe et admin. Même qualité de code, TypeScript strict, documentation complète.\n\n**Développement IA-assisté** — J'utilise Claude Code pour accélérer chaque étape. Un MVP qui prenait 6 semaines se livre en 2-3 semaines.\n\n**Fuseau GMT+3** — Collaboration en temps réel avec l'Europe pendant les heures de bureau."
             },
             {
               "title": "Sécurité et bonnes pratiques",
@@ -483,17 +440,41 @@
             }
           ],
           "features": [
-            { "icon": "database", "title": "PostgreSQL", "description": "Base de données relationnelle, pas de NoSQL limité" },
-            { "icon": "lock", "title": "RLS intégré", "description": "Sécurité au niveau des lignes" },
-            { "icon": "sync", "title": "Temps réel", "description": "Supabase Realtime pour les données live" },
-            { "icon": "key", "title": "Auth complète", "description": "Email, OAuth, magic links, 2FA" },
-            { "icon": "cloud_upload", "title": "Stockage", "description": "Upload fichiers et images intégré" },
-            { "icon": "savings", "title": "Open-source", "description": "Pas de vendor lock-in, données portables" }
+            {
+              "icon": "database",
+              "title": "PostgreSQL",
+              "description": "Base de données relationnelle, pas de NoSQL limité"
+            },
+            {
+              "icon": "lock",
+              "title": "RLS intégré",
+              "description": "Sécurité au niveau des lignes"
+            },
+            {
+              "icon": "sync",
+              "title": "Temps réel",
+              "description": "Supabase Realtime pour les données live"
+            },
+            {
+              "icon": "key",
+              "title": "Auth complète",
+              "description": "Email, OAuth, magic links, 2FA"
+            },
+            {
+              "icon": "cloud_upload",
+              "title": "Stockage",
+              "description": "Upload fichiers et images intégré"
+            },
+            {
+              "icon": "savings",
+              "title": "Open-source",
+              "description": "Pas de vendor lock-in, données portables"
+            }
           ],
           "faq": [
             {
               "question": "Combien coûte un SaaS Next.js + Supabase ?",
-              "answer": "Un MVP SaaS avec authentification, dashboard et CRUD complet démarre à 3 000€. Une application complète avec intégrations tierces, automatisations et design custom se situe entre 6 000€ et 12 000€. C'est 2-3x moins cher qu'un développeur basé en France."
+              "answer": "Un MVP SaaS Starter (auth + 1 feature core + dashboard) démarre à 2 000€. Le palier Pro (auth + 3-4 features + Stripe + admin) coûte 4 000€. Au-delà (multi-rôles, IA intégrée, scaling cloud) c'est sur devis ou en TJM 350€/jour. Voir la grille complète sur la home."
             },
             {
               "question": "Supabase est-il fiable pour la production ?",
@@ -530,7 +511,7 @@
         "seoTitle": "Développeur Python & IA à Madagascar | FastAPI, Claude, GPT — Manda",
         "seoDescription": "Développeur Python et IA freelance à Antananarivo, Madagascar. FastAPI, Claude Code, GPT, automatisation, scraping, agents IA. Tarifs compétitifs. Devis gratuit.",
         "landing": {
-          "heroText": "Vous voulez intégrer l'intelligence artificielle dans votre produit ou automatiser des processus complexes avec Python ? Basé à Antananarivo, je développe des applications IA, des API performantes avec FastAPI, et des agents intelligents connectés à Claude et GPT. Plus de 20 projets livrés, tarifs 2-3x inférieurs aux freelances européens.",
+          "heroText": "Vous voulez intégrer l'intelligence artificielle dans votre produit ou automatiser des processus complexes avec Python ? Basé à Antananarivo, je développe des applications IA, des API performantes avec FastAPI, et des agents intelligents connectés à Claude et GPT. Plus de 20 projets livrés, tarifs jusqu'à 2x inférieurs aux freelances européens.",
           "heroImage": {
             "src": "/images/projects/artigen-generateur-images-ia.png",
             "alt": "Application IA développée en Python par Manda - Artigen générateur d'images"
@@ -576,7 +557,7 @@
             },
             {
               "title": "Pourquoi un développeur Python & IA à Madagascar ?",
-              "content": "**Expertise IA appliquée** — Je ne suis pas un data scientist théorique. Je construis des produits IA fonctionnels que les utilisateurs finaux utilisent vraiment. Chaque projet est livré avec une interface utilisateur, pas juste un notebook Jupyter.\n\n**Tarifs compétitifs** — Un projet IA qui coûte 10 000€ à 20 000€ avec un freelance parisien revient à 3 000€ à 8 000€ avec moi. L'IA ne devrait pas être réservée aux entreprises avec de gros budgets.\n\n**Développement IA-assisté** — J'utilise Claude Code quotidiennement pour écrire du code plus vite et plus propre. Un agent IA qui développe avec l'aide d'autres IA — c'est méta, mais c'est efficace.\n\n**Stack complet** — Python pour l'IA + Next.js pour le frontend + Supabase pour le backend + N8N pour l'automatisation. Un seul interlocuteur pour tout votre projet, pas 3 freelances différents.\n\n**Fuseau GMT+3** — Collaboration en temps réel avec l'Europe. Communication en français et en anglais."
+              "content": "**Expertise IA appliquée** — Je ne suis pas un data scientist théorique. Je construis des produits IA fonctionnels que les utilisateurs finaux utilisent vraiment. Chaque projet est livré avec une interface utilisateur, pas juste un notebook Jupyter.\n\n**Tarifs compétitifs** — Un Agent IA (Claude/GPT + n8n + intégrations) démarre à 1 500€ chez moi. Pour les projets plus complexes (multi-rôles, IA intégrée à votre SaaS, scaling) c'est sur devis ou en TJM 350€/jour. À comparer aux 5 000€ à 20 000€ d'un freelance parisien équivalent. L'IA ne devrait pas être réservée aux entreprises avec de gros budgets.\n\n**Développement IA-assisté** — J'utilise Claude Code quotidiennement pour écrire du code plus vite et plus propre. Un agent IA qui développe avec l'aide d'autres IA — c'est méta, mais c'est efficace.\n\n**Stack complet** — Python pour l'IA + Next.js pour le frontend + Supabase pour le backend + N8N pour l'automatisation. Un seul interlocuteur pour tout votre projet, pas 3 freelances différents.\n\n**Fuseau GMT+3** — Collaboration en temps réel avec l'Europe. Communication en français et en anglais."
             },
             {
               "title": "Cas d'usage IA pour les entreprises",
@@ -588,17 +569,41 @@
             }
           ],
           "features": [
-            { "icon": "smart_toy", "title": "Claude & GPT", "description": "Intégration native des meilleurs LLMs" },
-            { "icon": "bolt", "title": "FastAPI", "description": "API Python ultra-rapides" },
-            { "icon": "auto_awesome", "title": "Agents IA", "description": "Agents autonomes avec LangChain" },
-            { "icon": "manage_search", "title": "Scraping", "description": "Extraction de données automatisée" },
-            { "icon": "psychology", "title": "ML appliqué", "description": "Recommandations, classification, NLP" },
-            { "icon": "savings", "title": "Tarifs compétitifs", "description": "2-3x moins cher qu'en Europe" }
+            {
+              "icon": "smart_toy",
+              "title": "Claude & GPT",
+              "description": "Intégration native des meilleurs LLMs"
+            },
+            {
+              "icon": "bolt",
+              "title": "FastAPI",
+              "description": "API Python ultra-rapides"
+            },
+            {
+              "icon": "auto_awesome",
+              "title": "Agents IA",
+              "description": "Agents autonomes avec LangChain"
+            },
+            {
+              "icon": "manage_search",
+              "title": "Scraping",
+              "description": "Extraction de données automatisée"
+            },
+            {
+              "icon": "psychology",
+              "title": "ML appliqué",
+              "description": "Recommandations, classification, NLP"
+            },
+            {
+              "icon": "savings",
+              "title": "Tarifs compétitifs",
+              "description": "Jusqu'à 2x moins cher qu'en Europe"
+            }
           ],
           "faq": [
             {
               "question": "Combien coûte un projet IA avec Python ?",
-              "answer": "Un chatbot IA simple connecté à votre documentation démarre à 1 500€. Un agent IA complexe avec scraping, analyse et prise de décision coûte entre 3 000€ et 8 000€. Une application IA complète avec interface utilisateur se situe entre 5 000€ et 15 000€."
+              "answer": "Un Agent IA (Claude/GPT + n8n + intégrations CRM/email) démarre à 1 500€ — palier visible dans la grille Tarifs de la home. Pour les projets plus complexes (multi-rôles, IA intégrée à votre SaaS, scaling cloud) c'est sur devis ou en TJM 350€/jour, minimum 5 jours."
             },
             {
               "question": "Faut-il de grosses données pour utiliser l'IA ?",
@@ -647,6 +652,98 @@
         "color": "blue"
       }
     ]
+  },
+  "pricing": {
+    "title": "TARIFS",
+    "subtitle": "Du site simple au SaaS sur mesure. Tarifs publiés, ajustés au scope du projet.",
+    "lines": [
+      {
+        "icon": "code",
+        "color": "emerald",
+        "title": "Sites Next.js",
+        "description": "Pure Next.js, perf 95+, SEO-ready",
+        "tiers": [
+          {
+            "name": "Starter",
+            "price": "500 €",
+            "delay": "≈ 1 semaine",
+            "details": "5 pages, formulaire, SEO de base, mobile-first"
+          },
+          {
+            "name": "Pro",
+            "price": "1 000 €",
+            "delay": "1-2 semaines",
+            "details": "10 pages, design custom, blog, animations légères",
+            "featured": true
+          },
+          {
+            "name": "Avancé",
+            "price": "1 500 €",
+            "delay": "2-3 semaines",
+            "details": "Multilingue, CMS, intégrations API"
+          }
+        ]
+      },
+      {
+        "icon": "deployed_code",
+        "color": "blue",
+        "title": "MVP SaaS",
+        "description": "Next.js + Supabase, sortie en semaines",
+        "tiers": [
+          {
+            "name": "Starter",
+            "price": "2 000 €",
+            "delay": "2 semaines",
+            "details": "Auth + 1 feature core + dashboard"
+          },
+          {
+            "name": "Pro",
+            "price": "4 000 €",
+            "delay": "3-4 semaines",
+            "details": "Auth + 3-4 features + Stripe + admin",
+            "featured": true
+          },
+          {
+            "name": "Premium",
+            "price": "Sur devis",
+            "delay": "1-2 mois",
+            "details": "Multi-rôles, IA intégrée, scaling cloud"
+          }
+        ]
+      },
+      {
+        "icon": "hub",
+        "color": "purple",
+        "title": "Automatisation n8n & IA",
+        "description": "Workflows et agents IA sur mesure",
+        "tiers": [
+          {
+            "name": "Starter",
+            "price": "500 €",
+            "delay": "≈ 1 semaine",
+            "details": "1 workflow (scraping, notif, sync)"
+          },
+          {
+            "name": "Pro",
+            "price": "1 000 €",
+            "delay": "1-2 semaines",
+            "details": "3-5 workflows connectés + dashboard",
+            "featured": true
+          },
+          {
+            "name": "Agent IA",
+            "price": "1 500 €",
+            "delay": "2 semaines",
+            "details": "Agent Claude/GPT + n8n + intégrations"
+          }
+        ]
+      }
+    ],
+    "tjm_label": "Mission sur mesure ?",
+    "tjm_value": "TJM 350 € / jour",
+    "tjm_note": "Audit, conseil, accompagnement équipe interne. Minimum 5 jours.",
+    "cta": "Discuter mon projet",
+    "cta_href": "/fr/contact"
   },
   "approach": {
     "title": "L'APPROCHE",
@@ -709,7 +806,11 @@
         "title": "ScalApp",
         "subtitle": "Gestion d'investissements automatisée",
         "description": "Plateforme complète conçue pour ScalApp, une agence de développement no-code basée en France. Le projet comprend un site vitrine premium avec animations fluides, un dashboard de gestion d'investissements permettant le suivi en temps réel des portefeuilles clients, ainsi que des ponts API automatisés connectant plusieurs sources de données financières. L'interface d'administration sur mesure offre une vue consolidée des performances. Design pixel-perfect réalisé sur Figma puis développé sur Webflow avec un souci constant du détail et de l'expérience utilisateur.",
-        "tags": ["ScalApp", "Webflow", "Figma"],
+        "tags": [
+          "ScalApp",
+          "Webflow",
+          "Figma"
+        ],
         "link": "https://scalapp.fr",
         "featured": true,
         "category": "webapp",
@@ -721,7 +822,11 @@
         "title": "ImmoPrive",
         "subtitle": "Marketplace immobilière",
         "description": "Marketplace immobilière complète connectant acheteurs et vendeurs en temps réel sur le marché français. La plateforme intègre une recherche avancée par géolocalisation avec carte interactive, des fiches propriétés détaillées avec galeries photos HD, un système de messagerie intégré entre acheteurs et vendeurs, ainsi que des paiements sécurisés via Stripe. Le back-office permet aux agents de gérer leurs annonces, suivre les leads et analyser les performances. Plus de 200 annonces actives dès le premier mois de lancement. Développée entièrement sur Bubble.",
-        "tags": ["ImmoPrive", "Bubble", "Stripe"],
+        "tags": [
+          "ImmoPrive",
+          "Bubble",
+          "Stripe"
+        ],
         "link": "https://app.immoprive.fr",
         "featured": false,
         "category": "webapp",
@@ -733,7 +838,11 @@
         "title": "Yalee Creek Ranch",
         "subtitle": "Gestion locative",
         "description": "Application de gestion locative clé en main développée pour Yalee Creek Ranch, un domaine au Texas. Le tableau de bord propriétaire centralise le suivi des réservations avec calendrier interactif, l'encaissement automatique des loyers, la génération dynamique de contrats de bail personnalisés et les rappels de paiement automatisés par email. Le système gère également les demandes de maintenance et l'historique complet de chaque locataire. Conçue sur Bubble avec un design Figma pour simplifier la gestion quotidienne de plusieurs unités locatives sans aucune compétence technique.",
-        "tags": ["Yalee Creek Ranch", "Bubble", "Figma"],
+        "tags": [
+          "Yalee Creek Ranch",
+          "Bubble",
+          "Figma"
+        ],
         "link": null,
         "featured": true,
         "category": "webapp",
@@ -745,7 +854,11 @@
         "title": "Alchiimy",
         "subtitle": "App de rencontre IA",
         "description": "Alchiimy est une application de rencontre nouvelle génération qui va au-delà du physique. L'app Alchiimy utilise un algorithme de matching IA avancé basé sur la compatibilité émotionnelle et intellectuelle, analysant les centres d'intérêt, les valeurs et les objectifs de vie de chaque utilisateur. La plateforme Alchiimy propose des profils vérifiés, un système de conversation guidée par étapes pour construire des connexions authentiques avant le premier rendez-vous, et des événements de groupe thématiques. L'UX a été entièrement pensée pour encourager les rencontres réelles plutôt que le swipe infini. Développée sur Bubble avec une attention particulière portée à la confidentialité des données.",
-        "tags": ["Alchiimy", "Bubble", "App rencontre IA"],
+        "tags": [
+          "Alchiimy",
+          "Bubble",
+          "App rencontre IA"
+        ],
         "link": "https://alchiimy.fr",
         "featured": false,
         "category": "webapp",
@@ -757,7 +870,13 @@
         "title": "Artigen",
         "subtitle": "Générateur d'images IA",
         "description": "Générateur d'images par intelligence artificielle, entièrement gratuit et sans aucune limite de créations. L'utilisateur décrit son idée en texte et obtient une image HD en quelques secondes. L'architecture fullstack repose sur Next.js pour le frontend et FastAPI (Python) pour le backend, avec un système de file d'attente intelligent (queue system) capable de gérer 50 à 100 utilisateurs simultanés même sur un hébergement gratuit. Le projet inclut un historique de génération, des presets de styles artistiques et un mode haute résolution. Déployé sur Vercel (frontend) et Render (API), avec une disponibilité quasi permanente sans frais d'infrastructure.",
-        "tags": ["Next.js", "FastAPI", "Python", "Vercel", "Render"],
+        "tags": [
+          "Next.js",
+          "FastAPI",
+          "Python",
+          "Vercel",
+          "Render"
+        ],
         "link": "https://artigen-pro.vercel.app",
         "featured": false,
         "category": "webapp",
@@ -769,7 +888,11 @@
         "title": "Factumation",
         "subtitle": "Logiciel de facturation",
         "description": "Logiciel de facturation en ligne pensé pour les freelances, auto-entrepreneurs et PME à Madagascar et en Europe. Factumation permet de créer des factures et devis élégants en quelques secondes avec un éditeur intuitif, d'exporter en PDF professionnel prêt à envoyer, et de connecter ses outils métier via Webhook pour automatiser la comptabilité. Le logiciel est 100% gratuit, sans inscription complexe et sans carte bancaire requise. Il intègre la gestion multi-devises (Ariary, Euro), le suivi des paiements et les relances automatiques. Projet emblématique entièrement développé avec Claude Code et automatisé via N8N, démontrant la puissance de l'IA dans le développement logiciel.",
-        "tags": ["Claude Code", "N8N", "Automatisation"],
+        "tags": [
+          "Claude Code",
+          "N8N",
+          "Automatisation"
+        ],
         "link": "https://factumation.vercel.app",
         "featured": false,
         "category": "webapp",
@@ -781,7 +904,10 @@
         "title": "Portfolio Webflow",
         "subtitle": "Mon ancien portfolio personnel",
         "description": "Premier portfolio professionnel conçu sur Webflow, présentant mes services de développement no-code, automatisation N8N et intégration IA. Le site inclut une section réalisations, un aperçu de mes outils techniques et un système de contact. Design épuré avec accents rouges et typographie bold, optimisé pour la conversion client. Ce portfolio a servi de vitrine principale sur LinkedIn et les plateformes freelance avant la refonte complète en Next.js.",
-        "tags": ["Webflow", "Figma"],
+        "tags": [
+          "Webflow",
+          "Figma"
+        ],
         "link": "https://portofolio-manda.webflow.io/",
         "featured": false,
         "category": "webapp",
@@ -793,7 +919,10 @@
         "title": "Scraping FlowRemote",
         "subtitle": "Automatisation offres d'emploi",
         "description": "Workflow N8N complet qui scrape automatiquement les nouvelles offres d'emploi remote publiées sur FlowRemote. Le système extrait les données HTML de chaque annonce (titre, entreprise, salaire, localisation, date de publication), les structure proprement puis les filtre selon des critères personnalisés. Les offres pertinentes sont envoyées chaque jour par email via Gmail avec un formatage professionnel. Le workflow inclut un filtre de date pour ne remonter que les annonces récentes et éviter les doublons. Zéro intervention manuelle requise — le pipeline tourne en continu et s'adapte automatiquement aux changements de structure du site.",
-        "tags": ["N8N", "Automatisation"],
+        "tags": [
+          "N8N",
+          "Automatisation"
+        ],
         "link": null,
         "featured": false,
         "category": "workflow",
@@ -805,7 +934,10 @@
         "title": "Tracking Visiteurs",
         "subtitle": "Suivi en temps réel",
         "description": "Système de tracking visiteurs en temps réel conçu pour monitorer le trafic de sites web sans dépendre de Google Analytics. Chaque visite est automatiquement captée via un webhook, géolocalisée avec précision (pays, ville, adresse IP, fournisseur d'accès) et stockée dans une base Airtable structurée. Le workflow N8N filtre les IPs déjà connues pour éviter les doublons, enrichit les données avec des informations Webflow CMS et alimente un dashboard Airtable avec filtres avancés. Idéal pour analyser le trafic en temps réel, identifier les visiteurs récurrents, comprendre la provenance géographique de son audience et optimiser les taux de conversion.",
-        "tags": ["N8N", "Airtable"],
+        "tags": [
+          "N8N",
+          "Airtable"
+        ],
         "link": null,
         "featured": false,
         "category": "workflow",
@@ -817,10 +949,26 @@
   "stats": {
     "title": "EN CHIFFRES",
     "items": [
-      { "value": 4, "suffix": "+", "label": "Ans d'expérience" },
-      { "value": 20, "suffix": "+", "label": "Projets livrés" },
-      { "value": 3, "suffix": "", "label": "Pays servis" },
-      { "value": 100, "suffix": "%", "label": "Satisfaction client" }
+      {
+        "value": 4,
+        "suffix": "+",
+        "label": "Ans d'expérience"
+      },
+      {
+        "value": 20,
+        "suffix": "+",
+        "label": "Projets livrés"
+      },
+      {
+        "value": 3,
+        "suffix": "",
+        "label": "Pays servis"
+      },
+      {
+        "value": 100,
+        "suffix": "%",
+        "label": "Satisfaction client"
+      }
     ]
   },
   "collaboration_guides": {
@@ -860,10 +1008,6 @@
     "title": "QUESTIONS FRÉQUENTES",
     "items": [
       {
-        "question": "Quels sont vos tarifs pour un projet d'automatisation ?",
-        "answer": "Chaque projet est unique. Après un appel découverte gratuit de 30 minutes, je propose un devis détaillé adapté à la complexité du projet. Mes tarifs sont compétitifs grâce à ma localisation à Madagascar tout en offrant une qualité internationale."
-      },
-      {
         "question": "Quels sont les délais de livraison habituels ?",
         "answer": "Un workflow N8N simple est livré en 3 à 5 jours. Une application complète (type marketplace ou dashboard) prend entre 4 et 8 semaines. Je m'engage toujours sur un calendrier précis avant de démarrer."
       },
@@ -877,7 +1021,7 @@
       },
       {
         "question": "Quelles technologies utilisez-vous ?",
-        "answer": "Mon stack principal : N8N pour l'automatisation, Bubble et Webflow pour le No-Code, Next.js et Supabase pour le fullstack, Claude Code et les LLMs pour l'IA. Je choisis toujours la technologie la plus adaptée à votre besoin."
+        "answer": "Mon stack principal : Next.js et React pour le frontend, Supabase et Neon pour le backend, n8n pour l'automatisation des workflows, Python (FastAPI) pour les API IA, Claude Code et les LLMs pour l'intégration d'agents intelligents. Je choisis toujours la technologie la plus adaptée à votre besoin."
       }
     ]
   },
@@ -969,50 +1113,210 @@
         "icon": "business",
         "title": "Quel type d'organisation représentez-vous ?",
         "options": [
-          { "label": "Freelance / solopreneur", "scores": { "workflow": 2, "custom_app": 1, "ai_integration": 0, "full_scale": 0 } },
-          { "label": "Startup / petite équipe", "scores": { "workflow": 1, "custom_app": 2, "ai_integration": 0, "full_scale": 0 } },
-          { "label": "PME établie (10-50 personnes)", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 2, "full_scale": 1 } },
-          { "label": "Grande entreprise", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 0, "full_scale": 3 } }
+          {
+            "label": "Freelance / solopreneur",
+            "scores": {
+              "workflow": 2,
+              "custom_app": 1,
+              "ai_integration": 0,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Startup / petite équipe",
+            "scores": {
+              "workflow": 1,
+              "custom_app": 2,
+              "ai_integration": 0,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "PME établie (10-50 personnes)",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 0,
+              "ai_integration": 2,
+              "full_scale": 1
+            }
+          },
+          {
+            "label": "Grande entreprise",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 0,
+              "ai_integration": 0,
+              "full_scale": 3
+            }
+          }
         ]
       },
       {
         "icon": "target",
         "title": "Quel est votre plus grand défi au quotidien ?",
         "options": [
-          { "label": "Tâches répétitives qui me font perdre du temps", "scores": { "workflow": 3, "custom_app": 0, "ai_integration": 0, "full_scale": 0 } },
-          { "label": "Besoin d'une app sur mesure qui n'existe pas", "scores": { "workflow": 0, "custom_app": 3, "ai_integration": 0, "full_scale": 0 } },
-          { "label": "Exploiter l'IA pour mon business", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 3, "full_scale": 0 } },
-          { "label": "Mes systèmes actuels ne tiennent plus la charge", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 0, "full_scale": 3 } }
+          {
+            "label": "Tâches répétitives qui me font perdre du temps",
+            "scores": {
+              "workflow": 3,
+              "custom_app": 0,
+              "ai_integration": 0,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Besoin d'une app sur mesure qui n'existe pas",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 3,
+              "ai_integration": 0,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Exploiter l'IA pour mon business",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 0,
+              "ai_integration": 3,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Mes systèmes actuels ne tiennent plus la charge",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 0,
+              "ai_integration": 0,
+              "full_scale": 3
+            }
+          }
         ]
       },
       {
         "icon": "code",
         "title": "Quel est votre niveau technique ?",
         "options": [
-          { "label": "Aucun, je veux du clé en main", "scores": { "workflow": 1, "custom_app": 2, "ai_integration": 0, "full_scale": 0 } },
-          { "label": "J'utilise des outils no-code", "scores": { "workflow": 2, "custom_app": 1, "ai_integration": 0, "full_scale": 0 } },
-          { "label": "Bases en dev / équipe technique", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 2, "full_scale": 1 } },
-          { "label": "Développeur / CTO", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 2, "full_scale": 2 } }
+          {
+            "label": "Aucun, je veux du clé en main",
+            "scores": {
+              "workflow": 1,
+              "custom_app": 2,
+              "ai_integration": 0,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "J'utilise des outils no-code",
+            "scores": {
+              "workflow": 2,
+              "custom_app": 1,
+              "ai_integration": 0,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Bases en dev / équipe technique",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 0,
+              "ai_integration": 2,
+              "full_scale": 1
+            }
+          },
+          {
+            "label": "Développeur / CTO",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 0,
+              "ai_integration": 2,
+              "full_scale": 2
+            }
+          }
         ]
       },
       {
         "icon": "payments",
         "title": "Quel est votre budget et délai idéal ?",
         "options": [
-          { "label": "Budget réduit, rapide (1-2 semaines)", "scores": { "workflow": 3, "custom_app": 0, "ai_integration": 0, "full_scale": 0 } },
-          { "label": "Budget moyen, 1-2 mois", "scores": { "workflow": 1, "custom_app": 2, "ai_integration": 0, "full_scale": 0 } },
-          { "label": "Budget confortable, solution avancée", "scores": { "workflow": 0, "custom_app": 1, "ai_integration": 2, "full_scale": 0 } },
-          { "label": "Budget important, transformation complète", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 0, "full_scale": 3 } }
+          {
+            "label": "Budget réduit, rapide (1-2 semaines)",
+            "scores": {
+              "workflow": 3,
+              "custom_app": 0,
+              "ai_integration": 0,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Budget moyen, 1-2 mois",
+            "scores": {
+              "workflow": 1,
+              "custom_app": 2,
+              "ai_integration": 0,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Budget confortable, solution avancée",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 1,
+              "ai_integration": 2,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Budget important, transformation complète",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 0,
+              "ai_integration": 0,
+              "full_scale": 3
+            }
+          }
         ]
       },
       {
         "icon": "emoji_objects",
         "title": "Quel résultat attendez-vous en priorité ?",
         "options": [
-          { "label": "Gagner du temps sur les tâches répétitives", "scores": { "workflow": 3, "custom_app": 0, "ai_integration": 0, "full_scale": 0 } },
-          { "label": "Une plateforme professionnelle pour mes clients", "scores": { "workflow": 0, "custom_app": 3, "ai_integration": 0, "full_scale": 0 } },
-          { "label": "Un business plus intelligent avec l'IA", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 3, "full_scale": 0 } },
-          { "label": "Scaler sans multiplier les coûts", "scores": { "workflow": 0, "custom_app": 0, "ai_integration": 0, "full_scale": 3 } }
+          {
+            "label": "Gagner du temps sur les tâches répétitives",
+            "scores": {
+              "workflow": 3,
+              "custom_app": 0,
+              "ai_integration": 0,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Une plateforme professionnelle pour mes clients",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 3,
+              "ai_integration": 0,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Un business plus intelligent avec l'IA",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 0,
+              "ai_integration": 3,
+              "full_scale": 0
+            }
+          },
+          {
+            "label": "Scaler sans multiplier les coûts",
+            "scores": {
+              "workflow": 0,
+              "custom_app": 0,
+              "ai_integration": 0,
+              "full_scale": 3
+            }
+          }
         ]
       }
     ],

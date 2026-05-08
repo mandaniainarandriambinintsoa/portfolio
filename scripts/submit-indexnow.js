@@ -26,12 +26,22 @@ if (!fs.existsSync(KEY_FILE_PATH)) {
 }
 
 const URLS = [
-  `${SITE_URL}/services/developpeur-no-code-madagascar`,
-  `${SITE_URL}/services/automatisation-n8n-madagascar`,
-  `${SITE_URL}/services/developpeur-low-code-madagascar`,
+  `${SITE_URL}/`,
+  `${SITE_URL}/en`,
+  `${SITE_URL}/services`,
   `${SITE_URL}/blog`,
   `${SITE_URL}/contact`,
-  `${SITE_URL}/services`,
+  // Landing pages FR
+  `${SITE_URL}/services/automatisation-n8n-madagascar`,
+  `${SITE_URL}/services/developpeur-react-nextjs-madagascar`,
+  `${SITE_URL}/services/developpeur-nextjs-supabase-madagascar`,
+  `${SITE_URL}/services/developpeur-python-ia-madagascar`,
+  // Landing pages EN
+  `${SITE_URL}/en/services/n8n-automation-expert-madagascar`,
+  `${SITE_URL}/en/services/hire-react-nextjs-developer-madagascar`,
+  `${SITE_URL}/en/services/nextjs-supabase-developer-madagascar`,
+  `${SITE_URL}/en/services/python-ai-developer-madagascar`,
+  // Blog posts
   `${SITE_URL}/blog/claude-code-developper-avec-ia`,
   `${SITE_URL}/blog/comment-choisir-developpeur-no-code-madagascar`,
   `${SITE_URL}/blog/no-code-vs-low-code-guide-entreprises-malgaches`,
@@ -39,7 +49,6 @@ const URLS = [
   `${SITE_URL}/blog/pourquoi-supabase-remplace-firebase`,
   `${SITE_URL}/blog/pourquoi-automatiser-business-madagascar-n8n`,
   `${SITE_URL}/blog/5-workflows-n8n-indispensables-pme-madagascar`,
-  `${SITE_URL}/`,
 ];
 
 function submitToIndexNow(engine, urlList) {

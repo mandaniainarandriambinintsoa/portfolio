@@ -236,6 +236,82 @@ export default async function ServicePage({
           </div>
         ))}
 
+        {/* Comparison table (Next.js vs No-Code) */}
+        {landing.comparisonTable && (
+          <div className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4 text-white">
+              {landing.comparisonTable.title}
+            </h2>
+            {landing.comparisonTable.intro && (
+              <p className="text-slate-400 leading-relaxed mb-8 max-w-3xl">
+                {landing.comparisonTable.intro}
+              </p>
+            )}
+
+            {/* Desktop table */}
+            <div className="hidden md:block overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-white/10 bg-white/[0.03]">
+                    {landing.comparisonTable.headers.map((header: string, hIdx: number) => (
+                      <th
+                        key={hIdx}
+                        className={`px-5 py-4 text-left font-semibold ${
+                          hIdx === 0 ? "text-slate-300 w-1/4" : hIdx === 2 ? "text-emerald-300" : "text-slate-400"
+                        }`}
+                      >
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {landing.comparisonTable.rows.map((row: any, rIdx: number) => (
+                    <tr key={rIdx} className="border-b border-white/5 last:border-b-0">
+                      <td className="px-5 py-4 font-medium text-white align-top">{row.criterion}</td>
+                      <td className="px-5 py-4 text-slate-400 align-top leading-relaxed">{row.noCode}</td>
+                      <td
+                        className={`px-5 py-4 align-top leading-relaxed ${
+                          row.winner === "nextjs" ? "text-emerald-200" : "text-slate-300"
+                        }`}
+                      >
+                        {row.nextjs}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Mobile: stacked cards */}
+            <div className="md:hidden space-y-4">
+              {landing.comparisonTable.rows.map((row: any, rIdx: number) => (
+                <GlassCard key={rIdx}>
+                  <h3 className="font-bold text-white mb-3 text-sm">{row.criterion}</h3>
+                  <div className="space-y-2 text-xs">
+                    <div>
+                      <span className="text-slate-500 block mb-1">{landing.comparisonTable.headers[1]}</span>
+                      <span className="text-slate-400 leading-relaxed">{row.noCode}</span>
+                    </div>
+                    <div>
+                      <span className="text-emerald-400/70 block mb-1">{landing.comparisonTable.headers[2]}</span>
+                      <span className={row.winner === "nextjs" ? "text-emerald-200 leading-relaxed" : "text-slate-300 leading-relaxed"}>
+                        {row.nextjs}
+                      </span>
+                    </div>
+                  </div>
+                </GlassCard>
+              ))}
+            </div>
+
+            {landing.comparisonTable.conclusion && (
+              <p className="text-slate-300 leading-relaxed mt-8 max-w-3xl italic">
+                {landing.comparisonTable.conclusion}
+              </p>
+            )}
+          </div>
+        )}
+
         {/* FAQ */}
         {landing.faq && (
           <div className="mb-20">
@@ -257,7 +333,7 @@ export default async function ServicePage({
         {landing.showcase && (
           <div className="mb-20">
             <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8 text-white">
-              {locale === "fr" ? "Projets réalisés en no-code" : "No-code projects delivered"}
+              {locale === "fr" ? "Projets réalisés" : "Projects delivered"}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {landing.showcase.map((item: any, idx: number) => (
