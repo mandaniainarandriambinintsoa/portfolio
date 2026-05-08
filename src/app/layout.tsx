@@ -23,6 +23,9 @@ const setLangOnEn = `if(location.pathname.startsWith('/en'))document.documentEle
 export const metadata = {
   verification: {
     google: "UbNg_cK0lvlfEnXfKtQaZfHEm_sCVWL6qDD8m5_eTLo",
+    other: {
+      "msvalidate.01": "21787C74B7616AA2F8C612EE18AFFFC0",
+    },
   },
 };
 
