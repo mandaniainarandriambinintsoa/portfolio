@@ -1,16 +1,16 @@
 {
   "meta": {
     "home": {
-      "title": "Product Builder · Fullstack JavaScript · AI & n8n · Madagascar",
-      "description": "Freelance Product Builder in Madagascar. From idea to shipped product: Next.js websites, SaaS MVPs, AI integration and n8n workflows. 20+ projects shipped in 4 years."
+      "title": "Product Builder · Fullstack JavaScript No-Code · AI n8n Madagascar",
+      "description": "Freelance Product Builder in Madagascar. From idea to shipped product: websites, SaaS MVPs, fullstack JavaScript, no-code, AI and n8n. 20+ projects shipped in 4 years."
     },
     "about": {
-      "title": "Manda Randriambinintsoa | Product Builder Fullstack JavaScript & n8n from Madagascar",
+      "title": "Manda Randriambinintsoa | No-Code Developer & N8N Expert from Madagascar",
       "description": "Freelance Product Builder based in Antananarivo. 4+ years building with Next.js, Supabase, Python, n8n and Claude Code. See my journey and projects."
     },
     "contact": {
       "title": "Contact Manda | Start an Automation Project",
-      "description": "Contact Mandaniaina Randriambinintsoa for your fullstack Next.js, AI integration and n8n automation projects."
+      "description": "Contact Mandaniaina Randriambinintsoa for your automation projects, no-code development and AI integration."
     },
     "quiz": {
       "title": "Automation Quiz | Find the Perfect Solution for Your Business — Manda",
@@ -30,7 +30,7 @@
     "line2": "I AUTOMATE.",
     "line3": "I SCALE.",
     "subtitle_prefix": "Manda —",
-    "subtitle_highlight": "Product Builder · Fullstack JavaScript Developer · AI & n8n",
+    "subtitle_highlight": "Product Builder · Fullstack JavaScript Developer · No-Code · AI & n8n",
     "subtitle_rest": ", based in Madagascar. I ship SaaS MVPs in weeks with React, Next.js, Supabase, Neon and Python. 4+ years of experience, 20+ projects delivered.",
     "cta_primary": "Start a Project",
     "cta_secondary": "View My Work"
