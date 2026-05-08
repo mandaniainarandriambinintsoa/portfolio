@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
-import { SITE_URL } from "@/lib/constants";
+import { SITE_URL, LANDING_LAST_UPDATED } from "@/lib/constants";
 import { notFound } from "next/navigation";
 import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
@@ -10,6 +10,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
+
+function formatLastUpdated(iso: string, locale: "fr" | "en") {
+  const d = new Date(iso);
+  return d.toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -32,11 +41,27 @@ function renderInlineMarkdown(text: string) {
 
     if (linkIdx <= boldIdx && linkMatch) {
       if (linkIdx > 0) parts.push(<span key={key++}>{remaining.slice(0, linkIdx)}</span>);
-      parts.push(
-        <Link key={key++} href={linkMatch[2]} className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">
-          {linkMatch[1]}
-        </Link>
-      );
+      const href = linkMatch[2];
+      const isExternal = /^https?:\/\//.test(href);
+      if (isExternal) {
+        parts.push(
+          <a
+            key={key++}
+            href={href}
+            target="_blank"
+            rel="noopener external"
+            className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2"
+          >
+            {linkMatch[1]}
+          </a>
+        );
+      } else {
+        parts.push(
+          <Link key={key++} href={href} className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">
+            {linkMatch[1]}
+          </Link>
+        );
+      }
       remaining = remaining.slice(linkIdx + linkMatch[0].length);
     } else if (boldMatch) {
       if (boldIdx > 0) parts.push(<span key={key++}>{remaining.slice(0, boldIdx)}</span>);
@@ -183,6 +208,12 @@ export default async function ServicePage({
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-3xl">
             {landing.heroText}
+          </p>
+          <p className="mt-6 text-xs uppercase tracking-wider text-slate-500">
+            {locale === "fr" ? "Mis à jour le " : "Last updated: "}
+            <time dateTime={LANDING_LAST_UPDATED} className="text-slate-400">
+              {formatLastUpdated(LANDING_LAST_UPDATED, locale)}
+            </time>
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href={contactHref} variant="primary" icon="trending_up">

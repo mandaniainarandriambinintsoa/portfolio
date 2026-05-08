@@ -1,6 +1,8 @@
 export const SITE_URL = "https://manda-ia.com";
 export const SITE_NAME = "Manda";
 
+export const LANDING_LAST_UPDATED = "2026-05-08";
+
 export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/mandaniaina-randriambinintsoa-a75553178/",
   github: "https://github.com/mandaniainarandriambinintsoa",

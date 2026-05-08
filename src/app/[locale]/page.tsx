@@ -7,6 +7,7 @@ import CommandCenter from "@/components/sections/CommandCenter";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import Pricing from "@/components/sections/Pricing";
 import Process from "@/components/sections/Process";
+import HowToJsonLd from "@/components/seo/HowToJsonLd";
 import Approach from "@/components/sections/Approach";
 // Testimonials uses GSAP directly — dynamic import to keep it out of initial bundle
 const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
@@ -67,6 +68,24 @@ export default async function HomePage({
       </div>
 
       <div className="below-fold">
+        <HowToJsonLd
+          name={
+            locale === "fr"
+              ? "Comment je livre un site Next.js ou un SaaS"
+              : "How I deliver a Next.js website or SaaS"
+          }
+          description={
+            locale === "fr"
+              ? "Mon processus de conception, développement et déploiement pour les projets Next.js, IA et automatisation n8n."
+              : "My process for designing, developing and deploying Next.js, AI and n8n automation projects."
+          }
+          locale={locale}
+          url={locale === "fr" ? "/" : "/en"}
+          steps={dict.process.steps.map((step: { title: string; description: string }) => ({
+            name: step.title,
+            text: step.description,
+          }))}
+        />
         <ProcessAnim>
           <Process title={dict.process.title} steps={dict.process.steps} />
         </ProcessAnim>

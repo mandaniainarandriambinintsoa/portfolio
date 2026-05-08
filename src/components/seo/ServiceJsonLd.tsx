@@ -1,15 +1,17 @@
 import JsonLd from "./JsonLd";
-import { SITE_URL, PERSONAL_INFO } from "@/lib/constants";
+import { SITE_URL, PERSONAL_INFO, LANDING_LAST_UPDATED } from "@/lib/constants";
 import type { Locale } from "@/i18n/config";
 
 export default function ServiceJsonLd({
   name,
   description,
   locale,
+  dateModified,
 }: {
   name: string;
   description: string;
   locale: Locale;
+  dateModified?: string;
 }) {
   return (
     <JsonLd
@@ -28,6 +30,7 @@ export default function ServiceJsonLd({
           name: "Worldwide",
         },
         inLanguage: locale,
+        dateModified: dateModified ?? LANDING_LAST_UPDATED,
       }}
     />
   );

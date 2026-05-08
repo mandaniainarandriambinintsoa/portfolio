@@ -219,7 +219,7 @@
           "sections": [
             {
               "title": "Why React and Next.js in 2026?",
-              "content": "React is the world's most popular JavaScript library for building user interfaces. According to the Stack Overflow 2025 survey, React is used by 42% of professional developers, far ahead of Angular (17%) and Vue.js (16%).\n\nNext.js, Vercel's React framework, adds server-side rendering (SSR/SSG), automatic routing, image optimization and instant deployment. In 2026, Next.js powers Netflix, TikTok, Twitch, Notion and thousands of SaaS products.\n\nWhy this matters for your project: a Next.js application loads in under one second (LCP < 1s), ranks perfectly on Google thanks to server rendering, and scales from 10 to 100,000 users without architecture changes."
+              "content": "React is the world's most popular JavaScript library for building user interfaces. According to the [Stack Overflow Developer Survey](https://survey.stackoverflow.co/), React remains the dominant web framework among professional developers, far ahead of Angular and Vue.js.\n\nNext.js, Vercel's React framework, adds server-side rendering (SSR/SSG), automatic routing, image optimization and instant deployment. In 2026, [Next.js powers Netflix, TikTok, Twitch, Notion and thousands of SaaS products](https://nextjs.org/showcase).\n\nWhy this matters for your project: a Next.js application loads in under one second (LCP < 1s), ranks perfectly on Google thanks to server rendering, and scales from 10 to 100,000 users without architecture changes."
             },
             {
               "title": "My tech stack",
