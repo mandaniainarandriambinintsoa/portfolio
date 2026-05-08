@@ -1,16 +1,16 @@
 {
   "meta": {
     "home": {
-      "title": "Product Builder · Fullstack JavaScript No-Code · IA n8n Madagascar",
-      "description": "Product Builder freelance à Madagascar. De l'idée au produit fini : sites, MVP SaaS, fullstack JavaScript, no-code, IA et n8n. 20+ projets en 4 ans."
+      "title": "Product Builder · Fullstack JavaScript · IA & n8n · Madagascar",
+      "description": "Product Builder freelance à Madagascar. De l'idée au produit fini : sites Next.js, MVP SaaS, intégration IA et workflows n8n. 20+ projets livrés en 4 ans."
     },
     "about": {
-      "title": "Manda Randriambinintsoa | Développeur No-Code & Expert N8N à Madagascar",
-      "description": "Architecte IA et Automatisation Builder basé à Antananarivo. +4 ans d'expérience : N8N, Bubble, Next.js, Supabase, Claude Code. Découvrez mon parcours et mes réalisations."
+      "title": "Manda Randriambinintsoa | Product Builder Fullstack JavaScript & n8n à Madagascar",
+      "description": "Product Builder freelance basé à Antananarivo. +4 ans d'expérience : Next.js, Supabase, Python, n8n, Claude Code. Découvrez mon parcours et mes réalisations."
     },
     "contact": {
       "title": "Contacter Manda | Démarrer un projet d'automatisation",
-      "description": "Contactez Mandaniaina Randriambinintsoa pour vos projets d'automatisation, développement No-Code et intégration IA."
+      "description": "Contactez Mandaniaina Randriambinintsoa pour vos projets fullstack Next.js, intégration IA et workflows n8n."
     },
     "quiz": {
       "title": "Quiz Automatisation | Trouvez la solution idéale pour votre business — Manda",
@@ -30,7 +30,7 @@
     "line2": "JE CONÇOIS DES WORKFLOWS N8N SCALABLES.",
     "line3": "",
     "subtitle_prefix": "Manda —",
-    "subtitle_highlight": "Product Builder · Développeur Fullstack JavaScript · No-Code · IA & n8n",
+    "subtitle_highlight": "Product Builder · Développeur Fullstack JavaScript · IA & n8n",
     "subtitle_rest": ", basé à Madagascar. Je sors des MVP SaaS en quelques semaines avec React, Next.js, Supabase, Neon et Python. 4+ ans d'expérience, 20+ projets livrés.",
     "cta_primary": "Démarrer un projet",
     "cta_secondary": "Voir mes réalisations"
