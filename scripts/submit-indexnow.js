@@ -49,6 +49,8 @@ const URLS = [
   `${SITE_URL}/blog/pourquoi-supabase-remplace-firebase`,
   `${SITE_URL}/blog/pourquoi-automatiser-business-madagascar-n8n`,
   `${SITE_URL}/blog/5-workflows-n8n-indispensables-pme-madagascar`,
+  `${SITE_URL}/blog/hire-offshore-react-nextjs-developer-madagascar`,
+  `${SITE_URL}/en/blog/hire-offshore-react-nextjs-developer-madagascar`,
 ];
 
 function submitToIndexNow(engine, urlList) {
