@@ -826,6 +826,23 @@
         "workflowFile": null
       },
       {
+        "slug": "leads-automation-showcase",
+        "title": "Leads Automation Showcase",
+        "subtitle": "Automated B2B lead generation + AI scoring",
+        "description": "Interactive showcase for real-time B2B lead generation. The user types a keyword (e.g. CTO SaaS France) and receives within a minute 5 enriched LinkedIn profiles (position, company, experience, education, skills) with a 0-10 score and a personalized AI-generated reasoning. Architecture: Lovable interface (sober Notion-style design), n8n workflow self-hosted on a Contabo VPS via Coolify, LinkedIn scraping via Apify (harvestapi/linkedin-profile-search actor, 26+ fields per lead), ICP qualification via Groq Llama 3.3 70B in batch mode. The workflow uses native HTTP polling (25s pagination) instead of fixed Wait nodes to handle variable Apify latency. Cost $0.12 per request with ~41 free runs per month on Apify free tier. Average latency 37s. Demonstrates a full chain scraping → enrichment → AI scoring → reporting ready to plug into a CRM.",
+        "tags": [
+          "n8n",
+          "Lovable",
+          "Apify",
+          "Groq"
+        ],
+        "link": "https://quick-flow-demos.lovable.app/",
+        "featured": true,
+        "category": "workflow",
+        "image": "/images/projects/leads-automation-showcase.png",
+        "workflowFile": null
+      },
+      {
         "slug": "yalee-creek-ranch",
         "title": "Yalee Creek Ranch",
         "subtitle": "Property Management",

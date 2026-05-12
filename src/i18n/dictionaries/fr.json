@@ -834,6 +834,23 @@
         "workflowFile": null
       },
       {
+        "slug": "leads-automation-showcase",
+        "title": "Showcase Leads Automation",
+        "subtitle": "Génération de leads B2B automatisée + scoring IA",
+        "description": "Showcase interactif de génération de leads B2B qualifiés en temps réel. L'utilisateur saisit un mot-clé (ex: CTO SaaS France) et le système renvoie en moins d'une minute 5 profils LinkedIn enrichis (poste, entreprise, parcours, formation, compétences) avec un score 0-10 et un raisonnement personnalisé généré par IA. Architecture : interface Lovable (design Notion-style sobre), workflow n8n auto-hébergé sur VPS Contabo via Coolify, scraping LinkedIn via Apify (actor harvestapi/linkedin-profile-search, 26+ fields par lead), qualification ICP via Groq Llama 3.3 70B en batch. Le workflow utilise du polling HTTP natif (pagination 25s) au lieu de Wait fixes pour gérer les latences variables d'Apify. Coût $0.12 par requête avec ~41 runs gratuits par mois sur le free tier Apify. Latence moyenne 37s. Démontre une chaîne complète scraping → enrichissement → scoring IA → reporting prête à intégrer dans un CRM.",
+        "tags": [
+          "n8n",
+          "Lovable",
+          "Apify",
+          "Groq"
+        ],
+        "link": "https://quick-flow-demos.lovable.app/",
+        "featured": true,
+        "category": "workflow",
+        "image": "/images/projects/leads-automation-showcase.png",
+        "workflowFile": null
+      },
+      {
         "slug": "yalee-creek-ranch",
         "title": "Yalee Creek Ranch",
         "subtitle": "Gestion locative",
