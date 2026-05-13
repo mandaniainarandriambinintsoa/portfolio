@@ -62,7 +62,7 @@ function PrivacyFR() {
       <h1 className="text-4xl font-extrabold tracking-tighter mb-8">
         <span className="gradient-text">Politique de confidentialité</span>
       </h1>
-      <p className="text-slate-400 text-sm mb-8">Dernière mise à jour : 27 mars 2026</p>
+      <p className="text-slate-400 text-sm mb-8">Dernière mise à jour : 13 mai 2026</p>
 
       <h2>1. Responsable du traitement</h2>
       <p>
@@ -84,8 +84,9 @@ function PrivacyFR() {
       <p>
         La page d'accueil affiche un tableau de visiteurs en temps réel à des fins de démonstration technique.
         Les données affichées (ville, pays) proviennent de Google Analytics en temps réel et sont stockées
-        dans notre base de données Supabase. Aucune donnée personnelle identifiable (nom, email, adresse IP
-        complète) n'est affichée ni stockée dans ce tableau.
+        dans notre base de données Supabase. L'adresse IP est conservée temporairement (1 heure maximum)
+        pour permettre la déduplication des visites, puis supprimée automatiquement. Aucune adresse IP n'est
+        affichée ni partagée avec des tiers, et aucun nom ou email n'est associé à ces données.
       </p>
 
       <h3>2.3 Formulaire de contact</h3>
@@ -163,7 +164,7 @@ function PrivacyEN() {
       <h1 className="text-4xl font-extrabold tracking-tighter mb-8">
         <span className="gradient-text">Privacy Policy</span>
       </h1>
-      <p className="text-slate-400 text-sm mb-8">Last updated: March 27, 2026</p>
+      <p className="text-slate-400 text-sm mb-8">Last updated: May 13, 2026</p>
 
       <h2>1. Data Controller</h2>
       <p>
@@ -185,8 +186,9 @@ function PrivacyEN() {
       <p>
         The homepage displays a real-time visitor table for technical demonstration purposes.
         The displayed data (city, country) comes from Google Analytics real-time data and is stored
-        in our Supabase database. No personally identifiable information (name, email, full IP address)
-        is displayed or stored in this table.
+        in our Supabase database. IP addresses are temporarily retained (1 hour maximum) for visit
+        deduplication, then automatically deleted. No IP address is displayed or shared with third
+        parties, and no name or email is associated with this data.
       </p>
 
       <h3>2.3 Contact Form</h3>
