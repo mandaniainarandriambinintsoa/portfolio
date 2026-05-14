@@ -7,7 +7,7 @@ export default function PricingAnim({
 }: {
   children: React.ReactNode;
 }) {
-  const ref = useStaggerReveal<HTMLDivElement>(".glass-card", {
+  const ref = useStaggerReveal<HTMLDivElement>(".pricing-line", {
     y: 40,
     stagger: 0.15,
     duration: 0.8,

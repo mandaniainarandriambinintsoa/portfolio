@@ -10,11 +10,18 @@ type PricingTier = {
   featured?: boolean;
 };
 
+type PricingExample = {
+  label: string;
+  title: string;
+  href: string;
+};
+
 type PricingLine = {
   icon: string;
   color: string;
   title: string;
   description: string;
+  example?: PricingExample;
   tiers: PricingTier[];
 };
 
@@ -47,40 +54,75 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {dict.lines.map((line) => {
           const colors = colorMap[line.color] || colorMap.indigo;
+          const isExternal = line.example?.href.startsWith("http");
           return (
-            <GlassCard key={line.title} borderColor={colors.border} className="flex flex-col">
-              <div className="mb-6">
-                <span className={`material-symbols-outlined ${colors.icon} mb-3 text-3xl block`}>
-                  {line.icon}
-                </span>
-                <h3 className="font-bold text-lg mb-1">{line.title}</h3>
-                <p className="text-xs text-slate-500">{line.description}</p>
-              </div>
-
-              <ul className="flex flex-col gap-3 flex-grow">
-                {line.tiers.map((tier) => (
-                  <li
-                    key={tier.name}
-                    className={`rounded-xl p-4 border transition-colors ${
-                      tier.featured
-                        ? `bg-white/[0.04] border-white/10 ring-1 ${colors.ring}`
-                        : "bg-white/[0.02] border-white/5"
-                    }`}
+            <div key={line.title} className="pricing-line flex flex-col gap-3">
+              {line.example && (
+                <Link
+                  href={line.example.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  className={`group flex items-center justify-between gap-3 rounded-xl px-4 py-3 bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-white/10 transition-colors`}
+                >
+                  <div className="flex flex-col min-w-0">
+                    <span className={`text-[10px] font-semibold uppercase tracking-wider ${colors.text}`}>
+                      {line.example.label}
+                    </span>
+                    <span className="text-sm text-slate-200 truncate">
+                      {line.example.title}
+                    </span>
+                  </div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors shrink-0"
+                    aria-hidden="true"
                   >
-                    <div className="flex items-baseline justify-between gap-2 mb-1">
-                      <span className={`text-xs font-semibold uppercase tracking-wider ${colors.text}`}>
-                        {tier.name}
-                      </span>
-                      <span className="text-[10px] text-slate-500 uppercase tracking-wider">
-                        {tier.delay}
-                      </span>
-                    </div>
-                    <div className="text-2xl font-bold text-white mb-2">{tier.price}</div>
-                    <p className="text-xs text-slate-400 leading-relaxed">{tier.details}</p>
-                  </li>
-                ))}
-              </ul>
-            </GlassCard>
+                    <path d="M7 17 17 7" />
+                    <path d="M7 7h10v10" />
+                  </svg>
+                </Link>
+              )}
+
+              <GlassCard borderColor={colors.border} className="flex flex-col flex-grow">
+                <div className="mb-6">
+                  <span className={`material-symbols-outlined ${colors.icon} mb-3 text-3xl block`}>
+                    {line.icon}
+                  </span>
+                  <h3 className="font-bold text-lg mb-1">{line.title}</h3>
+                  <p className="text-xs text-slate-500">{line.description}</p>
+                </div>
+
+                <ul className="flex flex-col gap-3 flex-grow">
+                  {line.tiers.map((tier) => (
+                    <li
+                      key={tier.name}
+                      className={`rounded-xl p-4 border transition-colors ${
+                        tier.featured
+                          ? `bg-white/[0.04] border-white/10 ring-1 ${colors.ring}`
+                          : "bg-white/[0.02] border-white/5"
+                      }`}
+                    >
+                      <div className="flex items-baseline justify-between gap-2 mb-1">
+                        <span className={`text-xs font-semibold uppercase tracking-wider ${colors.text}`}>
+                          {tier.name}
+                        </span>
+                        <span className="text-[10px] text-slate-500 uppercase tracking-wider">
+                          {tier.delay}
+                        </span>
+                      </div>
+                      <div className="text-2xl font-bold text-white mb-2">{tier.price}</div>
+                      <p className="text-xs text-slate-400 leading-relaxed">{tier.details}</p>
+                    </li>
+                  ))}
+                </ul>
+              </GlassCard>
+            </div>
           );
         })}
       </div>

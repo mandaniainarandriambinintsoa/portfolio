@@ -654,6 +654,11 @@
         "color": "emerald",
         "title": "Next.js Sites",
         "description": "Pure Next.js, 95+ perf, SEO-ready",
+        "example": {
+          "label": "VIEW AN EXAMPLE",
+          "title": "This portfolio, 100/100 PageSpeed",
+          "href": "/en/projects"
+        },
         "tiers": [
           {
             "name": "Starter",
@@ -681,6 +686,11 @@
         "color": "blue",
         "title": "SaaS MVP",
         "description": "Next.js + Supabase, shipped in weeks",
+        "example": {
+          "label": "VIEW AN EXAMPLE",
+          "title": "Factumation, invoicing software",
+          "href": "https://factumation.vercel.app"
+        },
         "tiers": [
           {
             "name": "Starter",
@@ -708,6 +718,11 @@
         "color": "purple",
         "title": "n8n & AI Automation",
         "description": "Custom workflows and AI agents",
+        "example": {
+          "label": "VIEW AN EXAMPLE",
+          "title": "AI automation showcase",
+          "href": "https://quick-flow-demos.lovable.app/"
+        },
         "tiers": [
           {
             "name": "Starter",
