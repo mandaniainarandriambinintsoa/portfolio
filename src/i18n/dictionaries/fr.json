@@ -1121,6 +1121,9 @@
     "email_label": "Email",
     "message_label": "Message",
     "submit": "Envoyer",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé. Je te réponds rapidement.",
+    "error": "Une erreur est survenue. Réessaie ou contacte-moi par email.",
     "info_email": "mandaniaina.randriambinintsoa@gmail.com",
     "info_phone": "+261 34 65 186 95",
     "info_location": "Antananarivo, Madagascar"

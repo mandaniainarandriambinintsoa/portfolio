@@ -3,6 +3,7 @@ import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL, SOCIAL_LINKS } from "@/lib/constants";
 import GlassCard from "@/components/ui/GlassCard";
+import ContactForm from "./ContactForm";
 
 export async function generateMetadata({
   params,
@@ -80,50 +81,18 @@ export default async function ContactPage({
         </div>
 
         <GlassCard className="!p-8 md:!p-12">
-          <form className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
-                {contact.name_label}
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 transition-colors"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
-                {contact.email_label}
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 transition-colors"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
-                {contact.message_label}
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={6}
-                required
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 transition-colors resize-none"
-              />
-            </div>
-            <button
-              type="submit"
-              className="px-10 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl transition-all shadow-lg shadow-indigo-500/20 cursor-pointer"
-            >
-              {contact.submit}
-            </button>
-          </form>
+          <ContactForm
+            locale={locale}
+            labels={{
+              name_label: contact.name_label,
+              email_label: contact.email_label,
+              message_label: contact.message_label,
+              submit: contact.submit,
+              sending: contact.sending,
+              success: contact.success,
+              error: contact.error,
+            }}
+          />
         </GlassCard>
       </div>
     </main>
