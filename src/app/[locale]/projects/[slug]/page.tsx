@@ -151,7 +151,7 @@ export default async function ProjectPage({
 
         {/* Description */}
         <div className="glass-card rounded-2xl p-8 md:p-12 mb-12">
-          <p className="text-lg text-slate-300 leading-relaxed">
+          <p className="text-lg text-slate-300 leading-relaxed whitespace-pre-line">
             {project.description}
           </p>
         </div>
