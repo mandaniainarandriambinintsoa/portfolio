@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { Fragment } from "react";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 type ApproachDict = {
@@ -5,6 +7,36 @@ type ApproachDict = {
   heading: string;
   paragraphs: string[];
 };
+
+const LINK_PATTERN = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+function renderParagraph(text: string): React.ReactNode[] {
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  LINK_PATTERN.lastIndex = 0;
+  while ((match = LINK_PATTERN.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(<Fragment key={key++}>{text.slice(lastIndex, match.index)}</Fragment>);
+    }
+    const [, anchor, href] = match;
+    parts.push(
+      <Link
+        key={key++}
+        href={href}
+        className="text-indigo-300 hover:text-indigo-200 underline underline-offset-4 decoration-indigo-300/40 hover:decoration-indigo-200/70 transition-colors"
+      >
+        {anchor}
+      </Link>
+    );
+    lastIndex = match.index + match[0].length;
+  }
+  if (lastIndex < text.length) {
+    parts.push(<Fragment key={key++}>{text.slice(lastIndex)}</Fragment>);
+  }
+  return parts;
+}
 
 export default function Approach({ dict }: { dict: ApproachDict }) {
   return (
@@ -16,7 +48,7 @@ export default function Approach({ dict }: { dict: ApproachDict }) {
         </h3>
         <div className="space-y-6 text-base md:text-lg text-slate-300 leading-relaxed">
           {dict.paragraphs.map((p, i) => (
-            <p key={i}>{p}</p>
+            <p key={i}>{renderParagraph(p)}</p>
           ))}
         </div>
       </div>

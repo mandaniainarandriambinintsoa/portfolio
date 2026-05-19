@@ -1,387 +1,280 @@
-# GEO Audit Report: manda-ia.com
+# GEO+SEO Audit Report — manda-ia.com
 
-**Date :** 8 avril 2026
-**URL :** https://manda-ia.com
-**Type :** Portfolio / Freelance Developer (Professional Services)
-**Pages analysees :** 62 (31 FR + 31 EN)
-**Audit precedent :** 27 mars 2026 (score 57/100)
+**Date** : 19 mai 2026
+**Méthodologie** : Audit unifié GEO + SEO + GSC, recalibré sur la doc officielle Google « Optimizing for generative AI features on Google Search » publiée le **15 mai 2026**
+**Précédent audit** : 8 avril 2026, GEO Score 52/100
 
 ---
 
-## Resume Executif
+## Résumé exécutif
 
-**Score GEO Global : 52/100 (Fair)**
+| Dimension | Score | Évolution |
+|---|---|---|
+| **GEO Score 2026** | **48 / 100** | -4 vs 8 avril (méthodo recalibrée Google 2026) |
+| **SEO Health (GSC)** | **6.8 / 10** | +0.3 vs 13 avril (5.5 → 6.5 → 6.8) |
+| Clics GSC 28j | **35** | +75% vs P-1 |
+| Impressions GSC 28j | **647** | +33% vs P-1 |
+| CTR moyen | 5.41% | stable |
+| Position moy | **7.0** | +0.2 vs 13 avril |
 
-Le site a une base technique excellente (88/100) mais reste plombe par un manque critique d'autorite de marque (15/100). Aucune presence sur Reddit, YouTube, Wikipedia ou Wikidata. Les requetes GSC sont exclusivement brand ("manda ai", "manda ia") — aucune requete informationnelle ne genere d'impressions. 9 pages cles ne sont toujours pas indexees par Google. L'action la plus impactante : creer une entree Wikidata et developper une presence sur les plateformes que les IA utilisent pour la reconnaissance d'entites.
+### Le verdict en une phrase
 
-### Scores par Categorie
-
-| Categorie | Score | Poids | Score Pondere | Evolution vs 27 mars |
-|---|---|---|---|---|
-| AI Citability | 52/100 | 25% | 13.0 | -3 (methodo plus stricte) |
-| Brand Authority | 15/100 | 20% | 3.0 | -13 (audit plus rigoureux) |
-| Content E-E-A-T | 59/100 | 20% | 11.8 | +1 |
-| Technical GEO | 88/100 | 15% | 13.2 | -3 (criteres GEO specifiques) |
-| Schema & Structured Data | 63/100 | 10% | 6.3 | +11 (dateModified fixe) |
-| Platform Optimization | 46/100 | 10% | 4.6 | -2 |
-| **Score GEO Global** | | | **51.9 → 52/100** | |
+Le site est **techniquement solide** (PSI 98-100, schémas riches, sitemap, hreflang) et **gagne en visibilité brand** (« manda ai » +1500%, « developpeur no code madagascar » pos 2.7), mais Google 2026 dévalue deux pans entiers de ta stratégie (llms.txt, schema « pour l'IA », mentions seedées) et amplifie deux faiblesses critiques : **12 landing pages SEO toujours non indexées** et **un contenu trop « commodity »**.
 
 ---
 
-## Messages Google Search Console — Erreurs a Regler
+## Ce que Google a changé le 15 mai 2026
 
-### Etat de l'indexation (8 avril 2026)
+Doc officielle : [developers.google.com/search/docs/fundamentals/ai-optimization-guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)
 
-**Indexees (7 pages) :**
-- `/` (homepage) — 2 clics, 13 impressions, position 5.0
-- `/services` — 0 clics, 4 impressions, position 6.8
-- `/blog` — 0 clics, 1 impression, position 4.0
-- `/en` — 0 clics, 9 impressions, position 5.8
-- `/en/projects` — 1 clic, 27 impressions, position 5.0
-- `/blog/automatiser-business-n8n-guide-complet` — indexe
+### Tactiques que Google déclare inutiles pour AI Overviews & AI Mode
 
-**NON indexees — 9 pages a traiter :**
+| Tactique | Statut chez toi | Action |
+|---|---|---|
+| `llms.txt` | Présent (HTTP 200) | **Arrêter d'itérer dessus** — neutre, pas nuisible |
+| Content chunking pour IA | Non observé | Ne pas commencer |
+| Réécriture spécifique IA | Non observé | Ne pas commencer |
+| Schema « pour l'IA » (Speakable etc.) | Présent | **Conserver pour rich results SEO**, pas pour AI |
+| Mentions artificielles seedées | Plan P0-P4 inclut ça | **Pivoter vers mentions authentiques** |
 
-| Page | Statut Google | Gravite | Action |
+### Ce que Google amplifie comme facteur
+
+1. **Non-commodity content** : « content only you can write » — analyse vécue, métriques personnelles, opinions
+2. **E-E-A-T Experience** : preuves concrètes de cas vécus, pas juste expertise déclarée
+3. **Indexabilité de base** : si une page n'est pas indexée, elle ne peut pas apparaître en AI Overview
+
+---
+
+## Scoring détaillé (méthodo Google 2026)
+
+| Catégorie | Poids | Score | Note |
 |---|---|---|---|
-| `/about` | URL unknown to Google | HAUTE | Demander l'indexation via GSC |
-| `/projects` | URL unknown to Google | HAUTE | Demander l'indexation via GSC |
-| `/services/automatisation-n8n-madagascar` | URL unknown to Google | HAUTE | Demander l'indexation via GSC |
-| `/quiz` | URL unknown to Google | MOYENNE | Demander l'indexation via GSC |
-| `/contact` | Discovered - not indexed | HAUTE | Google l'a trouvee mais pas crawlee — attendre ou soumettre via Indexing API |
-| `/services/developpeur-no-code-madagascar` | Discovered - not indexed | CRITIQUE | Landing SEO principale — soumettre en priorite |
-| `/services/developpeur-low-code-madagascar` | Discovered - not indexed | HAUTE | Soumettre via Indexing API |
-| `/mentions-legales` | Discovered - not indexed | BASSE | Attendre crawl naturel |
-| `/blog/claude-code-developper-avec-ia` | Discovered - not indexed | MOYENNE | Soumettre via Indexing API |
+| Indexation & Findability | 25% | **40 / 100** | 🔴 12/12 landing pages non indexées |
+| Non-commodity Content + E-E-A-T | 25% | **45 / 100** | 🟡 Listicle > experience vécue |
+| Brand Authority (authentique) | 15% | **18 / 100** | 🔴 0 YouTube, 0 Reddit, 0 Wikipedia |
+| Technical Excellence | 15% | **85 / 100** | 🟢 PSI, hreflang, sitemap, schema |
+| Schema (Rich Results) | 10% | **80 / 100** | 🟢 Person, ProfessionalService, FAQ, HowTo |
+| Platform Distribution | 10% | **40 / 100** | 🟡 GBP créé peu activé |
+| **Total pondéré** | 100% | **48 / 100** | |
 
-**Statut "PAGE_FETCH_STATE_UNSPECIFIED"** sur les 9 pages = Google n'a PAS ENCORE tente de fetcher ces pages. Ce n'est pas un blocage technique (robots.txt OK, pas de noindex), c'est un probleme de budget de crawl.
+### Comparaison méthodologique vs 8 avril
 
-### Sitemap GSC
-- 62 URLs, **0 erreurs, 1 warning**
-- Dernier telechargement Google : **8 avril 2026** (aujourd'hui)
-- **Warning probable** : toutes les dates `lastmod` sont identiques (2026-03-26/27) — Google peut ignorer ces signaux
+| Dimension | 8 avril | 19 mai | Variation |
+|---|---|---|---|
+| Citability IA | 52 | (fondu dans Content) | recalibré |
+| Brand Authority | 15 | 18 | +3 |
+| Content E-E-A-T | 59 | 45 | -14 (Experience pondérée plus fort) |
+| Technical | 88 | 85 | -3 (robots.txt minimaliste) |
+| Schema | 63 | 80 | +17 (déjà excellent, on arrête de l'optimiser) |
+| Platform | 46 | 40 | -6 (Reddit/forums dévalués) |
 
-### Performance GSC (28 derniers jours)
-| Metrique | Valeur |
+Le score **descend** non pas parce que le site se dégrade, mais parce que Google 2026 retire la prime aux tactiques GEO-spécifiques et amplifie le poids de ce qui coince déjà (indexation + commodity content).
+
+---
+
+## Données GSC (28 jours, 21 avr → 19 mai)
+
+### Top requêtes
+| Requête | Clics | Impr | CTR | Pos |
+|---|---|---|---|---|
+| manda ai | **16** | 227 | 7.05% | 4.7 |
+| developpeur no code madagascar | **6** | 24 | 25.00% | 2.8 |
+| alchiimy | 1 | 17 | 5.88% | 14.1 |
+| manda.com | 1 | 2 | 50.00% | 4.0 |
+| manda ia | 0 | 13 | 0.00% | **1.5** ⚠️ |
+| automatisation | 0 | 11 | 0.00% | 9.5 |
+| développement informatique | 0 | 4 | 0.00% | 4.2 |
+| développeur react madagascar | 0 | 2 | 0.00% | 3.0 |
+
+### Top pages
+| Page | Clics | Impr | CTR | Pos |
+|---|---|---|---|---|
+| `/en` | 16 | 339 | 4.72% | 5.1 |
+| `/` | 15 | 118 | 12.71% | 6.1 |
+| `/services` (hub) | 3 | 28 | 10.71% | 6.2 |
+| `/projects/alchiimy` | 1 | 23 | 4.35% | 8.5 |
+| `/blog/claude-code-developper-avec-ia` | 0 | 46 | 0.00% | 9.5 |
+| `/projects` | 0 | 57 | 0.00% | 13.2 |
+| `/blog` | 0 | 19 | 0.00% | 7.7 |
+
+### Évolution vs période précédente (24 mars → 20 avr)
+- **manda ai** : 1 → 16 clics (+1500%)
+- **developpeur no code madagascar** : 0 → 6 clics (NEW)
+- **manda ia** : 2 → 0 clics (-100%) — position 1.5 mais **CTR 0%** sur 13 impressions, problème de présentation SERP
+- **alchiimy** : 0 → 1 clic (NEW)
+
+### Répartition device & pays
+- Mobile 22 clics / 7.19% CTR | Desktop 13 / 3.83% — **mobile domine, optimisé**
+- Madagascar 18 clics (51%) | Turquie 3 (CTR 14%) | France 2 / **CTR 1.79%** sur 112 impr ⚠️ | Maroc 2 (CTR 25%)
+- France : 112 impressions pour 2 clics = forte exposition, faible attractivité du snippet
+
+---
+
+## Indexation : le bloqueur #1
+
+URL Inspection sur les 10 landing pages SEO `/services/<slug>` :
+
+| URL | Statut | Last Crawl |
+|---|---|---|
+| `/services/developpeur-no-code-madagascar` | **Unknown to Google** | Never |
+| `/services/automatisation-n8n-madagascar` | **Discovered - not indexed** | Never |
+| `/services/developpeur-low-code-madagascar` | **Unknown** | Never |
+| `/services/developpeur-react-nextjs-madagascar` | **Discovered - not indexed** | Never |
+| `/services/developpeur-nextjs-supabase-madagascar` | **Discovered - not indexed** | Never |
+| `/services/developpeur-python-ia-madagascar` | **Unknown** | Never |
+| `/en/services/no-code-developer-madagascar` | **Unknown** | Never |
+| `/en/services/n8n-automation-expert-madagascar` | **Discovered - not indexed** | Never |
+| `/en/services/hire-react-nextjs-developer-madagascar` | **Unknown** | Never |
+| `/en/services/python-ai-developer-madagascar` | **Unknown** | Never |
+
+**État** : `PAGE_FETCH_STATE_UNSPECIFIED` partout = Google connaît certaines URLs mais n'a **jamais tenté** de les fetcher. Crawl budget insuffisant (autorité de domaine encore jeune).
+
+**Symptôme révélateur** : pour la requête « developpeur no code madagascar », c'est l'**homepage** qui rank pos 2.7, pas la landing dédiée. Le mot-clé est servi par `/` via la section « L'APPROCHE » réintégrée le 2 mai.
+
+**Implication Google 2026** : indexation = prérequis absolu pour AI Overviews. Sans indexation, ces 12 pages = 0 valeur AI. Reposer la stratégie sur du contenu indexé est plus rentable.
+
+---
+
+## Citability (homepage, scorée bloc par bloc)
+
+15 blocs scorés, **note moyenne 38/100** :
+- 1 bloc grade C (Logiciel de facturation, 60)
+- 5 blocs grade D (Showcase n8n 45, FAQ 42, Suivi temps réel 35…)
+- 9 blocs grade F (Workflows IA pricing 17, Yalee Creek 33, services divers 19-27)
+
+### Pattern de faiblesse (récurrent sur tous les blocs)
+- `uniqueness_signals` = 0 partout (manque opinions, anecdotes, prises de position)
+- `statistical_density` ≈ 0 (manque chiffres clients concrets)
+- `answer_block_quality` faible (paragraphes pas auto-portants)
+
+### Ce que Google 2026 dit exactement
+> « Non-commodity content : analyse vécue avec métriques personnelles plutôt que listes génériques »
+
+Ton portfolio mentionne « 20+ projets, 100% satisfaction, 4+ ans, 3 pays » → bons indicateurs MAIS répétés sans détail. Le seul vrai cas chiffré est le témoignage ScalApp/JR (efficacité triplée en 3 mois) — c'est exactement ce que Google veut, mais isolé.
+
+---
+
+## Brand Authority
+
+| Plateforme | Statut | Poids correlation citations IA |
+|---|---|---|
+| YouTube | ❌ Pas de chaîne | **0.737 — priorité #1** |
+| Reddit | ❌ Pas de profil/activité | **0.659 — priorité #2** |
+| Wikipedia | ❌ Pas de page | Priorité #3 |
+| Wikidata | ✅ Q139694949 | bonus |
+| LinkedIn | ✅ Profil perso (sameAs) | Activité posts irrégulière |
+| GitHub | ✅ Profil (sameAs) | Repos public |
+| Malt | ✅ Profil créé | Reviews ? |
+
+**Faille critique** : YouTube est le facteur #1 pour les citations IA selon Ahrefs (Dec 2025). 0 contenu = 0 chance d'être cité comme source par ChatGPT/Perplexity sur tes thèmes.
+
+---
+
+## Technique
+
+| Item | Statut |
 |---|---|
-| Clics | 3 |
-| Impressions | 48 |
-| CTR moyen | 6.25% |
-| Position moyenne | 5.2 |
-
-**Requetes :**
-- "manda ai" : 15 impressions, 1 clic, position 5.5
-- "manda ia" : 1 impression, 1 clic, position 1.0
-
-**Probleme** : uniquement des requetes brand. Zero requete informationnelle ("developpeur no code madagascar", "automatisation n8n", etc.) malgre le contenu optimise. Cause probable : pages cles non encore indexees.
-
-### Actions GSC Immediates
-
-1. **Soumettre manuellement les 9 URLs** via "Demander l'indexation" dans GSC URL Inspection
-2. **Mettre a jour les `lastmod`** du sitemap avec des dates reelles par page (pas bulk)
-3. **Reverifier le 15 avril** — les pages "Discovered" devraient etre crawlees sous 1-2 semaines
-4. **Creer des liens internes forts** vers les pages non indexees (maillage interne)
+| PSI Mobile | 98 / 100 / 100 / 100 |
+| PSI Desktop | 100 / 100 / 100 / 100 |
+| Sitemap déclaré GSC | ✅ 88 URLs (vs 96 dans le sitemap actuel = décalage à resoumettre) |
+| robots.txt | ✅ Présent, `User-Agent: *` Allow — pas de mention spécifique GPTBot/ClaudeBot/PerplexityBot mais ils héritent du `*` Allow |
+| Hreflang | ✅ FR + EN + x-default |
+| SSR | ✅ Next.js App Router |
+| HTTPS | ✅ |
+| Mobile-first | ✅ CTR mobile 7.19% > desktop 3.83% |
+| llms.txt | ⚠️ Présent — Google 2026 dit « not needed » mais pas nuisible |
 
 ---
 
-## Issues Critiques (A Regler Immediatement)
+## Schema JSON-LD (rich results)
 
-### 1. Brand Authority quasi inexistante (15/100)
-- **0** presence Reddit, YouTube, Wikipedia, Wikidata, Stack Overflow, Dev.to, Medium
-- GitHub : 1 follower, **URL portfolio encore sur l'ancien domaine .vercel.app**
-- Seules presences : LinkedIn + Malt (non verifiables par scraping)
-- **Impact** : les IA ne peuvent pas confirmer l'identite de l'entite "Mandaniaina Randriambinintsoa" via des sources tierces
+Détectés sur la homepage :
+- `Person` (avec sameAs LinkedIn/GitHub/Malt/**Wikidata**, knowsAbout, jobTitle, address)
+- `ProfessionalService` (legalName, areaServed FR+US+MG, hasOfferCatalog avec 3 services, foundingDate 2023-01-01, geo coords)
+- `WebSite` (SearchAction, inLanguage FR+EN)
+- `FAQPage` (4 questions complètes)
+- `HowTo` (3 étapes : Conception → Intégration → Déploiement)
 
-**Actions :**
-- Creer une entree **Wikidata** (30 min, gratuit) — plus gros impact single action
-- Mettre a jour **GitHub profile URL** vers manda-ia.com (2 min)
-- Poster **3 contributions utiles sur Reddit** (r/nocode, r/n8n, r/webdev)
-- Creer un **compte Dev.to** et cross-poster les articles blog
-
-### 2. 9 pages cles non indexees par Google
-- Voir section GSC ci-dessus
-- La landing SEO principale (`/services/developpeur-no-code-madagascar`) n'est PAS indexee
-- Aucune requete informationnelle ne genere d'impressions
-
-### 3. "0+ ans d'experience" affiche sur la homepage
-- Le compteur d'experience affiche "0+" — detruit la confiance
-- Devrait afficher "4+" d'apres la timeline About
-- **Action** : verifier la source de donnees ou hardcoder la valeur
+**Verdict** : excellent, complet, valide. Conserver pour rich results SEO mais **ne pas en ajouter d'autres « pour l'IA »** comme dirait l'ancienne doctrine GEO.
 
 ---
 
-## Issues Haute Priorite (Regler sous 1 semaine)
+## Plan d'action priorisé (méthodologie Google 2026)
 
-### 4. GitHub profile URL incorrecte
-- Pointe encore vers `portfolio-manda-developpeur-nocode-madagascar.vercel.app`
-- Devrait pointer vers `https://manda-ia.com`
-- **Impact** : casse la resolution d'entite pour ChatGPT, Gemini, Copilot
+### 🔴 P0 — Débloquer l'indexation des 12 landing pages (semaine 1-2)
 
-### 5. Zero citations externes dans les articles blog
-- Aucun lien sortant vers des sources (docs n8n, Anthropic, Gartner, Fortune BI)
-- Les stats sont citees par nom mais pas liees
-- **Action** : ajouter des hyperliens vers les sources dans chaque article
+Le bloqueur absolu. Sans ça, les 30 000+ mots de contenu sont invisibles.
 
-### 6. Email professionnel manquant
-- `mandaniaina.randriambinintsoa@gmail.com` sur un site avec domaine custom
-- **Action** : configurer `contact@manda-ia.com` via Porkbun email forwarding
+1. **Diagnostic crawl budget** : vérifier dans GSC > Settings > Crawl Stats si Googlebot crawle peu de URLs/jour
+2. **Maillage interne agressif** : ajouter dans la homepage et `/services` hub des liens contextuels vers les 12 landing pages (avec ancres descriptives, pas « cliquez ici »)
+3. **Backlinks externes vers 2-3 landing pages prioritaires** : DR>30, articles invités sur sites tech FR/EU. Cible : `/services/automatisation-n8n-madagascar` et `/services/developpeur-react-nextjs-madagascar`
+4. **Décision dure** : si après 3 semaines aucune des 12 n'est crawlée → **les réintégrer comme sections de la homepage ou de `/services`**. Plus rentable que de payer le crawl budget de pages orphelines.
 
-### 7. Speakable schema absent
-- Aucune page n'a de `SpeakableSpecification`
-- Critique pour la consommation par les assistants IA
-- **Action** : ajouter `speakable` a `BlogPostJsonLd.tsx`
+### 🟡 P1 — Transformer 2-3 landing en « non-commodity » (semaine 2-3)
 
-### 8. sameAs trop limite (3 plateformes)
-- Seulement LinkedIn, GitHub, Malt dans le schema
-- **Action** : creer YouTube, Twitter/X et ajouter les URLs
+Prendre la landing la plus stratégique (`/services/automatisation-n8n-madagascar`) et la réécrire en **case study chiffré** :
 
-### 9. Logo ProfessionalService en SVG
-- Google recommande PNG/JPG min 112x112px
-- **Action** : creer `logo.png` et mettre a jour `LocalBusinessJsonLd.tsx`
+- Avant : « 5 workflows N8N indispensables pour PME »
+- Après : « Comment j'ai automatisé la facturation pour ARPON (cabinet 12 personnes) — workflow N8N + Stripe + Notion, ROI réel 80h/mois économisées »
+- Inclure : captures d'écran du workflow, métriques avant/après, coûts réels, durée de mise en œuvre, ce qui a failli foirer
 
-### 10. Temoignage unique non verifiable
-- "Julien Renard, ScalApp" sans lien LinkedIn ni logo
-- **Action** : ajouter lien LinkedIn + embed avis Malt/Google Business
+Cette réécriture est exactement ce que Google 2026 appelle « content only you can write ».
 
----
+### 🟡 P2 — Créer une chaîne YouTube (mois 1)
 
-## Issues Moyenne Priorite (Regler sous 1 mois)
+Plus haut levier brand pour citations IA. Format minimum viable :
+- 1 vidéo/semaine, 5-8 min
+- Sujet : démo workflow N8N réel, build SaaS en live, intégration Claude API
+- Format screencast, pas besoin de prod
+- Mettre le profil YouTube dans `sameAs` du schema Person
 
-### 11. Page About trop courte (~650 mots)
-- Devrait etre 1500+ mots pour un bon score E-E-A-T
-- Ajouter : details ESTI, publications, certifications, case studies detailles
-- Ajouter `ProfilePageJsonLd` avec `alumniOf` pour ESTI
+### 🟡 P3 — Reddit authentique (continu)
 
-### 12. Articles blog trop courts
-- "Claude Code: developper avec IA" : ~650 mots (trop fin pour un guide)
-- "n8n guide complet" : ~1200 mots (insuffisant pour "guide complet")
-- **Action** : enrichir a 1500-2500 mots chacun
+NE PAS seeder de mentions artificielles (Google 2026 dit explicitement que ça ne marche pas).
 
-### 13. Pas de contenu comparatif structure
-- Tableaux de comparaison en divs CSS, pas en `<table>` HTML
-- Google AI Overviews extrait directement les `<table>` elements
-- **Action** : convertir les comparaisons en vrais tableaux HTML
+À la place : **répondre à 2-3 threads par semaine** sur r/n8n, r/nextjs, r/SaaS, r/Madagascar où ton expérience apporte une vraie valeur. Sans liens promotionnels, juste l'expertise. La citation viendra naturellement.
 
-### 14. H2 homepage non query-matching
-- "LE PROCESSUS", "EN CHIFFRES" — labels stylistiques
-- Mieux : "Comment fonctionne mon processus ?", "Mes resultats en chiffres"
+### 🟢 P4 — Améliorer le CTR France (rapid win)
 
-### 15. SearchAction WebSite sans route /search
-- Le schema declare un SearchAction mais `/search` n'existe probablement pas
-- **Action** : creer la route ou supprimer le SearchAction
+`/` et `/en` ont 112 impressions FR pour 2 clics = CTR 1.79%. Le snippet ne capte pas l'attention. Tester :
+- Title plus orienté résultat client (avec un chiffre)
+- Meta description avec proposition de valeur claire pour client FR
 
-### 16. foundingDate format incorrect
-- `"2023"` devrait etre `"2023-01-01"` (ISO 8601)
+Aussi : « manda ia » à pos 1.5 sur 13 impressions avec 0 clic = problème de title/snippet. Vérifier ce qui s'affiche dans le SERP pour cette requête.
 
-### 17. llms.txt a ameliorer
-- Ajouter section FAQ inline
-- Ajouter section English
-- Ajouter section Technical (types schema, langues, nombre de pages)
+### 🟢 P5 — Réactiver Google Business Profile (semaine 4)
 
-### 18. Schemas manquants
-- `/projects` : pas de ItemList schema
-- `/blog` : pas de CollectionPage schema
-- `/about` : pas de ProfilePage schema
-- Service pages : schema Service trop minimal (pas de serviceType, offers)
+Profil créé mais peu activé. Poster 1×/semaine (case study photo + texte court). C'est explicitement recommandé par la doc Google 2026.
 
-### 19. Cadence de publication absente
-- 7 articles tous publies en fevrier 2026, rien depuis
-- **Action** : publier 2-4 articles/mois minimum
+### ❌ À arrêter
 
-### 20. IndexNow non persistant
-- Pas de fichier cle IndexNow dans `public/`
-- **Action** : configurer IndexNow pour notification automatique a Bing
+- **Étoffer `llms.txt`** : Google dit not needed, ROI nul
+- **Ajouter encore plus de schema** « pour l'IA » : déjà à 80/100, marginal
+- **Plan de seeding artificiel** Reddit/HackerNews : violation des Search Essentials selon Google 2026
 
 ---
 
-## Issues Basse Priorite (Optimiser quand possible)
+## Quick wins (cette semaine)
 
-- Meta description (188 chars) legerement au-dessus des 160 recommandes
-- `email` dans ProfessionalService avec prefixe `mailto:` (devrait etre plain)
-- Preconnect manquant pour Supabase et Google Analytics
-- `fetchpriority="high"` manquant sur l'image hero
-- HSTS sans `includeSubDomains`
-- `wordCount` non passe au BlogPostJsonLd
-- Politique editoriale absente
+1. Resoumettre le sitemap dans GSC (96 URLs vs 88 actuellement comptées)
+2. Ajouter dans la homepage 6 liens internes vers les 12 landing pages (footer pas suffisant — il faut du contextuel dans le body)
+3. Mettre à jour le Title FR pour intégrer un chiffre client (« 20+ MVP livrés »)
+4. Publier 1 post LinkedIn par semaine, format case study avec métriques
+5. Créer la chaîne YouTube (juste créer le compte, première vidéo plus tard)
 
 ---
 
-## Deep Dives par Categorie
+## Annexe : pages analysées
 
-### AI Citability (52/100)
-
-**Top passages citables :**
-| Passage | Score | Pourquoi |
-|---|---|---|
-| Definition no-code + stats marche ($66B, Gartner 70%) | 74 | Self-contained + stats nommees |
-| Tableau comparatif No-Code/Low-Code/Traditionnel | 71 | Structure + chiffres precis |
-| ROI n8n (5h/sem = 1000EUR/mois) | 68 | Calcul concret |
-| Positionnement n8n vs Zapier/Make | 62 | Differentiation competitive |
-| FAQ delais livraison | 60 | Reponse directe |
-
-**Probleme majeur** : contenu uniquement en francais. Les modeles IA sont domines par l'anglais — multiplicateur de 0.78 applique. Les pages `/en/` doivent etre enrichies avec la meme densite de donnees.
-
-**Passages non citables :**
-- Descriptions de services trop vagues ("Applications web completes et SaaS sur mesure")
-- Hero subtitle trop long (5+ phrases narratives)
-- Process steps generiques
-
-### Brand Authority (15/100)
-
-| Plateforme | Statut | Points |
-|---|---|---|
-| Wikipedia | Absent | 0/20 |
-| Wikidata | Absent | 0/15 |
-| YouTube | Absent | 0/15 |
-| Reddit | 0 mentions | 0/10 |
-| LinkedIn | Present | 7/10 |
-| GitHub | 13 repos, 0 followers, URL incorrecte | 3/25 |
-| Malt | Present (non verifiable) | 5/25 |
-| Stack Overflow | Absent | 0/5 |
-| Dev.to/Medium | Absent | 0/5 |
-
-### Content E-E-A-T (59/100)
-
-| Dimension | Score | Points forts | Lacunes |
-|---|---|---|---|
-| Experience | 14/25 | Case study Factumation, 20+ projets, GA4 live demo | Pas de metriques avant/apres, pas de screenshots process |
-| Expertise | 13/25 | Master 1 ESTI, depth technique n8n/Claude Code | Pas de certifications, pas de publications externes |
-| Authoritativeness | 11/25 | Schema Person/ProfessionalService, profils externes | Zero backlinks, zero mentions media, zero reconnaissance |
-| Trustworthiness | 18/25 | HTTPS, contact complet, pages legales, schema | Gmail au lieu d'email pro, 1 seul temoignage non verifiable |
-
-**Detection IA** : contenu AI-assiste mais dirige et edite par l'auteur. Voix personnelle presente dans About et Claude Code. Sections informationnelles plus generiques.
-
-### Technical GEO (88/100)
-
-| Composant | Score | Status |
-|---|---|---|
-| SSR/SSG | 95 | Next.js App Router, tout le contenu dans le HTML initial |
-| Meta Tags | 95 | Titre, description, canonical, OG, Twitter, hreflang — complets |
-| Crawlability | 85 | robots.txt permissif, sitemap 62 URLs, 0 erreurs |
-| Securite | 95 | HTTPS, HSTS 2 ans, CSP complet, X-Frame-Options DENY |
-| Core Web Vitals | 75 | LCP risk medium (pas de fetchpriority), CLS medium |
-| Mobile | 90 | Viewport OK, responsive Tailwind, images srcset |
-| URL Structure | 90 | Clean slugs, hierarchie logique, i18n par path |
-| Response | 85 | 200 OK, Vercel CDN, pages legales fixees (plus de 404) |
-
-**Pages legales fixees** : `/privacy` et `/mentions-legales` retournent maintenant 200 (etaient 404 au dernier audit).
-**Canonical resolue** : tous les tags pointent vers manda-ia.com, .vercel.app desactive.
-
-### Schema & Structured Data (63/100)
-
-**8 types de schema detectes :** Person, WebSite, ProfessionalService, FAQPage, BreadcrumbList, BlogPosting, Service, SoftwareApplication
-
-| Composant | Points | Notes |
-|---|---|---|
-| Organization/LocalBusiness | 10/20 | Present mais sameAs limite a 3 plateformes |
-| Article + dateModified | 15/15 | FIXE depuis dernier audit |
-| Person (author) | 12/15 | Complet, manque alumniOf |
-| sameAs completeness | 5/15 | 3 plateformes seulement |
-| speakable | 0/10 | ABSENT |
-| BreadcrumbList | 5/5 | Present et valide |
-| WebSite + SearchAction | 3/5 | /search probablement inexistant |
-| Pas de schemas deprecies | 5/5 | Clean |
-| Format JSON-LD | 5/5 | Exclusivement JSON-LD |
-| Validation | 3/5 | Issues mineures (mailto, SVG logo, foundingDate) |
-
-### Platform Optimization (46/100)
-
-| Plateforme IA | Score | Principal bloqueur |
-|---|---|---|
-| Google AI Overviews | 55 | H2 non query-matching, pas de `<table>` HTML |
-| Google Gemini | 42 | Zero YouTube, GBP minimal |
-| Bing Copilot | 40 | Pas d'IndexNow, pas de Bing Webmaster Tools |
-| ChatGPT Web Search | 38 | Pas de Wikidata, pas d'entity recognition |
-| Perplexity AI | 35 | Zero validation communautaire (Reddit, forums) |
+- Homepage `/`, `/en` (SSR HTML, JSON-LD)
+- 10 landing pages `/services/...` et `/en/services/...` (URL Inspection)
+- Top pages GSC : `/services`, `/projects`, `/blog`, `/about`, `/projects/alchiimy`, `/blog/claude-code-developper-avec-ia`
+- `/sitemap.xml` (96 URLs), `/robots.txt`, `/llms.txt` (HTTP 200)
 
 ---
 
-## Quick Wins (Cette Semaine)
+## Sources Google 2026
 
-1. **Mettre a jour l'URL GitHub** vers manda-ia.com (2 min, impact sur 3 plateformes IA)
-2. **Creer une entree Wikidata** pour "Mandaniaina Randriambinintsoa" (30 min, plus gros impact)
-3. **Soumettre les 9 URLs non indexees** via GSC "Demander l'indexation" (10 min)
-4. **Fixer "0+ ans d'experience"** sur la homepage (5 min)
-5. **Ajouter `speakable`** au BlogPostJsonLd (15 min de code)
-6. **Fixer `foundingDate`** : "2023" → "2023-01-01" (2 min)
-7. **Fixer `email`** : retirer le prefixe `mailto:` dans ProfessionalService (2 min)
-8. **Configurer email pro** contact@manda-ia.com via Porkbun (15 min)
-
----
-
-## Plan d'Action 30 Jours
-
-### Semaine 1 : Fondations Entite + GSC
-- [ ] Creer entree Wikidata
-- [ ] Mettre a jour URL GitHub
-- [ ] Soumettre 9 URLs via GSC
-- [ ] Fixer compteur "0+ ans"
-- [ ] Ajouter speakable au BlogPostJsonLd
-- [ ] Fixer foundingDate, email, logo PNG
-- [ ] Configurer contact@manda-ia.com
-
-### Semaine 2 : Brand Authority
-- [ ] Creer compte YouTube + 2 videos tutoriel (screen recordings n8n)
-- [ ] Creer compte Dev.to + cross-poster 3 articles
-- [ ] Poster 3 contributions utiles sur Reddit (r/nocode, r/n8n, r/webdev)
-- [ ] Creer compte Twitter/X + ajouter a sameAs
-- [ ] Verifier site dans Bing Webmaster Tools + IndexNow
-
-### Semaine 3 : Content E-E-A-T
-- [ ] Enrichir page About a 1500+ mots (alumniOf ESTI, certifs, methodo)
-- [ ] Ajouter liens sources externes dans tous les articles blog
-- [ ] Enrichir article Claude Code a 1500+ mots
-- [ ] Ajouter temoignages verifiables (lien LinkedIn + avis Malt)
-- [ ] Ajouter ProfilePageJsonLd sur /about
-
-### Semaine 4 : Schema + Contenu
-- [ ] Ajouter ItemList schema sur /projects et CollectionPage sur /blog
-- [ ] Convertir tableaux comparatifs en `<table>` HTML
-- [ ] Enrichir ServiceJsonLd (serviceType, offers)
-- [ ] Publier 2 nouveaux articles blog avec data originale
-- [ ] Réécrire H2 homepage en format query-matching
-- [ ] Mettre a jour llms.txt (FAQ, English, Technical)
-- [ ] Reverifier indexation GSC (objectif : 9 pages → 0 non indexees)
-
----
-
-## Comparaison avec Audit Precedent (27 mars 2026)
-
-| Metrique | 27 mars | 8 avril | Delta | Notes |
-|---|---|---|---|---|
-| Score GEO | 57 | 52 | -5 | Methodologie plus stricte, brand -13 |
-| AI Visibility | 60 | 51 | -9 | Penalite langue francaise appliquee |
-| Platform | 48 | 46 | -2 | Stable |
-| Technical | 91 | 88 | -3 | Criteres GEO specifiques |
-| E-E-A-T | 58 | 59 | +1 | Stable |
-| Schema | 52 | 63 | +11 | dateModified fixe |
-| Brand Authority | 28 | 15 | -13 | Audit plus rigoureux |
-
-**Note** : la baisse du score est principalement methodologique (criteres plus stricts, penalite langue). Le site a objectivement progresse (pages legales OK, canonical resolue, favicon, dateModified fixe).
-
----
-
-## Appendice : Pages Analysees
-
-| URL | Titre | Indexee | Issues GEO |
-|---|---|---|---|
-| / | Developpeur No-Code & Fullstack IA a Madagascar | Oui | H2 stylistiques, hero long, "0+" |
-| /services | Services | Oui | Descriptions vagues |
-| /blog | Blog | Oui | Pas de CollectionPage schema |
-| /about | A propos | Non | Trop court, pas de ProfilePage schema |
-| /contact | Contact | Non | Discovered, not indexed |
-| /projects | Projets | Non | Pas de ItemList schema |
-| /services/developpeur-no-code-madagascar | Dev No-Code Madagascar | Non | CRITIQUE — landing SEO non indexee |
-| /services/automatisation-n8n-madagascar | Expert N8N Madagascar | Non | URL unknown to Google |
-| /services/developpeur-low-code-madagascar | Dev Low-Code Madagascar | Non | Discovered, not indexed |
-| /quiz | Quiz | Non | URL unknown |
-| /mentions-legales | Mentions Legales | Non | Discovered, not indexed |
-| /privacy | Privacy | Oui | OK |
-| /blog/automatiser-business-n8n-guide-complet | Guide N8N | Oui | Pas de citations externes |
-| /blog/claude-code-developper-avec-ia | Claude Code | Non | Trop court (650 mots) |
-| /en | English Homepage | Oui | 9 impressions, 0 clics |
-| /en/projects | English Projects | Oui | 27 impressions, 1 clic |
-
----
-
-*Genere par Claude Code — Audit GEO complet le 8 avril 2026*
+- [Optimizing your website for generative AI features on Google Search](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) — doc officielle, 15 mai 2026
+- [A new resource for optimizing for generative AI in Google Search](https://developers.google.com/search/blog/2026/05/a-new-resource-for-optimizing) — blog Search Central, 15 mai 2026
+- [Google's New AI Search Guide Calls AEO And GEO 'Still SEO'](https://www.searchenginejournal.com/googles-new-ai-search-guide-calls-aeo-and-geo-still-seo/575026/) — Search Engine Journal, analyse
