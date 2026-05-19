@@ -14,6 +14,7 @@ function getAnalyticsClient() {
       client_email: process.env.GA4_CLIENT_EMAIL?.trim(),
       private_key: privateKey,
     },
+    fallback: true,
   });
 }
 
