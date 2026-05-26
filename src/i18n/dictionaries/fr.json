@@ -106,19 +106,93 @@
           "sections": [
             {
               "title": "Pourquoi automatiser avec N8N ?",
-              "content": "N8N est la plateforme d'automatisation open-source la plus puissante du marché. Contrairement à Zapier ou Make, N8N offre un contrôle total sur vos données (self-hosted), plus de 400 intégrations natives et la possibilité de créer des logiques complexes avec des branches conditionnelles, des boucles et des sous-workflows.\n\nEn tant qu'expert N8N à Madagascar, je conçois des automatisations qui tournent en continu, sans intervention humaine, et qui s'adaptent à la croissance de votre entreprise."
+              "content": "N8N est la plateforme d'automatisation open-source la plus puissante du marché. Le projet cumule plus de 90 000 étoiles sur [GitHub](https://github.com/n8n-io/n8n) et est utilisé par des milliers d'entreprises dans le monde.\n\nContrairement à Zapier ou Make, N8N offre un contrôle total sur vos données (self-hosted), plus de 400 intégrations natives référencées dans la [bibliothèque officielle](https://n8n.io/integrations) et la possibilité de créer des logiques complexes avec des branches conditionnelles, des boucles, des sous-workflows et du code JavaScript ou Python custom dans les nodes.\n\nEn tant qu'expert N8N à Madagascar, je conçois des automatisations qui tournent en continu, sans intervention humaine, et qui s'adaptent à la croissance de votre entreprise. La [documentation officielle n8n](https://docs.n8n.io) reste ma référence quotidienne pour rester aligné sur les meilleures pratiques."
             },
             {
               "title": "Ce que j'automatise",
-              "content": "**Prospection commerciale** — Scraping de leads, enrichissement de données, envoi d'emails personnalisés automatiques.\n\n**Facturation & comptabilité** — Génération automatique de factures, relances de paiement, synchronisation avec votre logiciel comptable.\n\n**Support client** — Tri automatique des tickets, réponses IA, escalade intelligente vers les bons interlocuteurs.\n\n**Marketing** — Publication automatique sur les réseaux sociaux, newsletters personnalisées, suivi de campagnes.\n\n**Ressources humaines** — Onboarding automatisé, suivi des candidatures, notifications internes.\n\n**Monitoring** — Alertes en temps réel, tracking visiteurs, rapports automatiques quotidiens."
+              "content": "**Prospection commerciale** — Scraping de leads, enrichissement de données via Apollo ou Hunter, envoi d'emails personnalisés automatiques avec séquences de relance.\n\n**Facturation & comptabilité** — Génération automatique de factures, relances de paiement, synchronisation avec votre logiciel comptable (Stripe, Pennylane, QuickBooks).\n\n**Support client** — Tri automatique des tickets, réponses IA générées par [Claude](https://docs.anthropic.com) ou GPT-4, escalade intelligente vers les bons interlocuteurs selon la criticité.\n\n**Marketing** — Publication automatique sur les réseaux sociaux, newsletters personnalisées via Brevo ou Mailchimp, suivi de campagnes et reporting hebdomadaire.\n\n**Ressources humaines** — Onboarding automatisé, suivi des candidatures, notifications internes sur Slack ou Teams.\n\n**Monitoring** — Alertes en temps réel (down, erreur 5xx), tracking visiteurs vers Supabase ou Airtable, rapports automatiques quotidiens."
+            },
+            {
+              "title": "n8n vs Zapier vs Make : pourquoi je choisis n8n",
+              "content": "Le choix de la plateforme d'automatisation détermine vos coûts mensuels, votre dépendance à un fournisseur et la complexité des workflows réalisables.\n\n**Zapier** facture à la tâche exécutée. À partir de 100 zaps actifs avec quelques milliers d'opérations mensuelles, la facture grimpe vite à 200 ou 500 euros par mois. Les workflows restent simples (linéaires, peu de logique conditionnelle).\n\n**Make** (ex-Integromat) offre plus de flexibilité que Zapier mais reste un service propriétaire facturé à l'opération. Pas de self-hosting possible.\n\n**n8n** se télécharge gratuitement et s'auto-héberge sur un VPS à 5 ou 10 euros par mois, peu importe le volume d'exécutions. La version cloud officielle existe aussi pour ceux qui ne veulent pas gérer l'infrastructure. Les workflows peuvent embarquer du code JavaScript ou Python custom, brancher n'importe quelle API REST ou GraphQL, et orchestrer des agents IA via [LangChain](https://www.langchain.com).\n\nPour mes clients européens, n8n divise la facture mensuelle d'automatisation par 5 à 10 par rapport à Zapier, avec en bonus la portabilité totale des workflows et l'absence de vendor lock-in."
             },
             {
               "title": "Exemples de workflows réalisés",
-              "content": "**Scraping FlowRemote** — Extraction automatique des offres d'emploi remote, filtrage intelligent par critères et envoi quotidien par email. Zéro intervention manuelle.\n\n**Tracking Visiteurs** — Système de monitoring web avec géolocalisation IP, stockage Airtable et dashboard analytique en temps réel.\n\n**Factumation** — Pipeline de facturation automatisée connectant Claude Code pour la génération de documents et N8N pour la distribution automatique."
+              "content": "**Scraping FlowRemote** — Extraction automatique des offres d'emploi remote sur 12 sources, filtrage intelligent par critères et envoi quotidien par email. Zéro intervention manuelle depuis 2024.\n\n**Tracking Visiteurs** — Système de monitoring web avec géolocalisation IP via ipapi.co, stockage [Supabase](https://supabase.com) et dashboard analytique en temps réel sur ce portfolio.\n\n**Factumation** — Pipeline de facturation automatisée connectant Claude Code pour la génération de documents et N8N pour la distribution automatique par email, avec relances programmées.\n\n**Agent IA support client** — Workflow n8n branché sur la boîte mail d'un client, classification automatique des tickets via Claude, réponse générée et envoyée après validation humaine."
             },
             {
               "title": "L'avantage Madagascar",
-              "content": "Faire appel à un expert N8N basé à Madagascar vous donne accès à une expertise technique de premier plan à des tarifs significativement plus bas que le marché européen. Mon fuseau horaire (GMT+3) couvre parfaitement les heures de bureau françaises, et je communique couramment en français et en anglais.\n\nChaque workflow est documenté, testé et livré avec un guide d'utilisation pour votre équipe."
+              "content": "Faire appel à un expert N8N basé à Madagascar vous donne accès à une expertise technique de premier plan à des tarifs significativement plus bas que le marché européen. Mon fuseau horaire (GMT+3) couvre parfaitement les heures de bureau françaises, et je communique couramment en français et en anglais.\n\nChaque workflow est documenté, testé et livré avec un guide d'utilisation pour votre équipe. Le code des nodes custom est versionné sur GitHub, et l'instance n8n peut tourner sur votre propre VPS pour garder vos données chez vous."
+            }
+          ],
+          "comparisonTable": {
+            "title": "n8n vs Zapier vs Make en 2026",
+            "intro": "Comparaison des trois principales plateformes d'automatisation sur les critères qui comptent pour une PME ou un SaaS.",
+            "headers": ["Critère", "Zapier / Make", "n8n (mon choix)"],
+            "rows": [
+              {
+                "criterion": "Tarification",
+                "noCode": "Facturation à la tâche, 20 à 800 €/mois selon le volume.",
+                "nextjs": "Gratuit en self-hosted, VPS à 5-10 €/mois quel que soit le volume.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Self-hosting",
+                "noCode": "Impossible, données chez le fournisseur.",
+                "nextjs": "Oui, Docker en 5 minutes sur votre serveur. RGPD-friendly.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Code custom",
+                "noCode": "Très limité, peu de JavaScript autorisé.",
+                "nextjs": "Nodes Function en JavaScript ou Python complets.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Intégrations",
+                "noCode": "5000+ apps, mais qualité variable.",
+                "nextjs": "400+ apps natives + n'importe quelle API REST/GraphQL.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Agents IA",
+                "noCode": "Intégration Claude/GPT basique.",
+                "nextjs": "LangChain natif, multi-step agents, mémoire vectorielle.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Courbe d'apprentissage",
+                "noCode": "Très simple, no-code complet.",
+                "nextjs": "Moyenne, nécessite un peu de logique technique.",
+                "winner": "nocode"
+              }
+            ],
+            "conclusion": "Pour un MVP rapide sans technicien, Zapier reste pertinent. Pour une automatisation sérieuse avec un volume croissant ou des données sensibles, n8n est le choix gagnant à long terme."
+          },
+          "showcase": [
+            {
+              "src": "/images/projects/scraping-flowremote-automatisation-emploi.png",
+              "alt": "Workflow n8n de scraping d'offres d'emploi remote - FlowRemote",
+              "title": "FlowRemote — Scraping n8n",
+              "description": "Scraping quotidien automatisé de 12 sources, filtrage IA et email digest. Tournant en continu depuis 2024."
+            },
+            {
+              "src": "/images/projects/factumation-logiciel-facturation.png",
+              "alt": "Pipeline de facturation automatisée avec n8n - Factumation",
+              "title": "Factumation — Facturation automatisée",
+              "description": "n8n orchestre la génération PDF (Claude Code), l'envoi email et les relances de paiement."
+            },
+            {
+              "src": "/images/projects/leads-automation-showcase.png",
+              "alt": "Workflow n8n de génération et qualification de leads automatisée",
+              "title": "Leads Automation — Multi-modules",
+              "description": "Pipeline n8n complet : scraping, enrichissement Apollo, scoring IA et CRM sync."
+            },
+            {
+              "src": "/images/projects/tracking-visiteurs-suivi-temps-reel.png",
+              "alt": "Dashboard de tracking visiteurs avec workflow n8n et Supabase",
+              "title": "Tracking Visiteurs — Real-time",
+              "description": "n8n + Supabase + géolocalisation IP pour suivre les visiteurs du portfolio en temps réel."
             }
           ],
           "features": [
@@ -168,7 +242,15 @@
             },
             {
               "question": "Peut-on combiner N8N avec de l'intelligence artificielle ?",
-              "answer": "Oui. J'intègre régulièrement des agents IA (Claude, GPT) dans les workflows N8N pour le traitement de texte, la classification automatique, la génération de contenu et l'analyse de données."
+              "answer": "Oui. J'intègre régulièrement des agents IA (Claude, GPT) dans les workflows N8N pour le traitement de texte, la classification automatique, la génération de contenu et l'analyse de données. Le node LangChain natif de n8n permet de construire des agents multi-étapes avec mémoire vectorielle."
+            },
+            {
+              "question": "Combien de temps pour livrer un workflow n8n ?",
+              "answer": "Un workflow Starter (1 flux simple type scraping ou notification) prend 3 à 5 jours ouvrés. Un palier Pro (3 à 5 workflows connectés + dashboard) prend 1 à 2 semaines. Un Agent IA complet (Claude/GPT + intégrations CRM/email + logique conditionnelle) prend 2 à 3 semaines selon la complexité."
+            },
+            {
+              "question": "Sur quel serveur héberger n8n ?",
+              "answer": "n8n tourne sur n'importe quel VPS Docker. Mes recommandations en 2026 : Hetzner (4€/mois, EU, RGPD-friendly), Render (gratuit en démarrage), ou Railway (5$/mois, déploiement en un clic). Pour les charges plus lourdes, un VPS OVH ou Scaleway à 10-20€/mois suffit largement pour des milliers d'exécutions par jour."
             }
           ]
         }
@@ -416,7 +498,7 @@
           "sections": [
             {
               "title": "Pourquoi Next.js + Supabase en 2026 ?",
-              "content": "Next.js + Supabase est devenu le stack de référence pour les startups et les SaaS en 2026. Ce duo remplace les architectures traditionnelles (Express + MongoDB, Django + PostgreSQL) avec une productivité 3 à 5 fois supérieure.\n\n**Next.js** fournit le frontend et le serveur : rendu côté serveur (SSR), API Routes, Server Components, optimisation automatique des images et du code. Score PageSpeed moyen : 98/100.\n\n**Supabase** fournit le backend complet : base de données PostgreSQL, authentification (email, OAuth, magic links), stockage de fichiers, API REST et temps réel, fonctions Edge. C'est l'alternative open-source à Firebase, adoptée par plus de 1 million de développeurs.\n\nEnsemble, ils permettent de lancer un MVP fonctionnel en 2 à 4 semaines, avec une architecture qui scale de 10 à 100 000 utilisateurs sans refactoring."
+              "content": "Next.js + Supabase est devenu le stack de référence pour les startups et les SaaS en 2026. Ce duo remplace les architectures traditionnelles (Express + MongoDB, Django + PostgreSQL) avec une productivité 3 à 5 fois supérieure.\n\n**[Next.js](https://nextjs.org)** fournit le frontend et le serveur : rendu côté serveur (SSR), API Routes, Server Components, optimisation automatique des images et du code. La [vitrine officielle Next.js](https://nextjs.org/showcase) liste des produits comme TikTok, Notion, Twitch ou Hulu construits avec ce framework. Score PageSpeed moyen sur mes projets : 98/100.\n\n**[Supabase](https://supabase.com)** fournit le backend complet : base de données PostgreSQL, authentification (email, OAuth, magic links), stockage de fichiers, API REST et temps réel, fonctions Edge. C'est l'alternative open-source à Firebase, adoptée par plus de 1 million de développeurs, avec plus de 70 000 étoiles sur [GitHub](https://github.com/supabase/supabase). La [documentation officielle](https://supabase.com/docs) reste ma référence quotidienne.\n\nEnsemble, ils permettent de lancer un MVP fonctionnel en 2 à 4 semaines, avec une architecture qui scale de 10 à 100 000 utilisateurs sans refactoring."
             },
             {
               "title": "Ce que Supabase remplace",
@@ -439,6 +521,50 @@
               "content": "**Ce portfolio (Next.js 16 + Supabase)** :\n- PageSpeed Desktop : 100/100\n- PageSpeed Mobile : 98/100\n- LCP : 943ms\n- CLS : 0.00\n- 62 pages générées statiquement\n\n**Factumation (SaaS Next.js + Supabase)** :\n- Développé en 3 jours avec Claude Code\n- Auth + dashboard + génération PDF\n- Temps de chargement < 1 seconde\n\n**Temps de livraison moyens** :\n- Site vitrine : 1-2 semaines\n- MVP SaaS : 2-4 semaines\n- Application complète : 6-10 semaines"
             }
           ],
+          "comparisonTable": {
+            "title": "Supabase vs Firebase en 2026",
+            "intro": "Comparaison des deux principales plateformes Backend-as-a-Service sur les critères qui comptent vraiment pour un SaaS.",
+            "headers": ["Critère", "Firebase (Google)", "Supabase (mon choix)"],
+            "rows": [
+              {
+                "criterion": "Base de données",
+                "noCode": "Firestore (NoSQL), pas de JOINs ni d'agrégations complexes.",
+                "nextjs": "PostgreSQL standard, JOINs, vues, fonctions, triggers, full-text search.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Vendor lock-in",
+                "noCode": "Fort. Migration hors Google = réécriture complète.",
+                "nextjs": "Aucun. Open-source, données exportables, auto-hébergement possible.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Authentification",
+                "noCode": "Firebase Auth inclus, mais payant au-delà de 50 K MAU.",
+                "nextjs": "Supabase Auth inclus et illimité sur le plan gratuit.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Tarif à l'échelle (100 K MAU)",
+                "noCode": "Factures Firebase qui explosent souvent à 500-2000$/mois.",
+                "nextjs": "Plan Pro Supabase à 25$/mois, prévisible, sans surprise.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Realtime",
+                "noCode": "Firestore listeners performants mais facturés à l'opération.",
+                "nextjs": "Supabase Realtime via WebSocket, illimité sur le plan Pro.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Maturité de l'offre",
+                "noCode": "10+ ans, écosystème massif, intégration Google Cloud.",
+                "nextjs": "Plus jeune (lancé en 2020) mais déjà 1M+ projets en production.",
+                "winner": "nocode"
+              }
+            ],
+            "conclusion": "Firebase reste pertinent pour les apps mobiles Google-centric. Pour un SaaS web ou une app moderne où PostgreSQL et la portabilité comptent, Supabase est le choix gagnant en 2026."
+          },
           "features": [
             {
               "icon": "database",
@@ -545,7 +671,7 @@
           "sections": [
             {
               "title": "Pourquoi Python pour l'IA en 2026 ?",
-              "content": "Python domine le développement IA et data science. Selon l'index TIOBE 2026, Python est le langage de programmation #1 mondial, utilisé par 90 % des projets d'intelligence artificielle.\n\n**Écosystème IA inégalé** — TensorFlow, PyTorch, LangChain, scikit-learn, Hugging Face. Toutes les bibliothèques IA majeures sont en Python.\n\n**FastAPI** — Le framework Python le plus rapide pour les API REST. Performances comparables à Node.js et Go, avec la simplicité de Python. Documentation automatique (Swagger), validation des données (Pydantic), support async natif.\n\n**Intégration LLM** — Les SDK d'Anthropic (Claude) et OpenAI (GPT) sont Python-first. Construire des agents IA, des chatbots ou des systèmes RAG se fait nativement en Python.\n\nPython + FastAPI est le choix naturel quand votre projet implique de l'IA, du traitement de données ou des automatisations complexes."
+              "content": "Python domine le développement IA et data science. Selon l'[index TIOBE](https://www.tiobe.com/tiobe-index/) et la [Stack Overflow Developer Survey](https://survey.stackoverflow.co/2024/technology), Python figure parmi les 3 langages les plus utilisés au monde, et reste la référence absolue dans 90 % des projets d'intelligence artificielle.\n\n**Écosystème IA inégalé** — [PyTorch](https://pytorch.org), TensorFlow, [LangChain](https://www.langchain.com), scikit-learn, [Hugging Face Transformers](https://huggingface.co/docs/transformers). Toutes les bibliothèques IA majeures sont en Python.\n\n**FastAPI** — Le framework Python le plus rapide pour les API REST, dont la [documentation officielle](https://fastapi.tiangolo.com) est devenue une référence pédagogique. Performances comparables à Node.js et Go, avec la simplicité de Python. Documentation automatique (Swagger), validation des données (Pydantic), support async natif.\n\n**Intégration LLM** — Les SDK d'[Anthropic](https://docs.anthropic.com) (Claude) et [OpenAI](https://platform.openai.com/docs) (GPT) sont Python-first. Construire des agents IA, des chatbots ou des systèmes RAG se fait nativement en Python.\n\nPython + FastAPI est le choix naturel quand votre projet implique de l'IA, du traitement de données ou des automatisations complexes."
             },
             {
               "title": "Ce que je développe en Python",
@@ -565,9 +691,53 @@
             },
             {
               "title": "Technologies et outils",
-              "content": "**Langages** — Python 3.12+, TypeScript, SQL\n\n**Frameworks** — FastAPI, Flask, Next.js, React\n\n**IA & ML** — Claude API (Anthropic), OpenAI API, LangChain, Hugging Face Transformers, scikit-learn\n\n**Data** — Pandas, NumPy, PostgreSQL (Supabase/Neon), Redis\n\n**Scraping** — BeautifulSoup, Scrapy, Selenium, Playwright\n\n**Automatisation** — N8N, scripts cron, GitHub Actions\n\n**Déploiement** — Render, Vercel, Docker, Railway\n\n**Outils de dev** — Claude Code, GitHub Copilot, VS Code, Git"
+              "content": "**Langages** — [Python 3.12+](https://docs.python.org/3/), TypeScript, SQL\n\n**Frameworks** — [FastAPI](https://fastapi.tiangolo.com), Flask, Next.js, React\n\n**IA & ML** — [Claude API](https://docs.anthropic.com) (Anthropic), [OpenAI API](https://platform.openai.com/docs), [LangChain](https://www.langchain.com), [Hugging Face Transformers](https://huggingface.co/docs/transformers), scikit-learn\n\n**Data** — Pandas, NumPy, PostgreSQL ([Supabase](https://supabase.com)/Neon), Redis\n\n**Scraping** — BeautifulSoup, Scrapy, Selenium, Playwright\n\n**Automatisation** — N8N, scripts cron, GitHub Actions\n\n**Déploiement** — Render, Vercel, Docker, Railway\n\n**Outils de dev** — Claude Code, GitHub Copilot, VS Code, Git"
             }
           ],
+          "comparisonTable": {
+            "title": "Python vs Node.js vs Go pour l'IA",
+            "intro": "Le choix du langage backend influence la productivité IA, l'écosystème disponible et la rapidité de mise en production.",
+            "headers": ["Critère", "Node.js / Go", "Python (mon choix pour l'IA)"],
+            "rows": [
+              {
+                "criterion": "Écosystème IA",
+                "noCode": "Bibliothèques limitées, ports incomplets des outils Python.",
+                "nextjs": "Référence : PyTorch, TensorFlow, LangChain, Hugging Face, scikit-learn.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "SDK LLM officiels",
+                "noCode": "SDK Anthropic/OpenAI existent mais Python est documenté en premier.",
+                "nextjs": "SDK Python-first chez Anthropic et OpenAI, features avancées disponibles plus tôt.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "API REST (FastAPI vs Express/Gin)",
+                "noCode": "Excellentes performances brutes, surtout Go.",
+                "nextjs": "FastAPI quasi équivalent à Node.js, async natif, Pydantic pour la validation.",
+                "winner": "tie"
+              },
+              {
+                "criterion": "Data science & ML",
+                "noCode": "Pas viable, pas d'équivalent Pandas/NumPy.",
+                "nextjs": "Stack data science complet et mature depuis 15+ ans.",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Vitesse d'exécution pure",
+                "noCode": "Go > Node.js > Python sur le CPU brut.",
+                "nextjs": "Plus lent en CPU pur, mais largement compensé par les bibliothèques C (NumPy, PyTorch).",
+                "winner": "nocode"
+              },
+              {
+                "criterion": "Recrutement",
+                "noCode": "Bon réservoir Node.js, plus rare en Go.",
+                "nextjs": "Plus large communauté IA mondiale, recrutement facile.",
+                "winner": "nextjs"
+              }
+            ],
+            "conclusion": "Pour un projet IA en 2026, Python reste imbattable. Pour un microservice à très haute charge sans IA, Go ou Node.js peuvent compléter le stack."
+          },
           "features": [
             {
               "icon": "smart_toy",
