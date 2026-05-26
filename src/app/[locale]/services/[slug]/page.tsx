@@ -22,46 +22,62 @@ function formatLastUpdated(iso: string, locale: "fr" | "en") {
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+function renderLink(href: string, label: string, key: number) {
+  const isExternal = /^https?:\/\//.test(href);
+  if (isExternal) {
+    return (
+      <a
+        key={key}
+        href={href}
+        target="_blank"
+        rel="noopener external"
+        className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2"
+      >
+        {label}
+      </a>
+    );
+  }
+  return (
+    <Link key={key} href={href} className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">
+      {label}
+    </Link>
+  );
+}
+
 function renderInlineMarkdown(text: string) {
   const parts: React.ReactNode[] = [];
   let remaining = text;
   let key = 0;
 
   while (remaining.length > 0) {
+    // Match bold-link first so **[text](url)** renders as a clickable strong link
+    const boldLinkMatch = remaining.match(/\*\*\[([^\]]+)\]\(([^)]+)\)\*\*/);
     const linkMatch = remaining.match(/\[([^\]]+)\]\(([^)]+)\)/);
     const boldMatch = remaining.match(/\*\*([^*]+)\*\*/);
 
+    const boldLinkIdx = boldLinkMatch ? remaining.indexOf(boldLinkMatch[0]) : Infinity;
     const linkIdx = linkMatch ? remaining.indexOf(linkMatch[0]) : Infinity;
     const boldIdx = boldMatch ? remaining.indexOf(boldMatch[0]) : Infinity;
 
-    if (linkIdx === Infinity && boldIdx === Infinity) {
+    const minIdx = Math.min(boldLinkIdx, linkIdx, boldIdx);
+
+    if (minIdx === Infinity) {
       parts.push(<span key={key++}>{remaining}</span>);
       break;
     }
 
-    if (linkIdx <= boldIdx && linkMatch) {
+    if (minIdx === boldLinkIdx && boldLinkMatch) {
+      if (boldLinkIdx > 0) parts.push(<span key={key++}>{remaining.slice(0, boldLinkIdx)}</span>);
+      const linkEl = renderLink(boldLinkMatch[2], boldLinkMatch[1], key++);
+      parts.push(
+        <strong key={key++} className="text-white font-semibold">
+          {linkEl}
+        </strong>
+      );
+      remaining = remaining.slice(boldLinkIdx + boldLinkMatch[0].length);
+    } else if (minIdx === linkIdx && linkMatch) {
       if (linkIdx > 0) parts.push(<span key={key++}>{remaining.slice(0, linkIdx)}</span>);
-      const href = linkMatch[2];
-      const isExternal = /^https?:\/\//.test(href);
-      if (isExternal) {
-        parts.push(
-          <a
-            key={key++}
-            href={href}
-            target="_blank"
-            rel="noopener external"
-            className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2"
-          >
-            {linkMatch[1]}
-          </a>
-        );
-      } else {
-        parts.push(
-          <Link key={key++} href={href} className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">
-            {linkMatch[1]}
-          </Link>
-        );
-      }
+      parts.push(renderLink(linkMatch[2], linkMatch[1], key++));
       remaining = remaining.slice(linkIdx + linkMatch[0].length);
     } else if (boldMatch) {
       if (boldIdx > 0) parts.push(<span key={key++}>{remaining.slice(0, boldIdx)}</span>);
