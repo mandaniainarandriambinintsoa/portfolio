@@ -31,9 +31,9 @@
     "line3": "",
     "subtitle_prefix": "Tu as une idée de produit ou des tâches manuelles qui te ralentissent ? Je les transforme en",
     "subtitle_highlight": "MVP SaaS ou systèmes qui tournent sans toi",
-    "subtitle_rest": ", livrés en quelques semaines. Développement web, intégration IA (Claude/OpenAI) et ",
-    "subtitle_highlight2": "automatisations no-code avec n8n",
-    "subtitle_rest2": ". Mes stacks : React, Next.js, Supabase, Neon et Python. 4+ ans d'expérience, 20+ produits livrés depuis Madagascar. J'utilise Claude Code et Codex pour accélérer et sécuriser le développement.",
+    "subtitle_rest": ", livrés en quelques semaines avec de l'IA et des ",
+    "subtitle_highlight2": "automatisations no-code (n8n)",
+    "subtitle_rest2": ". 4+ ans d'expérience, 20+ produits livrés depuis Madagascar.",
     "cta_primary": "Démarrer un projet",
     "cta_secondary": "Voir mes réalisations"
   },

@@ -31,9 +31,9 @@
     "line3": "I SCALE.",
     "subtitle_prefix": "Got a product idea or manual tasks slowing you down? I turn them into",
     "subtitle_highlight": "SaaS MVPs or systems that run without you",
-    "subtitle_rest": ", shipped in weeks. Web development, AI integration (Claude/OpenAI) and ",
-    "subtitle_highlight2": "no-code automation with n8n",
-    "subtitle_rest2": ". My stack: React, Next.js, Supabase, Neon and Python. 4+ years of experience, 20+ products delivered from Madagascar. I use Claude Code and Codex to speed up and secure development.",
+    "subtitle_rest": ", shipped in weeks with AI and ",
+    "subtitle_highlight2": "no-code automation (n8n)",
+    "subtitle_rest2": ". 4+ years of experience, 20+ products delivered from Madagascar.",
     "cta_primary": "Start a Project",
     "cta_secondary": "View My Work"
   },
