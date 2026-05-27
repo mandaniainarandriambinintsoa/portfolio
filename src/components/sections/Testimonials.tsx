@@ -147,7 +147,7 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
             <div className="t-meta flex items-center justify-between relative z-10">
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 rounded-full bg-black/[0.15] flex items-center justify-center">
-                  <span className="text-lg font-bold text-black/60">
+                  <span className="text-lg font-bold text-black/80">
                     {current.author
                       .split(" ")
                       .map((n) => n[0])
