@@ -1,123 +1,112 @@
-export default function CommandCenter({
-  fileName,
-}: {
-  fileName: string;
-}) {
+import type { CSSProperties } from "react";
+
+type CommandCenterNode = {
+  label: string;
+  sublabel: string;
+};
+
+type CommandCenterDict = {
+  badge: string;
+  title: string;
+  caption: string;
+  note: string;
+  nodes: CommandCenterNode[];
+};
+
+// Visual style per node (icons + accent color). Labels come from the dict (i18n).
+const NODE_STYLES = [
+  {
+    icon: "deployed_code",
+    glow: "rgba(99, 102, 241, 0.55)",
+    ring: "border-indigo-500/30 bg-indigo-600/10",
+    iconColor: "text-indigo-300",
+  },
+  {
+    icon: "psychology",
+    glow: "rgba(16, 185, 129, 0.5)",
+    ring: "border-emerald-500/30 bg-emerald-600/10",
+    iconColor: "text-emerald-300",
+  },
+  {
+    icon: "hub",
+    glow: "rgba(59, 130, 246, 0.5)",
+    ring: "border-blue-500/30 bg-blue-600/10",
+    iconColor: "text-blue-300",
+  },
+  {
+    icon: "database",
+    glow: "rgba(168, 85, 247, 0.5)",
+    ring: "border-purple-500/30 bg-purple-600/10",
+    iconColor: "text-purple-300",
+  },
+] as const;
+
+export default function CommandCenter({ dict }: { dict: CommandCenterDict }) {
   return (
     <section className="w-full max-w-5xl mx-auto mb-16 md:mb-32 px-6 relative z-10">
-      <div className="glass-card rounded-2xl overflow-hidden command-center-glow border-white/10 flex flex-col md:flex-row md:h-[450px]">
-        {/* Sidebar icons */}
-        <div className="hidden md:flex w-16 border-r border-white/10 flex-col items-center py-6 gap-6 bg-black/20">
-          <div className="w-10 h-10 rounded-lg bg-indigo-600/20 flex items-center justify-center border border-indigo-500/30">
-            <span className="material-symbols-outlined text-indigo-400 text-xl">
-              terminal
-            </span>
-          </div>
-          <div className="w-10 h-10 rounded-lg bg-emerald-600/20 flex items-center justify-center border border-emerald-500/30">
-            <span className="material-symbols-outlined text-emerald-400 text-xl">
-              account_tree
-            </span>
-          </div>
-          <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center border border-white/5">
-            <span className="material-symbols-outlined text-slate-400 text-xl">
-              database
-            </span>
-          </div>
-          <div className="mt-auto mb-2">
-            <div className="w-8 h-8 rounded-full bg-slate-800/50" />
-          </div>
+      <div className="glass-card rounded-2xl command-center-glow border-white/10 px-6 py-10 md:px-12 md:py-14">
+        {/* Header */}
+        <div className="text-center mb-10 md:mb-12">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-indigo-200">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true" />
+            {dict.badge}
+          </span>
+          <h2 className="mt-4 text-xl md:text-2xl font-bold text-white max-w-2xl mx-auto leading-snug">
+            {dict.title}
+          </h2>
         </div>
 
-        {/* Code editor */}
-        <div className="flex-1 code-gradient p-6 md:p-8 font-mono text-sm overflow-hidden">
-          <div className="flex items-center gap-2 mb-6 md:mb-8 opacity-60">
-            <div className="w-3 h-3 rounded-full bg-red-500/50" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
-            <div className="w-3 h-3 rounded-full bg-green-500/50" />
-            <span className="ml-4 text-xs">{fileName}</span>
-          </div>
-          <div className="space-y-2 text-sm md:text-base">
-            <p>
-              <span className="text-pink-400">import</span>
-              {" { automation } "}
-              <span className="text-pink-400">from</span>{" "}
-              <span className="text-emerald-400">&apos;@manda/core&apos;</span>;
-            </p>
-            <p>
-              <span className="text-pink-400">export default async function</span>{" "}
-              <span className="text-blue-400">orchestrate</span>() {"{"}
-            </p>
-            <p className="pl-4 text-slate-400">
-              {"// Initialize high-scale workflow"}
-            </p>
-            <p className="pl-4">
-              <span className="text-pink-400">const</span> pipeline ={" "}
-              <span className="text-pink-400">await</span> automation.start({"{"}
-            </p>
-            <p className="pl-8">
-              trigger: <span className="text-emerald-400">&apos;WEBHOOK_V2&apos;</span>,
-            </p>
-            <p className="pl-8">
-              nodes: [<span className="text-emerald-400">&apos;AI_PARSER&apos;</span>,{" "}
-              <span className="text-emerald-400">&apos;DB_SYNC&apos;</span>],
-            </p>
-            <p className="pl-8">
-              scaling: <span className="text-indigo-400">true</span>
-            </p>
-            <p className="pl-4">{"}"});</p>
-            <p className="pl-4">
-              <span className="text-pink-400">return</span> pipeline.status();
-            </p>
-            <p>{"}"}</p>
-          </div>
+        {/* Pipeline */}
+        <div className="flex flex-col md:flex-row items-stretch md:items-center justify-center">
+          {dict.nodes.map((node, i) => {
+            const style = NODE_STYLES[i % NODE_STYLES.length];
+            return (
+              <div key={node.label} className="contents">
+                {i > 0 && (
+                  <div className="flex items-center justify-center shrink-0" aria-hidden="true">
+                    <span className="flow-v md:hidden" />
+                    <span className="flow-h hidden md:block w-8 lg:w-14" />
+                  </div>
+                )}
+                <div
+                  className={`flow-node relative glass-card rounded-2xl border ${style.ring} px-5 py-5 flex md:flex-col items-center gap-4 md:gap-3 text-center w-full md:flex-1 min-w-0`}
+                >
+                  <span
+                    className="flow-node-glow rounded-2xl"
+                    style={
+                      {
+                        "--node-color": style.glow,
+                        animationDelay: `${i * 0.9}s`,
+                      } as CSSProperties
+                    }
+                  />
+                  <div className={`relative shrink-0 w-12 h-12 rounded-xl border ${style.ring} flex items-center justify-center`}>
+                    <span className={`material-symbols-outlined ${style.iconColor}`} aria-hidden="true">
+                      {style.icon}
+                    </span>
+                  </div>
+                  <div className="relative min-w-0">
+                    <p className="font-semibold text-white text-sm">{node.label}</p>
+                    <p className="text-slate-400 text-xs mt-0.5 leading-snug">{node.sublabel}</p>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Pipeline cards */}
-        <div className="w-full md:w-96 border-t md:border-t-0 md:border-l border-white/10 bg-black/40 p-6 md:p-8 flex flex-col justify-center gap-8 md:gap-10 relative overflow-hidden">
-          {/* Grid background */}
-          <div className="absolute inset-0 opacity-10 pointer-events-none">
-            <div className="grid grid-cols-6 h-full w-full">
-              {[...Array(5)].map((_, i) => (
-                <div key={i} className="border-r border-white/20" />
-              ))}
-            </div>
-          </div>
+        {/* Caption */}
+        <p className="text-center text-sm text-slate-400 mt-10 md:mt-12 max-w-2xl mx-auto leading-relaxed">
+          {dict.caption}
+        </p>
 
-          <div className="relative z-10 flex flex-col gap-8 md:gap-10">
-            {/* Webhook */}
-            <div className="flex items-center gap-4 glass-card p-4 rounded-xl border-indigo-500/30 shadow-lg shadow-indigo-500/10">
-              <div className="w-10 h-10 bg-indigo-700 rounded flex items-center justify-center text-xs font-bold shrink-0">
-                WEB
-              </div>
-              <div>
-                <p className="font-bold text-white text-xs">Webhook Receiver</p>
-                <p className="text-slate-400 text-xs">Listening for events...</p>
-              </div>
-            </div>
-
-            {/* AI Agent */}
-            <div className="flex items-center gap-4 glass-card p-4 rounded-xl border-emerald-500/30 ml-0 md:ml-8 shadow-lg shadow-emerald-500/10">
-              <div className="w-10 h-10 bg-emerald-500 rounded flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-sm">smart_toy</span>
-              </div>
-              <div>
-                <p className="font-bold text-white text-xs">AI Agent Logic</p>
-                <p className="text-emerald-400 text-xs">Processing Context</p>
-              </div>
-            </div>
-
-            {/* Vector DB */}
-            <div className="flex items-center gap-4 glass-card p-4 rounded-xl border-blue-500/30 shadow-lg shadow-blue-500/10">
-              <div className="w-10 h-10 bg-blue-500 rounded flex items-center justify-center shrink-0">
-                <span className="material-symbols-outlined text-sm">storage</span>
-              </div>
-              <div>
-                <p className="font-bold text-white text-xs">Vector Database</p>
-                <p className="text-slate-400 text-xs">Syncing 1.2k records</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Note: each brick can be delivered on its own */}
+        <p className="mt-5 mx-auto max-w-xl flex items-start justify-center gap-2 text-center text-xs text-slate-500">
+          <span className="material-symbols-outlined text-emerald-400/70 text-sm leading-none mt-px shrink-0" aria-hidden="true">
+            check_circle
+          </span>
+          <span>{dict.note}</span>
+        </p>
       </div>
     </section>
   );

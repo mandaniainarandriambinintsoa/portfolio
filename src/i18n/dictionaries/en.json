@@ -57,7 +57,16 @@
     ]
   },
   "command_center": {
-    "file_name": "workflow-engine.ts"
+    "badge": "From interface to production",
+    "title": "The anatomy of a product I build",
+    "caption": "A reactive interface, AI logic that decides, automations that execute and data that flows. A complete product, not just one brick.",
+    "note": "No need for the full pipeline: I also deliver each brick on its own, whether it is a site, a SaaS, an AI integration or an automation.",
+    "nodes": [
+      { "label": "Interface", "sublabel": "Reactive web app · Next.js" },
+      { "label": "AI logic", "sublabel": "Claude / OpenAI that decides" },
+      { "label": "Automation", "sublabel": "n8n workflows that execute" },
+      { "label": "Data", "sublabel": "Supabase · real time" }
+    ]
   },
   "services": {
     "title": "SERVICES",

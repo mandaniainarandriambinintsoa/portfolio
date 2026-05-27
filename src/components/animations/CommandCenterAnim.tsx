@@ -33,42 +33,21 @@ export default function CommandCenterAnim({
         }
       );
 
-      // Code lines typing effect
-      const codeLines = container.current!.querySelectorAll(".code-gradient p");
-      if (codeLines.length) {
+      // Pipeline nodes reveal sequentially (mirrors the data flowing through)
+      const nodes = container.current!.querySelectorAll(".flow-node");
+      if (nodes.length) {
         gsap.fromTo(
-          codeLines,
-          { opacity: 0, x: -10 },
+          nodes,
+          { opacity: 0, y: 24 },
           {
             opacity: 1,
-            x: 0,
-            duration: 0.4,
-            stagger: 0.08,
-            ease: "power1.out",
-            scrollTrigger: {
-              trigger: container.current,
-              start: "top 75%",
-              toggleActions: "play none none none",
-            },
-          }
-        );
-      }
-
-      // Pipeline cards sequential slide
-      const cards = container.current!.querySelectorAll(".glass-card.rounded-xl");
-      if (cards.length) {
-        gsap.fromTo(
-          cards,
-          { opacity: 0, x: 30 },
-          {
-            opacity: 1,
-            x: 0,
-            duration: 0.6,
-            stagger: 0.2,
+            y: 0,
+            duration: 0.5,
+            stagger: 0.14,
             ease: "power2.out",
             scrollTrigger: {
               trigger: container.current,
-              start: "top 70%",
+              start: "top 75%",
               toggleActions: "play none none none",
             },
           }
