@@ -75,8 +75,76 @@ body {
   box-shadow: 0 0 50px -12px rgba(99, 102, 241, 0.4);
 }
 
-.code-gradient {
-  background: linear-gradient(135deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%);
+/* Workflow pipeline connectors (animated "data flowing" highlight) */
+.flow-h {
+  position: relative;
+  height: 2px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.flow-h::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.9), transparent);
+  animation: flow-h 2.2s linear infinite;
+}
+
+.flow-v {
+  position: relative;
+  width: 2px;
+  height: 1.75rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.flow-v::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.9), transparent);
+  animation: flow-v 2.2s linear infinite;
+}
+
+@keyframes flow-h {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(350%); }
+}
+
+@keyframes flow-v {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(300%); }
+}
+
+/* Workflow node glow pulse (staggered via inline animation-delay) */
+.flow-node-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: 0 0 32px -6px var(--node-color, rgba(99, 102, 241, 0.6));
+  animation: node-pulse 4.4s ease-in-out infinite;
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: 0; }
+  45%, 55% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-h::after,
+  .flow-v::after,
+  .flow-node-glow {
+    animation: none;
+  }
+  .flow-node-glow {
+    opacity: 0.4;
+  }
 }
 
 /* Service card color borders */

@@ -29,9 +29,11 @@
     "line1": "I DEVELOP.",
     "line2": "I AUTOMATE.",
     "line3": "I SCALE.",
-    "subtitle_prefix": "Manda —",
-    "subtitle_highlight": "Product Builder · Fullstack JavaScript Developer · No-Code · AI & n8n",
-    "subtitle_rest": ", based in Madagascar. I ship SaaS MVPs in weeks with React, Next.js, Supabase, Neon and Python. 4+ years of experience, 20+ projects delivered.",
+    "subtitle_prefix": "Got a product idea or manual tasks slowing you down? I turn them into",
+    "subtitle_highlight": "SaaS MVPs or systems that run without you",
+    "subtitle_rest": ", shipped in weeks with AI and ",
+    "subtitle_highlight2": "no-code automation (n8n)",
+    "subtitle_rest2": ". 4+ years of experience, 20+ products delivered from Madagascar.",
     "cta_primary": "Start a Project",
     "cta_secondary": "View My Work"
   },
@@ -57,7 +59,16 @@
     ]
   },
   "command_center": {
-    "file_name": "workflow-engine.ts"
+    "badge": "From interface to production",
+    "title": "The anatomy of a product I build",
+    "caption": "A reactive interface, AI logic that decides, automations that execute and data that flows. A complete product, not just one brick.",
+    "note": "No need for the full pipeline: I also deliver each brick on its own, whether it is a site, a SaaS, an AI integration or an automation.",
+    "nodes": [
+      { "label": "Interface", "sublabel": "Reactive web app · Next.js" },
+      { "label": "AI logic", "sublabel": "Claude / OpenAI that decides" },
+      { "label": "Automation", "sublabel": "n8n workflows that execute" },
+      { "label": "Data", "sublabel": "Supabase · real time" }
+    ]
   },
   "services": {
     "title": "SERVICES",

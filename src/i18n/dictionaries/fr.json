@@ -29,9 +29,11 @@
     "line1": "JE DÉVELOPPE DES SITES, DES MVP SAAS ET J'INTÈGRE DES IA (CLAUDE/OPENAI).",
     "line2": "JE CONÇOIS DES WORKFLOWS N8N SCALABLES.",
     "line3": "",
-    "subtitle_prefix": "Manda —",
-    "subtitle_highlight": "Product Builder · Développeur Fullstack JavaScript · No-Code · IA & n8n",
-    "subtitle_rest": ", basé à Madagascar. Je sors des MVP SaaS en quelques semaines avec React, Next.js, Supabase, Neon et Python. 4+ ans d'expérience, 20+ projets livrés.",
+    "subtitle_prefix": "Tu as une idée de produit ou des tâches manuelles qui te ralentissent ? Je les transforme en",
+    "subtitle_highlight": "MVP SaaS ou systèmes qui tournent sans toi",
+    "subtitle_rest": ", livrés en quelques semaines avec de l'IA et des ",
+    "subtitle_highlight2": "automatisations no-code (n8n)",
+    "subtitle_rest2": ". 4+ ans d'expérience, 20+ produits livrés depuis Madagascar.",
     "cta_primary": "Démarrer un projet",
     "cta_secondary": "Voir mes réalisations"
   },
@@ -57,7 +59,16 @@
     ]
   },
   "command_center": {
-    "file_name": "workflow-engine.ts"
+    "badge": "De l'interface à la production",
+    "title": "L'anatomie d'un produit que je conçois",
+    "caption": "Une interface réactive, une logique IA qui décide, des automatisations qui exécutent et des données qui circulent. Un produit complet, pas juste une brique.",
+    "note": "Pas besoin du pipeline complet : je livre aussi chaque brique séparément, qu'il s'agisse d'un site, d'un SaaS, d'une intégration IA ou d'une automatisation.",
+    "nodes": [
+      { "label": "Interface", "sublabel": "App web réactive · Next.js" },
+      { "label": "Logique IA", "sublabel": "Claude / OpenAI qui décide" },
+      { "label": "Automatisation", "sublabel": "Workflows n8n qui exécutent" },
+      { "label": "Données", "sublabel": "Supabase · temps réel" }
+    ]
   },
   "services": {
     "title": "SERVICES",

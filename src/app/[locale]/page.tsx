@@ -57,7 +57,7 @@ export default async function HomePage({
 
       <div className="below-fold">
         <CommandCenterAnim>
-          <CommandCenter fileName={dict.command_center.file_name} />
+          <CommandCenter dict={dict.command_center} />
         </CommandCenterAnim>
       </div>
 
