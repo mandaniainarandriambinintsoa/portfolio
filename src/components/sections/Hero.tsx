@@ -8,6 +8,8 @@ type HeroDict = {
   subtitle_prefix: string;
   subtitle_highlight: string;
   subtitle_rest: string;
+  subtitle_highlight2: string;
+  subtitle_rest2: string;
   cta_primary: string;
   cta_secondary: string;
 };
@@ -37,6 +39,10 @@ export default function Hero({
           {dict.subtitle_highlight}
         </span>
         {dict.subtitle_rest}
+        <span className="text-white font-medium">
+          {dict.subtitle_highlight2}
+        </span>
+        {dict.subtitle_rest2}
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
         <Button href={contactHref} variant="primary" icon="trending_up">

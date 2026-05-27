@@ -30,8 +30,10 @@
     "line2": "JE CONÇOIS DES WORKFLOWS N8N SCALABLES.",
     "line3": "",
     "subtitle_prefix": "Tu as une idée de produit ou des tâches manuelles qui te ralentissent ? Je les transforme en",
-    "subtitle_highlight": "MVP SaaS et systèmes qui tournent sans toi",
-    "subtitle_rest": ", livrés en quelques semaines. Développement web, intégration IA (Claude/OpenAI) et automatisations no-code avec n8n. Mes stacks : React, Next.js, Supabase, Neon et Python. 4+ ans d'expérience, 20+ produits livrés depuis Madagascar. J'utilise Claude Code et Codex pour accélérer et fluidifier le développement.",
+    "subtitle_highlight": "MVP SaaS ou systèmes qui tournent sans toi",
+    "subtitle_rest": ", livrés en quelques semaines. Développement web, intégration IA (Claude/OpenAI) et ",
+    "subtitle_highlight2": "automatisations no-code avec n8n",
+    "subtitle_rest2": ". Mes stacks : React, Next.js, Supabase, Neon et Python. 4+ ans d'expérience, 20+ produits livrés depuis Madagascar. J'utilise Claude Code et Codex pour accélérer et sécuriser le développement.",
     "cta_primary": "Démarrer un projet",
     "cta_secondary": "Voir mes réalisations"
   },
