@@ -29,9 +29,9 @@
     "line1": "I DEVELOP.",
     "line2": "I AUTOMATE.",
     "line3": "I SCALE.",
-    "subtitle_prefix": "Manda —",
-    "subtitle_highlight": "Product Builder · Fullstack JavaScript Developer · No-Code · AI & n8n",
-    "subtitle_rest": ", based in Madagascar. I ship SaaS MVPs in weeks with React, Next.js, Supabase, Neon and Python. 4+ years of experience, 20+ projects delivered.",
+    "subtitle_prefix": "Got a product idea or manual tasks slowing you down? I turn them into",
+    "subtitle_highlight": "SaaS MVPs and systems that run without you",
+    "subtitle_rest": ", shipped in weeks. Web development, AI integration (Claude/OpenAI) and no-code automation with n8n. React, Next.js, Supabase, Neon and Python. 4+ years of experience, 20+ products delivered from Madagascar.",
     "cta_primary": "Start a Project",
     "cta_secondary": "View My Work"
   },
