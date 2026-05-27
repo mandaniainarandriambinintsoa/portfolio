@@ -123,7 +123,7 @@ export default function CollaborationGuides({
               />
 
               <div className="relative z-10 flex items-center justify-end mb-6">
-                <span className="text-xs font-mono tracking-[0.2em] text-white/40">
+                <span className="text-xs font-mono tracking-[0.2em] text-white/60">
                   {item.tag}
                 </span>
               </div>
