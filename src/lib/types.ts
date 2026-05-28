@@ -1,5 +1,20 @@
 export type ProjectCategory = "webapp" | "workflow";
 
+export type CaseStudyVariant = {
+  image: string;
+  label: string;
+  description: string;
+};
+
+export type CaseStudy = {
+  brief: string;
+  variantsIntro: string;
+  variants: CaseStudyVariant[];
+  decision: string;
+  finalImage: string;
+  finalCaption: string;
+};
+
 export type ProjectItem = {
   slug: string;
   title: string;

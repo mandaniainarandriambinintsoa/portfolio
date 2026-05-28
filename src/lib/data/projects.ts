@@ -59,8 +59,15 @@ async function fetchFromDict(locale: Locale): Promise<ProjectItem[]> {
 
 export async function getProjects(locale: Locale): Promise<ProjectItem[]> {
   const supabaseData = await fetchFromSupabase(locale);
-  if (supabaseData) return supabaseData;
-  return fetchFromDict(locale);
+  const dictData = await fetchFromDict(locale);
+
+  if (!supabaseData) return dictData;
+
+  const supabaseSlugs = new Set(supabaseData.map((p) => p.slug));
+  const dictOnly = dictData.filter((p) => !supabaseSlugs.has(p.slug));
+  const featuredDictOnly = dictOnly.filter((p) => p.featured);
+  const restDictOnly = dictOnly.filter((p) => !p.featured);
+  return [...featuredDictOnly, ...supabaseData, ...restDictOnly];
 }
 
 export async function getProjectBySlug(
@@ -87,6 +94,9 @@ export async function getProjectBySlug(
 }
 
 export async function getAllProjectSlugs(): Promise<string[]> {
+  const dict = await getDictionary("fr");
+  const dictSlugs = (dict.projects.items as ProjectItem[]).map((p) => p.slug);
+
   try {
     const supabase = createStaticClient();
     const { data, error } = await supabase
@@ -95,19 +105,26 @@ export async function getAllProjectSlugs(): Promise<string[]> {
       .eq("published", true);
 
     if (!error && data && data.length > 0) {
-      return data.map((row) => row.slug);
+      const supabaseSlugs = data.map((row) => row.slug);
+      return Array.from(new Set([...supabaseSlugs, ...dictSlugs]));
     }
   } catch {
     // fallback
   }
 
-  const dict = await getDictionary("fr");
-  return (dict.projects.items as ProjectItem[]).map((p) => p.slug);
+  return dictSlugs;
 }
 
 export async function getAllProjectSitemapEntries(): Promise<
   { slug: string; updatedAt: string | null; createdAt: string | null }[]
 > {
+  const dict = await getDictionary("fr");
+  const dictEntries = (dict.projects.items as ProjectItem[]).map((p) => ({
+    slug: p.slug,
+    updatedAt: null as string | null,
+    createdAt: null as string | null,
+  }));
+
   try {
     const supabase = createStaticClient();
     const { data, error } = await supabase
@@ -116,19 +133,18 @@ export async function getAllProjectSitemapEntries(): Promise<
       .eq("published", true);
 
     if (!error && data && data.length > 0) {
-      return data.map((row) => ({
+      const supabaseEntries = data.map((row) => ({
         slug: row.slug,
         updatedAt: row.updated_at,
         createdAt: row.created_at,
       }));
+      const supabaseSlugs = new Set(supabaseEntries.map((e) => e.slug));
+      const dictOnly = dictEntries.filter((e) => !supabaseSlugs.has(e.slug));
+      return [...supabaseEntries, ...dictOnly];
     }
   } catch {
     // fallback
   }
-  const dict = await getDictionary("fr");
-  return (dict.projects.items as ProjectItem[]).map((p) => ({
-    slug: p.slug,
-    updatedAt: null,
-    createdAt: null,
-  }));
+
+  return dictEntries;
 }
