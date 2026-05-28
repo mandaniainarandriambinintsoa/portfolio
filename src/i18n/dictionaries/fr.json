@@ -332,7 +332,7 @@
             },
             {
               "title": "Mon processus de travail",
-              "content": "**1. Appel découverte gratuit (30 min)** — On définit vos besoins, vos objectifs business et le périmètre technique. Je vous conseille sur la stack la plus adaptée.\n\n**2. Proposition et 3 variantes design** — Devis détaillé avec planning. Je génère 3 variantes design par IA (GPT-Image 2) à partir de votre brief, votre design système et votre logo. Vous choisissez la direction qui vous parle, on retouche si besoin, puis on passe au code.\n\n**3. Développement itératif** — Sprints de 1-2 semaines avec démo à chaque étape. Vous suivez l'avancement en temps réel sur un repo Git partagé.\n\n**4. Tests et optimisation** — Tests unitaires, tests d'intégration, audit PageSpeed et SEO. Objectif : 95+ sur tous les critères.\n\n**5. Déploiement et support** — Mise en production sur Vercel ou Render. 30 jours de support technique inclus. Documentation complète pour votre équipe."
+              "content": "**1. Appel découverte gratuit (30 min)** — On définit vos besoins, vos objectifs business et le périmètre technique. Je vous conseille sur la stack la plus adaptée.\n\n**2. Proposition et 3 variantes design** — Devis détaillé avec planning. Je génère 3 variantes design par IA à partir de votre brief, votre design système et votre logo. Vous choisissez la direction qui vous parle, on retouche si besoin, puis on passe au code.\n\n**3. Développement itératif** — Sprints de 1-2 semaines avec démo à chaque étape. Vous suivez l'avancement en temps réel sur un repo Git partagé.\n\n**4. Tests et optimisation** — Tests unitaires, tests d'intégration, audit PageSpeed et SEO. Objectif : 95+ sur tous les critères.\n\n**5. Déploiement et support** — Mise en production sur Vercel ou Render. 30 jours de support technique inclus. Documentation complète pour votre équipe."
             },
             {
               "title": "Performances et résultats",
@@ -1199,9 +1199,9 @@
         "slug": "madavoyage",
         "title": "MadaVoyage",
         "subtitle": "Landing page premium agence de voyages",
-        "description": "Landing page premium pour une agence de voyages à Madagascar. Conçue from scratch avec un workflow design IA-first : 3 variantes générées par GPT-Image 2 à partir d'un brief produit et du design système, validation client, puis intégration pixel-perfect en Next.js 16 + GSAP. Architecture découplée (data, composants, lib) prête à être dupliquée pour d'autres clients voyage ou réservation. SEO/GEO inclus : JSON-LD TravelAgency + TouristTrip + FAQPage, sitemap dynamique, Open Graph, performances optimisées. Voir la section ci-dessous pour le détail du process design → code.",
+        "description": "Landing page premium pour une agence de voyages à Madagascar. Conçue from scratch avec un workflow design IA-first : 3 variantes générées par IA à partir d'un brief produit et du design système, validation client, puis intégration pixel-perfect en Next.js 16 + GSAP. Architecture découplée (data, composants, lib) prête à être dupliquée pour d'autres clients voyage ou réservation. SEO/GEO inclus : JSON-LD TravelAgency + TouristTrip + FAQPage, sitemap dynamique, Open Graph, performances optimisées. Voir la section ci-dessous pour le détail du process design → code.",
         "tags": [
-          "GPT-Image 2",
+          "Design IA",
           "Next.js 16",
           "GSAP",
           "JSON-LD"

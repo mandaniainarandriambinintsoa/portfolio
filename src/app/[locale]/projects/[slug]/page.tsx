@@ -84,7 +84,7 @@ export default async function ProjectPage({
         sectionTitle: "Du brief au code",
         sectionKicker: "Workflow design IA-first",
         briefTitle: "Le brief",
-        variantsTitle: "Les variantes design (GPT-Image 2)",
+        variantsTitle: "Les variantes design IA",
         decisionTitle: "La direction retenue",
         finalTitle: "L'intégration finale",
       }
@@ -92,7 +92,7 @@ export default async function ProjectPage({
         sectionTitle: "From brief to code",
         sectionKicker: "AI-first design workflow",
         briefTitle: "The brief",
-        variantsTitle: "Design variants (GPT-Image 2)",
+        variantsTitle: "AI design variants",
         decisionTitle: "Selected direction",
         finalTitle: "Final build",
       };

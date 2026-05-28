@@ -9,7 +9,7 @@ const caseStudies: Record<string, LocalizedCaseStudy> = {
       brief:
         "Concevoir une landing page premium pour une agence de voyages à Madagascar. Le site devait transmettre l'aventure et l'unicité de l'île tout en restant rassurant et professionnel pour la conversion. Cible : voyageurs européens en quête d'expérience authentique. Sections attendues : hero immersif, circuits proposés, formulaire de réservation, rassurance, galerie, témoignages.",
       variantsIntro:
-        "Workflow design IA-first : à partir du brief, du design système et du logo, je génère 3 variantes via GPT-Image 2. Le client choisit la direction qui le parle, on retouche si besoin, puis on passe au code. Ici, une 1ère piste a été écartée tôt et deux directions ont été présentées côte à côte.",
+        "Workflow design IA-first : à partir du brief, du design système et du logo, je génère 3 variantes design par IA. Le client choisit la direction qui le parle, on retouche si besoin, puis on passe au code. Ici, une 1ère piste a été écartée tôt et deux directions ont été présentées côte à côte.",
       variants: [
         {
           image: "/images/projects/madavoyage/variant-2-hero.png",
@@ -34,7 +34,7 @@ const caseStudies: Record<string, LocalizedCaseStudy> = {
       brief:
         "Design a premium landing page for a Madagascar travel agency. The site needed to convey adventure and the island's uniqueness while staying reassuring and professional for conversion. Target: European travelers looking for authentic experiences. Expected sections: immersive hero, featured tours, booking form, trust signals, gallery, testimonials.",
       variantsIntro:
-        "AI-first design workflow: from the brief, design system and logo, I generate 3 variants via GPT-Image 2. The client picks the direction they like, we tweak if needed, then we move to code. Here, an early direction was set aside and two directions were presented side by side.",
+        "AI-first design workflow: from the brief, design system and logo, I generate 3 AI design variants. The client picks the direction they like, we tweak if needed, then we move to code. Here, an early direction was set aside and two directions were presented side by side.",
       variants: [
         {
           image: "/images/projects/madavoyage/variant-2-hero.png",
