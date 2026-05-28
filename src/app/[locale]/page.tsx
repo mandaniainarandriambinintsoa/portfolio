@@ -27,7 +27,6 @@ import HeroAnimations from "@/components/animations/HeroAnimations";
 
 // Below-fold: dynamic imports (code-split GSAP ScrollTrigger out of initial bundle)
 const CommandCenterAnim = dynamic(() => import("@/components/animations/CommandCenterAnim"));
-const ServicesGridAnim = dynamic(() => import("@/components/animations/ServicesGridAnim"));
 const PricingAnim = dynamic(() => import("@/components/animations/PricingAnim"));
 const ProcessAnim = dynamic(() => import("@/components/animations/ProcessAnim"));
 const ApproachAnim = dynamic(() => import("@/components/animations/ApproachAnim"));
@@ -62,9 +61,7 @@ export default async function HomePage({
       </div>
 
       <div className="below-fold">
-        <ServicesGridAnim>
-          <ServicesGrid items={dict.services.items.filter((s: { isLanding?: boolean }) => !s.isLanding)} locale={locale} />
-        </ServicesGridAnim>
+        <ServicesGrid locale={locale} />
       </div>
 
       <div className="below-fold">
