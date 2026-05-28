@@ -254,13 +254,13 @@ export default async function ServicePage({
 
         {/* Features grid */}
         {landing.features && (
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-20" role="list">
             {landing.features.map((f: any) => (
-              <div key={f.title} className={`rounded-xl border p-5 ${bgColorMap[service.color] || bgColorMap.indigo}`}>
-                <span className={`material-symbols-outlined text-2xl mb-2 block ${colorMap[service.color] || "text-indigo-400"}`}>
+              <div key={f.title} role="listitem" className={`rounded-xl border p-5 ${bgColorMap[service.color] || bgColorMap.indigo}`}>
+                <span aria-hidden="true" className={`material-symbols-outlined text-2xl mb-2 block ${colorMap[service.color] || "text-indigo-400"}`}>
                   {f.icon}
                 </span>
-                <h3 className="font-bold text-white text-sm mb-1">{f.title}</h3>
+                <p className="font-bold text-white text-sm mb-1">{f.title}</p>
                 <p className="text-xs text-slate-400">{f.description}</p>
               </div>
             ))}

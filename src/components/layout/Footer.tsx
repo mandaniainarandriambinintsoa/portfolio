@@ -31,12 +31,16 @@ export default function Footer({
           { label: "React / Next.js", href: "/services/developpeur-react-nextjs-madagascar" },
           { label: "Next.js + Supabase", href: "/services/developpeur-nextjs-supabase-madagascar" },
           { label: "Python & IA", href: "/services/developpeur-python-ia-madagascar" },
+          { label: "Claude Code + n8n", href: "/services/developpeur-claude-code-n8n" },
+          { label: "Codex + n8n", href: "/services/developpeur-codex-n8n" },
           { label: "Automatisation N8N", href: "/services/automatisation-n8n-madagascar" },
         ]
       : [
           { label: "React / Next.js", href: "/en/services/hire-react-nextjs-developer-madagascar" },
           { label: "Next.js + Supabase", href: "/en/services/nextjs-supabase-developer-madagascar" },
           { label: "Python & AI", href: "/en/services/python-ai-developer-madagascar" },
+          { label: "Claude Code + n8n", href: "/en/services/claude-code-n8n-developer" },
+          { label: "Codex + n8n", href: "/en/services/codex-n8n-developer" },
           { label: "N8N Automation", href: "/en/services/n8n-automation-expert-madagascar" },
         ];
 
@@ -74,7 +78,7 @@ export default function Footer({
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-xs py-2 text-slate-500 hover:text-slate-300 transition-colors"
+                  className="text-xs py-2 text-slate-400 hover:text-white transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -90,7 +94,7 @@ export default function Footer({
             <li>
               <Link
                 href={`${prefix}/privacy`}
-                className="text-xs py-2 text-slate-500 hover:text-slate-300 transition-colors"
+                className="text-xs py-2 text-slate-400 hover:text-white transition-colors"
               >
                 {locale === "fr" ? "Politique de confidentialité" : "Privacy Policy"}
               </Link>
@@ -98,7 +102,7 @@ export default function Footer({
             <li>
               <Link
                 href={`${prefix}/mentions-legales`}
-                className="text-xs py-2 text-slate-500 hover:text-slate-300 transition-colors"
+                className="text-xs py-2 text-slate-400 hover:text-white transition-colors"
               >
                 {locale === "fr" ? "Mentions légales" : "Legal Notice"}
               </Link>
@@ -107,10 +111,10 @@ export default function Footer({
         </nav>
 
         {/* Legal entity — required for Meta Business Verification */}
-        <div className="text-center text-xs text-slate-500 leading-relaxed">
+        <div className="text-center text-xs text-slate-400 leading-relaxed">
           <p>
             {locale === "fr" ? "Édité par " : "Published by "}
-            <strong className="text-slate-400">{PERSONAL_INFO.legalName}</strong>
+            <strong className="text-slate-200">{PERSONAL_INFO.legalName}</strong>
             {locale === "fr" ? " — entrepreneur individuel" : " — sole proprietor"}
           </p>
           <p>{PERSONAL_INFO.legalAddress.full}</p>

@@ -95,7 +95,7 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
                     {line.icon}
                   </span>
                   <h3 className="font-bold text-lg mb-1">{line.title}</h3>
-                  <p className="text-xs text-slate-500">{line.description}</p>
+                  <p className="text-xs text-slate-400">{line.description}</p>
                 </div>
 
                 <ul className="flex flex-col gap-3 flex-grow">
@@ -112,7 +112,7 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
                         <span className={`text-xs font-semibold uppercase tracking-wider ${colors.text}`}>
                           {tier.name}
                         </span>
-                        <span className="text-[10px] text-slate-500 uppercase tracking-wider">
+                        <span className="text-[10px] text-slate-400 uppercase tracking-wider">
                           {tier.delay}
                         </span>
                       </div>
@@ -131,7 +131,7 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
         <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 text-center md:text-left">
           <span className="text-sm text-slate-400">{dict.tjm_label}</span>
           <span className="text-lg font-bold gradient-text">{dict.tjm_value}</span>
-          <span className="text-xs text-slate-500">{dict.tjm_note}</span>
+          <span className="text-xs text-slate-400">{dict.tjm_note}</span>
         </div>
         <Link
           href={dict.cta_href}

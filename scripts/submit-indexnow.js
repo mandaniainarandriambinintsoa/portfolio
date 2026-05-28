@@ -36,11 +36,15 @@ const URLS = [
   `${SITE_URL}/services/developpeur-react-nextjs-madagascar`,
   `${SITE_URL}/services/developpeur-nextjs-supabase-madagascar`,
   `${SITE_URL}/services/developpeur-python-ia-madagascar`,
+  `${SITE_URL}/services/developpeur-claude-code-n8n`,
+  `${SITE_URL}/services/developpeur-codex-n8n`,
   // Landing pages EN
   `${SITE_URL}/en/services/n8n-automation-expert-madagascar`,
   `${SITE_URL}/en/services/hire-react-nextjs-developer-madagascar`,
   `${SITE_URL}/en/services/nextjs-supabase-developer-madagascar`,
   `${SITE_URL}/en/services/python-ai-developer-madagascar`,
+  `${SITE_URL}/en/services/claude-code-n8n-developer`,
+  `${SITE_URL}/en/services/codex-n8n-developer`,
   // Blog posts
   `${SITE_URL}/blog/claude-code-developper-avec-ia`,
   `${SITE_URL}/blog/comment-choisir-developpeur-no-code-madagascar`,

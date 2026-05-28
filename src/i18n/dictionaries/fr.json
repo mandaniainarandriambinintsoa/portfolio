@@ -6,7 +6,7 @@
     },
     "about": {
       "title": "Manda Randriambinintsoa | Développeur No-Code & Expert N8N à Madagascar",
-      "description": "Product Builder freelance basé à Antananarivo. +4 ans d'expérience : Next.js, Supabase, Python, n8n, Claude Code. Découvrez mon parcours et mes réalisations."
+      "description": "Product Builder freelance basé à Antananarivo. +4 ans d'expérience : Next.js, Supabase, Python, n8n, Claude Code, Codex et prompt engineering. Découvrez mon parcours et mes réalisations."
     },
     "contact": {
       "title": "Contacter Manda | Démarrer un projet d'automatisation",
@@ -65,7 +65,7 @@
     "note": "Pas besoin du pipeline complet : je livre aussi chaque brique séparément, qu'il s'agisse d'un site, d'un SaaS, d'une intégration IA ou d'une automatisation.",
     "nodes": [
       { "label": "Interface", "sublabel": "App web réactive · Next.js" },
-      { "label": "Logique IA", "sublabel": "Claude / OpenAI qui décide" },
+      { "label": "Logique IA", "sublabel": "Claude Code / Codex · Prompt Engineering" },
       { "label": "Automatisation", "sublabel": "Workflows n8n qui exécutent" },
       { "label": "Données", "sublabel": "Supabase · temps réel" }
     ]
@@ -82,8 +82,8 @@
       },
       {
         "icon": "psychology",
-        "title": "Intégration IA",
-        "description": "Agents IA et LLMs intégrés dans vos sites et SaaS. Claude Code, GPT, automatisation intelligente de vos opérations.",
+        "title": "Intégration IA & Prompt Engineering",
+        "description": "Agents IA et LLMs intégrés dans vos sites et SaaS. Prompt engineering, Claude Code, OpenAI Codex, GPT, automatisation intelligente de vos opérations.",
         "slug": "integration-ia",
         "color": "blue"
       },
@@ -805,6 +805,204 @@
             {
               "question": "Proposez-vous la maintenance des systèmes IA ?",
               "answer": "Oui. Les systèmes IA nécessitent un suivi : mise à jour des modèles, ajustement des prompts, monitoring des performances. Je propose des contrats de maintenance mensuels adaptés à la complexité de votre système."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "smart_toy",
+        "title": "Développeur Claude Code + n8n à Madagascar",
+        "description": "Développeur freelance spécialisé dans la combinaison Claude Code (Anthropic) et n8n. Je conçois des agents IA, des workflows auto-construits et des automatisations end-to-end pour startups et PME européennes. Prompt engineering, MCP n8n, intégrations API.",
+        "slug": "developpeur-claude-code-n8n",
+        "color": "indigo",
+        "cardTitle": "Claude Code + n8n",
+        "cardDescription": "Agents IA, workflows auto-construits, prompt engineering. Claude Code orchestre, n8n exécute.",
+        "isLanding": true,
+        "seoTitle": "Développeur Claude Code + n8n freelance — Madagascar | Manda",
+        "seoDescription": "Développeur Claude Code + n8n freelance basé à Antananarivo. Agents IA, automatisations MCP, prompt engineering. TJM compétitif marché EU. 20+ projets livrés.",
+        "landing": {
+          "heroText": "Vous avez un agent IA à construire, des workflows n8n à industrialiser, ou un produit entier à livrer avec Claude Code ? Basé à Antananarivo, je conçois des systèmes Claude Code + n8n pour des startups et PME européennes — du prototype au runtime production. Claude Code écrit et orchestre, n8n exécute, et vous récupérez une stack documentée et auto-hébergeable.",
+          "sections": [
+            {
+              "title": "Pourquoi Claude Code + n8n en 2026",
+              "content": "Claude Code est l'agent de codage en ligne de commande d'[Anthropic](https://www.anthropic.com/claude-code), devenu en 2026 la référence pour générer, refactorer et déployer du code de qualité production. Il lit un repo entier, comprend l'architecture et itère sur les erreurs sans intervention humaine.\n\n[n8n](https://n8n.io) est la plateforme d'automatisation open-source la plus puissante du marché : 90 000+ étoiles sur GitHub, 400+ intégrations natives, self-hosting illimité.\n\nLes combiner, c'est mettre un binôme **builder + runtime** sur votre projet : **Claude Code construit** les workflows depuis un brief en langage naturel, **n8n les exécute** de manière fiable avec logs, monitoring et reprise sur erreur. n8n a livré fin 2025 son support natif Model Context Protocol (MCP), ce qui donne à Claude Code un accès direct lecture/écriture à votre instance — il crée les workflows, configure les nodes, lance les tests et corrige les bugs sans toucher à l'interface visuelle."
+            },
+            {
+              "title": "Ce que je construis avec Claude Code + n8n",
+              "content": "**Agents IA conversationnels** — Chatbots Claude/GPT branchés sur Slack, WhatsApp ou votre CRM via n8n, avec mémoire vectorielle, escalade humaine et logs d'apprentissage.\n\n**Workflows auto-construits** — Vous décrivez le besoin en langage naturel, Claude Code génère le workflow n8n complet via MCP, le teste, le déploie. Cas typique : pipeline de qualification de leads scraping + enrichissement + scoring IA + sync CRM, livré en 2-3 jours.\n\n**Automatisations métier complexes** — Facturation, support client, prospection commerciale, modération de contenu. Branches conditionnelles, sous-workflows, Code nodes JavaScript ou Python custom — tout ce que Zapier ou Make ne savent pas faire.\n\n**Intégrations API sur mesure** — Connexion d'APIs non listées dans la bibliothèque officielle n8n (CRM exotiques, ERP métier, APIs internes), avec authentification OAuth, gestion des rate limits, retry exponentiel.\n\n**Migration depuis Zapier/Make** — Audit de votre stack actuelle, identification des workflows critiques, migration vers n8n self-hosted avec économies typiques de 5 à 10× sur la facture mensuelle, et bonus : zéro vendor lock-in."
+            },
+            {
+              "title": "Le pattern MCP : Claude Code pilote n8n",
+              "content": "Le Model Context Protocol est le standard ouvert d'[Anthropic](https://modelcontextprotocol.io) pour connecter les LLMs à des outils externes. n8n l'a implémenté nativement fin 2025.\n\nConcrètement, mon setup en production : Claude Code tourne dans le terminal, connecté à votre instance n8n via le serveur MCP officiel. Je décris le workflow en français — par exemple *\"crée un workflow qui surveille la boîte mail support, classifie chaque message via Claude, et crée un ticket Linear si la classification est >= P1\"* — et Claude Code génère, teste, déploie. Cycle complet : 5 à 15 minutes pour un workflow de complexité moyenne.\n\nComparé au pattern API direct (un node HTTP Request qui appelle l'API Claude pour chaque exécution), le pattern MCP est strictement pour le développement : il économise des heures de configuration manuelle. Pour le runtime, c'est l'inverse : on garde des nodes Claude/OpenAI standards pour la fiabilité et le coût."
+            },
+            {
+              "title": "Prompt engineering pour Claude Code",
+              "content": "Claude Code n'est pas magique : la qualité de sortie dépend du contexte fourni. C'est là que le prompt engineering devient critique.\n\n**CLAUDE.md à la racine du repo** — Document de référence que Claude Code lit en priorité. J'y mets : stack technique, conventions de code, décisions d'architecture, contraintes RGPD, commandes utiles (test, lint, deploy). Sans ce fichier, Claude redécouvre tout à chaque session et perd 20-40% de productivité.\n\n**Prompts orientés boucle OODA** — Observe (lire le contexte), Orient (comprendre le pourquoi), Decide (proposer un plan), Act (implémenter). Je structure mes prompts dans cet ordre pour que Claude ne saute pas l'étape de réflexion.\n\n**Décomposition en sous-tâches** — Plutôt que *\"refactore tout le module auth\"*, je découpe : *\"liste les fichiers du module auth\"* → *\"propose 3 façons de refactorer la gestion des sessions\"* → *\"implémente l'option 2 en gardant la rétrocompatibilité\"*. Chaque sous-tâche est testable et reversible.\n\n**Skills custom** — Pour les workflows répétitifs (nouveau projet n8n, audit SEO, génération de landing), je crée des skills Claude réutilisables dans `~/.claude/skills`. Productivité multipliée par 3 sur les tâches récurrentes."
+            },
+            {
+              "title": "Cas client : Factumation livré en 3 jours",
+              "content": "[Factumation](https://factumation.vercel.app) est un SaaS de facturation complet : auth, CRUD clients/factures, génération PDF, export CSV, multi-devises, dashboard. Stack : Next.js 16, Supabase, Tailwind.\n\nDéveloppement de A à Z en 3 jours avec Claude Code en copilote. Workflow n8n branché pour l'envoi automatique des factures et les relances de paiement.\n\nSans Claude Code + n8n, le même projet aurait pris 3 à 4 semaines en mode classique. Économie : 90% du temps de développement, 100% du contrôle conservé côté client (code open-source, données dans son Supabase, workflow n8n exportable). Voir l'application live et le code source associé dans mes [projets](/projects)."
+            },
+            {
+              "title": "L'avantage Madagascar pour Claude Code + n8n",
+              "content": "Faire appel à un développeur Claude Code + n8n basé à Madagascar combine deux avantages : **expertise technique de pointe** (4+ ans de production sur cette stack, 20+ projets livrés) et **TJM compétitif marché européen** sans concession sur la qualité.\n\nFuseau horaire GMT+3 : recouvrement quasi total avec les heures de bureau françaises et belges. Communication courante en français et en anglais. Workflows livrés documentés, versionnés sur GitHub, et exportables n'importe où — pas de lock-in chez moi non plus.\n\nPour aller plus loin, voir mes pages dédiées à l'[automatisation n8n](/services/automatisation-n8n-madagascar) et au [développement React/Next.js](/services/developpeur-react-nextjs-madagascar)."
+            }
+          ],
+          "features": [
+            {
+              "icon": "code",
+              "title": "Claude Code expert",
+              "description": "Anthropic CLI maîtrisé, CLAUDE.md, skills custom"
+            },
+            {
+              "icon": "hub",
+              "title": "n8n + MCP",
+              "description": "Pattern Model Context Protocol en production"
+            },
+            {
+              "icon": "psychology",
+              "title": "Prompt Engineering",
+              "description": "OODA loop, décomposition, contexte structuré"
+            },
+            {
+              "icon": "rocket_launch",
+              "title": "Livraison rapide",
+              "description": "MVP en 3-5 jours, SaaS en 2-4 semaines"
+            },
+            {
+              "icon": "lock",
+              "title": "Self-hosted",
+              "description": "n8n + données chez vous, zéro lock-in"
+            },
+            {
+              "icon": "support_agent",
+              "title": "Support FR/EN",
+              "description": "GMT+3 aligné Europe, communication fluide"
+            }
+          ],
+          "faq": [
+            {
+              "question": "Qu'est-ce que Claude Code exactement ?",
+              "answer": "Claude Code est l'agent de codage en ligne de commande d'Anthropic. Contrairement à GitHub Copilot (auto-complétion) ou Cursor (éditeur), il agit comme un développeur autonome : il lit votre repo, comprend l'architecture, écrit le code, lance les tests et itère sur les erreurs. Combiné à Claude Sonnet 4.6 ou Opus 4.7, il gère des projets entiers Next.js, Python ou Node sans casser l'existant."
+            },
+            {
+              "question": "Pourquoi combiner Claude Code et n8n ?",
+              "answer": "Claude Code est un builder : il écrit le code et configure les outils. n8n est un runtime : il exécute des workflows de manière fiable avec logs, monitoring et reprise sur erreur. Combiner les deux donne un binôme builder + runtime. Avec le support MCP natif de n8n depuis fin 2025, Claude Code crée et modifie vos workflows directement depuis le terminal, sans toucher à l'interface visuelle."
+            },
+            {
+              "question": "Quel est le tarif d'un freelance Claude Code + n8n ?",
+              "answer": "Les TJM européens vont de 400 à 700 €/jour pour un profil confirmé sur Malt ou Codeur, et 800 à 1200 €/jour pour les profils architecte IA-assisté ou prompt engineer code. Mes tarifs basés à Antananarivo restent compétitifs sur le marché européen avec un avantage time-zone (GMT+3) et une qualité technique équivalente. Devis sur demande après appel découverte."
+            },
+            {
+              "question": "Qu'est-ce que le Model Context Protocol (MCP) ?",
+              "answer": "MCP est le standard ouvert d'Anthropic pour connecter les LLMs à des outils externes. Concrètement, n8n expose un serveur MCP que Claude Code peut interroger pour lister les workflows existants, en créer de nouveaux, lancer des tests, lire les logs. Cycle de développement réduit de plusieurs heures à quelques minutes."
+            },
+            {
+              "question": "Claude Code remplace-t-il un développeur senior ?",
+              "answer": "Non. Claude Code accélère un développeur senior d'un facteur 3 à 10 sur les tâches d'implémentation, refactoring et debug. Il ne remplace pas les décisions architecturales, l'UX premium, les arbitrages métier ou la responsabilité juridique. Mon rôle de développeur freelance change : moins de temps sur le clavier, plus de temps sur l'architecture, le prompt engineering et la validation."
+            },
+            {
+              "question": "Mes données restent-elles privées avec Claude Code + n8n ?",
+              "answer": "Oui si on choisit la bonne config. n8n peut tourner self-hosted sur votre VPS (Hetzner, Scaleway, OVH) — vos données ne quittent jamais votre infrastructure. Pour Claude Code, les requêtes passent par l'API Anthropic (chiffrement en transit, pas d'entraînement sur les données client selon les CGU). Pour les données les plus sensibles, on peut basculer sur Llama ou Mistral self-hosted avec des résultats moindres mais une confidentialité totale."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "auto_awesome",
+        "title": "Développeur OpenAI Codex + n8n freelance",
+        "description": "Développeur freelance spécialisé dans l'intégration OpenAI Codex avec n8n. Pour les équipes déjà sur ChatGPT Plus, Pro, Business ou Enterprise qui veulent industrialiser leurs workflows IA. Codex App, agents autonomes, automatisations.",
+        "slug": "developpeur-codex-n8n",
+        "color": "purple",
+        "cardTitle": "Codex + n8n",
+        "cardDescription": "OpenAI Codex orchestré par n8n. Idéal pour les équipes déjà sur l'écosystème ChatGPT.",
+        "isLanding": true,
+        "seoTitle": "Développeur OpenAI Codex + n8n freelance | Madagascar — Manda",
+        "seoDescription": "Développeur Codex + n8n freelance à Antananarivo. Intégration OpenAI Codex App, automatisations ChatGPT Enterprise, agents n8n. TJM compétitif marché EU.",
+        "landing": {
+          "heroText": "Votre équipe utilise déjà ChatGPT Plus, Pro, Business ou Enterprise, et vous voulez transformer cet usage individuel en système d'automatisation industrialisé ? Basé à Antananarivo, je conçois des intégrations OpenAI Codex + n8n pour transformer Codex (l'agent de codage d'OpenAI) en moteur d'automatisation branché sur tous vos outils métier.",
+          "sections": [
+            {
+              "title": "OpenAI Codex en 2026 : la nouvelle donne",
+              "content": "[OpenAI Codex](https://openai.com/codex/) est revenu sur le devant de la scène début 2026 sous le nom de **Codex App**. Cette nouvelle génération est intégrée nativement à ChatGPT Plus, Pro, Business, Edu et Enterprise — ce qui en fait un choix naturel pour les équipes déjà engagées dans l'écosystème OpenAI.\n\nContrairement à la première version (déprecated en 2023), Codex 2026 est un agent autonome : il planifie, exécute des tâches sur votre système de fichiers, lance des commandes shell, lit du code et itère. Il est positionné directement face à Claude Code par OpenAI.\n\nPour les équipes qui ont déjà standardisé sur ChatGPT, choisir Codex évite la friction d'introduire un second éditeur de LLM. Et combiné à n8n, il devient un moteur d'automatisation accessible via un simple workflow."
+            },
+            {
+              "title": "Ce que je construis avec Codex + n8n",
+              "content": "**Agents Codex orchestrés par n8n** — Codex traite la tâche complexe (analyse, génération, refactoring), n8n gère le runtime, les triggers, le routage et les notifications. Cas typique : un workflow n8n qui détecte un nouveau ticket support, envoie le contexte à Codex, récupère une réponse argumentée, et la pousse dans Zendesk après validation humaine.\n\n**Automatisation de la génération de contenu** — Briefs en entrée, articles SEO + images Codex + publication WordPress en sortie. Pipeline complet automatisé avec contrôle qualité humain.\n\n**Pipelines DevOps assistés** — Codex génère, teste et déploie du code sur trigger n8n (push GitHub, Linear ticket validé). Idéal pour les équipes qui veulent industrialiser les petits fixes sans mobiliser un développeur senior.\n\n**Intégration ChatGPT Enterprise** — Pour les équipes sur Enterprise, je conçois des workflows qui exploitent les Custom GPTs et les Actions OpenAI depuis n8n, avec respect des permissions et logs centralisés."
+            },
+            {
+              "title": "Codex vs Claude Code : lequel choisir pour n8n",
+              "content": "Les deux fonctionnent et je travaille avec les deux. Voici comment je guide le choix :\n\n**Choisissez Codex si** : votre équipe est déjà standardisée sur ChatGPT (Plus, Pro, Business, Enterprise), vous voulez éviter d'introduire un second outil IA, vous avez besoin de l'intégration native avec les Custom GPTs OpenAI, ou vous travaillez beaucoup avec DALL·E et la génération d'images.\n\n**Choisissez Claude Code si** : vous démarrez sur une stack neuve, vous avez besoin du meilleur outil pour la lecture de codebase volumineuse, vous travaillez avec MCP de manière intensive, ou vous voulez le meilleur ratio qualité/contrôle pour le refactoring multi-fichiers.\n\nPour un comparatif détaillé, voir l'article [Claude Code vs OpenAI Codex pour n8n](/blog/claude-code-developper-avec-ia) (en cours de mise à jour). Mon approche reste de proposer le bon outil pour le bon contexte plutôt qu'un dogme."
+            },
+            {
+              "title": "Prompt engineering pour Codex",
+              "content": "Codex partage les fondamentaux du prompt engineering avec Claude Code (CLAUDE.md équivalent, OODA, décomposition), mais avec quelques spécificités.\n\n**AGENTS.md ou Codex profile** — OpenAI a sa propre convention pour le contexte projet, avec des hooks différents. J'adapte mes templates selon l'outil.\n\n**Custom GPTs pour les workflows répétitifs** — Pour les équipes ChatGPT Enterprise, je crée des Custom GPTs spécialisés (revue de code, génération de documentation, audit sécurité) qui sont ensuite appelés depuis n8n via l'API OpenAI ou directement via les Actions.\n\n**Structured Outputs** — OpenAI a poussé loin le support des sorties JSON validées. Pour les workflows n8n qui prennent un texte libre en entrée et doivent produire un JSON structuré (classification, extraction, scoring), Codex avec structured outputs est typiquement plus fiable qu'un prompt classique."
+            },
+            {
+              "title": "Pourquoi un freelance OpenAI Codex en 2026",
+              "content": "Codex App est récent (relancé en février 2026) et la couverture francophone reste limitée. La majorité des freelances IA français travaillent sur Claude Code ou sur des solutions plus anciennes (GPT-4 via API).\n\nFaire appel à un développeur spécialisé Codex + n8n maintenant, c'est : prendre une avance sur la courbe d'adoption, exploiter les avantages spécifiques d'OpenAI (Custom GPTs, structured outputs, DALL·E), et préparer votre stack pour les évolutions à venir côté OpenAI Enterprise.\n\nMon positionnement : un développeur qui maîtrise les deux écosystèmes (Anthropic et OpenAI) et qui vous conseille honnêtement selon votre contexte, sans dogme."
+            },
+            {
+              "title": "L'avantage Madagascar pour Codex + n8n",
+              "content": "Mêmes principes que pour ma page [Claude Code + n8n](/services/developpeur-claude-code-n8n) : expertise technique de pointe, TJM compétitif marché européen, fuseau horaire GMT+3 aligné France, communication française et anglaise.\n\nWorkflows livrés documentés, comptes OpenAI configurés avec respect des permissions (RBAC, Audit Log API pour Enterprise), workflows n8n exportables et hébergeables n'importe où.\n\nPour discuter de votre projet Codex + n8n, [contactez-moi](/contact) ou voyez mes [autres services](/services)."
+            }
+          ],
+          "features": [
+            {
+              "icon": "auto_awesome",
+              "title": "OpenAI Codex",
+              "description": "Codex App + Custom GPTs + structured outputs"
+            },
+            {
+              "icon": "hub",
+              "title": "n8n orchestration",
+              "description": "Triggers, routage, notifications, validation humaine"
+            },
+            {
+              "icon": "business",
+              "title": "ChatGPT Enterprise",
+              "description": "Workflows respectueux des permissions et audit logs"
+            },
+            {
+              "icon": "psychology",
+              "title": "Prompt Engineering",
+              "description": "AGENTS.md, structured outputs, Custom GPTs"
+            },
+            {
+              "icon": "image",
+              "title": "DALL·E intégré",
+              "description": "Génération d'images automatisée via n8n"
+            },
+            {
+              "icon": "support_agent",
+              "title": "Support FR/EN",
+              "description": "GMT+3 aligné Europe, communication fluide"
+            }
+          ],
+          "faq": [
+            {
+              "question": "Qu'est-ce qu'OpenAI Codex en 2026 ?",
+              "answer": "Codex 2026 (aussi appelé Codex App) est l'agent de codage autonome d'OpenAI, relancé en février 2026 et intégré nativement à ChatGPT Plus, Pro, Business, Edu et Enterprise. C'est la réponse directe d'OpenAI à Claude Code d'Anthropic. Il planifie, exécute des commandes, lit du code et itère sur les erreurs."
+            },
+            {
+              "question": "Faut-il un compte ChatGPT Enterprise pour utiliser Codex + n8n ?",
+              "answer": "Non. ChatGPT Plus (20 $/mois) suffit pour démarrer. Pour les équipes, ChatGPT Business (25 $/utilisateur/mois) ou Enterprise apportent un meilleur contrôle des données, les Custom GPTs partagés et les Audit Logs. Le choix dépend de votre taille d'équipe et de votre niveau de conformité requis."
+            },
+            {
+              "question": "Codex est-il meilleur que Claude Code pour n8n ?",
+              "answer": "Ni meilleur ni moins bon — différent. Codex brille sur l'intégration ChatGPT Enterprise, les Custom GPTs et la génération d'images via DALL·E. Claude Code brille sur la lecture de codebase volumineuse et le pattern MCP n8n. Le bon choix dépend de votre stack actuelle. Je travaille avec les deux et je vous conseille selon votre contexte."
+            },
+            {
+              "question": "Comment Codex se branche-t-il à n8n ?",
+              "answer": "Trois patterns en production. (1) Node HTTP Request vers l'API OpenAI pour des appels ponctuels. (2) Node OpenAI natif de n8n pour les workflows IA classiques (classification, génération, embedding). (3) Custom GPT exposé via Actions OpenAI, appelé depuis n8n avec authentification dédiée pour les équipes Enterprise."
+            },
+            {
+              "question": "Quel est le tarif d'un freelance OpenAI Codex + n8n ?",
+              "answer": "Les TJM européens vont de 400 à 700 €/jour pour un profil confirmé IA + n8n. Mes tarifs basés à Antananarivo restent compétitifs sur le marché européen avec un avantage time-zone (GMT+3) et une qualité technique équivalente. Devis sur demande après appel découverte."
+            },
+            {
+              "question": "Codex App fonctionne-t-il avec des données sensibles ?",
+              "answer": "Avec ChatGPT Enterprise et l'option de no-training, les données client ne sont pas utilisées pour entraîner les modèles OpenAI. Le chiffrement en transit et au repos est standard. Pour les données très sensibles (santé, finance régulée, défense), je recommande des modèles auto-hébergés (Llama, Mistral) plutôt qu'une solution cloud."
             }
           ]
         }

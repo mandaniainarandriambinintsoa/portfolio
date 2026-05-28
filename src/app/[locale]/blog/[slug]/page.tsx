@@ -6,6 +6,7 @@ import { getBlogPostBySlug, getAllBlogSlugs } from "@/lib/data/blog";
 import { notFound } from "next/navigation";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import BlogPostJsonLd from "@/components/seo/BlogPostJsonLd";
+import FaqJsonLdFromMarkdown from "@/components/seo/FaqJsonLdFromMarkdown";
 import BlogPostAnim from "@/components/animations/BlogPostAnim";
 import MarkdownRenderer from "@/components/blog/MarkdownRenderer";
 import Button from "@/components/ui/Button";
@@ -112,6 +113,7 @@ export default async function BlogPostPage({
         author={post.author}
         coverImage={post.coverImage}
       />
+      <FaqJsonLdFromMarkdown content={post.content} />
 
       <BlogPostAnim>
         <article className="max-w-3xl mx-auto">
