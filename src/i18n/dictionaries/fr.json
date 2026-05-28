@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Product Builder · Fullstack JavaScript No-Code · IA n8n Madagascar",
-      "description": "Product Builder freelance à Madagascar. De l'idée au produit fini : sites, MVP SaaS, fullstack JavaScript, no-code, IA et n8n. 20+ projets livrés en 4 ans."
+      "title": "Manda — Product Builder IA · Claude Code & n8n · Madagascar",
+      "description": "Manda Randriambinintsoa, Product Builder freelance à Antananarivo. Je livre des MVP SaaS, agents IA et automatisations n8n avec Claude Code et OpenAI Codex. 20+ projets livrés pour clients européens."
     },
     "about": {
       "title": "Manda Randriambinintsoa | Développeur No-Code & Expert N8N à Madagascar",
@@ -1215,7 +1215,7 @@
       {
         "slug": "scalapp",
         "title": "ScalApp",
-        "subtitle": "Gestion d'investissements automatisée",
+        "subtitle": "Dashboard de gestion d'investissements · ScalApp France",
         "description": "Plateforme complète conçue pour ScalApp, une agence de développement no-code basée en France. Le projet comprend un site vitrine premium avec animations fluides, un dashboard de gestion d'investissements permettant le suivi en temps réel des portefeuilles clients, ainsi que des ponts API automatisés connectant plusieurs sources de données financières. L'interface d'administration sur mesure offre une vue consolidée des performances. Design pixel-perfect réalisé sur Figma puis développé sur Webflow avec un souci constant du détail et de l'expérience utilisateur.",
         "tags": [
           "ScalApp",
@@ -1281,7 +1281,7 @@
       {
         "slug": "alchiimy",
         "title": "Alchiimy",
-        "subtitle": "App de rencontre IA",
+        "subtitle": "App de rencontre IA · Matching émotionnel & profils vérifiés",
         "description": "Alchiimy est une application de rencontre nouvelle génération qui va au-delà du physique. L'app Alchiimy utilise un algorithme de matching IA avancé basé sur la compatibilité émotionnelle et intellectuelle, analysant les centres d'intérêt, les valeurs et les objectifs de vie de chaque utilisateur. La plateforme Alchiimy propose des profils vérifiés, un système de conversation guidée par étapes pour construire des connexions authentiques avant le premier rendez-vous, et des événements de groupe thématiques. L'UX a été entièrement pensée pour encourager les rencontres réelles plutôt que le swipe infini. Développée sur Bubble avec une attention particulière portée à la confidentialité des données.",
         "tags": [
           "Alchiimy",

@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Product Builder · Fullstack JavaScript No-Code · AI n8n Madagascar",
-      "description": "Freelance Product Builder in Madagascar. From idea to shipped product: websites, SaaS MVPs, fullstack JavaScript, no-code, AI and n8n. 20+ projects shipped in 4 years."
+      "title": "Manda — AI Product Builder · Claude Code + n8n · Madagascar",
+      "description": "Manda Randriambinintsoa, freelance AI product builder in Antananarivo. I ship SaaS MVPs, AI agents and n8n automations with Claude Code & OpenAI Codex. 20+ projects shipped for European clients."
     },
     "about": {
       "title": "Manda Randriambinintsoa | No-Code Developer & N8N Expert from Madagascar",
@@ -1207,7 +1207,7 @@
       {
         "slug": "scalapp",
         "title": "ScalApp",
-        "subtitle": "Automated Venture Management",
+        "subtitle": "Investment Management Dashboard · ScalApp France",
         "description": "Full-featured platform built for ScalApp, a France-based no-code development agency. The project includes a premium showcase website with smooth animations, an investment management dashboard enabling real-time portfolio tracking for clients, and automated API bridges connecting multiple financial data sources. The custom admin interface provides a consolidated performance overview. Pixel-perfect design crafted in Figma, then developed on Webflow with constant attention to detail and user experience.",
         "tags": [
           "ScalApp",
@@ -1273,7 +1273,7 @@
       {
         "slug": "alchiimy",
         "title": "Alchiimy",
-        "subtitle": "AI Dating App",
+        "subtitle": "AI Dating App · Emotional Matching & Verified Profiles",
         "description": "Alchiimy is a next-generation dating app that goes beyond appearances. The Alchiimy app uses an advanced AI matching algorithm based on emotional and intellectual compatibility, analyzing each user's interests, values, and life goals. The Alchiimy platform offers verified profiles, a step-by-step guided conversation system to build authentic connections before the first date, and themed group events. The UX was entirely designed to encourage real-life meetups over endless swiping. Built on Bubble with special attention to data privacy and security.",
         "tags": [
           "Alchiimy",
