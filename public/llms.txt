@@ -19,6 +19,7 @@ Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance bas
 ## Projets
 
 - [ScalApp](https://manda-ia.com/projects/scalapp): Plateforme SaaS de scaling pour freelances — dashboard Bubble avec gestion d'investissements
+- [Garagiste](https://manda-ia.com/projects/garagiste): Site vitrine premium pour garage a Antananarivo — Next.js 16, SEO/GEO, formulaire relaye vers n8n, Google Calendar et email
 - [ImmoPrive](https://manda-ia.com/projects/immoprive): Marketplace immobilière avec IA — Bubble, filtres avancés, matching intelligent
 - [Yalee Creek Ranch](https://manda-ia.com/projects/yalee-creek-ranch): Site vitrine pour ranch américain — gestion locative, design premium
 - [Alchiimy](https://manda-ia.com/projects/alchiimy): Plateforme de formation en ligne — Bubble, paiements, contenu interactif

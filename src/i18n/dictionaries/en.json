@@ -1205,6 +1205,23 @@
         "workflowFile": null
       },
       {
+        "slug": "garagiste",
+        "title": "Garagiste",
+        "subtitle": "Premium garage website for Antananarivo",
+        "description": "Premium showcase website for an automotive garage in Antananarivo. Built with the same business-website workflow as MadaVoyage: sector + city brief, 3 AI-generated design directions, validation of a dark premium direction, then Next.js 16 integration. The site highlights clear diagnostics, quotes before repair, workshop services, fleet/taxi/VTC offers, service areas and a booking request form. The form goes through a secured Next.js API route, relays to n8n, creates a Google Calendar event and sends an internal email notification. Final WebP assets, SEO/GEO, Open Graph, sitemap and documented n8n workflow included.",
+        "tags": [
+          "Next.js 16",
+          "n8n",
+          "Business site",
+          "WebP"
+        ],
+        "link": "https://garagiste-zeta.vercel.app/",
+        "featured": true,
+        "category": "webapp",
+        "image": "/images/projects/garagiste/cover-desktop.png",
+        "workflowFile": null
+      },
+      {
         "slug": "scalapp",
         "title": "ScalApp",
         "subtitle": "Investment Management Dashboard · ScalApp France",

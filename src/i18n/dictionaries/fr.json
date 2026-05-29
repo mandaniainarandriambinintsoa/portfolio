@@ -1213,6 +1213,23 @@
         "workflowFile": null
       },
       {
+        "slug": "garagiste",
+        "title": "Garagiste",
+        "subtitle": "Site vitrine premium pour garage a Antananarivo",
+        "description": "Site vitrine premium pour un garage automobile a Antananarivo. Concu avec la meme logique site web metier que MadaVoyage : brief secteur + ville, 3 directions de maquette IA, validation d'une direction sombre premium, puis integration Next.js 16. Le site met en avant diagnostic clair, devis avant intervention, services atelier, offres flottes/taxis/VTC, zones d'intervention et formulaire de rendez-vous. Le formulaire passe par une API route Next.js securisee, relaye vers n8n, cree un evenement Google Calendar et notifie le garage par email. Images finales WebP, SEO/GEO, Open Graph, sitemap et workflow n8n documente.",
+        "tags": [
+          "Next.js 16",
+          "n8n",
+          "Site metier",
+          "WebP"
+        ],
+        "link": "https://garagiste-zeta.vercel.app/",
+        "featured": true,
+        "category": "webapp",
+        "image": "/images/projects/garagiste/cover-desktop.png",
+        "workflowFile": null
+      },
+      {
         "slug": "scalapp",
         "title": "ScalApp",
         "subtitle": "Dashboard de gestion d'investissements · ScalApp France",
