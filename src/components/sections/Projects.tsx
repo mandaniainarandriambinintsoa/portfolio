@@ -10,19 +10,14 @@ import type { ProjectItem, ProjectCategory } from "@/lib/types";
 type FilterType = "all" | ProjectCategory;
 
 /*
- * 2-column bento layout:
- *
- *  [──────── FACTUMATION hero (col-span-2) ────────]
- *  [ScalApp]                [ImmoPrive row-span-2]
- *  [Yalee Creek]            [                    ]
- *  [Alchiimy row-span-2]   [Artigen]
- *  [                    ]   [Scraping]
- *  [──────── Tracking (col-span-2) ────────]
+ * 2-column bento layout.
+ * Garagiste leads in the hero slot, MadaVoyage follows, and the n8n
+ * showcase keeps a normal card size underneath.
  */
 
-/** Reorder: Factumation hero → Artigen 2nd → … → ScalApp last */
+/** Reorder: Garagiste hero -> MadaVoyage -> n8n showcase, with ScalApp last. */
 function reorderForBento(items: ProjectItem[]): ProjectItem[] {
-  const order = ["factumation", "artigen"];
+  const order = ["garagiste", "madavoyage", "leads-automation-showcase"];
   const last = ["scalapp"];
   const copy = [...items];
   const front: ProjectItem[] = [];
@@ -43,14 +38,14 @@ function reorderForBento(items: ProjectItem[]): ProjectItem[] {
 
 /** Layout config per index for the full 8-item bento */
 const LAYOUT: Record<number, { span: string; size: "hero" | "tall" | "wide" | "normal" }> = {
-  0: { span: "col-span-2 row-span-2", size: "hero" },   // Factumation — full-width hero
-  1: { span: "", size: "normal" },                        // Artigen
-  2: { span: "row-span-2", size: "tall" },                // ImmoPrive
-  3: { span: "", size: "normal" },                        // Yalee Creek
-  4: { span: "row-span-2", size: "tall" },                // Alchiimy
-  5: { span: "", size: "normal" },                        // Scraping
-  6: { span: "", size: "normal" },                        // Tracking
-  7: { span: "col-span-2", size: "wide" },                // ScalApp — full-width bottom
+  0: { span: "col-span-2 row-span-2", size: "hero" },
+  1: { span: "", size: "normal" },
+  2: { span: "", size: "normal" },
+  3: { span: "row-span-2", size: "tall" },
+  4: { span: "", size: "normal" },
+  5: { span: "row-span-2", size: "tall" },
+  6: { span: "", size: "normal" },
+  7: { span: "col-span-2", size: "wide" },
 };
 
 export default function Projects({
