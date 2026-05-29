@@ -1034,13 +1034,13 @@
   },
   "pricing": {
     "title": "TARIFS",
-    "subtitle": "Du site simple au SaaS sur mesure. Tarifs publiés, ajustés au scope du projet.",
+    "subtitle": "Du site metier au SaaS, avec maintenance et surveillance SEO/GEO pour garder le site vivant apres livraison.",
     "lines": [
       {
         "icon": "code",
         "color": "emerald",
-        "title": "Sites Next.js",
-        "description": "Pure Next.js, perf 95+, SEO-ready",
+        "title": "Sites metier Next.js",
+        "description": "Site premium, SEO/GEO-ready, sans dashboard inutile",
         "example": {
           "label": "VOIR UN EXEMPLE",
           "title": "Ce portfolio, 100/100 PageSpeed",
@@ -1051,20 +1051,20 @@
             "name": "Starter",
             "price": "500 €",
             "delay": "≈ 1 semaine",
-            "details": "5 pages, formulaire, SEO de base, mobile-first"
+            "details": "5 pages, formulaire, SEO/GEO de base, contenu centralise"
           },
           {
             "name": "Pro",
             "price": "1 000 €",
             "delay": "1-2 semaines",
-            "details": "10 pages, design custom, blog, animations légères",
+            "details": "Site metier complet, 3 maquettes IA, formulaire relaye n8n",
             "featured": true
           },
           {
-            "name": "Avancé",
-            "price": "1 500 €",
-            "delay": "2-3 semaines",
-            "details": "Multilingue, CMS, intégrations API"
+            "name": "Avancé + suivi",
+            "price": "1 500 € + 149 €/mois",
+            "delay": "2-3 sem. + mensuel",
+            "details": "Multilingue, pages locales, petites modifs, uptime, PageSpeed, indexation et rapport SEO/GEO"
           }
         ]
       },

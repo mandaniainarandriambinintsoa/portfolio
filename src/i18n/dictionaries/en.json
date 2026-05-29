@@ -1026,13 +1026,13 @@
   },
   "pricing": {
     "title": "PRICING",
-    "subtitle": "From simple sites to custom SaaS. Published rates, adjusted to project scope.",
+    "subtitle": "From business websites to SaaS, with maintenance and SEO/GEO monitoring to keep the site alive after launch.",
     "lines": [
       {
         "icon": "code",
         "color": "emerald",
-        "title": "Next.js Sites",
-        "description": "Pure Next.js, 95+ perf, SEO-ready",
+        "title": "Business Next.js Sites",
+        "description": "Premium site, SEO/GEO-ready, no useless dashboard",
         "example": {
           "label": "VIEW AN EXAMPLE",
           "title": "This portfolio, 100/100 PageSpeed",
@@ -1043,20 +1043,20 @@
             "name": "Starter",
             "price": "€500",
             "delay": "≈ 1 week",
-            "details": "5 pages, contact form, basic SEO, mobile-first"
+            "details": "5 pages, contact form, basic SEO/GEO, centralized content"
           },
           {
             "name": "Pro",
             "price": "€1,000",
             "delay": "1-2 weeks",
-            "details": "10 pages, custom design, blog, light animations",
+            "details": "Complete business site, 3 AI mockups, form relayed to n8n",
             "featured": true
           },
           {
-            "name": "Advanced",
-            "price": "€1,500",
-            "delay": "2-3 weeks",
-            "details": "Multilingual, CMS, API integrations"
+            "name": "Advanced + Care",
+            "price": "€1,500 + €149/mo",
+            "delay": "2-3 wks + monthly",
+            "details": "Multilingual, local pages, light edits, uptime, PageSpeed, indexing and SEO/GEO report"
           }
         ]
       },
