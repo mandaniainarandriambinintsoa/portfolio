@@ -11,13 +11,13 @@ type FilterType = "all" | ProjectCategory;
 
 /*
  * 2-column bento layout.
- * Garagiste leads in the hero slot, MadaVoyage follows, and the n8n
- * showcase keeps a normal card size underneath.
+ * Factumation leads in the hero slot, then MadaVoyage, Garagiste and
+ * the n8n showcase follow in normal card slots.
  */
 
-/** Reorder: Garagiste hero -> MadaVoyage -> n8n showcase, with ScalApp last. */
+/** Reorder the homepage bento priority, with ScalApp last. */
 function reorderForBento(items: ProjectItem[]): ProjectItem[] {
-  const order = ["garagiste", "madavoyage", "leads-automation-showcase"];
+  const order = ["factumation", "madavoyage", "garagiste", "leads-automation-showcase"];
   const last = ["scalapp"];
   const copy = [...items];
   const front: ProjectItem[] = [];
@@ -41,7 +41,7 @@ const LAYOUT: Record<number, { span: string; size: "hero" | "tall" | "wide" | "n
   0: { span: "col-span-2 row-span-2", size: "hero" },
   1: { span: "", size: "normal" },
   2: { span: "", size: "normal" },
-  3: { span: "row-span-2", size: "tall" },
+  3: { span: "", size: "normal" },
   4: { span: "", size: "normal" },
   5: { span: "row-span-2", size: "tall" },
   6: { span: "", size: "normal" },
