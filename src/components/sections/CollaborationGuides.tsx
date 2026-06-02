@@ -5,13 +5,15 @@ type GuideItem = {
   description: string;
   pages: number;
   href: string;
+  pdf: string;
 };
 
 type CollaborationGuidesProps = {
   badge: string;
   title: string;
   subtitle: string;
-  downloadLabel: string;
+  readLabel: string;
+  pdfLabel: string;
   pagesLabel: string;
   items: GuideItem[];
 };
@@ -62,6 +64,24 @@ function PdfIcon({ className = "" }: { className?: string }) {
   );
 }
 
+function ArrowIcon({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <line x1="5" y1="12" x2="19" y2="12" />
+      <polyline points="12 5 19 12 12 19" />
+    </svg>
+  );
+}
+
 function DownloadIcon({ className = "" }: { className?: string }) {
   return (
     <svg
@@ -85,7 +105,8 @@ export default function CollaborationGuides({
   badge,
   title,
   subtitle,
-  downloadLabel,
+  readLabel,
+  pdfLabel,
   pagesLabel,
   items,
 }: CollaborationGuidesProps) {
@@ -111,10 +132,8 @@ export default function CollaborationGuides({
         {items.map((item) => {
           const accent = accentMap[item.key] || accentMap.site;
           return (
-            <a
+            <div
               key={item.key}
-              href={item.href}
-              download
               className={`guide-card group relative overflow-hidden glass-card rounded-2xl p-8 border ${accent.ring} transition-all duration-300 flex flex-col`}
             >
               <div
@@ -122,32 +141,51 @@ export default function CollaborationGuides({
                 aria-hidden="true"
               />
 
-              <div className="relative z-10 flex items-center justify-end mb-6">
+              {/* Lien principal etire : toute la carte ouvre la version HTML du guide */}
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${readLabel} : ${item.title}`}
+                className="absolute inset-0 z-10 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
+              />
+
+              <div className="relative z-10 flex items-center justify-end mb-6 pointer-events-none">
                 <span className="text-xs font-mono tracking-[0.2em] text-white/60">
                   {item.tag}
                 </span>
               </div>
 
-              <h3 className="relative z-10 text-xl md:text-2xl font-bold text-white mb-3 tracking-tight">
+              <h3 className="relative z-10 text-xl md:text-2xl font-bold text-white mb-3 tracking-tight pointer-events-none">
                 {item.title}
               </h3>
-              <p className="relative z-10 text-sm text-slate-400 leading-relaxed mb-6 flex-grow">
+              <p className="relative z-10 text-sm text-slate-400 leading-relaxed mb-6 flex-grow pointer-events-none">
                 {item.description}
               </p>
 
-              <div className="relative z-10 flex items-center justify-between pt-4 border-t border-white/5">
+              <div className="relative z-20 flex items-center justify-between pt-4 border-t border-white/5 pointer-events-none">
                 <span className="inline-flex items-center gap-2 text-xs font-mono tracking-wider text-white/50 uppercase">
                   <PdfIcon className="w-5 h-5" />
                   {item.pages} {pagesLabel}
                 </span>
-                <span
-                  className={`inline-flex items-center gap-1.5 text-sm font-medium ${accent.text} group-hover:gap-2.5 transition-all`}
-                >
-                  {downloadLabel}
-                  <DownloadIcon className="w-4 h-4" />
-                </span>
+                <div className="inline-flex items-center gap-4">
+                  <span
+                    className={`inline-flex items-center gap-1.5 text-sm font-medium ${accent.text} group-hover:gap-2.5 transition-all`}
+                  >
+                    {readLabel}
+                    <ArrowIcon className="w-4 h-4" />
+                  </span>
+                  <a
+                    href={item.pdf}
+                    download
+                    className="pointer-events-auto inline-flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-white/40 hover:text-white/70 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded"
+                  >
+                    <DownloadIcon className="w-3.5 h-3.5" />
+                    {pdfLabel}
+                  </a>
+                </div>
               </div>
-            </a>
+            </div>
           );
         })}
       </div>

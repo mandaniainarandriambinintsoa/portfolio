@@ -110,7 +110,8 @@ export default async function HomePage({
             badge={dict.collaboration_guides.badge}
             title={dict.collaboration_guides.title}
             subtitle={dict.collaboration_guides.subtitle}
-            downloadLabel={dict.collaboration_guides.download_label}
+            readLabel={dict.collaboration_guides.read_label}
+            pdfLabel={dict.collaboration_guides.pdf_label}
             pagesLabel={dict.collaboration_guides.pages_label}
             items={dict.collaboration_guides.items}
           />
