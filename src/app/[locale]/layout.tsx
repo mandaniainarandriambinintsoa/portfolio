@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
@@ -75,7 +76,10 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: rawLocale } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  // Locale inconnue (ex: /llms-full.txt capté par le segment [locale]) → 404 explicite
+  // au lieu de retomber silencieusement sur la home FR (faux 200 + duplicate).
+  if (!i18n.locales.includes(rawLocale as Locale)) notFound();
+  const locale = rawLocale as Locale;
   const dict = await getDictionary(locale);
 
   return (
