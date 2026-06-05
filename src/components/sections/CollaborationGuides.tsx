@@ -178,7 +178,8 @@ export default function CollaborationGuides({
                   <a
                     href={item.pdf}
                     download
-                    className="pointer-events-auto inline-flex items-center gap-1 text-xs font-mono uppercase tracking-wider text-white/40 hover:text-white/70 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded"
+                    aria-label={`${pdfLabel} : ${item.title}`}
+                    className="pointer-events-auto inline-flex items-center gap-1 py-2 -my-2 text-xs font-mono uppercase tracking-wider text-white/70 hover:text-white/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded"
                   >
                     <DownloadIcon className="w-3.5 h-3.5" />
                     {pdfLabel}
