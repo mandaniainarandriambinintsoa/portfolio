@@ -998,6 +998,417 @@
             }
           ]
         }
+      },
+      {
+        "icon": "javascript",
+        "title": "JavaScript Developer in Madagascar",
+        "description": "One ecosystem for front-end, back-end and applied AI. React front, Node.js APIs, intelligent agents.",
+        "slug": "javascript-developer-madagascar",
+        "color": "blue",
+        "cardTitle": "JavaScript Developer",
+        "cardDescription": "Fullstack JS: front, back and AI from Madagascar",
+        "isLanding": true,
+        "seoTitle": "JavaScript Developer in Madagascar (Fullstack) | Manda",
+        "seoDescription": "Fullstack JavaScript developer in Madagascar: React front, Node.js back and AI agents. Profiles from 35 to 80 EUR per day. Let's talk about your project today.",
+        "landing": {
+          "heroText": "JavaScript is the only language that spans the interface, the server and now applied AI. I build fullstack products end to end, from the React front-end to the Node.js backend and intelligent agents. This page points you to the specialization that fits your need.",
+          "sections": [
+            {
+              "title": "Why a fullstack JavaScript developer in Madagascar",
+              "content": "A fullstack JavaScript developer in Madagascar handles the whole chain with a single language, which cuts coordination costs and speeds up delivery. JavaScript covers the user interface, the server and applied AI, a rare case among mainstream languages.\n\nIn practice, one developer can build a reactive front-end, expose an API, manage the database and wire in an intelligent automation layer. You avoid friction between front and back teams and keep business logic coherent from end to end. This is the versatile profile studios and startups look for when they search for a fullstack developer in Madagascar, with a budget of 35 to 80 EUR per day depending on seniority."
+            },
+            {
+              "title": "The front-end: React and Next.js",
+              "content": "Modern JavaScript front-end relies on React and its framework Next.js, which handle server rendering, SEO and performance. It is the visible part of your product, the one your users touch first.\n\nFor a fast marketing site, a SaaS or a dashboard, the specialization to choose is the [React / Next.js developer](/en/services/hire-react-nextjs-developer-madagascar). There you will find the expected skills, static or server rendering, Core Web Vitals optimization and accessibility. Next.js can also serve the front-end and the API from the same project, which simplifies deployment and reduces the technical surface to maintain over time."
+            },
+            {
+              "title": "The back-end: Node.js and APIs",
+              "content": "The JavaScript back-end is built on Node.js, the runtime that powers the server, REST or GraphQL APIs and asynchronous processing. It is the invisible engine that connects the interface to your data and third party services.\n\nIf your need is a robust API, webhooks, authentication or integrations, head to the [Node.js developer](/en/services/hire-nodejs-developer-madagascar). Node.js shares the same language as the front-end, which lets you reuse types and business logic across both layers. For applications that combine a database with real time features, the [Next.js + Supabase developer](/en/services/nextjs-supabase-developer-madagascar) stack is often the best trade-off."
+            },
+            {
+              "title": "Applied AI and automation",
+              "content": "JavaScript is now a first class language for applied AI, thanks to the SDKs of the major models and orchestration tools like n8n. This is not about research, but about useful AI wired into your business processes.\n\nTo automate a workflow, build an assistant that acts on your tools or enrich a product with reasoning, see the [AI agent developer](/en/services/ai-agent-developer-madagascar). A well designed agent reads your data, calls your APIs and triggers actions, all integrated into the rest of your JavaScript application. This technical continuity avoids fragile bridges between a business stack and an AI layer kept apart."
+            },
+            {
+              "title": "Which specialization for which project",
+              "content": "The right choice depends on your real need, not on a technical trend. A site or a SaaS points to React and Next.js, an API or a backend to Node.js, an intelligent automation to an AI agent, and a real time application to Next.js plus Supabase.\n\nIn practice, most projects combine several of these bricks, and that is the whole point of a single fullstack JavaScript profile. You start on one specialization, then expand without changing language or team. The table below sums up this guidance to help you quickly find the page most useful to your project, before we discuss it together."
+            }
+          ],
+          "features": [
+            {
+              "icon": "code_blocks",
+              "title": "One language",
+              "description": "Front, back and AI share JavaScript, less friction and cost."
+            },
+            {
+              "icon": "deployed_code",
+              "title": "True fullstack",
+              "description": "From the React interface to the Node.js server, coherent logic."
+            },
+            {
+              "icon": "bolt",
+              "title": "Fast delivery",
+              "description": "A single ecosystem speeds up prototyping and production."
+            },
+            {
+              "icon": "smart_toy",
+              "title": "Built-in AI",
+              "description": "Agents and automations wired directly into your product."
+            },
+            {
+              "icon": "savings",
+              "title": "35 to 80 EUR/day",
+              "description": "Madagascar rate by profile, with no compromise on quality."
+            },
+            {
+              "icon": "hub",
+              "title": "Scalable",
+              "description": "Start on one brick, expand without changing stack."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Which need, which JavaScript specialization",
+            "intro": "JavaScript covers the full spectrum of a web product. Here is how to point your project to the most relevant page based on your main need.",
+            "headers": [
+              "Need",
+              "Recommended specialization",
+              "Why"
+            ],
+            "rows": [
+              {
+                "criterion": "Marketing site or SaaS",
+                "noCode": "React / Next.js",
+                "nextjs": "Server rendering, SEO and performance for the visible part of the product.",
+                "winner": "tie"
+              },
+              {
+                "criterion": "API or business backend",
+                "noCode": "Node.js",
+                "nextjs": "Server, APIs and asynchronous processing in the same language as the front.",
+                "winner": "tie"
+              },
+              {
+                "criterion": "Intelligent automation",
+                "noCode": "AI agent",
+                "nextjs": "Workflows and assistants that read your data and trigger actions.",
+                "winner": "tie"
+              },
+              {
+                "criterion": "Real time application",
+                "noCode": "Next.js + Supabase",
+                "nextjs": "Database, authentication and real time on a unified stack.",
+                "winner": "tie"
+              },
+              {
+                "criterion": "Complete fullstack product",
+                "noCode": "Versatile JavaScript profile",
+                "nextjs": "Front, back and AI handled by one person, with no stack break.",
+                "winner": "tie"
+              }
+            ],
+            "conclusion": "Most projects mix these bricks. A fullstack JavaScript developer starts on one specialization then expands the scope without changing language."
+          },
+          "faq": [
+            {
+              "question": "What is a fullstack JavaScript developer?",
+              "answer": "A developer who covers the front (React, Next.js), the back (Node.js) and applied AI with a single language, JavaScript. They build a product end to end without relying on several teams."
+            },
+            {
+              "question": "Why hire a fullstack developer in Madagascar?",
+              "answer": "Madagascar offers skilled JavaScript profiles from 35 to 80 EUR per day, French speaking and aligned with European time zones. You keep technical quality while controlling your product budget."
+            },
+            {
+              "question": "Is JavaScript really suitable for the back-end?",
+              "answer": "Yes. Node.js runs APIs, webhooks and asynchronous processing in production at many companies. Sharing the language with the front-end reduces friction and smooths development."
+            },
+            {
+              "question": "Can you build AI with JavaScript?",
+              "answer": "Yes. The SDKs of the major models and tools like n8n let you create agents and automations in JavaScript, integrated directly into your application, with no AI layer kept apart."
+            },
+            {
+              "question": "Which specialization should I choose for my project?",
+              "answer": "A site or SaaS calls for React and Next.js, an API for Node.js, an automation for an AI agent, and a real time app for Next.js plus Supabase. The orientation table above guides you."
+            },
+            {
+              "question": "How much does a JavaScript developer in Madagascar cost?",
+              "answer": "The rate sits between 35 and 80 EUR per day depending on seniority and project complexity. It stays very competitive against European markets for equivalent quality."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "dns",
+        "title": "Hire a Node.js Developer in Madagascar: Backend, APIs & Real-Time",
+        "description": "Offshore Node.js freelancer in Madagascar: REST/GraphQL APIs, NestJS, real-time and custom integrations.",
+        "slug": "hire-nodejs-developer-madagascar",
+        "color": "emerald",
+        "cardTitle": "Node.js Madagascar",
+        "cardDescription": "Backend, REST/GraphQL APIs and real-time",
+        "isLanding": true,
+        "seoTitle": "Hire a Node.js Developer in Madagascar: Backend & APIs | Manda",
+        "seoDescription": "Hire a freelance Node.js developer in Madagascar. Backend, REST/GraphQL APIs, NestJS, real-time and integrations. Real portfolio, quote within 48h, let's talk.",
+        "landing": {
+          "heroText": "I'm an independent Node.js backend developer based in Antananarivo. I build REST and GraphQL APIs, real-time services and custom integrations, not slide decks. You work with one named, accountable person and a verifiable portfolio, not an anonymous agency pool.",
+          "sections": [
+            {
+              "title": "A named Node.js freelancer, not an anonymous agency",
+              "content": "Search \"node.js developer madagascar\" and Google's first page returns only agencies and job boards (Code-Talent, MadaAllStar, Indeed, Freelancer, Maasil). Not a single individual freelancer with a public, verifiable portfolio.\n\nI fill that gap: you talk directly to the person who writes the code, with no sales layer and no rotating subcontractors. My backend work is documented through real projects like paidmada (a mobile money backend), scalapp and alchiimy. You know who builds it, you can see what has already run in production, and you keep one single point of contact from quote to delivery."
+            },
+            {
+              "title": "A complete Node.js backend stack",
+              "content": "I build in Node.js with Express and NestJS, and expose your data through REST or GraphQL depending on the need. For persistence, I work with PostgreSQL and Supabase.\n\nFor real-time features (notifications, live dashboards, messaging) I use WebSockets. I also handle authentication (sessions, JWT, OAuth), roles and permissions, plus third-party integrations: payments, external services, and automations through n8n. The goal stays the same on every project: a backend that is readable, tested and documented, one your team can take over and extend without depending on me forever. Any front end runs on the same language (see [React / Next.js developer](/en/services/hire-react-nextjs-developer-madagascar))."
+            },
+            {
+              "title": "Why Node.js for a modern API",
+              "content": "Node.js excels at I/O-heavy workloads: a single server handles a large number of concurrent connections with low memory usage, which is ideal for an API or a real-time service.\n\nThree concrete advantages: its npm ecosystem is the largest on the market, so there's less code to reinvent; real-time over WebSocket is native and smooth; and front and back share one language, JavaScript/TypeScript. That shared language cuts context-switching in a small team and speeds up delivery. For a modern API backend with real-time needs, Node.js is a solid default compared with stacks built mainly around classic request/response cycles."
+            },
+            {
+              "title": "Pricing: accessible premium from Madagascar",
+              "content": "The Madagascar market for Node.js development runs from 35 to 80 €/day locally, and climbs to around 480 €/day depending on experience and expertise.\n\nI position myself as accessible premium: a rate well below European agencies, but matched to senior expertise and work delivered directly, with no middleman margin. You pay for production code and a single point of contact, not a sales structure. Scope, timeline and price are set before we start, and I send a quote within 48h of our first call. No surprise billing along the way."
+            },
+            {
+              "title": "How a backend project runs",
+              "content": "Every project starts with scoping: I clarify requirements, the data model and constraints before writing a single line. This step avoids building the wrong thing quickly.\n\nThen I deliver in increments: a first working, testable endpoint early on, then the full API, the integrations and real-time. You track progress on a Git repository, with clear commits and up-to-date documentation. I stay reachable directly (WhatsApp, email) for the whole project, on the EAT time zone (UTC+3) that overlaps with European working hours. On delivery, the code is yours, documented and deployable, with no proprietary lock-in."
+            }
+          ],
+          "features": [
+            {
+              "icon": "api",
+              "title": "REST & GraphQL APIs",
+              "description": "Clean, versioned and documented endpoints."
+            },
+            {
+              "icon": "bolt",
+              "title": "Real-time",
+              "description": "WebSocket for notifications and live feeds."
+            },
+            {
+              "icon": "database",
+              "title": "PostgreSQL & Supabase",
+              "description": "Solid data model and optimized queries."
+            },
+            {
+              "icon": "lock",
+              "title": "Authentication",
+              "description": "Sessions, JWT, OAuth, roles and permissions."
+            },
+            {
+              "icon": "hub",
+              "title": "Integrations & n8n",
+              "description": "Payments, third-party services and automations."
+            },
+            {
+              "icon": "architecture",
+              "title": "NestJS",
+              "description": "Modular, testable architecture built to last."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Node.js, PHP or Python for your API backend?",
+            "intro": "For a modern API backend with real-time needs, the language choice drives both performance and development speed. Here is how Node.js compares with PHP and Python on the criteria that matter.",
+            "headers": [
+              "Criterion",
+              "PHP / other",
+              "Node.js (my choice)"
+            ],
+            "rows": [
+              {
+                "criterion": "I/O performance (concurrent connections)",
+                "noCode": "Good, but blocking per-request model",
+                "nextjs": "Excellent, non-blocking event-driven model",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Real-time (WebSocket)",
+                "noCode": "Possible but awkward, needs extensions",
+                "nextjs": "Native and smooth",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Package ecosystem",
+                "noCode": "Rich depending on the language",
+                "nextjs": "npm, the largest on the market",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Same language front and back",
+                "noCode": "No, two languages to maintain",
+                "nextjs": "Yes, JavaScript/TypeScript everywhere",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Development speed",
+                "noCode": "Solid, especially for classic CRUD",
+                "nextjs": "High, especially in a small full-JS team",
+                "winner": "tie"
+              }
+            ],
+            "conclusion": "PHP and Python remain excellent choices on many projects. But for a modern API that must handle real-time and many concurrent connections, with a unified front+back stack, Node.js is my default choice."
+          },
+          "faq": [
+            {
+              "question": "How much does a Node.js developer in Madagascar cost?",
+              "answer": "The local market runs from 35 to 80 €/day, up to around 480 €/day depending on experience. I position myself as accessible premium: below European agency rates, senior expertise, quote sent within 48h."
+            },
+            {
+              "question": "Do you work with Express, NestJS or both?",
+              "answer": "Both. Express for lightweight, fast-to-ship APIs, NestJS when the project needs a modular, testable architecture over time. I pick based on the expected size and growth of the backend."
+            },
+            {
+              "question": "Can you build a GraphQL API rather than REST?",
+              "answer": "Yes. I build in REST or GraphQL based on the real need: REST for simple, cacheable endpoints, GraphQL when the front end needs flexible queries and to fetch several resources in a single call."
+            },
+            {
+              "question": "Is the time difference a problem?",
+              "answer": "No. I work on EAT (UTC+3), close to Europe, so our working days overlap widely. I stay reachable directly via WhatsApp and email throughout the project."
+            },
+            {
+              "question": "Who owns the code at the end of the project?",
+              "answer": "The code is fully yours. It is versioned on Git, documented and deployable, with no proprietary lock-in. You can take it over, extend it or hand it to another team without depending on me."
+            },
+            {
+              "question": "Can you integrate payments or third-party services?",
+              "answer": "Yes. I built the mobile money backend for paidmada and I handle third-party integrations (payments, external APIs) and n8n automations, with authentication and role management."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "smart_toy",
+        "title": "AI Agent Developer in Madagascar",
+        "description": "Building autonomous AI agents that reason, decide and act through your business tools.",
+        "slug": "ai-agent-developer-madagascar",
+        "color": "purple",
+        "cardTitle": "AI Agents",
+        "cardDescription": "Autonomous AI agents wired to your tools",
+        "isLanding": true,
+        "seoTitle": "AI Agent Developer for Hire in Madagascar | Manda",
+        "seoDescription": "Hire an AI agent developer in Madagascar: autonomous agents for support, prospecting and data processing. Built on n8n, Claude, GPT. Get a free project quote.",
+        "landing": {
+          "heroText": "An AI agent does more than reply, it reasons, decides and acts autonomously through your tools (APIs, databases, the web). I build reliable agents, framed by proper guardrails, to automate your business processes from Madagascar for clients worldwide.",
+          "sections": [
+            {
+              "title": "What is an AI agent, exactly?",
+              "content": "An AI agent is a system that reasons, decides and then acts autonomously to reach a goal, using external tools such as an API, a database or the web. What sets it apart from a chatbot or a linear automation is decision autonomy: where a chatbot answers a question and an automation follows a fixed path, an agent assesses a situation, picks the right action, executes it, checks the result and corrects itself when needed.\n\nIn practice, an agent can read an incoming email, query your CRM, draft a reply, create a task and notify the right person, all without human input on standard cases. This reason, act, verify loop is what distinguishes a true agent from a scripted automation."
+            },
+            {
+              "title": "Use cases that deliver real value",
+              "content": "The most profitable AI agents handle repetitive tasks that require judgment, not just execution. Four families stand out.\n\nThe customer support agent qualifies requests, answers common questions using your documentation and escalates complex cases to a human. The prospecting agent enriches contacts, personalizes messages and organizes follow-up. The data and document processing agent extracts, classifies and structures information from invoices, PDFs or emails. Finally, the self-correcting autonomous workflow chains several steps, detects its own errors and retries whatever failed.\n\nEvery agent is designed around a measurable business goal, not around the technology itself."
+            },
+            {
+              "title": "My technical stack for reliable agents",
+              "content": "I build AI agents on a proven stack: n8n for workflow orchestration, Claude Code for development, and large language model APIs (Claude, GPT) for reasoning. Connecting to your tools (CRM, email, database, web) turns the model into an agent that can actually act on your environment.\n\nMulti-step orchestration breaks a complex goal into verifiable sub-tasks. For advanced needs, I set up multi-agent workflows where several specialized agents collaborate, each with a clear role. This architecture stays readable, maintainable and observable, a non-negotiable condition for trusting an autonomous system in production."
+            },
+            {
+              "title": "Reliability, guardrails and going to production",
+              "content": "An AI agent in production demands guardrails, otherwise autonomy becomes a liability. I treat reliability as an engineering concern in its own right, not as an afterthought.\n\nConcretely: context management (the context window) so the agent keeps useful information without saturating, fallbacks to handle cases where the model hesitates or fails, and observability to trace every decision and action. Write-access limits on a production database are defined from the start, so an agent can never alter critical data without validation. This discipline lets you deploy autonomous agents while keeping control, which reassures both technical teams and management."
+            },
+            {
+              "title": "Why hire an independent expert in Madagascar",
+              "content": "Madagascar faces an estimated shortage of around 2500 qualified developers, which makes applied AI skills especially scarce and sought after. On the specific niche of AI agent development, the local market is held by companies rather than specialized freelancers, leaving few expert contacts directly available.\n\nI position myself as an independent developer dedicated to AI agent design, with a single point of contact from scoping to production. You get a competitive rate, expertise focused on AI and automation, and the responsiveness of a freelancer. See also my work on [n8n automation](/en/services/n8n-automation-expert-madagascar) and [Python development for AI](/en/services/python-ai-developer-madagascar)."
+            }
+          ],
+          "features": [
+            {
+              "icon": "psychology",
+              "title": "Autonomous reasoning",
+              "description": "Agents that assess, decide and act with no fixed path."
+            },
+            {
+              "icon": "hub",
+              "title": "Tool connectivity",
+              "description": "Access to your CRM, email, database and the web."
+            },
+            {
+              "icon": "account_tree",
+              "title": "Multi-agent",
+              "description": "Several specialized agents collaborating by role."
+            },
+            {
+              "icon": "shield",
+              "title": "Guardrails",
+              "description": "Write limits and validation on critical data."
+            },
+            {
+              "icon": "monitoring",
+              "title": "Observability",
+              "description": "Every agent decision and action is traced."
+            },
+            {
+              "icon": "autorenew",
+              "title": "Self-correction",
+              "description": "Error detection and retry of failed steps."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Simple chatbot or autonomous AI agent?",
+            "intro": "Many projects labeled as AI agents are really just chatbots or linear automations. Here is what separates a simple automation from a true autonomous agent.",
+            "headers": [
+              "Criteria",
+              "Chatbot / simple automation",
+              "AI agent (autonomous)"
+            ],
+            "rows": [
+              {
+                "criterion": "Decision autonomy",
+                "noCode": "Follows a predefined path, no decision",
+                "nextjs": "Assesses the situation and picks the action",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Tool access",
+                "noCode": "Limited or none",
+                "nextjs": "Connected to CRM, email, database, web",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Error handling",
+                "noCode": "Fails or stops",
+                "nextjs": "Detects, corrects and retries",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Adaptability",
+                "noCode": "Rigid with unforeseen cases",
+                "nextjs": "Adapts to new situations",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Business value",
+                "noCode": "Simple, repetitive tasks",
+                "nextjs": "Complex processes requiring judgment",
+                "winner": "nextjs"
+              }
+            ],
+            "conclusion": "An autonomous AI agent delivers more value on cognitively demanding processes, provided it is framed by guardrails. For a simple, stable task, a classic automation is often enough and less costly."
+          },
+          "faq": [
+            {
+              "question": "What is the difference between an AI agent and a chatbot?",
+              "answer": "A chatbot answers questions based on rules or a script. An AI agent reasons, decides and acts autonomously through tools (API, database, web), checks its results and corrects itself when needed."
+            },
+            {
+              "question": "Which tools do you use to build AI agents?",
+              "answer": "I use n8n for orchestration, Claude Code for development and model APIs such as Claude and GPT for reasoning, all connected to your business tools (CRM, email, database)."
+            },
+            {
+              "question": "Is an AI agent reliable for production?",
+              "answer": "Yes, when properly framed. I put in place guardrails, fallbacks, observability and write-access limits on critical databases so an autonomous agent stays under control in production."
+            },
+            {
+              "question": "Which processes can I hand over to an AI agent?",
+              "answer": "Typical cases are customer support, prospecting, data and document processing, and self-correcting autonomous workflows. The sweet spot is repetitive tasks that require judgment."
+            },
+            {
+              "question": "Do you work with clients outside Madagascar?",
+              "answer": "Yes. I work remotely with clients in Europe and worldwide, with a competitive rate and a single point of contact from scoping to the agent going live in production."
+            },
+            {
+              "question": "What is a multi-agent architecture?",
+              "answer": "It is a system where several specialized agents collaborate, each with a clear role (research, drafting, verification). This approach splits complex goals into reliable sub-tasks that are easier to control."
+            }
+          ]
+        }
       }
     ]
   },
