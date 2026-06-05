@@ -11,6 +11,8 @@ export const SOCIAL_LINKS = {
   // Q140068865 : human + occupation (software developer) sourcée Malt/Codeur/Upwork + citizenship
   // Madagascar + official website + GitHub/LinkedIn IDs + langues. Aucune demande de suppression.
   wikidata: "https://www.wikidata.org/wiki/Q140068865",
+  youtube: "https://www.youtube.com/@Manda-AI-web-automatisation",
+  tiktok: "https://www.tiktok.com/@manda_ia_web_automatisat",
 } as const;
 
 export const PERSONAL_INFO = {

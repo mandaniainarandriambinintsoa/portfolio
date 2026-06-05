@@ -32,6 +32,8 @@ export default function PersonJsonLd() {
           SOCIAL_LINKS.github,
           SOCIAL_LINKS.malt,
           SOCIAL_LINKS.wikidata,
+          SOCIAL_LINKS.youtube,
+          SOCIAL_LINKS.tiktok,
         ],
         knowsAbout: [
           "N8N",

@@ -162,6 +162,26 @@ export default function Footer({
                   Malt
                 </a>
               </li>
+              <li>
+                <a
+                  href={SOCIAL_LINKS.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer me"
+                  className="text-sm py-3 px-1 hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/40"
+                >
+                  YouTube
+                </a>
+              </li>
+              <li>
+                <a
+                  href={SOCIAL_LINKS.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer me"
+                  className="text-sm py-3 px-1 hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/40"
+                >
+                  TikTok
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
