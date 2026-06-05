@@ -40,6 +40,17 @@ export async function proxy(request: NextRequest) {
     return supabaseResponse;
   }
 
+  // Default locale must never be exposed with a prefix. FR is served at the root,
+  // so /fr and /fr/* are duplicates → 308 redirect to the prefix-less version.
+  if (
+    pathname === `/${i18n.defaultLocale}` ||
+    pathname.startsWith(`/${i18n.defaultLocale}/`)
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname.slice(`/${i18n.defaultLocale}`.length) || "/";
+    return NextResponse.redirect(url, 308);
+  }
+
   // Public routes — EN has explicit /en/ prefix, FR is the default (no prefix).
   // No Accept-Language redirect: Google Search Central explicitly recommends NOT redirecting
   // based on Accept-Language (breaks crawling from Googlebot US which sends en-US and would

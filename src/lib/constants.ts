@@ -7,7 +7,10 @@ export const SOCIAL_LINKS = {
   linkedin: "https://www.linkedin.com/in/mandaniaina-randriambinintsoa-a75553178/",
   github: "https://github.com/mandaniainarandriambinintsoa",
   malt: "https://www.malt.fr/profile/mandaniaina",
-  wikidata: "https://www.wikidata.org/wiki/Q139694949",
+  // Item Wikidata recréé le 2026-06-05 (l'ancien Q139694949 avait été supprimé pour stub vide).
+  // Q140068865 : human + occupation (software developer) sourcée Malt/Codeur/Upwork + citizenship
+  // Madagascar + official website + GitHub/LinkedIn IDs + langues. Aucune demande de suppression.
+  wikidata: "https://www.wikidata.org/wiki/Q140068865",
 } as const;
 
 export const PERSONAL_INFO = {

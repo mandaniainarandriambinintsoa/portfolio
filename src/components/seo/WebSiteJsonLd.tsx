@@ -10,11 +10,6 @@ export default function WebSiteJsonLd() {
         name: SITE_NAME,
         url: SITE_URL,
         inLanguage: ["fr", "en"],
-        potentialAction: {
-          "@type": "SearchAction",
-          target: `${SITE_URL}/search?q={search_term_string}`,
-          "query-input": "required name=search_term_string",
-        },
       }}
     />
   );
