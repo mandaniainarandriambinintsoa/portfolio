@@ -28,16 +28,22 @@ export default function Footer({
   const expertiseLinks: { label: string; href: string }[] =
     locale === "fr"
       ? [
+          { label: "JavaScript Fullstack", href: "/services/developpeur-javascript-madagascar" },
           { label: "React / Next.js", href: "/services/developpeur-react-nextjs-madagascar" },
+          { label: "Node.js / API", href: "/services/developpeur-nodejs-madagascar" },
           { label: "Next.js + Supabase", href: "/services/developpeur-nextjs-supabase-madagascar" },
+          { label: "Agents IA", href: "/services/developpeur-agent-ia-madagascar" },
           { label: "Python & IA", href: "/services/developpeur-python-ia-madagascar" },
           { label: "Claude Code + n8n", href: "/services/developpeur-claude-code-n8n" },
           { label: "Codex + n8n", href: "/services/developpeur-codex-n8n" },
           { label: "Automatisation N8N", href: "/services/automatisation-n8n-madagascar" },
         ]
       : [
+          { label: "JavaScript Fullstack", href: "/en/services/javascript-developer-madagascar" },
           { label: "React / Next.js", href: "/en/services/hire-react-nextjs-developer-madagascar" },
+          { label: "Node.js / APIs", href: "/en/services/hire-nodejs-developer-madagascar" },
           { label: "Next.js + Supabase", href: "/en/services/nextjs-supabase-developer-madagascar" },
+          { label: "AI Agents", href: "/en/services/ai-agent-developer-madagascar" },
           { label: "Python & AI", href: "/en/services/python-ai-developer-madagascar" },
           { label: "Claude Code + n8n", href: "/en/services/claude-code-n8n-developer" },
           { label: "Codex + n8n", href: "/en/services/codex-n8n-developer" },
