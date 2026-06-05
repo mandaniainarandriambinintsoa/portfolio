@@ -63,7 +63,7 @@ export default function LocalBusinessJsonLd() {
           contactType: "customer service",
           availableLanguage: ["French", "English"],
         },
-        sameAs: [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.github, SOCIAL_LINKS.malt, SOCIAL_LINKS.wikidata],
+        sameAs: [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.github, SOCIAL_LINKS.malt, SOCIAL_LINKS.wikidata, SOCIAL_LINKS.youtube, SOCIAL_LINKS.tiktok],
         knowsAbout: [
           "N8N Automation",
           "No-Code Development",
