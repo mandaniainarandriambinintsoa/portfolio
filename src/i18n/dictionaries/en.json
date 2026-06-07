@@ -1633,6 +1633,23 @@
         "workflowFile": null
       },
       {
+        "slug": "bati-diaspora",
+        "title": "Bati Diaspora",
+        "subtitle": "Construction website for diaspora clients",
+        "description": "Premium showcase website for a fictional construction and renovation company serving diaspora clients who want to build back home remotely. The page sells a clear trust journey: detailed quote, milestone payments, photo/video reporting, one dedicated project lead and a qualified evaluation form. Full business-website workflow: positioning brief, three AI design directions, selected V3 A - Diaspora Assurance direction, Next.js 16 integration, SEO/GEO, JSON-LD, n8n-ready API route and light animations verified on desktop/mobile.",
+        "tags": [
+          "Next.js 16",
+          "Business site",
+          "Diaspora",
+          "Vercel"
+        ],
+        "link": "https://batit-diasporat.vercel.app",
+        "featured": true,
+        "category": "webapp",
+        "image": "/images/projects/bati-diaspora-construction-diaspora.png",
+        "workflowFile": null
+      },
+      {
         "slug": "scalapp",
         "title": "ScalApp",
         "subtitle": "Investment Management Dashboard · ScalApp France",

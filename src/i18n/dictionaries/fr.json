@@ -1641,6 +1641,23 @@
         "workflowFile": null
       },
       {
+        "slug": "bati-diaspora",
+        "title": "Bati Diaspora",
+        "subtitle": "Site métier BTP pour diaspora",
+        "description": "Site vitrine premium pour une entreprise fictive de construction et rénovation destinée à la diaspora. Le projet vend un parcours clair pour construire au pays à distance : devis détaillé, paiements par jalons, reporting photo/vidéo, responsable unique et formulaire d'évaluation. Workflow complet site web métier : cadrage business, trois directions IA, choix V3 A - Diaspora Assurance, intégration Next.js 16, SEO/GEO, JSON-LD, API route prête pour n8n et animations légères vérifiées desktop/mobile.",
+        "tags": [
+          "Next.js 16",
+          "Site métier",
+          "Diaspora",
+          "Vercel"
+        ],
+        "link": "https://batit-diasporat.vercel.app",
+        "featured": true,
+        "category": "webapp",
+        "image": "/images/projects/bati-diaspora-construction-diaspora.png",
+        "workflowFile": null
+      },
+      {
         "slug": "scalapp",
         "title": "ScalApp",
         "subtitle": "Dashboard de gestion d'investissements · ScalApp France",
