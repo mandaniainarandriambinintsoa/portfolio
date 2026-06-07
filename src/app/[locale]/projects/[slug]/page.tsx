@@ -77,6 +77,18 @@ export default async function ProjectPage({
 
   const prefix = locale === "fr" ? "" : "/en";
   const isWorkflow = project.category === "workflow";
+  const categoryLabel =
+    project.category === "workflow"
+      ? dict.projects.category_workflow
+      : project.category === "site-metier"
+        ? dict.projects.category_site_metier
+        : dict.projects.category_webapp;
+  const categoryTone =
+    project.category === "workflow"
+      ? "emerald"
+      : project.category === "site-metier"
+        ? "amber"
+        : "indigo";
   const workflow = project.workflowFile ? workflows[project.workflowFile] : null;
   const caseStudy = getCaseStudy(slug, locale);
   const caseStudyLabels = locale === "fr"
@@ -112,28 +124,30 @@ export default async function ProjectPage({
         image={project.image}
         url={`${prefix}/projects/${slug}`}
         keywords={project.tags}
-        category={isWorkflow ? "workflow" : "webapp"}
+        category={project.category}
       />
       <div className="max-w-4xl mx-auto">
         {/* Tags */}
         <div className="flex gap-2 flex-wrap mb-6">
           <span
             className={`px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase ${
-              isWorkflow
+              categoryTone === "emerald"
                 ? "bg-emerald-600/20 border border-emerald-500/30 text-emerald-300"
+                : categoryTone === "amber"
+                  ? "bg-amber-600/20 border border-amber-500/30 text-amber-300"
                 : "bg-indigo-600/20 border border-indigo-500/30 text-indigo-300"
             }`}
           >
-            {isWorkflow
-              ? dict.projects.category_workflow
-              : dict.projects.category_webapp}
+            {categoryLabel}
           </span>
           {project.tags.map((tag: string) => (
             <span
               key={tag}
               className={`px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase ${
-                isWorkflow
+                categoryTone === "emerald"
                   ? "bg-emerald-600/20 border border-emerald-500/30 text-emerald-300"
+                  : categoryTone === "amber"
+                    ? "bg-amber-600/20 border border-amber-500/30 text-amber-300"
                   : "bg-indigo-600/20 border border-indigo-500/30 text-indigo-300"
               }`}
             >
@@ -147,7 +161,11 @@ export default async function ProjectPage({
           {project.title}
         </h1>
         <p className={`text-xl font-medium mb-8 ${
-          isWorkflow ? "text-emerald-400" : "text-indigo-400"
+          categoryTone === "emerald"
+            ? "text-emerald-400"
+            : categoryTone === "amber"
+              ? "text-amber-400"
+              : "text-indigo-400"
         }`}>
           {project.subtitle}
         </p>

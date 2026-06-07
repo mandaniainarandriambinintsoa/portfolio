@@ -4,6 +4,19 @@ import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import type { ProjectItem } from "@/lib/types";
 
+const siteMetierSlugs = new Set(["madavoyage", "garagiste", "bati-diaspora"]);
+
+function normalizeCategory(project: ProjectItem): ProjectItem {
+  if (!siteMetierSlugs.has(project.slug)) {
+    return project;
+  }
+
+  return {
+    ...project,
+    category: "site-metier",
+  };
+}
+
 function mapRow(
   row: {
     slug: string;
@@ -22,7 +35,7 @@ function mapRow(
   },
   locale: Locale
 ): ProjectItem {
-  return {
+  return normalizeCategory({
     slug: row.slug,
     title: locale === "fr" ? row.title_fr : row.title_en,
     subtitle: locale === "fr" ? row.subtitle_fr : row.subtitle_en,
@@ -33,7 +46,7 @@ function mapRow(
     category: row.category as ProjectItem["category"],
     image: row.image,
     workflowFile: row.workflow_file,
-  };
+  });
 }
 
 async function fetchFromSupabase(locale: Locale): Promise<ProjectItem[] | null> {
@@ -54,7 +67,7 @@ async function fetchFromSupabase(locale: Locale): Promise<ProjectItem[] | null> 
 
 async function fetchFromDict(locale: Locale): Promise<ProjectItem[]> {
   const dict = await getDictionary(locale);
-  return dict.projects.items as ProjectItem[];
+  return (dict.projects.items as ProjectItem[]).map(normalizeCategory);
 }
 
 export async function getProjects(locale: Locale): Promise<ProjectItem[]> {
@@ -89,7 +102,7 @@ export async function getProjectBySlug(
   }
 
   const dict = await getDictionary(locale);
-  const items = dict.projects.items as ProjectItem[];
+  const items = (dict.projects.items as ProjectItem[]).map(normalizeCategory);
   return items.find((p) => p.slug === slug) ?? null;
 }
 

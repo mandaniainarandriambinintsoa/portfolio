@@ -120,6 +120,70 @@ const caseStudies: Record<string, LocalizedCaseStudy> = {
         "Final build in Next.js 16. The site keeps the dark premium direction, with WebP images, SEO/GEO, Open Graph, sitemap and a secured form. The form goes through /api/appointment, relays to n8n, creates a Google Calendar event and sends an internal email notification to the garage.",
     },
   },
+  "bati-diaspora": {
+    fr: {
+      brief:
+        "Concevoir un site metier premium pour une entreprise de construction et renovation qui accompagne la diaspora. Le visiteur vit loin du chantier, craint les devis flous, les retards invisibles et l'argent depense sans preuve. Le site devait vendre un cadre rassurant : devis detaille, paiements par jalons, reporting photo/video, responsable unique et demande d'evaluation qualifiee.",
+      variantsIntro:
+        "Workflow site web metier : cadrage du secteur BTP, des objections de confiance et du parcours de conversion, puis generation de trois directions completes avant implementation. Les directions explorent trois facons de vendre la meme promesse : construire au pays depuis l'etranger sans avancer a l'aveugle.",
+      variants: [
+        {
+          image: "/images/projects/bati-diaspora/variant-1-diaspora-assurance.webp",
+          label: "Direction 1 - Diaspora Assurance",
+          description:
+            "Direction claire et rassurante, centree sur la promesse commerciale : preuves, jalons de paiement, reporting et accompagnement a distance. C'est la plus lisible pour un prospect diaspora.",
+        },
+        {
+          image: "/images/projects/bati-diaspora/variant-2-command-center.webp",
+          label: "Direction 2 - Command Center",
+          description:
+            "Direction plus premium et methodique, qui vend le pilotage du chantier comme un vrai centre de controle : suivi, documents, validations et responsabilite unique.",
+        },
+        {
+          image: "/images/projects/bati-diaspora/variant-3-maison-preuves.webp",
+          label: "Direction 3 - Maison + Preuves",
+          description:
+            "Direction plus emotionnelle, focalisee sur la maison familiale et les preuves visuelles d'avancement. Elle garde la confiance au centre mais avec une narration plus habitat.",
+        },
+      ],
+      decision:
+        "La direction 1 a ete retenue pour la premiere version : elle expose le mieux l'offre, les preuves et le workflow de paiement par jalons. Le site final garde une lecture rapide, une densite proche de la maquette et un formulaire d'evaluation adapte au processus reel.",
+      finalImage: "/images/projects/bati-diaspora/final-desktop.webp",
+      finalCaption:
+        "Integration finale en Next.js 16. Le site utilise des images WebP, metadata, sitemap, robots, JSON-LD, API route prete pour n8n et animations legeres au scroll. Les controles desktop/mobile valident l'absence d'erreurs console, d'images cassees et d'overflow horizontal.",
+    },
+    en: {
+      brief:
+        "Design a premium business website for a construction and renovation company serving diaspora clients. The visitor is far from the job site and worries about vague quotes, invisible delays and money spent without proof. The site needed to sell a reassuring framework: detailed quote, milestone payments, photo/video reporting, one project lead and a qualified evaluation request.",
+      variantsIntro:
+        "Business-website workflow: construction-sector framing, trust objections and conversion path, then three complete design directions before implementation. The directions explore three ways to sell the same promise: building back home from abroad without moving blindly.",
+      variants: [
+        {
+          image: "/images/projects/bati-diaspora/variant-1-diaspora-assurance.webp",
+          label: "Direction 1 - Diaspora Assurance",
+          description:
+            "A clear, reassuring direction centered on the commercial promise: proof, payment milestones, reporting and remote support. The most immediately readable option for a diaspora buyer.",
+        },
+        {
+          image: "/images/projects/bati-diaspora/variant-2-command-center.webp",
+          label: "Direction 2 - Command Center",
+          description:
+            "A more premium and methodical direction that sells construction management as a control center: tracking, documents, validations and one accountable lead.",
+        },
+        {
+          image: "/images/projects/bati-diaspora/variant-3-maison-preuves.webp",
+          label: "Direction 3 - House + Proof",
+          description:
+            "A more emotional direction focused on the family house and visual progress proof. It keeps trust central with a stronger home-building narrative.",
+        },
+      ],
+      decision:
+        "Direction 1 was selected for the first version: it presents the offer, proof system and milestone-payment workflow most clearly. The final site keeps fast comprehension, a compact layout close to the mockup and an evaluation form aligned with the real business process.",
+      finalImage: "/images/projects/bati-diaspora/final-desktop.webp",
+      finalCaption:
+        "Final build in Next.js 16. The site uses WebP images, metadata, sitemap, robots, JSON-LD, an n8n-ready API route and light scroll animations. Desktop/mobile checks validate no console errors, no broken images and no horizontal overflow.",
+    },
+  },
 };
 
 export function getCaseStudy(slug: string, locale: Locale): CaseStudy | null {

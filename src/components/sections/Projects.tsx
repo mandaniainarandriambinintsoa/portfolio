@@ -11,13 +11,12 @@ type FilterType = "all" | ProjectCategory;
 
 /*
  * 2-column bento layout.
- * Factumation leads in the hero slot, then MadaVoyage, Garagiste and
- * the n8n showcase follow in normal card slots.
+ * Site metier showcases lead the bento, then product and automation work follow.
  */
 
 /** Reorder the homepage bento priority, with ScalApp last. */
 function reorderForBento(items: ProjectItem[]): ProjectItem[] {
-  const order = ["factumation", "madavoyage", "garagiste", "leads-automation-showcase"];
+  const order = ["madavoyage", "garagiste", "bati-diaspora", "factumation", "leads-automation-showcase"];
   const last = ["scalapp"];
   const copy = [...items];
   const front: ProjectItem[] = [];
@@ -59,7 +58,7 @@ export default function Projects({
   viewAll: string;
   items: ProjectItem[];
   locale: Locale;
-  categoryLabels: { webapp: string; workflow: string };
+  categoryLabels: { webapp: string; workflow: string; siteMetier: string };
 }) {
   const [filter, setFilter] = useState<FilterType>("all");
   const gridRef = useRef<HTMLDivElement>(null);
@@ -185,9 +184,22 @@ export default function Projects({
 
   const filters: { key: FilterType; label: string }[] = [
     { key: "all", label: allLabel },
+    { key: "site-metier", label: categoryLabels.siteMetier },
     { key: "webapp", label: categoryLabels.webapp },
     { key: "workflow", label: categoryLabels.workflow },
   ];
+
+  const categoryLabel = (category: ProjectCategory) => {
+    if (category === "workflow") return categoryLabels.workflow;
+    if (category === "site-metier") return categoryLabels.siteMetier;
+    return categoryLabels.webapp;
+  };
+
+  const categoryTone = (category: ProjectCategory) => {
+    if (category === "workflow") return "emerald";
+    if (category === "site-metier") return "amber";
+    return "indigo";
+  };
 
   return (
     <section ref={sectionRef} id="projects" className="w-full mb-16">
@@ -245,6 +257,7 @@ export default function Projects({
             const isTall = size === "tall";
             const isWide = size === "wide";
             const isWorkflow = project.category === "workflow";
+            const tone = categoryTone(project.category);
             const showDesc = isHero || isTall || isWide;
 
             return (
@@ -258,6 +271,8 @@ export default function Projects({
                     ? "border-indigo-500/15 hover:border-indigo-400/30"
                     : isWorkflow
                       ? "border-white/[0.06] hover:border-emerald-500/20"
+                      : project.category === "site-metier"
+                        ? "border-white/[0.06] hover:border-amber-500/25"
                       : "border-white/[0.06] hover:border-white/[0.12]"
                 } ${span}`}
               >
@@ -288,9 +303,11 @@ export default function Projects({
                 {/* Interactive glow that follows cursor */}
                 <div
                   className={`card-glow absolute z-[2] w-[300px] h-[300px] rounded-full opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blur-[80px] ${
-                    isWorkflow
+                    tone === "emerald"
                       ? "bg-emerald-500/20"
-                      : "bg-indigo-500/20"
+                      : tone === "amber"
+                        ? "bg-amber-500/20"
+                        : "bg-indigo-500/20"
                   }`}
                 />
 
@@ -316,12 +333,14 @@ export default function Projects({
                   <div className="flex gap-2 mb-3 flex-wrap">
                     <span
                       className={`px-3 py-1 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider uppercase text-white ${
-                        isWorkflow ? "bg-emerald-500/60" : "bg-indigo-500/60"
+                        tone === "emerald"
+                          ? "bg-emerald-500/60"
+                          : tone === "amber"
+                            ? "bg-amber-500/70"
+                            : "bg-indigo-500/60"
                       }`}
                     >
-                      {isWorkflow
-                        ? categoryLabels.workflow
-                        : categoryLabels.webapp}
+                      {categoryLabel(project.category)}
                     </span>
                     {project.tags
                       .slice(0, showDesc ? 3 : 2)

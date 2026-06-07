@@ -199,6 +199,7 @@ export default function ProjectForm({ initial }: Props) {
             onChange={setCategory}
             options={[
               { value: "webapp", label: "Web App" },
+              { value: "site-metier", label: "Site métier" },
               { value: "workflow", label: "Workflow" },
             ]}
           />

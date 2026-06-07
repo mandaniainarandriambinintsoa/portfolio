@@ -7,7 +7,7 @@ type SoftwareAppJsonLdProps = {
   image: string;
   url: string;
   keywords?: string[];
-  category?: "webapp" | "workflow";
+  category?: "webapp" | "workflow" | "site-metier";
 };
 
 export default function SoftwareAppJsonLd({
@@ -22,12 +22,13 @@ export default function SoftwareAppJsonLd({
     <JsonLd
       data={{
         "@context": "https://schema.org",
-        "@type": category === "webapp" ? "WebApplication" : "SoftwareApplication",
+        "@type": category === "workflow" ? "SoftwareApplication" : "WebApplication",
         name,
         description,
         image: image.startsWith("http") ? image : `${SITE_URL}${image}`,
         url: `${SITE_URL}${url}`,
-        applicationCategory: category === "webapp" ? "BusinessApplication" : "UtilitiesApplication",
+        applicationCategory:
+          category === "workflow" ? "UtilitiesApplication" : "BusinessApplication",
         operatingSystem: "Web",
         offers: {
           "@type": "Offer",

@@ -139,6 +139,7 @@ export default async function HomePage({
           categoryLabels={{
             webapp: dict.projects.category_webapp,
             workflow: dict.projects.category_workflow,
+            siteMetier: dict.projects.category_site_metier,
           }}
         />
       </div>

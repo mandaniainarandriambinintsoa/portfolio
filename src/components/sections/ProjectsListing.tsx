@@ -17,6 +17,7 @@ type ProjectsListingProps = {
     all: string;
     webapp: string;
     workflow: string;
+    siteMetier: string;
   };
 };
 
@@ -55,9 +56,37 @@ export default function ProjectsListing({
 
   const filters: { key: CategoryFilter; label: string; color: string }[] = [
     { key: "all", label: categoryLabels.all, color: "bg-white/10 text-white" },
+    { key: "site-metier", label: categoryLabels.siteMetier, color: "bg-amber-600 text-white" },
     { key: "webapp", label: categoryLabels.webapp, color: "bg-indigo-600 text-white" },
     { key: "workflow", label: categoryLabels.workflow, color: "bg-emerald-600 text-white" },
   ];
+
+  const categoryLabel = (category: ProjectCategory) => {
+    if (category === "workflow") return categoryLabels.workflow;
+    if (category === "site-metier") return categoryLabels.siteMetier;
+    return categoryLabels.webapp;
+  };
+
+  const categoryClasses = (category: ProjectCategory) => {
+    if (category === "workflow") {
+      return {
+        badge: "bg-emerald-600 text-white",
+        subtitle: "text-emerald-400",
+      };
+    }
+
+    if (category === "site-metier") {
+      return {
+        badge: "bg-amber-600 text-white",
+        subtitle: "text-amber-400",
+      };
+    }
+
+    return {
+      badge: "bg-indigo-600 text-white",
+      subtitle: "text-indigo-400",
+    };
+  };
 
   return (
     <>
@@ -88,12 +117,15 @@ export default function ProjectsListing({
         ref={gridRef}
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
       >
-        {filtered.map((project) => (
-          <Link
-            key={project.slug}
-            href={`${prefix}/projects/${project.slug}`}
-            className="project-card group"
-          >
+        {filtered.map((project) => {
+          const tone = categoryClasses(project.category);
+
+          return (
+            <Link
+              key={project.slug}
+              href={`${prefix}/projects/${project.slug}`}
+              className="project-card group"
+            >
             <GlassCard
               noPadding
               className="h-full overflow-hidden hover:bg-white/5 transition-colors"
@@ -110,28 +142,16 @@ export default function ProjectsListing({
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 {/* Category badge */}
                 <span
-                  className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase ${
-                    project.category === "workflow"
-                      ? "bg-emerald-600 text-white"
-                      : "bg-indigo-600 text-white"
-                  }`}
+                  className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase ${tone.badge}`}
                 >
-                  {project.category === "workflow"
-                    ? categoryLabels.workflow
-                    : categoryLabels.webapp}
+                  {categoryLabel(project.category)}
                 </span>
               </div>
 
               {/* Content */}
               <div className="p-5">
                 <h2 className="text-lg font-bold mb-1">{project.title}</h2>
-                <p
-                  className={`text-sm mb-3 ${
-                    project.category === "workflow"
-                      ? "text-emerald-400"
-                      : "text-indigo-400"
-                  }`}
-                >
+                <p className={`text-sm mb-3 ${tone.subtitle}`}>
                   {project.subtitle}
                 </p>
                 <p className="text-sm text-slate-400 mb-4 line-clamp-2">
@@ -149,8 +169,9 @@ export default function ProjectsListing({
                 </div>
               </div>
             </GlassCard>
-          </Link>
-        ))}
+            </Link>
+          );
+        })}
       </div>
     </>
   );

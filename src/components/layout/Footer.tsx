@@ -19,6 +19,11 @@ export default function Footer({
       href: `${prefix}/projects`,
       ariaLabel: locale === "fr" ? "Voir tous les projets" : "View all projects",
     },
+    {
+      label: locale === "fr" ? "Sites métier" : "Business Sites",
+      href: `${prefix}/site-metier`,
+      ariaLabel: locale === "fr" ? "Voir le catalogue de sites métier" : "View business website catalog",
+    },
     { label: locale === "fr" ? "À propos" : "About", href: `${prefix}/about` },
     { label: "Contact", href: `${prefix}/contact` },
   ];

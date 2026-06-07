@@ -1,4 +1,4 @@
-export type ProjectCategory = "webapp" | "workflow";
+export type ProjectCategory = "webapp" | "workflow" | "site-metier";
 
 export type CaseStudyVariant = {
   image: string;

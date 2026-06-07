@@ -68,6 +68,7 @@ export default async function ProjectsPage({
             all: dict.projects.category_all,
             webapp: dict.projects.category_webapp,
             workflow: dict.projects.category_workflow,
+            siteMetier: dict.projects.category_site_metier,
           }}
         />
       </div>

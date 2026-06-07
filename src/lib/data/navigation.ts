@@ -17,6 +17,10 @@ export const navItems: NavItem[] = [
     href: { fr: "/#projects", en: "/en/#projects" },
   },
   {
+    label: { fr: "Sites métier", en: "Business Sites" },
+    href: { fr: "/site-metier", en: "/en/site-metier" },
+  },
+  {
     label: { fr: "À propos", en: "About" },
     href: { fr: "/about", en: "/en/about" },
   },
