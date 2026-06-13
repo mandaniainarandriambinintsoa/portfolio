@@ -1828,6 +1828,139 @@
             }
           ]
         }
+      },
+      {
+        "title": "Forward Deployed Engineer (freelance): from business problem to production",
+        "description": "Freelance Forward Deployed Engineer: I start from your business problem and ship the solution to production (AI agent, n8n, custom app), not code in a silo.",
+        "slug": "forward-deployed-engineer",
+        "color": "emerald",
+        "icon": "deployed_code",
+        "cardTitle": "Forward Deployed Engineer",
+        "cardDescription": "From business problem to production",
+        "isLanding": true,
+        "seoTitle": "Forward Deployed Engineer (freelance) | Manda",
+        "seoDescription": "Freelance Forward Deployed Engineer: I start from your business problem, talk it through with you and ship the solution to production (AI agent, n8n, custom app). Quote within 48h.",
+        "landing": {
+          "heroText": "A Forward Deployed Engineer does not ship isolated code: they get close to the business need and build the solution that solves it. That is how I work. I start from your problem (time lost on a task, a manual process, a product to ship), talk it through with you, then design and ship the concrete solution to production: AI agent, n8n automation, custom application. Between developer, consultant and product builder, with a deliverable that runs, not a slide.",
+          "sections": [
+            {
+              "title": "What is a Forward Deployed Engineer",
+              "content": "A Forward Deployed Engineer (FDE) is a developer who works very close to the client and the business to build concrete solutions fast. They sit between several roles: developer, technical consultant, product builder, AI integrator and field engineer.\n\nThe term was popularized by Palantir, then adopted by AI labs and large companies (OpenAI, Anthropic, Salesforce): FDE openings exploded in a year. The difference with a classic developer fits in one sentence: they do not code a spec in a silo, they solve a business problem with a solution that fits the real need."
+            },
+            {
+              "title": "How I work: from business problem to production",
+              "content": "It starts with a conversation, not a frozen spec sheet. You might say: 'we lose too much time handling customer requests by email.' I dig into the real need, then build the full chain: Gmail or CRM, an AI agent that reads the request, classifies it, proposes a reply, human validation, send, and a log in the CRM.\n\nConcretely: I scope, design, build with AI builders (Claude Code) to move fast, integrate your tools (APIs, CRM, calendar, n8n), keep human validation where stakes justify it, deploy and measure. The deliverable is not a demo: it is a system running in production that you keep."
+            },
+            {
+              "title": "What I build concretely",
+              "content": "The solutions I ship most often: [AI agents](/en/services/ai-agent-developer-madagascar) (text and [voice](/en/services/ai-voice-agent-developer)) that automate business conversations, [n8n automations](/en/services/n8n-automation-expert-madagascar) that connect your tools, and custom applications in Next.js + Supabase.\n\nThe common thread: not isolated bricks, but solutions built for a precise business problem. Request classification, lead qualification, appointment booking, document processing, automated reporting: every time, the tech serves the outcome, not the other way around."
+            },
+            {
+              "title": "Proof: solutions in production, not demos",
+              "content": "I do not sell a title, I show systems that run. I built the mobile money backend of paidmada, the management dashboard of ScalApp, and a live ElevenLabs AI voice agent on MadaVoyage that answers visitors by voice.\n\nThat is the advantage of an identifiable freelance FDE: you talk to the person who builds, you audit real projects before signing, and you keep a single point of contact from the problem to production. See my [projects](/en/projects)."
+            },
+            {
+              "title": "When a freelance FDE rather than a classic dev or an agency",
+              "content": "The FDE is the right choice when your real blocker is not 'write this spec' but 'understand the problem and build the right solution.' You get one person who owns the outcome, from scoping to production, with no intermediary and no handover.\n\nA classic developer executes a spec, often in a silo. An agency brings a team but adds layers (sales, project manager). For a scoped problem where you need to go from need to solution fast, the freelance FDE is the most direct. My day rate is €350, quote within 48h, remote with clients in Europe and internationally. For very large multi-profile programs, an agency stays more suitable."
+            }
+          ],
+          "features": [
+            {
+              "icon": "psychology",
+              "title": "Business understanding",
+              "description": "I start from the problem, not a frozen spec."
+            },
+            {
+              "icon": "deployed_code",
+              "title": "Production solution",
+              "description": "A system that runs, not a demo."
+            },
+            {
+              "icon": "smart_toy",
+              "title": "AI agents",
+              "description": "Text and voice, wired to the business."
+            },
+            {
+              "icon": "hub",
+              "title": "Integrations",
+              "description": "CRM, APIs, calendar, n8n."
+            },
+            {
+              "icon": "bolt",
+              "title": "Fast delivery",
+              "description": "AI builders to go from need to code."
+            },
+            {
+              "icon": "verified",
+              "title": "Single point of contact",
+              "description": "From problem to production, no handover."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Forward Deployed Engineer vs classic developer",
+            "intro": "The difference is not the tech but the starting point and the deliverable. Here is the comparison on the criteria that matter.",
+            "headers": [
+              "Criterion",
+              "Classic dev / subcontractor",
+              "Forward Deployed Engineer (my approach)"
+            ],
+            "rows": [
+              {
+                "criterion": "Starting point",
+                "noCode": "A spec to execute",
+                "nextjs": "The business problem to solve",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Proximity to the need",
+                "noCode": "Executes in a silo",
+                "nextjs": "Close to the client and the business",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Deliverable",
+                "noCode": "Code, sometimes disconnected",
+                "nextjs": "A production solution that fits the need",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Scope",
+                "noCode": "Limited to the requested task",
+                "nextjs": "Dev + consulting + integration + product",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Very large multi-profile program",
+                "noCode": "A team absorbs it better",
+                "nextjs": "One person, ideal on a scoped problem",
+                "winner": "noCode"
+              }
+            ],
+            "conclusion": "The FDE wins when the blocker is understanding the problem and building the right thing, fast, with one accountable person. For a very large multi-profile program, an agency stays more suitable."
+          },
+          "faq": [
+            {
+              "question": "What is a Forward Deployed Engineer?",
+              "answer": "A developer who works very close to the client and the business to build concrete solutions fast. They combine several roles (developer, technical consultant, product builder, AI integrator) and ship a production system that solves a real problem, not isolated code."
+            },
+            {
+              "question": "How is it different from a classic developer?",
+              "answer": "A classic developer executes a spec, often in a silo. A Forward Deployed Engineer starts from the business problem, talks it through with the client, designs the fitting solution and ships it to production, owning the outcome end to end."
+            },
+            {
+              "question": "Can a freelance be a Forward Deployed Engineer?",
+              "answer": "Yes, and it is an ideal format: a single identifiable point of contact, in direct touch with the need, who owns the solution from scoping to production with no intermediary or handover. That is exactly how I work."
+            },
+            {
+              "question": "What solutions do you build?",
+              "answer": "Mostly AI agents (text and voice), n8n automations that connect your tools, and custom applications in Next.js + Supabase. Always aimed at a precise business problem: request classification, lead qualification, appointment booking, document processing, reporting."
+            },
+            {
+              "question": "How long and how much does it cost?",
+              "answer": "Depending on scope, a first production solution often ships in a few weeks. My day rate is €350, billed directly with no middleman markup, with a quote within 48h. I work remotely with clients in Europe and internationally."
+            }
+          ]
+        }
       }
     ]
   },
@@ -1967,7 +2100,7 @@
     "paragraphs": [
       "For four years, I delivered from Madagascar dozens of marketing sites and SaaS MVPs entirely in [no-code](/en/services/no-code-developer-madagascar). Webflow for premium sites, Bubble for business apps, [n8n to plug everything](/en/services/n8n-automation-expert-madagascar) into client tools. An approach proven with my French and international clients: iteration in days rather than months, clean delivery, and pricing that stays grounded.",
       "Late 2025, Claude Code changed the game. After months of daily use on production projects, I watched pure code regain the speed of no-code, without any of its technical ceilings. Today I build with [Next.js and React](/en/services/hire-react-nextjs-developer-madagascar) and with [Python plus AI agents](/en/services/python-ai-developer-madagascar) as permanent copilot. Same delivery speed as before, depth of a real fullstack dev.",
-      "Current positioning: fullstack JavaScript developer based in Madagascar, with a [no-code and low-code dual culture](/en/services/low-code-developer-madagascar) few freelancers combine. Whether you're aiming for a high-performance website, well-ranked on Google and cited by AI (SEO + GEO), a [Next.js + Supabase SaaS to ship in weeks](/en/services/nextjs-supabase-developer-madagascar), or AI agents integrated into your existing product, that's exactly what I deliver daily from Madagascar."
+      "Current positioning: fullstack JavaScript developer based in Madagascar, with a [no-code and low-code dual culture](/en/services/low-code-developer-madagascar) few freelancers combine. Whether you're aiming for a high-performance website, well-ranked on Google and cited by AI (SEO + GEO), a [Next.js + Supabase SaaS to ship in weeks](/en/services/nextjs-supabase-developer-madagascar), or AI agents integrated into your existing product, that's exactly what I deliver daily from Madagascar. This is the posture of a [Forward Deployed Engineer](/en/services/forward-deployed-engineer): start from the business problem, talk it through with the client, then build the solution that fits the need, not code shipped in a silo."
     ]
   },
   "testimonials": {
@@ -2340,8 +2473,8 @@
   },
   "about": {
     "title": "About Manda",
-    "subtitle": "Full Stack Developer · AI Architect · Automation Builder",
-    "bio": "I'm Mandaniaina Randriambinintsoa, freelance developer based in Antananarivo. Trained in Computer Science (Master's, ESTI), I started with JavaScript development. In 2023 I moved to No-Code, Bubble and Webflow, because it let me ship working products in a few weeks. That worked well for three years. Late 2025, AI-assisted development changed the game. I went back to pure code, because code is still the most flexible option when you need to configure servers, build real architecture and handle scale. My stack today: React and Next.js on the front, Supabase and Neon on the back, n8n and Python for automation.",
+    "subtitle": "Forward Deployed Engineer · Full Stack Developer · AI & Automation Architect",
+    "bio": "I'm Mandaniaina Randriambinintsoa, freelance developer based in Antananarivo. Trained in Computer Science (Master's, ESTI), I started with JavaScript development. In 2023 I moved to No-Code, Bubble and Webflow, because it let me ship working products in a few weeks. That worked well for three years. Late 2025, AI-assisted development changed the game. I went back to pure code, because code is still the most flexible option when you need to configure servers, build real architecture and handle scale. My stack today: React and Next.js on the front, Supabase and Neon on the back, n8n and Python for automation. Concretely, I work as a Forward Deployed Engineer: I start from the client's business problem, talk it through with them, then build the solution that fits the need (AI agent, n8n automation, custom app), not code shipped in a silo.",
     "philosophy": "Creating a work of art is not the result of chance—it's the result of imagination, hard work, and determination.",
     "approach_title": "My approach",
     "approach_items": [

@@ -45,6 +45,7 @@ export default function Footer({
           { label: "Freelance ou agence ?", href: "/services/freelance-vs-agence-offshore-madagascar" },
           { label: "Agent vocal IA", href: "/services/developpeur-agent-vocal-ia" },
           { label: "SEO + GEO", href: "/services/consultant-seo-geo" },
+          { label: "Forward Deployed Engineer", href: "/services/forward-deployed-engineer" },
         ]
       : [
           { label: "JavaScript Fullstack", href: "/en/services/javascript-developer-madagascar" },
@@ -59,6 +60,7 @@ export default function Footer({
           { label: "Freelance or agency?", href: "/en/services/freelance-vs-offshore-agency-madagascar" },
           { label: "AI Voice Agents", href: "/en/services/ai-voice-agent-developer" },
           { label: "SEO + GEO", href: "/en/services/seo-geo-consultant" },
+          { label: "Forward Deployed Engineer", href: "/en/services/forward-deployed-engineer" },
         ];
 
   const expertiseHeading = locale === "fr" ? "Expertise" : "Expertise";
