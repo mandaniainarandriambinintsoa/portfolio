@@ -42,6 +42,7 @@ export default function Footer({
           { label: "Claude Code + n8n", href: "/services/developpeur-claude-code-n8n" },
           { label: "Codex + n8n", href: "/services/developpeur-codex-n8n" },
           { label: "Automatisation N8N", href: "/services/automatisation-n8n-madagascar" },
+          { label: "Freelance ou agence ?", href: "/services/freelance-vs-agence-offshore-madagascar" },
         ]
       : [
           { label: "JavaScript Fullstack", href: "/en/services/javascript-developer-madagascar" },
@@ -53,6 +54,7 @@ export default function Footer({
           { label: "Claude Code + n8n", href: "/en/services/claude-code-n8n-developer" },
           { label: "Codex + n8n", href: "/en/services/codex-n8n-developer" },
           { label: "N8N Automation", href: "/en/services/n8n-automation-expert-madagascar" },
+          { label: "Freelance or agency?", href: "/en/services/freelance-vs-offshore-agency-madagascar" },
         ];
 
   const expertiseHeading = locale === "fr" ? "Expertise" : "Expertise";

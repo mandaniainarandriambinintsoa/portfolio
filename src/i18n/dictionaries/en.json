@@ -1409,6 +1409,155 @@
             }
           ]
         }
+      },
+      {
+        "title": "Freelance or offshore agency in Madagascar: the honest comparison",
+        "description": "Senior freelance or offshore agency in Madagascar? A factual comparison: real costs, transparency, timelines and quality to choose the right partner.",
+        "slug": "freelance-vs-offshore-agency-madagascar",
+        "color": "blue",
+        "icon": "balance",
+        "cardTitle": "Freelance or offshore agency?",
+        "cardDescription": "The honest comparison to choose right",
+        "isLanding": true,
+        "seoTitle": "Freelance or Offshore Agency Madagascar: 2026 Comparison | Manda",
+        "seoDescription": "Senior freelance or offshore agency in Madagascar? An honest comparison: real 3-year costs, transparency, timelines, quality. Quote within 48h, verifiable portfolio.",
+        "landing": {
+          "heroText": "An offshore agency gives you structure and backup, but with intermediaries, anonymous developers and sometimes hidden subcontracting. An identifiable senior offshore freelance gives you the same cost advantage (€350/day, versus €400 to €700/day in Europe) without the markup or the opacity. The right choice depends on project size and the level of transparency you expect. Here is the factual comparison to decide.",
+          "sections": [
+            {
+              "title": "Offshore agency or offshore freelance: what we are really talking about",
+              "content": "The Malagasy offshore market has three distinct models. An agency or ESN (digital services firm) is a structure of dozens to hundreds of people: you sign a contract, a sales rep guides you, a project manager coordinates a team you do not pick. The individual freelance is an identifiable person you work with directly. In between, marketplaces and staffing platforms place developers without you always knowing who actually writes the code.\n\nThe often invisible point: some providers who present themselves as an agency subcontract to freelances or other structures, with no transparency about who runs the project. You pay agency rates for work sometimes handed to a junior or a subcontractor. So the real question is not agency versus freelance, but who writes my code, and can I verify it."
+            },
+            {
+              "title": "The real 3-year cost, not just the headline day rate",
+              "content": "On paper, Malagasy offshore rates run 40 to 60% below European rates. But the headline day rate is not the real cost. An agency adds a structure margin (sales, project manager, offices, oversight) that can double the effective hourly cost of the developer who actually codes. On top of that come hidden costs: coordination time, back-and-forth caused by intermediaries, and code rework if the provider changes mid-project.\n\nMy day rate is €350, billed directly, with no middleman markup. It is accessible premium positioning: well below the €400 to €700/day of European freelances and agencies, and below the real total cost of an offshore agency once the structure margin is included. Scope, timeline and price are fixed before we start, with a quote within 48h. No surprise billing, no commercial layer to fund."
+            },
+            {
+              "title": "When to choose a senior offshore freelance",
+              "content": "A senior freelance is the right choice when you want a single, identifiable, reachable point of contact, from scoping to production. You talk directly to the person who writes the code, with no sales rep or project manager filtering information. Iterations are fast, technical decisions happen live, and you keep control of the budget.\n\nIt fits scoped, high-transparency projects especially well: a SaaS MVP, a custom API, an AI agent integration, a high-performance site optimized for SEO and GEO. The proof is verifiable: my work is documented through real projects like paidmada (mobile money backend), scalapp, alchiimy and madavoyage. You know who builds and you see what already runs in production, which no anonymous agency profile offers. For technical detail, see [React / Next.js developer](/en/services/hire-react-nextjs-developer-madagascar) and [Node.js developer](/en/services/hire-nodejs-developer-madagascar)."
+            },
+            {
+              "title": "When an offshore agency is still the right choice",
+              "content": "Honesty is the basis of trust, so let us be clear: an agency keeps real advantages. On a very large project that needs several profiles in parallel (multiple developers, a UX designer, a QA tester, a dedicated project manager), a structure absorbs the load better than a single person. It also offers formal backup if someone is unavailable and long-term contractual continuity.\n\nIf your need is a large team mobilizable immediately on a broad, evolving scope, an established ESN like those operating in Madagascar since the 1990s is a legitimate choice. A freelance, even a senior one, is not meant to replace ten simultaneous engineers. The right reflex: choose by the real nature of the project, not by the sales pitch. For a scoped project with a single point of contact, the freelance wins. For a long-running multi-team program, the agency is justified."
+            },
+            {
+              "title": "The transparent alternative: the offshore advantage without the opacity",
+              "content": "If you want the cost advantage of Malagasy offshore without the anonymity of a large structure, that is exactly the niche I occupy. You work with a named, verifiable person based in Antananarivo, on the EAT time zone (UTC+3) compatible with European working days.\n\nConcretely: a single point of contact from quote to delivery, a quote fixed within 48h, code versioned on Git that belongs to you with no proprietary lock-in, and a public portfolio you can audit before signing. No anonymous pool, no hidden subcontracting, no commercial markup. If your project is scoped and transparency matters to you, [let's talk in a free discovery call](/en/contact)."
+            }
+          ],
+          "features": [
+            {
+              "icon": "person",
+              "title": "Single point of contact",
+              "description": "The person who codes, no intermediary."
+            },
+            {
+              "icon": "visibility",
+              "title": "Full transparency",
+              "description": "You know who builds, no hidden subcontracting."
+            },
+            {
+              "icon": "savings",
+              "title": "€350/day direct",
+              "description": "No structure margin, no commercial layer."
+            },
+            {
+              "icon": "verified",
+              "title": "Verifiable portfolio",
+              "description": "Real projects you can audit before signing."
+            },
+            {
+              "icon": "schedule",
+              "title": "EAT time zone (UTC+3)",
+              "description": "Working days compatible with Europe."
+            },
+            {
+              "icon": "bolt",
+              "title": "Fast iterations",
+              "description": "Technical decisions taken live."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Offshore agency vs senior offshore freelance: the table",
+            "intro": "On a scoped project, here is how an offshore agency and a senior offshore freelance compare on the criteria that really drive the decision.",
+            "headers": [
+              "Criterion",
+              "Offshore agency",
+              "Senior freelance (my model)"
+            ],
+            "rows": [
+              {
+                "criterion": "Real cost (margin included)",
+                "noCode": "Developer day rate + structure margin (sales, project manager)",
+                "nextjs": "€350/day billed directly, no middleman markup",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Point of contact",
+                "noCode": "Sales rep then project manager, rarely the developer",
+                "nextjs": "The person who writes the code, from quote to delivery",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Team transparency",
+                "noCode": "Often anonymous developers, subcontracting possible",
+                "nextjs": "Named identity, public verifiable portfolio",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Capacity on very large project",
+                "noCode": "Several profiles mobilizable in parallel",
+                "nextjs": "One person, ideal on scoped project, not 10 simultaneous profiles",
+                "winner": "noCode"
+              },
+              {
+                "criterion": "Backup and continuity",
+                "noCode": "Formal backup and contractual continuity",
+                "nextjs": "Depends on one person, to anticipate long term",
+                "winner": "noCode"
+              },
+              {
+                "criterion": "Iteration speed",
+                "noCode": "Slowed by intermediaries",
+                "nextjs": "Decisions and adjustments live",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Code ownership",
+                "noCode": "Varies by contract, sometimes locked",
+                "nextjs": "Code versioned on Git, yours, no lock-in",
+                "winner": "nextjs"
+              }
+            ],
+            "conclusion": "On a long-running multi-team program, the agency is justified. On a scoped project where transparency, direct cost and a single point of contact matter, the senior offshore freelance is the best value."
+          },
+          "faq": [
+            {
+              "question": "Freelance or offshore agency: which should I choose for my project?",
+              "answer": "For a scoped project (MVP, API, site, AI agent) with a single point of contact and a need for transparency, a senior offshore freelance is the best choice. For a program needing several profiles in parallel and formal long-term backup, an agency is justified. The decisive criterion: the real nature of the project, not the sales pitch."
+            },
+            {
+              "question": "Is an offshore freelance really cheaper than an agency?",
+              "answer": "Yes, at equivalent expertise. An agency adds a structure margin (sales, project manager, oversight) on top of the developer's cost. My €350/day rate is billed directly, without that margin, and stays below the €400 to €700/day of European providers."
+            },
+            {
+              "question": "How do I verify the transparency of an offshore provider?",
+              "answer": "Ask who actually codes, request a public verifiable portfolio, and direct access to that person. Be wary of structures that never name developers or refuse to say whether the work is subcontracted. An identifiable freelance removes that opacity by definition."
+            },
+            {
+              "question": "Is the time difference a problem from Madagascar?",
+              "answer": "No. I work on the EAT time zone (UTC+3), so 1 to 2 hours from Europe depending on the season. Our working days overlap widely and I stay directly reachable by WhatsApp and email throughout the project."
+            },
+            {
+              "question": "Can a freelance handle a large project alone?",
+              "answer": "A senior freelance handles a scoped project very well: SaaS MVP, API, AI integration, high-performance site. For a program needing ten simultaneous profiles, an agency is more suitable. I say it openly: picking the right model for the project beats handing everything to the same provider by default."
+            },
+            {
+              "question": "Who owns the code at the end of the project?",
+              "answer": "The code is entirely yours. It is versioned on Git, documented and deployable, with no proprietary lock-in. You can take it back, evolve it or hand it to another team without depending on me, which is not always the case with an agency."
+            }
+          ]
+        }
       }
     ]
   },

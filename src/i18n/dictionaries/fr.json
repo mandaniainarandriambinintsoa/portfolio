@@ -1417,6 +1417,155 @@
             }
           ]
         }
+      },
+      {
+        "title": "Freelance ou agence offshore à Madagascar : le comparatif honnête",
+        "description": "Freelance senior ou agence offshore à Madagascar ? Comparatif factuel : coûts réels, transparence, délais et qualité pour bien choisir votre prestataire.",
+        "slug": "freelance-vs-agence-offshore-madagascar",
+        "color": "blue",
+        "icon": "balance",
+        "cardTitle": "Freelance ou agence offshore ?",
+        "cardDescription": "Le comparatif honnête pour bien choisir",
+        "isLanding": true,
+        "seoTitle": "Freelance ou agence offshore Madagascar : comparatif 2026 | Manda",
+        "seoDescription": "Freelance senior ou agence offshore à Madagascar ? Comparatif honnête : coûts réels sur 3 ans, transparence, délais, qualité. Devis sous 48h, portfolio vérifiable.",
+        "landing": {
+          "heroText": "Une agence offshore vous apporte une structure et du backup, mais avec des intermédiaires, des développeurs anonymes et parfois de la sous-traitance cachée. Un freelance senior offshore identifiable vous donne le même avantage de coût (TJM 350 €/jour, contre 400 à 700 €/jour en Europe) sans la marge ni l'opacité. Le bon choix dépend de la taille du projet et du niveau de transparence que vous attendez. Voici la comparaison factuelle pour décider.",
+          "sections": [
+            {
+              "title": "Agence offshore ou freelance offshore : de quoi parle-t-on vraiment",
+              "content": "Le marché offshore malgache regroupe trois modèles distincts. L'agence ou ESN (Entreprise de Services du Numérique) est une structure de plusieurs dizaines à plusieurs centaines de personnes : vous signez un contrat, un commercial vous oriente, un chef de projet coordonne une équipe que vous ne choisissez pas. Le freelance individuel est une personne identifiable avec qui vous travaillez en direct. Entre les deux, les marketplaces et plateformes de staffing placent des développeurs sans que vous ne sachiez toujours qui code réellement.\n\nLe point souvent invisible : une partie des prestataires qui se présentent comme « agence » sous-traitent eux-mêmes à des freelances ou à d'autres structures, sans transparence sur qui exécute la mission. Vous payez le prix d'une agence pour un travail parfois confié à un junior ou à un sous-traitant. La vraie question n'est donc pas « agence ou freelance », mais « qui écrit mon code, et est-ce que je peux le vérifier »."
+            },
+            {
+              "title": "Le coût réel sur 3 ans, pas seulement le TJM affiché",
+              "content": "Sur le papier, l'offshore malgache affiche des tarifs 40 à 60 % inférieurs aux tarifs européens. Mais le TJM affiché n'est pas le coût réel. Une agence ajoute une marge de structure (commercial, chef de projet, locaux, encadrement) qui peut doubler le coût horaire du développeur qui code effectivement. À cela s'ajoutent les coûts cachés : temps de coordination, allers-retours liés aux intermédiaires, et reprise de code si le prestataire change en cours de route.\n\nMon TJM est de 350 €/jour, facturé en direct, sans marge d'intermédiaire. C'est un positionnement premium accessible : nettement sous les 400 à 700 €/jour des freelances et agences européens, et sous le coût total réel d'une agence offshore une fois la marge de structure intégrée. Le périmètre, le délai et le prix sont fixés avant de démarrer, avec un devis sous 48h. Pas de facturation surprise, pas de couche commerciale à financer."
+            },
+            {
+              "title": "Quand choisir un freelance senior offshore",
+              "content": "Le freelance senior est le bon choix quand vous voulez un interlocuteur unique, identifiable et joignable, du cadrage à la mise en production. Vous parlez directement à la personne qui écrit le code, sans commercial ni chef de projet qui filtre l'information. Les itérations sont rapides, les décisions techniques se prennent en direct, et vous gardez la maîtrise du budget.\n\nC'est particulièrement adapté aux projets cadrés et à fort enjeu de transparence : un MVP SaaS, une API sur mesure, l'intégration d'un agent IA, un site performant optimisé SEO et GEO. La preuve se vérifie : mon travail est documenté à travers des projets réels comme paidmada (backend mobile money), scalapp, alchiimy et madavoyage. Vous savez qui développe et vous voyez ce qui a déjà tourné en production, ce qu'aucune fiche d'agence anonyme ne vous offre. Pour le détail technique, voir [développeur React / Next.js](/services/developpeur-react-nextjs-madagascar) et [développeur Node.js](/services/developpeur-nodejs-madagascar)."
+            },
+            {
+              "title": "Quand une agence offshore reste le bon choix",
+              "content": "L'honnêteté est la base de la confiance, donc disons-le clairement : l'agence garde des avantages réels. Sur un très gros projet qui demande plusieurs profils en parallèle (plusieurs développeurs, un designer UX, un testeur QA, un chef de projet dédié), une structure encaisse mieux la charge qu'une seule personne. Elle offre aussi un backup formel en cas d'indisponibilité et une continuité contractuelle sur le long terme.\n\nSi votre besoin, c'est une grosse équipe mobilisable immédiatement sur un périmètre large et évolutif, une ESN établie comme il en existe à Madagascar depuis les années 1990 est un choix légitime. Un freelance, même senior, n'a pas vocation à remplacer dix ingénieurs simultanés. Le bon réflexe : choisir selon la nature réelle du projet, pas selon le discours commercial. Pour un projet cadré avec un interlocuteur unique, le freelance gagne. Pour un programme multi-équipes au long cours, l'agence se justifie."
+            },
+            {
+              "title": "L'alternative transparente : l'avantage offshore sans l'opacité",
+              "content": "Si vous cherchez l'avantage de coût de l'offshore malgache sans l'anonymat d'une grande structure, c'est exactement le créneau que j'occupe. Vous travaillez avec une personne nommée et vérifiable, basée à Antananarivo, sur le fuseau EAT (UTC+3) compatible avec les journées de travail européennes.\n\nConcrètement : un interlocuteur unique du devis à la livraison, un devis fixé sous 48h, un code versionné sur Git qui vous appartient sans verrouillage propriétaire, et un portfolio public que vous pouvez auditer avant de signer. Pas de pool anonyme, pas de sous-traitance cachée, pas de marge commerciale. Si votre projet est cadré et que la transparence compte pour vous, [parlons-en lors d'un appel découverte gratuit](/contact)."
+            }
+          ],
+          "features": [
+            {
+              "icon": "person",
+              "title": "Interlocuteur unique",
+              "description": "La personne qui code, sans intermédiaire."
+            },
+            {
+              "icon": "visibility",
+              "title": "Transparence totale",
+              "description": "Vous savez qui développe, pas de sous-traitance cachée."
+            },
+            {
+              "icon": "savings",
+              "title": "350 €/jour direct",
+              "description": "Sans marge de structure ni couche commerciale."
+            },
+            {
+              "icon": "verified",
+              "title": "Portfolio vérifiable",
+              "description": "Projets réels auditables avant de signer."
+            },
+            {
+              "icon": "schedule",
+              "title": "Fuseau EAT (UTC+3)",
+              "description": "Journées compatibles avec l'Europe."
+            },
+            {
+              "icon": "bolt",
+              "title": "Itérations rapides",
+              "description": "Décisions techniques prises en direct."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Agence offshore vs freelance senior offshore : le tableau",
+            "intro": "Sur un projet cadré, voici comment une agence offshore et un freelance senior offshore se comparent sur les critères qui pèsent réellement dans la décision.",
+            "headers": [
+              "Critère",
+              "Agence offshore",
+              "Freelance senior (mon modèle)"
+            ],
+            "rows": [
+              {
+                "criterion": "Coût réel (marge incluse)",
+                "noCode": "TJM développeur + marge de structure (commercial, chef de projet)",
+                "nextjs": "350 €/jour facturé en direct, sans marge d'intermédiaire",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Interlocuteur",
+                "noCode": "Commercial puis chef de projet, rarement le développeur",
+                "nextjs": "La personne qui écrit le code, du devis à la livraison",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Transparence de l'équipe",
+                "noCode": "Développeurs souvent anonymes, sous-traitance possible",
+                "nextjs": "Identité nommée, portfolio public vérifiable",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Capacité sur très gros projet",
+                "noCode": "Plusieurs profils mobilisables en parallèle",
+                "nextjs": "Une personne, idéal sur projet cadré, pas sur 10 profils simultanés",
+                "winner": "noCode"
+              },
+              {
+                "criterion": "Backup et continuité",
+                "noCode": "Backup formel et continuité contractuelle",
+                "nextjs": "Dépend d'une personne, à anticiper sur le long terme",
+                "winner": "noCode"
+              },
+              {
+                "criterion": "Vitesse d'itération",
+                "noCode": "Ralentie par les intermédiaires",
+                "nextjs": "Décisions et ajustements en direct",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Propriété du code",
+                "noCode": "Variable selon le contrat, parfois verrouillé",
+                "nextjs": "Code versionné sur Git, à vous, sans verrouillage",
+                "winner": "nextjs"
+              }
+            ],
+            "conclusion": "Sur un programme multi-équipes au long cours, l'agence se justifie. Sur un projet cadré où la transparence, le coût direct et un interlocuteur unique comptent, le freelance senior offshore est le meilleur rapport qualité-prix."
+          },
+          "faq": [
+            {
+              "question": "Freelance ou agence offshore : lequel choisir pour mon projet ?",
+              "answer": "Pour un projet cadré (MVP, API, site, agent IA) avec un interlocuteur unique et un besoin de transparence, le freelance senior offshore est le meilleur choix. Pour un programme nécessitant plusieurs profils en parallèle et un backup formel sur le long terme, une agence se justifie. Le critère décisif : la nature réelle du projet, pas le discours commercial."
+            },
+            {
+              "question": "Un freelance offshore est-il vraiment moins cher qu'une agence ?",
+              "answer": "Oui, à expertise équivalente. Une agence ajoute une marge de structure (commercial, chef de projet, encadrement) au-dessus du coût du développeur. Mon TJM de 350 €/jour est facturé en direct, sans cette marge, et reste sous les 400 à 700 €/jour des prestataires européens."
+            },
+            {
+              "question": "Comment vérifier la transparence d'un prestataire offshore ?",
+              "answer": "Demandez qui code réellement, un portfolio public et vérifiable, et un accès direct à cette personne. Méfiez-vous des structures qui ne nomment jamais les développeurs ou refusent de préciser si la mission est sous-traitée. Un freelance identifiable lève cette opacité par définition."
+            },
+            {
+              "question": "Le décalage horaire pose-t-il problème depuis Madagascar ?",
+              "answer": "Non. Je travaille sur le fuseau EAT (UTC+3), soit 1 à 2 heures de décalage avec l'Europe selon la saison. Nos journées de travail se recouvrent largement et je reste joignable directement par WhatsApp et email pendant toute la mission."
+            },
+            {
+              "question": "Un freelance peut-il gérer un gros projet seul ?",
+              "answer": "Un freelance senior gère très bien un projet cadré : MVP SaaS, API, intégration IA, site performant. Pour un programme demandant dix profils simultanés, une agence reste plus adaptée. Je le dis ouvertement : choisir le bon modèle selon le projet vaut mieux que tout confier au même prestataire par défaut."
+            },
+            {
+              "question": "À qui appartient le code à la fin du projet ?",
+              "answer": "Le code vous appartient entièrement. Il est versionné sur Git, documenté et déployable, sans verrouillage propriétaire. Vous pouvez le reprendre, le faire évoluer ou le confier à une autre équipe sans dépendre de moi, ce qui n'est pas toujours le cas avec une agence."
+            }
+          ]
+        }
       }
     ]
   },
