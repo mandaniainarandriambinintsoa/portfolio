@@ -6,6 +6,7 @@ import { SITE_URL } from "@/lib/constants";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/data/projects";
 import { getCaseStudy } from "@/lib/data/case-studies";
+import { getCategoryLabel, getProjectTone } from "@/lib/project-display";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import SoftwareAppJsonLd from "@/components/seo/SoftwareAppJsonLd";
 import Button from "@/components/ui/Button";
@@ -77,18 +78,12 @@ export default async function ProjectPage({
 
   const prefix = locale === "fr" ? "" : "/en";
   const isWorkflow = project.category === "workflow";
-  const categoryLabel =
-    project.category === "workflow"
-      ? dict.projects.category_workflow
-      : project.category === "site-metier"
-        ? dict.projects.category_site_metier
-        : dict.projects.category_webapp;
-  const categoryTone =
-    project.category === "workflow"
-      ? "emerald"
-      : project.category === "site-metier"
-        ? "amber"
-        : "indigo";
+  const categoryLabel = getCategoryLabel(project.category, {
+    webapp: dict.projects.category_webapp,
+    workflow: dict.projects.category_workflow,
+    siteMetier: dict.projects.category_site_metier,
+  });
+  const categoryTone = getProjectTone(project.category);
   const workflow = project.workflowFile ? workflows[project.workflowFile] : null;
   const caseStudy = getCaseStudy(slug, locale);
   const caseStudyLabels = locale === "fr"

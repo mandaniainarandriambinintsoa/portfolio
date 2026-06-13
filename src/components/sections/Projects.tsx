@@ -1,28 +1,28 @@
 "use client";
 
-import { useState, useRef, useEffect, useMemo, useCallback } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import type { gsap as GsapType } from "gsap";
 import type { Locale } from "@/i18n/config";
 import type { ProjectItem, ProjectCategory } from "@/lib/types";
+import { getCategoryLabel, getProjectTone } from "@/lib/project-display";
+import ProjectCard from "@/components/ui/ProjectCard";
 
 type FilterType = "all" | ProjectCategory;
 
 /*
- * 2-column bento layout.
- * Site metier showcases lead the bento, then product and automation work follow.
+ * Finsweet-style portfolio: uniform 2-column grid of large cards.
+ * Site metier showcases lead, then product and automation work follow.
  */
 
-/** Reorder the homepage bento priority, with ScalApp last. */
-function reorderForBento(items: ProjectItem[]): ProjectItem[] {
+/** Reorder the homepage grid priority, with ScalApp last. */
+function reorderForDisplay(items: ProjectItem[]): ProjectItem[] {
   const order = ["madavoyage", "garagiste", "bati-diaspora", "factumation", "leads-automation-showcase"];
   const last = ["scalapp"];
   const copy = [...items];
   const front: ProjectItem[] = [];
   const back: ProjectItem[] = [];
 
-  // Pull out explicitly ordered items
   for (const slug of order) {
     const idx = copy.findIndex((p) => p.slug === slug);
     if (idx !== -1) front.push(...copy.splice(idx, 1));
@@ -34,18 +34,6 @@ function reorderForBento(items: ProjectItem[]): ProjectItem[] {
 
   return [...front, ...copy, ...back];
 }
-
-/** Layout config per index for the full 8-item bento */
-const LAYOUT: Record<number, { span: string; size: "hero" | "tall" | "wide" | "normal" }> = {
-  0: { span: "col-span-2 row-span-2", size: "hero" },
-  1: { span: "", size: "normal" },
-  2: { span: "", size: "normal" },
-  3: { span: "", size: "normal" },
-  4: { span: "", size: "normal" },
-  5: { span: "row-span-2", size: "tall" },
-  6: { span: "", size: "normal" },
-  7: { span: "col-span-2", size: "wide" },
-};
 
 export default function Projects({
   title,
@@ -62,7 +50,6 @@ export default function Projects({
 }) {
   const [filter, setFilter] = useState<FilterType>("all");
   const gridRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
   const gsapRef = useRef<typeof GsapType | null>(null);
   const prefix = locale === "fr" ? "" : "/en";
   const allLabel = locale === "fr" ? "Tous" : "All";
@@ -70,10 +57,8 @@ export default function Projects({
   const filtered = useMemo(() => {
     const base =
       filter === "all" ? items : items.filter((p) => p.category === filter);
-    return filter === "all" ? reorderForBento(base) : base;
+    return filter === "all" ? reorderForDisplay(base) : base;
   }, [filter, items]);
-
-  const isBentoLayout = filter === "all" && filtered.length >= 6;
 
   // Lazy-load GSAP + ScrollTrigger (keeps them out of initial bundle)
   useEffect(() => {
@@ -97,17 +82,13 @@ export default function Projects({
     if (!cards.length) return;
 
     const ctx = gsap.context(() => {
-      // Initial state
-      gsap.set(cards, { opacity: 0, y: 60, scale: 0.92 });
-
-      // Staggered scroll reveal
+      gsap.set(cards, { opacity: 0, y: 48 });
       cards.forEach((card, i) => {
         gsap.to(card, {
           opacity: 1,
           y: 0,
-          scale: 1,
-          duration: 0.8,
-          delay: i * 0.08,
+          duration: 0.7,
+          delay: (i % 2) * 0.08,
           ease: "power3.out",
           scrollTrigger: {
             trigger: card,
@@ -116,71 +97,12 @@ export default function Projects({
           },
         });
       });
-
-      // Parallax on card images
-      cards.forEach((card) => {
-        const img = card.querySelector("img");
-        if (!img) return;
-        gsap.to(img, {
-          yPercent: -8,
-          ease: "none",
-          scrollTrigger: {
-            trigger: card,
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 0.5,
-          },
-        });
-      });
     }, gridRef);
 
     return () => ctx.revert();
-  }, [filter, gsapRef.current]);
-
-  /* ── Hover tilt effect ── */
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
-    const gsap = gsapRef.current;
-    if (!gsap) return;
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-
-    gsap.to(card, {
-      rotateY: x * 6,
-      rotateX: -y * 6,
-      duration: 0.4,
-      ease: "power2.out",
-      transformPerspective: 800,
-    });
-
-    // Move the glow
-    const glow = card.querySelector<HTMLElement>(".card-glow");
-    if (glow) {
-      gsap.to(glow, {
-        x: x * 60,
-        y: y * 60,
-        opacity: 1,
-        duration: 0.4,
-      });
-    }
-  }, []);
-
-  const handleMouseLeave = useCallback((e: React.MouseEvent<HTMLAnchorElement>) => {
-    const gsap = gsapRef.current;
-    if (!gsap) return;
-    const card = e.currentTarget;
-    gsap.to(card, {
-      rotateY: 0,
-      rotateX: 0,
-      duration: 0.6,
-      ease: "power3.out",
-    });
-    const glow = card.querySelector<HTMLElement>(".card-glow");
-    if (glow) {
-      gsap.to(glow, { opacity: 0, duration: 0.4 });
-    }
-  }, []);
+    // gsapRef is a ref (mutating it doesn't re-render), so it's not a valid dep;
+    // re-run only when the filtered set changes.
+  }, [filter]);
 
   const filters: { key: FilterType; label: string }[] = [
     { key: "all", label: allLabel },
@@ -189,20 +111,8 @@ export default function Projects({
     { key: "workflow", label: categoryLabels.workflow },
   ];
 
-  const categoryLabel = (category: ProjectCategory) => {
-    if (category === "workflow") return categoryLabels.workflow;
-    if (category === "site-metier") return categoryLabels.siteMetier;
-    return categoryLabels.webapp;
-  };
-
-  const categoryTone = (category: ProjectCategory) => {
-    if (category === "workflow") return "emerald";
-    if (category === "site-metier") return "amber";
-    return "indigo";
-  };
-
   return (
-    <section ref={sectionRef} id="projects" className="w-full mb-16">
+    <section id="projects" className="w-full mb-16">
       <div className="max-w-6xl mx-auto px-6">
         {/* ── Header + Filters ── */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
@@ -239,150 +149,20 @@ export default function Projects({
           </div>
         </div>
 
-        {/* ── Bento Grid ── */}
+        {/* ── Uniform grid (Finsweet style) ── */}
         <div
           ref={gridRef}
-          className={`grid gap-4 ${
-            isBentoLayout
-              ? "grid-cols-1 sm:grid-cols-2 auto-rows-[220px] sm:auto-rows-[240px]"
-              : "grid-cols-1 sm:grid-cols-2 auto-rows-[240px] sm:auto-rows-[260px]"
-          }`}
-          style={{ gridAutoFlow: "dense", perspective: "1200px" }}
+          className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-12 sm:gap-x-10 sm:gap-y-16"
         >
-          {filtered.map((project, i) => {
-            const layout = isBentoLayout ? LAYOUT[i] : undefined;
-            const size = layout?.size ?? "normal";
-            const span = layout?.span ?? "";
-            const isHero = size === "hero";
-            const isTall = size === "tall";
-            const isWide = size === "wide";
-            const isWorkflow = project.category === "workflow";
-            const tone = categoryTone(project.category);
-            const showDesc = isHero || isTall || isWide;
-
-            return (
-              <Link
-                key={project.slug}
-                href={`${prefix}/projects/${project.slug}`}
-                onMouseMove={handleMouseMove}
-                onMouseLeave={handleMouseLeave}
-                className={`project-card group relative overflow-hidden rounded-3xl border transition-all duration-500 will-change-transform ${
-                  isHero
-                    ? "border-indigo-500/15 hover:border-indigo-400/30"
-                    : isWorkflow
-                      ? "border-white/[0.06] hover:border-emerald-500/20"
-                      : project.category === "site-metier"
-                        ? "border-white/[0.06] hover:border-amber-500/25"
-                      : "border-white/[0.06] hover:border-white/[0.12]"
-                } ${span}`}
-              >
-                {/* Background image with overflow for parallax */}
-                <div className="absolute inset-[-10%] z-0">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes={
-                      isHero || isWide
-                        ? "(min-width: 640px) 100vw, 100vw"
-                        : "(min-width: 640px) 50vw, 100vw"
-                    }
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                  />
-                </div>
-
-                {/* Gradient overlay */}
-                <div
-                  className={`absolute inset-0 z-[1] ${
-                    isHero
-                      ? "bg-gradient-to-t from-black via-black/60 to-black/20"
-                      : "bg-gradient-to-t from-black/95 via-black/40 to-black/10"
-                  }`}
-                />
-
-                {/* Interactive glow that follows cursor */}
-                <div
-                  className={`card-glow absolute z-[2] w-[300px] h-[300px] rounded-full opacity-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blur-[80px] ${
-                    tone === "emerald"
-                      ? "bg-emerald-500/20"
-                      : tone === "amber"
-                        ? "bg-amber-500/20"
-                        : "bg-indigo-500/20"
-                  }`}
-                />
-
-                {/* Hero accent line */}
-                {isHero && (
-                  <div className="absolute top-0 inset-x-0 h-[1px] z-[3] bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
-                )}
-
-                {/* Arrow indicator */}
-                <div className="absolute top-4 right-4 z-10 size-12 rounded-full bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 -translate-y-2 group-hover:translate-y-0">
-                  <span className="material-symbols-outlined text-lg text-white/80">
-                    north_east
-                  </span>
-                </div>
-
-                {/* Content */}
-                <div
-                  className={`absolute inset-x-0 bottom-0 z-10 transition-transform duration-500 translate-y-2 group-hover:translate-y-0 ${
-                    isHero ? "p-8 sm:p-10" : "p-6 sm:p-7"
-                  }`}
-                >
-                  {/* Badges */}
-                  <div className="flex gap-2 mb-3 flex-wrap">
-                    <span
-                      className={`px-3 py-1 backdrop-blur-sm rounded-full text-xs font-semibold tracking-wider uppercase text-white ${
-                        tone === "emerald"
-                          ? "bg-emerald-500/60"
-                          : tone === "amber"
-                            ? "bg-amber-500/70"
-                            : "bg-indigo-500/60"
-                      }`}
-                    >
-                      {categoryLabel(project.category)}
-                    </span>
-                    {project.tags
-                      .slice(0, showDesc ? 3 : 2)
-                      .map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 bg-white/8 backdrop-blur-sm rounded-full text-xs font-medium tracking-wider uppercase text-white/70"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                  </div>
-
-                  {/* Title */}
-                  <h3
-                    className={`font-bold leading-tight ${
-                      isHero
-                        ? "text-2xl sm:text-3xl md:text-4xl"
-                        : showDesc
-                          ? "text-xl sm:text-2xl"
-                          : "text-base sm:text-lg"
-                    }`}
-                  >
-                    {project.subtitle}
-                  </h3>
-
-                  {/* Description */}
-                  {showDesc && (
-                    <p
-                      className={`text-slate-400 line-clamp-2 mt-3 ${
-                        isHero
-                          ? "text-base sm:text-lg max-w-2xl"
-                          : "text-sm max-w-md"
-                      }`}
-                    >
-                      {project.description}
-                    </p>
-                  )}
-                </div>
-              </Link>
-            );
-          })}
+          {filtered.map((project) => (
+            <ProjectCard
+              key={project.slug}
+              project={project}
+              href={`${prefix}/projects/${project.slug}`}
+              categoryLabel={getCategoryLabel(project.category, categoryLabels)}
+              tone={getProjectTone(project.category)}
+            />
+          ))}
         </div>
       </div>
     </section>

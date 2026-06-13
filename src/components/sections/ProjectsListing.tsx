@@ -1,11 +1,10 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
-import Link from "next/link";
-import Image from "next/image";
+import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap-register";
-import GlassCard from "@/components/ui/GlassCard";
+import ProjectCard from "@/components/ui/ProjectCard";
+import { getCategoryLabel, getProjectTone } from "@/lib/project-display";
 import type { ProjectCategory, ProjectItem } from "@/lib/types";
 
 type CategoryFilter = "all" | ProjectCategory;
@@ -34,24 +33,14 @@ export default function ProjectsListing({
       ? items
       : items.filter((p) => p.category === activeFilter);
 
-  const animateCards = useCallback(() => {
-    if (!gridRef.current) return;
-    const cards = gridRef.current.querySelectorAll(".project-card");
+  useGSAP(() => {
+    const cards = gridRef.current?.querySelectorAll(".project-card");
+    if (!cards?.length) return;
     gsap.fromTo(
       cards,
       { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.4,
-        stagger: 0.08,
-        ease: "power2.out",
-      }
+      { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: "power2.out" }
     );
-  }, []);
-
-  useGSAP(() => {
-    animateCards();
   }, { dependencies: [activeFilter], scope: gridRef });
 
   const filters: { key: CategoryFilter; label: string; color: string }[] = [
@@ -61,37 +50,10 @@ export default function ProjectsListing({
     { key: "workflow", label: categoryLabels.workflow, color: "bg-emerald-600 text-white" },
   ];
 
-  const categoryLabel = (category: ProjectCategory) => {
-    if (category === "workflow") return categoryLabels.workflow;
-    if (category === "site-metier") return categoryLabels.siteMetier;
-    return categoryLabels.webapp;
-  };
-
-  const categoryClasses = (category: ProjectCategory) => {
-    if (category === "workflow") {
-      return {
-        badge: "bg-emerald-600 text-white",
-        subtitle: "text-emerald-400",
-      };
-    }
-
-    if (category === "site-metier") {
-      return {
-        badge: "bg-amber-600 text-white",
-        subtitle: "text-amber-400",
-      };
-    }
-
-    return {
-      badge: "bg-indigo-600 text-white",
-      subtitle: "text-indigo-400",
-    };
-  };
-
   return (
     <>
       {/* Filter tabs */}
-      <div className="flex gap-3 mb-10 flex-wrap">
+      <div className="flex gap-3 mb-12 flex-wrap">
         {filters.map((f) => (
           <button
             key={f.key}
@@ -112,66 +74,21 @@ export default function ProjectsListing({
         ))}
       </div>
 
-      {/* Projects grid */}
+      {/* Projects grid — uniform 2 columns (Finsweet style) */}
       <div
         ref={gridRef}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 md:gap-x-10 md:gap-y-16"
       >
-        {filtered.map((project) => {
-          const tone = categoryClasses(project.category);
-
-          return (
-            <Link
-              key={project.slug}
-              href={`${prefix}/projects/${project.slug}`}
-              className="project-card group"
-            >
-            <GlassCard
-              noPadding
-              className="h-full overflow-hidden hover:bg-white/5 transition-colors"
-            >
-              {/* Image thumbnail */}
-              <div className="relative h-48 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={`${project.title} - ${project.subtitle}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                {/* Category badge */}
-                <span
-                  className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-bold tracking-wider uppercase ${tone.badge}`}
-                >
-                  {categoryLabel(project.category)}
-                </span>
-              </div>
-
-              {/* Content */}
-              <div className="p-5">
-                <h2 className="text-lg font-bold mb-1">{project.title}</h2>
-                <p className={`text-sm mb-3 ${tone.subtitle}`}>
-                  {project.subtitle}
-                </p>
-                <p className="text-sm text-slate-400 mb-4 line-clamp-2">
-                  {project.description}
-                </p>
-                <div className="flex gap-2 flex-wrap">
-                  {project.tags.map((tag: string) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-0.5 bg-white/5 rounded text-xs font-bold tracking-wider uppercase text-slate-400"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </GlassCard>
-            </Link>
-          );
-        })}
+        {filtered.map((project) => (
+          <ProjectCard
+            key={project.slug}
+            project={project}
+            href={`${prefix}/projects/${project.slug}`}
+            categoryLabel={getCategoryLabel(project.category, categoryLabels)}
+            tone={getProjectTone(project.category)}
+            showDescription
+          />
+        ))}
       </div>
     </>
   );
