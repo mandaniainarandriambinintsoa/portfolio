@@ -28,7 +28,7 @@ const caseStudies: Record<string, LocalizedCaseStudy> = {
         "La direction 2 a été retenue : le côté lumineux et tropical inspire plus immédiatement l'envie de voyage, et la composition hero + circuits + formulaire latéral structurait mieux le funnel de réservation. Décision validée en une itération, sans retouche supplémentaire.",
       finalImage: "/images/projects/madavoyage/final-desktop.png",
       finalCaption:
-        "Intégration finale en Next.js 16 + GSAP. Le site final reprend la direction artistique de la variante 2 (palmiers, lumière dorée) avec une photo réelle de Madagascar pour le hero plutôt que la maquette IA brute. Architecture découplée (data, composants, lib) prête à être dupliquée pour d'autres clients voyage ou réservation.",
+        "Intégration finale en Next.js 16 + GSAP. Le site final reprend la direction artistique de la variante 2 (palmiers, lumière dorée) avec une photo réelle de Madagascar pour le hero plutôt que la maquette IA brute. Architecture découplée (data, composants, lib) prête à être dupliquée pour d'autres clients voyage ou réservation. Le site embarque aussi un agent vocal IA (ElevenLabs Conversational AI) : le visiteur pose ses questions à la voix et l'assistant répond sur les circuits et la réservation, testable en live.",
     },
     en: {
       brief:
@@ -53,7 +53,7 @@ const caseStudies: Record<string, LocalizedCaseStudy> = {
         "Direction 2 was selected: the bright, tropical mood inspires the desire to travel more immediately, and the hero + tours + side booking form composition structured the booking funnel better. Decision locked in one iteration, no further tweak needed.",
       finalImage: "/images/projects/madavoyage/final-desktop.png",
       finalCaption:
-        "Final build in Next.js 16 + GSAP. The site echoes the variant 2 art direction (palm trees, golden light) with a real Madagascar photo for the hero rather than the raw AI mockup. Decoupled architecture (data, components, lib) ready to be duplicated for other travel or booking clients.",
+        "Final build in Next.js 16 + GSAP. The site echoes the variant 2 art direction (palm trees, golden light) with a real Madagascar photo for the hero rather than the raw AI mockup. Decoupled architecture (data, components, lib) ready to be duplicated for other travel or booking clients. The site also embeds an AI voice agent (ElevenLabs Conversational AI): visitors ask questions by voice and the assistant answers about tours and booking, testable live.",
     },
   },
   garagiste: {

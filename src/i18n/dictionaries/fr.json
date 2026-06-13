@@ -1566,6 +1566,276 @@
             }
           ]
         }
+      },
+      {
+        "title": "Développeur d'agents vocaux IA (ElevenLabs, Twilio)",
+        "description": "Développeur d'agents vocaux et téléphoniques IA : ElevenLabs, Twilio, n8n. De la voix à l'action métier, agent en production en quelques semaines.",
+        "slug": "developpeur-agent-vocal-ia",
+        "color": "purple",
+        "icon": "support_agent",
+        "cardTitle": "Agent vocal IA",
+        "cardDescription": "ElevenLabs, Twilio, agents conversationnels",
+        "isLanding": true,
+        "seoTitle": "Développeur d'agents vocaux IA : ElevenLabs & Twilio | Manda",
+        "seoDescription": "Développeur freelance d'agents vocaux et téléphoniques IA (ElevenLabs, Twilio, n8n). Agent conversationnel en production, démo live, devis sous 48h.",
+        "landing": {
+          "heroText": "Je conçois des agents vocaux et téléphoniques IA qui parlent à vos clients comme un humain : ElevenLabs pour la voix, Twilio pour le téléphone, n8n et vos API pour brancher l'action métier. Pas une démo jouet, un agent en production qui qualifie, répond, prend rendez-vous et logue dans votre CRM. Une démo tourne déjà en live sur un site client.",
+          "sections": [
+            {
+              "title": "Un agent vocal qui agit, pas seulement qui parle",
+              "content": "Un bon agent vocal ne se limite pas à une jolie voix. Il comprend l'intention, va chercher la bonne information, déclenche une action et garde une trace. Je construis la chaîne complète : reconnaissance de la demande, accès à vos données (catalogue, disponibilités, CRM), réponse vocale naturelle, et action concrète (réservation, qualification de lead, transfert vers un humain).\n\nConcrètement : un visiteur pose sa question à la voix, l'agent répond avec le contexte réel de votre activité, propose un créneau ou une réponse, demande validation si besoin, puis logue l'échange. C'est ce qui sépare un chatbot gadget d'un agent qui décharge vraiment votre équipe."
+            },
+            {
+              "title": "Stack : ElevenLabs, Twilio, n8n et vos API",
+              "content": "Pour la voix, j'utilise ElevenLabs Conversational AI : des voix naturelles, multilingues et à faible latence, qui ne sonnent pas robotiques. Pour le canal téléphonique, j'intègre Twilio (numéros, appels entrants et sortants, SIP) pour que l'agent réponde au téléphone, pas seulement sur le web.\n\nL'intelligence métier passe par n8n et vos API : l'agent lit vos données en temps réel, écrit dans votre CRM, déclenche des emails, crée des événements agenda. La voix est la surface, l'automatisation est le moteur derrière. Voir aussi [automatisation n8n](/services/automatisation-n8n-madagascar) et [développeur d'agents IA](/services/developpeur-agent-ia-madagascar)."
+            },
+            {
+              "title": "Cas d'usage : support, réservation, qualification, sortant",
+              "content": "Les usages qui rentabilisent le plus un agent vocal : le support client de niveau 1 (questions répétitives, horaires, suivi), la prise de rendez-vous et la réservation (l'agent vérifie les créneaux et confirme), la qualification de leads entrants (l'agent pose les bonnes questions avant de passer la main), et la prospection sortante (rappels, relances, enquêtes).\n\nLe point commun : des conversations répétitives mais qui demandent du contexte et un peu de jugement. L'agent traite le volume, votre équipe garde les cas à valeur, avec validation humaine là où l'enjeu le justifie."
+            },
+            {
+              "title": "Preuve : un agent vocal déjà en production",
+              "content": "Je ne vends pas une compétence théorique. Un agent vocal ElevenLabs Conversational AI tourne en live sur MadaVoyage, une landing page de réservation de voyages : le visiteur parle à l'assistant, qui répond sur les circuits et la réservation. Vous pouvez le tester directement.\n\nC'est l'avantage de travailler avec un développeur identifiable plutôt qu'avec une promesse : un projet réel, montrable, que vous auditez avant de signer. Voir le [projet MadaVoyage](/projects/madavoyage) et sa démo live."
+            },
+            {
+              "title": "Délai, tarif et propriété",
+              "content": "Un premier agent vocal fonctionnel se livre généralement en 2 à 3 semaines selon le périmètre et les intégrations. Mon TJM est de 350 €/jour, facturé en direct sans marge d'intermédiaire, avec un périmètre et un prix fixés avant de démarrer et un devis sous 48h.\n\nJe travaille en remote avec des clients en Europe et à l'international. À la livraison, l'agent, ses prompts et l'orchestration vous appartiennent, documentés et déployables, sans verrouillage propriétaire."
+            }
+          ],
+          "features": [
+            {
+              "icon": "support_agent",
+              "title": "Voix naturelle",
+              "description": "ElevenLabs, multilingue, faible latence."
+            },
+            {
+              "icon": "smart_toy",
+              "title": "Compréhension d'intention",
+              "description": "L'agent comprend la demande réelle."
+            },
+            {
+              "icon": "hub",
+              "title": "Intégrations",
+              "description": "CRM, agenda, API et n8n."
+            },
+            {
+              "icon": "schedule",
+              "title": "Prise de rendez-vous",
+              "description": "Vérifie les créneaux et confirme."
+            },
+            {
+              "icon": "bolt",
+              "title": "Téléphone (Twilio)",
+              "description": "Appels entrants et sortants."
+            },
+            {
+              "icon": "verified",
+              "title": "Validation humaine",
+              "description": "Transfert intelligent quand l'enjeu le justifie."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Agent vocal IA vs serveur vocal (IVR) classique",
+            "intro": "Face à un menu téléphonique classique, un agent vocal IA change l'expérience et ce qu'il sait faire. Voici la comparaison sur les critères qui comptent.",
+            "headers": [
+              "Critère",
+              "IVR / menu classique",
+              "Agent vocal IA (mon approche)"
+            ],
+            "rows": [
+              {
+                "criterion": "Compréhension",
+                "noCode": "Menus rigides, « tapez 1 »",
+                "nextjs": "Langage naturel, comprend l'intention",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Action métier",
+                "noCode": "Limitée, transfert humain rapide",
+                "nextjs": "Réserve, qualifie, logue dans le CRM",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Langues",
+                "noCode": "Souvent une seule",
+                "nextjs": "Multilingue natif (ElevenLabs)",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Coût à l'échelle",
+                "noCode": "Coût humain linéaire",
+                "nextjs": "Encaisse le volume sans recruter",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Cas complexes ou sensibles",
+                "noCode": "Un humain reste meilleur",
+                "nextjs": "Transfert intelligent vers un humain",
+                "winner": "noCode"
+              }
+            ],
+            "conclusion": "L'agent vocal IA gagne sur les conversations répétitives à fort volume. Pour les cas sensibles, il sait passer la main à un humain. Le bon réflexe : automatiser le volume, garder l'humain sur la valeur."
+          },
+          "faq": [
+            {
+              "question": "Qu'est-ce qu'un agent vocal IA ?",
+              "answer": "C'est un assistant qui dialogue à la voix avec vos clients en langage naturel, comprend leur demande, va chercher la bonne information dans vos systèmes et déclenche une action (réponse, réservation, qualification, transfert). Il fonctionne sur le web et au téléphone, 24/7."
+            },
+            {
+              "question": "Pourquoi ElevenLabs et Twilio ?",
+              "answer": "ElevenLabs Conversational AI fournit des voix naturelles, multilingues et à faible latence qui ne sonnent pas robotiques. Twilio gère le canal téléphonique (numéros, appels entrants et sortants, SIP). Ensemble, l'agent répond aussi bien sur votre site qu'au téléphone."
+            },
+            {
+              "question": "L'agent peut-il répondre au téléphone, pas seulement sur le web ?",
+              "answer": "Oui. Via Twilio, l'agent prend des appels entrants et peut passer des appels sortants (rappels, relances, enquêtes). Le même agent peut servir le web, le téléphone et d'autres canaux."
+            },
+            {
+              "question": "Combien de temps pour mettre un agent vocal en production ?",
+              "answer": "En général 2 à 3 semaines pour un premier agent fonctionnel, selon le périmètre et les intégrations (CRM, agenda, API). Le périmètre et le prix sont fixés avant de démarrer, avec un devis sous 48h."
+            },
+            {
+              "question": "Les données des appels sont-elles conformes RGPD ?",
+              "answer": "Oui, c'est cadré dès la conception : information de l'appelant, consentement quand il le faut, journalisation minimale et hébergement des données maîtrisé. Je conçois l'agent pour un usage conforme côté Europe."
+            },
+            {
+              "question": "Que se passe-t-il pour les demandes complexes ?",
+              "answer": "L'agent détecte ce qu'il ne doit pas traiter seul et transfère vers un humain avec le contexte de l'échange. L'objectif n'est pas de tout automatiser, mais d'absorber le volume répétitif et de réserver votre équipe aux cas à valeur."
+            }
+          ]
+        }
+      },
+      {
+        "title": "Consultant SEO + GEO : ranker sur Google et être cité par les IA",
+        "description": "SEO et GEO ensemble : ranker sur Google et se faire citer par ChatGPT, Claude, Perplexity et les AI Overviews. Schema, autorité d'entité, citabilité.",
+        "slug": "consultant-seo-geo",
+        "color": "indigo",
+        "icon": "manage_search",
+        "cardTitle": "SEO + GEO",
+        "cardDescription": "Ranker sur Google ET être cité par les IA",
+        "isLanding": true,
+        "seoTitle": "Consultant SEO + GEO : Google et recherche IA | Manda",
+        "seoDescription": "Consultant SEO et GEO : ranker sur Google et être cité par ChatGPT, Claude, Perplexity et les AI Overviews. Schema, llms.txt, autorité d'entité, citabilité IA.",
+        "landing": {
+          "heroText": "Le SEO vous fait ranker sur Google. Le GEO vous fait citer par ChatGPT, Claude, Perplexity et les Google AI Overviews. Les deux comptent désormais, et je les traite ensemble : contenu structuré, autorité d'entité, schema, llms.txt et une vraie stratégie de citabilité IA. La meilleure preuve : ce site applique tout ça à lui-même.",
+          "sections": [
+            {
+              "title": "SEO et GEO ne sont pas la même chose, et il faut les deux",
+              "content": "Le SEO (Search Engine Optimization) optimise votre position dans les résultats de Google : mots-clés, backlinks, technique, clics vers votre site. Le GEO (Generative Engine Optimization) optimise une autre chose : être récupéré, compris et cité par les modèles d'IA quand un utilisateur leur pose une question.\n\nDe plus en plus de recherches se terminent sans clic, dans une réponse d'IA. Si vous n'êtes optimisé que pour le SEO classique, vous gagnez des positions mais disparaissez des réponses IA. Si vous ne faites que du GEO, vous existez dans ChatGPT mais perdez le trafic Google. Les traiter ensemble, c'est couvrir les deux surfaces où vos clients cherchent."
+            },
+            {
+              "title": "Ce que je fais concrètement",
+              "content": "Côté technique et SEO : crawlabilité, indexation, rendu côté serveur, Core Web Vitals, structure des URL, maillage interne, et un schema JSON-LD propre (Organization, Person, Article, FAQ, Breadcrumb).\n\nCôté GEO : structuration du contenu pour la citabilité (réponses directes, TL;DR, sections questions-réponses, tableaux de données), autorité d'entité (Wikidata, sameAs, profils cohérents), fichier llms.txt, et accès maîtrisé des crawlers IA. L'objectif est double : que Google vous classe et que les IA vous citent comme source fiable."
+            },
+            {
+              "title": "La preuve : ce portfolio s'optimise lui-même",
+              "content": "Je ne théorise pas le GEO, je l'applique à mon propre site et je peux montrer les résultats. Ce portfolio rank en première position sur ses requêtes cibles, possède une entité Wikidata reliée par sameAs, sept types de schema JSON-LD, un fichier llms.txt, et une structure pensée pour la citabilité IA.\n\nC'est l'inverse d'une agence qui promet sans montrer : vous pouvez auditer mon propre site avant de me confier le vôtre. Je transpose exactement cette méthode à votre cas. Voir aussi le [comparatif freelance vs agence offshore](/services/freelance-vs-agence-offshore-madagascar) pour ma façon de travailler."
+            },
+            {
+              "title": "Pour qui et avec quel résultat attendu",
+              "content": "C'est adapté aux SaaS, fondateurs et sites de contenu B2B qui veulent exister dans la recherche IA avant que les concurrents ne s'y installent. Le GEO est une fenêtre : le terrain est encore peu occupé, le prendre tôt paie.\n\nConcrètement, vous gagnez deux choses : un meilleur positionnement Google sur vos requêtes, et une présence dans les réponses de ChatGPT, Perplexity et des AI Overviews quand un prospect pose une question de votre catégorie. Je travaille par chantiers priorisés, avec un audit de départ qui dit quoi faire et dans quel ordre."
+            },
+            {
+              "title": "Méthode et tarif",
+              "content": "Je commence par un audit SEO + GEO qui mesure l'état actuel (technique, contenu, schema, autorité, citabilité) et sort un plan d'action priorisé. On exécute ensuite les chantiers à plus fort impact d'abord.\n\nMon TJM est de 350 €/jour, facturé en direct, sans marge d'intermédiaire, avec un devis sous 48h. Je travaille en remote avec des clients en Europe et à l'international. Le travail est documenté et reproductible : vous gardez la méthode, pas seulement le résultat."
+            }
+          ],
+          "features": [
+            {
+              "icon": "manage_search",
+              "title": "Audit SEO + GEO",
+              "description": "Technique, contenu, schema, citabilité."
+            },
+            {
+              "icon": "smart_toy",
+              "title": "Citabilité IA",
+              "description": "ChatGPT, Claude, Perplexity, AI Overviews."
+            },
+            {
+              "icon": "trending_up",
+              "title": "Ranking Google",
+              "description": "Technique, structure et maillage."
+            },
+            {
+              "icon": "verified",
+              "title": "Schema JSON-LD",
+              "description": "Organization, Person, Article, FAQ."
+            },
+            {
+              "icon": "target",
+              "title": "Autorité d'entité",
+              "description": "Wikidata, sameAs, profils cohérents."
+            },
+            {
+              "icon": "psychology",
+              "title": "Contenu structuré",
+              "description": "Réponses directes, TL;DR, Q-R, tableaux."
+            }
+          ],
+          "comparisonTable": {
+            "title": "SEO seul vs SEO + GEO",
+            "intro": "Optimiser uniquement pour Google ne suffit plus quand une partie des recherches se termine dans une réponse d'IA. Voici ce que le combiné apporte.",
+            "headers": [
+              "Critère",
+              "SEO seul",
+              "SEO + GEO (mon approche)"
+            ],
+            "rows": [
+              {
+                "criterion": "Surface couverte",
+                "noCode": "Résultats Google (liens bleus)",
+                "nextjs": "Google + réponses IA (ChatGPT, Perplexity, AI Overviews)",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Recherches sans clic",
+                "noCode": "Invisible dans la réponse IA",
+                "nextjs": "Cité comme source dans la réponse",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Signaux travaillés",
+                "noCode": "Mots-clés, backlinks",
+                "nextjs": "+ schema, entité, llms.txt, citabilité",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Concurrence actuelle",
+                "noCode": "Saturée depuis 20 ans",
+                "nextjs": "GEO encore peu occupé, fenêtre ouverte",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Trafic de clics direct",
+                "noCode": "Reste le cœur du SEO",
+                "nextjs": "Conservé, le GEO s'ajoute par-dessus",
+                "winner": "tie"
+              }
+            ],
+            "conclusion": "Le SEO reste indispensable pour le trafic de clics. Le GEO ajoute la présence dans les réponses IA, là où le terrain est encore ouvert. Les traiter ensemble couvre les deux surfaces où vos clients cherchent aujourd'hui."
+          },
+          "faq": [
+            {
+              "question": "C'est quoi le GEO (Generative Engine Optimization) ?",
+              "answer": "C'est l'optimisation pour être récupéré, compris et cité par les moteurs d'IA générative (ChatGPT, Claude, Perplexity, Google AI Overviews) quand un utilisateur leur pose une question. Là où le SEO vise le classement et les clics, le GEO vise la citation dans la réponse de l'IA."
+            },
+            {
+              "question": "Faut-il abandonner le SEO pour le GEO ?",
+              "answer": "Non. Le SEO reste la base du trafic de clics depuis Google. Le GEO s'ajoute par-dessus pour capter la présence dans les réponses IA. Je les traite ensemble parce que vos clients cherchent désormais sur les deux surfaces."
+            },
+            {
+              "question": "Comment être cité par ChatGPT ou Perplexity ?",
+              "answer": "En combinant contenu structuré (réponses directes, sections questions-réponses, tableaux), autorité d'entité (Wikidata, sameAs, profils cohérents), schema JSON-LD propre, fichier llms.txt et accès maîtrisé des crawlers IA. C'est exactement la méthode que j'applique à mon propre site."
+            },
+            {
+              "question": "Quelle preuve de vos résultats ?",
+              "answer": "Mon propre portfolio : première position sur ses requêtes cibles, entité Wikidata reliée, sept types de schema, llms.txt, structure pensée pour la citabilité. Vous pouvez l'auditer avant de me confier votre site."
+            },
+            {
+              "question": "En combien de temps voit-on un effet ?",
+              "answer": "Les correctifs techniques et de structure agissent en quelques semaines côté indexation et citabilité. Le positionnement durable se construit sur quelques mois, surtout sur un domaine jeune. L'audit de départ priorise ce qui donne le plus d'effet le plus vite."
+            }
+          ]
+        }
       }
     ]
   },

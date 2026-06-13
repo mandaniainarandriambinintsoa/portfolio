@@ -43,6 +43,8 @@ export default function Footer({
           { label: "Codex + n8n", href: "/services/developpeur-codex-n8n" },
           { label: "Automatisation N8N", href: "/services/automatisation-n8n-madagascar" },
           { label: "Freelance ou agence ?", href: "/services/freelance-vs-agence-offshore-madagascar" },
+          { label: "Agent vocal IA", href: "/services/developpeur-agent-vocal-ia" },
+          { label: "SEO + GEO", href: "/services/consultant-seo-geo" },
         ]
       : [
           { label: "JavaScript Fullstack", href: "/en/services/javascript-developer-madagascar" },
@@ -55,6 +57,8 @@ export default function Footer({
           { label: "Codex + n8n", href: "/en/services/codex-n8n-developer" },
           { label: "N8N Automation", href: "/en/services/n8n-automation-expert-madagascar" },
           { label: "Freelance or agency?", href: "/en/services/freelance-vs-offshore-agency-madagascar" },
+          { label: "AI Voice Agents", href: "/en/services/ai-voice-agent-developer" },
+          { label: "SEO + GEO", href: "/en/services/seo-geo-consultant" },
         ];
 
   const expertiseHeading = locale === "fr" ? "Expertise" : "Expertise";

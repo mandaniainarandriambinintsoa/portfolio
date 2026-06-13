@@ -1558,6 +1558,276 @@
             }
           ]
         }
+      },
+      {
+        "title": "AI Voice Agent Developer (ElevenLabs, Twilio)",
+        "description": "AI voice and phone agent developer: ElevenLabs, Twilio, n8n. From voice to business action, agent in production within weeks.",
+        "slug": "ai-voice-agent-developer",
+        "color": "purple",
+        "icon": "support_agent",
+        "cardTitle": "AI voice agent",
+        "cardDescription": "ElevenLabs, Twilio, conversational agents",
+        "isLanding": true,
+        "seoTitle": "AI Voice Agent Developer: ElevenLabs & Twilio | Manda",
+        "seoDescription": "Freelance AI voice and phone agent developer (ElevenLabs, Twilio, n8n). Conversational agent in production, live demo, quote within 48h.",
+        "landing": {
+          "heroText": "I build AI voice and phone agents that talk to your customers like a human: ElevenLabs for the voice, Twilio for telephony, n8n and your APIs to wire the business action. Not a toy demo, a production agent that qualifies, answers, books appointments and logs to your CRM. A live demo already runs on a client site.",
+          "sections": [
+            {
+              "title": "A voice agent that acts, not just talks",
+              "content": "A good voice agent is more than a nice voice. It understands intent, fetches the right information, triggers an action and keeps a record. I build the full chain: request understanding, access to your data (catalog, availability, CRM), natural voice response, and a concrete action (booking, lead qualification, handover to a human).\n\nConcretely: a visitor asks a question by voice, the agent answers with your real business context, proposes a slot or an answer, asks for validation when needed, then logs the exchange. That is what separates a gimmick chatbot from an agent that genuinely offloads your team."
+            },
+            {
+              "title": "Stack: ElevenLabs, Twilio, n8n and your APIs",
+              "content": "For the voice, I use ElevenLabs Conversational AI: natural, multilingual, low-latency voices that do not sound robotic. For the phone channel, I integrate Twilio (numbers, inbound and outbound calls, SIP) so the agent answers on the phone, not only on the web.\n\nThe business logic runs through n8n and your APIs: the agent reads your data in real time, writes to your CRM, triggers emails, creates calendar events. Voice is the surface, automation is the engine behind it. See also [n8n automation](/en/services/n8n-automation-expert-madagascar) and [AI agent developer](/en/services/ai-agent-developer-madagascar)."
+            },
+            {
+              "title": "Use cases: support, booking, qualification, outbound",
+              "content": "The use cases that pay off most for a voice agent: tier-1 customer support (repetitive questions, hours, status), appointment booking and reservations (the agent checks slots and confirms), inbound lead qualification (the agent asks the right questions before handing over), and outbound outreach (callbacks, follow-ups, surveys).\n\nThe common thread: repetitive conversations that still need context and a bit of judgment. The agent handles the volume, your team keeps the high-value cases, with human validation where the stakes justify it."
+            },
+            {
+              "title": "Proof: a voice agent already in production",
+              "content": "I do not sell a theoretical skill. An ElevenLabs Conversational AI voice agent runs live on MadaVoyage, a travel booking landing page: the visitor talks to the assistant, which answers about tours and booking. You can test it directly.\n\nThat is the advantage of working with an identifiable developer rather than a promise: a real, demonstrable project you audit before signing. See the [MadaVoyage project](/en/projects/madavoyage) and its live demo."
+            },
+            {
+              "title": "Timeline, pricing and ownership",
+              "content": "A first working voice agent typically ships in 2 to 3 weeks depending on scope and integrations. My day rate is €350, billed directly with no middleman markup, with scope and price fixed before we start and a quote within 48h.\n\nI work remotely with clients in Europe and internationally. On delivery, the agent, its prompts and the orchestration are yours, documented and deployable, with no proprietary lock-in."
+            }
+          ],
+          "features": [
+            {
+              "icon": "support_agent",
+              "title": "Natural voice",
+              "description": "ElevenLabs, multilingual, low latency."
+            },
+            {
+              "icon": "smart_toy",
+              "title": "Intent understanding",
+              "description": "The agent understands the real request."
+            },
+            {
+              "icon": "hub",
+              "title": "Integrations",
+              "description": "CRM, calendar, APIs and n8n."
+            },
+            {
+              "icon": "schedule",
+              "title": "Appointment booking",
+              "description": "Checks slots and confirms."
+            },
+            {
+              "icon": "bolt",
+              "title": "Phone (Twilio)",
+              "description": "Inbound and outbound calls."
+            },
+            {
+              "icon": "verified",
+              "title": "Human validation",
+              "description": "Smart handover when stakes justify it."
+            }
+          ],
+          "comparisonTable": {
+            "title": "AI voice agent vs classic phone menu (IVR)",
+            "intro": "Compared to a classic phone menu, an AI voice agent changes both the experience and what it can do. Here is the comparison on the criteria that matter.",
+            "headers": [
+              "Criterion",
+              "Classic IVR / menu",
+              "AI voice agent (my approach)"
+            ],
+            "rows": [
+              {
+                "criterion": "Understanding",
+                "noCode": "Rigid menus, 'press 1'",
+                "nextjs": "Natural language, understands intent",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Business action",
+                "noCode": "Limited, quick human handoff",
+                "nextjs": "Books, qualifies, logs to the CRM",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Languages",
+                "noCode": "Often a single one",
+                "nextjs": "Natively multilingual (ElevenLabs)",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Cost at scale",
+                "noCode": "Linear human cost",
+                "nextjs": "Absorbs volume without hiring",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Complex or sensitive cases",
+                "noCode": "A human is still better",
+                "nextjs": "Smart handover to a human",
+                "winner": "noCode"
+              }
+            ],
+            "conclusion": "The AI voice agent wins on high-volume repetitive conversations. For sensitive cases, it knows when to hand over to a human. The right move: automate the volume, keep humans on the value."
+          },
+          "faq": [
+            {
+              "question": "What is an AI voice agent?",
+              "answer": "It is an assistant that talks with your customers by voice in natural language, understands their request, fetches the right information from your systems and triggers an action (answer, booking, qualification, handover). It works on the web and on the phone, 24/7."
+            },
+            {
+              "question": "Why ElevenLabs and Twilio?",
+              "answer": "ElevenLabs Conversational AI provides natural, multilingual, low-latency voices that do not sound robotic. Twilio handles the phone channel (numbers, inbound and outbound calls, SIP). Together, the agent answers both on your site and on the phone."
+            },
+            {
+              "question": "Can the agent answer the phone, not just the web?",
+              "answer": "Yes. Through Twilio, the agent takes inbound calls and can place outbound calls (callbacks, follow-ups, surveys). The same agent can serve web, phone and other channels."
+            },
+            {
+              "question": "How long to put a voice agent in production?",
+              "answer": "Usually 2 to 3 weeks for a first working agent, depending on scope and integrations (CRM, calendar, APIs). Scope and price are fixed before we start, with a quote within 48h."
+            },
+            {
+              "question": "Is call data GDPR-compliant?",
+              "answer": "Yes, it is handled by design: caller notice, consent where required, minimal logging and controlled data hosting. I build the agent for compliant use on the European side."
+            },
+            {
+              "question": "What happens with complex requests?",
+              "answer": "The agent detects what it should not handle alone and hands over to a human with the context of the exchange. The goal is not to automate everything, but to absorb repetitive volume and keep your team for high-value cases."
+            }
+          ]
+        }
+      },
+      {
+        "title": "SEO + GEO consultant: rank on Google and get cited by AI",
+        "description": "SEO and GEO together: rank on Google and get cited by ChatGPT, Claude, Perplexity and AI Overviews. Schema, entity authority, AI citability.",
+        "slug": "seo-geo-consultant",
+        "color": "indigo",
+        "icon": "manage_search",
+        "cardTitle": "SEO + GEO",
+        "cardDescription": "Rank on Google AND get cited by AI",
+        "isLanding": true,
+        "seoTitle": "SEO + GEO Consultant: Google and AI search | Manda",
+        "seoDescription": "SEO and GEO consultant: rank on Google and get cited by ChatGPT, Claude, Perplexity and AI Overviews. Schema, llms.txt, entity authority, AI citability.",
+        "landing": {
+          "heroText": "SEO gets you ranking on Google. GEO gets you cited by ChatGPT, Claude, Perplexity and Google AI Overviews. Both matter now, and I handle them together: structured content, entity authority, schema, llms.txt and a real AI citability strategy. The best proof: this site applies all of it to itself.",
+          "sections": [
+            {
+              "title": "SEO and GEO are not the same, and you need both",
+              "content": "SEO (Search Engine Optimization) optimizes your position in Google results: keywords, backlinks, technical health, clicks to your site. GEO (Generative Engine Optimization) optimizes something else: being retrieved, understood and cited by AI models when a user asks them a question.\n\nMore and more searches end without a click, inside an AI answer. If you only optimize for classic SEO, you gain rankings but disappear from AI answers. If you only do GEO, you exist in ChatGPT but lose Google traffic. Handling them together covers both surfaces where your customers search."
+            },
+            {
+              "title": "What I do concretely",
+              "content": "On the technical and SEO side: crawlability, indexation, server-side rendering, Core Web Vitals, URL structure, internal linking, and clean JSON-LD schema (Organization, Person, Article, FAQ, Breadcrumb).\n\nOn the GEO side: content structuring for citability (direct answers, TL;DR, question-answer sections, data tables), entity authority (Wikidata, sameAs, consistent profiles), an llms.txt file, and controlled AI crawler access. The goal is twofold: that Google ranks you and that AI cites you as a reliable source."
+            },
+            {
+              "title": "Proof: this portfolio optimizes itself",
+              "content": "I do not theorize GEO, I apply it to my own site and can show the results. This portfolio ranks first on its target queries, has a Wikidata entity linked via sameAs, seven JSON-LD schema types, an llms.txt file, and a structure built for AI citability.\n\nThat is the opposite of an agency promising without showing: you can audit my own site before trusting me with yours. I transpose exactly this method to your case. See also the [freelance vs offshore agency comparison](/en/services/freelance-vs-offshore-agency-madagascar) for how I work."
+            },
+            {
+              "title": "Who it is for and the expected outcome",
+              "content": "It fits SaaS, founders and B2B content sites that want to exist in AI search before competitors settle in. GEO is a window: the ground is still lightly occupied, and taking it early pays.\n\nConcretely, you gain two things: better Google positioning on your queries, and presence in the answers of ChatGPT, Perplexity and AI Overviews when a prospect asks a question in your category. I work in prioritized workstreams, starting with an audit that says what to do and in what order."
+            },
+            {
+              "title": "Method and pricing",
+              "content": "I start with an SEO + GEO audit that measures the current state (technical, content, schema, authority, citability) and produces a prioritized action plan. We then execute the highest-impact workstreams first.\n\nMy day rate is €350, billed directly, with no middleman markup and a quote within 48h. I work remotely with clients in Europe and internationally. The work is documented and reproducible: you keep the method, not just the result."
+            }
+          ],
+          "features": [
+            {
+              "icon": "manage_search",
+              "title": "SEO + GEO audit",
+              "description": "Technical, content, schema, citability."
+            },
+            {
+              "icon": "smart_toy",
+              "title": "AI citability",
+              "description": "ChatGPT, Claude, Perplexity, AI Overviews."
+            },
+            {
+              "icon": "trending_up",
+              "title": "Google ranking",
+              "description": "Technical, structure and internal linking."
+            },
+            {
+              "icon": "verified",
+              "title": "JSON-LD schema",
+              "description": "Organization, Person, Article, FAQ."
+            },
+            {
+              "icon": "target",
+              "title": "Entity authority",
+              "description": "Wikidata, sameAs, consistent profiles."
+            },
+            {
+              "icon": "psychology",
+              "title": "Structured content",
+              "description": "Direct answers, TL;DR, Q&A, tables."
+            }
+          ],
+          "comparisonTable": {
+            "title": "SEO alone vs SEO + GEO",
+            "intro": "Optimizing only for Google is no longer enough when part of search ends in an AI answer. Here is what the combination adds.",
+            "headers": [
+              "Criterion",
+              "SEO alone",
+              "SEO + GEO (my approach)"
+            ],
+            "rows": [
+              {
+                "criterion": "Surface covered",
+                "noCode": "Google results (blue links)",
+                "nextjs": "Google + AI answers (ChatGPT, Perplexity, AI Overviews)",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Zero-click searches",
+                "noCode": "Invisible in the AI answer",
+                "nextjs": "Cited as a source in the answer",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Signals worked",
+                "noCode": "Keywords, backlinks",
+                "nextjs": "+ schema, entity, llms.txt, citability",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Current competition",
+                "noCode": "Saturated for 20 years",
+                "nextjs": "GEO still lightly occupied, window open",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Direct click traffic",
+                "noCode": "Still the core of SEO",
+                "nextjs": "Kept, GEO adds on top",
+                "winner": "tie"
+              }
+            ],
+            "conclusion": "SEO stays essential for click traffic. GEO adds presence in AI answers, where the ground is still open. Handling them together covers both surfaces where your customers search today."
+          },
+          "faq": [
+            {
+              "question": "What is GEO (Generative Engine Optimization)?",
+              "answer": "It is optimization to be retrieved, understood and cited by generative AI engines (ChatGPT, Claude, Perplexity, Google AI Overviews) when a user asks them a question. Where SEO targets ranking and clicks, GEO targets the citation inside the AI answer."
+            },
+            {
+              "question": "Should I drop SEO for GEO?",
+              "answer": "No. SEO remains the foundation of click traffic from Google. GEO adds on top to capture presence in AI answers. I handle them together because your customers now search on both surfaces."
+            },
+            {
+              "question": "How do I get cited by ChatGPT or Perplexity?",
+              "answer": "By combining structured content (direct answers, question-answer sections, tables), entity authority (Wikidata, sameAs, consistent profiles), clean JSON-LD schema, an llms.txt file and controlled AI crawler access. That is exactly the method I apply to my own site."
+            },
+            {
+              "question": "What proof of your results?",
+              "answer": "My own portfolio: first position on its target queries, a linked Wikidata entity, seven schema types, llms.txt, a structure built for citability. You can audit it before trusting me with your site."
+            },
+            {
+              "question": "How long until I see an effect?",
+              "answer": "Technical and structural fixes act within a few weeks on indexation and citability. Durable positioning builds over a few months, especially on a young domain. The starting audit prioritizes what gives the most effect the fastest."
+            }
+          ]
+        }
       }
     ]
   },
