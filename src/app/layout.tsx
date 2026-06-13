@@ -7,7 +7,8 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// Self-hosted Material Symbols subset (42 icons, 6.5 kB woff2, weight 400 fixed)
+// Self-hosted Material Symbols subset (53 icons, 6.5 kB woff2, weight 400 fixed)
+// Regenerated 2026-06-13 to cover every icon name used across dicts + components.
 // Loaded lazily (no preload) — not needed above the fold
 const materialSymbolsFontFace = `@font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/material-symbols-outlined.woff2) format('woff2')}`;
 
