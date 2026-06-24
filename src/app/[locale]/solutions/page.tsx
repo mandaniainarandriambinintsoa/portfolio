@@ -67,86 +67,86 @@ const solutionIndexCopy: Record<
   }
 > = {
   fr: {
-    title: "Solutions IA, n8n et API pour PME | Manda",
+    title: "Automatiser une PME avec IA, n8n et APIs | Manda",
     description:
-      "Solutions concrètes pour PME : automatisation n8n, agents IA support/prospection, API Mobile Money Madagascar et workflows Claude Code.",
-    ogAlt: "Solutions IA, n8n et API pour PME",
+      "Automatisation pour PME : agent vocal IA, workflows n8n, support client IA, prospection, API Mobile Money et workflows Claude Code.",
+    ogAlt: "Automatiser une PME avec IA, n8n et APIs",
     breadcrumbHome: "Accueil",
     breadcrumbSolutions: "Solutions",
     serviceDescription:
-      "Pages solutions pour automatisation n8n, agents IA, API Mobile Money et workflows Claude Code.",
-    eyebrow: "SEO programmatique utile, pas contenu dupliqué",
-    h1: "Solutions IA, n8n et API pour PME",
+      "Solutions d'automatisation pour PME : agents vocaux IA, workflows n8n, paiements Mobile Money, support et prospection.",
+    eyebrow: "Automatisation PME, IA et workflows métier",
+    h1: "Automatiser une PME avec IA, n8n et APIs",
     lead:
-      "Des pages concrètes pour comprendre ce que je peux construire : automatisations métier, agents IA, paiements Mobile Money et workflows de développement assisté par IA.",
+      "Je transforme vos appels, formulaires, emails, paiements et tâches répétitives en systèmes fiables : agent vocal IA, workflows n8n, dashboard, API et validation humaine quand c'est nécessaire.",
     updatedPrefix: "Mis à jour le",
     updatedDate: "24 juin 2026",
     primaryCta: "Parler de mon besoin",
     secondaryCta: "Voir les services",
-    principlesLabel: "Principes éditoriaux",
+    principlesLabel: "Cas d'usage fréquents",
     principles: [
       {
-        title: "Lisible pour les humains",
+        title: "Répondre aux clients plus vite",
         description:
-          "Chaque page répond vite, explique le problème métier et donne des exemples concrets.",
+          "Agent vocal, agent support ou workflow email pour qualifier les demandes sans perdre les cas importants.",
       },
       {
-        title: "Compréhensible par les IA",
+        title: "Supprimer les tâches manuelles",
         description:
-          "Structure claire, FAQ visible, liens internes, sources officielles et JSON-LD cohérent.",
+          "n8n connecte CRM, tableurs, factures, notifications et reporting pour éviter les copier-coller.",
       },
       {
-        title: "Orienté client réel",
+        title: "Brancher les paiements et APIs",
         description:
-          "On cible les requêtes qui peuvent devenir des projets, pas du trafic décoratif.",
+          "Mobile Money, webhooks, dashboards et backends Node.js pour suivre les statuts sans bricolage.",
       },
     ],
-    waveEyebrow: "Première vague",
-    waveTitle: "5 pages à forte intention business",
+    waveEyebrow: "Choisir un problème à résoudre",
+    waveTitle: "6 solutions écrites autour de besoins client réels",
     waveDescription:
-      "Les sujets viennent des signaux GSC et des offres où le portfolio a déjà des preuves : n8n, agents IA, Node.js/API, Mobile Money et Claude Code.",
-    readLabel: "Lire la solution",
+      "Chaque page part d'un problème concret : appels entrants, support, prospection, paiements, back-office ou développement assisté par IA.",
+    readLabel: "Voir comment je le construis",
   },
   en: {
-    title: "AI, n8n and API Solutions for SMBs | Manda",
+    title: "Automate an SMB with AI, n8n and APIs | Manda",
     description:
-      "Concrete solutions for SMBs: n8n automation, AI support/prospecting agents, Mobile Money API Madagascar and Claude Code workflows.",
-    ogAlt: "AI, n8n and API solutions for SMBs",
+      "Automation for SMBs: AI voice agent, n8n workflows, AI customer support, prospecting, Mobile Money APIs and Claude Code workflows.",
+    ogAlt: "Automate an SMB with AI, n8n and APIs",
     breadcrumbHome: "Home",
     breadcrumbSolutions: "Solutions",
     serviceDescription:
-      "Solution pages for n8n automation, AI agents, Mobile Money APIs and Claude Code workflows.",
-    eyebrow: "Useful programmatic SEO, not duplicated content",
-    h1: "AI, n8n and API solutions for SMBs",
+      "Automation solutions for SMBs: AI voice agents, n8n workflows, Mobile Money payments, support and prospecting.",
+    eyebrow: "SMB automation, AI and business workflows",
+    h1: "Automate an SMB with AI, n8n and APIs",
     lead:
-      "Concrete pages to understand what I can build: business automation, AI agents, Mobile Money payments and AI-assisted development workflows.",
+      "I turn calls, forms, emails, payments and repetitive work into reliable systems: AI voice agent, n8n workflows, dashboards, APIs and human validation where it matters.",
     updatedPrefix: "Last updated:",
     updatedDate: "June 24, 2026",
     primaryCta: "Discuss my need",
     secondaryCta: "View services",
-    principlesLabel: "Editorial principles",
+    principlesLabel: "Common use cases",
     principles: [
       {
-        title: "Readable for humans",
+        title: "Reply to customers faster",
         description:
-          "Each page answers quickly, explains the business problem and gives concrete examples.",
+          "Voice agent, support agent or email workflow to qualify requests without losing important cases.",
       },
       {
-        title: "Understandable by AI",
+        title: "Remove manual tasks",
         description:
-          "Clear structure, visible FAQ, internal links, official sources and coherent JSON-LD.",
+          "n8n connects CRM, spreadsheets, invoices, notifications and reporting to avoid copy-paste work.",
       },
       {
-        title: "Focused on real clients",
+        title: "Connect payments and APIs",
         description:
-          "The pages target queries that can become real projects, not decorative traffic.",
+          "Mobile Money, webhooks, dashboards and Node.js backends to track statuses without fragile workarounds.",
       },
     ],
-    waveEyebrow: "First wave",
-    waveTitle: "5 pages with strong business intent",
+    waveEyebrow: "Pick a problem to solve",
+    waveTitle: "6 solutions written around real client needs",
     waveDescription:
-      "The topics come from GSC signals and offers where the portfolio already has proof: n8n, AI agents, Node.js/API, Mobile Money and Claude Code.",
-    readLabel: "Read the solution",
+      "Each page starts from a concrete problem: inbound calls, support, prospecting, payments, back office or AI-assisted development.",
+    readLabel: "See how I build it",
   },
 };
 
@@ -199,7 +199,12 @@ export default async function SolutionsPage({
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
   const copy = solutionIndexCopy[locale];
   const prefix = locale === "fr" ? "" : "/en";
-  const solutions = getSolutions(locale);
+  const featuredSlug = locale === "fr" ? "developpeur-agent-vocal-ia" : "ai-voice-agent-developer";
+  const solutions = [...getSolutions(locale)].sort((a, b) => {
+    if (a.slug === featuredSlug) return -1;
+    if (b.slug === featuredSlug) return 1;
+    return 0;
+  });
   const breadcrumbs = [
     { name: copy.breadcrumbHome, href: locale === "fr" ? "/" : "/en" },
     { name: copy.breadcrumbSolutions, href: `${prefix}/solutions` },

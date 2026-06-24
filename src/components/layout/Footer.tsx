@@ -58,6 +58,7 @@ export default function Footer({
           { label: "API Mobile Money", href: "/solutions/api-mobile-money-madagascar" },
           { label: "Agent IA prospection", href: "/solutions/agent-ia-prospection" },
           { label: "Workflows Claude Code", href: "/solutions/workflows-n8n-claude-code" },
+          { label: "Agent vocal IA appels", href: "/solutions/developpeur-agent-vocal-ia" },
         ]
       : [
           { label: "JavaScript Fullstack", href: "/en/services/javascript-developer-madagascar" },
@@ -78,6 +79,7 @@ export default function Footer({
           { label: "Mobile Money API", href: "/en/solutions/mobile-money-api-madagascar" },
           { label: "AI prospecting", href: "/en/solutions/ai-prospecting-agent" },
           { label: "Claude Code workflows", href: "/en/solutions/n8n-claude-code-workflows" },
+          { label: "AI voice calls", href: "/en/solutions/ai-voice-agent-developer" },
         ];
 
   const expertiseHeading = locale === "fr" ? "Expertise" : "Expertise";

@@ -1044,6 +1044,207 @@ export const frSolutions: Solution[] = [
       buttonLabel: "Designer mon workflow IA",
     },
   },
+  {
+    slug: "developpeur-agent-vocal-ia",
+    icon: "call",
+    accent: "emerald",
+    title: "Développeur agent vocal IA : appels entrants, qualification et rendez-vous",
+    eyebrow: "Solution agent vocal IA",
+    seoTitle: "Développeur agent vocal IA | Appels, qualification et rendez-vous",
+    seoDescription:
+      "Développeur agent vocal IA pour automatiser appels entrants, qualification client, prise de rendez-vous, relances et transfert humain avec ElevenLabs, Twilio et n8n.",
+    primaryKeyword: "développeur agent vocal IA",
+    secondaryKeywords: [
+      "agent vocal IA",
+      "assistant vocal IA entreprise",
+      "agent vocal ElevenLabs",
+      "agent IA téléphone",
+    ],
+    shortAnswer:
+      "Un agent vocal IA répond au téléphone, qualifie la demande, pose les bonnes questions, peut réserver un créneau et transmet les cas sensibles à un humain. Je construis l'agent avec un script cadré, une base de connaissance, des logs, des webhooks et une intégration n8n/CRM.",
+    heroLead:
+      "Le vrai sujet n'est pas de faire parler une IA au téléphone. Le vrai sujet est de ne plus rater les appels utiles, tout en gardant un transfert humain quand la demande devient sensible.",
+    fit: [
+      "Vous manquez des appels parce que l'équipe est occupée, en intervention ou hors horaires.",
+      "Vos prospects posent souvent les mêmes questions avant de demander un devis ou un rendez-vous.",
+      "Vous voulez qualifier les demandes avant de rappeler : besoin, budget, urgence, zone, coordonnées.",
+      "Vous avez besoin d'un agent vocal relié à votre CRM, agenda, WhatsApp, email ou workflow n8n.",
+    ],
+    outcomes: [
+      {
+        title: "Moins d'appels perdus",
+        description:
+          "L'agent peut accueillir les appels entrants, collecter les informations clés et prévenir l'équipe avec un résumé exploitable.",
+      },
+      {
+        title: "Demandes mieux qualifiées",
+        description:
+          "Chaque appel peut produire un motif, un niveau d'urgence, une fiche contact et une prochaine action.",
+      },
+      {
+        title: "Rendez-vous plus propres",
+        description:
+          "L'agent peut préparer ou réserver un créneau selon vos règles, puis confirmer par email, SMS ou notification interne.",
+      },
+    ],
+    problem: {
+      title: "Un appel client est souvent le moment où l'intention est la plus forte",
+      paragraphs: [
+        "Quand une personne appelle, elle veut souvent une réponse rapide : prix, disponibilité, réservation, devis, support ou urgence. Si personne ne décroche, la demande peut partir chez un concurrent ou rester bloquée dans une messagerie vocale.",
+        "Un agent vocal IA peut traiter les demandes répétitives et collecter le contexte avant qu'un humain reprenne. Il ne doit pas improviser : son rôle est d'accueillir, clarifier, qualifier, résumer et transférer quand la décision demande une personne.",
+        "Je construis l'agent comme un workflow métier : script d'appel, règles de transfert, base de connaissance, outils connectés, journalisation, tests sur scénarios réels et amélioration après les premiers appels.",
+      ],
+    },
+    deliverables: {
+      title: "Ce que je peux livrer",
+      items: [
+        {
+          title: "Script vocal cadré",
+          description:
+            "Message d'accueil, questions de qualification, réponses autorisées, phrases de refus et règles de transfert humain.",
+        },
+        {
+          title: "Agent ElevenLabs ou téléphonie Twilio",
+          description:
+            "Configuration de l'expérience vocale, des webhooks, des événements d'appel et des outils que l'agent peut utiliser.",
+        },
+        {
+          title: "Workflow n8n après appel",
+          description:
+            "Résumé de l'appel, création CRM, notification WhatsApp/email, ajout dans un agenda ou demande de rappel.",
+        },
+        {
+          title: "Dashboard et logs",
+          description:
+            "Historique des appels, statut, motif, résultat, score de qualification et prochaine action pour l'équipe.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Architecture type",
+      intro:
+        "Je sépare la voix, la logique métier et les actions. L'agent parle, mais les décisions importantes restent dans des règles et des workflows contrôlés.",
+      steps: [
+        {
+          title: "1. Appel entrant",
+          description:
+            "Un numéro reçoit l'appel et déclenche l'agent vocal avec le bon message d'accueil.",
+        },
+        {
+          title: "2. Qualification",
+          description:
+            "L'agent collecte nom, contact, besoin, urgence, zone, budget ou créneau souhaité.",
+        },
+        {
+          title: "3. Action métier",
+          description:
+            "n8n ou le backend crée une fiche, prévient l'équipe, prépare un rendez-vous ou transmet à un humain.",
+        },
+        {
+          title: "4. Trace et amélioration",
+          description:
+            "Chaque appel laisse un résumé, un statut et des signaux pour corriger le script si nécessaire.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Garde-fous indispensables",
+      items: [
+        {
+          title: "Transfert humain clair",
+          description:
+            "L'agent doit savoir transférer ou promettre un rappel quand la demande dépasse son périmètre.",
+        },
+        {
+          title: "Pas de promesse risquée",
+          description:
+            "Prix définitif, diagnostic sensible, engagement contractuel ou décision commerciale peuvent rester côté humain.",
+        },
+        {
+          title: "Consentement et transparence",
+          description:
+            "Le parcours doit rester clair pour l'appelant, avec une gestion propre des données collectées pendant l'appel.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Développeur d'agents vocaux IA",
+        href: "/services/developpeur-agent-vocal-ia",
+        description:
+          "Service dédié aux agents vocaux IA avec ElevenLabs, Twilio, qualification et workflow métier.",
+      },
+      {
+        label: "Développeur d'agents IA",
+        href: "/services/developpeur-agent-ia-madagascar",
+        description:
+          "Même logique agentique appliquée au support, à la qualification et aux actions métier.",
+      },
+      {
+        label: "Expert automatisation n8n",
+        href: "/services/automatisation-n8n-madagascar",
+        description:
+          "Pour connecter l'appel au CRM, à l'agenda, aux notifications et au reporting.",
+      },
+    ],
+    sources: [
+      {
+        label: "ElevenLabs agents",
+        href: "https://elevenlabs.io/docs/eleven-agents/overview",
+        description:
+          "Documentation officielle pour construire, lancer et superviser des agents conversationnels.",
+      },
+      {
+        label: "ElevenLabs post-call webhooks",
+        href: "https://elevenlabs.io/docs/eleven-agents/workflows/post-call-webhooks",
+        description:
+          "Référence pour récupérer les informations utiles après analyse d'un appel.",
+      },
+      {
+        label: "Twilio Voice webhooks",
+        href: "https://www.twilio.com/docs/usage/webhooks/voice-webhooks",
+        description:
+          "Documentation officielle sur les callbacks d'appels entrants et sortants Twilio Voice.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "Développeur d'agents vocaux IA",
+        href: "/services/developpeur-agent-vocal-ia",
+        description:
+          "La page service principale pour cadrer un agent vocal IA complet.",
+      },
+      {
+        label: "Développeur Node.js à Madagascar",
+        href: "/services/developpeur-nodejs-madagascar",
+        description:
+          "Pour les webhooks, APIs, dashboards et intégrations serveur autour des appels.",
+      },
+    ],
+    faq: [
+      {
+        question: "Un agent vocal IA peut-il prendre des rendez-vous ?",
+        answer:
+          "Oui, si les règles sont claires : horaires disponibles, durée, zone, type de demande et validation éventuelle. L'agent peut aussi préparer le rendez-vous sans le confirmer automatiquement.",
+      },
+      {
+        question: "Peut-on transférer l'appel à un humain ?",
+        answer:
+          "Oui. Le transfert humain fait partie des garde-fous importants, surtout pour les urgences, les demandes sensibles ou les clients à forte valeur.",
+      },
+      {
+        question: "Faut-il Twilio, ElevenLabs ou les deux ?",
+        answer:
+          "Cela dépend du parcours. ElevenLabs peut gérer l'agent conversationnel, Twilio peut gérer la téléphonie et les webhooks. Je choisis l'architecture selon le pays, le numéro, les coûts et les intégrations nécessaires.",
+      },
+    ],
+    cta: {
+      title: "Vous voulez répondre aux appels sans recruter un standardiste ?",
+      description:
+        "On peut commencer par un agent simple : accueil, qualification, résumé, notification équipe et transfert humain sur les cas sensibles.",
+      buttonLabel: "Cadrer mon agent vocal",
+    },
+  },
 ];
 
 export const enSolutions: Solution[] = [
@@ -2028,6 +2229,207 @@ export const enSolutions: Solution[] = [
       buttonLabel: "Design my AI workflow",
     },
   },
+  {
+    slug: "ai-voice-agent-developer",
+    icon: "call",
+    accent: "emerald",
+    title: "AI voice agent developer: inbound calls, qualification and bookings",
+    eyebrow: "AI voice agent solution",
+    seoTitle: "AI Voice Agent Developer | Calls, Qualification and Bookings",
+    seoDescription:
+      "AI voice agent developer for inbound calls, customer qualification, appointment booking, follow-ups and human handoff with ElevenLabs, Twilio and n8n.",
+    primaryKeyword: "AI voice agent developer",
+    secondaryKeywords: [
+      "AI voice agent",
+      "AI phone agent",
+      "ElevenLabs voice agent",
+      "voice AI for business",
+    ],
+    shortAnswer:
+      "An AI voice agent answers phone calls, qualifies the request, asks the right questions, can prepare a booking and escalates sensitive cases to a human. I build it with a framed script, knowledge base, logs, webhooks and n8n/CRM integration.",
+    heroLead:
+      "The real goal is not to make AI speak on the phone. The real goal is to stop missing useful calls while keeping human handoff when the request becomes sensitive.",
+    fit: [
+      "You miss calls because the team is busy, on-site or outside opening hours.",
+      "Prospects often ask the same questions before requesting a quote or booking.",
+      "You want to qualify requests before calling back: need, budget, urgency, location and contact details.",
+      "You need a voice agent connected to your CRM, calendar, WhatsApp, email or n8n workflow.",
+    ],
+    outcomes: [
+      {
+        title: "Fewer missed calls",
+        description:
+          "The agent can welcome inbound calls, collect key information and notify the team with an actionable summary.",
+      },
+      {
+        title: "Better qualified requests",
+        description:
+          "Each call can produce a reason, urgency level, contact record and next action.",
+      },
+      {
+        title: "Cleaner bookings",
+        description:
+          "The agent can prepare or book a slot according to your rules, then confirm by email, SMS or internal notification.",
+      },
+    ],
+    problem: {
+      title: "A customer call is often the moment with the strongest intent",
+      paragraphs: [
+        "When someone calls, they usually want a fast answer: price, availability, booking, quote, support or urgent help. If nobody answers, the request can go to a competitor or get stuck in voicemail.",
+        "An AI voice agent can handle repetitive requests and collect context before a human takes over. It should not improvise: its job is to welcome, clarify, qualify, summarize and transfer when the decision needs a person.",
+        "I build the agent as a business workflow: call script, handoff rules, knowledge base, connected tools, logging, tests on real scenarios and improvement after the first calls.",
+      ],
+    },
+    deliverables: {
+      title: "What I can deliver",
+      items: [
+        {
+          title: "Framed voice script",
+          description:
+            "Greeting, qualification questions, allowed answers, refusal phrases and human handoff rules.",
+        },
+        {
+          title: "ElevenLabs agent or Twilio telephony",
+          description:
+            "Voice experience, webhooks, call events and the tools the agent can use.",
+        },
+        {
+          title: "Post-call n8n workflow",
+          description:
+            "Call summary, CRM creation, WhatsApp/email notification, calendar action or callback request.",
+        },
+        {
+          title: "Dashboard and logs",
+          description:
+            "Call history, status, reason, result, qualification score and next action for the team.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Typical architecture",
+      intro:
+        "I separate voice, business logic and actions. The agent speaks, but important decisions stay in controlled rules and workflows.",
+      steps: [
+        {
+          title: "1. Inbound call",
+          description:
+            "A phone number receives the call and triggers the voice agent with the right greeting.",
+        },
+        {
+          title: "2. Qualification",
+          description:
+            "The agent collects name, contact, need, urgency, area, budget or preferred slot.",
+        },
+        {
+          title: "3. Business action",
+          description:
+            "n8n or the backend creates a record, notifies the team, prepares a booking or transfers to a human.",
+        },
+        {
+          title: "4. Trace and improvement",
+          description:
+            "Each call leaves a summary, status and signals to adjust the script when needed.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Required safeguards",
+      items: [
+        {
+          title: "Clear human handoff",
+          description:
+            "The agent must know when to transfer or promise a callback when the request goes beyond its scope.",
+        },
+        {
+          title: "No risky promises",
+          description:
+            "Final price, sensitive diagnosis, contractual commitment or commercial decision can remain human-controlled.",
+        },
+        {
+          title: "Consent and transparency",
+          description:
+            "The call journey must stay clear for the caller, with clean handling of data collected during the call.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "AI Voice Agent Developer",
+        href: "/en/services/ai-voice-agent-developer",
+        description:
+          "Dedicated service for AI voice agents with ElevenLabs, Twilio, qualification and business workflows.",
+      },
+      {
+        label: "AI Agent Developer",
+        href: "/en/services/ai-agent-developer-madagascar",
+        description:
+          "The same agentic logic applied to support, qualification and business actions.",
+      },
+      {
+        label: "n8n Automation Expert",
+        href: "/en/services/n8n-automation-expert-madagascar",
+        description:
+          "To connect calls to CRM, calendars, notifications and reporting.",
+      },
+    ],
+    sources: [
+      {
+        label: "ElevenLabs agents",
+        href: "https://elevenlabs.io/docs/eleven-agents/overview",
+        description:
+          "Official documentation for building, launching and monitoring conversational agents.",
+      },
+      {
+        label: "ElevenLabs post-call webhooks",
+        href: "https://elevenlabs.io/docs/eleven-agents/workflows/post-call-webhooks",
+        description:
+          "Reference for receiving useful call information after analysis is complete.",
+      },
+      {
+        label: "Twilio Voice webhooks",
+        href: "https://www.twilio.com/docs/usage/webhooks/voice-webhooks",
+        description:
+          "Official documentation for inbound and outbound Twilio Voice callbacks.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "AI Voice Agent Developer",
+        href: "/en/services/ai-voice-agent-developer",
+        description:
+          "The main service page for scoping a complete AI voice agent.",
+      },
+      {
+        label: "Hire a Node.js Developer in Madagascar",
+        href: "/en/services/hire-nodejs-developer-madagascar",
+        description:
+          "For webhooks, APIs, dashboards and server integrations around calls.",
+      },
+    ],
+    faq: [
+      {
+        question: "Can an AI voice agent book appointments?",
+        answer:
+          "Yes, if the rules are clear: available hours, duration, area, request type and possible validation. The agent can also prepare the booking without confirming it automatically.",
+      },
+      {
+        question: "Can the call be transferred to a human?",
+        answer:
+          "Yes. Human handoff is one of the important safeguards, especially for urgent cases, sensitive requests or high-value customers.",
+      },
+      {
+        question: "Do we need Twilio, ElevenLabs or both?",
+        answer:
+          "It depends on the journey. ElevenLabs can handle the conversational agent, Twilio can handle telephony and webhooks. I choose the architecture based on country, phone number, costs and required integrations.",
+      },
+    ],
+    cta: {
+      title: "Want to answer calls without hiring a receptionist?",
+      description:
+        "We can start with a simple agent: greeting, qualification, summary, team notification and human handoff for sensitive cases.",
+      buttonLabel: "Scope my voice agent",
+    },
+  },
 ];
 
 const solutionsByLocale: Record<Locale, Solution[]> = {
@@ -2049,7 +2451,10 @@ const serviceToSolutionSlugs: Record<string, string[]> = {
     "agent-ia-support-client",
     "agent-ia-prospection",
   ],
-  "developpeur-agent-vocal-ia": ["agent-ia-support-client"],
+  "developpeur-agent-vocal-ia": [
+    "developpeur-agent-vocal-ia",
+    "agent-ia-support-client",
+  ],
   "developpeur-nodejs-madagascar": ["api-mobile-money-madagascar"],
   "developpeur-react-nextjs-madagascar": ["api-mobile-money-madagascar"],
   "developpeur-nextjs-supabase-madagascar": [
@@ -2072,7 +2477,10 @@ const serviceToSolutionSlugs: Record<string, string[]> = {
     "ai-customer-support-agent",
     "ai-prospecting-agent",
   ],
-  "ai-voice-agent-developer": ["ai-customer-support-agent"],
+  "ai-voice-agent-developer": [
+    "ai-voice-agent-developer",
+    "ai-customer-support-agent",
+  ],
   "hire-nodejs-developer-madagascar": ["mobile-money-api-madagascar"],
   "hire-react-nextjs-developer-madagascar": ["mobile-money-api-madagascar"],
   "nextjs-supabase-developer-madagascar": [

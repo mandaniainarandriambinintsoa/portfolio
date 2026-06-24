@@ -23,6 +23,7 @@ Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance bas
 - [API Mobile Money Madagascar](https://manda-ia.com/solutions/api-mobile-money-madagascar): Intégration Orange Money, MVola, Airtel Money, callbacks, dashboard et rapprochement
 - [Agent IA prospection](https://manda-ia.com/solutions/agent-ia-prospection): Qualification de leads, scoring ICP, brouillons personnalisés, CRM et relances n8n
 - [Workflows n8n + Claude Code](https://manda-ia.com/solutions/workflows-n8n-claude-code): Automatisation du développement assisté par IA avec validation humaine, logs et Git
+- [Développeur agent vocal IA](https://manda-ia.com/solutions/developpeur-agent-vocal-ia): Appels entrants, qualification, prise de rendez-vous, transfert humain, ElevenLabs, Twilio et n8n
 
 ## Solutions EN
 
@@ -31,6 +32,7 @@ Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance bas
 - [Mobile Money API Madagascar](https://manda-ia.com/en/solutions/mobile-money-api-madagascar): Orange Money, MVola, Airtel Money, callbacks, dashboard and reconciliation
 - [AI Prospecting Agent](https://manda-ia.com/en/solutions/ai-prospecting-agent): Lead qualification, ICP scoring, personalized drafts, CRM sync and n8n follow-ups
 - [n8n + Claude Code Workflows](https://manda-ia.com/en/solutions/n8n-claude-code-workflows): AI-assisted development workflows with human validation, logs and Git
+- [AI Voice Agent Developer](https://manda-ia.com/en/solutions/ai-voice-agent-developer): Inbound calls, qualification, appointment booking, human handoff, ElevenLabs, Twilio and n8n
 
 ## Projets
 
