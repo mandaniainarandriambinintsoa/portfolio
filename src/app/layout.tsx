@@ -7,10 +7,10 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-// Self-hosted Material Symbols subset (53 icons, 6.5 kB woff2, weight 400 fixed)
-// Regenerated 2026-06-13 to cover every icon name used across dicts + components.
-// Loaded lazily (no preload) — not needed above the fold
-const materialSymbolsFontFace = `@font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/material-symbols-outlined.woff2) format('woff2')}`;
+// Self-hosted Material Symbols subset (56 icons, 7.8 kB woff2, weight 400 fixed).
+// Regenerated 2026-06-24 to include solution page icons such as call, terminal, and travel_explore.
+// Versioned URL prevents stale font cache from showing icon names as text.
+const materialSymbolsFontFace = `@font-face{font-family:'Material Symbols Outlined';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/material-symbols-outlined.woff2?v=20260624) format('woff2')}`;
 
 // GTM loaded on first user interaction only (scroll/click/touch)
 // Keeps 455 kB + 100ms main thread out of initial load entirely
@@ -38,9 +38,8 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <head>
-        {/* Low priority preload — prevents CLS from icon swap without competing with critical resources */}
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link rel="preload" href="/fonts/material-symbols-outlined.woff2" as="font" type="font/woff2" crossOrigin="anonymous" fetchPriority="low" />
+        {/* Low priority preload - prevents CLS from icon swap without competing with critical resources */}
+        <link rel="preload" href="/fonts/material-symbols-outlined.woff2?v=20260624" as="font" type="font/woff2" crossOrigin="anonymous" fetchPriority="low" />
         <style dangerouslySetInnerHTML={{ __html: materialSymbolsFontFace }} />
         <script dangerouslySetInnerHTML={{ __html: setLangOnEn }} />
       </head>
