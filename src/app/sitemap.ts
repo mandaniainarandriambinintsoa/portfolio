@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/constants";
 import { getDictionary } from "@/i18n/dictionaries";
 import { getAllBlogSitemapEntries } from "@/lib/data/blog";
 import { getAllProjectSitemapEntries } from "@/lib/data/projects";
+import { getSolutions, SOLUTION_LAST_UPDATED } from "@/lib/data/solutions";
 
 // Revalidate every hour so lastmod reflects Supabase updates without a full redeploy
 export const revalidate = 3600;
@@ -64,6 +65,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (const route of staticRoutes) {
     items.push(entry(route.fr, route.en, now, "fr"));
     items.push(entry(route.fr, route.en, now, "en"));
+  }
+
+  // Solutions SEO/GEO — map by array index to keep FR/EN pairs in sync
+  const solutionLastModified = asDate(SOLUTION_LAST_UPDATED, now);
+  items.push(entry("/solutions", "/en/solutions", solutionLastModified, "fr"));
+  items.push(entry("/solutions", "/en/solutions", solutionLastModified, "en"));
+
+  const frSolutions = getSolutions("fr");
+  const enSolutions = getSolutions("en");
+  const solutionCount = Math.min(frSolutions.length, enSolutions.length);
+  for (let i = 0; i < solutionCount; i++) {
+    const pathFr = `/solutions/${frSolutions[i].slug}`;
+    const pathEn = `/en/solutions/${enSolutions[i].slug}`;
+    items.push(entry(pathFr, pathEn, solutionLastModified, "fr"));
+    items.push(entry(pathFr, pathEn, solutionLastModified, "en"));
   }
 
   // Services (generic + landing) — map by array index to keep FR/EN pairs in sync

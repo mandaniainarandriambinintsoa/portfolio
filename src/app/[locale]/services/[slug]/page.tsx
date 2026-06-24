@@ -10,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
+import { getRelatedSolutionsForService, type Solution } from "@/lib/data/solutions";
 
 function formatLastUpdated(iso: string, locale: "fr" | "en") {
   const d = new Date(iso);
@@ -177,6 +178,13 @@ export default async function ServicePage({
     purple: "bg-purple-500/10 border-purple-500/20",
   };
 
+  const solutionAccentMap: Record<Solution["accent"], { icon: string; border: string; bg: string }> = {
+    indigo: { icon: "text-indigo-300", border: "border-indigo-500/25", bg: "bg-indigo-500/10" },
+    emerald: { icon: "text-emerald-300", border: "border-emerald-500/25", bg: "bg-emerald-500/10" },
+    blue: { icon: "text-blue-300", border: "border-blue-500/25", bg: "bg-blue-500/10" },
+    purple: { icon: "text-purple-300", border: "border-purple-500/25", bg: "bg-purple-500/10" },
+  };
+
   if (!isLanding) {
     return (
       <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
@@ -206,6 +214,7 @@ export default async function ServicePage({
   }
 
   const landing = service.landing;
+  const relatedSolutions = getRelatedSolutionsForService(locale, service.slug);
 
   return (
     <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
@@ -356,6 +365,53 @@ export default async function ServicePage({
                 {landing.comparisonTable.conclusion}
               </p>
             )}
+          </div>
+        )}
+
+        {/* Related solution pages */}
+        {relatedSolutions.length > 0 && (
+          <div className="mb-20">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4 text-white">
+              {locale === "fr" ? "Solutions liées" : "Related solutions"}
+            </h2>
+            <p className="text-slate-400 leading-relaxed mb-8 max-w-3xl">
+              {locale === "fr"
+                ? "Pages plus concrètes pour cadrer un besoin métier précis avant de passer au devis ou au prototype."
+                : "More concrete pages to scope a precise business need before moving to an estimate or prototype."}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {relatedSolutions.map((solution) => {
+                const accent = solutionAccentMap[solution.accent];
+                return (
+                  <Link key={solution.slug} href={`${prefix}/solutions/${solution.slug}`} className="group block h-full">
+                    <GlassCard
+                      borderColor={accent.border}
+                      className="h-full hover:bg-white/[0.04] transition-colors"
+                    >
+                      <div className="flex items-start gap-4">
+                        <span
+                          className={`material-symbols-outlined rounded-xl border ${accent.border} ${accent.bg} ${accent.icon} p-2 text-2xl`}
+                          aria-hidden="true"
+                        >
+                          {solution.icon}
+                        </span>
+                        <div>
+                          <p className={`text-xs font-bold tracking-[0.16em] uppercase ${accent.icon} mb-2`}>
+                            {solution.primaryKeyword}
+                          </p>
+                          <h3 className="font-bold text-white mb-2 group-hover:underline underline-offset-4">
+                            {solution.title}
+                          </h3>
+                          <p className="text-sm text-slate-400 leading-relaxed">
+                            {solution.seoDescription}
+                          </p>
+                        </div>
+                      </div>
+                    </GlassCard>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         )}
 

@@ -275,10 +275,10 @@
         "cardTitle": "React & Next.js",
         "cardDescription": "Apps web performantes en React et Next.js. SSR, API Routes, TypeScript, Supabase.",
         "isLanding": true,
-        "seoTitle": "Développeur React / Next.js à Madagascar — #1 Freelance Fullstack",
-        "seoDescription": "Développeur React et Next.js freelance #1 à Antananarivo, Madagascar. Applications web performantes, SSR, TypeScript, Supabase. TJM compétitif pour le marché EU/US, 20+ projets livrés. Devis gratuit sous 24h.",
+        "seoTitle": "Développeur React à Madagascar | Freelance Next.js SaaS",
+        "seoDescription": "Développeur React à Madagascar pour SaaS, dashboards et sites Next.js performants. TypeScript, Supabase, PageSpeed 98-100, devis gratuit sous 24h.",
         "landing": {
-          "heroText": "Vous cherchez un développeur React / Next.js fiable et compétitif pour votre application web ? Basé à Antananarivo, je conçois des applications fullstack JavaScript performantes — du MVP au SaaS en production. Plus de 20 projets livrés, un TJM jusqu'à 2 fois inférieur aux freelances européens, et une expertise confirmée sur l'écosystème React moderne.",
+          "heroText": "Vous cherchez un développeur React à Madagascar pour créer un SaaS, un dashboard ou une application web performante ? Basé à Antananarivo, je conçois des produits React / Next.js fullstack — du MVP au SaaS en production. Plus de 20 projets livrés, un TJM jusqu'à 2 fois inférieur aux freelances européens, et une expertise confirmée sur l'écosystème React moderne.",
           "heroImage": {
             "src": "/images/projects/factumation-logiciel-facturation.png",
             "alt": "Application web React Next.js développée par Manda - Factumation SaaS"
@@ -311,7 +311,7 @@
           ],
           "sections": [
             {
-              "title": "Pourquoi React et Next.js en 2026 ?",
+              "title": "Développeur React à Madagascar : pourquoi React et Next.js en 2026 ?",
               "content": "React est la bibliothèque JavaScript la plus utilisée au monde pour construire des interfaces utilisateur. Selon le [sondage Stack Overflow Developer Survey](https://survey.stackoverflow.co/), React reste largement en tête sur les frameworks web professionnels, loin devant Angular et Vue.js.\n\nNext.js, le framework React de Vercel, ajoute le rendu serveur (SSR/SSG), le routage automatique, l'optimisation d'images et le déploiement instantané. En 2026, [Next.js propulse les sites de Netflix, TikTok, Twitch, Notion et des milliers de SaaS](https://nextjs.org/showcase).\n\nPourquoi ça compte pour votre projet : une application Next.js charge en moins d'une seconde (LCP < 1s), se référence parfaitement sur Google grâce au rendu serveur, et scale de 10 à 100 000 utilisateurs sans changement d'architecture."
             },
             {
@@ -433,7 +433,7 @@
           ],
           "faq": [
             {
-              "question": "Combien coûte un projet React / Next.js à Madagascar ?",
+              "question": "Combien coûte un développeur React à Madagascar ?",
               "answer": "Un site Next.js démarre à 500€ (Starter, 5 pages), 1 000€ (Pro, 10 pages design custom) ou 1 500€ (Avancé, multilingue + CMS). Un MVP SaaS démarre à 2 000€ (Starter avec auth + 1 feature core), 4 000€ pour la version Pro avec Stripe et admin. Au-delà c'est sur devis. Le détail complet des paliers est sur la home, section Tarifs."
             },
             {
@@ -1153,14 +1153,14 @@
         "cardTitle": "Node.js Madagascar",
         "cardDescription": "Backend, API REST/GraphQL et temps réel",
         "isLanding": true,
-        "seoTitle": "Développeur Node.js Madagascar : backend & API | Manda",
-        "seoDescription": "Développeur Node.js freelance à Madagascar. Backend, API REST/GraphQL, NestJS, temps réel et intégrations. Portfolio réel, devis sous 48h, parlons de votre projet.",
+        "seoTitle": "Développeur Node.js à Madagascar | Freelance backend API",
+        "seoDescription": "Développeur Node.js à Madagascar pour API REST/GraphQL, NestJS, Supabase et temps réel. Freelance direct, portfolio réel, devis sous 48h.",
         "landing": {
-          "heroText": "Je suis développeur backend Node.js indépendant basé à Antananarivo. Je construis des API REST et GraphQL, des services temps réel et des intégrations sur mesure, pas des slides. Vous travaillez avec une personne identifiable et un portfolio vérifiable, pas avec un pool d'agence anonyme.",
+          "heroText": "Vous cherchez un développeur Node.js à Madagascar pour créer ou reprendre une API backend ? Je suis indépendant, basé à Antananarivo, et je construis des API REST et GraphQL, des services temps réel et des intégrations sur mesure, pas des slides. Vous travaillez avec une personne identifiable et un portfolio vérifiable, pas avec un pool d'agence anonyme.",
           "sections": [
             {
-              "title": "Un freelance Node.js identifiable, pas une agence anonyme",
-              "content": "Sur la requête \"développeur node.js madagascar\", la première page de Google ne renvoie que des agences et des job boards (Code-Talent, MadaAllStar, Indeed, Freelancer, Maasil). Aucun freelance individuel avec un portfolio public et vérifiable.\n\nJe comble cette faille : vous parlez directement à la personne qui écrira le code, sans intermédiaire commercial ni rotation de prestataires. Mon travail backend est documenté à travers des projets réels comme paidmada (backend mobile money), scalapp et alchiimy. Vous savez qui développe, vous voyez ce qui a déjà tourné en production, et vous gardez un interlocuteur unique du devis à la livraison."
+              "title": "Développeur Node.js à Madagascar, identifiable et direct",
+              "content": "Sur les requêtes \"développeur node js madagascar\" et \"développeur node.js madagascar\", la première page de Google renvoie surtout des agences, des fiches métier et des job boards (Code-Talent, MadaAllStar, Indeed, Freelancer, Maasil). Peu de freelances individuels montrent un portfolio public et vérifiable.\n\nJe comble cette faille : vous parlez directement à la personne qui écrira le code, sans intermédiaire commercial ni rotation de prestataires. Mon travail backend est documenté à travers des projets réels comme paidmada (backend mobile money), scalapp et alchiimy. Vous savez qui développe, vous voyez ce qui a déjà tourné en production, et vous gardez un interlocuteur unique du devis à la livraison."
             },
             {
               "title": "Stack backend Node.js complète",

@@ -15,6 +15,13 @@ export default function Footer({
     { label: "Blog", href: `${prefix}/blog` },
     { label: "Services", href: `${prefix}/services` },
     {
+      label: "Solutions",
+      href: `${prefix}/solutions`,
+      ariaLabel: locale === "fr"
+        ? "Explorer les solutions IA, n8n et API"
+        : "Explore AI, n8n and API solutions",
+    },
+    {
       label: locale === "fr" ? "Projets" : "Projects",
       href: `${prefix}/projects`,
       ariaLabel: locale === "fr" ? "Voir tous les projets" : "View all projects",
@@ -46,6 +53,11 @@ export default function Footer({
           { label: "Agent vocal IA", href: "/services/developpeur-agent-vocal-ia" },
           { label: "SEO + GEO", href: "/services/consultant-seo-geo" },
           { label: "Forward Deployed Engineer", href: "/services/forward-deployed-engineer" },
+          { label: "Automatisation PME", href: "/solutions/automatisation-n8n-pme" },
+          { label: "Agent IA support", href: "/solutions/agent-ia-support-client" },
+          { label: "API Mobile Money", href: "/solutions/api-mobile-money-madagascar" },
+          { label: "Agent IA prospection", href: "/solutions/agent-ia-prospection" },
+          { label: "Workflows Claude Code", href: "/solutions/workflows-n8n-claude-code" },
         ]
       : [
           { label: "JavaScript Fullstack", href: "/en/services/javascript-developer-madagascar" },
@@ -61,6 +73,11 @@ export default function Footer({
           { label: "AI Voice Agents", href: "/en/services/ai-voice-agent-developer" },
           { label: "SEO + GEO", href: "/en/services/seo-geo-consultant" },
           { label: "Forward Deployed Engineer", href: "/en/services/forward-deployed-engineer" },
+          { label: "SMB automation", href: "/en/solutions/n8n-automation-for-smbs" },
+          { label: "AI support agent", href: "/en/solutions/ai-customer-support-agent" },
+          { label: "Mobile Money API", href: "/en/solutions/mobile-money-api-madagascar" },
+          { label: "AI prospecting", href: "/en/solutions/ai-prospecting-agent" },
+          { label: "Claude Code workflows", href: "/en/solutions/n8n-claude-code-workflows" },
         ];
 
   const expertiseHeading = locale === "fr" ? "Expertise" : "Expertise";

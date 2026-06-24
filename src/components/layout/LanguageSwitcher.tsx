@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-// FR path → EN path for routes where slugs differ (services, one project).
+// FR path → EN path for routes where slugs differ (services, projects, solutions).
 // Paths are stored without leading "/", matched against the cleaned pathname.
 const SLUG_MAP_FR_TO_EN: Record<string, string> = {
   "services/developpement-sites-saas": "services/sites-saas-development",
@@ -15,6 +15,11 @@ const SLUG_MAP_FR_TO_EN: Record<string, string> = {
   "services/developpeur-nextjs-supabase-madagascar": "services/nextjs-supabase-developer-madagascar",
   "services/developpeur-python-ia-madagascar": "services/python-ai-developer-madagascar",
   "projects/tracking-visiteurs": "projects/visitor-tracking",
+  "solutions/automatisation-n8n-pme": "solutions/n8n-automation-for-smbs",
+  "solutions/agent-ia-support-client": "solutions/ai-customer-support-agent",
+  "solutions/api-mobile-money-madagascar": "solutions/mobile-money-api-madagascar",
+  "solutions/agent-ia-prospection": "solutions/ai-prospecting-agent",
+  "solutions/workflows-n8n-claude-code": "solutions/n8n-claude-code-workflows",
 };
 
 const SLUG_MAP_EN_TO_FR: Record<string, string> = Object.fromEntries(

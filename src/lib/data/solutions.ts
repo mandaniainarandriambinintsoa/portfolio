@@ -1,0 +1,2109 @@
+import type { Locale } from "@/i18n/config";
+
+export const SOLUTION_LAST_UPDATED = "2026-06-24";
+
+export type SolutionAccent = "indigo" | "emerald" | "blue" | "purple";
+
+export type SolutionLink = {
+  label: string;
+  href: string;
+  description: string;
+};
+
+export type SolutionPoint = {
+  title: string;
+  description: string;
+};
+
+export type SolutionFaq = {
+  question: string;
+  answer: string;
+};
+
+export type Solution = {
+  slug: string;
+  icon: string;
+  accent: SolutionAccent;
+  title: string;
+  eyebrow: string;
+  seoTitle: string;
+  seoDescription: string;
+  primaryKeyword: string;
+  secondaryKeywords: string[];
+  shortAnswer: string;
+  heroLead: string;
+  fit: string[];
+  outcomes: SolutionPoint[];
+  problem: {
+    title: string;
+    paragraphs: string[];
+  };
+  deliverables: {
+    title: string;
+    items: SolutionPoint[];
+  };
+  architecture: {
+    title: string;
+    intro: string;
+    steps: SolutionPoint[];
+  };
+  safeguards: {
+    title: string;
+    items: SolutionPoint[];
+  };
+  proofs: SolutionLink[];
+  sources: SolutionLink[];
+  relatedServices: SolutionLink[];
+  faq: SolutionFaq[];
+  cta: {
+    title: string;
+    description: string;
+    buttonLabel: string;
+  };
+};
+
+export const frSolutions: Solution[] = [
+  {
+    slug: "automatisation-n8n-pme",
+    icon: "hub",
+    accent: "emerald",
+    title: "Automatisation n8n pour PME : CRM, emails, reporting et relances",
+    eyebrow: "Solution n8n pour PME",
+    seoTitle: "Automatisation n8n PME | Workflows CRM, emails et reporting",
+    seoDescription:
+      "Automatisation n8n pour PME : CRM, emails, reporting, factures et relances. Workflows fiables, documentés, avec supervision et reprise sur erreur.",
+    primaryKeyword: "automatisation n8n PME",
+    secondaryKeywords: [
+      "automatisation workflow PME",
+      "expert n8n freelance",
+      "workflow n8n CRM",
+      "automatisation tâches administratives",
+    ],
+    shortAnswer:
+      "Une automatisation n8n pour PME connecte vos outils métier afin de supprimer les tâches répétitives : création de leads, emails, reporting, factures, relances et alertes. Je construis des workflows documentés, testés et supervisés, avec une logique de reprise quand une API ou un service externe échoue.",
+    heroLead:
+      "Le but n'est pas de faire un joli scénario dans n8n. Le but est de créer un système qui tourne tous les jours sans vous obliger à vérifier chaque étape à la main.",
+    fit: [
+      "Vous copiez encore des données entre formulaires, tableurs, CRM et emails.",
+      "Votre équipe perd du temps sur les relances, les exports et les notifications internes.",
+      "Vous voulez garder le contrôle sur vos données avec n8n Cloud ou une instance self-hosted.",
+      "Vous avez besoin d'un workflow compréhensible par votre équipe, pas d'une boîte noire.",
+    ],
+    outcomes: [
+      {
+        title: "Moins de tâches manuelles",
+        description:
+          "Les actions répétitives passent dans n8n : tri, enrichissement, calcul, notification, génération de documents et synchronisation CRM.",
+      },
+      {
+        title: "Meilleure visibilité",
+        description:
+          "Les données importantes arrivent au bon endroit : dashboard, email récapitulatif, Slack, Notion, Airtable, Supabase ou Google Sheets.",
+      },
+      {
+        title: "Workflow maintenable",
+        description:
+          "Chaque scénario est nommé, documenté, découpé en étapes lisibles et livré avec les accès, les variables et le guide de reprise.",
+      },
+    ],
+    problem: {
+      title: "Le vrai problème : vos outils ne se parlent pas assez bien",
+      paragraphs: [
+        "La plupart des PME n'ont pas un problème de logiciel. Elles ont un problème de circulation de l'information. Un lead arrive dans un formulaire, une personne le recopie dans un CRM, une autre prépare un email, puis quelqu'un doit vérifier le paiement, mettre à jour un tableur et prévenir l'équipe.",
+        "Au début, ce bricolage tient. Puis le volume augmente, les erreurs se glissent dans les copier-coller, les relances partent en retard et personne ne sait vraiment quelle donnée est la source fiable. C'est là que n8n devient utile : il sert de couche d'orchestration entre vos outils existants.",
+        "Je commence par cartographier le processus réel, puis je transforme seulement les étapes répétables en workflows. Les décisions sensibles restent humaines, surtout pour les montants, les exceptions client et les validations commerciales.",
+      ],
+    },
+    deliverables: {
+      title: "Ce que je peux livrer",
+      items: [
+        {
+          title: "Workflow CRM et leads",
+          description:
+            "Capture des demandes, nettoyage des champs, scoring simple, attribution commerciale et notification avec le contexte complet.",
+        },
+        {
+          title: "Emails et relances",
+          description:
+            "Séquences de suivi, rappels internes, emails transactionnels, relances de paiement et messages personnalisés à partir de vos données.",
+        },
+        {
+          title: "Reporting automatique",
+          description:
+            "Synthèse quotidienne ou hebdomadaire avec chiffres clés, anomalies, tâches ouvertes et liens vers les données sources.",
+        },
+        {
+          title: "Facturation et back-office",
+          description:
+            "Préparation de factures, génération de documents, dépôt dans un dossier partagé et synchronisation avec votre outil comptable.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Architecture type",
+      intro:
+        "Je privilégie une architecture simple : un déclencheur clair, des étapes nommées, des données normalisées, puis une sortie contrôlée. Le workflow reste lisible même plusieurs mois après la livraison.",
+      steps: [
+        {
+          title: "1. Déclenchement",
+          description:
+            "Webhook, formulaire, email entrant, cron planifié, nouveau paiement ou événement CRM.",
+        },
+        {
+          title: "2. Normalisation",
+          description:
+            "Nettoyage des champs, validation minimale, déduplication et construction d'un objet métier stable.",
+        },
+        {
+          title: "3. Décision",
+          description:
+            "Conditions, routage, score, appel API ou étape IA quand le traitement du texte apporte une vraie valeur.",
+        },
+        {
+          title: "4. Action et trace",
+          description:
+            "Création CRM, email, document, notification, ligne de reporting et log d'exécution pour vérifier ce qui s'est passé.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Garde-fous de production",
+      items: [
+        {
+          title: "Gestion des erreurs",
+          description:
+            "Les workflows critiques prévoient des alertes, des chemins de reprise et des messages lisibles quand une API ne répond pas.",
+        },
+        {
+          title: "Propriété client",
+          description:
+            "L'instance n8n, les credentials et les comptes connectés restent au nom du client. Je documente les accès à la livraison.",
+        },
+        {
+          title: "Pas d'automatisation aveugle",
+          description:
+            "Les décisions à risque peuvent rester en validation humaine : envoi final, remise commerciale, suppression de données ou action irréversible.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Scraping FlowRemote",
+        href: "/projects/scraping-flowremote",
+        description:
+          "Workflow n8n qui extrait, filtre et envoie des opportunités remote sans intervention manuelle.",
+      },
+      {
+        label: "Tracking Visiteurs",
+        href: "/projects/tracking-visiteurs",
+        description:
+          "Pipeline Supabase + n8n pour observer les visiteurs du portfolio et déclencher des notifications utiles.",
+      },
+      {
+        label: "Factumation",
+        href: "/projects/factumation",
+        description:
+          "Produit de facturation construit avec Claude Code, pensé pour être relié à des automatisations back-office.",
+      },
+    ],
+    sources: [
+      {
+        label: "n8n Docker self-hosting",
+        href: "https://docs.n8n.io/hosting/installation/docker/",
+        description:
+          "Référence officielle pour déployer n8n proprement quand le client veut garder la main sur l'infrastructure.",
+      },
+      {
+        label: "n8n Error handling",
+        href: "https://docs.n8n.io/flow-logic/error-handling/",
+        description:
+          "Documentation officielle sur les workflows d'erreur et les stratégies de reprise.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "Expert automatisation n8n à Madagascar",
+        href: "/services/automatisation-n8n-madagascar",
+        description:
+          "La page service générale pour les workflows n8n, scraping, API et agents IA.",
+      },
+      {
+        label: "Développeur Node.js à Madagascar",
+        href: "/services/developpeur-nodejs-madagascar",
+        description:
+          "Pour les workflows qui doivent appeler une API custom, un backend ou une base Supabase.",
+      },
+    ],
+    faq: [
+      {
+        question: "Combien de temps faut-il pour automatiser un processus PME avec n8n ?",
+        answer:
+          "Un workflow simple prend souvent 3 à 5 jours ouvrés. Un système avec plusieurs outils, des conditions, un dashboard et une gestion d'erreur demande plutôt 1 à 3 semaines selon les accès disponibles et la qualité des données.",
+      },
+      {
+        question: "Est-ce que n8n remplace mon CRM ou mon logiciel métier ?",
+        answer:
+          "Non. n8n sert surtout à connecter vos outils et à automatiser les passages d'information. Le CRM, la facturation ou la base client restent vos sources métier.",
+      },
+      {
+        question: "Peut-on héberger n8n sur notre propre serveur ?",
+        answer:
+          "Oui. n8n peut tourner sur un VPS avec Docker. Je peux aussi travailler avec n8n Cloud si vous préférez limiter la maintenance serveur.",
+      },
+    ],
+    cta: {
+      title: "Vous avez un processus répétitif à automatiser ?",
+      description:
+        "Envoyez-moi le parcours actuel : outils utilisés, étapes manuelles, volumes et erreurs fréquentes. Je vous dirai ce qui mérite vraiment d'être automatisé.",
+      buttonLabel: "Auditer mon workflow",
+    },
+  },
+  {
+    slug: "agent-ia-support-client",
+    icon: "support_agent",
+    accent: "indigo",
+    title: "Agent IA support client : FAQ, tri des demandes et escalade humaine",
+    eyebrow: "Solution agent IA",
+    seoTitle: "Agent IA support client | FAQ, tickets et escalade humaine",
+    seoDescription:
+      "Agent IA support client pour PME : réponses FAQ, tri automatique des demandes, qualification des tickets, escalade humaine et intégration n8n/CRM.",
+    primaryKeyword: "agent IA support client",
+    secondaryKeywords: [
+      "agent IA service client",
+      "automatisation support client IA",
+      "chatbot IA support",
+      "tri tickets IA",
+    ],
+    shortAnswer:
+      "Un agent IA support client répond aux questions simples, classe les demandes, prépare les réponses et transmet les cas sensibles à un humain. Je le construis avec une base de connaissance claire, des règles d'escalade, des logs et une intégration avec vos outils support ou CRM.",
+    heroLead:
+      "Le bon agent IA ne remplace pas l'équipe support. Il enlève le bruit, prépare le contexte et laisse les humains traiter les décisions importantes.",
+    fit: [
+      "Votre boîte mail support reçoit les mêmes questions chaque semaine.",
+      "Les demandes arrivent par email, WhatsApp, formulaire ou chat et se mélangent.",
+      "Vous voulez répondre plus vite sans laisser une IA improviser sur des sujets sensibles.",
+      "Vous avez besoin d'un agent connecté à vos outils, pas juste d'une bulle de chat isolée.",
+    ],
+    outcomes: [
+      {
+        title: "Réponses plus rapides",
+        description:
+          "L'agent traite les questions fréquentes et prépare les réponses pour les demandes qui demandent validation.",
+      },
+      {
+        title: "Tickets mieux qualifiés",
+        description:
+          "Chaque demande peut recevoir une catégorie, une priorité, un résumé, des pièces jointes et un destinataire.",
+      },
+      {
+        title: "Escalade contrôlée",
+        description:
+          "Les cas sensibles, les réclamations, les remboursements et les décisions commerciales restent côté humain.",
+      },
+    ],
+    problem: {
+      title: "Le risque n'est pas l'IA. Le risque, c'est l'IA sans cadre",
+      paragraphs: [
+        "Beaucoup de projets support échouent parce qu'ils commencent par le modèle IA au lieu de commencer par le parcours client. Un agent utile doit savoir ce qu'il peut répondre, ce qu'il doit demander, ce qu'il doit refuser et quand il doit transférer.",
+        "Je construis d'abord la base de connaissance : offres, tarifs, délais, politique de remboursement, zones de service, questions fréquentes et cas interdits. Ensuite seulement, je branche l'agent à vos canaux et à vos outils.",
+        "L'objectif est une expérience lisible : le client reçoit une réponse claire, l'équipe support garde la trace, et l'entreprise peut corriger les réponses si une information change.",
+      ],
+    },
+    deliverables: {
+      title: "Ce que l'agent peut prendre en charge",
+      items: [
+        {
+          title: "FAQ dynamique",
+          description:
+            "Réponses aux questions répétitives avec sources internes, ton de marque et limites explicites.",
+        },
+        {
+          title: "Tri et résumé de tickets",
+          description:
+            "Catégorisation, résumé en quelques lignes, estimation de priorité et extraction des informations utiles.",
+        },
+        {
+          title: "Pré-réponse avec validation",
+          description:
+            "L'IA propose une réponse, mais l'humain garde le bouton final quand le sujet touche au paiement ou à la relation client.",
+        },
+        {
+          title: "Intégration workflow",
+          description:
+            "Connexion avec email, CRM, Notion, Airtable, Supabase, Slack, n8n ou un outil ticketing existant.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Architecture type",
+      intro:
+        "Je sépare le cerveau, la mémoire et les actions. Cela évite l'agent magique impossible à maintenir.",
+      steps: [
+        {
+          title: "1. Base de connaissance",
+          description:
+            "Pages produit, documents internes, FAQ, règles commerciales, messages types et informations à ne jamais inventer.",
+        },
+        {
+          title: "2. Classification",
+          description:
+            "L'agent détecte le sujet, l'urgence, la langue, les données manquantes et le niveau de risque.",
+        },
+        {
+          title: "3. Réponse ou escalade",
+          description:
+            "Réponse automatique sur les cas simples, brouillon à valider ou transfert direct vers un humain.",
+        },
+        {
+          title: "4. Journalisation",
+          description:
+            "Chaque échange utile est stocké avec catégorie, score de confiance et action déclenchée.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Garde-fous indispensables",
+      items: [
+        {
+          title: "Règles de non-réponse",
+          description:
+            "L'agent doit savoir dire qu'il ne sait pas, demander une précision ou transférer.",
+        },
+        {
+          title: "Validation humaine",
+          description:
+            "Les remboursements, litiges, gestes commerciaux et données sensibles peuvent exiger une validation.",
+        },
+        {
+          title: "Logs et amélioration",
+          description:
+            "Les conversations servent à améliorer la FAQ, corriger les réponses et détecter les sujets mal couverts.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Développeur d'agents IA à Madagascar",
+        href: "/services/developpeur-agent-ia-madagascar",
+        description:
+          "Mon service dédié aux agents IA intégrés à un produit, un CRM ou un workflow métier.",
+      },
+      {
+        label: "Expert automatisation n8n",
+        href: "/services/automatisation-n8n-madagascar",
+        description:
+          "Pour connecter l'agent aux emails, formulaires, tickets, bases de données et notifications.",
+      },
+      {
+        label: "Agent vocal IA",
+        href: "/services/developpeur-agent-vocal-ia",
+        description:
+          "Même logique appliquée à la voix : qualification, réponses cadrées et transfert humain.",
+      },
+    ],
+    sources: [
+      {
+        label: "n8n AI agents",
+        href: "https://n8n.io/ai-agents/",
+        description:
+          "Présentation officielle de l'approche agent IA dans des workflows avec outils, mémoire et objectifs.",
+      },
+      {
+        label: "Google helpful content",
+        href: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+        description:
+          "Référence utilisée pour rédiger des réponses utiles, spécifiques et vérifiables.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "Développeur d'agents IA",
+        href: "/services/developpeur-agent-ia-madagascar",
+        description:
+          "Conception d'agents IA connectés à vos outils métier et à vos bases de connaissance.",
+      },
+      {
+        label: "Intégration IA & Prompt Engineering",
+        href: "/services/integration-ia",
+        description:
+          "Intégration Claude, GPT et prompts structurés dans une application ou un workflow.",
+      },
+    ],
+    faq: [
+      {
+        question: "Un agent IA support peut-il répondre automatiquement aux clients ?",
+        answer:
+          "Oui, mais seulement sur les sujets cadrés. Je recommande souvent une réponse automatique pour la FAQ simple et une validation humaine pour les sujets commerciaux, juridiques, financiers ou sensibles.",
+      },
+      {
+        question: "Faut-il déjà avoir une base de connaissance ?",
+        answer:
+          "C'est préférable, mais pas obligatoire. On peut partir de vos emails, documents, pages web et réponses répétitives pour construire une première base propre.",
+      },
+      {
+        question: "L'agent peut-il fonctionner avec WhatsApp ou email ?",
+        answer:
+          "Oui, selon les accès disponibles. Le plus important est de définir le canal prioritaire, les règles de réponse et le système où les échanges seront historisés.",
+      },
+    ],
+    cta: {
+      title: "Votre support reçoit trop de demandes répétitives ?",
+      description:
+        "On peut commencer par 20 questions fréquentes, un canal support et une règle claire : ce que l'agent traite, ce qu'il prépare, ce qu'il transfère.",
+      buttonLabel: "Concevoir mon agent support",
+    },
+  },
+  {
+    slug: "api-mobile-money-madagascar",
+    icon: "payments",
+    accent: "blue",
+    title: "API Mobile Money Madagascar : Orange Money, MVola, Airtel et dashboard",
+    eyebrow: "Solution paiement local",
+    seoTitle: "API Mobile Money Madagascar | Orange Money, MVola, Airtel",
+    seoDescription:
+      "Intégration API Mobile Money Madagascar pour applications web et SaaS : Orange Money, MVola, Airtel, callbacks, rapprochement, dashboard et sécurité.",
+    primaryKeyword: "API mobile money Madagascar",
+    secondaryKeywords: [
+      "API Orange Money Madagascar",
+      "API MVola Madagascar",
+      "paiement mobile money application",
+      "intégration paiement Madagascar",
+    ],
+    shortAnswer:
+      "Une intégration API Mobile Money Madagascar permet à une application d'accepter ou de suivre des paiements Orange Money, MVola ou Airtel Money. Je construis la logique backend, les callbacks, le rapprochement, le dashboard admin et les garde-fous pour éviter les paiements perdus ou mal associés.",
+    heroLead:
+      "Le paiement local est rarement juste un bouton. Il faut gérer le statut, le callback, l'échec, la preuve côté client et le rapprochement côté back-office.",
+    fit: [
+      "Vous lancez un SaaS, marketplace, portail de réservation ou back-office à Madagascar.",
+      "Vous voulez accepter Mobile Money sans perdre les statuts de transaction.",
+      "Vous avez besoin d'un dashboard pour vérifier les paiements, remboursements ou commandes.",
+      "Vous voulez relier paiement, facture, email, WhatsApp ou validation manuelle.",
+    ],
+    outcomes: [
+      {
+        title: "Paiements mieux tracés",
+        description:
+          "Chaque tentative a un identifiant, un statut, une référence métier et une trace dans le dashboard.",
+      },
+      {
+        title: "Moins de litiges",
+        description:
+          "Le client voit une confirmation claire et l'équipe peut retrouver la transaction sans fouiller plusieurs outils.",
+      },
+      {
+        title: "Back-office utilisable",
+        description:
+          "Les paiements sont reliés aux commandes, réservations, abonnements ou factures.",
+      },
+    ],
+    problem: {
+      title: "Le point fragile : le paiement doit parler au métier",
+      paragraphs: [
+        "Une API de paiement ne suffit pas. Il faut savoir à quelle commande correspond la transaction, que faire si le callback arrive en retard, comment traiter un statut inconnu et comment informer le client sans créer une double confirmation.",
+        "Pour Madagascar, il faut aussi penser aux opérateurs utilisés par les clients : Orange Money, MVola et Airtel Money. Les parcours, les environnements de test et les contraintes d'accès peuvent varier selon le fournisseur.",
+        "Je construis l'intégration comme une brique produit : backend Node.js ou Next.js, base de données, dashboard de suivi, notifications, et documentation pour l'équipe qui va opérer le système.",
+      ],
+    },
+    deliverables: {
+      title: "Ce que je peux intégrer",
+      items: [
+        {
+          title: "Backend de paiement",
+          description:
+            "Création d'intentions de paiement, stockage des références, appels API et gestion des statuts.",
+        },
+        {
+          title: "Callbacks et webhooks",
+          description:
+            "Endpoint sécurisé pour recevoir les confirmations, vérifier les données et mettre à jour la commande.",
+        },
+        {
+          title: "Dashboard admin",
+          description:
+            "Vue des paiements par statut, recherche par client, commande ou référence, et export si nécessaire.",
+        },
+        {
+          title: "Notifications",
+          description:
+            "Confirmation client, alerte équipe, email transactionnel ou workflow n8n quand une action humaine est nécessaire.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Architecture type",
+      intro:
+        "La bonne architecture sépare l'expérience client, le backend de paiement et le back-office. Cela évite qu'une transaction soit validée seulement parce que le front l'affiche.",
+      steps: [
+        {
+          title: "1. Intention de paiement",
+          description:
+            "L'application crée une transaction interne avec montant, devise, client, commande et fournisseur visé.",
+        },
+        {
+          title: "2. Appel fournisseur",
+          description:
+            "Le backend appelle Orange Money, MVola ou Airtel avec les paramètres attendus et stocke la réponse.",
+        },
+        {
+          title: "3. Callback sécurisé",
+          description:
+            "Le fournisseur notifie le backend. Le statut est vérifié, puis la commande est mise à jour côté serveur.",
+        },
+        {
+          title: "4. Rapprochement",
+          description:
+            "Le dashboard permet de retrouver les paiements réussis, échoués, expirés ou à vérifier manuellement.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Garde-fous importants",
+      items: [
+        {
+          title: "Idempotence",
+          description:
+            "Un callback reçu deux fois ne doit pas créer deux validations ou deux livraisons.",
+        },
+        {
+          title: "Validation serveur",
+          description:
+            "Le frontend ne décide jamais seul qu'un paiement est réussi. La base est mise à jour côté serveur.",
+        },
+        {
+          title: "Traçabilité",
+          description:
+            "Chaque statut garde une trace : date, fournisseur, référence, payload utile et action déclenchée.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "PaidMada Mobile Money",
+        href: "/projects/paidmada-mobile-money",
+        description:
+          "Projet orienté paiement Mobile Money Madagascar : MVola, Orange Money et Airtel Money.",
+      },
+      {
+        label: "Développeur Node.js à Madagascar",
+        href: "/services/developpeur-nodejs-madagascar",
+        description:
+          "Backend API, webhooks, sécurité, temps réel et intégrations fournisseur.",
+      },
+      {
+        label: "Développeur Next.js + Supabase",
+        href: "/services/developpeur-nextjs-supabase-madagascar",
+        description:
+          "Pour l'application complète : auth, dashboard, base de données et admin.",
+      },
+    ],
+    sources: [
+      {
+        label: "Orange Money Web Payment",
+        href: "https://developer.orange.com/apis/om-webpay",
+        description:
+          "API officielle Orange Money Web Payment, avec Madagascar dans les pays supportés.",
+      },
+      {
+        label: "MVola Developer Portal",
+        href: "https://developer.mvola.mg/devportal/",
+        description:
+          "Portail développeur MVola pour consulter la documentation et les accès API.",
+      },
+      {
+        label: "Airtel Africa Developer Portal",
+        href: "https://developers.airtel.africa/developer",
+        description:
+          "Portail développeur Airtel pour les APIs et intégrations Mobile Money selon pays.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "Développeur Node.js à Madagascar",
+        href: "/services/developpeur-nodejs-madagascar",
+        description:
+          "API REST, webhooks, authentification, intégration fournisseur et logique backend.",
+      },
+      {
+        label: "Développeur React & Next.js",
+        href: "/services/developpeur-react-nextjs-madagascar",
+        description:
+          "Interface client, dashboard admin, pages de paiement et confirmation.",
+      },
+    ],
+    faq: [
+      {
+        question: "Peut-on intégrer Orange Money, MVola et Airtel Money dans une même application ?",
+        answer:
+          "Oui, mais il faut traiter chaque fournisseur comme une intégration distincte : accès, paramètres, statuts, callbacks et parcours client peuvent différer.",
+      },
+      {
+        question: "Le paiement Mobile Money peut-il déclencher une facture ou une notification ?",
+        answer:
+          "Oui. Une fois le statut validé côté serveur, on peut déclencher email, WhatsApp, génération de facture, mise à jour CRM ou workflow n8n.",
+      },
+      {
+        question: "Faut-il un dashboard admin pour les paiements ?",
+        answer:
+          "Je le recommande fortement. Sans dashboard, l'équipe perd du temps à vérifier les cas ambigus et les demandes client.",
+      },
+    ],
+    cta: {
+      title: "Vous voulez brancher Mobile Money dans votre produit ?",
+      description:
+        "On peut cadrer le parcours paiement, les fournisseurs visés, les statuts, le dashboard et la logique de rapprochement avant d'écrire le backend.",
+      buttonLabel: "Cadrer mon intégration paiement",
+    },
+  },
+  {
+    slug: "agent-ia-prospection",
+    icon: "travel_explore",
+    accent: "purple",
+    title: "Agent IA prospection : qualification de leads, CRM et relances n8n",
+    eyebrow: "Solution prospection IA",
+    seoTitle: "Agent IA prospection | Qualification leads, CRM et n8n",
+    seoDescription:
+      "Agent IA prospection pour qualifier les leads, enrichir les données, préparer des messages, synchroniser le CRM et automatiser les relances avec n8n.",
+    primaryKeyword: "agent IA prospection",
+    secondaryKeywords: [
+      "automatisation prospection IA",
+      "qualification leads n8n",
+      "workflow prospection commerciale",
+      "agent IA CRM",
+    ],
+    shortAnswer:
+      "Un agent IA de prospection aide à collecter, qualifier, enrichir et prioriser des leads avant contact humain. Je le connecte à n8n, à votre CRM et à vos sources de données pour produire des listes propres, des résumés utiles et des relances cadrées, sans automatiser du spam.",
+    heroLead:
+      "L'objectif n'est pas d'envoyer plus de messages au hasard. L'objectif est de mieux choisir qui contacter, pourquoi, avec quel angle et avec quelle trace dans le CRM.",
+    fit: [
+      "Vous avez des leads mais peu de contexte pour les prioriser.",
+      "Votre équipe commerciale passe trop de temps à nettoyer les données.",
+      "Vous voulez préparer des messages personnalisés sans perdre le contrôle de l'envoi.",
+      "Vous avez besoin d'un workflow qui respecte votre ICP, vos règles et vos limites d'envoi.",
+    ],
+    outcomes: [
+      {
+        title: "Leads mieux qualifiés",
+        description:
+          "Chaque prospect peut recevoir un segment, un score, une raison de contact et un résumé court.",
+      },
+      {
+        title: "CRM plus propre",
+        description:
+          "Les données sont normalisées avant d'entrer dans le CRM, avec déduplication et champs utiles.",
+      },
+      {
+        title: "Prospection plus humaine",
+        description:
+          "L'IA prépare les angles et les brouillons, l'humain valide les messages et le timing.",
+      },
+    ],
+    problem: {
+      title: "La prospection IA doit rester une aide, pas une machine à spam",
+      paragraphs: [
+        "Un mauvais système de prospection automatise le volume. Un bon système automatise la recherche, le tri, le contexte et la préparation, puis laisse l'humain décider du contact final.",
+        "Je commence par définir l'ICP : type d'entreprise, signaux d'achat, pays, secteur, taille, outils utilisés, budget probable et raisons de rejet. Ensuite, le workflow peut chercher, enrichir, scorer et synchroniser les leads.",
+        "Les parties sensibles restent cadrées : conformité des sources, fréquence d'envoi, exclusion des doublons, opt-out, validation humaine et historique CRM.",
+      ],
+    },
+    deliverables: {
+      title: "Ce que le workflow peut produire",
+      items: [
+        {
+          title: "Collecte et enrichissement",
+          description:
+            "Import CSV, formulaire, API, scraping autorisé ou source métier, puis enrichissement et nettoyage.",
+        },
+        {
+          title: "Scoring IA",
+          description:
+            "Score basé sur votre ICP, justification courte, signaux positifs et raisons de ne pas contacter.",
+        },
+        {
+          title: "Brouillons personnalisés",
+          description:
+            "Email, message LinkedIn ou note commerciale préparée à partir de données vérifiables.",
+        },
+        {
+          title: "Synchronisation CRM",
+          description:
+            "Création ou mise à jour des contacts, tags, statut, prochaine action et résumé pour l'équipe.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Architecture type",
+      intro:
+        "Le workflow doit être auditable. Chaque score et chaque message doivent venir de données que l'équipe peut vérifier.",
+      steps: [
+        {
+          title: "1. Source leads",
+          description:
+            "Liste existante, formulaire, base publique, export CRM ou source validée par votre équipe.",
+        },
+        {
+          title: "2. Nettoyage",
+          description:
+            "Déduplication, validation des emails, normalisation des noms, secteurs et URLs.",
+        },
+        {
+          title: "3. Analyse IA",
+          description:
+            "Résumé de l'entreprise, score ICP, angle de contact et drapeaux de prudence.",
+        },
+        {
+          title: "4. Action contrôlée",
+          description:
+            "Ajout CRM, brouillon de message, notification commerciale ou séquence de relance avec validation.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Garde-fous commerciaux et qualité",
+      items: [
+        {
+          title: "Pas de promesse inventée",
+          description:
+            "Les messages doivent s'appuyer sur des signaux réels, pas sur des compliments génériques produits par IA.",
+        },
+        {
+          title: "Respect des exclusions",
+          description:
+            "Listes no-contact, opt-out, clients existants, concurrents ou secteurs exclus sont filtrés.",
+        },
+        {
+          title: "Validation humaine",
+          description:
+            "Pour les campagnes sensibles, l'IA prépare et l'humain décide l'envoi final.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Showcase workflow leads",
+        href: "/projects/leads-automation-showcase",
+        description:
+          "Démonstration de pipeline n8n pour génération, qualification et synchronisation de leads.",
+      },
+      {
+        label: "Scraping FlowRemote",
+        href: "/projects/scraping-flowremote",
+        description:
+          "Extraction automatisée multi-sources, filtrage et notification quotidienne.",
+      },
+      {
+        label: "Expert automatisation n8n",
+        href: "/services/automatisation-n8n-madagascar",
+        description:
+          "Socle technique pour orchestrer sources, IA, CRM, emails et reporting.",
+      },
+    ],
+    sources: [
+      {
+        label: "Google AI optimization",
+        href: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        description:
+          "Référence pour produire du contenu clair, utile et compréhensible par les moteurs enrichis par IA.",
+      },
+      {
+        label: "n8n AI agents",
+        href: "https://n8n.io/ai-agents/",
+        description:
+          "Base officielle pour penser les agents IA comme des workflows outillés, pas comme des réponses isolées.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "Expert automatisation n8n",
+        href: "/services/automatisation-n8n-madagascar",
+        description:
+          "Automatisation des workflows commerciaux, intégrations API et orchestration de données.",
+      },
+      {
+        label: "Développeur d'agents IA",
+        href: "/services/developpeur-agent-ia-madagascar",
+        description:
+          "Agents IA capables de classer, résumer, décider et préparer des actions métier.",
+      },
+    ],
+    faq: [
+      {
+        question: "Un agent IA peut-il envoyer les messages de prospection automatiquement ?",
+        answer:
+          "Techniquement oui, mais je recommande de commencer avec une validation humaine. La qualité, la délivrabilité et l'image de marque valent plus qu'un volume non contrôlé.",
+      },
+      {
+        question: "Peut-on brancher ce workflow à HubSpot, Airtable ou Google Sheets ?",
+        answer:
+          "Oui. n8n peut synchroniser les données avec un CRM, une base Airtable, Google Sheets, Notion ou une API custom.",
+      },
+      {
+        question: "Comment éviter les doublons dans le CRM ?",
+        answer:
+          "Le workflow peut vérifier email, domaine, nom d'entreprise et identifiants internes avant de créer ou mettre à jour un contact.",
+      },
+    ],
+    cta: {
+      title: "Vous voulez qualifier vos leads sans spammer ?",
+      description:
+        "On peut définir votre ICP, les sources acceptées, les champs CRM et le niveau de validation humaine avant de construire l'agent.",
+      buttonLabel: "Cadrer mon agent prospection",
+    },
+  },
+  {
+    slug: "workflows-n8n-claude-code",
+    icon: "terminal",
+    accent: "indigo",
+    title: "Workflows n8n + Claude Code : automatiser le développement assisté par IA",
+    eyebrow: "Solution Claude Code + n8n",
+    seoTitle: "Workflows n8n Claude Code | Développeur Claude Code freelance",
+    seoDescription:
+      "Workflows n8n avec Claude Code pour automatiser audit, reporting, contenu, tickets et tâches développeur. Développeur Claude Code freelance à Madagascar.",
+    primaryKeyword: "développeur Claude Code",
+    secondaryKeywords: [
+      "workflow n8n Claude Code",
+      "automatisation Claude Code n8n",
+      "développeur Claude Code freelance",
+      "MCP n8n Claude",
+    ],
+    shortAnswer:
+      "Un workflow n8n + Claude Code relie des événements métier ou techniques à une exécution assistée par IA : résumé, audit, préparation de ticket, génération de contenu, analyse de données ou aide au développement. Je l'encadre avec Git, validation humaine, logs et règles de sécurité.",
+    heroLead:
+      "Claude Code est puissant quand il travaille avec le contexte du repo. n8n devient utile quand il déclenche, prépare, archive et notifie autour de ce travail.",
+    fit: [
+      "Vous utilisez déjà Claude Code, Codex ou des LLMs dans votre production.",
+      "Vous voulez automatiser des tâches répétitives autour du code, des tickets ou du contenu.",
+      "Vous avez besoin de logs et de validation avant qu'une action IA touche la production.",
+      "Vous voulez brancher vos outils : GitHub, Notion, Slack, Supabase, email, CRM ou API interne.",
+    ],
+    outcomes: [
+      {
+        title: "Moins de tâches développeur répétitives",
+        description:
+          "Préparation de tickets, résumés de logs, rapports, checklists de review et brouillons techniques.",
+      },
+      {
+        title: "Meilleure traçabilité",
+        description:
+          "Chaque action IA a une entrée, une sortie, un contexte, une date et un responsable humain.",
+      },
+      {
+        title: "IA mieux cadrée",
+        description:
+          "Les prompts, les fichiers de contexte et les règles d'exécution sont versionnés ou documentés.",
+      },
+    ],
+    problem: {
+      title: "Le développement assisté par IA a besoin d'un système autour",
+      paragraphs: [
+        "Claude Code peut accélérer énormément le développement, mais l'outil seul ne fait pas une organisation. Il faut décider quand l'IA est appelée, avec quel contexte, quelle sortie est attendue et qui valide.",
+        "n8n peut jouer le rôle d'orchestrateur : récupérer un ticket, lire des données, préparer un prompt, déclencher une étape, stocker le résultat, notifier l'équipe et créer une tâche de validation.",
+        "Je construis ces workflows comme des extensions de votre manière de travailler, pas comme un gadget. Le code reste dans Git, les secrets restent dans les environnements prévus, et les actions à risque restent humaines.",
+      ],
+    },
+    deliverables: {
+      title: "Cas d'usage concrets",
+      items: [
+        {
+          title: "Préparation de tickets",
+          description:
+            "Transformer une demande client en brief technique : contexte, fichiers probables, risques et critères d'acceptation.",
+        },
+        {
+          title: "Reporting technique",
+          description:
+            "Résumer logs, erreurs, analytics ou retours utilisateurs, puis envoyer un rapport exploitable.",
+        },
+        {
+          title: "Workflow contenu + SEO",
+          description:
+            "Préparer briefs, FAQ, maillage interne et éléments JSON-LD avant validation éditoriale.",
+        },
+        {
+          title: "Aide à la maintenance",
+          description:
+            "Créer des checklists de review, détecter les régressions probables et documenter les changements.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Architecture type",
+      intro:
+        "Le principe : n8n orchestre les événements et Claude Code intervient seulement quand le contexte est suffisant.",
+      steps: [
+        {
+          title: "1. Déclencheur",
+          description:
+            "Nouveau ticket, commentaire GitHub, formulaire client, erreur serveur, contenu à préparer ou tâche planifiée.",
+        },
+        {
+          title: "2. Contexte",
+          description:
+            "n8n rassemble les informations utiles : URL, logs, description, fichiers, données Supabase ou documents internes.",
+        },
+        {
+          title: "3. Travail IA",
+          description:
+            "Claude Code ou un LLM produit une proposition : brief, résumé, patch à relire, checklist ou réponse.",
+        },
+        {
+          title: "4. Validation",
+          description:
+            "L'équipe reçoit la sortie avec les sources et décide de publier, modifier, rejeter ou créer une tâche.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Garde-fous pour ne pas casser la production",
+      items: [
+        {
+          title: "Validation avant mutation",
+          description:
+            "Les workflows peuvent préparer du code ou des textes, mais la publication ou le merge reste contrôlé.",
+        },
+        {
+          title: "Secrets hors prompts",
+          description:
+            "Les clés API, tokens et variables sensibles ne doivent pas être envoyés dans les prompts.",
+        },
+        {
+          title: "Traçabilité Git",
+          description:
+            "Les changements utiles passent par Git, review, build et test, pas par des modifications invisibles.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Développeur Claude Code + n8n",
+        href: "/services/developpeur-claude-code-n8n",
+        description:
+          "Service dédié à l'association Claude Code, workflows n8n et production web.",
+      },
+      {
+        label: "Article Claude Code",
+        href: "/blog/claude-code-developper-avec-ia",
+        description:
+          "Retour d'expérience sur le développement assisté par IA et les limites à cadrer.",
+      },
+      {
+        label: "Factumation",
+        href: "/projects/factumation",
+        description:
+          "Produit livré rapidement avec Claude Code, base concrète pour parler méthode et garde-fous.",
+      },
+    ],
+    sources: [
+      {
+        label: "Google generative AI content",
+        href: "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+        description:
+          "Repère important : le contenu généré ou assisté par IA doit rester utile, original et contrôlé.",
+      },
+      {
+        label: "Google structured data",
+        href: "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+        description:
+          "Base pour rendre les pages plus explicites avec FAQ, breadcrumb et données structurées visibles.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "Développeur Claude Code + n8n",
+        href: "/services/developpeur-claude-code-n8n",
+        description:
+          "Automatisations et produits construits avec Claude Code, n8n, Next.js et Supabase.",
+      },
+      {
+        label: "Consultant SEO + GEO",
+        href: "/services/consultant-seo-geo",
+        description:
+          "Structurer les pages pour Google, les AI Overviews et les moteurs de réponse.",
+      },
+    ],
+    faq: [
+      {
+        question: "Claude Code peut-il être déclenché automatiquement par n8n ?",
+        answer:
+          "Selon l'environnement et les outils disponibles, n8n peut préparer le contexte, créer une tâche, notifier un humain ou appeler une API IA. Pour les actions de code, je recommande une validation humaine et un passage par Git.",
+      },
+      {
+        question: "Quels workflows sont utiles avec Claude Code ?",
+        answer:
+          "Préparation de tickets, audit de contenu, résumé de logs, génération de checklists, documentation de changements et assistance à la maintenance sont de bons premiers cas.",
+      },
+      {
+        question: "Peut-on utiliser Codex au lieu de Claude Code ?",
+        answer:
+          "Oui. Le même principe reste valable : n8n orchestre, l'IA produit une proposition, et l'humain valide les actions qui touchent au code ou à la production.",
+      },
+    ],
+    cta: {
+      title: "Vous voulez industrialiser votre usage de Claude Code ?",
+      description:
+        "On peut commencer par un workflow simple : un déclencheur, un contexte, une sortie IA, une validation humaine et une trace.",
+      buttonLabel: "Designer mon workflow IA",
+    },
+  },
+];
+
+export const enSolutions: Solution[] = [
+  {
+    slug: "n8n-automation-for-smbs",
+    icon: "hub",
+    accent: "emerald",
+    title: "n8n automation for SMBs: CRM, email, reporting and follow-ups",
+    eyebrow: "n8n solution for SMBs",
+    seoTitle: "n8n Automation for SMBs | CRM, Email and Reporting Workflows",
+    seoDescription:
+      "n8n automation for SMBs: CRM, email, reporting, invoices and follow-ups. Reliable documented workflows with monitoring and error recovery.",
+    primaryKeyword: "n8n automation for SMBs",
+    secondaryKeywords: [
+      "workflow automation for SMBs",
+      "freelance n8n expert",
+      "n8n CRM workflow",
+      "business process automation",
+    ],
+    shortAnswer:
+      "n8n automation for SMBs connects your business tools to remove repetitive work: lead creation, emails, reporting, invoices, follow-ups and alerts. I build documented, tested and monitored workflows, with recovery logic when an API or external service fails.",
+    heroLead:
+      "The goal is not to build a pretty n8n canvas. The goal is to create a system that runs every day without forcing your team to check every step by hand.",
+    fit: [
+      "You still copy data between forms, spreadsheets, CRM tools and emails.",
+      "Your team loses time on follow-ups, exports and internal notifications.",
+      "You want control over your data with n8n Cloud or a self-hosted instance.",
+      "You need a workflow your team can understand, not a black box.",
+    ],
+    outcomes: [
+      {
+        title: "Less manual work",
+        description:
+          "Repetitive actions move into n8n: sorting, enrichment, calculations, notifications, document generation and CRM sync.",
+      },
+      {
+        title: "Better visibility",
+        description:
+          "Important data lands in the right place: dashboard, recap email, Slack, Notion, Airtable, Supabase or Google Sheets.",
+      },
+      {
+        title: "Maintainable workflow",
+        description:
+          "Each scenario is named, documented, split into readable steps and delivered with access notes, variables and recovery instructions.",
+      },
+    ],
+    problem: {
+      title: "The real problem: your tools do not talk to each other well enough",
+      paragraphs: [
+        "Most SMBs do not have a software problem. They have an information flow problem. A lead arrives from a form, someone copies it into a CRM, another person prepares an email, then someone else has to verify payment, update a spreadsheet and notify the team.",
+        "At first, this manual system holds. Then volume grows, copy-paste errors appear, follow-ups go out late and nobody knows which data source is reliable. This is where n8n becomes useful: it orchestrates your existing tools.",
+        "I start by mapping the real process, then I automate only the repeatable steps. Sensitive decisions stay human, especially for amounts, customer exceptions and commercial validation.",
+      ],
+    },
+    deliverables: {
+      title: "What I can deliver",
+      items: [
+        {
+          title: "CRM and lead workflow",
+          description:
+            "Request capture, field cleanup, simple scoring, sales assignment and notification with full context.",
+        },
+        {
+          title: "Emails and follow-ups",
+          description:
+            "Follow-up sequences, internal reminders, transactional emails, payment reminders and personalized messages from your data.",
+        },
+        {
+          title: "Automatic reporting",
+          description:
+            "Daily or weekly summaries with key metrics, anomalies, open tasks and links to source data.",
+        },
+        {
+          title: "Billing and back office",
+          description:
+            "Invoice preparation, document generation, shared-folder delivery and sync with your accounting tool.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Typical architecture",
+      intro:
+        "I favor a simple architecture: a clear trigger, named steps, normalized data and a controlled output. The workflow stays readable months after delivery.",
+      steps: [
+        {
+          title: "1. Trigger",
+          description:
+            "Webhook, form, inbound email, scheduled cron, new payment or CRM event.",
+        },
+        {
+          title: "2. Normalization",
+          description:
+            "Field cleanup, minimal validation, deduplication and a stable business object.",
+        },
+        {
+          title: "3. Decision",
+          description:
+            "Conditions, routing, score, API call or AI step when text processing creates real value.",
+        },
+        {
+          title: "4. Action and trace",
+          description:
+            "CRM creation, email, document, notification, reporting row and execution log to verify what happened.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Production safeguards",
+      items: [
+        {
+          title: "Error handling",
+          description:
+            "Critical workflows include alerts, recovery paths and readable messages when an API does not respond.",
+        },
+        {
+          title: "Client ownership",
+          description:
+            "The n8n instance, credentials and connected accounts stay under the client's name. I document access at delivery.",
+        },
+        {
+          title: "No blind automation",
+          description:
+            "Risky decisions can stay human: final send, discount approval, data deletion or irreversible action.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Scraping FlowRemote",
+        href: "/en/projects/scraping-flowremote",
+        description:
+          "n8n workflow that extracts, filters and sends remote job opportunities without manual work.",
+      },
+      {
+        label: "Visitor Tracking",
+        href: "/en/projects/visitor-tracking",
+        description:
+          "Supabase + n8n pipeline to observe portfolio visitors and trigger useful notifications.",
+      },
+      {
+        label: "Factumation",
+        href: "/en/projects/factumation",
+        description:
+          "Invoicing product built with Claude Code, designed to connect with back-office automation.",
+      },
+    ],
+    sources: [
+      {
+        label: "n8n Docker self-hosting",
+        href: "https://docs.n8n.io/hosting/installation/docker/",
+        description:
+          "Official reference for deploying n8n cleanly when the client wants infrastructure control.",
+      },
+      {
+        label: "n8n Error handling",
+        href: "https://docs.n8n.io/flow-logic/error-handling/",
+        description:
+          "Official documentation on error workflows and recovery strategies.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "n8n Automation Expert in Madagascar",
+        href: "/en/services/n8n-automation-expert-madagascar",
+        description:
+          "The main service page for n8n workflows, scraping, APIs and AI agents.",
+      },
+      {
+        label: "Hire a Node.js Developer in Madagascar",
+        href: "/en/services/hire-nodejs-developer-madagascar",
+        description:
+          "For workflows that need a custom API, backend service or Supabase database.",
+      },
+    ],
+    faq: [
+      {
+        question: "How long does it take to automate an SMB process with n8n?",
+        answer:
+          "A simple workflow often takes 3 to 5 business days. A system with several tools, conditions, a dashboard and error handling usually takes 1 to 3 weeks depending on access and data quality.",
+      },
+      {
+        question: "Does n8n replace my CRM or business software?",
+        answer:
+          "No. n8n mainly connects your tools and automates information flow. The CRM, invoicing tool or customer database remain your business sources of truth.",
+      },
+      {
+        question: "Can n8n run on our own server?",
+        answer:
+          "Yes. n8n can run on a VPS with Docker. I can also work with n8n Cloud if you prefer to avoid server maintenance.",
+      },
+    ],
+    cta: {
+      title: "Have a repetitive process to automate?",
+      description:
+        "Send me the current workflow: tools used, manual steps, volumes and frequent errors. I will tell you what is truly worth automating.",
+      buttonLabel: "Audit my workflow",
+    },
+  },
+  {
+    slug: "ai-customer-support-agent",
+    icon: "support_agent",
+    accent: "indigo",
+    title: "AI customer support agent: FAQ, ticket triage and human handoff",
+    eyebrow: "AI agent solution",
+    seoTitle: "AI Customer Support Agent | FAQ, Tickets and Human Handoff",
+    seoDescription:
+      "AI customer support agent for SMBs: FAQ answers, request triage, ticket qualification, human handoff and n8n/CRM integration.",
+    primaryKeyword: "AI customer support agent",
+    secondaryKeywords: [
+      "AI support agent",
+      "customer service AI automation",
+      "AI support chatbot",
+      "AI ticket triage",
+    ],
+    shortAnswer:
+      "An AI customer support agent answers simple questions, classifies requests, prepares replies and escalates sensitive cases to a human. I build it with a clear knowledge base, handoff rules, logs and integration with your support tools or CRM.",
+    heroLead:
+      "A good AI support agent does not replace the team. It removes noise, prepares context and lets humans handle important decisions.",
+    fit: [
+      "Your support inbox receives the same questions every week.",
+      "Requests arrive through email, WhatsApp, forms or chat and get mixed together.",
+      "You want faster replies without letting AI improvise on sensitive topics.",
+      "You need an agent connected to your tools, not just an isolated chat bubble.",
+    ],
+    outcomes: [
+      {
+        title: "Faster replies",
+        description:
+          "The agent handles frequent questions and prepares replies for requests that need validation.",
+      },
+      {
+        title: "Better qualified tickets",
+        description:
+          "Each request can receive a category, priority, summary, attachments and owner.",
+      },
+      {
+        title: "Controlled handoff",
+        description:
+          "Sensitive cases, complaints, refunds and commercial decisions remain on the human side.",
+      },
+    ],
+    problem: {
+      title: "The risk is not AI. The risk is AI without a frame.",
+      paragraphs: [
+        "Many support automation projects fail because they start with the model instead of the customer journey. A useful agent must know what it can answer, what it must ask, what it must refuse and when it must transfer.",
+        "I first build the knowledge base: offers, pricing, timelines, refund policy, service zones, frequent questions and forbidden cases. Only then do I connect the agent to your channels and tools.",
+        "The goal is a readable experience: the customer gets a clear answer, the support team keeps the trace, and the business can correct answers when information changes.",
+      ],
+    },
+    deliverables: {
+      title: "What the agent can handle",
+      items: [
+        {
+          title: "Dynamic FAQ",
+          description:
+            "Answers to repetitive questions with internal sources, brand tone and explicit limits.",
+        },
+        {
+          title: "Ticket triage and summary",
+          description:
+            "Categorization, short summary, priority estimate and extraction of useful information.",
+        },
+        {
+          title: "Draft reply with validation",
+          description:
+            "AI proposes a reply, while the human keeps the final button when the topic touches payment or customer relationship.",
+        },
+        {
+          title: "Workflow integration",
+          description:
+            "Connection with email, CRM, Notion, Airtable, Supabase, Slack, n8n or an existing ticketing tool.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Typical architecture",
+      intro:
+        "I separate the brain, memory and actions. That avoids the magic agent nobody can maintain.",
+      steps: [
+        {
+          title: "1. Knowledge base",
+          description:
+            "Product pages, internal docs, FAQ, commercial rules, message templates and information the agent must never invent.",
+        },
+        {
+          title: "2. Classification",
+          description:
+            "The agent detects topic, urgency, language, missing data and risk level.",
+        },
+        {
+          title: "3. Reply or handoff",
+          description:
+            "Automatic answer for simple cases, draft for validation or direct transfer to a human.",
+        },
+        {
+          title: "4. Logging",
+          description:
+            "Each useful exchange is stored with category, confidence score and triggered action.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Required safeguards",
+      items: [
+        {
+          title: "No-answer rules",
+          description:
+            "The agent must know when to say it does not know, ask for detail or transfer.",
+        },
+        {
+          title: "Human validation",
+          description:
+            "Refunds, disputes, commercial gestures and sensitive data can require validation.",
+        },
+        {
+          title: "Logs and improvement",
+          description:
+            "Conversations help improve the FAQ, correct answers and detect poorly covered topics.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "AI Agent Developer in Madagascar",
+        href: "/en/services/ai-agent-developer-madagascar",
+        description:
+          "My dedicated service for AI agents integrated into a product, CRM or business workflow.",
+      },
+      {
+        label: "n8n Automation Expert",
+        href: "/en/services/n8n-automation-expert-madagascar",
+        description:
+          "To connect the agent to emails, forms, tickets, databases and notifications.",
+      },
+      {
+        label: "AI Voice Agent",
+        href: "/en/services/ai-voice-agent-developer",
+        description:
+          "The same logic applied to voice: qualification, framed answers and human transfer.",
+      },
+    ],
+    sources: [
+      {
+        label: "n8n AI agents",
+        href: "https://n8n.io/ai-agents/",
+        description:
+          "Official overview of AI agents in workflows with tools, memory and goals.",
+      },
+      {
+        label: "Google helpful content",
+        href: "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+        description:
+          "Reference used to write useful, specific and verifiable answers.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "AI Agent Developer",
+        href: "/en/services/ai-agent-developer-madagascar",
+        description:
+          "AI agents connected to your business tools and knowledge bases.",
+      },
+      {
+        label: "AI Integration & Prompt Engineering",
+        href: "/en/services/ai-integration",
+        description:
+          "Claude, GPT and structured prompts inside an application or workflow.",
+      },
+    ],
+    faq: [
+      {
+        question: "Can an AI support agent reply to customers automatically?",
+        answer:
+          "Yes, but only on framed topics. I often recommend automatic replies for simple FAQ cases and human validation for commercial, legal, financial or sensitive topics.",
+      },
+      {
+        question: "Do we already need a knowledge base?",
+        answer:
+          "It helps, but it is not mandatory. We can start from your emails, documents, web pages and repetitive replies to build a first clean base.",
+      },
+      {
+        question: "Can the agent work with WhatsApp or email?",
+        answer:
+          "Yes, depending on available access. The key is to define the priority channel, reply rules and the system where exchanges will be stored.",
+      },
+    ],
+    cta: {
+      title: "Does your support team receive too many repetitive requests?",
+      description:
+        "We can start with 20 frequent questions, one support channel and a clear rule: what the agent handles, what it prepares and what it transfers.",
+      buttonLabel: "Design my support agent",
+    },
+  },
+  {
+    slug: "mobile-money-api-madagascar",
+    icon: "payments",
+    accent: "blue",
+    title: "Mobile Money API Madagascar: Orange Money, MVola, Airtel and dashboard",
+    eyebrow: "Local payment solution",
+    seoTitle: "Mobile Money API Madagascar | Orange Money, MVola, Airtel",
+    seoDescription:
+      "Mobile Money API integration in Madagascar for web apps and SaaS: Orange Money, MVola, Airtel, callbacks, reconciliation, dashboard and security.",
+    primaryKeyword: "Mobile Money API Madagascar",
+    secondaryKeywords: [
+      "Orange Money API Madagascar",
+      "MVola API Madagascar",
+      "mobile money payment app",
+      "Madagascar payment integration",
+    ],
+    shortAnswer:
+      "A Mobile Money API integration in Madagascar lets an application accept or track Orange Money, MVola or Airtel Money payments. I build the backend logic, callbacks, reconciliation, admin dashboard and safeguards to avoid lost or wrongly matched payments.",
+    heroLead:
+      "Local payment is rarely just a button. You need to handle status, callback, failure, customer proof and back-office reconciliation.",
+    fit: [
+      "You are launching a SaaS, marketplace, booking portal or back office in Madagascar.",
+      "You want to accept Mobile Money without losing transaction statuses.",
+      "You need a dashboard to check payments, refunds or orders.",
+      "You want to connect payment, invoice, email, WhatsApp or manual validation.",
+    ],
+    outcomes: [
+      {
+        title: "Better payment traceability",
+        description:
+          "Each attempt has an ID, status, business reference and trace in the dashboard.",
+      },
+      {
+        title: "Fewer disputes",
+        description:
+          "The customer sees a clear confirmation and the team can find the transaction without searching several tools.",
+      },
+      {
+        title: "Usable back office",
+        description:
+          "Payments are linked to orders, bookings, subscriptions or invoices.",
+      },
+    ],
+    problem: {
+      title: "The fragile point: payment must speak to the business",
+      paragraphs: [
+        "A payment API is not enough. You need to know which order the transaction belongs to, what happens if the callback arrives late, how to handle an unknown status and how to notify the customer without creating double confirmation.",
+        "For Madagascar, you also need to consider the operators your customers use: Orange Money, MVola and Airtel Money. Journeys, test environments and access constraints can vary by provider.",
+        "I build the integration as a product component: Node.js or Next.js backend, database, monitoring dashboard, notifications and documentation for the team operating the system.",
+      ],
+    },
+    deliverables: {
+      title: "What I can integrate",
+      items: [
+        {
+          title: "Payment backend",
+          description:
+            "Payment intent creation, reference storage, API calls and status handling.",
+        },
+        {
+          title: "Callbacks and webhooks",
+          description:
+            "Secure endpoint to receive confirmations, verify data and update the order.",
+        },
+        {
+          title: "Admin dashboard",
+          description:
+            "Payment view by status, search by customer, order or reference, and export if needed.",
+        },
+        {
+          title: "Notifications",
+          description:
+            "Customer confirmation, team alert, transactional email or n8n workflow when human action is needed.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Typical architecture",
+      intro:
+        "The right architecture separates customer experience, payment backend and back office. That avoids validating a transaction only because the frontend displays it.",
+      steps: [
+        {
+          title: "1. Payment intent",
+          description:
+            "The app creates an internal transaction with amount, currency, customer, order and target provider.",
+        },
+        {
+          title: "2. Provider call",
+          description:
+            "The backend calls Orange Money, MVola or Airtel with expected parameters and stores the response.",
+        },
+        {
+          title: "3. Secure callback",
+          description:
+            "The provider notifies the backend. The status is verified, then the order is updated server-side.",
+        },
+        {
+          title: "4. Reconciliation",
+          description:
+            "The dashboard helps find successful, failed, expired or manually reviewed payments.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Important safeguards",
+      items: [
+        {
+          title: "Idempotency",
+          description:
+            "A callback received twice must not create two validations or two deliveries.",
+        },
+        {
+          title: "Server validation",
+          description:
+            "The frontend never decides alone that a payment succeeded. The database is updated server-side.",
+        },
+        {
+          title: "Traceability",
+          description:
+            "Each status keeps a trace: date, provider, reference, useful payload and triggered action.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "PaidMada Mobile Money",
+        href: "/en/projects/paidmada-mobile-money",
+        description:
+          "Project focused on Mobile Money payment in Madagascar: MVola, Orange Money and Airtel Money.",
+      },
+      {
+        label: "Hire a Node.js Developer in Madagascar",
+        href: "/en/services/hire-nodejs-developer-madagascar",
+        description:
+          "Backend APIs, webhooks, security, real-time flows and provider integrations.",
+      },
+      {
+        label: "Next.js & Supabase Developer",
+        href: "/en/services/nextjs-supabase-developer-madagascar",
+        description:
+          "For the full app: auth, dashboard, database and admin interface.",
+      },
+    ],
+    sources: [
+      {
+        label: "Orange Money Web Payment",
+        href: "https://developer.orange.com/apis/om-webpay",
+        description:
+          "Official Orange Money Web Payment API, with Madagascar listed among supported countries.",
+      },
+      {
+        label: "MVola Developer Portal",
+        href: "https://developer.mvola.mg/devportal/",
+        description:
+          "MVola developer portal for API documentation and access.",
+      },
+      {
+        label: "Airtel Africa Developer Portal",
+        href: "https://developers.airtel.africa/developer",
+        description:
+          "Airtel developer portal for APIs and Mobile Money integrations by country.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "Hire a Node.js Developer in Madagascar",
+        href: "/en/services/hire-nodejs-developer-madagascar",
+        description:
+          "REST APIs, webhooks, authentication, provider integration and backend logic.",
+      },
+      {
+        label: "React & Next.js Developer",
+        href: "/en/services/hire-react-nextjs-developer-madagascar",
+        description:
+          "Customer interface, admin dashboard, payment pages and confirmation screens.",
+      },
+    ],
+    faq: [
+      {
+        question: "Can Orange Money, MVola and Airtel Money be integrated into one app?",
+        answer:
+          "Yes, but each provider must be treated as a separate integration: access, parameters, statuses, callbacks and customer flow can differ.",
+      },
+      {
+        question: "Can Mobile Money payment trigger an invoice or notification?",
+        answer:
+          "Yes. Once the status is validated server-side, it can trigger email, WhatsApp, invoice generation, CRM update or an n8n workflow.",
+      },
+      {
+        question: "Do payments need an admin dashboard?",
+        answer:
+          "I strongly recommend it. Without a dashboard, the team wastes time checking ambiguous cases and customer requests.",
+      },
+    ],
+    cta: {
+      title: "Want to connect Mobile Money to your product?",
+      description:
+        "We can frame the payment journey, target providers, statuses, dashboard and reconciliation logic before writing the backend.",
+      buttonLabel: "Scope my payment integration",
+    },
+  },
+  {
+    slug: "ai-prospecting-agent",
+    icon: "travel_explore",
+    accent: "purple",
+    title: "AI prospecting agent: lead qualification, CRM and n8n follow-ups",
+    eyebrow: "AI prospecting solution",
+    seoTitle: "AI Prospecting Agent | Lead Qualification, CRM and n8n",
+    seoDescription:
+      "AI prospecting agent to qualify leads, enrich data, prepare messages, sync the CRM and automate follow-ups with n8n.",
+    primaryKeyword: "AI prospecting agent",
+    secondaryKeywords: [
+      "AI prospecting automation",
+      "lead qualification n8n",
+      "sales prospecting workflow",
+      "AI CRM agent",
+    ],
+    shortAnswer:
+      "An AI prospecting agent helps collect, qualify, enrich and prioritize leads before human outreach. I connect it to n8n, your CRM and your data sources to produce clean lists, useful summaries and framed follow-ups without automating spam.",
+    heroLead:
+      "The objective is not to send more random messages. The objective is to choose who to contact, why, with which angle and with which trace in the CRM.",
+    fit: [
+      "You have leads but not enough context to prioritize them.",
+      "Your sales team spends too much time cleaning data.",
+      "You want personalized drafts without losing control of sending.",
+      "You need a workflow that respects your ICP, rules and sending limits.",
+    ],
+    outcomes: [
+      {
+        title: "Better qualified leads",
+        description:
+          "Each prospect can receive a segment, score, reason to contact and short summary.",
+      },
+      {
+        title: "Cleaner CRM",
+        description:
+          "Data is normalized before entering the CRM, with deduplication and useful fields.",
+      },
+      {
+        title: "More human prospecting",
+        description:
+          "AI prepares angles and drafts, while humans validate messages and timing.",
+      },
+    ],
+    problem: {
+      title: "AI prospecting should remain an assistant, not a spam machine",
+      paragraphs: [
+        "A bad prospecting system automates volume. A good system automates research, sorting, context and preparation, then lets a human decide the final outreach.",
+        "I start by defining the ICP: company type, buying signals, country, industry, size, tools used, likely budget and rejection reasons. Then the workflow can search, enrich, score and sync leads.",
+        "Sensitive parts stay framed: source compliance, sending frequency, duplicate exclusion, opt-out, human validation and CRM history.",
+      ],
+    },
+    deliverables: {
+      title: "What the workflow can produce",
+      items: [
+        {
+          title: "Collection and enrichment",
+          description:
+            "CSV import, form, API, authorized scraping or business source, then enrichment and cleaning.",
+        },
+        {
+          title: "AI scoring",
+          description:
+            "Score based on your ICP, short justification, positive signals and reasons not to contact.",
+        },
+        {
+          title: "Personalized drafts",
+          description:
+            "Email, LinkedIn message or sales note prepared from verifiable data.",
+        },
+        {
+          title: "CRM sync",
+          description:
+            "Contact creation or update, tags, status, next action and summary for the team.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Typical architecture",
+      intro:
+        "The workflow must be auditable. Every score and every message should come from data the team can verify.",
+      steps: [
+        {
+          title: "1. Lead source",
+          description:
+            "Existing list, form, public database, CRM export or source approved by your team.",
+        },
+        {
+          title: "2. Cleaning",
+          description:
+            "Deduplication, email validation, normalization of names, industries and URLs.",
+        },
+        {
+          title: "3. AI analysis",
+          description:
+            "Company summary, ICP score, contact angle and caution flags.",
+        },
+        {
+          title: "4. Controlled action",
+          description:
+            "CRM update, message draft, sales notification or follow-up sequence with validation.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Sales and quality safeguards",
+      items: [
+        {
+          title: "No invented claims",
+          description:
+            "Messages must rely on real signals, not generic AI compliments.",
+        },
+        {
+          title: "Respect exclusions",
+          description:
+            "No-contact lists, opt-outs, existing customers, competitors or excluded industries are filtered.",
+        },
+        {
+          title: "Human validation",
+          description:
+            "For sensitive campaigns, AI prepares and a human decides the final send.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Lead workflow showcase",
+        href: "/en/projects/leads-automation-showcase",
+        description:
+          "n8n pipeline demo for lead generation, qualification and CRM synchronization.",
+      },
+      {
+        label: "Scraping FlowRemote",
+        href: "/en/projects/scraping-flowremote",
+        description:
+          "Automated multi-source extraction, filtering and daily notification.",
+      },
+      {
+        label: "n8n Automation Expert",
+        href: "/en/services/n8n-automation-expert-madagascar",
+        description:
+          "Technical foundation to orchestrate sources, AI, CRM, emails and reporting.",
+      },
+    ],
+    sources: [
+      {
+        label: "Google AI optimization",
+        href: "https://developers.google.com/search/docs/fundamentals/ai-optimization-guide",
+        description:
+          "Reference for producing clear, useful content that AI-enhanced search systems can understand.",
+      },
+      {
+        label: "n8n AI agents",
+        href: "https://n8n.io/ai-agents/",
+        description:
+          "Official basis for thinking about AI agents as tool-enabled workflows, not isolated answers.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "n8n Automation Expert",
+        href: "/en/services/n8n-automation-expert-madagascar",
+        description:
+          "Business workflow automation, API integrations and data orchestration.",
+      },
+      {
+        label: "AI Agent Developer",
+        href: "/en/services/ai-agent-developer-madagascar",
+        description:
+          "AI agents that classify, summarize, decide and prepare business actions.",
+      },
+    ],
+    faq: [
+      {
+        question: "Can an AI agent send prospecting messages automatically?",
+        answer:
+          "Technically yes, but I recommend starting with human validation. Quality, deliverability and brand reputation matter more than uncontrolled volume.",
+      },
+      {
+        question: "Can this workflow connect to HubSpot, Airtable or Google Sheets?",
+        answer:
+          "Yes. n8n can sync data with a CRM, Airtable, Google Sheets, Notion or a custom API.",
+      },
+      {
+        question: "How do we avoid duplicates in the CRM?",
+        answer:
+          "The workflow can check email, domain, company name and internal IDs before creating or updating a contact.",
+      },
+    ],
+    cta: {
+      title: "Want to qualify leads without spamming?",
+      description:
+        "We can define your ICP, accepted sources, CRM fields and human validation level before building the agent.",
+      buttonLabel: "Scope my prospecting agent",
+    },
+  },
+  {
+    slug: "n8n-claude-code-workflows",
+    icon: "terminal",
+    accent: "indigo",
+    title: "n8n + Claude Code workflows: automate AI-assisted development",
+    eyebrow: "Claude Code + n8n solution",
+    seoTitle: "n8n Claude Code Workflows | Claude Code Developer Freelance",
+    seoDescription:
+      "n8n workflows with Claude Code for audits, reporting, content, tickets and developer tasks. Freelance Claude Code developer in Madagascar.",
+    primaryKeyword: "Claude Code developer",
+    secondaryKeywords: [
+      "n8n Claude Code workflow",
+      "Claude Code n8n automation",
+      "freelance Claude Code developer",
+      "MCP n8n Claude",
+    ],
+    shortAnswer:
+      "An n8n + Claude Code workflow connects business or technical events to AI-assisted execution: summary, audit, ticket preparation, content generation, data analysis or developer support. I frame it with Git, human validation, logs and security rules.",
+    heroLead:
+      "Claude Code is powerful when it works with repository context. n8n becomes useful when it triggers, prepares, archives and notifies around that work.",
+    fit: [
+      "You already use Claude Code, Codex or LLMs in production.",
+      "You want to automate repetitive tasks around code, tickets or content.",
+      "You need logs and validation before an AI action touches production.",
+      "You want to connect GitHub, Notion, Slack, Supabase, email, CRM or internal APIs.",
+    ],
+    outcomes: [
+      {
+        title: "Less repetitive developer work",
+        description:
+          "Ticket preparation, log summaries, reports, review checklists and technical drafts.",
+      },
+      {
+        title: "Better traceability",
+        description:
+          "Each AI action has an input, output, context, date and human owner.",
+      },
+      {
+        title: "Better-framed AI",
+        description:
+          "Prompts, context files and execution rules are versioned or documented.",
+      },
+    ],
+    problem: {
+      title: "AI-assisted development needs a system around the tool",
+      paragraphs: [
+        "Claude Code can accelerate development massively, but the tool alone is not an operating system. You need to decide when AI is called, with which context, what output is expected and who validates it.",
+        "n8n can act as the orchestrator: retrieve a ticket, read data, prepare a prompt, trigger a step, store the result, notify the team and create a validation task.",
+        "I build these workflows as extensions of how your team works, not as a gimmick. Code stays in Git, secrets stay in the right environments, and risky actions stay human-controlled.",
+      ],
+    },
+    deliverables: {
+      title: "Concrete use cases",
+      items: [
+        {
+          title: "Ticket preparation",
+          description:
+            "Turn a client request into a technical brief: context, likely files, risks and acceptance criteria.",
+        },
+        {
+          title: "Technical reporting",
+          description:
+            "Summarize logs, errors, analytics or user feedback, then send an actionable report.",
+        },
+        {
+          title: "Content + SEO workflow",
+          description:
+            "Prepare briefs, FAQ, internal links and JSON-LD elements before editorial validation.",
+        },
+        {
+          title: "Maintenance support",
+          description:
+            "Create review checklists, detect likely regressions and document changes.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Typical architecture",
+      intro:
+        "The principle: n8n orchestrates events and Claude Code intervenes only when the context is sufficient.",
+      steps: [
+        {
+          title: "1. Trigger",
+          description:
+            "New ticket, GitHub comment, client form, server error, content request or scheduled task.",
+        },
+        {
+          title: "2. Context",
+          description:
+            "n8n gathers useful information: URL, logs, description, files, Supabase data or internal docs.",
+        },
+        {
+          title: "3. AI work",
+          description:
+            "Claude Code or an LLM produces a proposal: brief, summary, patch to review, checklist or answer.",
+        },
+        {
+          title: "4. Validation",
+          description:
+            "The team receives the output with sources and decides to publish, edit, reject or create a task.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Safeguards to avoid breaking production",
+      items: [
+        {
+          title: "Validation before mutation",
+          description:
+            "Workflows can prepare code or text, but publishing or merging remains controlled.",
+        },
+        {
+          title: "Secrets out of prompts",
+          description:
+            "API keys, tokens and sensitive variables must not be sent into prompts.",
+        },
+        {
+          title: "Git traceability",
+          description:
+            "Useful changes go through Git, review, build and tests, not invisible edits.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Claude Code + n8n Developer",
+        href: "/en/services/claude-code-n8n-developer",
+        description:
+          "Dedicated service for combining Claude Code, n8n workflows and web production.",
+      },
+      {
+        label: "Claude Code article",
+        href: "/en/blog/claude-code-developper-avec-ia",
+        description:
+          "Experience report on AI-assisted development and the limits that need framing.",
+      },
+      {
+        label: "Factumation",
+        href: "/en/projects/factumation",
+        description:
+          "Product delivered quickly with Claude Code, a concrete base to discuss method and safeguards.",
+      },
+    ],
+    sources: [
+      {
+        label: "Google generative AI content",
+        href: "https://developers.google.com/search/docs/fundamentals/using-gen-ai-content",
+        description:
+          "Important reference: AI-generated or AI-assisted content must remain useful, original and controlled.",
+      },
+      {
+        label: "Google structured data",
+        href: "https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data",
+        description:
+          "Basis for making pages explicit with visible FAQ, breadcrumb and structured data.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "Claude Code + n8n Developer",
+        href: "/en/services/claude-code-n8n-developer",
+        description:
+          "Automation and products built with Claude Code, n8n, Next.js and Supabase.",
+      },
+      {
+        label: "SEO + GEO Consultant",
+        href: "/en/services/seo-geo-consultant",
+        description:
+          "Structure pages for Google, AI Overviews and answer engines.",
+      },
+    ],
+    faq: [
+      {
+        question: "Can Claude Code be triggered automatically by n8n?",
+        answer:
+          "Depending on the environment and available tools, n8n can prepare context, create a task, notify a human or call an AI API. For code actions, I recommend human validation and a Git-based flow.",
+      },
+      {
+        question: "Which workflows are useful with Claude Code?",
+        answer:
+          "Ticket preparation, content audit, log summary, checklist generation, change documentation and maintenance assistance are good first cases.",
+      },
+      {
+        question: "Can Codex be used instead of Claude Code?",
+        answer:
+          "Yes. The same principle applies: n8n orchestrates, AI produces a proposal, and humans validate actions that touch code or production.",
+      },
+    ],
+    cta: {
+      title: "Want to industrialize your Claude Code usage?",
+      description:
+        "We can start with a simple workflow: one trigger, one context package, one AI output, one human validation step and one trace.",
+      buttonLabel: "Design my AI workflow",
+    },
+  },
+];
+
+const solutionsByLocale: Record<Locale, Solution[]> = {
+  fr: frSolutions,
+  en: enSolutions,
+};
+
+const serviceToSolutionSlugs: Record<string, string[]> = {
+  "automatisation-n8n": [
+    "automatisation-n8n-pme",
+    "agent-ia-prospection",
+  ],
+  "automatisation-n8n-madagascar": [
+    "automatisation-n8n-pme",
+    "agent-ia-prospection",
+    "workflows-n8n-claude-code",
+  ],
+  "developpeur-agent-ia-madagascar": [
+    "agent-ia-support-client",
+    "agent-ia-prospection",
+  ],
+  "developpeur-agent-vocal-ia": ["agent-ia-support-client"],
+  "developpeur-nodejs-madagascar": ["api-mobile-money-madagascar"],
+  "developpeur-react-nextjs-madagascar": ["api-mobile-money-madagascar"],
+  "developpeur-nextjs-supabase-madagascar": [
+    "api-mobile-money-madagascar",
+    "automatisation-n8n-pme",
+  ],
+  "developpeur-claude-code-n8n": ["workflows-n8n-claude-code"],
+  "developpeur-codex-n8n": ["workflows-n8n-claude-code"],
+  "consultant-seo-geo": ["workflows-n8n-claude-code"],
+  "n8n-automation": [
+    "n8n-automation-for-smbs",
+    "ai-prospecting-agent",
+  ],
+  "n8n-automation-expert-madagascar": [
+    "n8n-automation-for-smbs",
+    "ai-prospecting-agent",
+    "n8n-claude-code-workflows",
+  ],
+  "ai-agent-developer-madagascar": [
+    "ai-customer-support-agent",
+    "ai-prospecting-agent",
+  ],
+  "ai-voice-agent-developer": ["ai-customer-support-agent"],
+  "hire-nodejs-developer-madagascar": ["mobile-money-api-madagascar"],
+  "hire-react-nextjs-developer-madagascar": ["mobile-money-api-madagascar"],
+  "nextjs-supabase-developer-madagascar": [
+    "mobile-money-api-madagascar",
+    "n8n-automation-for-smbs",
+  ],
+  "claude-code-n8n-developer": ["n8n-claude-code-workflows"],
+  "codex-n8n-developer": ["n8n-claude-code-workflows"],
+  "seo-geo-consultant": ["n8n-claude-code-workflows"],
+};
+
+export function getSolutions(locale: Locale): Solution[] {
+  return solutionsByLocale[locale];
+}
+
+export function getSolutionBySlug(locale: Locale, slug: string): Solution | undefined {
+  return getSolutions(locale).find((solution) => solution.slug === slug);
+}
+
+export function getAlternateSolution(locale: Locale, slug: string): Solution | undefined {
+  const index = getSolutions(locale).findIndex((solution) => solution.slug === slug);
+  if (index < 0) return undefined;
+  const alternateLocale: Locale = locale === "fr" ? "en" : "fr";
+  return getSolutions(alternateLocale)[index];
+}
+
+export function getRelatedSolutionsForService(locale: Locale, serviceSlug: string): Solution[] {
+  const slugs = serviceToSolutionSlugs[serviceSlug] ?? [];
+  const solutionsBySlug = new Map(getSolutions(locale).map((solution) => [solution.slug, solution]));
+  return slugs.flatMap((slug) => {
+    const solution = solutionsBySlug.get(slug);
+    return solution ? [solution] : [];
+  });
+}

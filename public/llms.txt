@@ -16,6 +16,22 @@ Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance bas
 - [Intégration IA](https://manda-ia.com/services/integration-ia): Agents IA autonomes, Claude Code, GPT — intégration d'intelligence artificielle
 - [Passage à l'échelle](https://manda-ia.com/services/passage-echelle): Architecture scalable, migration No-Code vers code, optimisation performance
 
+## Solutions
+
+- [Automatisation n8n pour PME](https://manda-ia.com/solutions/automatisation-n8n-pme): Workflows CRM, emails, reporting, factures, relances et supervision pour PME
+- [Agent IA support client](https://manda-ia.com/solutions/agent-ia-support-client): Agent IA avec FAQ, tri des demandes, qualification de tickets et escalade humaine
+- [API Mobile Money Madagascar](https://manda-ia.com/solutions/api-mobile-money-madagascar): Intégration Orange Money, MVola, Airtel Money, callbacks, dashboard et rapprochement
+- [Agent IA prospection](https://manda-ia.com/solutions/agent-ia-prospection): Qualification de leads, scoring ICP, brouillons personnalisés, CRM et relances n8n
+- [Workflows n8n + Claude Code](https://manda-ia.com/solutions/workflows-n8n-claude-code): Automatisation du développement assisté par IA avec validation humaine, logs et Git
+
+## Solutions EN
+
+- [n8n Automation for SMBs](https://manda-ia.com/en/solutions/n8n-automation-for-smbs): CRM, email, reporting, invoice, follow-up and monitoring workflows for SMBs
+- [AI Customer Support Agent](https://manda-ia.com/en/solutions/ai-customer-support-agent): FAQ answers, ticket triage, request qualification and human handoff
+- [Mobile Money API Madagascar](https://manda-ia.com/en/solutions/mobile-money-api-madagascar): Orange Money, MVola, Airtel Money, callbacks, dashboard and reconciliation
+- [AI Prospecting Agent](https://manda-ia.com/en/solutions/ai-prospecting-agent): Lead qualification, ICP scoring, personalized drafts, CRM sync and n8n follow-ups
+- [n8n + Claude Code Workflows](https://manda-ia.com/en/solutions/n8n-claude-code-workflows): AI-assisted development workflows with human validation, logs and Git
+
 ## Projets
 
 - [ScalApp](https://manda-ia.com/projects/scalapp): Plateforme SaaS de scaling pour freelances — dashboard Bubble avec gestion d'investissements
