@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/config";
 
-export const SOLUTION_LAST_UPDATED = "2026-06-24";
+export const SOLUTION_LAST_UPDATED = "2026-07-15";
 
 export type SolutionAccent = "indigo" | "emerald" | "blue" | "purple";
 
@@ -459,18 +459,20 @@ export const frSolutions: Solution[] = [
     accent: "blue",
     title: "API Mobile Money Madagascar : Orange Money, MVola, Airtel et dashboard",
     eyebrow: "Solution paiement local",
-    seoTitle: "API Mobile Money Madagascar | Orange Money, MVola, Airtel",
+    seoTitle: "API Orange Money Madagascar | MVola & Airtel Money",
     seoDescription:
-      "Intégration API Mobile Money Madagascar pour applications web et SaaS : Orange Money, MVola, Airtel, callbacks, rapprochement, dashboard et sécurité.",
+      "Intégrez Orange Money, MVola et Airtel Money dans une application à Madagascar : API Mobile Money, callbacks sécurisés, rapprochement, dashboard et mode test.",
     primaryKeyword: "API mobile money Madagascar",
     secondaryKeywords: [
       "API Orange Money Madagascar",
       "API MVola Madagascar",
+      "API Airtel Money Madagascar",
       "paiement mobile money application",
+      "webhook paiement mobile money",
       "intégration paiement Madagascar",
     ],
     shortAnswer:
-      "Une intégration API Mobile Money Madagascar permet à une application d'accepter ou de suivre des paiements Orange Money, MVola ou Airtel Money. Je construis la logique backend, les callbacks, le rapprochement, le dashboard admin et les garde-fous pour éviter les paiements perdus ou mal associés.",
+      "Une API Mobile Money Madagascar connecte une application à Orange Money, MVola ou Airtel Money pour créer, suivre et rapprocher des paiements. L'intégration utile ne se limite pas à l'appel fournisseur : elle doit créer une intention de paiement, recevoir un webhook sécurisé, vérifier le statut côté serveur, relier la transaction à une commande et afficher un historique clair dans un dashboard. Je construis ce flux avec backend Node.js ou Next.js, mode test/mock, idempotence et traces exploitables par l'équipe.",
     heroLead:
       "Le paiement local est rarement juste un bouton. Il faut gérer le statut, le callback, l'échec, la preuve côté client et le rapprochement côté back-office.",
     fit: [
@@ -499,9 +501,9 @@ export const frSolutions: Solution[] = [
     problem: {
       title: "Le point fragile : le paiement doit parler au métier",
       paragraphs: [
-        "Une API de paiement ne suffit pas. Il faut savoir à quelle commande correspond la transaction, que faire si le callback arrive en retard, comment traiter un statut inconnu et comment informer le client sans créer une double confirmation.",
-        "Pour Madagascar, il faut aussi penser aux opérateurs utilisés par les clients : Orange Money, MVola et Airtel Money. Les parcours, les environnements de test et les contraintes d'accès peuvent varier selon le fournisseur.",
-        "Je construis l'intégration comme une brique produit : backend Node.js ou Next.js, base de données, dashboard de suivi, notifications, et documentation pour l'équipe qui va opérer le système.",
+        "Une intégration Orange Money, MVola ou Airtel Money doit associer chaque transaction à une commande, un client, un montant et un statut serveur. Si le callback arrive en retard, arrive deux fois ou contient un statut inconnu, le backend doit rester idempotent et garder une trace lisible pour l'équipe.",
+        "À Madagascar, les opérateurs Mobile Money n'ont pas toujours les mêmes parcours, paramètres API, accès sandbox ou libellés de statut. Un backend fiable isole chaque fournisseur dans un adaptateur, puis expose un modèle commun à l'application : paiement créé, en attente, validé, échoué, expiré ou à vérifier.",
+        "Je construis l'intégration comme une brique produit : backend Node.js ou Next.js, table de transactions, vérification de signature ou secret webhook, dashboard de suivi, notifications et documentation pour l'équipe qui opère les paiements au quotidien.",
       ],
     },
     deliverables: {
@@ -510,17 +512,22 @@ export const frSolutions: Solution[] = [
         {
           title: "Backend de paiement",
           description:
-            "Création d'intentions de paiement, stockage des références, appels API et gestion des statuts.",
+            "Création d'intentions de paiement, stockage des références fournisseur, appels API Orange Money/MVola/Airtel et gestion des statuts serveur.",
         },
         {
           title: "Callbacks et webhooks",
           description:
-            "Endpoint sécurisé pour recevoir les confirmations, vérifier les données et mettre à jour la commande.",
+            "Endpoint sécurisé pour recevoir les confirmations, vérifier les données, rejouer sans double validation et mettre à jour la commande.",
+        },
+        {
+          title: "Mode test et mock fournisseur",
+          description:
+            "Simulation de paiements réussis, échoués, expirés ou ambigus pour tester l'application avant accès complet aux APIs opérateur.",
         },
         {
           title: "Dashboard admin",
           description:
-            "Vue des paiements par statut, recherche par client, commande ou référence, et export si nécessaire.",
+            "Vue des paiements par statut, recherche par client, commande, numéro ou référence fournisseur, et export si nécessaire.",
         },
         {
           title: "Notifications",
@@ -532,7 +539,7 @@ export const frSolutions: Solution[] = [
     architecture: {
       title: "Architecture type",
       intro:
-        "La bonne architecture sépare l'expérience client, le backend de paiement et le back-office. Cela évite qu'une transaction soit validée seulement parce que le front l'affiche.",
+        "La bonne architecture sépare l'expérience client, le backend de paiement, les adaptateurs fournisseur et le back-office. Cela évite qu'une transaction soit validée seulement parce que le front l'affiche.",
       steps: [
         {
           title: "1. Intention de paiement",
@@ -540,9 +547,9 @@ export const frSolutions: Solution[] = [
             "L'application crée une transaction interne avec montant, devise, client, commande et fournisseur visé.",
         },
         {
-          title: "2. Appel fournisseur",
+          title: "2. Routage fournisseur",
           description:
-            "Le backend appelle Orange Money, MVola ou Airtel avec les paramètres attendus et stocke la réponse.",
+            "Le backend choisit Orange Money, MVola ou Airtel Money, appelle l'API avec les paramètres attendus et stocke la réponse brute utile.",
         },
         {
           title: "3. Callback sécurisé",
@@ -552,7 +559,7 @@ export const frSolutions: Solution[] = [
         {
           title: "4. Rapprochement",
           description:
-            "Le dashboard permet de retrouver les paiements réussis, échoués, expirés ou à vérifier manuellement.",
+            "Le dashboard permet de retrouver les paiements réussis, échoués, expirés ou à vérifier manuellement, puis de les relier à la commande ou facture.",
         },
       ],
     },
@@ -563,6 +570,11 @@ export const frSolutions: Solution[] = [
           title: "Idempotence",
           description:
             "Un callback reçu deux fois ne doit pas créer deux validations ou deux livraisons.",
+        },
+        {
+          title: "Signature et secret webhook",
+          description:
+            "Le callback Mobile Money doit être vérifié côté serveur pour éviter les confirmations inventées ou modifiées par le client.",
         },
         {
           title: "Validation serveur",
@@ -632,19 +644,24 @@ export const frSolutions: Solution[] = [
     ],
     faq: [
       {
+        question: "Comment intégrer l'API Orange Money à Madagascar ?",
+        answer:
+          "Pour intégrer l'API Orange Money à Madagascar, il faut d'abord obtenir les accès fournisseur, créer une intention de paiement côté backend, stocker la référence interne, recevoir le callback Orange Money, vérifier le statut serveur et mettre à jour la commande. Le frontend ne doit afficher une confirmation définitive qu'après validation backend.",
+      },
+      {
         question: "Peut-on intégrer Orange Money, MVola et Airtel Money dans une même application ?",
         answer:
-          "Oui, mais il faut traiter chaque fournisseur comme une intégration distincte : accès, paramètres, statuts, callbacks et parcours client peuvent différer.",
+          "Oui. La bonne approche consiste à traiter Orange Money, MVola et Airtel Money comme trois adaptateurs fournisseur, puis à exposer un modèle commun à l'application : montant, devise, client, commande, statut, référence fournisseur et historique des callbacks.",
       },
       {
-        question: "Le paiement Mobile Money peut-il déclencher une facture ou une notification ?",
+        question: "Comment sécuriser un callback Mobile Money ?",
         answer:
-          "Oui. Une fois le statut validé côté serveur, on peut déclencher email, WhatsApp, génération de facture, mise à jour CRM ou workflow n8n.",
+          "Un callback Mobile Money doit être reçu sur un endpoint serveur, vérifié avec les mécanismes fournis par l'opérateur, journalisé, puis traité de façon idempotente. Même si le même callback arrive deux fois, la commande ne doit être validée qu'une seule fois.",
       },
       {
-        question: "Faut-il un dashboard admin pour les paiements ?",
+        question: "Faut-il un dashboard admin pour les paiements Mobile Money ?",
         answer:
-          "Je le recommande fortement. Sans dashboard, l'équipe perd du temps à vérifier les cas ambigus et les demandes client.",
+          "Oui, surtout pour une application métier. Le dashboard permet de chercher un paiement par client, numéro, commande ou référence fournisseur, de repérer les statuts ambigus et de rapprocher les paiements avec les factures ou réservations.",
       },
     ],
     cta: {
@@ -660,18 +677,20 @@ export const frSolutions: Solution[] = [
     accent: "purple",
     title: "Agent IA prospection : qualification de leads, CRM et relances n8n",
     eyebrow: "Solution prospection IA",
-    seoTitle: "Agent IA prospection | Qualification leads, CRM et n8n",
+    seoTitle: "Agent IA prospection | Leads, Facebook, CRM et n8n",
     seoDescription:
-      "Agent IA prospection pour qualifier les leads, enrichir les données, préparer des messages, synchroniser le CRM et automatiser les relances avec n8n.",
+      "Agent IA prospection pour qualifier les leads, traiter Facebook/formulaires, scorer l'ICP, préparer des brouillons, synchroniser le CRM et relancer avec n8n.",
     primaryKeyword: "agent IA prospection",
     secondaryKeywords: [
       "automatisation prospection IA",
+      "agent IA Facebook",
       "qualification leads n8n",
+      "agent IA qualification leads",
       "workflow prospection commerciale",
       "agent IA CRM",
     ],
     shortAnswer:
-      "Un agent IA de prospection aide à collecter, qualifier, enrichir et prioriser des leads avant contact humain. Je le connecte à n8n, à votre CRM et à vos sources de données pour produire des listes propres, des résumés utiles et des relances cadrées, sans automatiser du spam.",
+      "Un agent IA de prospection qualifie les leads avant contact humain : il collecte la source, nettoie les données, résume l'entreprise, applique un score ICP et prépare un angle de message. Le cas utile n'est pas d'envoyer du spam automatiquement, mais de traiter proprement les formulaires, messages Facebook, exports CRM ou listes autorisées. Je le connecte à n8n, au CRM et aux règles commerciales pour produire des leads priorisés, des brouillons vérifiables et des relances contrôlées.",
     heroLead:
       "L'objectif n'est pas d'envoyer plus de messages au hasard. L'objectif est de mieux choisir qui contacter, pourquoi, avec quel angle et avec quelle trace dans le CRM.",
     fit: [
@@ -700,7 +719,8 @@ export const frSolutions: Solution[] = [
     problem: {
       title: "La prospection IA doit rester une aide, pas une machine à spam",
       paragraphs: [
-        "Un mauvais système de prospection automatise le volume. Un bon système automatise la recherche, le tri, le contexte et la préparation, puis laisse l'humain décider du contact final.",
+        "Un agent IA de prospection doit automatiser la recherche, le tri, le contexte et la préparation, pas remplacer le jugement commercial. La meilleure sortie est un lead qualifié avec une raison de contact claire, un résumé court, un score et une prochaine action.",
+        "Un agent IA Facebook peut traiter les messages Messenger, commentaires ou formulaires Meta Lead Ads si l'accès API et les consentements sont cadrés. L'agent peut classer la demande, détecter l'intention, préparer une réponse ou créer une fiche CRM, mais les cas sensibles doivent rester en validation humaine.",
         "Je commence par définir l'ICP : type d'entreprise, signaux d'achat, pays, secteur, taille, outils utilisés, budget probable et raisons de rejet. Ensuite, le workflow peut chercher, enrichir, scorer et synchroniser les leads.",
         "Les parties sensibles restent cadrées : conformité des sources, fréquence d'envoi, exclusion des doublons, opt-out, validation humaine et historique CRM.",
       ],
@@ -712,6 +732,11 @@ export const frSolutions: Solution[] = [
           title: "Collecte et enrichissement",
           description:
             "Import CSV, formulaire, API, scraping autorisé ou source métier, puis enrichissement et nettoyage.",
+        },
+        {
+          title: "Qualification Facebook et formulaires",
+          description:
+            "Tri des messages, commentaires ou leads Meta, détection d'intention, résumé utile et création d'une action commerciale.",
         },
         {
           title: "Scoring IA",
@@ -779,6 +804,12 @@ export const frSolutions: Solution[] = [
     },
     proofs: [
       {
+        label: "Facebook Agent IA",
+        href: "/projects/facebook-agen-ia",
+        description:
+          "Dashboard d'agent IA connecté à Facebook pour qualifier des conversations et structurer les actions commerciales.",
+      },
+      {
         label: "Showcase workflow leads",
         href: "/projects/leads-automation-showcase",
         description:
@@ -827,6 +858,16 @@ export const frSolutions: Solution[] = [
     ],
     faq: [
       {
+        question: "Quel est le rôle d'un agent IA de prospection ?",
+        answer:
+          "Un agent IA de prospection sert à qualifier et préparer le travail commercial : collecte de leads, nettoyage, enrichissement, scoring ICP, résumé, angle de contact et synchronisation CRM. L'envoi automatique n'est qu'une option, à réserver aux campagnes très cadrées.",
+      },
+      {
+        question: "Un agent IA Facebook peut-il qualifier les demandes ?",
+        answer:
+          "Oui, si les accès Meta, les règles de confidentialité et les scénarios sont définis. L'agent peut lire une demande Facebook, détecter l'intention, classer le lead, préparer une réponse et créer une fiche CRM avec une prochaine action.",
+      },
+      {
         question: "Un agent IA peut-il envoyer les messages de prospection automatiquement ?",
         answer:
           "Techniquement oui, mais je recommande de commencer avec une validation humaine. La qualité, la délivrabilité et l'image de marque valent plus qu'un volume non contrôlé.",
@@ -855,10 +896,10 @@ export const frSolutions: Solution[] = [
     accent: "indigo",
     title: "Workflows n8n + Claude Code : automatiser le développement assisté par IA",
     eyebrow: "Solution Claude Code + n8n",
-    seoTitle: "Workflows n8n Claude Code | Développeur Claude Code freelance",
+    seoTitle: "Claude Code n8n | Workflows IA, MCP et Git",
     seoDescription:
-      "Workflows n8n avec Claude Code pour automatiser audit, reporting, contenu, tickets et tâches développeur. Développeur Claude Code freelance à Madagascar.",
-    primaryKeyword: "développeur Claude Code",
+      "Workflows Claude Code n8n pour automatiser tickets, audits, reporting et contenu avec contexte repo, MCP, logs, validation humaine et passage par Git.",
+    primaryKeyword: "Claude Code n8n",
     secondaryKeywords: [
       "workflow n8n Claude Code",
       "automatisation Claude Code n8n",
@@ -866,7 +907,7 @@ export const frSolutions: Solution[] = [
       "MCP n8n Claude",
     ],
     shortAnswer:
-      "Un workflow n8n + Claude Code relie des événements métier ou techniques à une exécution assistée par IA : résumé, audit, préparation de ticket, génération de contenu, analyse de données ou aide au développement. Je l'encadre avec Git, validation humaine, logs et règles de sécurité.",
+      "Un workflow Claude Code n8n relie un déclencheur métier ou technique à une tâche IA contrôlée : préparation de ticket, audit, résumé de logs, reporting, contenu SEO/GEO ou aide au développement. n8n rassemble le contexte, Claude Code ou Codex prépare une proposition, puis Git, logs et validation humaine gardent la main sur les actions à risque. Cette architecture convient surtout quand l'IA doit travailler avec un repo, des tickets, des données Supabase ou des documents internes.",
     heroLead:
       "Claude Code est puissant quand il travaille avec le contexte du repo. n8n devient utile quand il déclenche, prépare, archive et notifie autour de ce travail.",
     fit: [
@@ -895,8 +936,8 @@ export const frSolutions: Solution[] = [
     problem: {
       title: "Le développement assisté par IA a besoin d'un système autour",
       paragraphs: [
-        "Claude Code peut accélérer énormément le développement, mais l'outil seul ne fait pas une organisation. Il faut décider quand l'IA est appelée, avec quel contexte, quelle sortie est attendue et qui valide.",
-        "n8n peut jouer le rôle d'orchestrateur : récupérer un ticket, lire des données, préparer un prompt, déclencher une étape, stocker le résultat, notifier l'équipe et créer une tâche de validation.",
+        "Claude Code peut accélérer le développement, mais un workflow Claude Code n8n doit préciser le déclencheur, le contexte, la sortie attendue et la personne qui valide. Sans ce cadrage, l'IA produit des réponses utiles ponctuellement mais difficiles à industrialiser.",
+        "n8n peut jouer le rôle d'orchestrateur : récupérer un ticket, lire des données, préparer un prompt, appeler un modèle, stocker le résultat, notifier l'équipe et créer une tâche de validation. Avec MCP, le workflow peut aussi exposer des outils précis à l'agent au lieu de lui donner un accès flou.",
         "Je construis ces workflows comme des extensions de votre manière de travailler, pas comme un gadget. Le code reste dans Git, les secrets restent dans les environnements prévus, et les actions à risque restent humaines.",
       ],
     },
@@ -917,6 +958,11 @@ export const frSolutions: Solution[] = [
           title: "Workflow contenu + SEO",
           description:
             "Préparer briefs, FAQ, maillage interne et éléments JSON-LD avant validation éditoriale.",
+        },
+        {
+          title: "Orchestration MCP",
+          description:
+            "Définir quels outils, données ou endpoints l'agent peut utiliser, avec limites, logs et validation avant action sensible.",
         },
         {
           title: "Aide à la maintenance",
@@ -1024,7 +1070,12 @@ export const frSolutions: Solution[] = [
       {
         question: "Claude Code peut-il être déclenché automatiquement par n8n ?",
         answer:
-          "Selon l'environnement et les outils disponibles, n8n peut préparer le contexte, créer une tâche, notifier un humain ou appeler une API IA. Pour les actions de code, je recommande une validation humaine et un passage par Git.",
+          "Oui, selon l'environnement et les outils disponibles, n8n peut préparer le contexte, créer une tâche, notifier un humain ou appeler une API IA. Pour les actions de code, je recommande que Claude Code produise une proposition contrôlée, puis qu'un humain valide le patch via Git, build et tests.",
+      },
+      {
+        question: "À quoi sert MCP dans un workflow n8n Claude ?",
+        answer:
+          "MCP sert à exposer des outils structurés à l'agent IA : lecture de données, actions limitées, recherche ou commandes métiers. Dans un workflow n8n Claude, MCP évite les prompts flous en donnant à l'agent des capacités précises, journalisées et plus faciles à limiter.",
       },
       {
         question: "Quels workflows sont utiles avec Claude Code ?",
@@ -1644,18 +1695,20 @@ export const enSolutions: Solution[] = [
     accent: "blue",
     title: "Mobile Money API Madagascar: Orange Money, MVola, Airtel and dashboard",
     eyebrow: "Local payment solution",
-    seoTitle: "Mobile Money API Madagascar | Orange Money, MVola, Airtel",
+    seoTitle: "Orange Money API Madagascar | MVola & Airtel Money",
     seoDescription:
-      "Mobile Money API integration in Madagascar for web apps and SaaS: Orange Money, MVola, Airtel, callbacks, reconciliation, dashboard and security.",
+      "Integrate Orange Money, MVola and Airtel Money in a Madagascar app: Mobile Money API, secure callbacks, reconciliation, dashboard and test mode.",
     primaryKeyword: "Mobile Money API Madagascar",
     secondaryKeywords: [
       "Orange Money API Madagascar",
       "MVola API Madagascar",
+      "Airtel Money API Madagascar",
       "mobile money payment app",
+      "mobile money payment webhook",
       "Madagascar payment integration",
     ],
     shortAnswer:
-      "A Mobile Money API integration in Madagascar lets an application accept or track Orange Money, MVola or Airtel Money payments. I build the backend logic, callbacks, reconciliation, admin dashboard and safeguards to avoid lost or wrongly matched payments.",
+      "A Madagascar Mobile Money API connects an application to Orange Money, MVola or Airtel Money to create, track and reconcile payments. A useful integration is more than a provider call: it creates a payment intent, receives a secure webhook, verifies the status server-side, links the transaction to an order and exposes a clear history in an admin dashboard. I build this flow with Node.js or Next.js, test/mock mode, idempotency and traces the team can actually use.",
     heroLead:
       "Local payment is rarely just a button. You need to handle status, callback, failure, customer proof and back-office reconciliation.",
     fit: [
@@ -1684,9 +1737,9 @@ export const enSolutions: Solution[] = [
     problem: {
       title: "The fragile point: payment must speak to the business",
       paragraphs: [
-        "A payment API is not enough. You need to know which order the transaction belongs to, what happens if the callback arrives late, how to handle an unknown status and how to notify the customer without creating double confirmation.",
-        "For Madagascar, you also need to consider the operators your customers use: Orange Money, MVola and Airtel Money. Journeys, test environments and access constraints can vary by provider.",
-        "I build the integration as a product component: Node.js or Next.js backend, database, monitoring dashboard, notifications and documentation for the team operating the system.",
+        "An Orange Money, MVola or Airtel Money integration must associate every transaction with an order, customer, amount and server-side status. If the callback arrives late, arrives twice or contains an unknown status, the backend must remain idempotent and keep a readable trace for the team.",
+        "In Madagascar, Mobile Money providers do not always share the same flows, API parameters, sandbox access or status labels. A reliable backend isolates each provider in an adapter, then exposes a common model to the app: created, pending, paid, failed, expired or manually reviewed.",
+        "I build the integration as a product component: Node.js or Next.js backend, transaction table, webhook signature or secret verification, monitoring dashboard, notifications and documentation for the team operating payments daily.",
       ],
     },
     deliverables: {
@@ -1695,17 +1748,22 @@ export const enSolutions: Solution[] = [
         {
           title: "Payment backend",
           description:
-            "Payment intent creation, reference storage, API calls and status handling.",
+            "Payment intent creation, provider reference storage, Orange Money/MVola/Airtel API calls and server-side status handling.",
         },
         {
           title: "Callbacks and webhooks",
           description:
-            "Secure endpoint to receive confirmations, verify data and update the order.",
+            "Secure endpoint to receive confirmations, verify data, replay safely and update the order without double validation.",
+        },
+        {
+          title: "Test and provider mock mode",
+          description:
+            "Simulation of successful, failed, expired or ambiguous payments before full provider API access is available.",
         },
         {
           title: "Admin dashboard",
           description:
-            "Payment view by status, search by customer, order or reference, and export if needed.",
+            "Payment view by status, search by customer, order, phone number or provider reference, and export if needed.",
         },
         {
           title: "Notifications",
@@ -1717,7 +1775,7 @@ export const enSolutions: Solution[] = [
     architecture: {
       title: "Typical architecture",
       intro:
-        "The right architecture separates customer experience, payment backend and back office. That avoids validating a transaction only because the frontend displays it.",
+        "The right architecture separates customer experience, payment backend, provider adapters and back office. That avoids validating a transaction only because the frontend displays it.",
       steps: [
         {
           title: "1. Payment intent",
@@ -1725,9 +1783,9 @@ export const enSolutions: Solution[] = [
             "The app creates an internal transaction with amount, currency, customer, order and target provider.",
         },
         {
-          title: "2. Provider call",
+          title: "2. Provider routing",
           description:
-            "The backend calls Orange Money, MVola or Airtel with expected parameters and stores the response.",
+            "The backend selects Orange Money, MVola or Airtel Money, calls the API with expected parameters and stores the useful raw response.",
         },
         {
           title: "3. Secure callback",
@@ -1737,7 +1795,7 @@ export const enSolutions: Solution[] = [
         {
           title: "4. Reconciliation",
           description:
-            "The dashboard helps find successful, failed, expired or manually reviewed payments.",
+            "The dashboard helps find successful, failed, expired or manually reviewed payments, then links them to the order or invoice.",
         },
       ],
     },
@@ -1748,6 +1806,11 @@ export const enSolutions: Solution[] = [
           title: "Idempotency",
           description:
             "A callback received twice must not create two validations or two deliveries.",
+        },
+        {
+          title: "Webhook signature and secret",
+          description:
+            "The Mobile Money callback must be verified server-side to avoid confirmations invented or modified by the client.",
         },
         {
           title: "Server validation",
@@ -1817,19 +1880,24 @@ export const enSolutions: Solution[] = [
     ],
     faq: [
       {
+        question: "How do you integrate the Orange Money API in Madagascar?",
+        answer:
+          "To integrate the Orange Money API in Madagascar, first get provider access, create a payment intent server-side, store the internal reference, receive the Orange Money callback, verify the server status and update the order. The frontend should only display final confirmation after backend validation.",
+      },
+      {
         question: "Can Orange Money, MVola and Airtel Money be integrated into one app?",
         answer:
-          "Yes, but each provider must be treated as a separate integration: access, parameters, statuses, callbacks and customer flow can differ.",
+          "Yes. The right approach is to treat Orange Money, MVola and Airtel Money as three provider adapters, then expose a shared model to the application: amount, currency, customer, order, status, provider reference and callback history.",
       },
       {
-        question: "Can Mobile Money payment trigger an invoice or notification?",
+        question: "How should a Mobile Money callback be secured?",
         answer:
-          "Yes. Once the status is validated server-side, it can trigger email, WhatsApp, invoice generation, CRM update or an n8n workflow.",
+          "A Mobile Money callback should be received on a server endpoint, verified with the mechanism provided by the operator, logged and processed idempotently. Even if the same callback arrives twice, the order should be validated only once.",
       },
       {
-        question: "Do payments need an admin dashboard?",
+        question: "Do Mobile Money payments need an admin dashboard?",
         answer:
-          "I strongly recommend it. Without a dashboard, the team wastes time checking ambiguous cases and customer requests.",
+          "Yes, especially for a business application. The dashboard lets the team search payments by customer, phone number, order or provider reference, identify ambiguous statuses and reconcile payments with invoices or bookings.",
       },
     ],
     cta: {
@@ -1845,18 +1913,20 @@ export const enSolutions: Solution[] = [
     accent: "purple",
     title: "AI prospecting agent: lead qualification, CRM and n8n follow-ups",
     eyebrow: "AI prospecting solution",
-    seoTitle: "AI Prospecting Agent | Lead Qualification, CRM and n8n",
+    seoTitle: "AI Prospecting Agent | Leads, Facebook, CRM and n8n",
     seoDescription:
-      "AI prospecting agent to qualify leads, enrich data, prepare messages, sync the CRM and automate follow-ups with n8n.",
+      "AI prospecting agent to qualify leads, process Facebook/forms, score ICP fit, prepare drafts, sync CRM records and run controlled n8n follow-ups.",
     primaryKeyword: "AI prospecting agent",
     secondaryKeywords: [
       "AI prospecting automation",
+      "Facebook AI agent",
       "lead qualification n8n",
+      "AI lead qualification agent",
       "sales prospecting workflow",
       "AI CRM agent",
     ],
     shortAnswer:
-      "An AI prospecting agent helps collect, qualify, enrich and prioritize leads before human outreach. I connect it to n8n, your CRM and your data sources to produce clean lists, useful summaries and framed follow-ups without automating spam.",
+      "An AI prospecting agent qualifies leads before human outreach: it collects the source, cleans data, summarizes the company, applies an ICP score and prepares a message angle. The useful case is not automated spam; it is clean handling of forms, Facebook messages, CRM exports or approved lead lists. I connect the agent to n8n, the CRM and sales rules to produce prioritized leads, verifiable drafts and controlled follow-ups.",
     heroLead:
       "The objective is not to send more random messages. The objective is to choose who to contact, why, with which angle and with which trace in the CRM.",
     fit: [
@@ -1885,7 +1955,8 @@ export const enSolutions: Solution[] = [
     problem: {
       title: "AI prospecting should remain an assistant, not a spam machine",
       paragraphs: [
-        "A bad prospecting system automates volume. A good system automates research, sorting, context and preparation, then lets a human decide the final outreach.",
+        "An AI prospecting agent should automate research, sorting, context and preparation, not replace commercial judgment. The best output is a qualified lead with a clear reason to contact, short summary, score and next action.",
+        "A Facebook AI agent can process Messenger messages, comments or Meta Lead Ads forms when API access and consent are framed. The agent can classify the request, detect intent, prepare a reply or create a CRM record, while sensitive cases stay under human validation.",
         "I start by defining the ICP: company type, buying signals, country, industry, size, tools used, likely budget and rejection reasons. Then the workflow can search, enrich, score and sync leads.",
         "Sensitive parts stay framed: source compliance, sending frequency, duplicate exclusion, opt-out, human validation and CRM history.",
       ],
@@ -1897,6 +1968,11 @@ export const enSolutions: Solution[] = [
           title: "Collection and enrichment",
           description:
             "CSV import, form, API, authorized scraping or business source, then enrichment and cleaning.",
+        },
+        {
+          title: "Facebook and form qualification",
+          description:
+            "Message, comment or Meta lead triage, intent detection, useful summary and creation of a sales action.",
         },
         {
           title: "AI scoring",
@@ -1964,6 +2040,12 @@ export const enSolutions: Solution[] = [
     },
     proofs: [
       {
+        label: "Facebook AI Agent",
+        href: "/en/projects/facebook-agen-ia",
+        description:
+          "AI agent dashboard connected to Facebook to qualify conversations and structure sales actions.",
+      },
+      {
         label: "Lead workflow showcase",
         href: "/en/projects/leads-automation-showcase",
         description:
@@ -2012,6 +2094,16 @@ export const enSolutions: Solution[] = [
     ],
     faq: [
       {
+        question: "What is the role of an AI prospecting agent?",
+        answer:
+          "An AI prospecting agent qualifies and prepares sales work: lead collection, cleaning, enrichment, ICP scoring, summary, contact angle and CRM synchronization. Automatic sending is only one option and should be kept for tightly framed campaigns.",
+      },
+      {
+        question: "Can a Facebook AI agent qualify inquiries?",
+        answer:
+          "Yes, if Meta access, privacy rules and scenarios are defined. The agent can read a Facebook inquiry, detect intent, classify the lead, prepare a reply and create a CRM record with a next action.",
+      },
+      {
         question: "Can an AI agent send prospecting messages automatically?",
         answer:
           "Technically yes, but I recommend starting with human validation. Quality, deliverability and brand reputation matter more than uncontrolled volume.",
@@ -2040,10 +2132,10 @@ export const enSolutions: Solution[] = [
     accent: "indigo",
     title: "n8n + Claude Code workflows: automate AI-assisted development",
     eyebrow: "Claude Code + n8n solution",
-    seoTitle: "n8n Claude Code Workflows | Claude Code Developer Freelance",
+    seoTitle: "Claude Code n8n | AI Workflows, MCP and Git",
     seoDescription:
-      "n8n workflows with Claude Code for audits, reporting, content, tickets and developer tasks. Freelance Claude Code developer in Madagascar.",
-    primaryKeyword: "Claude Code developer",
+      "Claude Code n8n workflows for tickets, audits, reporting and content with repo context, MCP, logs, human validation and Git-based review.",
+    primaryKeyword: "Claude Code n8n",
     secondaryKeywords: [
       "n8n Claude Code workflow",
       "Claude Code n8n automation",
@@ -2051,7 +2143,7 @@ export const enSolutions: Solution[] = [
       "MCP n8n Claude",
     ],
     shortAnswer:
-      "An n8n + Claude Code workflow connects business or technical events to AI-assisted execution: summary, audit, ticket preparation, content generation, data analysis or developer support. I frame it with Git, human validation, logs and security rules.",
+      "A Claude Code n8n workflow connects a business or technical trigger to a controlled AI task: ticket preparation, audit, log summary, reporting, SEO/GEO content or developer support. n8n gathers context, Claude Code or Codex prepares a proposal, then Git, logs and human validation keep control over risky actions. This architecture is most useful when AI must work with a repository, tickets, Supabase data or internal documents.",
     heroLead:
       "Claude Code is powerful when it works with repository context. n8n becomes useful when it triggers, prepares, archives and notifies around that work.",
     fit: [
@@ -2080,8 +2172,8 @@ export const enSolutions: Solution[] = [
     problem: {
       title: "AI-assisted development needs a system around the tool",
       paragraphs: [
-        "Claude Code can accelerate development massively, but the tool alone is not an operating system. You need to decide when AI is called, with which context, what output is expected and who validates it.",
-        "n8n can act as the orchestrator: retrieve a ticket, read data, prepare a prompt, trigger a step, store the result, notify the team and create a validation task.",
+        "Claude Code can accelerate development, but a Claude Code n8n workflow must define the trigger, context, expected output and human validator. Without that frame, AI produces useful one-off answers that are hard to industrialize.",
+        "n8n can act as the orchestrator: retrieve a ticket, read data, prepare a prompt, call a model, store the result, notify the team and create a validation task. With MCP, the workflow can also expose precise tools to the agent instead of giving vague access.",
         "I build these workflows as extensions of how your team works, not as a gimmick. Code stays in Git, secrets stay in the right environments, and risky actions stay human-controlled.",
       ],
     },
@@ -2102,6 +2194,11 @@ export const enSolutions: Solution[] = [
           title: "Content + SEO workflow",
           description:
             "Prepare briefs, FAQ, internal links and JSON-LD elements before editorial validation.",
+        },
+        {
+          title: "MCP orchestration",
+          description:
+            "Define which tools, data or endpoints the agent can use, with limits, logs and validation before sensitive actions.",
         },
         {
           title: "Maintenance support",
@@ -2209,7 +2306,12 @@ export const enSolutions: Solution[] = [
       {
         question: "Can Claude Code be triggered automatically by n8n?",
         answer:
-          "Depending on the environment and available tools, n8n can prepare context, create a task, notify a human or call an AI API. For code actions, I recommend human validation and a Git-based flow.",
+          "Yes, depending on the environment and available tools, n8n can prepare context, create a task, notify a human or call an AI API. For code actions, I recommend Claude Code produces a controlled proposal, then a human validates the patch through Git, build and tests.",
+      },
+      {
+        question: "What is MCP used for in an n8n Claude workflow?",
+        answer:
+          "MCP exposes structured tools to the AI agent: data reads, limited actions, search or business commands. In an n8n Claude workflow, MCP avoids vague prompts by giving the agent precise, logged and easier-to-limit capabilities.",
       },
       {
         question: "Which workflows are useful with Claude Code?",

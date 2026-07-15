@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
 import { notFound } from "next/navigation";
 import { getProjectBySlug, getAllProjectSlugs } from "@/lib/data/projects";
+import { getProjectSeoDetails } from "@/lib/data/project-seo-details";
 import { getCaseStudy } from "@/lib/data/case-studies";
 import { getCategoryLabel, getProjectTone } from "@/lib/project-display";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import SoftwareAppJsonLd from "@/components/seo/SoftwareAppJsonLd";
 import Button from "@/components/ui/Button";
 import { workflows } from "@/lib/data/workflows";
@@ -37,10 +40,13 @@ export async function generateMetadata({
 
   if (!project) return {};
 
+  const projectSeo = getProjectSeoDetails(slug, locale);
+  const metaTitle = projectSeo?.metaTitle ?? `${project.title} - ${project.subtitle}`;
+  const metaDescription = projectSeo?.metaDescription ?? project.description;
   const prefix = locale === "fr" ? "" : "/en";
   return {
-    title: `${project.title} — ${project.subtitle}`,
-    description: project.description,
+    title: metaTitle,
+    description: metaDescription,
     alternates: {
       canonical: `${SITE_URL}${prefix}/projects/${slug}`,
       languages: {
@@ -50,14 +56,14 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: `${project.title} — ${project.subtitle}`,
-      description: project.description,
+      title: metaTitle,
+      description: metaDescription,
       images: [
         {
           url: `${SITE_URL}${project.image}`,
           width: 1200,
           height: 675,
-          alt: `${project.title} - ${project.subtitle}`,
+          alt: metaTitle,
         },
       ],
     },
@@ -86,6 +92,30 @@ export default async function ProjectPage({
   const categoryTone = getProjectTone(project.category);
   const workflow = project.workflowFile ? workflows[project.workflowFile] : null;
   const caseStudy = getCaseStudy(slug, locale);
+  const projectSeo = getProjectSeoDetails(slug, locale);
+  const seoTone = categoryTone === "emerald"
+    ? {
+        text: "text-emerald-300",
+        softText: "text-emerald-200",
+        border: "border-emerald-500/25",
+        strongBorder: "border-emerald-400/50",
+        bg: "bg-emerald-500/10",
+      }
+    : categoryTone === "amber"
+      ? {
+          text: "text-amber-300",
+          softText: "text-amber-200",
+          border: "border-amber-500/25",
+          strongBorder: "border-amber-400/50",
+          bg: "bg-amber-500/10",
+        }
+      : {
+          text: "text-indigo-300",
+          softText: "text-indigo-200",
+          border: "border-indigo-500/25",
+          strongBorder: "border-indigo-400/50",
+          bg: "bg-indigo-500/10",
+        };
   const caseStudyLabels = locale === "fr"
     ? {
         sectionTitle: "Du brief au code",
@@ -121,6 +151,7 @@ export default async function ProjectPage({
         keywords={project.tags}
         category={project.category}
       />
+      {projectSeo && <FAQJsonLd items={projectSeo.faq} />}
       <div className="max-w-4xl mx-auto">
         {/* Tags */}
         <div className="flex gap-2 flex-wrap mb-6">
@@ -187,6 +218,81 @@ export default async function ProjectPage({
             {project.description}
           </p>
         </div>
+
+        {projectSeo && (
+          <section aria-labelledby="project-seo-title" className="mb-12">
+            <p className={`text-xs font-bold tracking-[0.2em] uppercase ${seoTone.text} mb-3`}>
+              {projectSeo.kicker}
+            </p>
+            <h2
+              id="project-seo-title"
+              className="text-3xl md:text-5xl font-extrabold tracking-tighter mb-8 gradient-text"
+            >
+              {projectSeo.title}
+            </h2>
+
+            <div className={`glass-card rounded-2xl p-8 md:p-10 mb-6 border-l-4 ${seoTone.strongBorder} ${seoTone.bg}`}>
+              <p className="text-base md:text-lg text-slate-200 leading-relaxed">
+                {projectSeo.summary}
+              </p>
+            </div>
+
+            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              {projectSeo.facts.map((fact) => (
+                <div
+                  key={`${fact.label}-${fact.value}`}
+                  className={`glass-card rounded-2xl p-5 border ${seoTone.border}`}
+                >
+                  <dt className="text-xs font-bold tracking-[0.18em] uppercase text-slate-500 mb-2">
+                    {fact.label}
+                  </dt>
+                  <dd className={`text-base font-semibold ${seoTone.softText}`}>
+                    {fact.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
+            <div className="space-y-8 mb-10">
+              {projectSeo.sections.map((section) => (
+                <div key={section.title}>
+                  <h3 className="text-xl font-bold tracking-tight mb-4 text-white">
+                    {section.title}
+                  </h3>
+                  <div className="space-y-4 text-slate-300 leading-relaxed">
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+              {projectSeo.relatedLinks.map((item) => (
+                <Link key={item.href} href={item.href} className="group block h-full">
+                  <div className={`glass-card rounded-2xl p-6 h-full border ${seoTone.border} transition-colors group-hover:bg-white/[0.04]`}>
+                    <h3 className="font-bold text-white mb-2 group-hover:underline underline-offset-4">
+                      {item.label}
+                    </h3>
+                    <p className="text-sm text-slate-400 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            <div className="space-y-4">
+              {projectSeo.faq.map((item) => (
+                <div key={item.question} className="glass-card rounded-2xl p-6">
+                  <h3 className="font-bold text-white mb-3">{item.question}</h3>
+                  <p className="text-slate-400 leading-relaxed">{item.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Case study (optionnel) */}
         {caseStudy && (

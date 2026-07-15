@@ -4,6 +4,8 @@ import { updateSession } from "@/lib/supabase/middleware";
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const isInternalDefaultLocaleRewrite =
+    request.headers.get("x-manda-internal-default-locale") === "1";
 
   // Skip internal paths
   if (
@@ -43,8 +45,9 @@ export async function proxy(request: NextRequest) {
   // Default locale must never be exposed with a prefix. FR is served at the root,
   // so /fr and /fr/* are duplicates → 308 redirect to the prefix-less version.
   if (
-    pathname === `/${i18n.defaultLocale}` ||
-    pathname.startsWith(`/${i18n.defaultLocale}/`)
+    !isInternalDefaultLocaleRewrite &&
+    (pathname === `/${i18n.defaultLocale}` ||
+      pathname.startsWith(`/${i18n.defaultLocale}/`))
   ) {
     const url = request.nextUrl.clone();
     url.pathname = pathname.slice(`/${i18n.defaultLocale}`.length) || "/";
@@ -62,8 +65,17 @@ export async function proxy(request: NextRequest) {
   if (pathnameHasLocale) return;
 
   // Default locale (FR): internal rewrite to /fr/... without changing the visible URL
-  request.nextUrl.pathname = `/${i18n.defaultLocale}${pathname}`;
-  return NextResponse.rewrite(request.nextUrl);
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-manda-internal-default-locale", "1");
+
+  const url = request.nextUrl.clone();
+  url.pathname = `/${i18n.defaultLocale}${pathname}`;
+
+  return NextResponse.rewrite(url, {
+    request: {
+      headers: requestHeaders,
+    },
+  });
 }
 
 export const config = {

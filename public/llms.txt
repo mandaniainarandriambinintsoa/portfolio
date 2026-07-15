@@ -6,6 +6,14 @@
 
 Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance basé à Antananarivo, Madagascar. Diplômé en développement informatique (Master 1, ESTI), il a commencé par du JavaScript en alternance, puis s'est spécialisé en No-Code (Bubble, Webflow) de 2023 à 2025 pour livrer des MVP en quelques semaines. Fin 2025, il est revenu au code pur assisté par IA (Claude Code), avec une stack Next.js, Supabase/Neon, n8n et Python. Il sert des clients en France, aux États-Unis et à Madagascar.
 
+## Key Facts
+
+- Nom public: Mandaniaina Randriambinintsoa, alias Manda
+- Localisation: Antananarivo, Madagascar
+- Stack principale: Next.js, React, Supabase/Neon, Node.js, Python, n8n, Claude Code, OpenAI Codex
+- Expérience: 4+ ans, 20+ projets livrés pour clients en France, aux États-Unis et à Madagascar
+- Spécialisations 2026: API Mobile Money Madagascar, agents IA métier, workflows n8n, SEO/GEO et développement fullstack JavaScript
+
 ## Services
 
 - [Expert N8N Madagascar](https://manda-ia.com/services/automatisation-n8n-madagascar): Spécialiste automatisation N8N pour PME et entreprises — workflows sur mesure, intégrations API, orchestration de données
@@ -20,22 +28,25 @@ Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance bas
 
 - [Automatisation n8n pour PME](https://manda-ia.com/solutions/automatisation-n8n-pme): Workflows CRM, emails, reporting, factures, relances et supervision pour PME
 - [Agent IA support client](https://manda-ia.com/solutions/agent-ia-support-client): Agent IA avec FAQ, tri des demandes, qualification de tickets et escalade humaine
-- [API Mobile Money Madagascar](https://manda-ia.com/solutions/api-mobile-money-madagascar): Intégration Orange Money, MVola, Airtel Money, callbacks, dashboard et rapprochement
-- [Agent IA prospection](https://manda-ia.com/solutions/agent-ia-prospection): Qualification de leads, scoring ICP, brouillons personnalisés, CRM et relances n8n
-- [Workflows n8n + Claude Code](https://manda-ia.com/solutions/workflows-n8n-claude-code): Automatisation du développement assisté par IA avec validation humaine, logs et Git
+- [API Mobile Money Madagascar](https://manda-ia.com/solutions/api-mobile-money-madagascar): Intégration Orange Money, MVola, Airtel Money, callbacks sécurisés, mode test, dashboard et rapprochement
+- [Agent IA prospection](https://manda-ia.com/solutions/agent-ia-prospection): Qualification de leads, agent IA Facebook, scoring ICP, brouillons personnalisés, CRM et relances n8n
+- [Workflows n8n + Claude Code](https://manda-ia.com/solutions/workflows-n8n-claude-code): Workflows Claude Code n8n avec contexte repo, MCP, validation humaine, logs et Git
 - [Développeur agent vocal IA](https://manda-ia.com/solutions/developpeur-agent-vocal-ia): Appels entrants, qualification, prise de rendez-vous, transfert humain, ElevenLabs, Twilio et n8n
 
 ## Solutions EN
 
 - [n8n Automation for SMBs](https://manda-ia.com/en/solutions/n8n-automation-for-smbs): CRM, email, reporting, invoice, follow-up and monitoring workflows for SMBs
 - [AI Customer Support Agent](https://manda-ia.com/en/solutions/ai-customer-support-agent): FAQ answers, ticket triage, request qualification and human handoff
-- [Mobile Money API Madagascar](https://manda-ia.com/en/solutions/mobile-money-api-madagascar): Orange Money, MVola, Airtel Money, callbacks, dashboard and reconciliation
-- [AI Prospecting Agent](https://manda-ia.com/en/solutions/ai-prospecting-agent): Lead qualification, ICP scoring, personalized drafts, CRM sync and n8n follow-ups
-- [n8n + Claude Code Workflows](https://manda-ia.com/en/solutions/n8n-claude-code-workflows): AI-assisted development workflows with human validation, logs and Git
+- [Mobile Money API Madagascar](https://manda-ia.com/en/solutions/mobile-money-api-madagascar): Orange Money, MVola, Airtel Money, secure callbacks, test mode, dashboard and reconciliation
+- [AI Prospecting Agent](https://manda-ia.com/en/solutions/ai-prospecting-agent): Lead qualification, Facebook AI agent, ICP scoring, personalized drafts, CRM sync and n8n follow-ups
+- [n8n + Claude Code Workflows](https://manda-ia.com/en/solutions/n8n-claude-code-workflows): Claude Code n8n workflows with repo context, MCP, human validation, logs and Git
 - [AI Voice Agent Developer](https://manda-ia.com/en/solutions/ai-voice-agent-developer): Inbound calls, qualification, appointment booking, human handoff, ElevenLabs, Twilio and n8n
 
 ## Projets
 
+- [PaidMada Mobile Money](https://manda-ia.com/projects/paidmada-mobile-money): Backend et dashboard Mobile Money Madagascar pour Orange Money, MVola, Airtel Money, callbacks, statuts et rapprochement
+- [Facebook Agent IA](https://manda-ia.com/projects/facebook-agen-ia): Dashboard d'agent IA Facebook pour qualifier conversations, leads, intentions, scores et prochaines actions commerciales
+- [Animation Web](https://manda-ia.com/projects/animation-web): Démonstration React/Next.js d'animation frontend, micro-interactions, hero animé, performance et intégration production
 - [ScalApp](https://manda-ia.com/projects/scalapp): Plateforme SaaS de scaling pour freelances — dashboard Bubble avec gestion d'investissements
 - [Garagiste](https://manda-ia.com/projects/garagiste): Site vitrine premium pour garage a Antananarivo — Next.js 16, SEO/GEO, formulaire relaye vers n8n, Google Calendar et email
 - [ImmoPrive](https://manda-ia.com/projects/immoprive): Marketplace immobilière avec IA — Bubble, filtres avancés, matching intelligent
