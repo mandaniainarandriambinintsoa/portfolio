@@ -205,7 +205,21 @@ export default async function ServicePage({
               {service.description}
             </p>
           </div>
-          <Button href={contactHref} variant="primary" icon="trending_up">
+          <Button
+            href={contactHref}
+            variant="primary"
+            icon="trending_up"
+            analytics={{
+              event: "cta_clicked",
+              properties: {
+                area: "service_detail_simple",
+                cta_type: "contact",
+                service_slug: slug,
+                service_title: service.title,
+                locale,
+              },
+            }}
+          >
             {dict.hero.cta_primary}
           </Button>
         </div>
@@ -241,7 +255,21 @@ export default async function ServicePage({
             </time>
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href={contactHref} variant="primary" icon="trending_up">
+            <Button
+              href={contactHref}
+              variant="primary"
+              icon="trending_up"
+              analytics={{
+                event: "cta_clicked",
+                properties: {
+                  area: "service_landing_hero",
+                  cta_type: "contact",
+                  service_slug: slug,
+                  service_title: service.title,
+                  locale,
+                },
+              }}
+            >
               {dict.hero.cta_primary}
             </Button>
           </div>
@@ -383,7 +411,20 @@ export default async function ServicePage({
               {relatedSolutions.map((solution) => {
                 const accent = solutionAccentMap[solution.accent];
                 return (
-                  <Link key={solution.slug} href={`${prefix}/solutions/${solution.slug}`} className="group block h-full">
+                  <Link
+                    key={solution.slug}
+                    href={`${prefix}/solutions/${solution.slug}`}
+                    className="group block h-full"
+                    data-ph-event="solution_viewed"
+                    data-ph-props={JSON.stringify({
+                      area: "service_related_solutions",
+                      service_slug: slug,
+                      solution_slug: solution.slug,
+                      title: solution.title,
+                      href: `${prefix}/solutions/${solution.slug}`,
+                      locale,
+                    })}
+                  >
                     <GlassCard
                       borderColor={accent.border}
                       className="h-full hover:bg-white/[0.04] transition-colors"
@@ -470,7 +511,21 @@ export default async function ServicePage({
               ? "Discutons de vos besoins lors d'un appel découverte gratuit de 30 minutes."
               : "Let's discuss your needs in a free 30-minute discovery call."}
           </p>
-          <Button href={contactHref} variant="primary" icon="trending_up">
+          <Button
+            href={contactHref}
+            variant="primary"
+            icon="trending_up"
+            analytics={{
+              event: "cta_clicked",
+              properties: {
+                area: "service_landing_final_cta",
+                cta_type: "contact",
+                service_slug: slug,
+                service_title: service.title,
+                locale,
+              },
+            }}
+          >
             {dict.hero.cta_primary}
           </Button>
         </div>

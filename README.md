@@ -12,6 +12,7 @@ Portfolio personnel de **Mandaniaina Randriambinintsoa** — Architecte IA & Aut
 | **Tailwind CSS v4** | Styling utility-first + Typography plugin |
 | **GSAP 3** | Animations scroll-triggered, parallax, stagger |
 | **Supabase** | Base de données PostgreSQL, RLS, API temps réel |
+| **PostHog** | Product analytics, parcours utilisateurs, heatmaps et session replays |
 | **TypeScript** | Typage strict sur tout le projet |
 
 ## Fonctionnalites
@@ -21,6 +22,7 @@ Portfolio personnel de **Mandaniaina Randriambinintsoa** — Architecte IA & Aut
 - **8 projets** : Web apps & workflows N8N, stockes dans Supabase avec fallback JSON
 - **i18n FR/EN** : Francais par defaut (`/`), anglais secondaire (`/en/`)
 - **SEO optimise** : JSON-LD (Person, FAQ, BlogPosting, BreadcrumbList), sitemap dynamique, meta tags OpenGraph
+- **Product analytics** : PostHog optionnel pour comprendre les parcours, clics, conversions et abandons
 - **ISR** : Revalidation automatique toutes les heures + API de revalidation on-demand
 - **Design** : Dark glassmorphism, animations fluides, responsive mobile-first
 
@@ -54,6 +56,8 @@ npm install
 # Configurer les variables d'environnement
 cp .env.example .env.local
 # Remplir NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, REVALIDATION_SECRET
+# Optionnel : NEXT_PUBLIC_POSTHOG_KEY, NEXT_PUBLIC_POSTHOG_HOST
+# Optionnel admin local : POSTHOG_PERSONAL_API_KEY, POSTHOG_PROJECT_ID
 
 # Lancer en developpement
 npm run dev

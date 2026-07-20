@@ -391,11 +391,39 @@ export default async function ProjectPage({
         {/* Actions */}
         <div className="flex gap-4 flex-wrap">
           {project.link && (
-            <Button href={project.link} variant="primary" icon="north_east">
+            <Button
+              href={project.link}
+              variant="primary"
+              icon="north_east"
+              analytics={{
+                event: "demo_opened",
+                properties: {
+                  area: "project_detail_actions",
+                  slug,
+                  title: project.title,
+                  category: project.category,
+                  href: project.link,
+                  locale,
+                },
+              }}
+            >
               {locale === "fr" ? "Voir le projet" : "View Project"}
             </Button>
           )}
-          <Button href={`${prefix}/projects`} variant="glass">
+          <Button
+            href={`${prefix}/projects`}
+            variant="glass"
+            analytics={{
+              event: "cta_clicked",
+              properties: {
+                area: "project_detail_actions",
+                cta_type: "all_projects",
+                slug,
+                title: project.title,
+                locale,
+              },
+            }}
+          >
             {locale === "fr" ? "Tous les projets" : "All Projects"}
           </Button>
         </div>

@@ -45,10 +45,25 @@ export default function Hero({
         {dict.subtitle_rest2}
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-        <Button href={contactHref} variant="primary" icon="trending_up">
+        <Button
+          href={contactHref}
+          variant="primary"
+          icon="trending_up"
+          analytics={{
+            event: "cta_clicked",
+            properties: { area: "hero", cta_type: "contact", locale, label: dict.cta_primary },
+          }}
+        >
           {dict.cta_primary}
         </Button>
-        <Button href={projectsHref} variant="glass">
+        <Button
+          href={projectsHref}
+          variant="glass"
+          analytics={{
+            event: "cta_clicked",
+            properties: { area: "hero", cta_type: "projects", locale, label: dict.cta_secondary },
+          }}
+        >
           {dict.cta_secondary}
         </Button>
       </div>

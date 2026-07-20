@@ -41,6 +41,13 @@ export default function ServicesGrid({ locale }: { locale: Locale }) {
           <Link
             key={link.href}
             href={link.href}
+            data-ph-event="service_viewed"
+            data-ph-props={JSON.stringify({
+              area: "homepage_services_grid",
+              label: link.label,
+              href: link.href,
+              locale,
+            })}
             className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors underline underline-offset-4 decoration-indigo-400/30 hover:decoration-indigo-300/50"
           >
             {link.label} →

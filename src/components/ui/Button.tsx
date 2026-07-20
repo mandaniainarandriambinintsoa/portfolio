@@ -6,6 +6,10 @@ type ButtonProps = {
   children: React.ReactNode;
   className?: string;
   icon?: string;
+  analytics?: {
+    event: string;
+    properties?: Record<string, string | number | boolean | null | undefined>;
+  };
 };
 
 export default function Button({
@@ -14,6 +18,7 @@ export default function Button({
   children,
   className = "",
   icon,
+  analytics,
 }: ButtonProps) {
   const base =
     "inline-flex items-center justify-center gap-2 px-6 py-3 md:px-10 md:py-5 font-bold rounded-xl md:rounded-2xl transition-all cursor-pointer text-sm md:text-base";
@@ -29,7 +34,12 @@ export default function Button({
 
   if (href) {
     return (
-      <Link href={href} className={cls}>
+      <Link
+        href={href}
+        className={cls}
+        data-ph-event={analytics?.event}
+        data-ph-props={analytics ? JSON.stringify({ ...analytics.properties, href }) : undefined}
+      >
         {children}
         {icon && (
           <span className="material-symbols-outlined text-xl">{icon}</span>
@@ -39,7 +49,11 @@ export default function Button({
   }
 
   return (
-    <button className={cls}>
+    <button
+      className={cls}
+      data-ph-event={analytics?.event}
+      data-ph-props={analytics ? JSON.stringify(analytics.properties ?? {}) : undefined}
+    >
       {children}
       {icon && (
         <span className="material-symbols-outlined text-xl">{icon}</span>

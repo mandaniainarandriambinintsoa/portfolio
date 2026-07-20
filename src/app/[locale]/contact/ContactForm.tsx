@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { trackPortfolioEvent } from "@/lib/posthog-client";
 
 type Labels = {
   name_label: string;
@@ -21,6 +22,13 @@ export default function ContactForm({
 }) {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const startedRef = useRef(false);
+
+  function trackFormStarted() {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackPortfolioEvent("contact_form_started", { locale });
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -37,6 +45,12 @@ export default function ContactForm({
 
     setStatus("sending");
     setErrorMsg("");
+    trackPortfolioEvent("contact_form_submitted", {
+      locale,
+      message_length: payload.message.length,
+      has_name: payload.name.length > 0,
+      has_email: payload.email.length > 0,
+    });
 
     try {
       const res = await fetch("/api/contact", {
@@ -49,13 +63,22 @@ export default function ContactForm({
         const json = (await res.json().catch(() => ({}))) as { error?: string };
         setErrorMsg(json.error ?? "");
         setStatus("error");
+        trackPortfolioEvent("contact_form_failed", {
+          locale,
+          reason: json.error ?? "api_error",
+        });
         return;
       }
 
       form.reset();
       setStatus("success");
+      trackPortfolioEvent("contact_form_success", { locale });
     } catch {
       setStatus("error");
+      trackPortfolioEvent("contact_form_failed", {
+        locale,
+        reason: "network_error",
+      });
     }
   }
 
@@ -85,6 +108,7 @@ export default function ContactForm({
           required
           maxLength={100}
           disabled={isSending}
+          onFocus={trackFormStarted}
           className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 transition-colors disabled:opacity-50"
         />
       </div>
@@ -99,6 +123,7 @@ export default function ContactForm({
           required
           maxLength={254}
           disabled={isSending}
+          onFocus={trackFormStarted}
           className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 transition-colors disabled:opacity-50"
         />
       </div>
@@ -113,6 +138,7 @@ export default function ContactForm({
           required
           maxLength={5000}
           disabled={isSending}
+          onFocus={trackFormStarted}
           className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 transition-colors resize-none disabled:opacity-50"
         />
       </div>
@@ -121,6 +147,8 @@ export default function ContactForm({
         <button
           type="submit"
           disabled={isSending}
+          data-ph-event="cta_clicked"
+          data-ph-props={JSON.stringify({ area: "contact_form", cta_type: "submit", label: labels.submit, locale })}
           className="px-10 py-4 bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-600/50 disabled:cursor-not-allowed text-white font-bold rounded-2xl transition-all shadow-lg shadow-indigo-500/20 cursor-pointer"
         >
           {isSending ? labels.sending : labels.submit}

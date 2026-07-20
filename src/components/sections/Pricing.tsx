@@ -62,6 +62,14 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
                   href={line.example.href}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noopener noreferrer" : undefined}
+                  data-ph-event="demo_opened"
+                  data-ph-props={JSON.stringify({
+                    pricing_line: line.title,
+                    label: line.example.label,
+                    title: line.example.title,
+                    href: line.example.href,
+                    external: isExternal,
+                  })}
                   className={`group flex items-center justify-between gap-3 rounded-xl px-4 py-3 bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-white/10 transition-colors`}
                 >
                   <div className="flex flex-col min-w-0">
@@ -135,6 +143,8 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
         </div>
         <Link
           href={dict.cta_href}
+          data-ph-event="cta_clicked"
+          data-ph-props={JSON.stringify({ area: "pricing", cta_type: "contact", label: dict.cta, href: dict.cta_href })}
           className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20 transition-transform hover:scale-[1.02]"
         >
           {dict.cta}

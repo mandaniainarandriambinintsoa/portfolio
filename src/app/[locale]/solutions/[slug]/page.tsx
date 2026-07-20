@@ -363,10 +363,36 @@ export default async function SolutionPage({
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href={`${prefix}/contact`} variant="primary" icon="trending_up">
+            <Button
+              href={`${prefix}/contact`}
+              variant="primary"
+              icon="trending_up"
+              analytics={{
+                event: "cta_clicked",
+                properties: {
+                  area: "solution_hero",
+                  cta_type: "contact",
+                  solution_slug: solution.slug,
+                  solution_title: solution.title,
+                  locale,
+                },
+              }}
+            >
               {solution.cta.buttonLabel}
             </Button>
-            <Button href={`${prefix}/solutions`} variant="glass">
+            <Button
+              href={`${prefix}/solutions`}
+              variant="glass"
+              analytics={{
+                event: "cta_clicked",
+                properties: {
+                  area: "solution_hero",
+                  cta_type: "all_solutions",
+                  solution_slug: solution.slug,
+                  locale,
+                },
+              }}
+            >
               {copy.allSolutions}
             </Button>
           </div>
@@ -472,7 +498,21 @@ export default async function SolutionPage({
             <p className="text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto">
               {solution.cta.description}
             </p>
-            <Button href={`${prefix}/contact`} variant="primary" icon="trending_up">
+            <Button
+              href={`${prefix}/contact`}
+              variant="primary"
+              icon="trending_up"
+              analytics={{
+                event: "cta_clicked",
+                properties: {
+                  area: "solution_final_cta",
+                  cta_type: "contact",
+                  solution_slug: solution.slug,
+                  solution_title: solution.title,
+                  locale,
+                },
+              }}
+            >
               {solution.cta.buttonLabel}
             </Button>
           </div>

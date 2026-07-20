@@ -53,6 +53,8 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
       hrefLang={targetLocale}
       className="px-4 py-2 text-xs font-bold tracking-widest uppercase text-slate-400 hover:text-white border border-white/10 rounded-full transition-colors"
       aria-label={`Switch to ${targetLocale === "fr" ? "French" : "English"}`}
+      data-ph-event="language_switched"
+      data-ph-props={JSON.stringify({ from_locale: locale, to_locale: targetLocale })}
     >
       {targetLocale.toUpperCase()}
     </Link>

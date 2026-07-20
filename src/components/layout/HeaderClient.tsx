@@ -51,6 +51,8 @@ export default function HeaderClient({
           <Link
             href={locale === "fr" ? "/" : "/en"}
             className="flex items-center gap-2 text-2xl font-black tracking-tighter text-white"
+            data-ph-event="nav_clicked"
+            data-ph-props={JSON.stringify({ area: "header", item: "logo", locale })}
           >
             <Image
               src="/images/logo-manda-dark.svg"
@@ -69,6 +71,8 @@ export default function HeaderClient({
                 key={item.href}
                 href={item.href}
                 className="text-sm font-medium text-slate-400 hover:text-white transition-colors hover:underline underline-offset-4 decoration-white/30"
+                data-ph-event="nav_clicked"
+                data-ph-props={JSON.stringify({ area: "header_desktop", item: item.label, href: item.href, locale })}
               >
                 {item.label}
               </Link>
@@ -77,6 +81,8 @@ export default function HeaderClient({
             <Link
               href={contactHref}
               className="px-6 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-semibold hover:bg-white/10 transition-all"
+              data-ph-event="cta_clicked"
+              data-ph-props={JSON.stringify({ area: "header_desktop", cta_type: "contact", label: contactLabel, href: contactHref, locale })}
             >
               {contactLabel}
             </Link>
@@ -123,6 +129,8 @@ export default function HeaderClient({
               href={item.href}
               className="text-2xl font-bold text-slate-300 hover:text-white transition-colors"
               onClick={() => setMobileOpen(false)}
+              data-ph-event="nav_clicked"
+              data-ph-props={JSON.stringify({ area: "header_mobile", item: item.label, href: item.href, locale })}
             >
               {item.label}
             </Link>
@@ -133,6 +141,8 @@ export default function HeaderClient({
               href={contactHref}
               className="px-6 py-3 bg-indigo-600 rounded-xl text-sm font-bold text-white"
               onClick={() => setMobileOpen(false)}
+              data-ph-event="cta_clicked"
+              data-ph-props={JSON.stringify({ area: "header_mobile", cta_type: "contact", label: contactLabel, href: contactHref, locale })}
             >
               {contactLabel}
             </Link>

@@ -40,11 +40,27 @@ export default function CTAFinal({
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          <Button href={buttonHref} variant="primary" icon="arrow_forward">
+          <Button
+            href={buttonHref}
+            variant="primary"
+            icon="arrow_forward"
+            analytics={{
+              event: "cta_clicked",
+              properties: { area: "final_cta", cta_type: "contact", label: button },
+            }}
+          >
             {button}
           </Button>
           {quizButton && quizHref && (
-            <Button href={quizHref} variant="glass" icon="quiz">
+            <Button
+              href={quizHref}
+              variant="glass"
+              icon="quiz"
+              analytics={{
+                event: "cta_clicked",
+                properties: { area: "final_cta", cta_type: "quiz", label: quizButton },
+              }}
+            >
               {quizButton}
             </Button>
           )}

@@ -58,6 +58,8 @@ export default function ProjectsListing({
           <button
             key={f.key}
             onClick={() => setActiveFilter(f.key)}
+            data-ph-event="project_filter_changed"
+            data-ph-props={JSON.stringify({ area: "projects_listing", filter: f.key, label: f.label })}
             className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
               activeFilter === f.key
                 ? f.color

@@ -31,7 +31,17 @@ export default function ProjectCard({
   showDescription?: boolean;
 }) {
   return (
-    <Link href={href} className="project-card group block">
+    <Link
+      href={href}
+      className="project-card group block"
+      data-ph-event="project_opened"
+      data-ph-props={JSON.stringify({
+        slug: project.slug,
+        title: project.title,
+        category: project.category,
+        href,
+      })}
+    >
       {/* Cover image */}
       <div className="relative aspect-[5/3] overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02]">
         <Image

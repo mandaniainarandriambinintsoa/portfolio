@@ -10,8 +10,8 @@ const cspDirectives = [
   "img-src 'self' data: blob: https://lbabmflmjcouniefxwmv.supabase.co https://lh3.googleusercontent.com https://flagcdn.com",
   // Fonts: self only (Material Symbols + Inter are self-hosted)
   "font-src 'self'",
-  // API calls: self + Supabase + Google Analytics
-  "connect-src 'self' https://lbabmflmjcouniefxwmv.supabase.co https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
+  // API calls: self + Supabase + Google Analytics + PostHog
+  "connect-src 'self' https://lbabmflmjcouniefxwmv.supabase.co https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://eu.i.posthog.com https://us.i.posthog.com",
   // Frames: none (prevent clickjacking)
   "frame-src 'none'",
   // Objects: none (no Flash/plugins)

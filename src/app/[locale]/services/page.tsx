@@ -92,7 +92,18 @@ export default async function ServicesPage({
           {coreServices.map((service: ServiceItem) => {
             const colors = colorMap[service.color] || colorMap.indigo;
             return (
-              <Link key={service.slug} href={`${prefix}/services/${service.slug}`}>
+              <Link
+                key={service.slug}
+                href={`${prefix}/services/${service.slug}`}
+                data-ph-event="service_viewed"
+                data-ph-props={JSON.stringify({
+                  area: "services_index_core",
+                  slug: service.slug,
+                  title: service.title,
+                  href: `${prefix}/services/${service.slug}`,
+                  locale,
+                })}
+              >
                 <GlassCard borderColor={colors.border} className="h-full hover:bg-white/5 transition-colors">
                   <span className={`material-symbols-outlined ${colors.icon} mb-4 text-4xl block`}>
                     {service.icon}
@@ -120,7 +131,18 @@ export default async function ServicesPage({
               {landingPages.map((service: ServiceItem) => {
                 const colors = colorMap[service.color] || colorMap.indigo;
                 return (
-                  <Link key={service.slug} href={`${prefix}/services/${service.slug}`}>
+                  <Link
+                    key={service.slug}
+                    href={`${prefix}/services/${service.slug}`}
+                    data-ph-event="service_viewed"
+                    data-ph-props={JSON.stringify({
+                      area: "services_index_landing",
+                      slug: service.slug,
+                      title: service.cardTitle || service.title,
+                      href: `${prefix}/services/${service.slug}`,
+                      locale,
+                    })}
+                  >
                     <GlassCard borderColor={colors.border} className="h-full hover:bg-white/5 transition-colors">
                       <span className={`material-symbols-outlined ${colors.icon} mb-3 text-3xl block`}>
                         {service.icon}

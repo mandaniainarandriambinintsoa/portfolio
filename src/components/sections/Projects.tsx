@@ -126,6 +126,8 @@ export default function Projects({
                 <button
                   key={f.key}
                   onClick={() => setFilter(f.key)}
+                  data-ph-event="project_filter_changed"
+                  data-ph-props={JSON.stringify({ area: "homepage_projects", filter: f.key, label: f.label, locale })}
                   className={`relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
                     filter === f.key
                       ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/20"
@@ -139,6 +141,8 @@ export default function Projects({
 
             <Link
               href={`${prefix}/projects`}
+              data-ph-event="cta_clicked"
+              data-ph-props={JSON.stringify({ area: "homepage_projects", cta_type: "view_all_projects", label: viewAll, href: `${prefix}/projects`, locale })}
               className="text-slate-400 hover:text-indigo-400 transition-colors text-sm font-medium hidden sm:flex items-center gap-1 underline underline-offset-4 decoration-slate-400/30 hover:decoration-indigo-400/50"
             >
               {viewAll}

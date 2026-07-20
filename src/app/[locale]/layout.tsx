@@ -10,6 +10,7 @@ import WebSiteJsonLd from "@/components/seo/WebSiteJsonLd";
 import LocalBusinessJsonLd from "@/components/seo/LocalBusinessJsonLd";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import VisitorPing from "@/components/layout/VisitorPing";
+import PostHogProvider from "@/components/layout/PostHogProvider";
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }));
@@ -96,6 +97,7 @@ export default async function LocaleLayout({
       <Footer locale={locale} copyright={dict.footer.copyright} />
       <WhatsAppButton locale={locale} />
       <VisitorPing />
+      <PostHogProvider />
     </>
   );
 }
