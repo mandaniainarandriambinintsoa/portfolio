@@ -9,9 +9,13 @@ const dictionaries = {
   en: () => import("./dictionaries/en.json").then((m) => m.default),
 } satisfies Record<Locale, () => Promise<Dictionary>>;
 
+export async function getStaticDictionary(locale: Locale): Promise<Dictionary> {
+  return dictionaries[locale]();
+}
+
 export const getDictionary = cache(async (locale: Locale): Promise<Dictionary> => {
   const payloadDictionary = await getPayloadSiteDictionary(locale);
   if (payloadDictionary) return payloadDictionary as Dictionary;
 
-  return dictionaries[locale]();
+  return getStaticDictionary(locale);
 });

@@ -99,7 +99,9 @@ export async function getBlogPostBySlug(
 }
 
 export async function getAllBlogSlugs(): Promise<string[]> {
-  const payloadEntries = await getPayloadPostSitemapEntries();
+  const payloadEntries = process.env.PAYLOAD_SKIP_SITEMAP_CMS === "true"
+    ? null
+    : await getPayloadPostSitemapEntries();
   if (payloadEntries?.length) return payloadEntries.map((entry) => entry.slug);
 
   const supabase = createStaticClient();
@@ -115,7 +117,9 @@ export async function getAllBlogSlugs(): Promise<string[]> {
 export async function getAllBlogSitemapEntries(): Promise<
   { slug: string; updatedAt: string | null; publishedAt: string | null }[]
 > {
-  const payloadEntries = await getPayloadPostSitemapEntries();
+  const payloadEntries = process.env.PAYLOAD_SKIP_SITEMAP_CMS === "true"
+    ? null
+    : await getPayloadPostSitemapEntries();
   if (payloadEntries?.length) return payloadEntries;
 
   const supabase = createStaticClient();

@@ -1,7 +1,7 @@
 import { createServerClient } from "@/lib/supabase/server";
 import { createStaticClient } from "@/lib/supabase/static";
 import type { Locale } from "@/i18n/config";
-import { getDictionary } from "@/i18n/dictionaries";
+import { getDictionary, getStaticDictionary } from "@/i18n/dictionaries";
 import type { ProjectItem } from "@/lib/types";
 import {
   getPayloadProjectBySlug,
@@ -75,7 +75,7 @@ async function fetchFromSupabase(locale: Locale): Promise<ProjectItem[] | null> 
 }
 
 async function fetchFromDict(locale: Locale): Promise<ProjectItem[]> {
-  const dict = await getDictionary(locale);
+  const dict = await getStaticDictionary(locale);
   return (dict.projects.items as ProjectItem[]).map(normalizeCategory);
 }
 
@@ -123,10 +123,12 @@ export async function getProjectBySlug(
 }
 
 export async function getAllProjectSlugs(): Promise<string[]> {
-  const dict = await getDictionary("fr");
+  const dict = await getStaticDictionary("fr");
   const dictSlugs = (dict.projects.items as ProjectItem[]).map((p) => p.slug);
 
-  const payloadEntries = await getPayloadProjectSitemapEntries();
+  const payloadEntries = process.env.PAYLOAD_SKIP_SITEMAP_CMS === "true"
+    ? null
+    : await getPayloadProjectSitemapEntries();
   if (payloadEntries?.length) {
     return Array.from(new Set([...payloadEntries.map((entry) => entry.slug), ...dictSlugs]));
   }
@@ -152,14 +154,16 @@ export async function getAllProjectSlugs(): Promise<string[]> {
 export async function getAllProjectSitemapEntries(): Promise<
   { slug: string; updatedAt: string | null; createdAt: string | null }[]
 > {
-  const dict = await getDictionary("fr");
+  const dict = await getStaticDictionary("fr");
   const dictEntries = (dict.projects.items as ProjectItem[]).map((p) => ({
     slug: p.slug,
     updatedAt: null as string | null,
     createdAt: null as string | null,
   }));
 
-  const payloadEntries = await getPayloadProjectSitemapEntries();
+  const payloadEntries = process.env.PAYLOAD_SKIP_SITEMAP_CMS === "true"
+    ? null
+    : await getPayloadProjectSitemapEntries();
   if (payloadEntries?.length) {
     const payloadSlugs = new Set(payloadEntries.map((e) => e.slug));
     const dictOnly = dictEntries.filter((e) => !payloadSlugs.has(e.slug));

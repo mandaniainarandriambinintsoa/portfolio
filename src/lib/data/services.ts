@@ -1,4 +1,4 @@
-import { getDictionary } from "@/i18n/dictionaries";
+import { getStaticDictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import type { ServiceItem } from "@/lib/types";
 import {
@@ -15,7 +15,7 @@ function withFallbackKeys(items: ServiceItem[]): ServiceItem[] {
 }
 
 async function getDictionaryServices(locale: Locale): Promise<ServiceItem[]> {
-  const dict = await getDictionary(locale);
+  const dict = await getStaticDictionary(locale);
   return withFallbackKeys(dict.services.items as ServiceItem[]);
 }
 
@@ -65,10 +65,13 @@ export async function getServiceStaticParams(): Promise<{ locale: string; slug: 
 export async function getServiceSitemapPairs(): Promise<
   { frSlug: string; enSlug: string; updatedAt: string | null; createdAt: string | null }[]
 > {
-  const [frPayload, enPayload] = await Promise.all([
-    getPayloadServiceSitemapEntries("fr"),
-    getPayloadServiceSitemapEntries("en"),
-  ]);
+  const usePayload = process.env.PAYLOAD_SKIP_SITEMAP_CMS !== "true";
+  const [frPayload, enPayload] = usePayload
+    ? await Promise.all([
+        getPayloadServiceSitemapEntries("fr"),
+        getPayloadServiceSitemapEntries("en"),
+      ])
+    : [null, null];
 
   if (frPayload?.length && enPayload?.length) {
     const enByKey = new Map(enPayload.map((entry) => [entry.key, entry]));
