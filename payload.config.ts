@@ -36,7 +36,7 @@ const db = databaseUri
       prodMigrations: postgresMigrations,
       pool: {
         connectionString: databaseUri,
-        max: Number(process.env.PAYLOAD_DATABASE_POOL_MAX ?? 5),
+        max: Number(process.env.PAYLOAD_DATABASE_POOL_MAX ?? 1),
         ssl: databaseUri.includes("supabase.co") || databaseUri.includes("pooler.supabase.com")
           ? { rejectUnauthorized: false }
           : undefined,
