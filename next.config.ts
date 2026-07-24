@@ -21,13 +21,13 @@ const cspDirectives = [
   "base-uri 'self'",
   // Form submissions: self only
   "form-action 'self'",
-  // Frame ancestors: none (prevent embedding — clickjacking protection)
-  "frame-ancestors 'none'",
+  // Frame ancestors: same origin only so Payload live preview can embed pages from the admin.
+  "frame-ancestors 'self' https://manda-ia.com https://www.manda-ia.com",
 ].join("; ");
 
 const commonSecurityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
-  { key: "X-Frame-Options", value: "DENY" },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
   { key: "X-XSS-Protection", value: "1; mode=block" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
