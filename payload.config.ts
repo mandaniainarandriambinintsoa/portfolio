@@ -19,6 +19,7 @@ import { migrations as sqliteMigrations } from "./src/payload/migrations/sqlite/
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
+const sharpDependency = sharp as Parameters<typeof buildConfig>[0]["sharp"];
 
 const databaseUri =
   process.env.PAYLOAD_DATABASE_URI ||
@@ -101,7 +102,7 @@ export default buildConfig({
   },
   secret: process.env.PAYLOAD_SECRET || "change-me-in-env-before-production",
   serverURL,
-  sharp,
+  sharp: sharpDependency,
   telemetry: false,
   typescript: {
     outputFile: path.resolve(dirname, "src/payload/payload-types.ts"),
