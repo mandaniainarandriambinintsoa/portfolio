@@ -6,7 +6,7 @@ import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
 import { notFound } from "next/navigation";
-import { getProjectBySlug, getAllProjectSlugs } from "@/lib/data/projects";
+import { getProjectBySlug } from "@/lib/data/projects";
 import { getProjectSeoDetails } from "@/lib/data/project-seo-details";
 import { getCaseStudy } from "@/lib/data/case-studies";
 import { getCategoryLabel, getProjectTone } from "@/lib/project-display";
@@ -17,19 +17,6 @@ import Button from "@/components/ui/Button";
 import RefreshRouteOnSave from "@/components/preview/RefreshRouteOnSave";
 import { workflows } from "@/lib/data/workflows";
 import N8nWorkflowSection from "@/components/ui/N8nWorkflowSection";
-
-export const revalidate = 3600;
-
-export async function generateStaticParams() {
-  const slugs = await getAllProjectSlugs();
-  const params: { locale: string; slug: string }[] = [];
-  for (const locale of i18n.locales) {
-    for (const slug of slugs) {
-      params.push({ locale, slug });
-    }
-  }
-  return params;
-}
 
 export async function generateMetadata({
   params,

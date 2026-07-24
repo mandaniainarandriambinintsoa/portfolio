@@ -11,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
-import { getServiceByKey, getServiceBySlug, getServiceStaticParams } from "@/lib/data/services";
+import { getServiceByKey, getServiceBySlug } from "@/lib/data/services";
 import { getRelatedSolutionsForService, type Solution } from "@/lib/data/solutions";
 import RefreshRouteOnSave from "@/components/preview/RefreshRouteOnSave";
 
@@ -95,10 +95,6 @@ function renderInlineMarkdown(text: string) {
   }
 
   return parts;
-}
-
-export async function generateStaticParams() {
-  return getServiceStaticParams();
 }
 
 export async function generateMetadata({

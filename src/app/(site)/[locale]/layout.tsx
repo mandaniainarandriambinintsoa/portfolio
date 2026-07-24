@@ -12,9 +12,7 @@ import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import VisitorPing from "@/components/layout/VisitorPing";
 import PostHogProvider from "@/components/layout/PostHogProvider";
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ locale }));
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,

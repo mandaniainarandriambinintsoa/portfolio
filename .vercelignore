@@ -10,12 +10,6 @@
 .vscode
 node_modules
 *.log
-*.png
-*.PNG
-*.jpg
-*.jpeg
-*.webp
-*.avif
 *.tsbuildinfo
 FREELANCE-*.md
 GEO-*.md

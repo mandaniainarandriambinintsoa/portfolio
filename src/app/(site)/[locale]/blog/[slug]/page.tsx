@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { i18n, type Locale } from "@/i18n/config";
 import { SITE_URL } from "@/lib/constants";
-import { getBlogPostBySlug, getAllBlogSlugs } from "@/lib/data/blog";
+import { getBlogPostBySlug } from "@/lib/data/blog";
 import { notFound } from "next/navigation";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import BlogPostJsonLd from "@/components/seo/BlogPostJsonLd";
@@ -10,19 +10,6 @@ import FaqJsonLdFromMarkdown from "@/components/seo/FaqJsonLdFromMarkdown";
 import BlogPostAnim from "@/components/animations/BlogPostAnim";
 import MarkdownRenderer from "@/components/blog/MarkdownRenderer";
 import Button from "@/components/ui/Button";
-
-export const revalidate = 3600;
-
-export async function generateStaticParams() {
-  const slugs = await getAllBlogSlugs();
-  const params: { locale: string; slug: string }[] = [];
-  for (const locale of i18n.locales) {
-    for (const slug of slugs) {
-      params.push({ locale, slug });
-    }
-  }
-  return params;
-}
 
 export async function generateMetadata({
   params,
