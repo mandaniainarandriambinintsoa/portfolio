@@ -31,7 +31,10 @@ function testTCP(host: string, port: number) {
     socket.setTimeout(10000);
     socket.once("connect", () => done(true));
     socket.once("timeout", () => done(false, "timeout"));
-    socket.once("error", (error) => done(false, error.code || error.message));
+    socket.once("error", (error) => {
+      const code = "code" in error && typeof error.code === "string" ? error.code : error.message;
+      done(false, code);
+    });
   });
 }
 
