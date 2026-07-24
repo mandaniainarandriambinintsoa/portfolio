@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState, useRef, useCallback } from "react";
 import type { gsap as GsapType } from "gsap";
 import type { VisitorRow } from "@/app/api/visitors/route";
@@ -9,11 +10,10 @@ function FlagIcon({ code }: { code: string }) {
     return <span className="text-base leading-none">🌍</span>;
   }
   return (
-    <img
+    <Image
       src={`https://flagcdn.com/20x15/${code.toLowerCase()}.png`}
-      srcSet={`https://flagcdn.com/40x30/${code.toLowerCase()}.png 2x`}
-      width="20"
-      height="15"
+      width={20}
+      height={15}
       alt={code}
       className="inline-block"
     />

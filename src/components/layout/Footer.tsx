@@ -163,7 +163,7 @@ export default function Footer({
           <p className="text-sm font-medium">{copyright}</p>
           <nav aria-label={socialHeading}>
             <h2 className="sr-only">{socialHeading}</h2>
-            <ul className="flex gap-8 list-none p-0 m-0">
+            <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 sm:gap-x-8 list-none p-0 m-0">
               <li>
                 <a
                   href={SOCIAL_LINKS.linkedin}

@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { i18n } from "@/i18n/config";
-import { updateSession } from "@/lib/supabase/middleware";
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -19,27 +18,7 @@ export async function proxy(request: NextRequest) {
 
   // Admin routes — check auth session
   if (pathname.startsWith("/admin")) {
-    const { user, supabaseResponse } = await updateSession(request);
-
-    // Allow access to login page without auth
-    if (pathname === "/admin/login") {
-      if (user) {
-        // Already logged in, redirect to dashboard
-        const url = request.nextUrl.clone();
-        url.pathname = "/admin";
-        return NextResponse.redirect(url);
-      }
-      return supabaseResponse;
-    }
-
-    // All other /admin routes require auth
-    if (!user) {
-      const url = request.nextUrl.clone();
-      url.pathname = "/admin/login";
-      return NextResponse.redirect(url);
-    }
-
-    return supabaseResponse;
+    return;
   }
 
   // Default locale must never be exposed with a prefix. FR is served at the root,

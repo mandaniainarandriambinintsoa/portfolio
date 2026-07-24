@@ -1,6 +1,6 @@
 import { revalidatePath } from "next/cache";
 
-export function revalidateContent(type: "blog" | "project", slug?: string) {
+export function revalidateContent(type: "blog" | "project" | "service", slug?: string) {
   if (type === "blog" && slug) {
     revalidatePath(`/blog/${slug}`);
     revalidatePath(`/en/blog/${slug}`);
@@ -19,6 +19,18 @@ export function revalidateContent(type: "blog" | "project", slug?: string) {
   } else if (type === "project") {
     revalidatePath("/projects");
     revalidatePath("/en/projects");
+    revalidatePath("/");
+    revalidatePath("/en");
+  } else if (type === "service" && slug) {
+    revalidatePath(`/services/${slug}`);
+    revalidatePath(`/en/services/${slug}`);
+    revalidatePath("/services");
+    revalidatePath("/en/services");
+    revalidatePath("/");
+    revalidatePath("/en");
+  } else if (type === "service") {
+    revalidatePath("/services");
+    revalidatePath("/en/services");
     revalidatePath("/");
     revalidatePath("/en");
   }

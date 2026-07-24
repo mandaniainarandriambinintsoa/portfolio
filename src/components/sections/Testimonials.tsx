@@ -105,13 +105,6 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
 
   const current = items[active];
 
-  // Color accent per project
-  const accentColors: Record<string, string> = {
-    scalapp: "text-indigo-400",
-    immoprive: "text-cyan-400",
-    "yalee-creek-ranch": "text-amber-400",
-    factumation: "text-emerald-400",
-  };
   const dotColors: Record<string, string> = {
     scalapp: "bg-indigo-400",
     immoprive: "bg-cyan-400",

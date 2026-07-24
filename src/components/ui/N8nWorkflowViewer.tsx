@@ -13,8 +13,8 @@ export default function N8nWorkflowViewer({
   height = 500,
 }: N8nWorkflowViewerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [loaded, setLoaded] = useState(false);
   const [scriptsReady, setScriptsReady] = useState(0);
+  const loaded = scriptsReady >= 3;
 
   useEffect(() => {
     if (scriptsReady < 3 || !containerRef.current) return;
@@ -28,7 +28,6 @@ export default function N8nWorkflowViewer({
     el.setAttribute("clicktointeract", "");
     el.setAttribute("collapseformobile", "");
     containerRef.current.appendChild(el);
-    setLoaded(true);
   }, [scriptsReady, workflow]);
 
   const onScriptLoad = () => setScriptsReady((prev) => prev + 1);

@@ -1,14 +1,12 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
-import { getDictionary } from "@/i18n/dictionaries";
 import { getAllBlogSitemapEntries } from "@/lib/data/blog";
 import { getAllProjectSitemapEntries } from "@/lib/data/projects";
+import { getServiceSitemapPairs } from "@/lib/data/services";
 import { getSolutions, SOLUTION_LAST_UPDATED } from "@/lib/data/solutions";
 
 // Revalidate every hour so lastmod reflects Supabase updates without a full redeploy
 export const revalidate = 3600;
-
-type ServiceItem = { slug: string; isLanding?: boolean };
 
 function asDate(value: string | null | undefined, fallback: Date): Date {
   if (!value) return fallback;
@@ -39,11 +37,10 @@ function entry(
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
-  const [fr, en, blogEntries, projectEntries] = await Promise.all([
-    getDictionary("fr"),
-    getDictionary("en"),
+  const [blogEntries, projectEntries, servicePairs] = await Promise.all([
     getAllBlogSitemapEntries(),
     getAllProjectSitemapEntries(),
+    getServiceSitemapPairs(),
   ]);
 
   const items: MetadataRoute.Sitemap = [];
@@ -82,18 +79,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     items.push(entry(pathFr, pathEn, solutionLastModified, "en"));
   }
 
-  // Services (generic + landing) — map by array index to keep FR/EN pairs in sync
-  const frServices = fr.services.items as ServiceItem[];
-  const enServices = en.services.items as ServiceItem[];
-  const serviceCount = Math.min(frServices.length, enServices.length);
-
-  for (let i = 0; i < serviceCount; i++) {
-    const frSlug = frServices[i].slug;
-    const enSlug = enServices[i].slug;
-    const pathFr = `/services/${frSlug}`;
-    const pathEn = `/en/services/${enSlug}`;
-    items.push(entry(pathFr, pathEn, now, "fr"));
-    items.push(entry(pathFr, pathEn, now, "en"));
+  // Services (generic + landing) from Payload first, dictionary fallback.
+  for (const service of servicePairs) {
+    const lastmod = asDate(service.updatedAt ?? service.createdAt, now);
+    const pathFr = `/services/${service.frSlug}`;
+    const pathEn = `/en/services/${service.enSlug}`;
+    items.push(entry(pathFr, pathEn, lastmod, "fr"));
+    items.push(entry(pathFr, pathEn, lastmod, "en"));
   }
 
   // Projects — same slug for both locales (single column in Supabase)

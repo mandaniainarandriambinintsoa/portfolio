@@ -3,6 +3,15 @@ import { createStaticClient } from "@/lib/supabase/static";
 import type { Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import type { ProjectItem } from "@/lib/types";
+import {
+  getPayloadProjectBySlug,
+  getPayloadProjects,
+  getPayloadProjectSitemapEntries,
+} from "./payload-content";
+
+type PreviewReadOptions = {
+  draft?: boolean;
+};
 
 const siteMetierSlugs = new Set(["madavoyage", "garagiste", "bati-diaspora"]);
 
@@ -70,7 +79,10 @@ async function fetchFromDict(locale: Locale): Promise<ProjectItem[]> {
   return (dict.projects.items as ProjectItem[]).map(normalizeCategory);
 }
 
-export async function getProjects(locale: Locale): Promise<ProjectItem[]> {
+export async function getProjects(locale: Locale, options?: PreviewReadOptions): Promise<ProjectItem[]> {
+  const payloadData = await getPayloadProjects(locale, options);
+  if (payloadData?.length) return payloadData;
+
   const supabaseData = await fetchFromSupabase(locale);
   const dictData = await fetchFromDict(locale);
 
@@ -85,8 +97,12 @@ export async function getProjects(locale: Locale): Promise<ProjectItem[]> {
 
 export async function getProjectBySlug(
   slug: string,
-  locale: Locale
+  locale: Locale,
+  options?: PreviewReadOptions
 ): Promise<ProjectItem | null> {
+  const payloadProject = await getPayloadProjectBySlug(slug, locale, options);
+  if (payloadProject) return payloadProject;
+
   try {
     const supabase = await createServerClient();
     const { data, error } = await supabase
@@ -109,6 +125,11 @@ export async function getProjectBySlug(
 export async function getAllProjectSlugs(): Promise<string[]> {
   const dict = await getDictionary("fr");
   const dictSlugs = (dict.projects.items as ProjectItem[]).map((p) => p.slug);
+
+  const payloadEntries = await getPayloadProjectSitemapEntries();
+  if (payloadEntries?.length) {
+    return Array.from(new Set([...payloadEntries.map((entry) => entry.slug), ...dictSlugs]));
+  }
 
   try {
     const supabase = createStaticClient();
@@ -137,6 +158,13 @@ export async function getAllProjectSitemapEntries(): Promise<
     updatedAt: null as string | null,
     createdAt: null as string | null,
   }));
+
+  const payloadEntries = await getPayloadProjectSitemapEntries();
+  if (payloadEntries?.length) {
+    const payloadSlugs = new Set(payloadEntries.map((e) => e.slug));
+    const dictOnly = dictEntries.filter((e) => !payloadSlugs.has(e.slug));
+    return [...payloadEntries, ...dictOnly];
+  }
 
   try {
     const supabase = createStaticClient();

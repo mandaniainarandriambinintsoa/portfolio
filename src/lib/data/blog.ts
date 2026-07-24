@@ -1,6 +1,11 @@
 import { createServerClient } from "@/lib/supabase/server";
 import { createStaticClient } from "@/lib/supabase/static";
 import type { Locale } from "@/i18n/config";
+import {
+  getPayloadPostBySlug,
+  getPayloadPosts,
+  getPayloadPostSitemapEntries,
+} from "./payload-content";
 
 export type BlogPost = {
   slug: string;
@@ -56,6 +61,9 @@ function mapRow(
 }
 
 export async function getBlogPosts(locale: Locale): Promise<BlogPost[]> {
+  const payloadPosts = await getPayloadPosts(locale);
+  if (payloadPosts) return payloadPosts;
+
   const supabase = await createServerClient();
   const { data, error } = await supabase
     .from("blog_posts")
@@ -75,6 +83,9 @@ export async function getBlogPostBySlug(
   slug: string,
   locale: Locale
 ): Promise<BlogPost | null> {
+  const payloadPost = await getPayloadPostBySlug(slug, locale);
+  if (payloadPost) return payloadPost;
+
   const supabase = await createServerClient();
   const { data, error } = await supabase
     .from("blog_posts")
@@ -88,6 +99,9 @@ export async function getBlogPostBySlug(
 }
 
 export async function getAllBlogSlugs(): Promise<string[]> {
+  const payloadEntries = await getPayloadPostSitemapEntries();
+  if (payloadEntries?.length) return payloadEntries.map((entry) => entry.slug);
+
   const supabase = createStaticClient();
   const { data, error } = await supabase
     .from("blog_posts")
@@ -101,6 +115,9 @@ export async function getAllBlogSlugs(): Promise<string[]> {
 export async function getAllBlogSitemapEntries(): Promise<
   { slug: string; updatedAt: string | null; publishedAt: string | null }[]
 > {
+  const payloadEntries = await getPayloadPostSitemapEntries();
+  if (payloadEntries?.length) return payloadEntries;
+
   const supabase = createStaticClient();
   const { data, error } = await supabase
     .from("blog_posts")

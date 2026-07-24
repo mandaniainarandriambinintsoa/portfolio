@@ -9,6 +9,11 @@ const eslintConfig = defineConfig([
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
+    ".next-stale-before-payload*/**",
+    ".playwright-mcp/**",
+    ".tmp-chrome-debug-profile*/**",
+    ".tmp-chrome-freelance-profile/**",
+    ".tmp-screenshots/**",
     "out/**",
     "build/**",
     "next-env.d.ts",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
+import { getServices } from "@/lib/data/services";
 
 type LandingLink = {
   label: string;
@@ -30,14 +31,24 @@ const sectionLabel: Record<Locale, string> = {
   en: "Dedicated pages by expertise",
 };
 
-export default function ServicesGrid({ locale }: { locale: Locale }) {
+export default async function ServicesGrid({ locale }: { locale: Locale }) {
+  const services = await getServices(locale);
+  const prefix = locale === "fr" ? "" : "/en";
+  const links = services
+    .filter((service) => service.isLanding)
+    .slice(0, 6)
+    .map((service) => ({
+      href: `${prefix}/services/${service.slug}`,
+      label: service.cardTitle || service.title,
+    }));
+
   return (
     <section id="services" aria-label={sectionLabel[locale]} className="max-w-6xl w-full mx-auto mb-16 md:mb-32 px-6">
       <p className="text-center text-xs font-bold tracking-[0.2em] uppercase text-indigo-400 mb-5">
         {sectionLabel[locale]}
       </p>
       <div className="flex flex-wrap justify-center gap-x-5 gap-y-3">
-        {landingLinks[locale].map((link) => (
+        {(links.length ? links : landingLinks[locale]).map((link) => (
           <Link
             key={link.href}
             href={link.href}

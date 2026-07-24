@@ -12,14 +12,15 @@ Portfolio personnel de **Mandaniaina Randriambinintsoa** — Architecte IA & Aut
 | **Tailwind CSS v4** | Styling utility-first + Typography plugin |
 | **GSAP 3** | Animations scroll-triggered, parallax, stagger |
 | **Supabase** | Base de données PostgreSQL, RLS, API temps réel |
+| **Payload CMS** | Back-office principal pour projets, articles et médias |
 | **PostHog** | Product analytics, parcours utilisateurs, heatmaps et session replays |
 | **TypeScript** | Typage strict sur tout le projet |
 
 ## Fonctionnalites
 
 - **10 sections homepage** : Hero, Command Center, Services, Process, Testimonials, Stats, Tech Stack, Projects (bento layout), FAQ, CTA Final
-- **Blog dynamique** : Articles Markdown stockes dans Supabase, rendu avec `react-markdown` + syntax highlighting
-- **8 projets** : Web apps & workflows N8N, stockes dans Supabase avec fallback JSON
+- **Blog dynamique** : Articles Markdown geres par Payload CMS, avec fallback Supabase pendant la migration
+- **Projets dynamiques** : Projets geres par Payload CMS, avec fallback Supabase + dictionnaires pendant la migration
 - **i18n FR/EN** : Francais par defaut (`/`), anglais secondaire (`/en/`)
 - **SEO optimise** : JSON-LD (Person, FAQ, BlogPosting, BreadcrumbList), sitemap dynamique, meta tags OpenGraph
 - **Product analytics** : PostHog optionnel pour comprendre les parcours, clics, conversions et abandons
@@ -32,8 +33,9 @@ Portfolio personnel de **Mandaniaina Randriambinintsoa** — Architecte IA & Aut
 src/
   app/
     [locale]/          # Pages i18n (blog, projects, services, about, contact)
+    (payload)/         # Admin Payload + REST/GraphQL Payload
     api/revalidate/    # API ISR on-demand
-    sitemap.ts         # Sitemap dynamique (blog + projets Supabase)
+    sitemap.ts         # Sitemap dynamique (blog + projets Payload/Supabase)
   components/
     animations/        # Wrappers GSAP (useGSAP + matchMedia)
     blog/              # BlogListingClient, MarkdownRenderer
@@ -42,8 +44,9 @@ src/
     seo/               # JSON-LD components
     ui/                # GlassCard, Button, N8nWorkflowViewer
   lib/
-    data/              # Data fetching (blog.ts, projects.ts, workflows/)
+    data/              # Data fetching Payload-first (blog.ts, projects.ts, workflows/)
     supabase/          # Client serveur/browser, types auto-generes
+  payload/             # Collections, globals et types Payload
   i18n/                # Config + dictionnaires FR/EN
 ```
 
@@ -56,8 +59,11 @@ npm install
 # Configurer les variables d'environnement
 cp .env.example .env.local
 # Remplir NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, REVALIDATION_SECRET
+# Remplir PAYLOAD_SECRET, NEXT_PUBLIC_SITE_URL
+# Remplir PAYLOAD_DATABASE_URI en production (fallback SQLite local sinon)
 # Optionnel : NEXT_PUBLIC_POSTHOG_KEY, NEXT_PUBLIC_POSTHOG_HOST
 # Optionnel admin local : POSTHOG_PERSONAL_API_KEY, POSTHOG_PROJECT_ID
+# Optionnel medias Payload en production : BLOB_READ_WRITE_TOKEN
 
 # Lancer en developpement
 npm run dev
@@ -65,6 +71,19 @@ npm run dev
 # Build production
 npm run build
 ```
+
+## Payload CMS
+
+Payload remplace l'ancien dashboard Supabase sous `/admin`.
+
+```bash
+npm run payload:generate:types
+npm run payload:generate:importmap
+npm run payload:migrate
+npm run payload:migrate:supabase
+```
+
+Details : `PAYLOAD-CMS-MIGRATION.md`.
 
 ## Deploiement
 

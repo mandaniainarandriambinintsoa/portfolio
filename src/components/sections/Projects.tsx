@@ -113,22 +113,22 @@ export default function Projects({
 
   return (
     <section id="projects" className="w-full mb-16">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* ── Header + Filters ── */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
             {title}
           </h2>
 
-          <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5 p-1 rounded-full bg-white/[0.03] border border-white/[0.06]">
+          <div className="flex w-full items-center gap-3 sm:w-auto">
+            <div className="flex w-full max-w-full flex-wrap items-center justify-center gap-1.5 rounded-2xl border border-white/[0.06] bg-white/[0.03] p-1 sm:w-auto sm:flex-nowrap sm:rounded-full">
               {filters.map((f) => (
                 <button
                   key={f.key}
                   onClick={() => setFilter(f.key)}
                   data-ph-event="project_filter_changed"
                   data-ph-props={JSON.stringify({ area: "homepage_projects", filter: f.key, label: f.label, locale })}
-                  className={`relative px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
+                  className={`relative min-w-0 flex-1 rounded-full px-3 py-2 text-xs font-medium transition-all duration-300 cursor-pointer sm:flex-none sm:px-5 sm:text-sm ${
                     filter === f.key
                       ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/20"
                       : "text-slate-400 hover:text-slate-200"

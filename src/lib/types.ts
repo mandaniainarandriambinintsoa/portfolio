@@ -27,3 +27,22 @@ export type ProjectItem = {
   image: string;
   workflowFile: string | null;
 };
+
+export type ServiceColor = "indigo" | "emerald" | "blue" | "purple" | "sky" | "amber";
+
+export type ServiceItem = {
+  key?: string;
+  icon: string;
+  title: string;
+  description: string;
+  slug: string;
+  color: ServiceColor;
+  isLanding?: boolean;
+  cardTitle?: string;
+  cardDescription?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  landing?: unknown;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+};

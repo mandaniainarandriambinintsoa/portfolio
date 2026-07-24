@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-require-imports */
 /**
  * IndexNow — Submit URLs to Bing, Yandex, and other search engines
  * Google does NOT support IndexNow, but Bing Copilot does.

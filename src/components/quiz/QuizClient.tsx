@@ -75,13 +75,6 @@ const borderColorMap: Record<string, string> = {
   purple: "border-purple-500/40",
 };
 
-const barColorMap: Record<string, string> = {
-  indigo: "bg-indigo-500",
-  emerald: "bg-emerald-500",
-  blue: "bg-blue-500",
-  purple: "bg-purple-500",
-};
-
 function calculateResult(answers: number[], questions: QuizQuestion[]): ProfileKey {
   const scores: Scores = { workflow: 0, custom_app: 0, ai_integration: 0, full_scale: 0 };
 

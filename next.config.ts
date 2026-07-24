@@ -1,19 +1,20 @@
 import type { NextConfig } from "next";
+import { withPayload } from "@payloadcms/next/withPayload";
 
 // Content Security Policy — whitelist only what the site actually loads
 const cspDirectives = [
   // Scripts: self + GTM + N8n demo components
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.jsdelivr.net https://www.unpkg.com",
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.jsdelivr.net https://www.unpkg.com https://eu-assets.i.posthog.com https://us-assets.i.posthog.com",
   // Styles: self + inline (Next.js requires unsafe-inline for styles)
-  "style-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   // Images: self + Supabase storage + Google + flagcdn + data URIs (Next.js blur placeholders)
-  "img-src 'self' data: blob: https://lbabmflmjcouniefxwmv.supabase.co https://lh3.googleusercontent.com https://flagcdn.com",
+  "img-src 'self' data: blob: https://lbabmflmjcouniefxwmv.supabase.co https://lh3.googleusercontent.com https://flagcdn.com https://*.public.blob.vercel-storage.com",
   // Fonts: self only (Material Symbols + Inter are self-hosted)
-  "font-src 'self'",
+  "font-src 'self' https://fonts.gstatic.com",
   // API calls: self + Supabase + Google Analytics + PostHog
-  "connect-src 'self' https://lbabmflmjcouniefxwmv.supabase.co https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://eu.i.posthog.com https://us.i.posthog.com",
-  // Frames: none (prevent clickjacking)
-  "frame-src 'none'",
+  "connect-src 'self' https://lbabmflmjcouniefxwmv.supabase.co https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://eu.i.posthog.com https://us.i.posthog.com https://eu-assets.i.posthog.com https://us-assets.i.posthog.com https://*.public.blob.vercel-storage.com",
+  // Frames: self for Payload live preview.
+  "frame-src 'self' https://manda-ia.com",
   // Objects: none (no Flash/plugins)
   "object-src 'none'",
   // Base URI: self only (prevent base tag hijacking)
@@ -24,13 +25,17 @@ const cspDirectives = [
   "frame-ancestors 'none'",
 ].join("; ");
 
-const securityHeaders = [
-  { key: "Content-Security-Policy", value: cspDirectives },
+const commonSecurityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "DENY" },
   { key: "X-XSS-Protection", value: "1; mode=block" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
+];
+
+const securityHeaders = [
+  { key: "Content-Security-Policy", value: cspDirectives },
+  ...commonSecurityHeaders,
 ];
 
 const nextConfig: NextConfig = {
@@ -45,6 +50,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "lbabmflmjcouniefxwmv.supabase.co",
         pathname: "/storage/v1/object/public/**",
+      },
+      {
+        protocol: "https",
+        hostname: "flagcdn.com",
       },
     ],
   },
@@ -95,11 +104,15 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/(.*)",
+        source: "/((?!admin|api/payload|api/graphql|api/graphql-playground).*)",
         headers: securityHeaders,
+      },
+      {
+        source: "/:path*",
+        headers: commonSecurityHeaders,
       },
     ];
   },
 };
 
-export default nextConfig;
+export default withPayload(nextConfig);

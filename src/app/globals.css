@@ -33,10 +33,16 @@
 }
 
 /* Base */
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--color-bg-dark);
   color: #e2e8f0;
   font-family: var(--font-display);
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -159,6 +165,17 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.approach-headline {
+  max-width: 16rem;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 40rem) {
+  .approach-headline {
+    max-width: none;
+  }
 }
 
 /* Animation base states (no-JS fallback: visible) */
