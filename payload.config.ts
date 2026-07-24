@@ -37,7 +37,7 @@ const db = databaseUri
       pool: {
         connectionString: databaseUri,
         allowExitOnIdle: true,
-        connectionTimeoutMillis: Number(process.env.PAYLOAD_DATABASE_CONNECTION_TIMEOUT_MS ?? 5000),
+        connectionTimeoutMillis: Number(process.env.PAYLOAD_DATABASE_CONNECTION_TIMEOUT_MS ?? 20000),
         idleTimeoutMillis: Number(process.env.PAYLOAD_DATABASE_IDLE_TIMEOUT_MS ?? 5000),
         max: Number(process.env.PAYLOAD_DATABASE_POOL_MAX ?? 1),
         ssl: databaseUri.includes("supabase.co") || databaseUri.includes("pooler.supabase.com")
