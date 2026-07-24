@@ -33,6 +33,7 @@
     "highlight.js": "^11.11.1",
     "next": "16.2.6",
     "payload": "^3.86.0",
+    "pg": "^8.20.0",
     "posthog-js": "^1.402.3",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.20.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
