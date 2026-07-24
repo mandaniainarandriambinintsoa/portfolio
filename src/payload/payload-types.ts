@@ -69,6 +69,7 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    pages: Page;
     services: Service;
     projects: Project;
     posts: Post;
@@ -81,6 +82,7 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    pages: PagesSelect<false> | PagesSelect<true>;
     services: ServicesSelect<false> | ServicesSelect<true>;
     projects: ProjectsSelect<false> | ProjectsSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
@@ -177,6 +179,162 @@ export interface Media {
   height?: number | null;
   focalX?: number | null;
   focalY?: number | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages".
+ */
+export interface Page {
+  id: string;
+  title: string;
+  /**
+   * Use 'home' for the homepage.
+   */
+  slug: string;
+  published?: boolean | null;
+  /**
+   * Add, remove and drag sections to change the page structure.
+   */
+  layout: (
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeHero';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeClientLogos';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeCommandCenter';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeServices';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeProcess';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeApproach';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeTestimonials';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeStats';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeCollaborationGuides';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homePricing';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeTechStack';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeProjects';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeVisitorTracking';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeFAQ';
+      }
+    | {
+        /**
+         * Optional label shown to editors only.
+         */
+        adminLabel?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'homeCTAFinal';
+      }
+  )[];
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -331,6 +489,10 @@ export interface PayloadLockedDocument {
         value: string | Media;
       } | null)
     | ({
+        relationTo: 'pages';
+        value: string | Page;
+      } | null)
+    | ({
         relationTo: 'services';
         value: string | Service;
       } | null)
@@ -425,6 +587,127 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "pages_select".
+ */
+export interface PagesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  published?: T;
+  layout?:
+    | T
+    | {
+        homeHero?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeClientLogos?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeCommandCenter?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeServices?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeProcess?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeApproach?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeTestimonials?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeStats?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeCollaborationGuides?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homePricing?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeTechStack?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeProjects?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeVisitorTracking?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeFAQ?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+        homeCTAFinal?:
+          | T
+          | {
+              adminLabel?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

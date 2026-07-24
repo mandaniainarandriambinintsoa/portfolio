@@ -1,6 +1,6 @@
 import type { PayloadRequest } from "payload";
 
-type PreviewCollection = "projects" | "services";
+type PreviewCollection = "pages" | "projects" | "services";
 
 type PreviewArgs = {
   collection: PreviewCollection;
@@ -21,6 +21,12 @@ function getRequestOrigin(req?: PayloadRequest): string {
 }
 
 function collectionPath(collection: PreviewCollection, slug: string, locale: string): string {
+  if (collection === "pages") {
+    if (slug === "home") return locale === "en" ? "/en" : "/";
+    const prefix = locale === "en" ? "/en" : "";
+    return `${prefix}/${slug}`;
+  }
+
   const prefix = locale === "en" ? "/en" : "";
   return `${prefix}/${collection}/${slug}`;
 }

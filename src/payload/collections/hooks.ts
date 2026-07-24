@@ -1,6 +1,6 @@
 import type { CollectionAfterChangeHook, CollectionAfterDeleteHook } from "payload";
 
-type RevalidateTarget = "blog" | "project" | "service";
+type RevalidateTarget = "blog" | "page" | "project" | "service";
 
 async function revalidate(type: RevalidateTarget, slug?: string) {
   try {

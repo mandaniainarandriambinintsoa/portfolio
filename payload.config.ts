@@ -8,6 +8,7 @@ import { buildConfig } from "payload";
 import sharp from "sharp";
 
 import { Media } from "./src/payload/collections/Media.ts";
+import { Pages } from "./src/payload/collections/Pages.ts";
 import { Posts } from "./src/payload/collections/Posts.ts";
 import { Projects } from "./src/payload/collections/Projects.ts";
 import { Services } from "./src/payload/collections/Services.ts";
@@ -75,7 +76,7 @@ export default buildConfig({
       titleSuffix: " - Manda IA CMS",
     },
   },
-  collections: [Users, Media, Services, Projects, Posts],
+  collections: [Users, Media, Pages, Services, Projects, Posts],
   cors: [serverURL, "http://localhost:3000"],
   csrf: [serverURL, "http://localhost:3000"],
   db,
