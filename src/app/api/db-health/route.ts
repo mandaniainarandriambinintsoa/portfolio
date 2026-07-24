@@ -46,9 +46,39 @@ export async function GET() {
   }
 
   const tcp = await testTCP(database.host, Number(database.port));
+  const pgStarted = Date.now();
+  let pg: { ok: boolean; ms: number; error?: string } | null = null;
+
+  try {
+    const importModule = new Function("specifier", "return import(specifier)") as (
+      specifier: string,
+    ) => Promise<{ Pool: new (config: Record<string, unknown>) => { end: () => Promise<void>; query: (sql: string) => Promise<unknown> } }>;
+    const { Pool } = await importModule("pg");
+    const pool = new Pool({
+      allowExitOnIdle: true,
+      connectionString: process.env.PAYLOAD_DATABASE_URI,
+      connectionTimeoutMillis: 30000,
+      idleTimeoutMillis: 500,
+      max: 1,
+      ssl: { rejectUnauthorized: false },
+    });
+    try {
+      await pool.query("select 1 as ok");
+      pg = { ok: true, ms: Date.now() - pgStarted };
+    } finally {
+      await pool.end();
+    }
+  } catch (error) {
+    pg = {
+      ok: false,
+      ms: Date.now() - pgStarted,
+      error: error instanceof Error ? error.message : String(error),
+    };
+  }
 
   return NextResponse.json({
     database,
+    pg,
     region: process.env.VERCEL_REGION,
     tcp,
   });
