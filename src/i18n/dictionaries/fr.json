@@ -275,8 +275,8 @@
         "cardTitle": "React & Next.js",
         "cardDescription": "Apps web performantes en React et Next.js. SSR, API Routes, TypeScript, Supabase.",
         "isLanding": true,
-        "seoTitle": "Développeur React à Madagascar | Freelance Next.js SaaS",
-        "seoDescription": "Développeur React à Madagascar pour SaaS, dashboards et sites Next.js performants. TypeScript, Supabase, PageSpeed 98-100, devis gratuit sous 24h.",
+        "seoTitle": "Développeur React Madagascar | Freelance Next.js",
+        "seoDescription": "Développeur React et freelance Next.js à Madagascar pour SaaS, dashboards et sites performants. TypeScript, Supabase et portfolio vérifiable.",
         "landing": {
           "heroText": "Vous cherchez un développeur React à Madagascar pour créer un SaaS, un dashboard ou une application web performante ? Basé à Antananarivo, je conçois des produits React / Next.js fullstack — du MVP au SaaS en production. Plus de 20 projets livrés, un TJM jusqu'à 2 fois inférieur aux freelances européens, et une expertise confirmée sur l'écosystème React moderne.",
           "heroImage": {
@@ -1009,21 +1009,21 @@
       },
       {
         "icon": "javascript",
-        "title": "Développeur JavaScript à Madagascar",
-        "description": "Un seul écosystème pour le front, le back et l'IA appliquée. Front React, API Node.js, agents intelligents.",
+        "title": "Développeur web freelance full stack à Madagascar",
+        "description": "Freelance full stack pour sites, SaaS et applications métier : front React, API Node.js, Supabase et automatisations IA.",
         "slug": "developpeur-javascript-madagascar",
         "color": "blue",
-        "cardTitle": "Développeur JavaScript",
-        "cardDescription": "Fullstack JS : front, back et IA à Madagascar",
+        "cardTitle": "Freelance full stack",
+        "cardDescription": "Sites, SaaS, front React, API Node.js et IA à Madagascar",
         "isLanding": true,
-        "seoTitle": "Développeur JavaScript à Madagascar (Fullstack) | Manda",
-        "seoDescription": "Développeur JavaScript fullstack à Madagascar : front React, back Node.js et agents IA. TJM 350 €/jour, premium accessible face aux 400-700 €/jour des freelances EU. Discutons de votre projet dès aujourd'hui.",
+        "seoTitle": "Développeur web freelance full stack Madagascar | Manda",
+        "seoDescription": "Développeur web freelance full stack à Madagascar : React, Next.js, Node.js, Supabase et IA. Un interlocuteur direct pour votre site ou SaaS.",
         "landing": {
-          "heroText": "JavaScript est le seul langage qui couvre l'interface, le serveur et désormais l'IA appliquée. Je conçois des produits fullstack de bout en bout, du front React au backend Node.js jusqu'aux agents intelligents. Cette page vous oriente vers la spécialisation adaptée à votre besoin.",
+          "heroText": "Je conçois des sites, SaaS et applications métier de bout en bout : interface React ou Next.js, API Node.js, base Supabase et automatisations IA quand elles servent vraiment le produit. Vous travaillez directement avec la personne qui cadre, développe, teste et met en production.",
           "sections": [
             {
-              "title": "Pourquoi un développeur JavaScript fullstack à Madagascar",
-              "content": "Un développeur JavaScript fullstack à Madagascar maîtrise l'ensemble de la chaîne avec un seul langage, ce qui réduit les coûts de coordination et accélère les livraisons. JavaScript couvre l'interface utilisateur, le serveur et l'IA appliquée, un cas unique parmi les langages courants.\n\nConcrètement, le même développeur peut construire un front réactif, exposer une API, gérer la base de données et brancher une couche d'automatisation intelligente. Vous évitez les frictions entre équipes front et back, et vous gardez une logique métier cohérente d'un bout à l'autre. C'est ce profil polyvalent que recherchent les studios et startups quand ils tapent \"développeur full stack madagascar\". Mon TJM est de 350 €/jour, un premium accessible face aux 400 à 700 €/jour des freelances européens, pour une qualité équivalente."
+              "title": "Pourquoi travailler avec un développeur web freelance full stack",
+              "content": "Un développeur web freelance full stack prend en charge le parcours complet : cadrage, interface, API, données, déploiement et suivi. Vous évitez les passages répétés entre un commercial, un chef de projet, une équipe front et une équipe back pour chaque décision.\n\nMa stack principale reste JavaScript et TypeScript : React et Next.js pour l'interface, Node.js pour les API, PostgreSQL ou Supabase pour les données. Ce socle commun garde les types et les règles métier cohérents d'un bout à l'autre. Pour les clients en France, le travail à distance reste simple : je suis francophone, basé à Antananarivo en UTC+3, avec plusieurs heures de recouvrement chaque jour.\n\nMon TJM indicatif est de 350 €/jour. Le devis précise le périmètre, les livrables et les critères de validation avant le démarrage. Vous pouvez vérifier le niveau attendu dans le portfolio, puis choisir la spécialisation adaptée : React/Next.js, Node.js/API, Supabase ou agents IA."
             },
             {
               "title": "Le front-end : React et Next.js",
@@ -1153,8 +1153,8 @@
         "cardTitle": "Node.js Madagascar",
         "cardDescription": "Backend, API REST/GraphQL et temps réel",
         "isLanding": true,
-        "seoTitle": "Développeur Node.js à Madagascar | Freelance backend API",
-        "seoDescription": "Développeur Node.js à Madagascar pour API REST/GraphQL, NestJS, Supabase et temps réel. Freelance direct, portfolio réel, devis sous 48h.",
+        "seoTitle": "Développeur Node.js Madagascar | API & Backend Freelance",
+        "seoDescription": "Développeur Node.js freelance à Madagascar pour API REST/GraphQL, NestJS, Supabase et temps réel. Portfolio backend vérifiable, devis sous 48h.",
         "landing": {
           "heroText": "Vous cherchez un développeur Node.js à Madagascar pour créer ou reprendre une API backend ? Je suis indépendant, basé à Antananarivo, et je construis des API REST et GraphQL, des services temps réel et des intégrations sur mesure, pas des slides. Vous travaillez avec une personne identifiable et un portfolio vérifiable, pas avec un pool d'agence anonyme.",
           "sections": [

@@ -56,7 +56,9 @@ service-account-key.json
 /screen.png
 /screenshot-fullpage.png
 /code.html
+/.tmp-analytics/
 /.tmp-chrome-debug-profile*/
+/.tmp-chrome-seo-verify*/
 /*.PNG
 /*.avif
 

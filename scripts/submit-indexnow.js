@@ -39,6 +39,8 @@ const URLS = [
   `${SITE_URL}/services/developpeur-python-ia-madagascar`,
   `${SITE_URL}/services/developpeur-claude-code-n8n`,
   `${SITE_URL}/services/developpeur-codex-n8n`,
+  `${SITE_URL}/solutions/agent-ia-facebook`,
+  `${SITE_URL}/solutions/automatisation-marketing-n8n`,
   // Landing pages EN
   `${SITE_URL}/en/services/n8n-automation-expert-madagascar`,
   `${SITE_URL}/en/services/hire-react-nextjs-developer-madagascar`,
@@ -46,6 +48,8 @@ const URLS = [
   `${SITE_URL}/en/services/python-ai-developer-madagascar`,
   `${SITE_URL}/en/services/claude-code-n8n-developer`,
   `${SITE_URL}/en/services/codex-n8n-developer`,
+  `${SITE_URL}/en/solutions/facebook-ai-agent`,
+  `${SITE_URL}/en/solutions/n8n-marketing-automation`,
   // Blog posts
   `${SITE_URL}/blog/claude-code-developper-avec-ia`,
   `${SITE_URL}/blog/comment-choisir-developpeur-no-code-madagascar`,

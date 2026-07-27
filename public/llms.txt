@@ -29,6 +29,8 @@ Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance bas
 - [Automatisation n8n pour PME](https://manda-ia.com/solutions/automatisation-n8n-pme): Workflows CRM, emails, reporting, factures, relances et supervision pour PME
 - [Agent IA support client](https://manda-ia.com/solutions/agent-ia-support-client): Agent IA avec FAQ, tri des demandes, qualification de tickets et escalade humaine
 - [API Mobile Money Madagascar](https://manda-ia.com/solutions/api-mobile-money-madagascar): Intégration Orange Money, MVola, Airtel Money, callbacks sécurisés, mode test, dashboard et rapprochement
+- [Agent IA Facebook](https://manda-ia.com/solutions/agent-ia-facebook): Qualification Messenger, brouillons de réponse, création de leads CRM, validation humaine et orchestration n8n
+- [Automatisation marketing n8n](https://manda-ia.com/solutions/automatisation-marketing-n8n): Formulaires, CRM, segmentation, nurturing, relances, alertes commerciales et reporting
 - [Agent IA prospection](https://manda-ia.com/solutions/agent-ia-prospection): Qualification de leads, agent IA Facebook, scoring ICP, brouillons personnalisés, CRM et relances n8n
 - [Workflows n8n + Claude Code](https://manda-ia.com/solutions/workflows-n8n-claude-code): Workflows Claude Code n8n avec contexte repo, MCP, validation humaine, logs et Git
 - [Développeur agent vocal IA](https://manda-ia.com/solutions/developpeur-agent-vocal-ia): Appels entrants, qualification, prise de rendez-vous, transfert humain, ElevenLabs, Twilio et n8n
@@ -38,6 +40,8 @@ Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance bas
 - [n8n Automation for SMBs](https://manda-ia.com/en/solutions/n8n-automation-for-smbs): CRM, email, reporting, invoice, follow-up and monitoring workflows for SMBs
 - [AI Customer Support Agent](https://manda-ia.com/en/solutions/ai-customer-support-agent): FAQ answers, ticket triage, request qualification and human handoff
 - [Mobile Money API Madagascar](https://manda-ia.com/en/solutions/mobile-money-api-madagascar): Orange Money, MVola, Airtel Money, secure callbacks, test mode, dashboard and reconciliation
+- [Facebook AI Agent](https://manda-ia.com/en/solutions/facebook-ai-agent): Messenger qualification, reply drafts, CRM lead creation, human approval and n8n orchestration
+- [n8n Marketing Automation](https://manda-ia.com/en/solutions/n8n-marketing-automation): Forms, CRM, segmentation, nurturing, controlled follow-ups, sales alerts and reporting
 - [AI Prospecting Agent](https://manda-ia.com/en/solutions/ai-prospecting-agent): Lead qualification, Facebook AI agent, ICP scoring, personalized drafts, CRM sync and n8n follow-ups
 - [n8n + Claude Code Workflows](https://manda-ia.com/en/solutions/n8n-claude-code-workflows): Claude Code n8n workflows with repo context, MCP, human validation, logs and Git
 - [AI Voice Agent Developer](https://manda-ia.com/en/solutions/ai-voice-agent-developer): Inbound calls, qualification, appointment booking, human handoff, ElevenLabs, Twilio and n8n
@@ -59,7 +63,7 @@ Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance bas
 
 ## Blog
 
-- [Automatiser son business avec N8N](https://manda-ia.com/blog/automatiser-business-n8n-guide-complet): Guide complet — 5 workflows essentiels, ROI (5h automatisées = 1000 EUR/mois), bonnes pratiques
+- [Automatisation n8n : Cloud, Docker, IA et workflows](https://manda-ia.com/blog/automatiser-business-n8n-guide-complet): Guide de choix d'hébergement, architecture fiable, cas d'usage, coûts, erreurs et intégration IA
 - [Développer avec Claude Code](https://manda-ia.com/blog/claude-code-developper-avec-ia): Retour d'expérience — Factumation en 3 jours, limites de l'IA, workflow AI-driven
 - [Pourquoi Supabase remplace Firebase](https://manda-ia.com/blog/pourquoi-supabase-remplace-firebase): Comparaison technique Supabase vs Firebase en 2026 — prix, performance, open-source
 - [Automatisation N8N pour business à Madagascar](https://manda-ia.com/blog/pourquoi-automatiser-business-madagascar-n8n): Cas d'usage locaux, PME malgaches, retour sur investissement

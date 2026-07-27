@@ -275,8 +275,8 @@
         "cardTitle": "React & Next.js",
         "cardDescription": "High-performance web apps with React and Next.js. SSR, API Routes, TypeScript, Supabase.",
         "isLanding": true,
-        "seoTitle": "React / Next.js Developer in Madagascar — #1 Freelance Fullstack",
-        "seoDescription": "#1 freelance React and Next.js developer in Antananarivo, Madagascar. High-performance web apps, SSR, TypeScript, Supabase. Competitive rates for EU/US clients, 20+ projects delivered. Free quote within 24h.",
+        "seoTitle": "React & Next.js Developer in Madagascar | Freelance",
+        "seoDescription": "Freelance React and Next.js developer in Madagascar for SaaS, dashboards and fast websites. TypeScript, Supabase and a verifiable portfolio.",
         "landing": {
           "heroText": "Looking for a skilled React / Next.js developer at competitive rates? Based in Antananarivo, Madagascar, I build high-performance fullstack JavaScript applications — from MVP to production SaaS. 20+ projects delivered, rates up to 2x lower than US/European freelancers, and proven expertise in the modern React ecosystem.",
           "heroImage": {
@@ -1001,21 +1001,21 @@
       },
       {
         "icon": "javascript",
-        "title": "JavaScript Developer in Madagascar",
-        "description": "One ecosystem for front-end, back-end and applied AI. React front, Node.js APIs, intelligent agents.",
+        "title": "Freelance full stack web developer in Madagascar",
+        "description": "Full stack freelancer for websites, SaaS and business applications: React, Node.js APIs, Supabase and practical AI automation.",
         "slug": "javascript-developer-madagascar",
         "color": "blue",
-        "cardTitle": "JavaScript Developer",
-        "cardDescription": "Fullstack JS: front, back and AI from Madagascar",
+        "cardTitle": "Full stack freelancer",
+        "cardDescription": "Websites, SaaS, React, Node.js and AI from Madagascar",
         "isLanding": true,
-        "seoTitle": "JavaScript Developer in Madagascar (Fullstack) | Manda",
-        "seoDescription": "Fullstack JavaScript developer in Madagascar: React front, Node.js back and AI agents. Day rate €350, accessible premium versus the €400-700/day of EU freelancers. Let's talk about your project today.",
+        "seoTitle": "Freelance Full Stack Web Developer Madagascar | Manda",
+        "seoDescription": "Freelance full stack web developer in Madagascar: React, Next.js, Node.js, Supabase and AI. One direct contact for your website or SaaS.",
         "landing": {
-          "heroText": "JavaScript is the only language that spans the interface, the server and now applied AI. I build fullstack products end to end, from the React front-end to the Node.js backend and intelligent agents. This page points you to the specialization that fits your need.",
+          "heroText": "I build websites, SaaS products and business applications end to end: React or Next.js interfaces, Node.js APIs, Supabase data and AI automation when it serves the product. You work directly with the person who scopes, builds, tests and deploys the project.",
           "sections": [
             {
-              "title": "Why a fullstack JavaScript developer in Madagascar",
-              "content": "A fullstack JavaScript developer in Madagascar handles the whole chain with a single language, which cuts coordination costs and speeds up delivery. JavaScript covers the user interface, the server and applied AI, a rare case among mainstream languages.\n\nIn practice, one developer can build a reactive front-end, expose an API, manage the database and wire in an intelligent automation layer. You avoid friction between front and back teams and keep business logic coherent from end to end. This is the versatile profile studios and startups look for when they search for a fullstack developer in Madagascar. My day rate is €350, an accessible premium against the €400 to 700/day charged by European freelancers, for equivalent quality."
+              "title": "Why work with a freelance full stack web developer",
+              "content": "A freelance full stack web developer can own the complete delivery path: scoping, interface, API, data, deployment and follow-up. You avoid routing every decision through a sales contact, project manager, front-end team and back-end team.\n\nMy main stack is JavaScript and TypeScript: React and Next.js for the interface, Node.js for APIs, PostgreSQL or Supabase for data. That shared foundation keeps types and business rules consistent from end to end. Remote work with European clients is straightforward: I work in French and English from Antananarivo on UTC+3, with several hours of daily overlap.\n\nMy indicative day rate is €350. The quote defines scope, deliverables and acceptance criteria before work starts. You can check the expected level in the portfolio, then choose the relevant specialization: React/Next.js, Node.js/API, Supabase or AI agents."
             },
             {
               "title": "The front-end: React and Next.js",
@@ -1145,8 +1145,8 @@
         "cardTitle": "Node.js Madagascar",
         "cardDescription": "Backend, REST/GraphQL APIs and real-time",
         "isLanding": true,
-        "seoTitle": "Hire a Node.js Developer in Madagascar: Backend & APIs | Manda",
-        "seoDescription": "Hire a freelance Node.js developer in Madagascar. Backend, REST/GraphQL APIs, NestJS, real-time and integrations. Real portfolio, quote within 48h, let's talk.",
+        "seoTitle": "Node.js Developer Madagascar | Freelance API & Backend",
+        "seoDescription": "Freelance Node.js developer in Madagascar for REST/GraphQL APIs, NestJS, Supabase and real-time systems. Verifiable backend work, quote within 48h.",
         "landing": {
           "heroText": "I'm an independent Node.js backend developer based in Antananarivo. I build REST and GraphQL APIs, real-time services and custom integrations, not slide decks. You work with one named, accountable person and a verifiable portfolio, not an anonymous agency pool.",
           "sections": [

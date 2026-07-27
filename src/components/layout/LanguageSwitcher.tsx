@@ -18,9 +18,11 @@ const SLUG_MAP_FR_TO_EN: Record<string, string> = {
   "solutions/automatisation-n8n-pme": "solutions/n8n-automation-for-smbs",
   "solutions/agent-ia-support-client": "solutions/ai-customer-support-agent",
   "solutions/api-mobile-money-madagascar": "solutions/mobile-money-api-madagascar",
+  "solutions/agent-ia-facebook": "solutions/facebook-ai-agent",
   "solutions/agent-ia-prospection": "solutions/ai-prospecting-agent",
   "solutions/workflows-n8n-claude-code": "solutions/n8n-claude-code-workflows",
   "solutions/developpeur-agent-vocal-ia": "solutions/ai-voice-agent-developer",
+  "solutions/automatisation-marketing-n8n": "solutions/n8n-marketing-automation",
 };
 
 const SLUG_MAP_EN_TO_FR: Record<string, string> = Object.fromEntries(

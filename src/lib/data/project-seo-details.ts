@@ -105,9 +105,9 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
     },
     en: {
-      metaTitle: "PaidMada Mobile Money - Orange Money, MVola, Airtel",
+      metaTitle: "Madagascar Mobile Money API Case Study | PaidMada",
       metaDescription:
-        "PaidMada Mobile Money project: Madagascar payment architecture with Orange Money, MVola, Airtel Money, callbacks, statuses and reconciliation.",
+        "PaidMada case study: a Madagascar Mobile Money API architecture for MVola, Orange Money and Airtel Money with callbacks, statuses and reconciliation.",
       kicker: "Payment architecture",
       title: "What PaidMada demonstrates for Mobile Money",
       summary:
@@ -176,9 +176,9 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
   },
   "facebook-agen-ia": {
     fr: {
-      metaTitle: "Facebook Agent IA - Qualification leads et dashboard",
+      metaTitle: "Projet Agent IA Facebook : Messenger, leads et CRM",
       metaDescription:
-        "Projet Facebook Agent IA : qualification de conversations Facebook, scoring de leads, synthèse, dashboard et actions commerciales contrôlées.",
+        "Étude de cas Agent IA Facebook : qualification Messenger, scoring de leads, synthèse, dashboard CRM et validation humaine des actions sensibles.",
       kicker: "Agent IA Facebook",
       title: "Ce que montre Facebook Agent IA pour la prospection",
       summary:
@@ -214,10 +214,10 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
       relatedLinks: [
         {
-          label: "Solution Agent IA prospection",
-          href: "/solutions/agent-ia-prospection",
+          label: "Solution Agent IA Facebook",
+          href: "/solutions/agent-ia-facebook",
           description:
-            "Méthode pour qualifier les leads, scorer l'ICP et synchroniser le CRM avec n8n.",
+            "Architecture complète pour qualifier Messenger, préparer les réponses et synchroniser le CRM avec n8n.",
         },
         {
           label: "Développeur agent IA",
@@ -245,9 +245,9 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
     },
     en: {
-      metaTitle: "Facebook AI Agent - Lead qualification and dashboard",
+      metaTitle: "Facebook AI Agent Case Study: Messenger, Leads and CRM",
       metaDescription:
-        "Facebook AI Agent project: Facebook conversation qualification, lead scoring, summaries, dashboard and controlled sales actions.",
+        "Facebook AI agent case study: Messenger qualification, lead scoring, summaries, CRM dashboard and human approval for sensitive actions.",
       kicker: "Facebook AI agent",
       title: "What Facebook AI Agent shows for prospecting",
       summary:
@@ -283,10 +283,10 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
       relatedLinks: [
         {
-          label: "AI Prospecting Agent solution",
-          href: "/en/solutions/ai-prospecting-agent",
+          label: "Facebook AI Agent solution",
+          href: "/en/solutions/facebook-ai-agent",
           description:
-            "Method for lead qualification, ICP scoring and CRM synchronization with n8n.",
+            "Complete architecture for Messenger qualification, reply drafts and CRM synchronization with n8n.",
         },
         {
           label: "AI Agent Developer",

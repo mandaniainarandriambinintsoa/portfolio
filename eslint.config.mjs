@@ -12,6 +12,7 @@ const eslintConfig = defineConfig([
     ".next-stale-before-payload*/**",
     ".playwright-mcp/**",
     ".tmp-chrome-debug-profile*/**",
+    ".tmp-chrome-seo-verify*/**",
     ".tmp-chrome-freelance-profile/**",
     ".tmp-screenshots/**",
     "out/**",

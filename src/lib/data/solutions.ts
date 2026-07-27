@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/config";
 
-export const SOLUTION_LAST_UPDATED = "2026-07-15";
+export const SOLUTION_LAST_UPDATED = "2026-07-27";
 
 export type SolutionAccent = "indigo" | "emerald" | "blue" | "purple";
 
@@ -672,6 +672,207 @@ export const frSolutions: Solution[] = [
     },
   },
   {
+    slug: "agent-ia-facebook",
+    icon: "forum",
+    accent: "blue",
+    title: "Agent IA Facebook pour Messenger : leads, support et CRM",
+    eyebrow: "Solution Agent IA Facebook",
+    seoTitle: "Agent IA Facebook | Messenger, leads, CRM et n8n",
+    seoDescription:
+      "Agent IA Facebook pour qualifier les messages Messenger, préparer les réponses, créer les leads dans le CRM et orchestrer le suivi avec n8n.",
+    primaryKeyword: "agent IA Facebook",
+    secondaryKeywords: [
+      "agent IA Messenger",
+      "automatisation Facebook Messenger",
+      "qualification leads Facebook",
+      "chatbot IA Facebook",
+      "Facebook CRM n8n",
+      "support client Facebook IA",
+    ],
+    shortAnswer:
+      "Un agent IA Facebook traite les messages Messenger, commentaires ou formulaires Meta pour identifier l'intention, résumer le besoin et préparer la prochaine action. Il peut créer ou mettre à jour un lead dans le CRM, proposer un brouillon de réponse et transférer les cas sensibles à un humain. Je relie Facebook, l'IA, n8n et vos outils métier avec des règles claires, un historique vérifiable et une validation humaine là où elle compte.",
+    heroLead:
+      "Transformez les conversations Facebook en demandes qualifiées, sans laisser une IA répondre seule aux clients importants ou aux situations sensibles.",
+    fit: [
+      "Votre page Facebook reçoit des messages que l'équipe traite trop tard.",
+      "Vous perdez le contexte entre Messenger, les formulaires Meta et votre CRM.",
+      "Vous voulez distinguer automatiquement vente, support, spam et demande urgente.",
+      "Vous souhaitez préparer des réponses rapides tout en gardant une validation humaine.",
+    ],
+    outcomes: [
+      {
+        title: "Réponses mieux priorisées",
+        description:
+          "Chaque conversation reçoit une intention, un niveau d'urgence et une prochaine action visible par l'équipe.",
+      },
+      {
+        title: "Leads exploitables",
+        description:
+          "Nom, besoin, produit, budget, urgence et source sont structurés avant la création ou la mise à jour du CRM.",
+      },
+      {
+        title: "Contexte conservé",
+        description:
+          "Le message d'origine, le résumé IA, la décision et la personne qui valide restent traçables.",
+      },
+    ],
+    problem: {
+      title: "Un agent IA Facebook utile commence par trier, pas par parler",
+      paragraphs: [
+        "Une boîte Messenger mélange souvent plusieurs intentions : question sur un prix, demande de rendez-vous, problème de commande, commentaire public, spam ou conversation sans objectif commercial. Répondre automatiquement à tout avec le même ton crée du risque et dégrade la confiance.",
+        "La première mission de l'agent est donc de qualifier. Il détecte la langue et l'intention, extrait les informations utiles, résume la conversation et applique vos règles : réponse simple, brouillon à valider, création d'un lead, ticket support ou transfert immédiat à un humain.",
+        "Cette architecture permet de gagner du temps sans cacher les limites de l'IA. Les réponses sensibles, les réclamations, les montants et les promesses commerciales restent contrôlés par l'équipe.",
+      ],
+    },
+    deliverables: {
+      title: "Ce que je peux construire",
+      items: [
+        {
+          title: "Qualification Messenger",
+          description:
+            "Classification vente, support, urgence ou spam, avec résumé court et champs métier structurés.",
+        },
+        {
+          title: "Brouillons de réponse",
+          description:
+            "Réponses préparées depuis vos offres, FAQ et règles de marque, puis validées avant envoi selon le scénario.",
+        },
+        {
+          title: "Connexion CRM",
+          description:
+            "Création ou mise à jour du contact, source Facebook, statut, score, propriétaire et prochaine action.",
+        },
+        {
+          title: "Dashboard de suivi",
+          description:
+            "Vue des conversations ouvertes, demandes chaudes, cas bloqués, temps de traitement et actions à reprendre.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Architecture type d'un agent IA Messenger",
+      intro:
+        "L'intégration sépare le canal Meta, la décision IA et l'action métier. Une panne du modèle ou du CRM ne doit jamais faire perdre le message d'origine.",
+      steps: [
+        {
+          title: "1. Événement Meta",
+          description:
+            "Un webhook reçoit le message, commentaire ou lead avec son identifiant et son contexte autorisé.",
+        },
+        {
+          title: "2. Qualification IA",
+          description:
+            "Le texte est classé, résumé et converti en données stables : intention, urgence, besoin et confiance.",
+        },
+        {
+          title: "3. Règles métier",
+          description:
+            "n8n route la demande vers un brouillon, un CRM, un ticket, une alerte ou un humain.",
+        },
+        {
+          title: "4. Action et trace",
+          description:
+            "Chaque décision, réponse et changement de statut est enregistré pour être contrôlé et amélioré.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Garde-fous pour protéger la relation client",
+      items: [
+        {
+          title: "Validation humaine",
+          description:
+            "Les réclamations, prix négociés, remboursements et engagements commerciaux passent par une personne.",
+        },
+        {
+          title: "Données minimales",
+          description:
+            "Le workflow ne conserve que les champs utiles et respecte les accès Meta accordés à l'application.",
+        },
+        {
+          title: "Reprise sur erreur",
+          description:
+            "Le message est journalisé avant les appels externes et peut être rejoué si l'IA, n8n ou le CRM échoue.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Projet Facebook Agent IA",
+        href: "/projects/facebook-agen-ia",
+        description:
+          "Étude de cas avec qualification des conversations, scoring, dashboard et actions commerciales contrôlées.",
+      },
+      {
+        label: "Solution Agent IA prospection",
+        href: "/solutions/agent-ia-prospection",
+        description:
+          "Pipeline plus large pour enrichir, scorer et suivre les leads dans le CRM.",
+      },
+    ],
+    sources: [
+      {
+        label: "Meta Messenger Platform",
+        href: "https://developers.facebook.com/docs/messenger-platform/",
+        description:
+          "Documentation officielle des intégrations Messenger, accès, messages et événements.",
+      },
+      {
+        label: "Meta Graph API Webhooks",
+        href: "https://developers.facebook.com/docs/graph-api/webhooks/",
+        description:
+          "Documentation officielle pour recevoir et vérifier les événements Meta côté serveur.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "Développeur d'agents IA",
+        href: "/services/developpeur-agent-ia-madagascar",
+        description:
+          "Conception d'agents reliés aux outils, données et règles de l'entreprise.",
+      },
+      {
+        label: "Expert automatisation n8n",
+        href: "/services/automatisation-n8n-madagascar",
+        description:
+          "Orchestration des webhooks, CRM, alertes, validations et reprises sur erreur.",
+      },
+    ],
+    faq: [
+      {
+        question: "Que peut faire un agent IA Facebook ?",
+        answer:
+          "Il peut qualifier un message ou un commentaire, détecter l'intention, résumer le besoin, préparer une réponse, créer un lead dans le CRM et transférer les cas sensibles à un humain.",
+      },
+      {
+        question: "Quelle différence entre un chatbot et un agent IA Facebook ?",
+        answer:
+          "Un chatbot suit surtout un arbre de réponses. Un agent IA peut interpréter un texte libre, utiliser du contexte et déclencher une action métier, mais il doit rester encadré par des règles et des validations.",
+      },
+      {
+        question: "Peut-on connecter Facebook Messenger à n8n et un CRM ?",
+        answer:
+          "Oui, selon les accès Meta disponibles. Le webhook alimente n8n, qui peut enrichir la demande puis créer ou mettre à jour un contact dans HubSpot, Airtable, Supabase, Google Sheets ou une API interne.",
+      },
+      {
+        question: "L'agent doit-il répondre automatiquement à tous les messages ?",
+        answer:
+          "Non. Le meilleur démarrage consiste à automatiser la qualification et les brouillons, puis à autoriser seulement quelques réponses simples après mesure de leur qualité.",
+      },
+      {
+        question: "Combien coûte un agent IA Facebook connecté à n8n ?",
+        answer:
+          "Le coût dépend des accès Meta, du nombre d'intentions, du CRM et du niveau d'automatisation. Un premier périmètre mesurable comprend généralement une source Messenger, quelques intentions, la création CRM, des brouillons et une validation humaine.",
+      },
+    ],
+    cta: {
+      title: "Vous voulez mieux traiter vos messages Facebook ?",
+      description:
+        "Nous pouvons commencer par un périmètre mesurable : une source Messenger, quatre intentions, un CRM et une validation humaine avant les réponses sensibles.",
+      buttonLabel: "Cadrer mon agent Facebook",
+    },
+  },
+  {
     slug: "agent-ia-prospection",
     icon: "travel_explore",
     accent: "purple",
@@ -1296,6 +1497,218 @@ export const frSolutions: Solution[] = [
       buttonLabel: "Cadrer mon agent vocal",
     },
   },
+  {
+    slug: "automatisation-marketing-n8n",
+    icon: "campaign",
+    accent: "purple",
+    title: "Automatisation marketing n8n : leads, CRM, emails et reporting",
+    eyebrow: "Solution marketing automation",
+    seoTitle: "Automatisation marketing n8n | CRM, emails et reporting",
+    seoDescription:
+      "Automatisation marketing avec n8n : formulaires, CRM, segmentation, emails, relances et reporting. Des workflows mesurables avec validation humaine.",
+    primaryKeyword: "automatisation marketing n8n",
+    secondaryKeywords: [
+      "marketing automation PME",
+      "workflow marketing n8n",
+      "automatisation CRM email",
+      "nurturing leads n8n",
+      "reporting marketing automatique",
+    ],
+    shortAnswer:
+      "Une automatisation marketing n8n relie vos formulaires, votre CRM, vos outils email et vos données de campagne. Un lead est nettoyé, dédupliqué, segmenté puis envoyé vers la bonne séquence. Les réponses, désabonnements et conversions remontent dans le CRM, tandis qu'un rapport montre les campagnes qui produisent réellement des demandes. L'équipe garde la validation des messages, des audiences et des décisions commerciales.",
+    heroLead:
+      "Un lead ne devrait pas attendre dans un formulaire, disparaître dans un tableur ou recevoir une relance sans contexte. n8n relie chaque étape et laisse une trace exploitable par votre équipe.",
+    fit: [
+      "Vos formulaires, campagnes, emails et données CRM vivent dans des outils séparés.",
+      "Les leads sont traités tard ou relancés sans tenir compte de leur source et de leur intention.",
+      "Votre équipe prépare encore ses rapports marketing à la main dans des tableurs.",
+      "Vous voulez automatiser le suivi sans envoyer de messages non sollicités ni perdre le contrôle éditorial.",
+    ],
+    outcomes: [
+      {
+        title: "Leads traités plus vite",
+        description:
+          "Chaque demande est validée, dédupliquée, enrichie et affectée au bon segment dès son arrivée.",
+      },
+      {
+        title: "Messages mieux contextualisés",
+        description:
+          "La source, la page visitée, l'offre demandée et le statut CRM déterminent la séquence et le contenu proposés.",
+      },
+      {
+        title: "Reporting utile",
+        description:
+          "Les campagnes, réponses, rendez-vous et conversions sont réunis dans un rapport lisible, sans export manuel hebdomadaire.",
+      },
+    ],
+    problem: {
+      title: "Le problème n'est pas le manque d'outils, mais les passages entre eux",
+      paragraphs: [
+        "Un parcours marketing courant commence avec une publicité, une page de contenu ou un formulaire. La demande arrive ensuite dans une boîte mail, un tableur ou un CRM. Si personne ne reprend les données rapidement, le contexte se perd : source inconnue, doublons, mauvaise segmentation et relance tardive.",
+        "n8n sert de couche d'orchestration. Il reçoit l'événement, normalise les champs, vérifie le consentement et les exclusions, met à jour le CRM, déclenche une action autorisée puis journalise le résultat. Il ne remplace ni votre CRM ni votre outil email ; il évite les copier-coller entre eux.",
+        "Je sépare clairement le marketing automation de la prospection froide. Cette page concerne les leads entrants, les contacts autorisés et les parcours que votre entreprise peut expliquer. Pour la recherche, le scoring et la préparation commerciale, la page [Agent IA prospection](/solutions/agent-ia-prospection) décrit un workflow différent avec ses propres garde-fous.",
+      ],
+    },
+    deliverables: {
+      title: "Workflows marketing que je peux construire",
+      items: [
+        {
+          title: "Formulaire vers CRM",
+          description:
+            "Capture, validation, déduplication, attribution de la source, création ou mise à jour du contact et notification de l'équipe.",
+        },
+        {
+          title: "Segmentation et nurturing",
+          description:
+            "Affectation selon l'offre, le pays, le profil ou l'action réalisée, puis préparation de la séquence email adaptée.",
+        },
+        {
+          title: "Relances contrôlées",
+          description:
+            "Rappels après demande, devis ou rendez-vous, avec arrêt automatique en cas de réponse, conversion ou désabonnement.",
+        },
+        {
+          title: "Reporting de campagne",
+          description:
+            "Synthèse des sources, leads, réponses, rendez-vous et conversions dans Supabase, Sheets, Looker Studio ou un dashboard interne.",
+        },
+        {
+          title: "Alertes commerciales",
+          description:
+            "Notification immédiate lorsqu'un lead prioritaire répond, visite une page clé ou demande explicitement un échange.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Architecture d'un workflow marketing mesurable",
+      intro:
+        "Chaque étape doit avoir une entrée connue, une règle simple et une sortie vérifiable. Le CRM reste la source de vérité et n8n transporte les événements entre les outils.",
+      steps: [
+        {
+          title: "1. Capture",
+          description:
+            "Formulaire, événement produit, inscription, campagne ou demande entrante avec source et consentement.",
+        },
+        {
+          title: "2. Qualité des données",
+          description:
+            "Validation, normalisation, déduplication, contrôle des exclusions et rapprochement avec le contact existant.",
+        },
+        {
+          title: "3. Orchestration",
+          description:
+            "Mise à jour CRM, segmentation, brouillon ou envoi autorisé, tâche commerciale et temporisation entre les étapes.",
+        },
+        {
+          title: "4. Mesure",
+          description:
+            "Réponse, clic, rendez-vous, conversion, erreur ou désabonnement reviennent dans le CRM et le reporting.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Garde-fous marketing et données",
+      items: [
+        {
+          title: "Consentement et exclusions",
+          description:
+            "Les listes de désabonnement, clients existants, contacts exclus et règles de pression marketing sont vérifiées avant action.",
+        },
+        {
+          title: "Reprise sur erreur",
+          description:
+            "Un échec d'API produit une alerte et une file de reprise. Le même événement ne doit pas créer deux contacts ou deux envois.",
+        },
+        {
+          title: "Validation éditoriale",
+          description:
+            "Les séquences, audiences et promesses sont validées par l'équipe. L'IA peut préparer un brouillon, pas inventer une offre.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Leads Automation",
+        href: "/projects/leads-automation-showcase",
+        description:
+          "Pipeline de collecte, qualification et synchronisation de leads avec n8n et un CRM.",
+      },
+      {
+        label: "Tracking Visiteurs",
+        href: "/projects/tracking-visiteurs",
+        description:
+          "Collecte d'événements, stockage Supabase et alertes pour suivre les parcours utiles.",
+      },
+      {
+        label: "Facebook Agent IA",
+        href: "/projects/facebook-agen-ia",
+        description:
+          "Étude de cas sur la transformation de conversations Facebook en actions commerciales vérifiables.",
+      },
+    ],
+    sources: [
+      {
+        label: "Catalogue des intégrations n8n",
+        href: "https://n8n.io/integrations/",
+        description:
+          "Référence officielle pour vérifier les connecteurs CRM, email, analytics et bases de données disponibles.",
+      },
+      {
+        label: "Gestion des erreurs n8n",
+        href: "https://docs.n8n.io/flow-logic/error-handling/",
+        description:
+          "Documentation officielle pour prévoir alertes, reprises et journalisation des workflows.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "Automatisation n8n pour PME",
+        href: "/solutions/automatisation-n8n-pme",
+        description:
+          "Pour automatiser aussi la facturation, les opérations, les notifications et le back-office.",
+      },
+      {
+        label: "Expert automatisation n8n",
+        href: "/services/automatisation-n8n-madagascar",
+        description:
+          "Service principal pour cadrer, développer, héberger et maintenir vos workflows.",
+      },
+      {
+        label: "Agent IA prospection",
+        href: "/solutions/agent-ia-prospection",
+        description:
+          "Pour enrichir, scorer et préparer le travail commercial avant validation humaine.",
+      },
+    ],
+    faq: [
+      {
+        question: "Que peut automatiser n8n en marketing ?",
+        answer:
+          "n8n peut relier formulaires, CRM, email, publicité, analytics et reporting : création de contacts, segmentation, relances, alertes, synchronisation des statuts et rapports de campagne.",
+      },
+      {
+        question: "n8n remplace-t-il HubSpot, Brevo ou Mailchimp ?",
+        answer:
+          "Non. Ces outils restent les systèmes utilisés par l'équipe. n8n automatise les échanges de données et les décisions simples entre eux.",
+      },
+      {
+        question: "Peut-on mesurer les conversions dans le même workflow ?",
+        answer:
+          "Oui. Les réponses, rendez-vous, achats ou autres conversions peuvent revenir dans le CRM et alimenter un dashboard. Il faut définir une source de vérité et des identifiants stables dès le départ.",
+      },
+      {
+        question: "L'IA peut-elle écrire et envoyer les emails automatiquement ?",
+        answer:
+          "Elle peut préparer des brouillons à partir de données vérifiables. Pour les campagnes importantes, je recommande une validation humaine du message et de l'audience avant l'envoi.",
+      },
+    ],
+    cta: {
+      title: "Votre parcours marketing se casse entre deux outils ?",
+      description:
+        "Envoyez-moi le formulaire, le CRM, l'outil email et le rapport que vous utilisez aujourd'hui. Je vous indiquerai les étapes à automatiser et celles qui doivent rester humaines.",
+      buttonLabel: "Cartographier mon parcours marketing",
+    },
+  },
 ];
 
 export const enSolutions: Solution[] = [
@@ -1695,9 +2108,9 @@ export const enSolutions: Solution[] = [
     accent: "blue",
     title: "Mobile Money API Madagascar: Orange Money, MVola, Airtel and dashboard",
     eyebrow: "Local payment solution",
-    seoTitle: "Orange Money API Madagascar | MVola & Airtel Money",
+    seoTitle: "Mobile Money API Madagascar | MVola, Orange & Airtel",
     seoDescription:
-      "Integrate Orange Money, MVola and Airtel Money in a Madagascar app: Mobile Money API, secure callbacks, reconciliation, dashboard and test mode.",
+      "Build a Madagascar Mobile Money API for MVola, Orange Money and Airtel Money with secure callbacks, reconciliation, test mode and an operations dashboard.",
     primaryKeyword: "Mobile Money API Madagascar",
     secondaryKeywords: [
       "Orange Money API Madagascar",
@@ -1905,6 +2318,207 @@ export const enSolutions: Solution[] = [
       description:
         "We can frame the payment journey, target providers, statuses, dashboard and reconciliation logic before writing the backend.",
       buttonLabel: "Scope my payment integration",
+    },
+  },
+  {
+    slug: "facebook-ai-agent",
+    icon: "forum",
+    accent: "blue",
+    title: "Facebook AI agent for Messenger leads, support and CRM",
+    eyebrow: "Facebook AI agent solution",
+    seoTitle: "Facebook AI Agent | Messenger, leads, CRM and n8n",
+    seoDescription:
+      "Facebook AI agent to qualify Messenger conversations, prepare replies, create CRM leads and orchestrate controlled follow-up workflows with n8n.",
+    primaryKeyword: "Facebook AI agent",
+    secondaryKeywords: [
+      "Messenger AI agent",
+      "Facebook Messenger automation",
+      "Facebook lead qualification",
+      "Facebook AI chatbot",
+      "Facebook CRM n8n",
+      "Facebook AI customer support",
+    ],
+    shortAnswer:
+      "A Facebook AI agent processes Messenger messages, comments or Meta forms to identify intent, summarize the need and prepare the next action. It can create or update a CRM lead, suggest a reply and hand sensitive cases to a human. I connect Facebook, AI, n8n and business tools with explicit rules, a verifiable history and human approval where it matters.",
+    heroLead:
+      "Turn Facebook conversations into qualified requests without letting an AI reply alone to important customers or sensitive situations.",
+    fit: [
+      "Your Facebook page receives messages the team handles too late.",
+      "You lose context between Messenger, Meta forms and your CRM.",
+      "You want to separate sales, support, spam and urgent requests automatically.",
+      "You need faster reply drafts while keeping human approval.",
+    ],
+    outcomes: [
+      {
+        title: "Better prioritized replies",
+        description:
+          "Each conversation receives an intent, urgency level and next action visible to the team.",
+      },
+      {
+        title: "Usable leads",
+        description:
+          "Name, need, product, budget, urgency and source are structured before the CRM is updated.",
+      },
+      {
+        title: "Preserved context",
+        description:
+          "The original message, AI summary, decision and approving person remain traceable.",
+      },
+    ],
+    problem: {
+      title: "A useful Facebook AI agent starts by triaging, not talking",
+      paragraphs: [
+        "A Messenger inbox often mixes several intents: pricing questions, bookings, order issues, public comments, spam and conversations without a sales goal. Automatically answering all of them in the same tone creates risk and damages trust.",
+        "The agent's first job is qualification. It detects language and intent, extracts useful information, summarizes the conversation and applies your rules: simple reply, draft for approval, lead creation, support ticket or immediate human handoff.",
+        "This architecture saves time without hiding AI limitations. Complaints, payments, refunds and commercial promises remain controlled by the team.",
+      ],
+    },
+    deliverables: {
+      title: "What I can build",
+      items: [
+        {
+          title: "Messenger qualification",
+          description:
+            "Sales, support, urgency or spam classification with a short summary and structured business fields.",
+        },
+        {
+          title: "Reply drafts",
+          description:
+            "Answers prepared from your offers, FAQs and brand rules, then approved before sending when required.",
+        },
+        {
+          title: "CRM connection",
+          description:
+            "Contact creation or update with Facebook source, status, score, owner and next action.",
+        },
+        {
+          title: "Operations dashboard",
+          description:
+            "View of open conversations, hot requests, blocked cases, handling time and actions to resume.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Typical Messenger AI agent architecture",
+      intro:
+        "The integration separates the Meta channel, AI decision and business action. A model or CRM outage must never lose the original message.",
+      steps: [
+        {
+          title: "1. Meta event",
+          description:
+            "A webhook receives the authorized message, comment or lead with its identifier and context.",
+        },
+        {
+          title: "2. AI qualification",
+          description:
+            "Text is classified, summarized and converted into stable data: intent, urgency, need and confidence.",
+        },
+        {
+          title: "3. Business rules",
+          description:
+            "n8n routes the request to a draft, CRM record, support ticket, alert or human owner.",
+        },
+        {
+          title: "4. Action and trace",
+          description:
+            "Each decision, reply and status change is recorded so the workflow can be reviewed and improved.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Safeguards that protect customer relationships",
+      items: [
+        {
+          title: "Human approval",
+          description:
+            "Complaints, negotiated prices, refunds and commercial commitments go through a person.",
+        },
+        {
+          title: "Minimum data",
+          description:
+            "The workflow retains only useful fields and respects the Meta permissions granted to the app.",
+        },
+        {
+          title: "Failure recovery",
+          description:
+            "The message is logged before external calls and can be replayed if AI, n8n or the CRM fails.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Facebook AI Agent project",
+        href: "/en/projects/facebook-agen-ia",
+        description:
+          "Case study covering conversation qualification, scoring, dashboard and controlled sales actions.",
+      },
+      {
+        label: "AI prospecting agent solution",
+        href: "/en/solutions/ai-prospecting-agent",
+        description:
+          "A broader pipeline for enriching, scoring and following leads in the CRM.",
+      },
+    ],
+    sources: [
+      {
+        label: "Meta Messenger Platform",
+        href: "https://developers.facebook.com/docs/messenger-platform/",
+        description:
+          "Official documentation for Messenger integrations, access, messages and events.",
+      },
+      {
+        label: "Meta Graph API Webhooks",
+        href: "https://developers.facebook.com/docs/graph-api/webhooks/",
+        description:
+          "Official documentation for receiving and verifying Meta events server-side.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "AI Agent Developer",
+        href: "/en/services/ai-agent-developer-madagascar",
+        description:
+          "Design of agents connected to business tools, data and operating rules.",
+      },
+      {
+        label: "n8n Automation Expert",
+        href: "/en/services/n8n-automation-expert-madagascar",
+        description:
+          "Orchestration of webhooks, CRM records, alerts, approvals and failure recovery.",
+      },
+    ],
+    faq: [
+      {
+        question: "What can a Facebook AI agent do?",
+        answer:
+          "It can qualify a message or comment, detect intent, summarize the need, prepare a reply, create a CRM lead and hand sensitive cases to a human.",
+      },
+      {
+        question: "What is the difference between a chatbot and a Facebook AI agent?",
+        answer:
+          "A chatbot mainly follows a reply tree. An AI agent can interpret free text, use context and trigger a business action, but it still needs explicit rules and approvals.",
+      },
+      {
+        question: "Can Facebook Messenger connect to n8n and a CRM?",
+        answer:
+          "Yes, depending on available Meta access. A webhook feeds n8n, which can enrich the request and create or update a contact in HubSpot, Airtable, Supabase, Google Sheets or an internal API.",
+      },
+      {
+        question: "Should the agent answer every message automatically?",
+        answer:
+          "No. A safer starting point is to automate qualification and drafts, then allow only a few simple replies after their quality has been measured.",
+      },
+      {
+        question: "How much does a Facebook AI agent connected to n8n cost?",
+        answer:
+          "Cost depends on Meta access, the number of intents, the CRM and the automation level. A measurable first scope usually includes one Messenger source, a few intents, CRM creation, reply drafts and human approval.",
+      },
+    ],
+    cta: {
+      title: "Want to handle Facebook messages more effectively?",
+      description:
+        "We can start with a measurable scope: one Messenger source, four intents, one CRM and human approval before sensitive replies.",
+      buttonLabel: "Scope my Facebook agent",
     },
   },
   {
@@ -2532,6 +3146,218 @@ export const enSolutions: Solution[] = [
       buttonLabel: "Scope my voice agent",
     },
   },
+  {
+    slug: "n8n-marketing-automation",
+    icon: "campaign",
+    accent: "purple",
+    title: "n8n marketing automation: leads, CRM, email and reporting",
+    eyebrow: "Marketing automation solution",
+    seoTitle: "n8n Marketing Automation | CRM, Email and Reporting",
+    seoDescription:
+      "n8n marketing automation for forms, CRM, segmentation, email, follow-ups and reporting. Measurable workflows with human approval where it matters.",
+    primaryKeyword: "n8n marketing automation",
+    secondaryKeywords: [
+      "marketing automation for SMBs",
+      "n8n marketing workflow",
+      "CRM email automation",
+      "n8n lead nurturing",
+      "automated marketing reporting",
+    ],
+    shortAnswer:
+      "An n8n marketing automation workflow connects your forms, CRM, email tools and campaign data. A lead is cleaned, deduplicated, segmented and sent to the right sequence. Replies, unsubscribes and conversions return to the CRM, while a report shows which campaigns produce real requests. Your team keeps control over messages, audiences and commercial decisions.",
+    heroLead:
+      "A lead should not wait in a form, disappear into a spreadsheet or receive a follow-up with no context. n8n connects each step and leaves a trace your team can use.",
+    fit: [
+      "Your forms, campaigns, emails and CRM data live in separate tools.",
+      "Leads are handled late or followed up without their source and intent.",
+      "Your team still assembles marketing reports manually in spreadsheets.",
+      "You want to automate follow-up without sending unsolicited messages or losing editorial control.",
+    ],
+    outcomes: [
+      {
+        title: "Faster lead handling",
+        description:
+          "Each request is validated, deduplicated, enriched and assigned to the right segment as soon as it arrives.",
+      },
+      {
+        title: "Better context in messages",
+        description:
+          "Source, landing page, requested offer and CRM status determine the proposed sequence and content.",
+      },
+      {
+        title: "Useful reporting",
+        description:
+          "Campaigns, replies, meetings and conversions come together in a readable report without a weekly manual export.",
+      },
+    ],
+    problem: {
+      title: "The problem is not a lack of tools, but the handoffs between them",
+      paragraphs: [
+        "A common marketing journey starts with an ad, content page or form. The request then lands in an inbox, spreadsheet or CRM. If nobody picks it up quickly, context disappears: unknown source, duplicates, poor segmentation and late follow-up.",
+        "n8n acts as the orchestration layer. It receives the event, normalizes fields, checks consent and exclusions, updates the CRM, triggers an allowed action and logs the result. It does not replace your CRM or email platform; it removes copy and paste between them.",
+        "I keep marketing automation separate from cold prospecting. This page covers inbound leads, authorized contacts and journeys your company can explain. For research, scoring and sales preparation, the [AI prospecting agent](/en/solutions/ai-prospecting-agent) page describes a different workflow with its own safeguards.",
+      ],
+    },
+    deliverables: {
+      title: "Marketing workflows I can build",
+      items: [
+        {
+          title: "Form to CRM",
+          description:
+            "Capture, validation, deduplication, source attribution, contact create/update and team notification.",
+        },
+        {
+          title: "Segmentation and nurturing",
+          description:
+            "Routing by offer, country, profile or action, followed by preparation of the appropriate email sequence.",
+        },
+        {
+          title: "Controlled follow-ups",
+          description:
+            "Reminders after a request, quote or meeting, stopped automatically after a reply, conversion or unsubscribe.",
+        },
+        {
+          title: "Campaign reporting",
+          description:
+            "Summary of sources, leads, replies, meetings and conversions in Supabase, Sheets, Looker Studio or an internal dashboard.",
+        },
+        {
+          title: "Sales alerts",
+          description:
+            "Immediate notification when a priority lead replies, visits a key page or explicitly requests a conversation.",
+        },
+      ],
+    },
+    architecture: {
+      title: "Architecture of a measurable marketing workflow",
+      intro:
+        "Every step needs a known input, a simple rule and a verifiable output. The CRM stays the source of truth while n8n carries events between tools.",
+      steps: [
+        {
+          title: "1. Capture",
+          description:
+            "Form, product event, signup, campaign or inbound request with source and consent.",
+        },
+        {
+          title: "2. Data quality",
+          description:
+            "Validation, normalization, deduplication, exclusion checks and matching with an existing contact.",
+        },
+        {
+          title: "3. Orchestration",
+          description:
+            "CRM update, segmentation, draft or authorized send, sales task and controlled delays between steps.",
+        },
+        {
+          title: "4. Measurement",
+          description:
+            "Reply, click, meeting, conversion, error or unsubscribe returns to the CRM and reporting layer.",
+        },
+      ],
+    },
+    safeguards: {
+      title: "Marketing and data safeguards",
+      items: [
+        {
+          title: "Consent and exclusions",
+          description:
+            "Unsubscribe lists, existing customers, excluded contacts and frequency rules are checked before any action.",
+        },
+        {
+          title: "Error recovery",
+          description:
+            "An API failure creates an alert and retry path. The same event must not create two contacts or two sends.",
+        },
+        {
+          title: "Editorial approval",
+          description:
+            "Sequences, audiences and promises are approved by the team. AI can prepare a draft, not invent an offer.",
+        },
+      ],
+    },
+    proofs: [
+      {
+        label: "Leads Automation",
+        href: "/en/projects/leads-automation-showcase",
+        description:
+          "Lead collection, qualification and CRM synchronization pipeline with n8n.",
+      },
+      {
+        label: "Visitor Tracking",
+        href: "/en/projects/visitor-tracking",
+        description:
+          "Event collection, Supabase storage and alerts for useful customer journeys.",
+      },
+      {
+        label: "Facebook AI Agent",
+        href: "/en/projects/facebook-agen-ia",
+        description:
+          "Case study on turning Facebook conversations into verifiable sales actions.",
+      },
+    ],
+    sources: [
+      {
+        label: "n8n integrations catalog",
+        href: "https://n8n.io/integrations/",
+        description:
+          "Official reference for available CRM, email, analytics and database connectors.",
+      },
+      {
+        label: "n8n error handling",
+        href: "https://docs.n8n.io/flow-logic/error-handling/",
+        description:
+          "Official guidance for alerts, retry paths and workflow logging.",
+      },
+    ],
+    relatedServices: [
+      {
+        label: "n8n automation for SMBs",
+        href: "/en/solutions/n8n-automation-for-smbs",
+        description:
+          "For invoicing, operations, notifications and back-office automation beyond marketing.",
+      },
+      {
+        label: "n8n automation expert",
+        href: "/en/services/n8n-automation-expert-madagascar",
+        description:
+          "Main service for scoping, building, hosting and maintaining your workflows.",
+      },
+      {
+        label: "AI prospecting agent",
+        href: "/en/solutions/ai-prospecting-agent",
+        description:
+          "For enrichment, scoring and sales preparation before human approval.",
+      },
+    ],
+    faq: [
+      {
+        question: "What can n8n automate in marketing?",
+        answer:
+          "n8n can connect forms, CRM, email, advertising, analytics and reporting: contact creation, segmentation, follow-ups, alerts, status synchronization and campaign reports.",
+      },
+      {
+        question: "Does n8n replace HubSpot, Brevo or Mailchimp?",
+        answer:
+          "No. Those tools remain the systems your team uses. n8n automates data movement and simple decisions between them.",
+      },
+      {
+        question: "Can conversions be measured in the same workflow?",
+        answer:
+          "Yes. Replies, meetings, purchases or other conversions can return to the CRM and feed a dashboard. A source of truth and stable identifiers should be defined first.",
+      },
+      {
+        question: "Can AI write and send emails automatically?",
+        answer:
+          "It can prepare drafts from verifiable data. For important campaigns, I recommend human approval of the message and audience before sending.",
+      },
+    ],
+    cta: {
+      title: "Does your marketing journey break between two tools?",
+      description:
+        "Send me the form, CRM, email platform and report you use today. I will identify the steps worth automating and the ones that should stay human.",
+      buttonLabel: "Map my marketing journey",
+    },
+  },
 ];
 
 const solutionsByLocale: Record<Locale, Solution[]> = {
@@ -2542,15 +3368,18 @@ const solutionsByLocale: Record<Locale, Solution[]> = {
 const serviceToSolutionSlugs: Record<string, string[]> = {
   "automatisation-n8n": [
     "automatisation-n8n-pme",
+    "automatisation-marketing-n8n",
     "agent-ia-prospection",
   ],
   "automatisation-n8n-madagascar": [
     "automatisation-n8n-pme",
+    "automatisation-marketing-n8n",
     "agent-ia-prospection",
     "workflows-n8n-claude-code",
   ],
   "developpeur-agent-ia-madagascar": [
     "agent-ia-support-client",
+    "agent-ia-facebook",
     "agent-ia-prospection",
   ],
   "developpeur-agent-vocal-ia": [
@@ -2568,15 +3397,18 @@ const serviceToSolutionSlugs: Record<string, string[]> = {
   "consultant-seo-geo": ["workflows-n8n-claude-code"],
   "n8n-automation": [
     "n8n-automation-for-smbs",
+    "n8n-marketing-automation",
     "ai-prospecting-agent",
   ],
   "n8n-automation-expert-madagascar": [
     "n8n-automation-for-smbs",
+    "n8n-marketing-automation",
     "ai-prospecting-agent",
     "n8n-claude-code-workflows",
   ],
   "ai-agent-developer-madagascar": [
     "ai-customer-support-agent",
+    "facebook-ai-agent",
     "ai-prospecting-agent",
   ],
   "ai-voice-agent-developer": [
