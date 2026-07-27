@@ -14,6 +14,7 @@ import GlassCard from "@/components/ui/GlassCard";
 import { getServiceByKey, getServiceBySlug } from "@/lib/data/services";
 import { getRelatedSolutionsForService, type Solution } from "@/lib/data/solutions";
 import RefreshRouteOnSave from "@/components/preview/RefreshRouteOnSave";
+import SeoGrowthProof from "@/components/sections/SeoGrowthProof";
 
 function formatLastUpdated(iso: string, locale: "fr" | "en") {
   const d = new Date(iso);
@@ -228,24 +229,26 @@ export default async function ServicePage({
 
   const landing = service.landing;
   const relatedSolutions = getRelatedSolutionsForService(locale, service.slug);
+  const isSeoGeoLanding =
+    service.slug === "consultant-seo-geo" || service.slug === "seo-geo-consultant";
 
   return (
-    <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
+    <main id="main-content" className="relative min-h-screen w-full min-w-0 px-6 pt-32 pb-24">
       {isDraftMode && <RefreshRouteOnSave />}
       <ServiceJsonLd name={service.title} description={service.description} locale={locale} />
       <BreadcrumbJsonLd items={breadcrumbs} />
       {landing.faq && <FAQJsonLd items={landing.faq} />}
 
-      <div className="max-w-5xl mx-auto">
+      <div className="mx-auto w-full min-w-0 max-w-5xl">
         {/* Hero */}
         <div className="mb-20">
           <span className={`material-symbols-outlined text-5xl mb-6 block ${colorMap[service.color] || "text-indigo-400"}`}>
             {service.icon}
           </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-8">
+          <h1 className="mb-8 break-words text-4xl font-extrabold tracking-tighter md:text-6xl">
             {service.title}
           </h1>
-          <p className="text-xl md:text-2xl text-slate-300 leading-relaxed max-w-3xl">
+          <p className="max-w-3xl break-words text-xl leading-relaxed text-slate-300 md:text-2xl">
             {landing.heroText}
           </p>
           <p className="mt-6 text-xs uppercase tracking-wider text-slate-500">
@@ -291,18 +294,20 @@ export default async function ServicePage({
 
         {/* Features grid */}
         {landing.features && (
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-20" role="list">
+          <div className="mb-20 grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 md:grid-cols-3" role="list">
             {landing.features.map((f: any) => (
-              <div key={f.title} role="listitem" className={`rounded-xl border p-5 ${bgColorMap[service.color] || bgColorMap.indigo}`}>
+              <div key={f.title} role="listitem" className={`min-w-0 rounded-xl border p-5 ${bgColorMap[service.color] || bgColorMap.indigo}`}>
                 <span aria-hidden="true" className={`material-symbols-outlined text-2xl mb-2 block ${colorMap[service.color] || "text-indigo-400"}`}>
                   {f.icon}
                 </span>
-                <p className="font-bold text-white text-sm mb-1">{f.title}</p>
-                <p className="text-xs text-slate-400">{f.description}</p>
+                <p className="mb-1 break-words text-sm font-bold text-white">{f.title}</p>
+                <p className="break-words text-xs text-slate-400">{f.description}</p>
               </div>
             ))}
           </div>
         )}
+
+        {isSeoGeoLanding && <SeoGrowthProof locale={locale} />}
 
         {/* Content sections */}
         {landing.sections?.map((section: any, idx: number) => (

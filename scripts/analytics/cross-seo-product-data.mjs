@@ -41,12 +41,14 @@ function dateRange(days, offsetDays = 3) {
 }
 
 function previousRange({ startDate, endDate }) {
-  const start = new Date(`${startDate}T00:00:00Z`);
-  const end = new Date(`${endDate}T00:00:00Z`);
-  const days = Math.round((end - start) / 86_400_000) + 1;
-  end.setUTCDate(start.getUTCDate() - 1);
-  start.setUTCDate(start.getUTCDate() - days);
-  return { startDate: isoDate(start), endDate: isoDate(end) };
+  const currentStart = new Date(`${startDate}T00:00:00Z`);
+  const currentEnd = new Date(`${endDate}T00:00:00Z`);
+  const days = Math.round((currentEnd - currentStart) / 86_400_000) + 1;
+  const previousEnd = new Date(currentStart);
+  previousEnd.setUTCDate(previousEnd.getUTCDate() - 1);
+  const previousStart = new Date(previousEnd);
+  previousStart.setUTCDate(previousStart.getUTCDate() - days + 1);
+  return { startDate: isoDate(previousStart), endDate: isoDate(previousEnd) };
 }
 
 function summarize(rows = []) {
