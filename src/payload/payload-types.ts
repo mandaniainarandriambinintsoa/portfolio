@@ -351,7 +351,7 @@ export interface Service {
   sortOrder?: number | null;
   published?: boolean | null;
   /**
-   * Material Symbols icon name, e.g. automation or code_blocks.
+   * Semantic icon key mapped to the site IconScout palette, e.g. automation or code_blocks.
    */
   icon: string;
   color: 'indigo' | 'emerald' | 'blue' | 'purple' | 'sky' | 'amber';

@@ -5,8 +5,6 @@ type ButtonProps = {
   href?: string;
   children: React.ReactNode;
   className?: string;
-  icon?: string;
-  iconNode?: React.ReactNode;
   analytics?: {
     event: string;
     properties?: Record<string, string | number | boolean | null | undefined>;
@@ -18,8 +16,6 @@ export default function Button({
   href,
   children,
   className = "",
-  icon,
-  iconNode,
   analytics,
 }: ButtonProps) {
   const base =
@@ -43,10 +39,6 @@ export default function Button({
         data-ph-props={analytics ? JSON.stringify({ ...analytics.properties, href }) : undefined}
       >
         {children}
-        {iconNode}
-        {!iconNode && icon && (
-          <span className="material-symbols-outlined text-xl">{icon}</span>
-        )}
       </Link>
     );
   }
@@ -58,10 +50,6 @@ export default function Button({
       data-ph-props={analytics ? JSON.stringify(analytics.properties ?? {}) : undefined}
     >
       {children}
-      {iconNode}
-      {!iconNode && icon && (
-        <span className="material-symbols-outlined text-xl">{icon}</span>
-      )}
     </button>
   );
 }

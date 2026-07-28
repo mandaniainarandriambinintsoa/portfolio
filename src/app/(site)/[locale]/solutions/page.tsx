@@ -11,6 +11,9 @@ import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
+import IconScoutIcon, {
+  LegacyIconScoutIcon,
+} from "@/components/icons/IconScoutIcon";
 
 const accentStyles: Record<
   Solution["accent"],
@@ -238,7 +241,7 @@ export default async function SolutionsPage({
             </time>
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Button href={`${prefix}/contact`} variant="primary" icon="trending_up">
+            <Button href={`${prefix}/contact`} variant="primary">
               {copy.primaryCta}
             </Button>
             <Button href={`${prefix}/services`} variant="glass">
@@ -285,12 +288,11 @@ export default async function SolutionsPage({
                     borderColor={accent.border}
                   >
                     <div className="flex items-start gap-4 mb-5">
-                      <span
-                        className={`material-symbols-outlined shrink-0 rounded-2xl border ${accent.border} ${accent.bg} ${accent.text} p-3 text-3xl`}
-                        aria-hidden="true"
-                      >
-                        {solution.icon}
-                      </span>
+                      <LegacyIconScoutIcon
+                        name={solution.icon}
+                        size={30}
+                        className={`shrink-0 rounded-lg border p-3 ${accent.border} ${accent.bg} ${accent.text}`}
+                      />
                       <div>
                         <p className={`text-xs font-bold tracking-[0.18em] uppercase ${accent.text} mb-2`}>
                           {solution.primaryKeyword}
@@ -315,9 +317,7 @@ export default async function SolutionsPage({
                     </div>
                     <span className={`inline-flex items-center gap-2 text-sm font-bold ${accent.text}`}>
                       {copy.readLabel}
-                      <span className="material-symbols-outlined text-lg" aria-hidden="true">
-                        arrow_forward
-                      </span>
+                      <IconScoutIcon name="arrowRight" size={18} />
                     </span>
                   </GlassCard>
                 </Link>

@@ -3,6 +3,7 @@ import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL, SOCIAL_LINKS } from "@/lib/constants";
 import GlassCard from "@/components/ui/GlassCard";
+import IconScoutIcon from "@/components/icons/IconScoutIcon";
 import ContactForm from "./ContactForm";
 
 export async function generateMetadata({
@@ -60,21 +61,21 @@ export default async function ContactPage({
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           <GlassCard>
-            <span className="material-symbols-outlined text-indigo-400 text-2xl mb-3 block">mail</span>
+            <IconScoutIcon name="envelope" size={24} className="mb-3 text-indigo-400" />
             <p className="text-sm text-slate-400 mb-1">{contact.email_label}</p>
             <a href={`mailto:${contact.info_email}`} className="text-white hover:text-indigo-400 transition-colors text-sm break-all">
               {contact.info_email}
             </a>
           </GlassCard>
           <GlassCard>
-            <span className="material-symbols-outlined text-emerald-400 text-2xl mb-3 block">link</span>
+            <IconScoutIcon name="link" size={24} className="mb-3 text-emerald-400" />
             <p className="text-sm text-slate-400 mb-1">LinkedIn</p>
             <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-400 transition-colors text-sm">
               {locale === "fr" ? "Mon profil LinkedIn" : "My LinkedIn Profile"}
             </a>
           </GlassCard>
           <GlassCard>
-            <span className="material-symbols-outlined text-blue-400 text-2xl mb-3 block">location_on</span>
+            <IconScoutIcon name="location" size={24} className="mb-3 text-blue-400" />
             <p className="text-sm text-slate-400 mb-1">{locale === "fr" ? "Localisation" : "Location"}</p>
             <p className="text-white text-sm">{contact.info_location}</p>
           </GlassCard>

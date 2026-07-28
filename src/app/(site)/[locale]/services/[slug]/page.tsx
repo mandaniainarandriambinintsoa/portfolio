@@ -15,6 +15,7 @@ import { getServiceByKey, getServiceBySlug } from "@/lib/data/services";
 import { getRelatedSolutionsForService, type Solution } from "@/lib/data/solutions";
 import RefreshRouteOnSave from "@/components/preview/RefreshRouteOnSave";
 import SeoGrowthProof from "@/components/sections/SeoGrowthProof";
+import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
 
 function formatLastUpdated(iso: string, locale: "fr" | "en") {
   const d = new Date(iso);
@@ -191,9 +192,11 @@ export default async function ServicePage({
         <ServiceJsonLd name={service.title} description={service.description} locale={locale} />
         <BreadcrumbJsonLd items={breadcrumbs} />
         <div className="max-w-4xl mx-auto">
-          <span className={`material-symbols-outlined text-5xl mb-6 block ${colorMap[service.color] || "text-indigo-400"}`}>
-            {service.icon}
-          </span>
+          <LegacyIconScoutIcon
+            name={service.icon}
+            size={46}
+            className={`mb-6 ${colorMap[service.color] || "text-indigo-400"}`}
+          />
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-6 gradient-text">
             {service.title}
           </h1>
@@ -208,7 +211,6 @@ export default async function ServicePage({
           <Button
             href={contactHref}
             variant="primary"
-            icon="trending_up"
             analytics={{
               event: "cta_clicked",
               properties: {
@@ -242,9 +244,11 @@ export default async function ServicePage({
       <div className="mx-auto w-full min-w-0 max-w-5xl">
         {/* Hero */}
         <div className="mb-20">
-          <span className={`material-symbols-outlined text-5xl mb-6 block ${colorMap[service.color] || "text-indigo-400"}`}>
-            {service.icon}
-          </span>
+          <LegacyIconScoutIcon
+            name={service.icon}
+            size={46}
+            className={`mb-6 ${colorMap[service.color] || "text-indigo-400"}`}
+          />
           <h1 className="mb-8 break-words text-4xl font-extrabold tracking-tighter md:text-6xl">
             {service.title}
           </h1>
@@ -261,7 +265,6 @@ export default async function ServicePage({
             <Button
               href={contactHref}
               variant="primary"
-              icon="trending_up"
               analytics={{
                 event: "cta_clicked",
                 properties: {
@@ -297,9 +300,11 @@ export default async function ServicePage({
           <div className="mb-20 grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 md:grid-cols-3" role="list">
             {landing.features.map((f: any) => (
               <div key={f.title} role="listitem" className={`min-w-0 rounded-xl border p-5 ${bgColorMap[service.color] || bgColorMap.indigo}`}>
-                <span aria-hidden="true" className={`material-symbols-outlined text-2xl mb-2 block ${colorMap[service.color] || "text-indigo-400"}`}>
-                  {f.icon}
-                </span>
+                <LegacyIconScoutIcon
+                  name={f.icon}
+                  size={24}
+                  className={`mb-2 ${colorMap[service.color] || "text-indigo-400"}`}
+                />
                 <p className="mb-1 break-words text-sm font-bold text-white">{f.title}</p>
                 <p className="break-words text-xs text-slate-400">{f.description}</p>
               </div>
@@ -435,12 +440,11 @@ export default async function ServicePage({
                       className="h-full hover:bg-white/[0.04] transition-colors"
                     >
                       <div className="flex items-start gap-4">
-                        <span
-                          className={`material-symbols-outlined rounded-xl border ${accent.border} ${accent.bg} ${accent.icon} p-2 text-2xl`}
-                          aria-hidden="true"
-                        >
-                          {solution.icon}
-                        </span>
+                        <LegacyIconScoutIcon
+                          name={solution.icon}
+                          size={24}
+                          className={`rounded-lg border p-2 ${accent.border} ${accent.bg} ${accent.icon}`}
+                        />
                         <div>
                           <p className={`text-xs font-bold tracking-[0.16em] uppercase ${accent.icon} mb-2`}>
                             {solution.primaryKeyword}
@@ -519,7 +523,6 @@ export default async function ServicePage({
           <Button
             href={contactHref}
             variant="primary"
-            icon="trending_up"
             analytics={{
               event: "cta_clicked",
               properties: {

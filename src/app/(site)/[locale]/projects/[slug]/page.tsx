@@ -386,7 +386,6 @@ export default async function ProjectPage({
             <Button
               href={project.link}
               variant="primary"
-              icon="north_east"
               analytics={{
                 event: "demo_opened",
                 properties: {

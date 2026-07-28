@@ -4,6 +4,7 @@ import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
+import IconScoutIcon from "@/components/icons/IconScoutIcon";
 
 export async function generateMetadata({
   params,
@@ -90,7 +91,11 @@ export default async function AboutPage({
           <ul className="space-y-3 mb-8">
             {about.approach_items.map((item: string) => (
               <li key={item} className="flex items-start gap-3 text-slate-300">
-                <span className="material-symbols-outlined text-emerald-400 text-lg mt-0.5">check_circle</span>
+                <IconScoutIcon
+                  name="check"
+                  size={18}
+                  className="mt-0.5 shrink-0 text-emerald-400"
+                />
                 {item}
               </li>
             ))}

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap-register";
 import GlassCard from "@/components/ui/GlassCard";
+import IconScoutIcon from "@/components/icons/IconScoutIcon";
 import type { BlogPost } from "@/lib/data/blog";
 
 type BlogListingClientProps = {
@@ -164,7 +165,7 @@ export default function BlogListingClient({
                     </time>
                     <span className="text-indigo-400 group-hover:text-indigo-300 transition-colors flex items-center gap-1">
                       {labels.readMore}
-                      <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                      <IconScoutIcon name="arrowRight" size={14} />
                     </span>
                   </div>
                 </div>

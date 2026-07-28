@@ -4,6 +4,9 @@ import { useState, useRef, useCallback } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap-register";
 import Link from "next/link";
+import IconScoutIcon, {
+  LegacyIconScoutIcon,
+} from "@/components/icons/IconScoutIcon";
 
 type Scores = {
   workflow: number;
@@ -253,7 +256,7 @@ export default function QuizClient({
         {step === 0 && (
           <div className="text-center space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium">
-              <span className="material-symbols-outlined text-base">timer</span>
+              <IconScoutIcon name="clock" size={16} />
               {dict.badge}
             </div>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter gradient-text">
@@ -267,7 +270,6 @@ export default function QuizClient({
               className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl transition-all text-lg cursor-pointer"
             >
               {dict.start}
-              <span className="material-symbols-outlined">arrow_forward</span>
             </button>
           </div>
         )}
@@ -276,9 +278,11 @@ export default function QuizClient({
         {step >= 1 && step <= 5 && (
           <div className="space-y-8">
             <div className="flex items-center gap-3 mb-2">
-              <span className="material-symbols-outlined text-3xl text-indigo-400">
-                {dict.questions[step - 1]?.icon}
-              </span>
+              <LegacyIconScoutIcon
+                name={dict.questions[step - 1]?.icon ?? "code"}
+                size={30}
+                className="shrink-0 text-indigo-400"
+              />
               <h2 className="text-2xl md:text-3xl font-bold text-white">
                 {dict.questions[step - 1]?.title}
               </h2>
@@ -306,7 +310,7 @@ export default function QuizClient({
         {step === 6 && (
           <div className="text-center space-y-8">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-indigo-500/10 border border-indigo-500/20">
-              <span className="material-symbols-outlined text-3xl text-indigo-400">mail</span>
+              <IconScoutIcon name="envelope" size={30} className="text-indigo-400" />
             </div>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
               {dict.email_title}
@@ -333,7 +337,7 @@ export default function QuizClient({
               >
                 {isSubmitting ? (
                   <span className="inline-flex items-center gap-2">
-                    <span className="material-symbols-outlined animate-spin">progress_activity</span>
+                    <IconScoutIcon name="spinner" size={22} className="animate-spin" />
                   </span>
                 ) : (
                   dict.email_submit
@@ -362,9 +366,11 @@ export default function QuizClient({
               <ul className="space-y-3">
                 {result.benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-slate-300">
-                    <span className={`material-symbols-outlined text-lg mt-0.5 ${colorMap[result.color] || "text-indigo-400"}`}>
-                      check_circle
-                    </span>
+                    <IconScoutIcon
+                      name="check"
+                      size={18}
+                      className={`mt-0.5 shrink-0 ${colorMap[result.color] || "text-indigo-400"}`}
+                    />
                     {benefit}
                   </li>
                 ))}
@@ -381,14 +387,12 @@ export default function QuizClient({
                   "bg-purple-600 hover:bg-purple-500"
                 }`}
               >
-                <span className="material-symbols-outlined">chat</span>
                 {dict.result_cta_contact}
               </Link>
               <Link
                 href={`${prefix}/services/${result.service_slug}`}
                 className={`flex-1 inline-flex items-center justify-center gap-2 px-6 py-4 rounded-2xl font-bold border transition-all ${bgColorMap[result.color] || ""} ${colorMap[result.color] || "text-indigo-400"}`}
               >
-                <span className="material-symbols-outlined">arrow_forward</span>
                 {dict.result_cta_service}
               </Link>
             </div>

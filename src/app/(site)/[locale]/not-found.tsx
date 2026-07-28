@@ -1,4 +1,5 @@
 import Link from "next/link";
+import IconScoutIcon from "@/components/icons/IconScoutIcon";
 
 export default function NotFound() {
   return (
@@ -17,7 +18,7 @@ export default function NotFound() {
           href="/"
           className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white font-bold rounded-2xl transition-all"
         >
-          <span className="material-symbols-outlined">home</span>
+          <IconScoutIcon name="home" size={20} />
           Retour / Home
         </Link>
       </div>

@@ -17,6 +17,7 @@ import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
+import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
 
 export const dynamicParams = false;
 
@@ -327,12 +328,11 @@ export default async function SolutionPage({
       <article className="max-w-5xl mx-auto">
         <header className="mb-16">
           <div className="flex flex-wrap items-center gap-3 mb-6">
-            <span
-              className={`material-symbols-outlined rounded-2xl border ${style.border} ${style.bg} ${style.text} p-3 text-3xl`}
-              aria-hidden="true"
-            >
-              {solution.icon}
-            </span>
+            <LegacyIconScoutIcon
+              name={solution.icon}
+              size={30}
+              className={`rounded-lg border p-3 ${style.border} ${style.bg} ${style.text}`}
+            />
             <span className={`rounded-full border ${style.border} ${style.bg} px-4 py-2 text-xs font-bold tracking-[0.18em] uppercase ${style.text}`}>
               {solution.eyebrow}
             </span>
@@ -366,7 +366,6 @@ export default async function SolutionPage({
             <Button
               href={`${prefix}/contact`}
               variant="primary"
-              icon="trending_up"
               analytics={{
                 event: "cta_clicked",
                 properties: {
@@ -501,7 +500,6 @@ export default async function SolutionPage({
             <Button
               href={`${prefix}/contact`}
               variant="primary"
-              icon="trending_up"
               analytics={{
                 event: "cta_clicked",
                 properties: {

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { ProjectItem } from "@/lib/types";
 import type { ProjectTone } from "@/lib/project-display";
+import IconScoutIcon from "@/components/icons/IconScoutIcon";
 
 const badgeTone: Record<ProjectTone, string> = {
   indigo: "bg-indigo-500/80",
@@ -70,9 +71,7 @@ export default function ProjectCard({
         </div>
         <span className="mt-1 shrink-0 text-white/50 transition-all duration-300 group-hover:translate-x-1 group-hover:text-white">
           {trailingIcon ?? (
-            <span className="material-symbols-outlined text-2xl" aria-hidden="true">
-              arrow_forward
-            </span>
+            <IconScoutIcon name="arrowRight" size={24} />
           )}
         </span>
       </div>

@@ -12,21 +12,6 @@
   --font-display: "Inter", sans-serif;
 }
 
-/* Material Symbols fallback (prevents layout shift while font loads) */
-.material-symbols-outlined {
-  font-family: "Material Symbols Outlined", sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  direction: ltr;
-  -webkit-font-smoothing: antialiased;
-}
-
 /* Skip rendering off-screen sections until near viewport — reduces initial layout work */
 .below-fold {
   content-visibility: auto;

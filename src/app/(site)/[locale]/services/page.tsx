@@ -6,6 +6,7 @@ import { SITE_URL } from "@/lib/constants";
 import GlassCard from "@/components/ui/GlassCard";
 import { getServices } from "@/lib/data/services";
 import type { ServiceItem } from "@/lib/types";
+import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
 
 export async function generateMetadata({
   params,
@@ -99,9 +100,11 @@ export default async function ServicesPage({
                 })}
               >
                 <GlassCard borderColor={colors.border} className="h-full hover:bg-white/5 transition-colors">
-                  <span className={`material-symbols-outlined ${colors.icon} mb-4 text-4xl block`}>
-                    {service.icon}
-                  </span>
+                  <LegacyIconScoutIcon
+                    name={service.icon}
+                    size={34}
+                    className={`mb-4 ${colors.icon}`}
+                  />
                   <h2 className="text-xl font-bold mb-3">{service.title}</h2>
                   <p className="text-slate-400">{service.description}</p>
                 </GlassCard>
@@ -138,9 +141,11 @@ export default async function ServicesPage({
                     })}
                   >
                     <GlassCard borderColor={colors.border} className="h-full hover:bg-white/5 transition-colors">
-                      <span className={`material-symbols-outlined ${colors.icon} mb-3 text-3xl block`}>
-                        {service.icon}
-                      </span>
+                      <LegacyIconScoutIcon
+                        name={service.icon}
+                        size={30}
+                        className={`mb-3 ${colors.icon}`}
+                      />
                       <h3 className="text-lg font-bold mb-2">{service.cardTitle || service.title}</h3>
                       <p className="text-sm text-slate-400">{service.cardDescription || service.description}</p>
                     </GlassCard>

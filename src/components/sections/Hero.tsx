@@ -1,6 +1,5 @@
 import type { Locale } from "@/i18n/config";
 import Button from "@/components/ui/Button";
-import IconScoutIcon from "@/components/icons/IconScoutIcon";
 
 type HeroDict = {
   line1: string;
@@ -49,7 +48,6 @@ export default function Hero({
         <Button
           href={contactHref}
           variant="primary"
-          iconNode={<IconScoutIcon name="growth" size={20} />}
           className="w-full max-w-[16rem] sm:w-auto sm:max-w-none"
           analytics={{
             event: "cta_clicked",

@@ -10,6 +10,7 @@ import FaqJsonLdFromMarkdown from "@/components/seo/FaqJsonLdFromMarkdown";
 import BlogPostAnim from "@/components/animations/BlogPostAnim";
 import MarkdownRenderer from "@/components/blog/MarkdownRenderer";
 import Button from "@/components/ui/Button";
+import IconScoutIcon from "@/components/icons/IconScoutIcon";
 
 export async function generateMetadata({
   params,
@@ -127,16 +128,16 @@ export default async function BlogPostPage({
           <div className="blog-meta flex items-center gap-4 flex-wrap mb-10 text-sm text-slate-400">
             {formattedDate && (
               <time dateTime={post.publishedAt ?? undefined} className="flex items-center gap-1.5">
-                <span className="material-symbols-outlined text-base">calendar_today</span>
+                <IconScoutIcon name="calendar" size={16} />
                 {formattedDate}
               </time>
             )}
             <span className="flex items-center gap-1.5">
-              <span className="material-symbols-outlined text-base">schedule</span>
+              <IconScoutIcon name="clock" size={16} />
               {post.readingTime} min {locale === "fr" ? "de lecture" : "read"}
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="material-symbols-outlined text-base">person</span>
+              <IconScoutIcon name="user" size={16} />
               {post.author}
             </span>
           </div>

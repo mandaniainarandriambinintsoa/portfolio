@@ -94,7 +94,7 @@ export const Services: CollectionConfig = {
               name: "icon",
               type: "text",
               admin: {
-                description: "Material Symbols icon name, e.g. automation or code_blocks.",
+                description: "Semantic icon key mapped to the site IconScout palette, e.g. automation or code_blocks.",
               },
               required: true,
             },
