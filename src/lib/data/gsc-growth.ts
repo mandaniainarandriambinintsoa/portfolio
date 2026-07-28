@@ -4,6 +4,7 @@ import crypto from "node:crypto";
 import { unstable_cache } from "next/cache";
 
 type GscMetricRow = {
+  keys?: string[];
   clicks?: number;
   impressions?: number;
   ctr?: number;
@@ -23,29 +24,26 @@ export type SearchPerformancePeriod = {
   position: number;
 };
 
+export type SearchPerformanceDay = {
+  date: string;
+  clicks: number;
+  impressions: number;
+};
+
 export type SeoGrowthProof = {
-  baseline: SearchPerformancePeriod;
   current: SearchPerformancePeriod;
+  daily: SearchPerformanceDay[];
   source: "gsc" | "verified-snapshot";
   refreshedAt: string;
 };
 
-const BASELINE: SearchPerformancePeriod = {
-  startDate: "2026-05-03",
-  endDate: "2026-05-30",
-  clicks: 44,
-  impressions: 799,
-  ctr: 0.0551,
-  position: 7.49,
-};
-
-const VERIFIED_CURRENT_SNAPSHOT: SearchPerformancePeriod = {
-  startDate: "2026-06-27",
-  endDate: "2026-07-24",
-  clicks: 146,
-  impressions: 4976,
-  ctr: 0.029340836012861738,
-  position: 10.075763665594856,
+const VERIFIED_THREE_MONTH_SNAPSHOT: SearchPerformancePeriod = {
+  startDate: "2026-04-26",
+  endDate: "2026-07-25",
+  clicks: 274,
+  impressions: 8150,
+  ctr: 0.034,
+  position: 9.3,
 };
 
 function required(name: "GA4_CLIENT_EMAIL" | "GA4_PRIVATE_KEY") {
@@ -58,7 +56,7 @@ function isoDate(date: Date) {
   return date.toISOString().slice(0, 10);
 }
 
-function finalizedDateRange(days = 28, delayDays = 3) {
+function finalizedDateRange(days = 91, delayDays = 3) {
   const end = new Date();
   end.setUTCHours(0, 0, 0, 0);
   end.setUTCDate(end.getUTCDate() - delayDays);
@@ -70,6 +68,19 @@ function finalizedDateRange(days = 28, delayDays = 3) {
     startDate: isoDate(start),
     endDate: isoDate(end),
   };
+}
+
+function enumerateDates(startDate: string, endDate: string) {
+  const dates: string[] = [];
+  const cursor = new Date(`${startDate}T00:00:00Z`);
+  const end = new Date(`${endDate}T00:00:00Z`);
+
+  while (cursor <= end) {
+    dates.push(isoDate(cursor));
+    cursor.setUTCDate(cursor.getUTCDate() + 1);
+  }
+
+  return dates;
 }
 
 function base64Url(value: string | Buffer) {
@@ -118,9 +129,10 @@ async function getGoogleAccessToken() {
   return payload.access_token;
 }
 
-async function fetchCurrentSearchPerformance(): Promise<SearchPerformancePeriod> {
-  const range = finalizedDateRange();
-  const accessToken = await getGoogleAccessToken();
+async function querySearchConsole(
+  accessToken: string,
+  body: Record<string, unknown>,
+): Promise<GscQueryResponse> {
   const property = process.env.GSC_SITE_URL?.trim() || "sc-domain:manda-ia.com";
   const response = await fetch(
     `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(property)}/searchAnalytics/query`,
@@ -130,12 +142,7 @@ async function fetchCurrentSearchPerformance(): Promise<SearchPerformancePeriod>
         Authorization: `Bearer ${accessToken}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({
-        ...range,
-        type: "web",
-        dataState: "final",
-        rowLimit: 1,
-      }),
+      body: JSON.stringify(body),
     },
   );
 
@@ -143,22 +150,65 @@ async function fetchCurrentSearchPerformance(): Promise<SearchPerformancePeriod>
     throw new Error(`Search Console query failed with status ${response.status}`);
   }
 
-  const payload = (await response.json()) as GscQueryResponse;
-  const row = payload.rows?.[0];
-  if (!row) throw new Error("Search Console returned no aggregate row");
+  return (await response.json()) as GscQueryResponse;
+}
+
+async function fetchCurrentSearchPerformance(): Promise<
+  Pick<SeoGrowthProof, "current" | "daily">
+> {
+  const range = finalizedDateRange();
+  const accessToken = await getGoogleAccessToken();
+  const commonQuery = {
+    ...range,
+    type: "web",
+    dataState: "final",
+  };
+
+  const [aggregatePayload, dailyPayload] = await Promise.all([
+    querySearchConsole(accessToken, {
+      ...commonQuery,
+      rowLimit: 1,
+    }),
+    querySearchConsole(accessToken, {
+      ...commonQuery,
+      dimensions: ["date"],
+      rowLimit: 25_000,
+    }),
+  ]);
+
+  const aggregate = aggregatePayload.rows?.[0];
+  if (!aggregate) throw new Error("Search Console returned no aggregate row");
+
+  const rowsByDate = new Map(
+    (dailyPayload.rows ?? []).flatMap((row) => {
+      const date = row.keys?.[0];
+      return date ? [[date, row] as const] : [];
+    }),
+  );
+  const daily = enumerateDates(range.startDate, range.endDate).map((date) => {
+    const row = rowsByDate.get(date);
+    return {
+      date,
+      clicks: row?.clicks ?? 0,
+      impressions: row?.impressions ?? 0,
+    };
+  });
 
   return {
-    ...range,
-    clicks: row.clicks ?? 0,
-    impressions: row.impressions ?? 0,
-    ctr: row.ctr ?? 0,
-    position: row.position ?? 0,
+    current: {
+      ...range,
+      clicks: aggregate.clicks ?? 0,
+      impressions: aggregate.impressions ?? 0,
+      ctr: aggregate.ctr ?? 0,
+      position: aggregate.position ?? 0,
+    },
+    daily,
   };
 }
 
 const getCachedCurrentSearchPerformance = unstable_cache(
   fetchCurrentSearchPerformance,
-  ["manda-ia-gsc-growth-proof-v1"],
+  ["manda-ia-gsc-growth-proof-v2"],
   {
     revalidate: 86_400,
     tags: ["gsc-growth-proof"],
@@ -172,10 +222,9 @@ export async function getSeoGrowthProof(): Promise<SeoGrowthProof> {
 
   if (hasCredentials) {
     try {
-      const current = await getCachedCurrentSearchPerformance();
+      const proof = await getCachedCurrentSearchPerformance();
       return {
-        baseline: BASELINE,
-        current,
+        ...proof,
         source: "gsc",
         refreshedAt: new Date().toISOString(),
       };
@@ -188,9 +237,9 @@ export async function getSeoGrowthProof(): Promise<SeoGrowthProof> {
   }
 
   return {
-    baseline: BASELINE,
-    current: VERIFIED_CURRENT_SNAPSHOT,
+    current: VERIFIED_THREE_MONTH_SNAPSHOT,
+    daily: [],
     source: "verified-snapshot",
-    refreshedAt: VERIFIED_CURRENT_SNAPSHOT.endDate,
+    refreshedAt: VERIFIED_THREE_MONTH_SNAPSHOT.endDate,
   };
 }
