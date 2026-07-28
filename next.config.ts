@@ -9,7 +9,7 @@ const cspDirectives = [
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   // Images: self + Supabase storage + Google + flagcdn + data URIs (Next.js blur placeholders)
   "img-src 'self' data: blob: https://lbabmflmjcouniefxwmv.supabase.co https://lh3.googleusercontent.com https://flagcdn.com https://*.public.blob.vercel-storage.com",
-  // Fonts: self only (Material Symbols + Inter are self-hosted)
+  // Fonts: Inter plus any remaining self-hosted assets
   "font-src 'self' https://fonts.gstatic.com",
   // API calls: self + Supabase + Google Analytics + PostHog
   "connect-src 'self' https://lbabmflmjcouniefxwmv.supabase.co https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://eu.i.posthog.com https://us.i.posthog.com https://eu-assets.i.posthog.com https://us-assets.i.posthog.com https://*.public.blob.vercel-storage.com",

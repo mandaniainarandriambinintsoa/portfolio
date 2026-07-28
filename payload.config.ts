@@ -15,7 +15,6 @@ import { Services } from "./src/payload/collections/Services.ts";
 import { Users } from "./src/payload/collections/Users.ts";
 import { SiteContent } from "./src/payload/globals/SiteContent.ts";
 import { SiteSettings } from "./src/payload/globals/SiteSettings.ts";
-import { migrations as postgresMigrations } from "./src/payload/migrations/postgres/index.ts";
 import { migrations as sqliteMigrations } from "./src/payload/migrations/sqlite/index.ts";
 
 const filename = fileURLToPath(import.meta.url);
@@ -34,11 +33,11 @@ if (!databaseUri) {
 const db = databaseUri
   ? postgresAdapter({
       migrationDir: path.resolve(dirname, "src/payload/migrations/postgres"),
-      prodMigrations: postgresMigrations,
+      push: false,
       pool: {
         connectionString: databaseUri,
         allowExitOnIdle: true,
-        connectionTimeoutMillis: Number(process.env.PAYLOAD_DATABASE_CONNECTION_TIMEOUT_MS ?? 60000),
+        connectionTimeoutMillis: Number(process.env.PAYLOAD_DATABASE_CONNECTION_TIMEOUT_MS || 5000),
         idleTimeoutMillis: Number(process.env.PAYLOAD_DATABASE_IDLE_TIMEOUT_MS ?? 500),
         max: Number(process.env.PAYLOAD_DATABASE_POOL_MAX ?? 2),
         ssl: databaseUri.includes("supabase.co") || databaseUri.includes("pooler.supabase.com")
