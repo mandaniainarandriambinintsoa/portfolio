@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState, useRef, useCallback } from "react";
 import type { gsap as GsapType } from "gsap";
 import type { VisitorRow } from "@/app/api/visitors/route";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 function FlagIcon({ code }: { code: string }) {
   if (!code || code.length !== 2) {
@@ -119,11 +120,8 @@ export default function VisitorTracking({
   return (
     <section id="visitor-tracking" className="relative py-12 md:py-16 overflow-hidden">
       <div className="mx-auto max-w-4xl px-6">
-        {/* Header */}
-        <div className="flex items-center gap-3 mb-3">
-          <h2 className="text-sm font-mono tracking-[0.3em] text-white/60 uppercase">
-            {dict.title}
-          </h2>
+        <div className="mb-3 flex flex-wrap items-start justify-between gap-3">
+          <SectionHeading title={dict.title} className="mb-0" />
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-medium text-emerald-400">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />

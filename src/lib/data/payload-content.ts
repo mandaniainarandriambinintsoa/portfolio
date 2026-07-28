@@ -64,6 +64,10 @@ type PayloadReadOptions = {
   draft?: boolean;
 };
 
+function skipRemoteContent(): boolean {
+  return process.env.PAYLOAD_SKIP_REMOTE_CONTENT === "true";
+}
+
 function mapTags(tags?: TagItem[] | null): string[] {
   return (tags ?? []).map((tag) => tag.label).filter((tag): tag is string => Boolean(tag));
 }
@@ -109,6 +113,8 @@ export async function getPayloadServices(
   locale: Locale,
   options?: PayloadReadOptions
 ): Promise<ServiceItem[] | null> {
+  if (skipRemoteContent()) return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.find({
@@ -135,6 +141,8 @@ export async function getPayloadServiceBySlug(
   locale: Locale,
   options?: PayloadReadOptions
 ): Promise<ServiceItem | null> {
+  if (skipRemoteContent()) return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.find({
@@ -168,6 +176,8 @@ export async function getPayloadServiceBySlug(
 export async function getPayloadServiceSitemapEntries(
   locale: Locale
 ): Promise<{ key: string; slug: string; updatedAt: string | null; createdAt: string | null }[] | null> {
+  if (skipRemoteContent()) return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.find({
@@ -196,6 +206,8 @@ export async function getPayloadServiceSitemapEntries(
 }
 
 export async function getPayloadSiteDictionary(locale: Locale): Promise<Record<string, unknown> | null> {
+  if (skipRemoteContent()) return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.findGlobal({
@@ -218,6 +230,8 @@ export async function getPayloadProjects(
   locale: Locale,
   options?: PayloadReadOptions
 ): Promise<ProjectItem[] | null> {
+  if (skipRemoteContent()) return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.find({
@@ -256,6 +270,8 @@ export async function getPayloadProjectBySlug(
   locale: Locale,
   options?: PayloadReadOptions
 ): Promise<ProjectItem | null> {
+  if (skipRemoteContent()) return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.find({
@@ -302,6 +318,8 @@ export async function getPayloadProjectBySlug(
 export async function getPayloadProjectSitemapEntries(): Promise<
   { slug: string; updatedAt: string | null; createdAt: string | null }[] | null
 > {
+  if (skipRemoteContent()) return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.find({
@@ -328,6 +346,8 @@ export async function getPayloadProjectSitemapEntries(): Promise<
 }
 
 export async function getPayloadPosts(locale: Locale): Promise<BlogPost[] | null> {
+  if (skipRemoteContent()) return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.find({
@@ -363,6 +383,8 @@ export async function getPayloadPostBySlug(
   slug: string,
   locale: Locale
 ): Promise<BlogPost | null> {
+  if (skipRemoteContent()) return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.find({
@@ -405,6 +427,8 @@ export async function getPayloadPostBySlug(
 export async function getPayloadPostSitemapEntries(): Promise<
   { slug: string; updatedAt: string | null; publishedAt: string | null }[] | null
 > {
+  if (skipRemoteContent()) return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.find({

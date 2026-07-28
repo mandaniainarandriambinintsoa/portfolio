@@ -1,3 +1,5 @@
+import SectionHeading from "@/components/ui/SectionHeading";
+
 type StatItem = {
   value: number;
   suffix: string;
@@ -12,10 +14,8 @@ type StatsProps = {
 export default function Stats({ title, items }: StatsProps) {
   return (
     <section className="relative py-12 md:py-16 overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6">
-        <h2 className="text-sm font-mono tracking-[0.3em] text-white/60 mb-10 uppercase">
-          {title}
-        </h2>
+      <div className="mx-auto max-w-6xl px-6">
+        <SectionHeading title={title} />
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item, i) => (

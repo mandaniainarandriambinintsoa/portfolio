@@ -1,4 +1,5 @@
 import { TECH_STACK } from "@/lib/constants";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function TechStack({ label }: { label: string }) {
   // Double the items for seamless loop
@@ -6,9 +7,9 @@ export default function TechStack({ label }: { label: string }) {
 
   return (
     <section className="w-full mb-16 md:mb-32 overflow-hidden">
-      <p className="text-center text-xs font-bold tracking-[0.3em] text-slate-400 uppercase mb-8">
-        {label}
-      </p>
+      <div className="mx-auto max-w-6xl px-6">
+        <SectionHeading title={label} />
+      </div>
       <div className="relative">
         {/* Fade edges */}
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#050507] to-transparent z-10" />

@@ -1,6 +1,9 @@
 import Link from "next/link";
 import GlassCard from "@/components/ui/GlassCard";
 import SectionHeading from "@/components/ui/SectionHeading";
+import IconScoutIcon, {
+  type IconScoutName,
+} from "@/components/icons/IconScoutIcon";
 
 type PricingTier = {
   name: string;
@@ -43,11 +46,17 @@ const colorMap: Record<string, { icon: string; border: string; ring: string; tex
   purple: { icon: "text-purple-400", border: "border-service-purple", ring: "ring-purple-400/40", text: "text-purple-300" },
 };
 
+const pricingIconMap: Record<string, IconScoutName> = {
+  code: "code",
+  deployed_code: "product",
+  hub: "automation",
+};
+
 export default function Pricing({ dict }: { dict: PricingDict }) {
   return (
     <section id="pricing" aria-label={dict.title} className="max-w-6xl w-full mx-auto mb-16 md:mb-32 px-6">
       <SectionHeading title={dict.title} />
-      <p className="text-slate-400 max-w-2xl -mt-10 mb-12 text-base md:text-lg">
+      <p className="-mt-5 mb-10 max-w-2xl text-sm leading-relaxed text-slate-400 sm:text-base">
         {dict.subtitle}
       </p>
 
@@ -80,28 +89,21 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
                       {line.example.title}
                     </span>
                   </div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors shrink-0"
-                    aria-hidden="true"
-                  >
-                    <path d="M7 17 17 7" />
-                    <path d="M7 7h10v10" />
-                  </svg>
+                  <IconScoutIcon
+                    name="arrowUpRight"
+                    size={18}
+                    className="shrink-0 text-slate-400 transition-colors group-hover:text-white"
+                  />
                 </Link>
               )}
 
               <GlassCard borderColor={colors.border} className="flex flex-col flex-grow">
                 <div className="mb-6">
-                  <span className={`material-symbols-outlined ${colors.icon} mb-3 text-3xl block`}>
-                    {line.icon}
-                  </span>
+                  <IconScoutIcon
+                    name={pricingIconMap[line.icon] ?? "product"}
+                    size={28}
+                    className={`mb-3 ${colors.icon}`}
+                  />
                   <h3 className="font-bold text-lg mb-1">{line.title}</h3>
                   <p className="text-xs text-slate-400">{line.description}</p>
                 </div>
@@ -148,7 +150,7 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
           className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/20 transition-transform hover:scale-[1.02]"
         >
           {dict.cta}
-          <span className="material-symbols-outlined text-base">arrow_forward</span>
+          <IconScoutIcon name="arrowRight" size={18} />
         </Link>
       </div>
     </section>

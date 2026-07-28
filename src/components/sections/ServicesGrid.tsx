@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import { getServices } from "@/lib/data/services";
+import IconScoutIcon from "@/components/icons/IconScoutIcon";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 type LandingLink = {
   label: string;
@@ -44,10 +46,8 @@ export default async function ServicesGrid({ locale }: { locale: Locale }) {
 
   return (
     <section id="services" aria-label={sectionLabel[locale]} className="max-w-6xl w-full mx-auto mb-16 md:mb-32 px-6">
-      <p className="text-center text-xs font-bold tracking-[0.2em] uppercase text-indigo-400 mb-5">
-        {sectionLabel[locale]}
-      </p>
-      <div className="flex flex-wrap justify-center gap-x-5 gap-y-3">
+      <SectionHeading title={sectionLabel[locale]} />
+      <div className="flex flex-wrap gap-x-6 gap-y-3">
         {(links.length ? links : landingLinks[locale]).map((link) => (
           <Link
             key={link.href}
@@ -59,9 +59,10 @@ export default async function ServicesGrid({ locale }: { locale: Locale }) {
               href: link.href,
               locale,
             })}
-            className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors underline underline-offset-4 decoration-indigo-400/30 hover:decoration-indigo-300/50"
+            className="inline-flex items-center gap-1.5 text-sm text-indigo-300 transition-colors hover:text-white"
           >
-            {link.label} →
+            {link.label}
+            <IconScoutIcon name="arrowRight" size={16} />
           </Link>
         ))}
       </div>

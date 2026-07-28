@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import IconScoutIcon from "@/components/icons/IconScoutIcon";
 
 type CTAFinalProps = {
   title: string;
@@ -43,7 +44,7 @@ export default function CTAFinal({
           <Button
             href={buttonHref}
             variant="primary"
-            icon="arrow_forward"
+            iconNode={<IconScoutIcon name="arrowRight" size={20} />}
             analytics={{
               event: "cta_clicked",
               properties: { area: "final_cta", cta_type: "contact", label: button },
@@ -55,7 +56,7 @@ export default function CTAFinal({
             <Button
               href={quizHref}
               variant="glass"
-              icon="quiz"
+              iconNode={<IconScoutIcon name="quiz" size={20} />}
               analytics={{
                 event: "cta_clicked",
                 properties: { area: "final_cta", cta_type: "quiz", label: quizButton },

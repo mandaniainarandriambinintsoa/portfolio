@@ -7,6 +7,8 @@ import type { Locale } from "@/i18n/config";
 import type { ProjectItem, ProjectCategory } from "@/lib/types";
 import { getCategoryLabel, getProjectTone } from "@/lib/project-display";
 import ProjectCard from "@/components/ui/ProjectCard";
+import IconScoutIcon from "@/components/icons/IconScoutIcon";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 type FilterType = "all" | ProjectCategory;
 
@@ -116,9 +118,7 @@ export default function Projects({
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* ── Header + Filters ── */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            {title}
-          </h2>
+          <SectionHeading title={title} className="mb-0" />
 
           <div className="flex w-full items-center gap-3 sm:w-auto">
             <div className="flex w-full max-w-full flex-wrap items-center justify-center gap-1.5 rounded-2xl border border-white/[0.06] bg-white/[0.03] p-1 sm:w-auto sm:flex-nowrap sm:rounded-full">
@@ -146,9 +146,7 @@ export default function Projects({
               className="text-slate-400 hover:text-indigo-400 transition-colors text-sm font-medium hidden sm:flex items-center gap-1 underline underline-offset-4 decoration-slate-400/30 hover:decoration-indigo-400/50"
             >
               {viewAll}
-              <span className="material-symbols-outlined text-base">
-                north_east
-              </span>
+              <IconScoutIcon name="arrowUpRight" size={17} />
             </Link>
           </div>
         </div>
@@ -165,6 +163,7 @@ export default function Projects({
               href={`${prefix}/projects/${project.slug}`}
               categoryLabel={getCategoryLabel(project.category, categoryLabels)}
               tone={getProjectTone(project.category)}
+              trailingIcon={<IconScoutIcon name="arrowRight" size={24} />}
             />
           ))}
         </div>

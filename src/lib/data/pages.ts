@@ -56,6 +56,8 @@ export async function getPageBySlug(
   locale: Locale,
   options?: PayloadReadOptions
 ): Promise<PayloadPage | null> {
+  if (process.env.PAYLOAD_SKIP_REMOTE_CONTENT === "true") return null;
+
   try {
     const payload = await getPayloadClient();
     const result = await payload.find({

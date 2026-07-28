@@ -23,12 +23,14 @@ export default function ProjectCard({
   categoryLabel,
   tone,
   showDescription = false,
+  trailingIcon,
 }: {
   project: ProjectItem;
   href: string;
   categoryLabel: string;
   tone: ProjectTone;
   showDescription?: boolean;
+  trailingIcon?: React.ReactNode;
 }) {
   return (
     <Link
@@ -66,11 +68,12 @@ export default function ProjectCard({
           </h3>
           <p className="mt-1 text-sm text-slate-400">{project.subtitle}</p>
         </div>
-        <span
-          aria-hidden="true"
-          className="material-symbols-outlined mt-1 shrink-0 text-2xl text-white/50 transition-all duration-300 group-hover:translate-x-1 group-hover:text-white"
-        >
-          arrow_forward
+        <span className="mt-1 shrink-0 text-white/50 transition-all duration-300 group-hover:translate-x-1 group-hover:text-white">
+          {trailingIcon ?? (
+            <span className="material-symbols-outlined text-2xl" aria-hidden="true">
+              arrow_forward
+            </span>
+          )}
         </span>
       </div>
 

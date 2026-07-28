@@ -1,5 +1,6 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 @plugin "@tailwindcss/typography";
+@source "../";
 
 @theme inline {
   --color-primary: #6366f1;
@@ -76,11 +77,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Command Center */
-.command-center-glow {
-  box-shadow: 0 0 50px -12px rgba(99, 102, 241, 0.4);
-}
-
 /* Workflow pipeline connectors (animated "data flowing" highlight) */
 .flow-h {
   position: relative;
@@ -127,29 +123,10 @@ body {
   to { transform: translateY(300%); }
 }
 
-/* Workflow node glow pulse (staggered via inline animation-delay) */
-.flow-node-glow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0;
-  box-shadow: 0 0 32px -6px var(--node-color, rgba(99, 102, 241, 0.6));
-  animation: node-pulse 4.4s ease-in-out infinite;
-}
-
-@keyframes node-pulse {
-  0%, 100% { opacity: 0; }
-  45%, 55% { opacity: 1; }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .flow-h::after,
-  .flow-v::after,
-  .flow-node-glow {
+  .flow-v::after {
     animation: none;
-  }
-  .flow-node-glow {
-    opacity: 0.4;
   }
 }
 

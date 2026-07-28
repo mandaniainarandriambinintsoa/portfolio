@@ -80,6 +80,10 @@ async function fetchFromDict(locale: Locale): Promise<ProjectItem[]> {
 }
 
 export async function getProjects(locale: Locale, options?: PreviewReadOptions): Promise<ProjectItem[]> {
+  if (process.env.PAYLOAD_SKIP_REMOTE_CONTENT === "true") {
+    return fetchFromDict(locale);
+  }
+
   const payloadData = await getPayloadProjects(locale, options);
   if (payloadData?.length) return payloadData;
 
@@ -100,6 +104,11 @@ export async function getProjectBySlug(
   locale: Locale,
   options?: PreviewReadOptions
 ): Promise<ProjectItem | null> {
+  if (process.env.PAYLOAD_SKIP_REMOTE_CONTENT === "true") {
+    const projects = await fetchFromDict(locale);
+    return projects.find((project) => project.slug === slug) ?? null;
+  }
+
   const payloadProject = await getPayloadProjectBySlug(slug, locale, options);
   if (payloadProject) return payloadProject;
 

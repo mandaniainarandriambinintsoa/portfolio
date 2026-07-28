@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import type { gsap as GsapType } from "gsap";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 type TestimonialItem = {
   quote: string;
@@ -114,10 +115,7 @@ export default function Testimonials({ dict, locale }: { dict: TestimonialsDict;
 
   return (
     <section className="max-w-6xl w-full mx-auto mb-16 md:mb-32 px-6">
-      {/* Section title */}
-      <h2 className="text-xs font-bold tracking-[0.3em] text-slate-400 uppercase mb-10">
-        {dict.title}
-      </h2>
+      <SectionHeading title={dict.title} />
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
         {/* Testimonial card - takes 3 cols */}
