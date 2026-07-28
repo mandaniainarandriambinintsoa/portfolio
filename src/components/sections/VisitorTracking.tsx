@@ -55,7 +55,7 @@ export default function VisitorTracking({
   locale,
 }: VisitorTrackingProps) {
   const [visitors, setVisitors] = useState<VisitorRow[]>([]);
-  const [prevKeys, setPrevKeys] = useState<Set<string>>(new Set());
+  const previousVisitorKeysRef = useRef<Set<string>>(new Set());
   const tableRef = useRef<HTMLDivElement>(null);
   const gsapRef = useRef<typeof GsapType | null>(null);
 
@@ -91,31 +91,69 @@ export default function VisitorTracking({
       if (!res.ok) return;
       const data = await res.json();
       const newVisitors: VisitorRow[] = data.visitors || [];
+      const previousKeys = previousVisitorKeysRef.current;
+      const currentKeys = newVisitors.map((v) => `${v.city}-${v.country}-${v.created_at}`);
+      const added = currentKeys.filter((key) => !previousKeys.has(key));
 
-      setVisitors((prev) => {
-        const oldKeys = new Set(prev.map((v) => `${v.city}-${v.country}-${v.created_at}`));
-        setPrevKeys(oldKeys);
-        return newVisitors;
-      });
+      setVisitors(newVisitors);
+      previousVisitorKeysRef.current = new Set(currentKeys);
 
       requestAnimationFrame(() => {
-        const currentKeys = newVisitors.map((v) => `${v.city}-${v.country}-${v.created_at}`);
-        const added = currentKeys.filter((k) => !prevKeys.has(k));
-        if (added.length > 0 && added.length < currentKeys.length) {
+        if (previousKeys.size > 0 && added.length > 0) {
           animateNewRows(added);
         }
       });
     } catch {
       // silent fail
     }
-  }, [animateNewRows, prevKeys]);
+  }, [animateNewRows]);
 
-  // Initial fetch + poll every 30s
+  // Refresh only while the live visitor proof is visible and the tab is active.
   useEffect(() => {
-    fetchVisitors();
-    const interval = setInterval(fetchVisitors, 30_000);
-    return () => clearInterval(interval);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    const target = tableRef.current;
+    if (!target) return;
+
+    let isIntersecting = false;
+    let intervalId: number | null = null;
+
+    const stopPolling = () => {
+      if (intervalId !== null) {
+        window.clearInterval(intervalId);
+        intervalId = null;
+      }
+    };
+
+    const syncPolling = () => {
+      const shouldPoll = isIntersecting && document.visibilityState === "visible";
+
+      if (!shouldPoll) {
+        stopPolling();
+        return;
+      }
+
+      if (intervalId === null) {
+        void fetchVisitors();
+        intervalId = window.setInterval(() => void fetchVisitors(), 5 * 60_000);
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isIntersecting = entry.isIntersecting;
+        syncPolling();
+      },
+      { rootMargin: "200px 0px" }
+    );
+
+    observer.observe(target);
+    document.addEventListener("visibilitychange", syncPolling);
+
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", syncPolling);
+      stopPolling();
+    };
+  }, [fetchVisitors]);
 
   return (
     <section id="visitor-tracking" className="relative py-12 md:py-16 overflow-hidden">

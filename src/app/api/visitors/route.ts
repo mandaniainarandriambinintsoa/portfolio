@@ -93,7 +93,7 @@ export async function GET(request: NextRequest) {
 
               return NextResponse.json(
                 { visitors: visitors || [] },
-                { headers: { "Cache-Control": "s-maxage=30, stale-while-revalidate=15" } }
+                { headers: { "Cache-Control": "s-maxage=300, stale-while-revalidate=60" } }
               );
             }
           }
@@ -151,7 +151,7 @@ export async function GET(request: NextRequest) {
     { visitors: visitors || [] },
     {
       headers: {
-        "Cache-Control": "s-maxage=30, stale-while-revalidate=15",
+        "Cache-Control": "s-maxage=300, stale-while-revalidate=60",
       },
     }
   );
