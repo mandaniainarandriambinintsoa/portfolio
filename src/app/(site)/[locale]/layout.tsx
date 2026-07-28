@@ -10,6 +10,7 @@ import WebSiteJsonLd from "@/components/seo/WebSiteJsonLd";
 import LocalBusinessJsonLd from "@/components/seo/LocalBusinessJsonLd";
 import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import PostHogProvider from "@/components/layout/PostHogProvider";
+import VisitorSignals from "@/components/layout/VisitorSignals";
 
 export const dynamic = "force-dynamic";
 
@@ -94,6 +95,7 @@ export default async function LocaleLayout({
       <Footer locale={locale} copyright={dict.footer.copyright} />
       <WhatsAppButton locale={locale} />
       <PostHogProvider />
+      <VisitorSignals locale={locale} />
     </>
   );
 }
