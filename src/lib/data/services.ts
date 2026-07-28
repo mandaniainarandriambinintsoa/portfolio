@@ -1,6 +1,7 @@
 import { getStaticDictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import type { ServiceItem } from "@/lib/types";
+import remoteN8nConsultant from "./services/remote-n8n-consultant.json";
 import {
   getPayloadServiceBySlug,
   getPayloadServices,
@@ -16,7 +17,10 @@ function withFallbackKeys(items: ServiceItem[]): ServiceItem[] {
 
 async function getDictionaryServices(locale: Locale): Promise<ServiceItem[]> {
   const dict = await getStaticDictionary(locale);
-  return withFallbackKeys(dict.services.items as ServiceItem[]);
+  return withFallbackKeys([
+    ...(dict.services.items as ServiceItem[]),
+    remoteN8nConsultant[locale] as ServiceItem,
+  ]);
 }
 
 type PreviewReadOptions = {
@@ -46,7 +50,11 @@ export async function getServiceByKey(
   locale: Locale
 ): Promise<ServiceItem | null> {
   const services = await getServices(locale);
-  return services.find((service) => service.key === key) ?? null;
+  const service = services.find((item) => item.key === key);
+  if (service) return service;
+
+  const fallbackServices = await getDictionaryServices(locale);
+  return fallbackServices.find((item) => item.key === key) ?? null;
 }
 
 export async function getServiceStaticParams(): Promise<{ locale: string; slug: string }[]> {

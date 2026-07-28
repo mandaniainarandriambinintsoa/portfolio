@@ -3377,6 +3377,12 @@ const serviceToSolutionSlugs: Record<string, string[]> = {
     "agent-ia-prospection",
     "workflows-n8n-claude-code",
   ],
+  "consultant-automatisation-n8n-international": [
+    "automatisation-n8n-pme",
+    "automatisation-marketing-n8n",
+    "agent-ia-prospection",
+    "workflows-n8n-claude-code",
+  ],
   "developpeur-agent-ia-madagascar": [
     "agent-ia-support-client",
     "agent-ia-facebook",
@@ -3401,6 +3407,12 @@ const serviceToSolutionSlugs: Record<string, string[]> = {
     "ai-prospecting-agent",
   ],
   "n8n-automation-expert-madagascar": [
+    "n8n-automation-for-smbs",
+    "n8n-marketing-automation",
+    "ai-prospecting-agent",
+    "n8n-claude-code-workflows",
+  ],
+  "remote-n8n-automation-consultant": [
     "n8n-automation-for-smbs",
     "n8n-marketing-automation",
     "ai-prospecting-agent",

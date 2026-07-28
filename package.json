@@ -19,6 +19,7 @@
     "payload:seed:seo:supabase": "node scripts/payload/seed-seo-pages-20260727.mjs --supabase-only",
     "payload:seed:seo:http": "node scripts/payload/seed-seo-pages-20260727.mjs --http-only",
     "payload:sync:seo-services": "node scripts/payload/sync-seo-services-http.mjs",
+    "payload:sync:n8n-consultant": "node scripts/payload/sync-remote-n8n-consultant.mjs",
     "payload:sync:blog:http": "node scripts/payload/sync-supabase-blog-http.mjs",
     "analytics:cross": "node scripts/analytics/cross-seo-product-data.mjs --output .tmp-analytics/seo-product-report.json",
     "analytics:trends": "node scripts/analytics/keyword-trends.mjs --output .tmp-analytics/keyword-trends-report.json"

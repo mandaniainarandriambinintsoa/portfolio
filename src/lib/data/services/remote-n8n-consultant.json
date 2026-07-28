@@ -1,0 +1,346 @@
+{
+  "fr": {
+    "key": "service-18",
+    "icon": "hub",
+    "title": "Consultant n8n international",
+    "description": "Audit, migration, self-hosting et fiabilisation de workflows n8n pour les équipes internationales qui ont besoin d'une automatisation exploitable en production.",
+    "slug": "consultant-automatisation-n8n-international",
+    "color": "emerald",
+    "isLanding": true,
+    "cardTitle": "Consultant n8n international",
+    "cardDescription": "Migration, self-hosting, scaling et workflows IA pour des automatisations n8n fiables en production.",
+    "seoTitle": "Consultant n8n international | Manda",
+    "seoDescription": "Consultant n8n pour migration, self-hosting, scaling, intégrations API et workflows IA. Accompagnement à distance pour équipes internationales.",
+    "updatedAt": "2026-07-28T00:00:00.000Z",
+    "landing": {
+      "heroText": "Vos workflows n8n sont devenus critiques, mais leur hébergement, leur reprise sur erreur ou leur évolution reposent encore sur des manipulations fragiles ? J'aide les équipes internationales à auditer, migrer et fiabiliser leur instance n8n, puis à construire les automatisations et intégrations IA qui doivent vraiment tenir en production.",
+      "heroImage": {
+        "src": "/images/projects/leads-automation-showcase.png",
+        "alt": "Workflow n8n de collecte et qualification de leads livré par Manda"
+      },
+      "features": [
+        {
+          "icon": "manage_search",
+          "title": "Audit de production",
+          "description": "Workflows, erreurs, credentials, webhooks, volumétrie et dette technique."
+        },
+        {
+          "icon": "cloud_upload",
+          "title": "Migration maîtrisée",
+          "description": "Passage du cloud au self-hosted avec inventaire, tests et plan de retour."
+        },
+        {
+          "icon": "dns",
+          "title": "Self-hosting",
+          "description": "Docker, PostgreSQL, sauvegardes, sécurité et observabilité."
+        },
+        {
+          "icon": "autorenew",
+          "title": "Scaling adapté",
+          "description": "Workers, Redis et queue mode uniquement lorsque la charge le justifie."
+        },
+        {
+          "icon": "psychology",
+          "title": "Workflows IA",
+          "description": "LLM, Apify, Apollo et APIs reliés à des validations humaines."
+        },
+        {
+          "icon": "description",
+          "title": "Transmission claire",
+          "description": "Documentation, exports versionnés et procédures d'exploitation."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Quand un consultant n8n devient utile",
+          "content": "Un workflow isolé peut être corrigé rapidement. Une instance qui orchestre des leads, des paiements, des données clients ou des opérations quotidiennes demande une autre approche : propriétaire identifié, gestion des erreurs, reprise sans doublon et visibilité sur chaque exécution.\n\nJ'interviens quand plusieurs workflows et APIs doivent évoluer ensemble, lorsqu'une migration ne peut pas interrompre la production, ou quand l'équipe a besoin d'un interlocuteur capable de relier infrastructure, logique métier et IA. Le premier livrable est un état des lieux priorisé, pas une reconstruction automatique de tout l'existant."
+        },
+        {
+          "title": "Migrer sans casser la production",
+          "content": "Une migration n8n commence par l'inventaire des workflows actifs, credentials, webhooks, variables d'environnement, community nodes, volumes d'exécution et dépendances externes. Je sépare ce qui peut être déplacé tel quel de ce qui doit être corrigé avant le basculement.\n\nLe plan de migration couvre l'export, l'import, la gestion sécurisée des secrets, les tests sur des données contrôlées, la fenêtre de bascule et le retour arrière. Les exports de credentials déchiffrés ne sont utilisés que si nécessaire et doivent être traités comme des secrets temporaires. La [documentation CLI officielle de n8n](https://docs.n8n.io/deploy/host-n8n/configure-n8n/use-the-command-line/) reste la référence pour les opérations d'export et d'import."
+        },
+        {
+          "title": "Un self-hosting dimensionné pour la charge réelle",
+          "content": "Le self-hosting n'est pas seulement un conteneur Docker en ligne. Une installation exploitable doit définir la base PostgreSQL, la clé de chiffrement, les sauvegardes, la rétention des exécutions, les mises à jour, le monitoring et les accès administrateur.\n\nPour une charge modérée, une architecture simple reste souvent la plus fiable. Le [queue mode de n8n](https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode/) ajoute Redis et des workers pour distribuer les exécutions quand la concurrence, la durée des traitements ou les pics de webhooks le demandent. Je recommande ce niveau de complexité après mesure, avec une procédure de reprise et un [audit de sécurité](https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/run-security-audits/) intégrés à l'exploitation."
+        },
+        {
+          "title": "Prospection et workflows IA avec des contrôles",
+          "content": "n8n peut relier Apify, Apollo, un CRM et un modèle IA pour collecter un signal autorisé, enrichir une entreprise, appliquer un score ICP et préparer un angle de contact. La valeur vient du contexte et de la priorisation, pas d'un volume d'envoi automatique.\n\nJe conserve des contrôles explicites : sources autorisées, déduplication, limites de fréquence, liste d'exclusion, validation humaine des messages et journal des actions. La même architecture sert aussi au support, au traitement de documents, au reporting ou à la synchronisation de données entre plusieurs outils."
+        },
+        {
+          "title": "Une collaboration a distance qui reste lisible",
+          "content": "Je travaille depuis Antananarivo, en GMT+3, avec des équipes européennes et internationales. Pour une équipe américaine, nous définissons une plage de recouvrement utile, puis nous gardons le reste de la collaboration asynchrone : spécifications écrites, points d'avancement courts, décisions tracées et démonstrations vidéo ou live.\n\nLes workflows sont livrés avec des noms stables, des notes d'exploitation, des exports versionnés et une liste claire des credentials à configurer. Cette discipline réduit la dépendance à une personne et permet à l'équipe de reprendre la main."
+        },
+        {
+          "title": "Format d'intervention et tarif",
+          "content": "Mon tarif standard est de **400 $/jour ou 350 EUR/jour**, selon la devise du contrat. Une première mission peut commencer par un audit court avec recommandations, estimation et priorités. Les migrations et nouveaux workflows sont ensuite chiffrés par lot ou suivis au temps passé selon le niveau d'incertitude.\n\nPour un projet de six mois ou plus, nous pouvons réserver une capacité hebdomadaire après validation du périmètre, des responsabilités et des horaires de collaboration. La disponibilité exacte est confirmée pendant l'appel de cadrage."
+        }
+      ],
+      "comparisonTable": {
+        "title": "Dépannage ponctuel ou accompagnement de production ?",
+        "intro": "Les deux formats sont utiles, mais ils ne répondent pas au même niveau de risque.",
+        "headers": ["Critère", "Aide ponctuelle", "Consulting production"],
+        "rows": [
+          {
+            "criterion": "Périmètre",
+            "noCode": "Un workflow ou une erreur isolée.",
+            "nextjs": "Instance, workflows, APIs et responsabilités considérés ensemble.",
+            "winner": "nextjs"
+          },
+          {
+            "criterion": "Migration",
+            "noCode": "Export et import sans plan d'exploitation complet.",
+            "nextjs": "Inventaire, tests, bascule, retour arrière et suivi post-migration.",
+            "winner": "nextjs"
+          },
+          {
+            "criterion": "Fiabilité",
+            "noCode": "Correction du symptome visible.",
+            "nextjs": "Retries, idempotence, alertes, sauvegardes et procédure d'incident.",
+            "winner": "nextjs"
+          },
+          {
+            "criterion": "Transmission",
+            "noCode": "Configuration livrée telle quelle.",
+            "nextjs": "Documentation, exports versionnés et transfert à l'équipe.",
+            "winner": "nextjs"
+          },
+          {
+            "criterion": "Meilleur usage",
+            "noCode": "Besoin limité et non critique.",
+            "nextjs": "Automatisations critiques ou engagement long terme.",
+            "winner": "nextjs"
+          }
+        ],
+        "conclusion": "Si n8n porte déjà une partie du chiffre d'affaires ou des opérations, la mission doit couvrir la continuité de service, pas seulement le canvas du workflow."
+      },
+      "faq": [
+        {
+          "question": "Combien coûte un consultant n8n à distance ?",
+          "answer": "Mon tarif standard est de 400 $/jour ou 350 EUR/jour selon la devise du contrat. Après un audit initial, je peux proposer une estimation par lot ou une capacité hebdomadaire pour une mission longue."
+        },
+        {
+          "question": "Pouvez-vous migrer n8n Cloud vers une instance self-hosted ?",
+          "answer": "Oui. Je prépare l'inventaire des workflows, credentials, webhooks et dépendances, puis les tests, la bascule et le plan de retour. Les secrets sont traités séparément des exports partageables."
+        },
+        {
+          "question": "Pouvez-vous mettre n8n à l'échelle avec des workers ?",
+          "answer": "Oui, lorsque la volumétrie le justifie. Le queue mode utilise Redis et des workers pour distribuer les exécutions. Je commence par mesurer la concurrence et les goulots avant d'ajouter cette complexité."
+        },
+        {
+          "question": "Travaillez-vous avec des équipes aux États-Unis ?",
+          "answer": "Oui. La collaboration combine une plage de recouvrement convenue, des spécifications écrites, des points asynchrones et des démonstrations. Je travaille depuis le fuseau GMT+3."
+        },
+        {
+          "question": "Intégrez-vous Apify, Apollo et des modèles IA ?",
+          "answer": "Oui. Je peux connecter ces outils à n8n, au CRM et à vos APIs pour enrichir, scorer ou préparer une action. Les validations humaines, exclusions et limites d'envoi restent explicites."
+        },
+        {
+          "question": "Comment protégez-vous les credentials et les données ?",
+          "answer": "Les secrets restent dans un gestionnaire ou des variables d'environnement, les accès sont limités, les exports sensibles sont temporaires et l'instance dispose d'une clé de chiffrement, de sauvegardes et d'un audit de sécurité."
+        },
+        {
+          "question": "Faut-il choisir n8n Cloud ou le self-hosting ?",
+          "answer": "n8n Cloud réduit l'exploitation technique. Le self-hosting donne davantage de contrôle sur l'infrastructure et les données, mais demande sauvegardes, mises à jour, monitoring et sécurité. Le bon choix dépend du risque, du volume et des compétences internes."
+        }
+      ],
+      "showcase": [
+        {
+          "src": "/images/projects/scraping-flowremote-automatisation-emploi.png",
+          "alt": "Automatisation n8n de collecte et traitement d'offres d'emploi",
+          "title": "FlowRemote",
+          "description": "Scraping, qualification IA et distribution automatisée d'offres d'emploi."
+        },
+        {
+          "src": "/images/projects/tracking-visiteurs-suivi-temps-reel.png",
+          "alt": "Système de suivi visiteurs et alertes en temps réel",
+          "title": "Visitor Tracking",
+          "description": "Collecte d'événements, stockage Supabase et alertes exploitables."
+        },
+        {
+          "src": "/images/projects/factumation-logiciel-facturation.png",
+          "alt": "Logiciel de facturation relié à des automatisations métier",
+          "title": "Factumation",
+          "description": "Application métier complète avec données structurées et processus automatisés."
+        }
+      ],
+      "cta": {
+        "title": "Votre instance n8n doit devenir fiable en production ?",
+        "description": "Envoyez-moi votre architecture actuelle, les workflows critiques et la contrainte principale. Nous cadrerons l'audit, la migration ou le prochain lot d'automatisation.",
+        "buttonLabel": "Cadrer mon projet n8n"
+      }
+    }
+  },
+  "en": {
+    "key": "service-18",
+    "icon": "hub",
+    "title": "Remote n8n Automation Consultant",
+    "description": "Production-focused n8n consulting for international teams: audits, cloud-to-self-hosted migrations, scaling, API integrations and controlled AI workflows.",
+    "slug": "remote-n8n-automation-consultant",
+    "color": "emerald",
+    "isLanding": true,
+    "cardTitle": "Remote n8n Automation Consultant",
+    "cardDescription": "Migration, self-hosting, scaling and AI workflows built for reliable n8n operations.",
+    "seoTitle": "Remote n8n Automation Consultant | Manda",
+    "seoDescription": "Remote n8n consultant for migration, self-hosting, scaling, API integrations and AI workflows. Production-focused delivery for international teams.",
+    "updatedAt": "2026-07-28T00:00:00.000Z",
+    "landing": {
+      "heroText": "Your n8n workflows have become business-critical, but hosting, error recovery or future changes still rely on fragile manual work. I help US and international teams audit, migrate and operate n8n reliably, then build the API and AI workflows that need to hold up in production.",
+      "heroImage": {
+        "src": "/images/projects/leads-automation-showcase.png",
+        "alt": "n8n lead collection and qualification workflow delivered by Manda"
+      },
+      "features": [
+        {
+          "icon": "manage_search",
+          "title": "Production audit",
+          "description": "Workflows, failures, credentials, webhooks, volume and technical debt."
+        },
+        {
+          "icon": "cloud_upload",
+          "title": "Controlled migration",
+          "description": "Cloud-to-self-hosted moves with inventory, testing and rollback."
+        },
+        {
+          "icon": "dns",
+          "title": "Self-hosting",
+          "description": "Docker, PostgreSQL, backups, security and observability."
+        },
+        {
+          "icon": "autorenew",
+          "title": "Right-sized scaling",
+          "description": "Workers, Redis and queue mode only when the workload needs them."
+        },
+        {
+          "icon": "psychology",
+          "title": "AI workflows",
+          "description": "LLMs, Apify, Apollo and APIs connected to human controls."
+        },
+        {
+          "icon": "description",
+          "title": "Clear handoff",
+          "description": "Documentation, versioned exports and operating procedures."
+        }
+      ],
+      "sections": [
+        {
+          "title": "When an n8n consultant becomes useful",
+          "content": "A single broken workflow can be fixed quickly. An instance that moves leads, payments, customer data or daily operations needs a different level of ownership: visible failures, safe retries, duplicate prevention and a clear person responsible for each critical path.\n\nI step in when multiple workflows and APIs must evolve together, when a migration cannot interrupt production, or when the team needs one consultant who can connect infrastructure, business logic and AI. The first deliverable is a prioritized view of the current system, not an automatic rebuild of everything."
+        },
+        {
+          "title": "Migration without breaking production",
+          "content": "An n8n migration starts with an inventory of active workflows, credentials, webhooks, environment variables, community nodes, execution volume and external dependencies. I separate what can move unchanged from what should be corrected before cutover.\n\nThe migration plan covers export, import, secure secret handling, tests with controlled data, cutover timing and rollback. Decrypted credential exports are used only when necessary and treated as temporary secrets. The [official n8n CLI documentation](https://docs.n8n.io/deploy/host-n8n/configure-n8n/use-the-command-line/) remains the reference for export and import operations."
+        },
+        {
+          "title": "Self-hosting sized for the actual workload",
+          "content": "Self-hosting is more than keeping a Docker container online. A production-ready setup needs an explicit PostgreSQL database, encryption key, backups, execution retention, updates, monitoring and administrator access policy.\n\nFor moderate workloads, a simple architecture is often the most reliable. [n8n queue mode](https://docs.n8n.io/deploy/host-n8n/configure-n8n/scaling/enable-queue-mode/) adds Redis and workers to distribute executions when concurrency, long-running jobs or webhook peaks require it. I add that complexity after measurement, together with recovery procedures and n8n's built-in [security audit](https://docs.n8n.io/deploy/host-n8n/configure-n8n/security/run-security-audits/)."
+        },
+        {
+          "title": "AI prospecting and automation with controls",
+          "content": "n8n can connect Apify, Apollo, a CRM and an AI model to collect an authorized signal, enrich a company, apply an ICP score and prepare a relevant outreach angle. The value comes from context and prioritization, not automatic send volume.\n\nI keep explicit safeguards in the workflow: approved sources, deduplication, frequency limits, exclusion lists, human message approval and an action log. The same architecture can support customer service, document processing, reporting or data synchronization across several systems."
+        },
+        {
+          "title": "Remote delivery that stays readable",
+          "content": "I work from Antananarivo in GMT+3 with European and international teams. For a US team, we agree on a useful overlap window and keep the rest asynchronous through written specifications, short progress updates, recorded decisions and live or video demonstrations.\n\nWorkflows are delivered with stable naming, operating notes, versioned exports and a clear credential checklist. This reduces dependence on one person and leaves the internal team able to operate the system."
+        },
+        {
+          "title": "Engagement and rate structure",
+          "content": "My standard rate is **$400/day or EUR 350/day**, depending on the contract currency. A first engagement can begin with a short audit that produces recommendations, priorities and an implementation estimate. Migrations and new workflows can then be delivered in scoped batches or on a time-spent basis when uncertainty remains high.\n\nFor a six-month or longer project, we can reserve weekly capacity after confirming scope, ownership and collaboration hours. Exact availability is confirmed during the discovery call."
+        }
+      ],
+      "comparisonTable": {
+        "title": "Ad-hoc workflow help or production consulting?",
+        "intro": "Both formats can be useful, but they address different levels of operational risk.",
+        "headers": ["Criterion", "Ad-hoc help", "Production consulting"],
+        "rows": [
+          {
+            "criterion": "Scope",
+            "noCode": "One isolated workflow or visible error.",
+            "nextjs": "Instance, workflows, APIs and ownership considered together.",
+            "winner": "nextjs"
+          },
+          {
+            "criterion": "Migration",
+            "noCode": "Export and import without a complete operating plan.",
+            "nextjs": "Inventory, testing, cutover, rollback and post-migration monitoring.",
+            "winner": "nextjs"
+          },
+          {
+            "criterion": "Reliability",
+            "noCode": "Fix the current symptom.",
+            "nextjs": "Retries, idempotency, alerts, backups and incident procedures.",
+            "winner": "nextjs"
+          },
+          {
+            "criterion": "Ownership",
+            "noCode": "Configuration delivered as-is.",
+            "nextjs": "Documentation, versioned exports and transfer to the team.",
+            "winner": "nextjs"
+          },
+          {
+            "criterion": "Best fit",
+            "noCode": "Small, non-critical requirement.",
+            "nextjs": "Critical automation or a long-term engagement.",
+            "winner": "nextjs"
+          }
+        ],
+        "conclusion": "If n8n already carries revenue or operations, the engagement should cover service continuity, not only the workflow canvas."
+      },
+      "faq": [
+        {
+          "question": "How much does a remote n8n consultant cost?",
+          "answer": "My standard rate is $400/day or EUR 350/day depending on the contract currency. After an initial audit, I can estimate scoped batches or reserve weekly capacity for a longer engagement."
+        },
+        {
+          "question": "Can you migrate n8n Cloud to a self-hosted instance?",
+          "answer": "Yes. I prepare the workflow, credential, webhook and dependency inventory, then testing, cutover and rollback. Secrets are handled separately from shareable workflow exports."
+        },
+        {
+          "question": "Can you scale n8n with workers?",
+          "answer": "Yes, when the workload justifies it. Queue mode uses Redis and workers to distribute executions. I first measure concurrency and bottlenecks before adding that operational complexity."
+        },
+        {
+          "question": "Do you work with US teams?",
+          "answer": "Yes. We combine an agreed overlap window with written specifications, asynchronous updates and demonstrations. I work from the GMT+3 time zone."
+        },
+        {
+          "question": "Can you integrate Apify, Apollo and AI models?",
+          "answer": "Yes. I can connect those tools to n8n, your CRM and internal APIs for enrichment, scoring or action preparation. Human approvals, exclusions and send limits remain explicit."
+        },
+        {
+          "question": "How do you protect credentials and business data?",
+          "answer": "Secrets stay in a secret manager or environment variables, access is limited, sensitive exports are temporary, and the instance has a controlled encryption key, backups and a security audit."
+        },
+        {
+          "question": "Is n8n Cloud or self-hosting the better choice?",
+          "answer": "n8n Cloud reduces infrastructure work. Self-hosting gives more control over infrastructure and data but requires backups, upgrades, monitoring and security ownership. The right choice depends on risk, volume and internal capability."
+        }
+      ],
+      "showcase": [
+        {
+          "src": "/images/projects/scraping-flowremote-automatisation-emploi.png",
+          "alt": "n8n workflow for automated job collection and processing",
+          "title": "FlowRemote",
+          "description": "Scraping, AI qualification and automated distribution of job opportunities."
+        },
+        {
+          "src": "/images/projects/tracking-visiteurs-suivi-temps-reel.png",
+          "alt": "Visitor tracking and real-time alert system",
+          "title": "Visitor Tracking",
+          "description": "Event collection, Supabase storage and actionable notifications."
+        },
+        {
+          "src": "/images/projects/factumation-logiciel-facturation.png",
+          "alt": "Business invoicing software connected to automated processes",
+          "title": "Factumation",
+          "description": "A complete business application with structured data and automated operations."
+        }
+      ],
+      "cta": {
+        "title": "Does your n8n instance need to become production-ready?",
+        "description": "Send me the current architecture, critical workflows and main constraint. We will scope the audit, migration or next automation batch.",
+        "buttonLabel": "Scope my n8n project"
+      }
+    }
+  }
+}

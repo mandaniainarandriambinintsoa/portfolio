@@ -16,6 +16,7 @@ import { getRelatedSolutionsForService, type Solution } from "@/lib/data/solutio
 import RefreshRouteOnSave from "@/components/preview/RefreshRouteOnSave";
 import SeoGrowthProof from "@/components/sections/SeoGrowthProof";
 import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
+import SectionHeading from "@/components/ui/SectionHeading";
 
 function formatLastUpdated(iso: string, locale: "fr" | "en") {
   const d = new Date(iso);
@@ -159,6 +160,7 @@ export default async function ServicePage({
 
   const contactHref = locale === "fr" ? "/contact" : "/en/contact";
   const isLanding = !!service.isLanding && !!service.landing;
+  const lastUpdated = service.updatedAt || LANDING_LAST_UPDATED;
 
   const colorMap: Record<string, string> = {
     indigo: "text-indigo-400",
@@ -257,8 +259,8 @@ export default async function ServicePage({
           </p>
           <p className="mt-6 text-xs uppercase tracking-wider text-slate-500">
             {locale === "fr" ? "Mis à jour le " : "Last updated: "}
-            <time dateTime={LANDING_LAST_UPDATED} className="text-slate-400">
-              {formatLastUpdated(LANDING_LAST_UPDATED, locale)}
+            <time dateTime={lastUpdated} className="text-slate-400">
+              {formatLastUpdated(lastUpdated, locale)}
             </time>
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
@@ -317,30 +319,25 @@ export default async function ServicePage({
         {/* Content sections */}
         {landing.sections?.map((section: any, idx: number) => (
           <div key={idx} className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-6 text-white">
-              {section.title}
-            </h2>
-            <GlassCard className="prose-content">
+            <SectionHeading title={section.title} className="mb-6 md:mb-7" />
+            <div className="prose-content border-l border-indigo-400/25 pl-5 sm:pl-7">
               {section.content.split("\n\n").map((paragraph: string, pIdx: number) => (
                 <p key={pIdx} className="text-slate-300 leading-relaxed mb-4 last:mb-0">
                   {renderInlineMarkdown(paragraph)}
                 </p>
               ))}
-            </GlassCard>
+            </div>
           </div>
         ))}
 
         {/* Comparison table (Next.js vs No-Code) */}
         {landing.comparisonTable && (
           <div className="mb-20">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4 text-white">
-              {landing.comparisonTable.title}
-            </h2>
-            {landing.comparisonTable.intro && (
-              <p className="text-slate-400 leading-relaxed mb-8 max-w-3xl">
-                {landing.comparisonTable.intro}
-              </p>
-            )}
+            <SectionHeading
+              title={landing.comparisonTable.title}
+              description={landing.comparisonTable.intro}
+              className="mb-8"
+            />
 
             {/* Desktop table */}
             <div className="hidden md:block overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]">
@@ -409,14 +406,15 @@ export default async function ServicePage({
         {/* Related solution pages */}
         {relatedSolutions.length > 0 && (
           <div className="mb-20">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-4 text-white">
-              {locale === "fr" ? "Solutions liées" : "Related solutions"}
-            </h2>
-            <p className="text-slate-400 leading-relaxed mb-8 max-w-3xl">
-              {locale === "fr"
-                ? "Pages plus concrètes pour cadrer un besoin métier précis avant de passer au devis ou au prototype."
-                : "More concrete pages to scope a precise business need before moving to an estimate or prototype."}
-            </p>
+            <SectionHeading
+              title={locale === "fr" ? "Solutions liées" : "Related solutions"}
+              description={
+                locale === "fr"
+                  ? "Pages plus concrètes pour cadrer un besoin métier précis avant de passer au devis ou au prototype."
+                  : "More concrete pages to scope a precise business need before moving to an estimate or prototype."
+              }
+              className="mb-8"
+            />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {relatedSolutions.map((solution) => {
                 const accent = solutionAccentMap[solution.accent];
@@ -468,9 +466,10 @@ export default async function ServicePage({
         {/* FAQ */}
         {landing.faq && (
           <div className="mb-20">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8 text-white">
-              {locale === "fr" ? "Questions fréquentes" : "Frequently asked questions"}
-            </h2>
+            <SectionHeading
+              title={locale === "fr" ? "Questions fréquentes" : "Frequently asked questions"}
+              className="mb-8"
+            />
             <div className="space-y-4">
               {landing.faq.map((item: any, idx: number) => (
                 <GlassCard key={idx}>
@@ -485,9 +484,10 @@ export default async function ServicePage({
         {/* Project showcase images */}
         {landing.showcase && (
           <div className="mb-20">
-            <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-8 text-white">
-              {locale === "fr" ? "Projets réalisés" : "Projects delivered"}
-            </h2>
+            <SectionHeading
+              title={locale === "fr" ? "Projets réalisés" : "Projects delivered"}
+              className="mb-8"
+            />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {landing.showcase.map((item: any, idx: number) => (
                 <div key={idx} className="group rounded-2xl overflow-hidden border border-white/10 bg-white/5">
@@ -513,12 +513,14 @@ export default async function ServicePage({
         {/* Final CTA */}
         <div className="glass-card rounded-2xl p-8 md:p-12 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            {locale === "fr" ? "Prêt à démarrer votre projet ?" : "Ready to start your project?"}
+            {landing.cta?.title ||
+              (locale === "fr" ? "Prêt à démarrer votre projet ?" : "Ready to start your project?")}
           </h2>
           <p className="text-slate-400 mb-8 max-w-xl mx-auto">
-            {locale === "fr"
-              ? "Discutons de vos besoins lors d'un appel découverte gratuit de 30 minutes."
-              : "Let's discuss your needs in a free 30-minute discovery call."}
+            {landing.cta?.description ||
+              (locale === "fr"
+                ? "Discutons de vos besoins lors d'un appel découverte gratuit de 30 minutes."
+                : "Let's discuss your needs in a free 30-minute discovery call.")}
           </p>
           <Button
             href={contactHref}
@@ -534,7 +536,7 @@ export default async function ServicePage({
               },
             }}
           >
-            {dict.hero.cta_primary}
+            {landing.cta?.buttonLabel || dict.hero.cta_primary}
           </Button>
         </div>
       </div>
