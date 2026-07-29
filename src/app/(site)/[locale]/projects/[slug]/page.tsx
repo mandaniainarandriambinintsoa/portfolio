@@ -82,6 +82,7 @@ export default async function ProjectPage({
   });
   const categoryTone = getProjectTone(project.category);
   const workflow = project.workflowFile ? workflows[project.workflowFile] : null;
+  const usesProductScreenshot = slug === "veille-codeur-automatisation-n8n";
   const caseStudy = getCaseStudy(slug, locale);
   const projectSeo = getProjectSeoDetails(slug, locale);
   const seoTone = categoryTone === "emerald"
@@ -189,7 +190,7 @@ export default async function ProjectPage({
         </p>
 
         {/* Hero visual: Image for webapp, N8N viewer for workflow */}
-        {isWorkflow && workflow ? (
+        {isWorkflow && workflow && !usesProductScreenshot ? (
           <N8nWorkflowSection workflow={workflow} />
         ) : (
           <div className="relative aspect-video rounded-2xl overflow-hidden mb-12 border border-white/10">
