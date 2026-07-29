@@ -34,6 +34,146 @@ export type ProjectSeoDetails = {
 };
 
 const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
+  "veille-codeur-automatisation-n8n": {
+    fr: {
+      metaTitle: "Veille Codeur automatisée avec n8n | Étude de cas",
+      metaDescription:
+        "Étude de cas d'une veille Codeur.com automatisée avec n8n : collecte RSS, déduplication, scoring explicable, alertes et validation humaine.",
+      kicker: "Prospection assistée",
+      title: "Transformer la veille Codeur.com en pipeline d'opportunités",
+      summary:
+        "Manda Pipeline surveille automatiquement plusieurs recherches Codeur.com, structure chaque nouvelle annonce et calcule son adéquation avec mon profil. Le système réduit le temps passé à parcourir des listes sans automatiser la relation commerciale : les opportunités prioritaires sont signalées, puis chaque décision reste validée humainement.",
+      facts: [
+        { label: "Fréquence", value: "une veille toutes les 10 minutes" },
+        { label: "Capacité", value: "10 recherches et 50 annonces par flux" },
+        { label: "Qualification", value: "score explicable, alerte dès 75/100" },
+        { label: "Garde-fou", value: "validation humaine, aucun envoi automatique" },
+      ],
+      sections: [
+        {
+          title: "De la veille manuelle à une file de travail priorisée",
+          paragraphs: [
+            "Le problème n'était pas de trouver davantage d'annonces, mais d'identifier rapidement celles qui correspondent réellement à mes compétences en n8n, IA et développement web. Le workflow interroge les recherches actives toutes les 10 minutes et traite les flux un par un pour rester stable, même lorsque plusieurs veilles tournent en parallèle.",
+            "Chaque annonce est normalisée avec son titre, son URL, sa date, ses catégories et son budget. Les nouvelles opportunités sont ensuite enregistrées dans Manda Pipeline, où elles deviennent recherchables, filtrables et comparables dans une interface dédiée.",
+          ],
+        },
+        {
+          title: "Une architecture n8n reliée au produit",
+          paragraphs: [
+            "n8n orchestre la planification, la lecture RSS, la transformation des données, l'appel aux API de Manda Pipeline et l'envoi des alertes. Les recherches sont traitées séquentiellement avec une courte pause entre chaque passage, ce qui évite les pics de charge et rend les exécutions plus faciles à diagnostiquer.",
+            "Le pipeline ne rescore que les nouvelles annonces. Il nettoie aussi les opportunités ignorées après 24 heures et conserve une empreinte pendant 90 jours afin d'éviter qu'une même annonce soit réinjectée comme si elle était nouvelle.",
+          ],
+        },
+        {
+          title: "Scoring explicable et contrôle humain",
+          paragraphs: [
+            "Le score synthétise plusieurs signaux utiles au choix d'une mission : adéquation technique, contexte du besoin, budget et qualité des informations disponibles. À partir de 75/100, une alerte attire l'attention sur l'opportunité, mais le dashboard conserve les raisons du score pour permettre une vraie vérification.",
+            "Le garde-fou central est volontaire : aucune candidature ni aucun message n'est envoyé automatiquement. L'automatisation prépare la décision, réduit le bruit et accélère la réaction, tandis que la prise de contact reste personnalisée et validée par une personne.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Expert automatisation n8n à Madagascar",
+          href: "/services/automatisation-n8n-madagascar",
+          description:
+            "Conception de workflows fiables, intégrations API, alertes et garde-fous de production.",
+        },
+        {
+          label: "Automatisation de prospection multicanale",
+          href: "/projects/leads-automation-showcase",
+          description:
+            "Un autre cas concret de collecte, qualification et orchestration de leads.",
+        },
+      ],
+      faq: [
+        {
+          question: "Le workflow envoie-t-il automatiquement une candidature ?",
+          answer:
+            "Non. Il collecte, normalise, déduplique, score et signale les opportunités pertinentes. La décision et le message de prise de contact restent entièrement soumis à une validation humaine.",
+        },
+        {
+          question: "Comment les doublons sont-ils évités ?",
+          answer:
+            "Manda Pipeline n'ingère que les nouvelles annonces et conserve une empreinte anti-réingestion pendant 90 jours. Les opportunités ignorées sont retirées de la file active après 24 heures sans réapparaître comme de nouvelles offres.",
+        },
+        {
+          question: "Le scoring peut-il être adapté à une autre activité ?",
+          answer:
+            "Oui. Les critères, leur poids, le seuil d'alerte, les sources et le canal de notification peuvent être adaptés à un métier, une équipe commerciale ou une plateforme différente.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Automated Codeur Opportunity Monitor with n8n | Case Study",
+      metaDescription:
+        "Case study of an automated Codeur.com monitor built with n8n: RSS collection, deduplication, explainable scoring, alerts and human review.",
+      kicker: "Assisted prospecting",
+      title: "Turning Codeur.com monitoring into an opportunity pipeline",
+      summary:
+        "Manda Pipeline automatically monitors several Codeur.com searches, structures every new listing and measures how well it fits my profile. The system cuts the time spent scanning lists without automating the commercial relationship: priority opportunities are surfaced, then every decision remains subject to human review.",
+      facts: [
+        { label: "Frequency", value: "one monitoring run every 10 minutes" },
+        { label: "Capacity", value: "10 searches and 50 listings per feed" },
+        { label: "Qualification", value: "explainable score, alert from 75/100" },
+        { label: "Safeguard", value: "human review, no automatic outreach" },
+      ],
+      sections: [
+        {
+          title: "From manual monitoring to a prioritized work queue",
+          paragraphs: [
+            "The problem was not finding more listings. It was quickly identifying the ones that genuinely match my n8n, AI and web development skills. The workflow checks active searches every 10 minutes and processes feeds one at a time to remain stable when several monitors run together.",
+            "Each listing is normalized with its title, URL, publication date, categories and budget. New opportunities are then stored in Manda Pipeline, where they can be searched, filtered and compared in a dedicated interface.",
+          ],
+        },
+        {
+          title: "An n8n architecture connected to the product",
+          paragraphs: [
+            "n8n orchestrates scheduling, RSS reading, data transformation, Manda Pipeline API calls and priority alerts. Searches run sequentially with a short wait between each pass, limiting load spikes and making executions easier to diagnose.",
+            "The pipeline scores new listings only. It also removes ignored opportunities from the active queue after 24 hours and keeps a fingerprint for 90 days so the same listing is not reintroduced as new.",
+          ],
+        },
+        {
+          title: "Explainable scoring with human control",
+          paragraphs: [
+            "The score combines signals that matter when selecting a mission: technical fit, business context, budget and information quality. From 75/100, an alert highlights the opportunity, while the dashboard preserves the scoring reasons for proper review.",
+            "The central safeguard is deliberate: no application or message is sent automatically. Automation prepares the decision, removes noise and speeds up reaction time, while outreach remains personalized and approved by a person.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "n8n automation expert in Madagascar",
+          href: "/en/services/n8n-automation-expert-madagascar",
+          description:
+            "Reliable workflows, API integrations, alerts and production safeguards.",
+        },
+        {
+          label: "Multichannel lead automation",
+          href: "/en/projects/leads-automation-showcase",
+          description:
+            "Another hands-on case involving lead collection, qualification and orchestration.",
+        },
+      ],
+      faq: [
+        {
+          question: "Does the workflow automatically submit applications?",
+          answer:
+            "No. It collects, normalizes, deduplicates, scores and surfaces relevant opportunities. The decision and outreach message remain fully subject to human review.",
+        },
+        {
+          question: "How are duplicate listings prevented?",
+          answer:
+            "Manda Pipeline ingests new listings only and keeps an anti-reingestion fingerprint for 90 days. Ignored opportunities leave the active queue after 24 hours without returning as new listings.",
+        },
+        {
+          question: "Can the scoring model be adapted to another business?",
+          answer:
+            "Yes. Criteria, weights, alert threshold, sources and notification channel can be adapted to a different role, sales team or marketplace.",
+        },
+      ],
+    },
+  },
   "paidmada-mobile-money": {
     fr: {
       metaTitle: "PaidMada Mobile Money - Orange Money, MVola, Airtel",
