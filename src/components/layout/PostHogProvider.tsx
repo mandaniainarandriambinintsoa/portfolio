@@ -3,7 +3,10 @@
 import { Suspense, useEffect } from "react";
 import posthog from "posthog-js";
 import { usePathname, useSearchParams } from "next/navigation";
-import { trackPortfolioEvent } from "@/lib/posthog-client";
+import {
+  getPortfolioTrackingContext,
+  trackPortfolioEvent,
+} from "@/lib/posthog-client";
 
 const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY;
 const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
@@ -43,11 +46,15 @@ function PostHogPageView() {
 
     const queryString = searchParams.toString();
     const url = `${window.location.origin}${pathname}${queryString ? `?${queryString}` : ""}`;
-
-    posthog.capture("$pageview", {
+    const pageProperties = {
       $current_url: url,
       path: pathname,
       locale: pathname.startsWith("/en") ? "en" : "fr",
+    };
+
+    posthog.capture("$pageview", {
+      ...getPortfolioTrackingContext("$pageview", pageProperties),
+      ...pageProperties,
     });
   }, [pathname, searchParams]);
 

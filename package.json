@@ -23,7 +23,8 @@
     "payload:sync:home-hero": "payload run scripts/payload/sync-home-hero.mjs",
     "payload:sync:blog:http": "node scripts/payload/sync-supabase-blog-http.mjs",
     "analytics:cross": "node scripts/analytics/cross-seo-product-data.mjs --output .tmp-analytics/seo-product-report.json",
-    "analytics:trends": "node scripts/analytics/keyword-trends.mjs --output .tmp-analytics/keyword-trends-report.json"
+    "analytics:trends": "node scripts/analytics/keyword-trends.mjs --output .tmp-analytics/keyword-trends-report.json",
+    "analytics:posthog-ai": "node scripts/analytics/configure-posthog-ai.mjs"
   },
   "dependencies": {
     "@google-analytics/data": "^6.0.0",
