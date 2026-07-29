@@ -87,7 +87,7 @@ export default function VisitorTracking({
 
   const fetchVisitors = useCallback(async () => {
     try {
-      const res = await fetch("/api/visitors");
+      const res = await fetch("/api/visitors", { cache: "no-store" });
       if (!res.ok) return;
       const data = await res.json();
       const newVisitors: VisitorRow[] = data.visitors || [];
@@ -133,7 +133,7 @@ export default function VisitorTracking({
 
       if (intervalId === null) {
         void fetchVisitors();
-        intervalId = window.setInterval(() => void fetchVisitors(), 5 * 60_000);
+        intervalId = window.setInterval(() => void fetchVisitors(), 60_000);
       }
     };
 

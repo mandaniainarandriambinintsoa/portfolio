@@ -35,9 +35,10 @@ function getClientIp(request: NextRequest): string {
 export async function GET(request: NextRequest) {
   const supabase = createAdminClient();
   const visitorIp = getClientIp(request);
+  const shouldSyncGa = request.nextUrl.searchParams.get("sync") === "ga";
 
   // 1. Fetch GA4 Realtime visitors and insert new ones into Supabase
-  if (propertyId && process.env.GA4_CLIENT_EMAIL && process.env.GA4_PRIVATE_KEY) {
+  if (shouldSyncGa && propertyId && process.env.GA4_CLIENT_EMAIL && process.env.GA4_PRIVATE_KEY) {
     try {
       const client = getAnalyticsClient();
 
@@ -92,7 +93,7 @@ export async function GET(request: NextRequest) {
 
               return NextResponse.json(
                 { visitors: visitors || [] },
-                { headers: { "Cache-Control": "s-maxage=300, stale-while-revalidate=60" } }
+                { headers: { "Cache-Control": "no-store" } }
               );
             }
           }
@@ -133,7 +134,7 @@ export async function GET(request: NextRequest) {
     { visitors: visitors || [] },
     {
       headers: {
-        "Cache-Control": "s-maxage=300, stale-while-revalidate=60",
+        "Cache-Control": "no-store",
       },
     }
   );
