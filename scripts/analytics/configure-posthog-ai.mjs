@@ -209,6 +209,11 @@ const propertyDefinitions = {
       "Vrai lorsque la session provient de ChatGPT, Perplexity, Claude, Gemini, Copilot ou un moteur IA similaire.",
     tags: ["portfolio", "acquisition", "geo"],
   },
+  internal_traffic: {
+    description:
+      "Marque un evenement de validation ou une visite interne a exclure des analyses commerciales.",
+    tags: ["portfolio", "data-quality"],
+  },
   area: {
     description: "Section de l'interface depuis laquelle l'action a ete declenchee.",
     tags: ["portfolio", "ui-context"],
@@ -243,6 +248,20 @@ SELECT
   uniqExactIf(distinct_id, event = 'contact_form_success') AS leads_confirmes
 FROM events
 WHERE timestamp >= now() - INTERVAL 30 DAY
+  AND event IN (
+    '$pageview',
+    'service_viewed',
+    'solution_viewed',
+    'project_opened',
+    'project_viewed',
+    'demo_opened',
+    'cta_clicked',
+    'whatsapp_clicked',
+    'contact_form_started',
+    'contact_form_submitted',
+    'contact_form_success'
+  )
+  AND coalesce(toBool(properties.internal_traffic), false) = false
 `,
   },
   {
@@ -257,6 +276,15 @@ SELECT
   uniqExactIf(distinct_id, event = 'contact_form_success') AS leads_confirmes
 FROM events
 WHERE timestamp >= now() - INTERVAL 30 DAY
+  AND event IN (
+    '$pageview',
+    'cta_clicked',
+    'whatsapp_clicked',
+    'contact_form_started',
+    'contact_form_submitted',
+    'contact_form_success'
+  )
+  AND coalesce(toBool(properties.internal_traffic), false) = false
 GROUP BY canal
 ORDER BY visiteurs DESC
 `,
@@ -274,6 +302,18 @@ SELECT
   countIf(event IN ('cta_clicked', 'whatsapp_clicked', 'contact_form_started')) AS actions_contact
 FROM events
 WHERE timestamp >= now() - INTERVAL 30 DAY
+  AND event IN (
+    '$pageview',
+    'scroll_depth_reached',
+    'service_viewed',
+    'solution_viewed',
+    'project_opened',
+    'project_viewed',
+    'cta_clicked',
+    'whatsapp_clicked',
+    'contact_form_started'
+  )
+  AND coalesce(toBool(properties.internal_traffic), false) = false
 GROUP BY page
 ORDER BY actions_contact DESC, lectures_profondes DESC
 LIMIT 100
@@ -360,11 +400,35 @@ async function ensureDashboardAndInsights() {
   }
 
   const insights = await listAll(`/api/projects/${projectId}/insights/?limit=500`);
-  const existingNames = new Set(insights.map((item) => item.name));
+  const existingByName = new Map(insights.map((item) => [item.name, item]));
   let created = 0;
+  let updated = 0;
 
   for (const definition of insightDefinitions) {
-    if (existingNames.has(definition.name)) continue;
+    const existing = existingByName.get(definition.name);
+    const desiredQuery = {
+      kind: "HogQLQuery",
+      query: definition.query.trim(),
+    };
+
+    if (existing) {
+      const queryChanged =
+        existing.query?.kind !== desiredQuery.kind ||
+        existing.query?.query?.trim() !== desiredQuery.query;
+      const descriptionChanged = existing.description !== definition.description;
+
+      if (applyChanges && (queryChanged || descriptionChanged)) {
+        await postHogRequest(`/api/projects/${projectId}/insights/${existing.id}/`, {
+          method: "PATCH",
+          body: JSON.stringify({
+            description: definition.description,
+            query: desiredQuery,
+          }),
+        });
+        updated += 1;
+      }
+      continue;
+    }
 
     if (applyChanges) {
       await postHogRequest(`/api/projects/${projectId}/insights/`, {
@@ -375,10 +439,7 @@ async function ensureDashboardAndInsights() {
           dashboards: [dashboard.id],
           favorited: true,
           tags: ["portfolio", "acquisition", "posthog-ai"],
-          query: {
-            kind: "HogQLQuery",
-            query: definition.query.trim(),
-          },
+          query: desiredQuery,
         }),
       });
       created += 1;
@@ -389,6 +450,7 @@ async function ensureDashboardAndInsights() {
     id: dashboard.id,
     name: dashboard.name,
     insightsCreated: created,
+    insightsUpdated: updated,
     insightCount: insightDefinitions.length,
   });
 }
