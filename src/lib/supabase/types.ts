@@ -129,6 +129,137 @@ export type Database = {
         }
         Relationships: []
       }
+      crm_leads: {
+        Row: {
+          id: string
+          email: string
+          first_name: string
+          last_name: string
+          company: string
+          website: string
+          linkedin_url: string
+          country: string
+          source: string
+          locale: string
+          message: string
+          segment: string
+          status: string
+          lead_score: number
+          pain_detected: string
+          offer_angle: string
+          last_contacted_at: string | null
+          next_followup_at: string | null
+          reply_status: string
+          utm_campaign: string
+          do_not_contact: boolean
+          notes: string
+          metadata: Json
+          created_at: string
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          email: string
+          first_name?: string
+          last_name?: string
+          company?: string
+          website?: string
+          linkedin_url?: string
+          country?: string
+          source?: string
+          locale?: string
+          message?: string
+          segment?: string
+          status?: string
+          lead_score?: number
+          pain_detected?: string
+          offer_angle?: string
+          last_contacted_at?: string | null
+          next_followup_at?: string | null
+          reply_status?: string
+          utm_campaign?: string
+          do_not_contact?: boolean
+          notes?: string
+          metadata?: Json
+          created_at?: string
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          email?: string
+          first_name?: string
+          last_name?: string
+          company?: string
+          website?: string
+          linkedin_url?: string
+          country?: string
+          source?: string
+          locale?: string
+          message?: string
+          segment?: string
+          status?: string
+          lead_score?: number
+          pain_detected?: string
+          offer_angle?: string
+          last_contacted_at?: string | null
+          next_followup_at?: string | null
+          reply_status?: string
+          utm_campaign?: string
+          do_not_contact?: boolean
+          notes?: string
+          metadata?: Json
+          created_at?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      crm_activities: {
+        Row: {
+          id: string
+          lead_id: string
+          email: string
+          activity_type: string
+          channel: string
+          direction: string
+          subject: string
+          content: string
+          metadata: Json
+          occurred_at: string
+        }
+        Insert: {
+          id?: string
+          lead_id: string
+          email: string
+          activity_type: string
+          channel: string
+          direction: string
+          subject?: string
+          content?: string
+          metadata?: Json
+          occurred_at?: string
+        }
+        Update: {
+          id?: string
+          lead_id?: string
+          email?: string
+          activity_type?: string
+          channel?: string
+          direction?: string
+          subject?: string
+          content?: string
+          metadata?: Json
+          occurred_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "crm_activities_lead_id_fkey"
+            columns: ["lead_id"]
+            isOneToOne: false
+            referencedRelation: "crm_leads"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       projects: {
         Row: {
           category: string
