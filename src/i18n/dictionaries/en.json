@@ -2235,6 +2235,24 @@
         "workflowFile": null
       },
       {
+        "slug": "international-opportunity-agent-n8n",
+        "title": "International Opportunity Agent",
+        "subtitle": "RSS monitoring, AI qualification and human-approved outreach",
+        "description": "An assisted prospecting system built to detect relevant international contracts without turning applications into blind automated outreach. Every 60 minutes, n8n reads four public RSS sources, normalizes listings and deduplicates them in PostgreSQL. New opportunities are scored with deterministic business rules, then analyzed through OpenRouter when they reach the useful threshold. The strongest matches arrive in Gmail with a concise brief, a tailored draft and two expiring links: approve or reject. An application can only be sent after human approval and only when the public listing explicitly contains a contact email. Everything else remains a manual application. The workflow includes an AI fallback model, retry paths, a decision history and a delivery record for every Gmail send.",
+        "tags": [
+          "n8n",
+          "OpenRouter",
+          "PostgreSQL",
+          "Gmail",
+          "Human-in-the-loop"
+        ],
+        "link": null,
+        "featured": true,
+        "category": "workflow",
+        "image": "/images/projects/international-opportunity-agent-n8n.webp",
+        "workflowFile": null
+      },
+      {
         "slug": "leads-automation-showcase",
         "title": "n8n automation workflow showcase",
         "subtitle": "n8n automation workflow showcase",

@@ -1,7 +1,7 @@
 import { createServerClient } from "@/lib/supabase/server";
 import { createStaticClient } from "@/lib/supabase/static";
 import type { Locale } from "@/i18n/config";
-import { getDictionary, getStaticDictionary } from "@/i18n/dictionaries";
+import { getStaticDictionary } from "@/i18n/dictionaries";
 import type { ProjectItem } from "@/lib/types";
 import {
   getPayloadProjectBySlug,
@@ -126,7 +126,7 @@ export async function getProjectBySlug(
     // fallback to dict
   }
 
-  const dict = await getDictionary(locale);
+  const dict = await getStaticDictionary(locale);
   const items = (dict.projects.items as ProjectItem[]).map(normalizeCategory);
   return items.find((p) => p.slug === slug) ?? null;
 }

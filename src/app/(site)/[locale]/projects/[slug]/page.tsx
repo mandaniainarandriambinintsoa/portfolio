@@ -83,6 +83,7 @@ export default async function ProjectPage({
   const categoryTone = getProjectTone(project.category);
   const workflow = project.workflowFile ? workflows[project.workflowFile] : null;
   const usesProductScreenshot = slug === "veille-codeur-automatisation-n8n";
+  const usesWideWorkflowScreenshot = slug === "international-opportunity-agent-n8n";
   const caseStudy = getCaseStudy(slug, locale);
   const projectSeo = getProjectSeoDetails(slug, locale);
   const seoTone = categoryTone === "emerald"
@@ -193,13 +194,17 @@ export default async function ProjectPage({
         {isWorkflow && workflow && !usesProductScreenshot ? (
           <N8nWorkflowSection workflow={workflow} />
         ) : (
-          <div className="relative aspect-video rounded-2xl overflow-hidden mb-12 border border-white/10">
+          <div
+            className={`relative overflow-hidden rounded-2xl border border-white/10 mb-12 ${
+              usesWideWorkflowScreenshot ? "aspect-[2/1] bg-white" : "aspect-video"
+            }`}
+          >
             <Image
               src={project.image}
               alt={`${project.title} - ${project.subtitle}`}
               fill
               sizes="(max-width: 768px) 100vw, 896px"
-              className="object-cover"
+              className={usesWideWorkflowScreenshot ? "object-contain" : "object-cover"}
               priority
             />
           </div>

@@ -2243,6 +2243,24 @@
         "workflowFile": null
       },
       {
+        "slug": "international-opportunity-agent-n8n",
+        "title": "Agent d'opportunités internationales",
+        "subtitle": "Veille RSS, qualification IA et candidatures sous contrôle humain",
+        "description": "Un système de prospection assistée conçu pour détecter des missions internationales pertinentes sans transformer la candidature en envoi aveugle. Toutes les 60 minutes, n8n lit quatre sources RSS publiques, normalise les annonces et les déduplique dans PostgreSQL. Les nouvelles opportunités sont d'abord évaluées par des règles métier, puis analysées avec OpenRouter lorsque leur score atteint le seuil utile. Les meilleurs dossiers arrivent dans Gmail avec un résumé, un brouillon personnalisé et deux liens temporaires : approuver ou refuser. Une candidature ne peut partir qu'après validation humaine et seulement lorsqu'une adresse email publique figure explicitement dans l'annonce. Les autres opportunités restent à traiter manuellement. Le workflow intègre un modèle IA de secours, des reprises sur erreur, un historique de décision et l'enregistrement de chaque livraison Gmail.",
+        "tags": [
+          "n8n",
+          "OpenRouter",
+          "PostgreSQL",
+          "Gmail",
+          "Human-in-the-loop"
+        ],
+        "link": null,
+        "featured": true,
+        "category": "workflow",
+        "image": "/images/projects/international-opportunity-agent-n8n.webp",
+        "workflowFile": null
+      },
+      {
         "slug": "leads-automation-showcase",
         "title": "Showcase de workflow d'automatisation n8n",
         "subtitle": "Showcase de workflow d'automatisation n8n",

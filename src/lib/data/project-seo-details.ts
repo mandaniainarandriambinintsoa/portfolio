@@ -34,6 +34,194 @@ export type ProjectSeoDetails = {
 };
 
 const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
+  "international-opportunity-agent-n8n": {
+    fr: {
+      metaTitle: "Agent de prospection internationale n8n | Étude de cas",
+      metaDescription:
+        "Étude de cas d'un agent n8n qui collecte des missions internationales, les qualifie avec OpenRouter et exige une validation humaine avant envoi.",
+      kicker: "Prospection internationale assistée",
+      title: "Détecter les bonnes missions sans automatiser la confiance",
+      summary:
+        "Cet agent transforme plusieurs flux d'offres internationales en une file de décisions courte et exploitable. n8n orchestre la collecte, PostgreSQL élimine les doublons, des règles métier filtrent le bruit et OpenRouter analyse uniquement les opportunités qui méritent un examen approfondi. Gmail sert ensuite d'interface de validation : rien ne part tant que je n'ai pas explicitement approuvé la candidature.",
+      facts: [
+        { label: "Cadence", value: "une exécution toutes les 60 minutes" },
+        { label: "Sources", value: "4 flux RSS publics traités séquentiellement" },
+        { label: "Exécution observée", value: "128 annonces lues sur un cycle complet" },
+        { label: "Garde-fou", value: "validation humaine et email public obligatoire" },
+      ],
+      sections: [
+        {
+          title: "Quatre sources internationales, un seul format de travail",
+          paragraphs: [
+            "Le workflow surveille des flux publics spécialisés dans les missions remote, l'ingénierie, l'IA et le développement fullstack. Les sources sont récupérées depuis la configuration de l'application, puis lues une par une afin qu'une erreur ou un ralentissement sur un flux ne bloque pas tout le cycle.",
+            "Chaque annonce est ramenée vers un schéma commun : source, titre, entreprise, localisation, date, URL, description et coordonnées publiques éventuelles. Le backend enregistre une empreinte dans PostgreSQL avant toute analyse coûteuse, ce qui empêche de payer plusieurs fois pour la même opportunité.",
+          ],
+        },
+        {
+          title: "Un scoring hybride pour réserver l'IA aux bons signaux",
+          paragraphs: [
+            "La première qualification est déterministe. Elle mesure la proximité avec mes compétences, le caractère contractuel ou freelance de la mission, sa compatibilité remote et les signaux d'exclusion. Seules les annonces qui atteignent 55/100 passent à l'analyse IA, ce qui réduit le coût et rend le pipeline plus prévisible.",
+            "OpenRouter appelle Qwen comme modèle principal et Gemini Flash Lite comme solution de secours. Le modèle renvoie une structure JSON stricte avec le niveau d'adéquation, les raisons, les risques, un angle de candidature et un brouillon. Si les deux modèles échouent, le workflow conserve le score métier et un chemin de traitement déterministe au lieu de perdre l'annonce.",
+          ],
+        },
+        {
+          title: "Gmail devient une interface d'approbation légère",
+          paragraphs: [
+            "À partir de 75/100, l'opportunité rejoint un digest Gmail avec les éléments nécessaires pour décider vite : lien source, résumé, score, raisons et proposition de message. Deux liens signés, valables 48 heures, permettent d'approuver ou de refuser sans ouvrir le dashboard technique.",
+            "L'approbation ne suffit pas à contourner les règles de contact. Une candidature automatique n'est possible que si l'annonce contient explicitement une adresse email publique. Le système ne devine jamais d'adresse. Sans contact public, l'offre reste signalée pour une candidature manuelle sur la plateforme d'origine.",
+          ],
+        },
+        {
+          title: "Une automatisation conçue pour être opérée",
+          paragraphs: [
+            "Les sources sont parcourues en séquence avec une pause contrôlée, les appels critiques possèdent des chemins de reprise et chaque décision est persistée. Les candidatures approuvées sont envoyées une par une, puis le résultat Gmail est enregistré pour éviter les doubles envois et rendre le parcours auditable.",
+            "Une exécution complète observée a parcouru quatre sources et 128 annonces. Un second passage n'a réinjecté aucun doublon, ce qui valide la partie la moins visible mais la plus importante du système : savoir ne rien faire lorsque les données ont déjà été traitées.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Expert automatisation n8n à Madagascar",
+          href: "/services/automatisation-n8n-madagascar",
+          description:
+            "Workflows n8n fiables, intégrations API, reprises sur erreur et exploitation en production.",
+        },
+        {
+          label: "Intégration IA et agents métier",
+          href: "/services/integration-ia",
+          description:
+            "Ajouter une couche IA mesurable sans lui confier les décisions sensibles.",
+        },
+        {
+          label: "Pipeline de veille Codeur.com",
+          href: "/projects/veille-codeur-automatisation-n8n",
+          description:
+            "Le premier pipeline local de collecte, scoring explicable et validation humaine.",
+        },
+        {
+          label: "Showcase d'automatisations commerciales",
+          href: "/projects/leads-automation-showcase",
+          description:
+            "Sept démonstrations n8n autour de la prospection, du contenu et de la qualification.",
+        },
+      ],
+      faq: [
+        {
+          question: "L'agent postule-t-il automatiquement à toutes les offres ?",
+          answer:
+            "Non. Il filtre et prépare les meilleures opportunités, mais un envoi exige une approbation humaine explicite. Les annonces sans adresse email publique restent entièrement manuelles.",
+        },
+        {
+          question: "Pourquoi combiner des règles métier et un modèle IA ?",
+          answer:
+            "Les règles éliminent rapidement le bruit avec un résultat prévisible. L'IA intervient ensuite sur un volume réduit pour comprendre le contexte, expliquer l'adéquation et préparer un brouillon personnalisé.",
+        },
+        {
+          question: "Comment le système évite-t-il les doubles candidatures ?",
+          answer:
+            "Chaque annonce reçoit une empreinte persistée dans PostgreSQL. Les décisions, approbations et résultats d'envoi sont enregistrés, ce qui empêche une annonce déjà traitée de repartir comme une nouvelle opportunité.",
+        },
+        {
+          question: "Cette architecture peut-elle servir à une équipe commerciale ?",
+          answer:
+            "Oui. Les sources, critères, seuils, modèles et canaux d'approbation peuvent être adaptés à des leads commerciaux, appels d'offres, partenaires ou demandes entrantes.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "International Opportunity Agent with n8n | Case Study",
+      metaDescription:
+        "Case study of an n8n agent that collects international contracts, qualifies them with OpenRouter and requires human approval before outreach.",
+      kicker: "Human-approved prospecting",
+      title: "Finding the right contracts without automating trust",
+      summary:
+        "This agent turns several international opportunity feeds into a short, actionable decision queue. n8n orchestrates collection, PostgreSQL removes duplicates, business rules filter noise and OpenRouter analyzes only the listings worth deeper review. Gmail then becomes the approval interface: no application leaves the system until I explicitly approve it.",
+      facts: [
+        { label: "Cadence", value: "one execution every 60 minutes" },
+        { label: "Sources", value: "4 public RSS feeds processed sequentially" },
+        { label: "Observed run", value: "128 listings read in one complete cycle" },
+        { label: "Safeguard", value: "human approval and public email required" },
+      ],
+      sections: [
+        {
+          title: "Four international sources, one operating format",
+          paragraphs: [
+            "The workflow monitors public feeds focused on remote contracts, engineering, AI and full-stack development. Sources come from the application's configuration and are read one at a time, so a slow or failing feed cannot block the entire cycle.",
+            "Every listing is normalized into the same structure: source, role, company, location, date, URL, description and any explicitly public contact details. The backend stores a PostgreSQL fingerprint before expensive analysis, preventing the same opportunity from consuming model credits twice.",
+          ],
+        },
+        {
+          title: "Hybrid scoring reserves AI for stronger signals",
+          paragraphs: [
+            "The first qualification layer is deterministic. It measures technical fit, contract or freelance intent, remote compatibility and exclusion signals. Only listings that reach 55/100 move to AI analysis, keeping cost controlled and pipeline behavior predictable.",
+            "OpenRouter uses Qwen as the primary model and Gemini Flash Lite as fallback. The model returns strict JSON covering fit, evidence, risks, an application angle and a draft. If both models fail, the system keeps the business score and a deterministic fallback instead of losing the opportunity.",
+          ],
+        },
+        {
+          title: "Gmail acts as a lightweight approval interface",
+          paragraphs: [
+            "At 75/100, an opportunity enters a Gmail digest containing what is needed for a fast decision: source link, summary, score, reasons and proposed message. Two signed links, valid for 48 hours, allow the owner to approve or reject without opening the technical dashboard.",
+            "Approval does not bypass contact rules. Automatic outreach is possible only when the public listing explicitly contains an email address. The system never guesses addresses. Without a public contact, the listing remains flagged for a manual application on the original platform.",
+          ],
+        },
+        {
+          title: "Automation designed to be operated",
+          paragraphs: [
+            "Sources run sequentially with a controlled pause, critical calls have recovery paths and every decision is persisted. Approved applications are sent one at a time, then Gmail delivery is recorded to prevent duplicate sends and keep the journey auditable.",
+            "One observed full execution processed four sources and 128 listings. A second pass ingested no duplicates, validating the least visible but most important behavior of the system: knowing when there is nothing new to do.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Remote n8n automation consultant",
+          href: "/en/services/remote-n8n-automation-consultant",
+          description:
+            "Reliable n8n workflows, API integrations, error recovery and production support for remote teams.",
+        },
+        {
+          label: "AI automation consulting",
+          href: "/en/services/ai-integration",
+          description:
+            "Apply AI to measurable operations while keeping sensitive decisions under human control.",
+        },
+        {
+          label: "Codeur.com opportunity pipeline",
+          href: "/en/projects/veille-codeur-automatisation-n8n",
+          description:
+            "The earlier local pipeline for collection, explainable scoring and human review.",
+        },
+        {
+          label: "Sales automation showcase",
+          href: "/en/projects/leads-automation-showcase",
+          description:
+            "Seven hands-on n8n demonstrations covering prospecting, content and lead qualification.",
+        },
+      ],
+      faq: [
+        {
+          question: "Does the agent automatically apply to every listing?",
+          answer:
+            "No. It filters and prepares the strongest opportunities, but sending requires explicit human approval. Listings without a public contact email remain fully manual.",
+        },
+        {
+          question: "Why combine business rules with an AI model?",
+          answer:
+            "Rules remove noise quickly with predictable behavior. AI then works on a smaller set to understand context, explain fit and prepare a tailored draft.",
+        },
+        {
+          question: "How does the system prevent duplicate applications?",
+          answer:
+            "Every listing receives a fingerprint stored in PostgreSQL. Decisions, approvals and delivery results are persisted, preventing an already processed listing from returning as a new opportunity.",
+        },
+        {
+          question: "Can this architecture support a sales team?",
+          answer:
+            "Yes. Sources, criteria, thresholds, models and approval channels can be adapted to sales leads, tenders, partnerships or inbound requests.",
+        },
+      ],
+    },
+  },
   "veille-codeur-automatisation-n8n": {
     fr: {
       metaTitle: "Veille Codeur automatisée avec n8n | Étude de cas",
