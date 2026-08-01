@@ -245,7 +245,7 @@
             },
             {
               "question": "Combien coûte un workflow N8N ?",
-              "answer": "Workflow Starter (1 workflow simple : scraping, notification, sync) à partir de 500€. Pro (3-5 workflows connectés + dashboard) à 1 000€. Agent IA (Claude/GPT + n8n + intégrations CRM/email) à 1 500€. Voir la grille complète sur la page d'accueil."
+              "answer": "Une automatisation n8n et IA démarre à 1 200€. Le tarif final dépend du nombre d'intégrations, de la logique métier, du niveau d'autonomie et des contraintes de déploiement. Le périmètre et le prix sont validés avant le démarrage."
             },
             {
               "question": "Mes données sont-elles sécurisées ?",
@@ -257,7 +257,7 @@
             },
             {
               "question": "Combien de temps pour livrer un workflow n8n ?",
-              "answer": "Un workflow Starter (1 flux simple type scraping ou notification) prend 3 à 5 jours ouvrés. Un palier Pro (3 à 5 workflows connectés + dashboard) prend 1 à 2 semaines. Un Agent IA complet (Claude/GPT + intégrations CRM/email + logique conditionnelle) prend 2 à 3 semaines selon la complexité."
+              "answer": "Une automatisation cadrée prend généralement 1 à 3 semaines. Le délai dépend du nombre d'intégrations, des validations humaines, des règles métier et des tests nécessaires avant la mise en production."
             },
             {
               "question": "Sur quel serveur héberger n8n ?",
@@ -324,7 +324,7 @@
             },
             {
               "title": "Pourquoi un développeur React à Madagascar ?",
-              "content": "Madagascar est devenu un hub tech émergent pour l'externalisation de services digitaux qualifiés. En tant que développeur React / Next.js basé à Antananarivo, j'offre :\n\n**Tarifs compétitifs** — TJM 350€/jour, jusqu'à 2 fois inférieur aux freelances européens (400-600€/j), pour une qualité de code équivalente. Un site Next.js qui coûte 1 500€ à 5 000€ avec un freelance parisien démarre à 500€ chez moi (palier Starter). Un MVP SaaS qui coûte 8 000€ à 25 000€ à Paris démarre à 2 000€ chez moi.\n\n**Français natif** — Communication fluide, pas de barrière linguistique. Réunions, documentation et code reviews en français.\n\n**Fuseau horaire GMT+3** — Compatible avec les horaires de bureau européens (9h-18h Paris = 11h-20h Antananarivo). Collaboration en temps réel via Slack, Notion et Google Meet.\n\n**Qualité internationale** — 20+ projets livrés avec un score PageSpeed de 98-100/100. Code TypeScript typé, tests, CI/CD, documentation technique.\n\n**Développement assisté par IA** — J'utilise Claude Code et GitHub Copilot pour accélérer le développement tout en maintenant une qualité de code professionnelle. Un MVP qui prenait 6 semaines se livre en 2-3 semaines."
+              "content": "Madagascar est devenu un hub tech émergent pour l'externalisation de services digitaux qualifiés. En tant que développeur React / Next.js basé à Antananarivo, j'offre :\n\n**Tarifs compétitifs** : TJM 350€/jour, jusqu'à 2 fois inférieur aux freelances européens (400-600€/j), pour une qualité de code équivalente. Un site métier Next.js complet démarre à 1 500€ et un MVP SaaS à 3 500€. Le périmètre et le prix sont validés avant le démarrage.\n\n**Français natif** : communication fluide, pas de barrière linguistique. Réunions, documentation et code reviews en français.\n\n**Fuseau horaire GMT+3** : compatible avec les horaires de bureau européens (9h-18h Paris = 11h-20h Antananarivo). Collaboration en temps réel via Slack, Notion et Google Meet.\n\n**Qualité internationale** : 20+ projets livrés avec un score PageSpeed de 98-100/100. Code TypeScript typé, tests, CI/CD, documentation technique.\n\n**Développement assisté par IA** : j'utilise Claude Code et GitHub Copilot pour accélérer le développement tout en maintenant une qualité de code professionnelle. Un MVP qui prenait 6 semaines se livre en 2-3 semaines."
             },
             {
               "title": "Types de projets React / Next.js",
@@ -434,7 +434,7 @@
           "faq": [
             {
               "question": "Combien coûte un développeur React à Madagascar ?",
-              "answer": "Un site Next.js démarre à 500€ (Starter, 5 pages), 1 000€ (Pro, 10 pages design custom) ou 1 500€ (Avancé, multilingue + CMS). Un MVP SaaS démarre à 2 000€ (Starter avec auth + 1 feature core), 4 000€ pour la version Pro avec Stripe et admin. Au-delà c'est sur devis. Le détail complet des paliers est sur la home, section Tarifs."
+              "answer": "Un site métier Next.js démarre à 1 500€ et un MVP SaaS à 3 500€. Le tarif final dépend du périmètre, des intégrations et du délai. Pour une mission longue ou évolutive, mon TJM est de 350€/jour avec un minimum de 5 jours."
             },
             {
               "question": "Quelle est la différence entre React et Next.js ?",
@@ -521,7 +521,7 @@
             },
             {
               "title": "Pourquoi un développeur Next.js + Supabase à Madagascar ?",
-              "content": "C'est mon stack quotidien — chaque projet que je livre depuis fin 2025 utilise Next.js + Supabase. Ce portfolio, Factumation, le système de tracking visiteurs, tout est construit sur ce stack.\n\n**Expertise confirmée** — 15+ projets livrés avec Next.js + Supabase. Row Level Security, migrations, Edge Functions, Realtime — je maîtrise chaque composant.\n\n**Tarifs compétitifs** — Un SaaS MVP qui coûte 8 000€ à 25 000€ avec un freelance parisien démarre à 2 000€ chez moi (palier Starter, auth + 1 feature core + dashboard). 4 000€ pour la version Pro avec Stripe et admin. Même qualité de code, TypeScript strict, documentation complète.\n\n**Développement IA-assisté** — J'utilise Claude Code pour accélérer chaque étape. Un MVP qui prenait 6 semaines se livre en 2-3 semaines.\n\n**Fuseau GMT+3** — Collaboration en temps réel avec l'Europe pendant les heures de bureau."
+              "content": "C'est mon stack quotidien : chaque projet que je livre depuis fin 2025 utilise Next.js + Supabase. Ce portfolio, Factumation et le système de tracking visiteurs sont construits sur ce stack.\n\n**Expertise confirmée** : 15+ projets livrés avec Next.js + Supabase. Row Level Security, migrations, Edge Functions et Realtime font partie du socle de production.\n\n**Tarifs compétitifs** : un MVP SaaS démarre à 3 500€, avec authentification, dashboard, base de données et première fonctionnalité métier. Le devis évolue ensuite selon le périmètre, tout en conservant TypeScript strict et une documentation complète.\n\n**Développement IA-assisté** : j'utilise Claude Code pour accélérer chaque étape. Un MVP qui prenait 6 semaines se livre en 2-3 semaines.\n\n**Fuseau GMT+3** : collaboration en temps réel avec l'Europe pendant les heures de bureau."
             },
             {
               "title": "Sécurité et bonnes pratiques",
@@ -611,7 +611,7 @@
           "faq": [
             {
               "question": "Combien coûte un SaaS Next.js + Supabase ?",
-              "answer": "Un MVP SaaS Starter (auth + 1 feature core + dashboard) démarre à 2 000€. Le palier Pro (auth + 3-4 features + Stripe + admin) coûte 4 000€. Au-delà (multi-rôles, IA intégrée, scaling cloud) c'est sur devis ou en TJM 350€/jour. Voir la grille complète sur la home."
+              "answer": "Un MVP SaaS Next.js + Supabase démarre à 3 500€, avec authentification, dashboard, base de données et première fonctionnalité métier. Les fonctions supplémentaires, Stripe, l'administration, les rôles ou l'IA sont chiffrés dans un devis cadré. Les missions évolutives peuvent être facturées au TJM de 350€/jour."
             },
             {
               "question": "Supabase est-il fiable pour la production ?",
@@ -784,7 +784,7 @@
           "faq": [
             {
               "question": "Combien coûte un projet IA avec Python ?",
-              "answer": "Un Agent IA (Claude/GPT + n8n + intégrations CRM/email) démarre à 1 500€ — palier visible dans la grille Tarifs de la home. Pour les projets plus complexes (multi-rôles, IA intégrée à votre SaaS, scaling cloud) c'est sur devis ou en TJM 350€/jour, minimum 5 jours."
+              "answer": "Une automatisation n8n avec qualification IA démarre à 1 200€. Pour un agent plus complexe, une IA intégrée à un SaaS ou une architecture multi-rôles, le prix est établi sur devis ou au TJM de 350€/jour, avec un minimum de 5 jours."
             },
             {
               "question": "Faut-il de grosses données pour utiliser l'IA ?",
@@ -2011,23 +2011,11 @@
         },
         "tiers": [
           {
-            "name": "Starter",
-            "price": "500 €",
-            "delay": "≈ 1 semaine",
-            "details": "5 pages, formulaire, SEO/GEO de base, contenu centralise"
-          },
-          {
-            "name": "Pro",
-            "price": "1 000 €",
-            "delay": "1-2 semaines",
-            "details": "Site metier complet, 3 maquettes IA, formulaire relaye n8n",
+            "name": "À partir de",
+            "price": "1 500 €",
+            "delay": "2-3 semaines",
+            "details": "Site métier complet, direction UI sur mesure, SEO/GEO, formulaire connecté et mise en production",
             "featured": true
-          },
-          {
-            "name": "Avancé + suivi",
-            "price": "1 500 € + 149 €/mois",
-            "delay": "2-3 sem. + mensuel",
-            "details": "Multilingue, pages locales, petites modifs, uptime, PageSpeed, indexation et rapport SEO/GEO"
           }
         ]
       },
@@ -2043,23 +2031,11 @@
         },
         "tiers": [
           {
-            "name": "Starter",
-            "price": "2 000 €",
-            "delay": "2 semaines",
-            "details": "Auth + 1 feature core + dashboard"
-          },
-          {
-            "name": "Pro",
-            "price": "4 000 €",
-            "delay": "3-4 semaines",
-            "details": "Auth + 3-4 features + Stripe + admin",
+            "name": "À partir de",
+            "price": "3 500 €",
+            "delay": "3-5 semaines",
+            "details": "Authentification, dashboard, base de données et première fonctionnalité métier",
             "featured": true
-          },
-          {
-            "name": "Premium",
-            "price": "Sur devis",
-            "delay": "1-2 mois",
-            "details": "Multi-rôles, IA intégrée, scaling cloud"
           }
         ]
       },
@@ -2075,30 +2051,18 @@
         },
         "tiers": [
           {
-            "name": "Starter",
-            "price": "500 €",
-            "delay": "≈ 1 semaine",
-            "details": "1 workflow (scraping, notif, sync)"
-          },
-          {
-            "name": "Pro",
-            "price": "1 000 €",
-            "delay": "1-2 semaines",
-            "details": "3-5 workflows connectés + dashboard",
+            "name": "À partir de",
+            "price": "1 200 €",
+            "delay": "1-3 semaines",
+            "details": "Workflow sur mesure, intégrations, qualification IA, tests et documentation",
             "featured": true
-          },
-          {
-            "name": "Agent IA",
-            "price": "1 500 €",
-            "delay": "2 semaines",
-            "details": "Agent Claude/GPT + n8n + intégrations"
           }
         ]
       }
     ],
-    "tjm_label": "Mission sur mesure ?",
+    "tjm_label": "Mission longue ou évolutive ?",
     "tjm_value": "TJM 350 € / jour",
-    "tjm_note": "Audit, conseil, accompagnement équipe interne. Minimum 5 jours.",
+    "tjm_note": "Audit, renfort et accompagnement d'équipe. Minimum 5 jours.",
     "cta": "Discuter mon projet",
     "cta_href": "/fr/contact"
   },

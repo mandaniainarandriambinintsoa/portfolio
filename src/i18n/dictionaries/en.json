@@ -408,7 +408,7 @@
             },
             {
               "question": "How much does an N8N workflow cost?",
-              "answer": "Starter (1 simple workflow: scraping, notification, sync) from €500. Pro (3-5 connected workflows + dashboard) at €1,000. AI Agent (Claude/GPT + n8n + CRM/email integrations) at €1,500. See the full pricing grid on the homepage."
+              "answer": "A custom n8n and AI automation starts at $1,500. The final price depends on the number of integrations, business logic, autonomy and deployment constraints. Scope and price are agreed before work begins."
             },
             {
               "question": "Is my data secure?",
@@ -420,7 +420,7 @@
             },
             {
               "question": "How long does it take to deliver an n8n workflow?",
-              "answer": "A Starter workflow (one simple flow like scraping or notification) takes 3 to 5 business days. The Pro tier (3 to 5 connected workflows + dashboard) takes 1 to 2 weeks. A full AI Agent (Claude/GPT + CRM/email integrations + conditional logic) takes 2 to 3 weeks depending on complexity."
+              "answer": "A scoped automation usually takes 1 to 3 weeks. Timing depends on the number of integrations, human approval steps, business rules and production testing requirements."
             },
             {
               "question": "Which server should I host n8n on?",
@@ -483,7 +483,7 @@
             },
             {
               "title": "Why hire a React developer from Madagascar?",
-              "content": "Madagascar has become an emerging tech hub for qualified digital outsourcing. As a React / Next.js developer based in Antananarivo, I offer:\n\n**Competitive rates** — Day rate €350/day, up to 2x lower than US/European freelancers (€400-600/day), with equivalent code quality. A Next.js website costing €1,500-5,000 with a US-based freelancer starts at €500 with me (Starter tier). A SaaS MVP costing €8,000-25,000 in Europe starts at €2,000 with me.\n\n**Bilingual** — Fluent in French and English. Meetings, documentation and code reviews in your preferred language.\n\n**GMT+3 timezone** — Compatible with European business hours and overlapping with US East Coast mornings. Real-time collaboration via Slack, Notion and Google Meet.\n\n**International quality** — 20+ projects delivered with PageSpeed scores of 98-100/100. Typed TypeScript code, tests, CI/CD, technical documentation.\n\n**AI-powered development** — I use Claude Code and GitHub Copilot to accelerate development while maintaining professional code quality. An MVP that used to take 6 weeks ships in 2-3 weeks."
+              "content": "Madagascar has become an emerging tech hub for qualified digital outsourcing. As a React / Next.js developer based in Antananarivo, I offer:\n\n**Competitive rates**: my international day rate is $400/day. A complete Next.js business website starts at $1,800 and a SaaS MVP at $4,000. Scope and price are agreed before work begins.\n\n**Bilingual**: fluent in French and English. Meetings, documentation and code reviews are available in your preferred language.\n\n**GMT+3 timezone**: compatible with European business hours and overlapping with US East Coast mornings. Real-time collaboration via Slack, Notion and Google Meet.\n\n**International quality**: 20+ projects delivered with PageSpeed scores of 98-100/100. Typed TypeScript code, tests, CI/CD and technical documentation.\n\n**AI-assisted development**: I use Claude Code and GitHub Copilot to accelerate development while maintaining professional code quality. An MVP that used to take 6 weeks ships in 2-3 weeks."
             },
             {
               "title": "Types of React / Next.js projects",
@@ -593,7 +593,7 @@
           "faq": [
             {
               "question": "How much does a React / Next.js project cost from Madagascar?",
-              "answer": "A Next.js website starts at €500 (Starter, 5 pages), €1,000 (Pro, 10 pages with custom design) or €1,500 (Advanced, multilingual + CMS). A SaaS MVP starts at €2,000 (Starter with auth + 1 core feature), €4,000 for the Pro tier with Stripe and admin. Beyond that, it's on request. Full pricing grid available on the homepage."
+              "answer": "A Next.js business website starts at $1,800 and a SaaS MVP starts at $4,000. The final price depends on scope, integrations and timeline. For long-term or evolving engagements, my international day rate is $400/day with a 5-day minimum."
             },
             {
               "question": "What's the difference between React and Next.js?",
@@ -676,7 +676,7 @@
             },
             {
               "title": "Why hire a Next.js + Supabase developer from Madagascar?",
-              "content": "This is my daily stack — every project I've shipped since late 2025 uses Next.js + Supabase. This portfolio, Factumation, the visitor tracking system — all built on this stack.\n\n**Proven expertise** — 15+ projects delivered with Next.js + Supabase. Row Level Security, migrations, Edge Functions, Realtime — I master every component.\n\n**Competitive rates** — A SaaS MVP that costs €8,000-25,000 with a US/European freelancer starts at €2,000 with me (Starter tier: auth + 1 core feature + dashboard). €4,000 for the Pro tier with Stripe and admin. Same code quality, strict TypeScript, complete documentation.\n\n**AI-powered development** — I use Claude Code daily to write code faster and cleaner. An MVP that used to take 6 weeks ships in 2-3 weeks.\n\n**GMT+3 timezone** — Real-time collaboration with Europe during business hours. Overlaps with US East Coast mornings."
+              "content": "This is my daily stack: every project I've shipped since late 2025 uses Next.js + Supabase. This portfolio, Factumation and the visitor tracking system are built on it.\n\n**Proven expertise**: 15+ projects delivered with Next.js + Supabase. Row Level Security, migrations, Edge Functions and Realtime are part of the production baseline.\n\n**Competitive rates**: a SaaS MVP starts at $4,000, including authentication, dashboard, database and the first core business feature. Additional scope is estimated separately, with strict TypeScript and complete documentation throughout.\n\n**AI-assisted development**: I use Claude Code daily to write code faster and cleaner. An MVP that used to take 6 weeks ships in 2-3 weeks.\n\n**GMT+3 timezone**: real-time collaboration with Europe during business hours and overlap with US East Coast mornings."
             },
             {
               "title": "Security and best practices",
@@ -766,7 +766,7 @@
           "faq": [
             {
               "question": "How much does a Next.js + Supabase SaaS cost?",
-              "answer": "A Starter SaaS MVP (auth + 1 core feature + dashboard) starts at €2,000. The Pro tier (auth + 3-4 features + Stripe + admin) is €4,000. Beyond that (multi-role, integrated AI, cloud scaling) it's on request or via day rate at €350/day. See the full pricing grid on the homepage."
+              "answer": "A Next.js + Supabase SaaS MVP starts at $4,000, including authentication, dashboard, database and the first core business feature. Additional features, Stripe, administration, roles or AI are included in a scoped estimate. Evolving engagements can use my $400/day international rate."
             },
             {
               "question": "Is Supabase reliable for production?",
@@ -2170,23 +2170,11 @@
         },
         "tiers": [
           {
-            "name": "Starter",
-            "price": "€500",
-            "delay": "≈ 1 week",
-            "details": "5 pages, contact form, basic SEO/GEO, centralized content"
-          },
-          {
-            "name": "Pro",
-            "price": "€1,000",
-            "delay": "1-2 weeks",
-            "details": "Complete business site, 3 AI mockups, form relayed to n8n",
+            "name": "Starting at",
+            "price": "$1,800",
+            "delay": "2-3 weeks",
+            "details": "Complete business website, custom UI direction, SEO/GEO, connected form and production launch",
             "featured": true
-          },
-          {
-            "name": "Advanced + Care",
-            "price": "€1,500 + €149/mo",
-            "delay": "2-3 wks + monthly",
-            "details": "Multilingual, local pages, light edits, uptime, PageSpeed, indexing and SEO/GEO report"
           }
         ]
       },
@@ -2202,23 +2190,11 @@
         },
         "tiers": [
           {
-            "name": "Starter",
-            "price": "€2,000",
-            "delay": "2 weeks",
-            "details": "Auth + 1 core feature + dashboard"
-          },
-          {
-            "name": "Pro",
-            "price": "€4,000",
-            "delay": "3-4 weeks",
-            "details": "Auth + 3-4 features + Stripe + admin",
+            "name": "Starting at",
+            "price": "$4,000",
+            "delay": "3-5 weeks",
+            "details": "Authentication, dashboard, database and the first core business feature",
             "featured": true
-          },
-          {
-            "name": "Premium",
-            "price": "On request",
-            "delay": "1-2 months",
-            "details": "Multi-role, AI integrated, cloud scaling"
           }
         ]
       },
@@ -2234,30 +2210,18 @@
         },
         "tiers": [
           {
-            "name": "Starter",
-            "price": "€500",
-            "delay": "≈ 1 week",
-            "details": "1 workflow (scraping, notifs, sync)"
-          },
-          {
-            "name": "Pro",
-            "price": "€1,000",
-            "delay": "1-2 weeks",
-            "details": "3-5 connected workflows + dashboard",
+            "name": "Starting at",
+            "price": "$1,500",
+            "delay": "1-3 weeks",
+            "details": "Custom workflow, integrations, AI qualification, testing and documentation",
             "featured": true
-          },
-          {
-            "name": "AI Agent",
-            "price": "€1,500",
-            "delay": "2 weeks",
-            "details": "Claude/GPT agent + n8n + integrations"
           }
         ]
       }
     ],
-    "tjm_label": "Custom mission?",
-    "tjm_value": "Day rate €350 / day",
-    "tjm_note": "Audit, consulting, team coaching. 5-day minimum.",
+    "tjm_label": "Long-term or evolving engagement?",
+    "tjm_value": "Day rate $400 / day",
+    "tjm_note": "Audits, team extension and advisory. 5-day minimum.",
     "cta": "Discuss my project",
     "cta_href": "/en/contact"
   },

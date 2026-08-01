@@ -64,6 +64,7 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
         {dict.lines.map((line) => {
           const colors = colorMap[line.color] || colorMap.indigo;
           const isExternal = line.example?.href.startsWith("http");
+          const offer = line.tiers[0];
           return (
             <div key={line.title} className="pricing-line flex flex-col gap-3">
               {line.example && (
@@ -97,8 +98,8 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
                 </Link>
               )}
 
-              <GlassCard borderColor={colors.border} className="flex flex-col flex-grow">
-                <div className="mb-6">
+              <GlassCard borderColor={colors.border} className="flex min-h-[280px] flex-col">
+                <div className="mb-8">
                   <IconScoutIcon
                     name={pricingIconMap[line.icon] ?? "product"}
                     size={28}
@@ -108,29 +109,18 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
                   <p className="text-xs text-slate-400">{line.description}</p>
                 </div>
 
-                <ul className="flex flex-col gap-3 flex-grow">
-                  {line.tiers.map((tier) => (
-                    <li
-                      key={tier.name}
-                      className={`rounded-xl p-4 border transition-colors ${
-                        tier.featured
-                          ? `bg-white/[0.04] border-white/10 ring-1 ${colors.ring}`
-                          : "bg-white/[0.02] border-white/5"
-                      }`}
-                    >
-                      <div className="flex items-baseline justify-between gap-2 mb-1">
-                        <span className={`text-xs font-semibold uppercase tracking-wider ${colors.text}`}>
-                          {tier.name}
-                        </span>
-                        <span className="text-[10px] text-slate-400 uppercase tracking-wider">
-                          {tier.delay}
-                        </span>
-                      </div>
-                      <div className="text-2xl font-bold text-white mb-2">{tier.price}</div>
-                      <p className="text-xs text-slate-400 leading-relaxed">{tier.details}</p>
-                    </li>
-                  ))}
-                </ul>
+                {offer && (
+                  <div className="mt-auto border-t border-white/10 pt-6">
+                    <div className="mb-2 flex items-baseline justify-between gap-3">
+                      <span className={`text-xs font-semibold uppercase ${colors.text}`}>
+                        {offer.name}
+                      </span>
+                      <span className="text-xs text-slate-400">{offer.delay}</span>
+                    </div>
+                    <div className="mb-3 text-3xl font-bold text-white">{offer.price}</div>
+                    <p className="text-sm leading-relaxed text-slate-400">{offer.details}</p>
+                  </div>
+                )}
               </GlassCard>
             </div>
           );
