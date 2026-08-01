@@ -18,6 +18,18 @@ import RefreshRouteOnSave from "@/components/preview/RefreshRouteOnSave";
 import { workflows } from "@/lib/data/workflows";
 import N8nWorkflowSection from "@/components/ui/N8nWorkflowSection";
 
+function projectMetadataTitle(title: string, subtitle: string) {
+  const normalizedTitle = title.trim();
+  const normalizedSubtitle = subtitle.trim();
+  if (
+    !normalizedSubtitle ||
+    normalizedTitle.localeCompare(normalizedSubtitle, undefined, { sensitivity: "accent" }) === 0
+  ) {
+    return normalizedTitle;
+  }
+  return `${normalizedTitle} - ${normalizedSubtitle}`;
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -31,7 +43,7 @@ export async function generateMetadata({
   if (!project) return {};
 
   const projectSeo = getProjectSeoDetails(slug, locale);
-  const metaTitle = projectSeo?.metaTitle ?? `${project.title} - ${project.subtitle}`;
+  const metaTitle = projectSeo?.metaTitle ?? projectMetadataTitle(project.title, project.subtitle);
   const metaDescription = projectSeo?.metaDescription ?? project.description;
   const prefix = locale === "fr" ? "" : "/en";
   return {
@@ -391,7 +403,7 @@ export default async function ProjectPage({
           {project.link && (
             <Button
               href={project.link}
-              variant="primary"
+              variant="glass"
               analytics={{
                 event: "demo_opened",
                 properties: {
@@ -407,6 +419,24 @@ export default async function ProjectPage({
               {locale === "fr" ? "Voir le projet" : "View Project"}
             </Button>
           )}
+          <Button
+            href={`${prefix}/contact`}
+            variant="primary"
+            analytics={{
+              event: "cta_clicked",
+              properties: {
+                area: "project_detail_actions",
+                cta_type: "contact",
+                slug,
+                title: project.title,
+                locale,
+              },
+            }}
+          >
+            {locale === "fr"
+              ? "Discuter d'un projet similaire"
+              : "Discuss a similar project"}
+          </Button>
           <Button
             href={`${prefix}/projects`}
             variant="glass"

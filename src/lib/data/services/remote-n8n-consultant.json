@@ -174,18 +174,18 @@
   "en": {
     "key": "service-18",
     "icon": "hub",
-    "title": "Remote n8n Automation Consultant",
-    "description": "Production-focused n8n consulting for international teams: audits, cloud-to-self-hosted migrations, scaling, API integrations and controlled AI workflows.",
+    "title": "n8n Consultant for US Teams: Migration, Automation & Support",
+    "description": "Hire a remote n8n consultant for production audits, cloud-to-self-hosted migration, workflow automation, API integrations and operational support.",
     "slug": "remote-n8n-automation-consultant",
     "color": "emerald",
     "isLanding": true,
-    "cardTitle": "Remote n8n Automation Consultant",
+    "cardTitle": "n8n Consultant for US Teams",
     "cardDescription": "Migration, self-hosting, scaling and AI workflows built for reliable n8n operations.",
-    "seoTitle": "Remote n8n Automation Consultant | Manda",
-    "seoDescription": "Remote n8n consultant for migration, self-hosting, scaling, API integrations and AI workflows. Production-focused delivery for international teams.",
+    "seoTitle": "n8n Consultant for US Teams | Migration & Automation",
+    "seoDescription": "Hire a remote n8n consultant for workflow audits, migration, self-hosting, API integration and reliable AI automation. US overlap, $400/day.",
     "updatedAt": "2026-07-28T00:00:00.000Z",
     "landing": {
-      "heroText": "Your n8n workflows have become business-critical, but hosting, error recovery or future changes still rely on fragile manual work. I help US and international teams audit, migrate and operate n8n reliably, then build the API and AI workflows that need to hold up in production.",
+        "heroText": "Hire a remote n8n consultant when your workflows have become business-critical but hosting, error recovery or future changes still rely on fragile manual work. I help US teams audit, migrate and operate n8n reliably, then build the API and AI workflows that need to hold up in production.",
       "heroImage": {
         "src": "/images/projects/leads-automation-showcase.png",
         "alt": "n8n lead collection and qualification workflow delivered by Manda"
@@ -237,7 +237,7 @@
         },
         {
           "title": "AI prospecting and automation with controls",
-          "content": "n8n can connect Apify, Apollo, a CRM and an AI model to collect an authorized signal, enrich a company, apply an ICP score and prepare a relevant outreach angle. The value comes from context and prioritization, not automatic send volume.\n\nI keep explicit safeguards in the workflow: approved sources, deduplication, frequency limits, exclusion lists, human message approval and an action log. The same architecture can support customer service, document processing, reporting or data synchronization across several systems."
+          "content": "n8n can connect Apify, Apollo, a CRM and an AI model to collect an authorized signal, enrich a company, apply an ICP score and prepare a relevant outreach angle. The value comes from context and prioritization, not automatic send volume.\n\nI keep explicit safeguards in the workflow: approved sources, deduplication, frequency limits, exclusion lists, human message approval and an action log. The same architecture supports the [AI automation consulting use cases](/en/services/ai-integration) I deliver for customer service, document processing, reporting and data synchronization."
         },
         {
           "title": "Remote delivery that stays readable",

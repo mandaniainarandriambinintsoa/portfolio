@@ -5,6 +5,10 @@ import { SITE_URL } from "@/lib/constants";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import QuizClient from "@/components/quiz/QuizClient";
 
+function titleWithoutSiteSuffix(title: string) {
+  return title.replace(/\s+(?:[|—–-]\s*)?Manda\s*$/i, "");
+}
+
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }));
 }
@@ -19,8 +23,9 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
 
   const path = locale === "fr" ? "/quiz" : "/en/quiz";
+  const title = titleWithoutSiteSuffix(dict.meta.quiz.title);
   return {
-    title: dict.meta.quiz.title,
+    title,
     description: dict.meta.quiz.description,
     alternates: {
       canonical: `${SITE_URL}${path}`,
@@ -31,7 +36,7 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: dict.meta.quiz.title,
+      title,
       description: dict.meta.quiz.description,
       url: `${SITE_URL}${path}`,
       type: "website",

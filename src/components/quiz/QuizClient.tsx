@@ -259,9 +259,9 @@ export default function QuizClient({
               <IconScoutIcon name="clock" size={16} />
               {dict.badge}
             </div>
-            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tighter gradient-text">
+            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tighter gradient-text">
               {dict.page_title}
-            </h2>
+            </h1>
             <p className="text-lg text-slate-400 max-w-lg mx-auto">
               {dict.page_subtitle}
             </p>

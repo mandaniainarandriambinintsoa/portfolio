@@ -331,6 +331,18 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
       relatedLinks: [
         {
+          label: "AI automation consultant for small businesses",
+          href: "/en/services/ai-integration",
+          description:
+            "Production-ready AI automation, API integration and human approval for lean US teams.",
+        },
+        {
+          label: "Remote n8n consultant for US teams",
+          href: "/en/services/remote-n8n-automation-consultant",
+          description:
+            "n8n workflow audits, migrations, self-hosting and production support with US time-zone overlap.",
+        },
+        {
           label: "n8n automation expert in Madagascar",
           href: "/en/services/n8n-automation-expert-madagascar",
           description:

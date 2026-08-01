@@ -195,6 +195,7 @@ async function getSearchConsoleData() {
     pageRows,
     queryRows,
     pageQueryRows,
+    countryPageQueryRows,
     countryRows,
     deviceRows,
   ] = await Promise.all([
@@ -207,6 +208,7 @@ async function getSearchConsoleData() {
     query(last90, ["page"]),
     query(last90, ["query"]),
     query(last90, ["page", "query"]),
+    query(last90, ["country", "page", "query"]),
     query(last90, ["country"]),
     query(last90, ["device"]),
   ]);
@@ -261,6 +263,15 @@ async function getSearchConsoleData() {
     pageQueries: pageQueryRows.map((row) => ({
       path: normalizePath(row.keys?.[0]),
       query: row.keys?.[1],
+      clicks: row.clicks,
+      impressions: row.impressions,
+      ctr: row.ctr,
+      position: row.position,
+    })),
+    countryPageQueries: countryPageQueryRows.map((row) => ({
+      country: row.keys?.[0],
+      path: normalizePath(row.keys?.[1]),
+      query: row.keys?.[2],
       clicks: row.clicks,
       impressions: row.impressions,
       ctr: row.ctr,

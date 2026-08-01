@@ -50,14 +50,14 @@ function compactTopic(item) {
   };
 }
 
-async function fetchTrend({ keyword, geo, dataType, apiKey }) {
+async function fetchTrend({ keyword, geo, language, dataType, apiKey }) {
   const url = new URL("https://serpapi.com/search.json");
   url.searchParams.set("engine", "google_trends");
   url.searchParams.set("q", keyword);
   url.searchParams.set("data_type", dataType);
   url.searchParams.set("date", "today 12-m");
   url.searchParams.set("geo", geo);
-  url.searchParams.set("hl", "fr");
+  url.searchParams.set("hl", language);
   url.searchParams.set("api_key", apiKey);
 
   const response = await fetch(url);
@@ -89,6 +89,7 @@ loadEnvFile(path.join(rootDir, ".env.local"));
 
 const apiKey = required("SERPAPI_KEY");
 const geo = argValue("--geo", "MG").toUpperCase();
+const language = argValue("--hl", "fr").toLowerCase();
 const keywords = argValue(
   "--keywords",
   "agent ia,mobile money,n8n,développeur web,automatisation",
@@ -101,8 +102,20 @@ const keywords = argValue(
 const results = [];
 for (const keyword of keywords) {
   const [queryPayload, topicPayload] = await Promise.all([
-    fetchTrend({ keyword, geo, dataType: "RELATED_QUERIES", apiKey }),
-    fetchTrend({ keyword, geo, dataType: "RELATED_TOPICS", apiKey }),
+    fetchTrend({
+      keyword,
+      geo,
+      language,
+      dataType: "RELATED_QUERIES",
+      apiKey,
+    }),
+    fetchTrend({
+      keyword,
+      geo,
+      language,
+      dataType: "RELATED_TOPICS",
+      apiKey,
+    }),
   ]);
   results.push({
     keyword,
@@ -114,6 +127,7 @@ for (const keyword of keywords) {
 const report = {
   generatedAt: new Date().toISOString(),
   geo,
+  language,
   period: "today 12-m",
   searchesUsed: keywords.length * 2,
   results,
@@ -130,6 +144,7 @@ if (outputPath) {
       outputPath: absoluteOutputPath,
       generatedAt: report.generatedAt,
       geo,
+      language,
       keywords,
       searchesUsed: report.searchesUsed,
     }, null, 2)}\n`,

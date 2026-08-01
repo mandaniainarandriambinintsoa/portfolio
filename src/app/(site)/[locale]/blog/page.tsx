@@ -15,10 +15,12 @@ export async function generateMetadata({
   const { locale: rawLocale } = await params;
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
 
-  const title = locale === "fr" ? "Blog" : "Blog";
+  const title = locale === "fr"
+    ? "Blog automatisation, IA & n8n"
+    : "AI Automation & n8n Insights";
   const description = locale === "fr"
-    ? "Articles techniques sur l'automatisation, le No-Code, l'IA et le développement web."
-    : "Technical articles about automation, No-Code, AI and web development.";
+    ? "Guides et retours d'expérience sur l'automatisation n8n, les agents IA, le SEO/GEO et le développement de produits web."
+    : "Practical guides and case studies about n8n automation, AI agents, SEO/GEO and building reliable web products.";
 
   const prefix = locale === "fr" ? "" : "/en";
 

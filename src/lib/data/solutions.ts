@@ -3366,6 +3366,11 @@ const solutionsByLocale: Record<Locale, Solution[]> = {
 };
 
 const serviceToSolutionSlugs: Record<string, string[]> = {
+  "integration-ia": [
+    "agent-ia-support-client",
+    "agent-ia-prospection",
+    "automatisation-n8n-pme",
+  ],
   "automatisation-n8n": [
     "automatisation-n8n-pme",
     "automatisation-marketing-n8n",
@@ -3405,6 +3410,11 @@ const serviceToSolutionSlugs: Record<string, string[]> = {
     "n8n-automation-for-smbs",
     "n8n-marketing-automation",
     "ai-prospecting-agent",
+  ],
+  "ai-integration": [
+    "ai-customer-support-agent",
+    "ai-prospecting-agent",
+    "n8n-automation-for-smbs",
   ],
   "n8n-automation-expert-madagascar": [
     "n8n-automation-for-smbs",

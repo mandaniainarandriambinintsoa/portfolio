@@ -82,10 +82,173 @@
       },
       {
         "icon": "psychology",
-        "title": "AI Integration & Prompt Engineering",
-        "description": "AI agents and LLMs integrated into your sites and SaaS. Prompt engineering, Claude Code, OpenAI Codex, GPT, intelligent automation of your operations.",
+        "title": "AI Automation Consultant for US Small Businesses",
+        "description": "AI automation consulting for small businesses: I identify the right workflow, integrate your tools and deploy a controlled production system.",
         "slug": "ai-integration",
-        "color": "blue"
+        "color": "blue",
+        "cardTitle": "AI Automation Consulting",
+        "cardDescription": "Practical AI workflows for small business operations",
+        "isLanding": true,
+        "seoTitle": "AI Automation Consultant for Small Business | Manda",
+        "seoDescription": "AI automation consultant for US small businesses. Practical AI agents, CRM workflows and API integrations built with controls and measurable outcomes.",
+        "landing": {
+          "heroText": "I help US small businesses turn repetitive operations into reliable AI-assisted workflows. We start with one measurable bottleneck, map the people and tools involved, then deploy the smallest production system that solves it: lead qualification, customer support, document processing, CRM updates, reporting or a custom internal tool. You work directly with the consultant who scopes, builds and monitors the solution.",
+          "heroImage": {
+            "src": "/images/projects/veille-codeur-pipeline-n8n.png",
+            "alt": "AI automation workflow for opportunity monitoring, qualification and human review"
+          },
+          "features": [
+            {
+              "icon": "manage_search",
+              "title": "Workflow audit",
+              "description": "Find the repetitive process with the clearest operational return."
+            },
+            {
+              "icon": "psychology",
+              "title": "Applied AI",
+              "description": "Classification, extraction and drafting where judgment adds value."
+            },
+            {
+              "icon": "hub",
+              "title": "Tool integration",
+              "description": "CRM, email, forms, databases and internal APIs connected end to end."
+            },
+            {
+              "icon": "verified",
+              "title": "Human controls",
+              "description": "Approvals and limits before sensitive or customer-facing actions."
+            },
+            {
+              "icon": "monitoring",
+              "title": "Production visibility",
+              "description": "Logs, alerts and measurable outcomes instead of a black-box demo."
+            },
+            {
+              "icon": "description",
+              "title": "Documented handoff",
+              "description": "Clear ownership, credentials checklist and operating notes."
+            }
+          ],
+          "sections": [
+            {
+              "title": "What does an AI automation consultant do?",
+              "content": "An AI automation consultant identifies a business process where automation can create a measurable result, then connects the data, software and human decisions required to operate it. The work is not limited to selecting an AI model. It includes workflow design, API integration, safeguards, deployment and measurement.\n\nFor a small business, that usually means improving a process already happening every day: qualifying incoming leads, preparing customer replies, extracting information from documents, updating a CRM, producing reports or routing requests to the right person."
+            },
+            {
+              "title": "AI automation use cases for small businesses",
+              "content": "The strongest first use case has a clear trigger, repeated steps and an owner who can confirm whether the output is correct. Examples include form-to-CRM qualification, support triage with human handoff, invoice or document extraction, appointment follow-up, sales research and weekly operational reporting.\n\nI use [n8n consulting and automation](/en/services/remote-n8n-automation-consultant) when a visual workflow is the right operational layer, custom APIs when an integration needs more control, and Next.js + Supabase when the team also needs an interface or internal application."
+            },
+            {
+              "title": "From one bottleneck to a production workflow",
+              "content": "We begin with the current process: inputs, decisions, tools, exceptions, volume and cost of failure. I define a small first release and the metric it should improve, then build and test it with controlled data before connecting production accounts.\n\nThe workflow includes the unglamorous parts that make automation useful: duplicate prevention, retries, timeout handling, action logs, alerts and a manual path when confidence is low. Once the first workflow is stable, we decide from evidence whether another process deserves automation."
+            },
+            {
+              "title": "Human approval, security and responsible automation",
+              "content": "AI should not independently send a sensitive message, change financial data or update a critical record simply because a model produced an answer. I keep explicit human approval for high-impact actions and define what the system may do automatically.\n\nCredentials stay outside workflow exports, access follows least privilege, and stored data is limited to what the process needs. For customer-facing systems, the design includes escalation, traceability and a clear way for a person to take over."
+            },
+            {
+              "title": "Proof from systems already in production",
+              "content": "My [project portfolio](/en/projects) includes a Codeur opportunity-monitoring workflow with scoring and human review, FlowRemote job collection and qualification, visitor tracking with actionable alerts, and complete products combining Next.js, Supabase, APIs and automation.\n\nThese examples show the full delivery chain: collect a signal, structure it, apply business rules or AI, let a person approve when necessary, then record the outcome. The same architecture can be adapted to a small business without forcing an oversized platform."
+            },
+            {
+              "title": "AI automation consulting cost and engagement",
+              "content": "My standard international rate is **$400 per day**. A first engagement starts with a focused process review and a written scope. Depending on complexity, the first production workflow can then be delivered as a small fixed batch or on a day-rate basis when integrations still need discovery.\n\nI work remotely from GMT+3 with planned overlap for US meetings and asynchronous delivery through written decisions, short updates and demonstrations. Larger programs requiring several simultaneous specialists remain a better fit for an agency."
+            }
+          ],
+          "comparisonTable": {
+            "title": "A quick AI demo or an operational automation system?",
+            "intro": "Both can validate an idea, but only one is designed to carry a recurring business process.",
+            "headers": [
+              "Criterion",
+              "AI demo",
+              "Production automation"
+            ],
+            "rows": [
+              {
+                "criterion": "Starting point",
+                "noCode": "A model or tool to try",
+                "nextjs": "A measurable business bottleneck",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Exceptions",
+                "noCode": "Happy path only",
+                "nextjs": "Retries, fallbacks and manual review",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Sensitive actions",
+                "noCode": "Often fully automatic",
+                "nextjs": "Explicit limits and human approval",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Measurement",
+                "noCode": "Interesting output",
+                "nextjs": "Time, quality or revenue metric",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Ownership",
+                "noCode": "Prototype handoff",
+                "nextjs": "Logs, documentation and operating owner",
+                "winner": "nextjs"
+              }
+            ],
+            "conclusion": "Start with a narrow workflow, but build its controls and measurement as if the business will depend on it."
+          },
+          "faq": [
+            {
+              "question": "What is an AI automation consultant?",
+              "answer": "A specialist who maps a business process, selects where AI or automation is useful, integrates the required tools and deploys the workflow with controls, monitoring and measurable outcomes."
+            },
+            {
+              "question": "How can AI automation help a small business?",
+              "answer": "It can reduce repetitive work in lead qualification, support triage, document processing, CRM updates, follow-up and reporting. The best first project targets one process with a clear owner and measurable result."
+            },
+            {
+              "question": "How much does AI automation consulting cost?",
+              "answer": "My standard international rate is $400 per day. I begin with a focused process review and provide a written scope before implementation. The total depends on integrations, exceptions and operational risk."
+            },
+            {
+              "question": "Which tools do you use?",
+              "answer": "I use n8n for workflow orchestration, OpenAI or Anthropic models when AI judgment is useful, APIs for system integration, and Next.js with Supabase when the workflow needs a dedicated interface or application."
+            },
+            {
+              "question": "Will the AI act without human approval?",
+              "answer": "Only for actions we explicitly classify as low risk. Customer-facing, financial or irreversible actions can require human approval, with logs and escalation when confidence is low."
+            },
+            {
+              "question": "Do you work with US small businesses?",
+              "answer": "Yes. I work remotely from GMT+3 with planned overlap for meetings and asynchronous progress through written decisions, updates and demonstrations."
+            }
+          ],
+          "showcase": [
+            {
+              "src": "/images/projects/veille-codeur-pipeline-n8n.png",
+              "alt": "Codeur opportunity monitoring workflow with AI scoring and human review",
+              "title": "Codeur Opportunity Monitor",
+              "description": "Opportunity collection, scoring, review and CRM-ready output."
+            },
+            {
+              "src": "/images/projects/scraping-flowremote-automatisation-emploi.png",
+              "alt": "FlowRemote n8n workflow for job collection and qualification",
+              "title": "FlowRemote",
+              "description": "Collection, qualification and automated distribution of relevant opportunities."
+            },
+            {
+              "src": "/images/projects/tracking-visiteurs-suivi-temps-reel.png",
+              "alt": "Visitor tracking automation with actionable notifications",
+              "title": "Visitor Tracking",
+              "description": "Event collection, structured storage and qualified alerts."
+            }
+          ],
+          "cta": {
+            "title": "Which repetitive process should you automate first?",
+            "description": "Describe the current steps, tools and main bottleneck. I will help you identify a realistic first production workflow.",
+            "buttonLabel": "Review my workflow"
+          }
+        }
       },
       {
         "icon": "hub",
@@ -1830,38 +1993,38 @@
         }
       },
       {
-        "title": "Forward Deployed Engineer (freelance): from business problem to production",
-        "description": "Freelance Forward Deployed Engineer: I start from your business problem and ship the solution to production (AI agent, n8n, custom app), not code in a silo.",
+        "title": "Forward Deployed AI Engineer for US teams: from business problem to production",
+        "description": "Remote Forward Deployed AI Engineer for US startups and product teams: I scope and ship AI agents, n8n automations and custom applications.",
         "slug": "forward-deployed-engineer",
         "color": "emerald",
         "icon": "deployed_code",
         "cardTitle": "Forward Deployed Engineer",
-        "cardDescription": "From business problem to production",
+        "cardDescription": "Remote AI delivery for US product teams",
         "isLanding": true,
-        "seoTitle": "Forward Deployed Engineer (freelance) | Manda",
-        "seoDescription": "Freelance Forward Deployed Engineer: I start from your business problem, talk it through with you and ship the solution to production (AI agent, n8n, custom app). Quote within 48h.",
+        "seoTitle": "Forward Deployed AI Engineer for US Teams | Manda",
+        "seoDescription": "Remote Forward Deployed AI Engineer for US startups: AI agents, n8n automations and custom apps shipped from business problem to production.",
         "landing": {
-          "heroText": "A Forward Deployed Engineer does not ship isolated code: they get close to the business need and build the solution that solves it. That is how I work. I start from your problem (time lost on a task, a manual process, a product to ship), talk it through with you, then design and ship the concrete solution to production: AI agent, n8n automation, custom application. Between developer, consultant and product builder, with a deliverable that runs, not a slide.",
+          "heroText": "I work remotely as a contract Forward Deployed AI Engineer for US startups and product teams. I start with the operational problem, work directly with the people who own it, then design, build and deploy the complete solution: an AI agent, an n8n automation, an API integration or a custom Next.js application. You get one technical partner from discovery to production, with working software and measurable outcomes rather than a prototype handoff.",
           "sections": [
             {
-              "title": "What is a Forward Deployed Engineer",
-              "content": "A Forward Deployed Engineer (FDE) is a developer who works very close to the client and the business to build concrete solutions fast. They sit between several roles: developer, technical consultant, product builder, AI integrator and field engineer.\n\nThe term was popularized by Palantir, then adopted by AI labs and large companies (OpenAI, Anthropic, Salesforce): FDE openings exploded in a year. The difference with a classic developer fits in one sentence: they do not code a spec in a silo, they solve a business problem with a solution that fits the real need."
+              "title": "What is a Forward Deployed AI Engineer?",
+              "content": "A Forward Deployed Engineer (FDE) works close to customers and operators to turn a business problem into production software. The role combines software engineering, technical consulting, product judgment and implementation. A Forward Deployed AI Engineer adds AI systems, workflow automation and model integration to that delivery responsibility.\n\nThe title was popularized by Palantir and is now used by AI companies including OpenAI and Anthropic. Unlike a developer waiting for a fixed specification, an FDE helps discover the right solution, builds it inside the customer's environment and remains accountable for whether it works in practice."
             },
             {
-              "title": "How I work: from business problem to production",
-              "content": "It starts with a conversation, not a frozen spec sheet. You might say: 'we lose too much time handling customer requests by email.' I dig into the real need, then build the full chain: Gmail or CRM, an AI agent that reads the request, classifies it, proposes a reply, human validation, send, and a log in the CRM.\n\nConcretely: I scope, design, build with AI builders (Claude Code) to move fast, integrate your tools (APIs, CRM, calendar, n8n), keep human validation where stakes justify it, deploy and measure. The deliverable is not a demo: it is a system running in production that you keep."
+              "title": "When a US startup needs a contract or fractional FDE",
+              "content": "A contract FDE is useful when the problem crosses product, engineering and operations: a manual workflow is slowing the team down, an AI prototype must become reliable, several APIs need to work as one system, or a customer deployment needs technical ownership. You get senior execution without waiting to hire a full internal team.\n\nI work asynchronously from Madagascar with planned overlap for US meetings, written decisions and visible delivery milestones. A typical engagement starts with a short technical and business review, moves to a scoped production release, then continues with monitoring and iteration when the system proves its value."
             },
             {
-              "title": "What I build concretely",
-              "content": "The solutions I ship most often: [AI agents](/en/services/ai-agent-developer-madagascar) (text and [voice](/en/services/ai-voice-agent-developer)) that automate business conversations, [n8n automations](/en/services/n8n-automation-expert-madagascar) that connect your tools, and custom applications in Next.js + Supabase.\n\nThe common thread: not isolated bricks, but solutions built for a precise business problem. Request classification, lead qualification, appointment booking, document processing, automated reporting: every time, the tech serves the outcome, not the other way around."
+              "title": "AI agents, automation and software I deploy",
+              "content": "I build [AI agents](/en/services/ai-agent-developer-madagascar), [remote n8n automation systems](/en/services/remote-n8n-automation-consultant), API integrations and custom Next.js + Supabase applications. Common use cases include lead qualification, customer support with human handoff, document processing, internal reporting, CRM synchronization and operational tools.\n\nThe architecture fits the risk of the workflow: human approval before sensitive actions, retries and error paths around external APIs, logs for diagnosis, and ownership of deployment. The goal is not to add AI everywhere. It is to remove a measurable bottleneck with the simplest system that can operate reliably."
             },
             {
-              "title": "Proof: solutions in production, not demos",
-              "content": "I do not sell a title, I show systems that run. I built the mobile money backend of paidmada, the management dashboard of ScalApp, and a live ElevenLabs AI voice agent on MadaVoyage that answers visitors by voice.\n\nThat is the advantage of an identifiable freelance FDE: you talk to the person who builds, you audit real projects before signing, and you keep a single point of contact from the problem to production. See my [projects](/en/projects)."
+              "title": "Production proof across product, AI and automation",
+              "content": "My [project portfolio](/en/projects) includes the PaidMada mobile-money backend, the ScalApp management product, a live ElevenLabs voice agent for MadaVoyage and production n8n workflows for acquisition and operations. These projects combine interfaces, business logic, data, APIs and deployment rather than stopping at an isolated demo.\n\nYou work directly with the person who scopes and builds the system. That shortens feedback loops, keeps technical decisions connected to the business objective and gives you one accountable point of contact from the first workflow map to production."
             },
             {
-              "title": "When a freelance FDE rather than a classic dev or an agency",
-              "content": "The FDE is the right choice when your real blocker is not 'write this spec' but 'understand the problem and build the right solution.' You get one person who owns the outcome, from scoping to production, with no intermediary and no handover.\n\nA classic developer executes a spec, often in a silo. An agency brings a team but adds layers (sales, project manager). For a scoped problem where you need to go from need to solution fast, the freelance FDE is the most direct. My day rate is €350, quote within 48h, remote with clients in Europe and internationally. For very large multi-profile programs, an agency stays more suitable."
+              "title": "Engagement model for US companies",
+              "content": "The best fit is a defined operational problem that needs discovery and implementation: an automation to productionize, an internal tool to ship, an AI integration to make reliable or a customer workflow to connect end to end. I can own the first release and document the system for your team, or continue as a fractional technical partner.\n\nMy standard international rate is $400 per day, with a written scope and estimate within 48 hours. A classic developer remains appropriate when the specification is already complete; a larger agency is better for programs requiring several full-time specialists at once."
             }
           ],
           "features": [
@@ -1897,8 +2060,8 @@
             }
           ],
           "comparisonTable": {
-            "title": "Forward Deployed Engineer vs classic developer",
-            "intro": "The difference is not the tech but the starting point and the deliverable. Here is the comparison on the criteria that matter.",
+            "title": "Forward Deployed AI Engineer vs classic developer",
+            "intro": "The difference is not the programming language. It is ownership of discovery, implementation and the production outcome.",
             "headers": [
               "Criterion",
               "Classic dev / subcontractor",
@@ -1948,16 +2111,20 @@
               "answer": "A classic developer executes a spec, often in a silo. A Forward Deployed Engineer starts from the business problem, talks it through with the client, designs the fitting solution and ships it to production, owning the outcome end to end."
             },
             {
-              "question": "Can a freelance be a Forward Deployed Engineer?",
-              "answer": "Yes, and it is an ideal format: a single identifiable point of contact, in direct touch with the need, who owns the solution from scoping to production with no intermediary or handover. That is exactly how I work."
+              "question": "What is the difference between an FDE and a solutions engineer?",
+              "answer": "Both roles work close to customers. A solutions engineer often focuses on proving and configuring an existing platform, while a Forward Deployed Engineer takes broader responsibility for building, integrating and operating the custom production solution."
+            },
+            {
+              "question": "Can you work as a remote FDE for a US company?",
+              "answer": "Yes. I work asynchronously from Madagascar with written documentation, visible milestones and planned overlap for US meetings. You keep one accountable technical partner from discovery through deployment."
             },
             {
               "question": "What solutions do you build?",
               "answer": "Mostly AI agents (text and voice), n8n automations that connect your tools, and custom applications in Next.js + Supabase. Always aimed at a precise business problem: request classification, lead qualification, appointment booking, document processing, reporting."
             },
             {
-              "question": "How long and how much does it cost?",
-              "answer": "Depending on scope, a first production solution often ships in a few weeks. My day rate is €350, billed directly with no middleman markup, with a quote within 48h. I work remotely with clients in Europe and internationally."
+              "question": "How much does a contract Forward Deployed Engineer cost?",
+              "answer": "My standard international rate is $400 per day. Depending on scope, a first production release often ships in a few weeks. You receive a written scope and estimate within 48 hours, with no agency markup."
             }
           ]
         }

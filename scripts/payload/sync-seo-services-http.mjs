@@ -2,11 +2,19 @@ import { readFile } from "node:fs/promises";
 
 await loadEnvLocal(".env.local");
 
-const targetSlugs = new Set([
+const defaultTargetSlugs = [
   "developpeur-react-nextjs-madagascar",
   "developpeur-javascript-madagascar",
   "developpeur-nodejs-madagascar",
-]);
+  "forward-deployed-engineer",
+];
+const requestedSlugs = (readArgument("--slugs") ?? "")
+  .split(",")
+  .map((slug) => slug.trim())
+  .filter(Boolean);
+const targetSlugs = new Set(
+  requestedSlugs.length > 0 ? requestedSlugs : defaultTargetSlugs,
+);
 const baseUrl = readArgument("--base-url") ?? "http://localhost:3020";
 const apiSecret = process.env.API_SECRET_KEY;
 

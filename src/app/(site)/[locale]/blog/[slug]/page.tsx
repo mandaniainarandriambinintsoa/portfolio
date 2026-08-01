@@ -12,6 +12,10 @@ import MarkdownRenderer from "@/components/blog/MarkdownRenderer";
 import Button from "@/components/ui/Button";
 import IconScoutIcon from "@/components/icons/IconScoutIcon";
 
+function withoutLeadingMarkdownTitle(content: string) {
+  return content.replace(/^\s*#\s+[^\r\n]+\r?\n+/, "");
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -74,6 +78,7 @@ export default async function BlogPostPage({
   if (!post) notFound();
 
   const prefix = locale === "fr" ? "" : "/en";
+  const articleContent = withoutLeadingMarkdownTitle(post.content);
 
   const breadcrumbs = [
     { name: locale === "fr" ? "Accueil" : "Home", href: locale === "fr" ? "/" : "/en" },
@@ -156,7 +161,7 @@ export default async function BlogPostPage({
 
           {/* Article content */}
           <div className="blog-content">
-            <MarkdownRenderer content={post.content} />
+            <MarkdownRenderer content={articleContent} />
           </div>
 
           {/* Back to blog */}
