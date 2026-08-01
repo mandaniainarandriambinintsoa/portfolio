@@ -60,13 +60,13 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
         {dict.subtitle}
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3">
         {dict.lines.map((line) => {
           const colors = colorMap[line.color] || colorMap.indigo;
           const isExternal = line.example?.href.startsWith("http");
           const offer = line.tiers[0];
           return (
-            <div key={line.title} className="pricing-line flex flex-col gap-3">
+            <div key={line.title} className="pricing-line flex h-full flex-col gap-3">
               {line.example && (
                 <Link
                   href={line.example.href}
@@ -80,13 +80,13 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
                     href: line.example.href,
                     external: isExternal,
                   })}
-                  className={`group flex items-center justify-between gap-3 rounded-xl px-4 py-3 bg-white/[0.02] border border-white/5 hover:bg-white/[0.05] hover:border-white/10 transition-colors`}
+                  className="group flex min-h-[72px] items-center justify-between gap-3 rounded-xl border border-white/5 bg-white/[0.02] px-4 py-3 transition-colors hover:border-white/10 hover:bg-white/[0.05]"
                 >
                   <div className="flex flex-col min-w-0">
                     <span className={`text-[10px] font-semibold uppercase tracking-wider ${colors.text}`}>
                       {line.example.label}
                     </span>
-                    <span className="text-sm text-slate-200 truncate">
+                    <span className="text-sm leading-snug text-slate-200">
                       {line.example.title}
                     </span>
                   </div>
@@ -98,7 +98,7 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
                 </Link>
               )}
 
-              <GlassCard borderColor={colors.border} className="flex min-h-[280px] flex-col">
+              <GlassCard borderColor={colors.border} className="flex flex-1 flex-col">
                 <div className="mb-8">
                   <IconScoutIcon
                     name={pricingIconMap[line.icon] ?? "product"}
