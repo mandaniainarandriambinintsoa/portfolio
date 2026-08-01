@@ -23,6 +23,7 @@ function reorderForDisplay(items: ProjectItem[]): ProjectItem[] {
     "madavoyage",
     "garagiste",
     "bati-diaspora",
+    "international-opportunity-agent-n8n",
     "factumation",
     "veille-codeur-automatisation-n8n",
     "leads-automation-showcase",
