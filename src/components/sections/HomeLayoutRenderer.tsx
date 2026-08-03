@@ -11,7 +11,7 @@ import Pricing from "@/components/sections/Pricing";
 import Process from "@/components/sections/Process";
 import HowToJsonLd from "@/components/seo/HowToJsonLd";
 import Approach from "@/components/sections/Approach";
-import HomeSeoGrowthProof from "@/components/sections/HomeSeoGrowthProof";
+import Stats from "@/components/sections/Stats";
 import CollaborationGuides from "@/components/sections/CollaborationGuides";
 import TechStack from "@/components/sections/TechStack";
 import FAQ from "@/components/sections/FAQ";
@@ -25,6 +25,7 @@ const CommandCenterAnim = dynamic(() => import("@/components/animations/CommandC
 const PricingAnim = dynamic(() => import("@/components/animations/PricingAnim"));
 const ProcessAnim = dynamic(() => import("@/components/animations/ProcessAnim"));
 const ApproachAnim = dynamic(() => import("@/components/animations/ApproachAnim"));
+const StatsAnim = dynamic(() => import("@/components/animations/StatsAnim"));
 const CollaborationGuidesAnim = dynamic(() => import("@/components/animations/CollaborationGuidesAnim"));
 const TechStackAnim = dynamic(() => import("@/components/animations/TechStackAnim"));
 const FAQAnim = dynamic(() => import("@/components/animations/FAQAnim"));
@@ -117,7 +118,9 @@ export default function HomeLayoutRenderer({ dict, layout, locale, projects }: P
           case "homeStats":
             return (
               <div key={key} className="below-fold">
-                <HomeSeoGrowthProof locale={locale} />
+                <StatsAnim>
+                  <Stats title={dict.stats.title} items={dict.stats.items} />
+                </StatsAnim>
               </div>
             );
 
