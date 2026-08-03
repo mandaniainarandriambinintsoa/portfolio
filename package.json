@@ -22,6 +22,7 @@
     "payload:sync:n8n-consultant": "node scripts/payload/sync-remote-n8n-consultant.mjs",
     "payload:sync:opportunity-agent": "payload run scripts/payload/sync-international-opportunity-agent.mjs",
     "payload:sync:home-hero": "payload run scripts/payload/sync-home-hero.mjs",
+    "payload:sync:command-center": "payload run scripts/payload/sync-command-center.mjs",
     "payload:sync:pricing": "payload run scripts/payload/sync-pricing.mjs",
     "payload:sync:blog:http": "node scripts/payload/sync-supabase-blog-http.mjs",
     "analytics:cross": "node scripts/analytics/cross-seo-product-data.mjs --output .tmp-analytics/seo-product-report.json",

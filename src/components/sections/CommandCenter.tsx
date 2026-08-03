@@ -27,17 +27,17 @@ const NODE_STYLES: {
     iconColor: "text-indigo-300",
   },
   {
-    icon: "ai",
+    icon: "automation",
     ring: "border-emerald-400/25 bg-emerald-400/[0.07]",
     iconColor: "text-emerald-300",
   },
   {
-    icon: "automation",
+    icon: "data",
     ring: "border-sky-400/25 bg-sky-400/[0.07]",
     iconColor: "text-sky-300",
   },
   {
-    icon: "data",
+    icon: "growth",
     ring: "border-violet-400/25 bg-violet-400/[0.07]",
     iconColor: "text-violet-300",
   },

@@ -61,13 +61,13 @@
   "command_center": {
     "badge": "De l'interface à la production",
     "title": "L'anatomie d'un produit que je conçois",
-    "caption": "Une interface réactive, une logique IA qui décide, des automatisations qui exécutent et des données qui circulent. Un produit complet, pas juste une brique.",
-    "note": "Pas besoin du pipeline complet : je livre aussi chaque brique séparément, qu'il s'agisse d'un site, d'un SaaS, d'une intégration IA ou d'une automatisation.",
+    "caption": "Une interface claire, des automatisations qui exécutent, des données fiables et une visibilité mesurée sur Google et dans les réponses IA. Un produit complet, pas juste une brique.",
+    "note": "Chaque brique peut aussi être livrée séparément : site, SaaS, automatisation, données ou accompagnement SEO/GEO.",
     "nodes": [
-      { "label": "Interface", "sublabel": "App web réactive · Next.js" },
-      { "label": "Logique IA", "sublabel": "Claude Code / Codex · Prompt Engineering" },
-      { "label": "Automatisation", "sublabel": "Workflows n8n qui exécutent" },
-      { "label": "Données", "sublabel": "Supabase · temps réel" }
+      { "label": "Interface", "sublabel": "Expérience web réactive · Next.js" },
+      { "label": "Automatisation", "sublabel": "Workflows n8n · APIs connectées" },
+      { "label": "Données", "sublabel": "Supabase · suivi en temps réel" },
+      { "label": "SEO, GEO & métriques", "sublabel": "GSC · PostHog · citations par les IA" }
     ]
   },
   "services": {

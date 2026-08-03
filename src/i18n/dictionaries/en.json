@@ -61,13 +61,13 @@
   "command_center": {
     "badge": "From interface to production",
     "title": "The anatomy of a product I build",
-    "caption": "A reactive interface, AI logic that decides, automations that execute and data that flows. A complete product, not just one brick.",
-    "note": "No need for the full pipeline: I also deliver each brick on its own, whether it is a site, a SaaS, an AI integration or an automation.",
+    "caption": "A clear interface, automations that execute, reliable data and measurable visibility on Google and in AI answers. A complete product, not just one piece.",
+    "note": "Each part can also be delivered separately: website, SaaS, automation, data or SEO/GEO support.",
     "nodes": [
-      { "label": "Interface", "sublabel": "Reactive web app · Next.js" },
-      { "label": "AI logic", "sublabel": "Claude Code / Codex · Prompt Engineering" },
-      { "label": "Automation", "sublabel": "n8n workflows that execute" },
-      { "label": "Data", "sublabel": "Supabase · real time" }
+      { "label": "Interface", "sublabel": "Responsive web experience · Next.js" },
+      { "label": "Automation", "sublabel": "n8n workflows · connected APIs" },
+      { "label": "Data", "sublabel": "Supabase · real-time monitoring" },
+      { "label": "SEO, GEO & analytics", "sublabel": "GSC · PostHog · citations in AI answers" }
     ]
   },
   "services": {
