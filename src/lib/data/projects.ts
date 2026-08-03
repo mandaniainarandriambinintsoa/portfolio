@@ -14,6 +14,7 @@ type PreviewReadOptions = {
 };
 
 const siteMetierSlugs = new Set(["madavoyage", "garagiste", "bati-diaspora"]);
+const codeOwnedProjectSlugs = new Set(["geo-seo-boost"]);
 
 function normalizeCategory(project: ProjectItem): ProjectItem {
   if (!siteMetierSlugs.has(project.slug)) {
@@ -79,13 +80,28 @@ async function fetchFromDict(locale: Locale): Promise<ProjectItem[]> {
   return (dict.projects.items as ProjectItem[]).map(normalizeCategory);
 }
 
+function mergeCodeOwnedProjects(
+  remoteProjects: ProjectItem[],
+  dictionaryProjects: ProjectItem[]
+): ProjectItem[] {
+  const remoteSlugs = new Set(remoteProjects.map((project) => project.slug));
+  const additions = dictionaryProjects.filter(
+    (project) => codeOwnedProjectSlugs.has(project.slug) && !remoteSlugs.has(project.slug)
+  );
+
+  return [...additions, ...remoteProjects];
+}
+
 export async function getProjects(locale: Locale, options?: PreviewReadOptions): Promise<ProjectItem[]> {
   if (process.env.PAYLOAD_SKIP_REMOTE_CONTENT === "true") {
     return fetchFromDict(locale);
   }
 
   const payloadData = await getPayloadProjects(locale, options);
-  if (payloadData?.length) return payloadData;
+  if (payloadData?.length) {
+    const dictData = await fetchFromDict(locale);
+    return mergeCodeOwnedProjects(payloadData, dictData);
+  }
 
   const supabaseData = await fetchFromSupabase(locale);
   const dictData = await fetchFromDict(locale);

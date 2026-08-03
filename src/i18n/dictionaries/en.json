@@ -2334,6 +2334,23 @@
         "workflowFile": null
       },
       {
+        "slug": "geo-seo-boost",
+        "title": "SEO growth & GEO visibility",
+        "subtitle": "GSC monitoring, search-led content and AI citations",
+        "description": "An SEO and GEO growth system applied to manda-ia.com: Google Search Console query analysis, creation and optimization of pages around real search intent, daily monitoring of clicks, impressions, CTR and rankings, and improvements to make the site easier for AI engines to cite. Results are documented with verified GSC data and an observed first-place recommendation in ChatGPT.",
+        "tags": [
+          "SEO",
+          "GEO",
+          "Google Search Console",
+          "PostHog"
+        ],
+        "link": null,
+        "featured": true,
+        "category": "webapp",
+        "image": "/images/projects/geo-seo-boost.svg",
+        "workflowFile": null
+      },
+      {
         "slug": "scalapp",
         "title": "ScalApp",
         "subtitle": "Investment Management Dashboard · ScalApp France",
