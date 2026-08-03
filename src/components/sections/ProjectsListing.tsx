@@ -4,7 +4,11 @@ import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap-register";
 import ProjectCard from "@/components/ui/ProjectCard";
-import { getCategoryLabel, getProjectTone } from "@/lib/project-display";
+import {
+  getCategoryLabel,
+  getProjectDestination,
+  getProjectTone,
+} from "@/lib/project-display";
 import type { ProjectCategory, ProjectItem } from "@/lib/types";
 
 type CategoryFilter = "all" | ProjectCategory;
@@ -85,7 +89,7 @@ export default function ProjectsListing({
           <ProjectCard
             key={project.slug}
             project={project}
-            href={`${prefix}/projects/${project.slug}`}
+            href={getProjectDestination(project.slug, prefix)}
             categoryLabel={getCategoryLabel(project.category, categoryLabels)}
             tone={getProjectTone(project.category)}
             showDescription

@@ -2335,8 +2335,8 @@
       },
       {
         "slug": "geo-seo-boost",
-        "title": "SEO growth & GEO visibility",
-        "subtitle": "GSC monitoring, search-led content and AI citations",
+        "title": "SEO + GEO",
+        "subtitle": "Rank on Google and get cited by AI",
         "description": "An SEO and GEO growth system applied to manda-ia.com: Google Search Console query analysis, creation and optimization of pages around real search intent, daily monitoring of clicks, impressions, CTR and rankings, and improvements to make the site easier for AI engines to cite. Results are documented with verified GSC data and an observed first-place recommendation in ChatGPT.",
         "tags": [
           "SEO",
@@ -2347,7 +2347,7 @@
         "link": null,
         "featured": true,
         "category": "webapp",
-        "image": "/images/projects/geo-seo-boost.svg",
+        "image": "/images/projects/consultant-seo-geo-gsc.png",
         "workflowFile": null
       },
       {

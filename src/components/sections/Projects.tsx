@@ -5,7 +5,11 @@ import Link from "next/link";
 import type { gsap as GsapType } from "gsap";
 import type { Locale } from "@/i18n/config";
 import type { ProjectItem, ProjectCategory } from "@/lib/types";
-import { getCategoryLabel, getProjectTone } from "@/lib/project-display";
+import {
+  getCategoryLabel,
+  getProjectDestination,
+  getProjectTone,
+} from "@/lib/project-display";
 import ProjectCard from "@/components/ui/ProjectCard";
 import IconScoutIcon from "@/components/icons/IconScoutIcon";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -169,7 +173,7 @@ export default function Projects({
             <ProjectCard
               key={project.slug}
               project={project}
-              href={`${prefix}/projects/${project.slug}`}
+              href={getProjectDestination(project.slug, prefix)}
               categoryLabel={getCategoryLabel(project.category, categoryLabels)}
               tone={getProjectTone(project.category)}
               trailingIcon={<IconScoutIcon name="arrowRight" size={24} />}

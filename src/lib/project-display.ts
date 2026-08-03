@@ -26,3 +26,14 @@ export function getCategoryLabel(
   if (category === "site-metier") return labels.siteMetier;
   return labels.webapp;
 }
+
+/** Route project-like cards to their canonical case study or service page. */
+export function getProjectDestination(slug: string, prefix: string): string {
+  if (slug === "geo-seo-boost") {
+    return prefix
+      ? `${prefix}/services/seo-geo-consultant`
+      : "/services/consultant-seo-geo";
+  }
+
+  return `${prefix}/projects/${slug}`;
+}

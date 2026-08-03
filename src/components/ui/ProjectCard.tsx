@@ -52,7 +52,11 @@ export default function ProjectCard({
           alt={`${project.title} - ${project.subtitle}`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1152px) 50vw, 560px"
-          className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+          className={`transition-transform duration-700 ease-out group-hover:scale-[1.04] ${
+            project.slug === "geo-seo-boost"
+              ? "bg-[#f7f9fc] object-contain"
+              : "object-cover object-top"
+          }`}
         />
         <span
           className={`absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase text-white backdrop-blur-md ${badgeTone[tone]}`}

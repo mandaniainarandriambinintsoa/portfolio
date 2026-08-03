@@ -2176,8 +2176,8 @@
       },
       {
         "slug": "geo-seo-boost",
-        "title": "Croissance SEO & visibilité GEO",
-        "subtitle": "Pilotage GSC, optimisation éditoriale et citations par les IA",
+        "title": "SEO + GEO",
+        "subtitle": "Ranker sur Google et être cité par les IA",
         "description": "Stratégie SEO et GEO appliquée à manda-ia.com : analyse des requêtes Google Search Console, création et optimisation de pages selon les intentions de recherche, suivi quotidien des clics, impressions, CTR et positions, puis amélioration de la citabilité du site par les moteurs IA. Les résultats sont documentés avec des données GSC vérifiées et une recommandation observée dans ChatGPT.",
         "tags": [
           "SEO",
@@ -2188,7 +2188,7 @@
         "link": null,
         "featured": true,
         "category": "webapp",
-        "image": "/images/projects/geo-seo-boost.svg",
+        "image": "/images/projects/consultant-seo-geo-gsc.png",
         "workflowFile": null
       },
       {
