@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { unstable_cache } from "next/cache";
-import { BetaAnalyticsDataClient } from "@google-analytics/data";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 const propertyId = process.env.GA4_PROPERTY_ID?.trim();
 
-function getAnalyticsClient() {
+async function getAnalyticsClient() {
+  const { BetaAnalyticsDataClient } = await import("@google-analytics/data");
   const rawKey = process.env.GA4_PRIVATE_KEY?.trim() || "";
   const privateKey = rawKey.includes("\\n") ? rawKey.replace(/\\n/g, "\n") : rawKey;
 
@@ -58,7 +58,7 @@ export async function GET(request: NextRequest) {
   // 1. Fetch GA4 Realtime visitors and insert new ones into Supabase
   if (shouldSyncGa && propertyId && process.env.GA4_CLIENT_EMAIL && process.env.GA4_PRIVATE_KEY) {
     try {
-      const client = getAnalyticsClient();
+      const client = await getAnalyticsClient();
 
       const [response] = await client.runRealtimeReport({
         property: `properties/${propertyId}`,
