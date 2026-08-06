@@ -39,7 +39,7 @@ async function fetchLatestVisitors(): Promise<VisitorRow[]> {
 const getCachedLatestVisitors = unstable_cache(
   fetchLatestVisitors,
   ["latest-visitor-logs"],
-  { revalidate: 300 }
+  { revalidate: 30 }
 );
 
 function getClientIp(request: NextRequest): string {
@@ -141,7 +141,7 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // Keep public reads off Supabase for five minutes. Manual GA syncs bypass the cache.
+  // Refresh quickly for the showcase while deduplicating Supabase reads across visitors.
   const visitors = shouldSyncGa
     ? await fetchLatestVisitors()
     : await getCachedLatestVisitors();
@@ -150,9 +150,7 @@ export async function GET(request: NextRequest) {
     { visitors },
     {
       headers: {
-        "Cache-Control": shouldSyncGa
-          ? "no-store"
-          : "public, s-maxage=300, stale-while-revalidate=600",
+        "Cache-Control": "private, no-store",
       },
     }
   );
