@@ -1,6 +1,8 @@
 import { getStaticDictionary } from "@/i18n/dictionaries";
+import { unstable_cache } from "next/cache";
 import type { Locale } from "@/i18n/config";
 import type { ServiceItem } from "@/lib/types";
+import { isPayloadSitemapEnabled } from "@/lib/content-mode";
 import remoteN8nConsultant from "./services/remote-n8n-consultant.json";
 import {
   getPayloadServiceBySlug,
@@ -27,13 +29,23 @@ type PreviewReadOptions = {
   draft?: boolean;
 };
 
-export async function getServices(locale: Locale, options?: PreviewReadOptions): Promise<ServiceItem[]> {
+async function getServicesUncached(locale: Locale, options?: PreviewReadOptions): Promise<ServiceItem[]> {
   const payloadServices = await getPayloadServices(locale, options);
   if (payloadServices?.length) return withFallbackKeys(payloadServices);
   return getDictionaryServices(locale);
 }
 
-export async function getServiceBySlug(
+const getCachedServices = unstable_cache(
+  (locale: Locale) => getServicesUncached(locale),
+  ["public-services"],
+  { revalidate: 3600, tags: ["payload-services"] }
+);
+
+export async function getServices(locale: Locale, options?: PreviewReadOptions): Promise<ServiceItem[]> {
+  return options?.draft ? getServicesUncached(locale, options) : getCachedServices(locale);
+}
+
+async function getServiceBySlugUncached(
   slug: string,
   locale: Locale,
   options?: PreviewReadOptions
@@ -43,6 +55,22 @@ export async function getServiceBySlug(
 
   const services = await getDictionaryServices(locale);
   return services.find((service) => service.slug === slug) ?? null;
+}
+
+const getCachedServiceBySlug = unstable_cache(
+  (slug: string, locale: Locale) => getServiceBySlugUncached(slug, locale),
+  ["public-service-by-slug"],
+  { revalidate: 3600, tags: ["payload-services"] }
+);
+
+export async function getServiceBySlug(
+  slug: string,
+  locale: Locale,
+  options?: PreviewReadOptions
+): Promise<ServiceItem | null> {
+  return options?.draft
+    ? getServiceBySlugUncached(slug, locale, options)
+    : getCachedServiceBySlug(slug, locale);
 }
 
 export async function getServiceByKey(
@@ -73,7 +101,7 @@ export async function getServiceStaticParams(): Promise<{ locale: string; slug: 
 export async function getServiceSitemapPairs(): Promise<
   { frSlug: string; enSlug: string; updatedAt: string | null; createdAt: string | null }[]
 > {
-  const usePayload = process.env.PAYLOAD_SKIP_SITEMAP_CMS !== "true";
+  const usePayload = isPayloadSitemapEnabled();
   const [frPayload, enPayload] = usePayload
     ? await Promise.all([
         getPayloadServiceSitemapEntries("fr"),

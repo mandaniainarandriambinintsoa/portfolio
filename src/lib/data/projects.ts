@@ -1,8 +1,9 @@
-import { createServerClient } from "@/lib/supabase/server";
 import { createStaticClient } from "@/lib/supabase/static";
+import { unstable_cache } from "next/cache";
 import type { Locale } from "@/i18n/config";
 import { getStaticDictionary } from "@/i18n/dictionaries";
 import type { ProjectItem } from "@/lib/types";
+import { isPayloadRemoteContentEnabled, isPayloadSitemapEnabled } from "@/lib/content-mode";
 import {
   getPayloadProjectBySlug,
   getPayloadProjects,
@@ -61,7 +62,7 @@ function mapRow(
 
 async function fetchFromSupabase(locale: Locale): Promise<ProjectItem[] | null> {
   try {
-    const supabase = await createServerClient();
+    const supabase = createStaticClient();
     const { data, error } = await supabase
       .from("projects")
       .select("*")
@@ -92,8 +93,8 @@ function mergeCodeOwnedProjects(
   return [...additions, ...remoteProjects];
 }
 
-export async function getProjects(locale: Locale, options?: PreviewReadOptions): Promise<ProjectItem[]> {
-  if (process.env.PAYLOAD_SKIP_REMOTE_CONTENT === "true") {
+async function getProjectsUncached(locale: Locale, options?: PreviewReadOptions): Promise<ProjectItem[]> {
+  if (!isPayloadRemoteContentEnabled()) {
     return fetchFromDict(locale);
   }
 
@@ -115,12 +116,22 @@ export async function getProjects(locale: Locale, options?: PreviewReadOptions):
   return [...featuredDictOnly, ...supabaseData, ...restDictOnly];
 }
 
-export async function getProjectBySlug(
+const getCachedProjects = unstable_cache(
+  (locale: Locale) => getProjectsUncached(locale),
+  ["public-projects"],
+  { revalidate: 3600, tags: ["payload-projects"] }
+);
+
+export async function getProjects(locale: Locale, options?: PreviewReadOptions): Promise<ProjectItem[]> {
+  return options?.draft ? getProjectsUncached(locale, options) : getCachedProjects(locale);
+}
+
+async function getProjectBySlugUncached(
   slug: string,
   locale: Locale,
   options?: PreviewReadOptions
 ): Promise<ProjectItem | null> {
-  if (process.env.PAYLOAD_SKIP_REMOTE_CONTENT === "true") {
+  if (!isPayloadRemoteContentEnabled()) {
     const projects = await fetchFromDict(locale);
     return projects.find((project) => project.slug === slug) ?? null;
   }
@@ -129,7 +140,7 @@ export async function getProjectBySlug(
   if (payloadProject) return payloadProject;
 
   try {
-    const supabase = await createServerClient();
+    const supabase = createStaticClient();
     const { data, error } = await supabase
       .from("projects")
       .select("*")
@@ -147,13 +158,29 @@ export async function getProjectBySlug(
   return items.find((p) => p.slug === slug) ?? null;
 }
 
+const getCachedProjectBySlug = unstable_cache(
+  (slug: string, locale: Locale) => getProjectBySlugUncached(slug, locale),
+  ["public-project-by-slug"],
+  { revalidate: 3600, tags: ["payload-projects"] }
+);
+
+export async function getProjectBySlug(
+  slug: string,
+  locale: Locale,
+  options?: PreviewReadOptions
+): Promise<ProjectItem | null> {
+  return options?.draft
+    ? getProjectBySlugUncached(slug, locale, options)
+    : getCachedProjectBySlug(slug, locale);
+}
+
 export async function getAllProjectSlugs(): Promise<string[]> {
   const dict = await getStaticDictionary("fr");
   const dictSlugs = (dict.projects.items as ProjectItem[]).map((p) => p.slug);
 
-  const payloadEntries = process.env.PAYLOAD_SKIP_SITEMAP_CMS === "true"
-    ? null
-    : await getPayloadProjectSitemapEntries();
+  const payloadEntries = isPayloadSitemapEnabled()
+    ? await getPayloadProjectSitemapEntries()
+    : null;
   if (payloadEntries?.length) {
     return Array.from(new Set([...payloadEntries.map((entry) => entry.slug), ...dictSlugs]));
   }
@@ -186,9 +213,9 @@ export async function getAllProjectSitemapEntries(): Promise<
     createdAt: null as string | null,
   }));
 
-  const payloadEntries = process.env.PAYLOAD_SKIP_SITEMAP_CMS === "true"
-    ? null
-    : await getPayloadProjectSitemapEntries();
+  const payloadEntries = isPayloadSitemapEnabled()
+    ? await getPayloadProjectSitemapEntries()
+    : null;
   if (payloadEntries?.length) {
     const payloadSlugs = new Set(payloadEntries.map((e) => e.slug));
     const dictOnly = dictEntries.filter((e) => !payloadSlugs.has(e.slug));

@@ -1,6 +1,7 @@
 import type { Locale } from "@/i18n/config";
 import type { ProjectItem, ServiceItem } from "@/lib/types";
 import { getPayloadClient } from "@/lib/payload";
+import { isPayloadRemoteContentEnabled } from "@/lib/content-mode";
 import type { BlogPost } from "./blog";
 
 type TagItem = {
@@ -65,7 +66,7 @@ type PayloadReadOptions = {
 };
 
 function skipRemoteContent(): boolean {
-  return process.env.PAYLOAD_SKIP_REMOTE_CONTENT === "true";
+  return !isPayloadRemoteContentEnabled();
 }
 
 function mapTags(tags?: TagItem[] | null): string[] {

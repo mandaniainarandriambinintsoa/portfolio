@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { unstable_cache } from "next/cache";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 import { createAdminClient } from "@/lib/supabase/admin";
 
@@ -23,6 +24,23 @@ export type VisitorRow = {
   country_code: string;
   created_at: string;
 };
+
+async function fetchLatestVisitors(): Promise<VisitorRow[]> {
+  const supabase = createAdminClient();
+  const { data } = await supabase
+    .from("visitor_logs")
+    .select("city, country, country_code, created_at")
+    .order("created_at", { ascending: false })
+    .limit(6);
+
+  return data || [];
+}
+
+const getCachedLatestVisitors = unstable_cache(
+  fetchLatestVisitors,
+  ["latest-visitor-logs"],
+  { revalidate: 300 }
+);
 
 function getClientIp(request: NextRequest): string {
   return (
@@ -123,18 +141,18 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // 2. Always return the 6 most recent visitors from Supabase
-  const { data: visitors } = await supabase
-    .from("visitor_logs")
-    .select("city, country, country_code, created_at")
-    .order("created_at", { ascending: false })
-    .limit(6);
+  // Keep public reads off Supabase for five minutes. Manual GA syncs bypass the cache.
+  const visitors = shouldSyncGa
+    ? await fetchLatestVisitors()
+    : await getCachedLatestVisitors();
 
   return NextResponse.json(
-    { visitors: visitors || [] },
+    { visitors },
     {
       headers: {
-        "Cache-Control": "no-store",
+        "Cache-Control": shouldSyncGa
+          ? "no-store"
+          : "public, s-maxage=300, stale-while-revalidate=600",
       },
     }
   );

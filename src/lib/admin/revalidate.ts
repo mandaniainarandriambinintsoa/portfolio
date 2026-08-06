@@ -1,6 +1,15 @@
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 
 export function revalidateContent(type: "blog" | "page" | "project" | "service", slug?: string) {
+  const tagByType = {
+    blog: "payload-posts",
+    page: "payload-pages",
+    project: "payload-projects",
+    service: "payload-services",
+  } as const;
+
+  revalidateTag(tagByType[type], { expire: 0 });
+
   if (type === "blog" && slug) {
     revalidatePath(`/blog/${slug}`);
     revalidatePath(`/en/blog/${slug}`);

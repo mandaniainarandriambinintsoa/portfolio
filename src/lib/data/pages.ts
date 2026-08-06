@@ -1,5 +1,7 @@
 import type { Locale } from "@/i18n/config";
 import { getPayloadClient } from "@/lib/payload";
+import { unstable_cache } from "next/cache";
+import { isPayloadRemoteContentEnabled } from "@/lib/content-mode";
 
 export type HomeBlockType =
   | "homeHero"
@@ -51,12 +53,12 @@ export const defaultHomeLayout: PageLayoutBlock[] = [
   { blockType: "homeCTAFinal" },
 ];
 
-export async function getPageBySlug(
+async function getPageBySlugUncached(
   slug: string,
   locale: Locale,
   options?: PayloadReadOptions
 ): Promise<PayloadPage | null> {
-  if (process.env.PAYLOAD_SKIP_REMOTE_CONTENT === "true") return null;
+  if (!isPayloadRemoteContentEnabled()) return null;
 
   try {
     const payload = await getPayloadClient();
@@ -85,4 +87,20 @@ export async function getPageBySlug(
   } catch {
     return null;
   }
+}
+
+const getCachedPageBySlug = unstable_cache(
+  (slug: string, locale: Locale) => getPageBySlugUncached(slug, locale),
+  ["public-page-by-slug"],
+  { revalidate: 3600, tags: ["payload-pages"] }
+);
+
+export async function getPageBySlug(
+  slug: string,
+  locale: Locale,
+  options?: PayloadReadOptions
+): Promise<PayloadPage | null> {
+  return options?.draft
+    ? getPageBySlugUncached(slug, locale, options)
+    : getCachedPageBySlug(slug, locale);
 }

@@ -1,4 +1,5 @@
 import { cache } from "react";
+import { unstable_cache } from "next/cache";
 import type { Locale } from "./config";
 import { getPayloadSiteDictionary } from "@/lib/data/payload-content";
 
@@ -13,9 +14,14 @@ export async function getStaticDictionary(locale: Locale): Promise<Dictionary> {
   return dictionaries[locale]();
 }
 
-export const getDictionary = cache(async (locale: Locale): Promise<Dictionary> => {
+const getCachedDictionary = unstable_cache(async (locale: Locale): Promise<Dictionary> => {
   const payloadDictionary = await getPayloadSiteDictionary(locale);
   if (payloadDictionary) return payloadDictionary as Dictionary;
 
   return getStaticDictionary(locale);
+}, ["payload-site-dictionary"], {
+  revalidate: 300,
+  tags: ["payload-site-content"],
 });
+
+export const getDictionary = cache(getCachedDictionary);
