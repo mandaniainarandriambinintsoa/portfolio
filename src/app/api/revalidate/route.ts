@@ -14,7 +14,12 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { type, slug } = body as { type?: string; slug?: string };
 
-    if (type === "blog" || type === "project") {
+    if (
+      type === "blog" ||
+      type === "page" ||
+      type === "project" ||
+      type === "service"
+    ) {
       revalidateContent(type, slug);
     } else {
       revalidatePath("/", "layout");
