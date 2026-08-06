@@ -1860,6 +1860,140 @@
         }
       },
       {
+        "title": "Website performance audit & cloud cost optimization",
+        "description": "I audit an existing website to speed up pages, reduce requests and control Vercel, Supabase, CMS and API costs without breaking the product.",
+        "slug": "website-performance-optimization-service",
+        "color": "amber",
+        "icon": "speed",
+        "cardTitle": "Performance & cloud costs",
+        "cardDescription": "Audit, speed up and harden an existing website",
+        "isLanding": true,
+        "seoTitle": "Website Performance Optimization Service | Manda",
+        "seoDescription": "Website performance optimization for existing sites: Core Web Vitals, caching, API requests, Vercel, Supabase and cloud cost reduction.",
+        "updatedAt": "2026-08-06",
+        "landing": {
+          "heroText": "Your website already works, but pages are slowing down, infrastructure usage is rising or Vercel and Supabase quotas are disappearing too quickly. I audit the full request path, from browser to database, then fix the structural causes across rendering, caching, CMS, APIs, images and polling. The goal is not just a better score: it is a faster, more reliable and less expensive product to operate.",
+          "features": [
+            {
+              "icon": "monitoring",
+              "title": "Measured audit",
+              "description": "Logs, metrics, network and real requests."
+            },
+            {
+              "icon": "speed",
+              "title": "Web performance",
+              "description": "Rendering, caching, images and Core Web Vitals."
+            },
+            {
+              "icon": "savings",
+              "title": "Controlled costs",
+              "description": "Egress, functions, APIs and databases."
+            },
+            {
+              "icon": "database",
+              "title": "Efficient queries",
+              "description": "Fewer redundant reads and duplicate calls."
+            },
+            {
+              "icon": "dns",
+              "title": "Reliable architecture",
+              "description": "ISR, CDN and targeted invalidation."
+            },
+            {
+              "icon": "verified",
+              "title": "Verified results",
+              "description": "Before-and-after tests and guardrails."
+            }
+          ],
+          "sections": [
+            {
+              "title": "What is this service called?",
+              "content": "This is **technical optimization for an existing website**, also known as a website performance audit or cloud architecture optimization. It goes beyond a PageSpeed report: I investigate why the product consumes CPU, egress, serverless functions or database reads, then fix the system creating those costs.\n\nIt is useful when the product already works but pages are slowing down, free-tier quotas disappear unexpectedly, crawlers trigger expensive processing or every visit reloads the same data."
+            },
+            {
+              "title": "What I actually audit",
+              "content": "I start from verifiable symptoms: response times, network waterfalls, Core Web Vitals, Vercel logs, Supabase metrics, egress volume, function frequency, response size and SQL queries. I then connect every cost to the code path that triggers it.\n\nThe analysis covers Next.js rendering modes (static, dynamic and ISR), browser and CDN caching, calls to Payload or another CMS, data fallbacks, polling, images, server-side libraries and cache invalidation after publishing."
+            },
+            {
+              "title": "The manda-ia.com case: data volume was not the problem",
+              "content": "The database held about **25 MB**, yet the organization had exceeded **5.5 GB of egress**. The audit showed that public pages were dynamically rendered and fetched several remote sources on every request. Crawlers, visitors and refreshes repeatedly triggered the same work.\n\nI replaced those reads with pre-rendered pages and revalidation, made the remote CMS opt-in in production, added shared caches, limited visitor dashboard polling to visible tabs and moved its cache to the Vercel edge. The dashboard stays less than 30 seconds behind without querying Supabase for every visitor."
+            },
+            {
+              "title": "My four-step optimization method",
+              "content": "**1. Measure** a baseline before changing anything. **2. Locate** the routes, requests and components responsible for usage. **3. Fix** the rendering mode, remove redundant reads, shrink responses and cache at the right layer. **4. Verify** the metrics, data freshness and user journeys to catch regressions.\n\nI document both changes and trade-offs. Your team knows what was fixed, why it mattered and which metrics to keep watching."
+            },
+            {
+              "title": "Deliverables, timeline and rate",
+              "content": "You receive a prioritized diagnosis, a map of technical cost drivers, the agreed code changes, before-and-after measurements and guardrails to prevent the issue returning. A focused audit can take a few days; a full optimization depends on the number of routes, providers and data flows.\n\nMy standard rate is **EUR 350/day**, with scope and quote agreed before work starts. The engagement can stand alone or become part of continuous product improvement."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Quick patch or structural optimization?",
+            "intro": "Both can improve a score in the short term, but only end-to-end analysis reduces infrastructure usage and risk sustainably.",
+            "headers": [
+              "Criterion",
+              "Isolated patch",
+              "Audit + optimization"
+            ],
+            "rows": [
+              {
+                "criterion": "Diagnosis",
+                "noCode": "One score or visible symptom",
+                "nextjs": "Logs, network, functions, SQL and egress tied back to code",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Performance",
+                "noCode": "One-off compression or removal",
+                "nextjs": "Rendering, caching and data optimized together",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Cloud costs",
+                "noCode": "Reduction is difficult to explain",
+                "nextjs": "Fewer calls, less compute and less transfer, all measured",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Fresh data",
+                "noCode": "Caching disabled as a precaution",
+                "nextjs": "Cache lifetime chosen around the business requirement",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Regression risk",
+                "noCode": "Limited manual checks",
+                "nextjs": "Functional tests and before-and-after measurements",
+                "winner": "nextjs"
+              }
+            ],
+            "conclusion": "The goal is not to cache everything. It is to recompute only what truly needs to change, when doing so creates value for the user."
+          },
+          "faq": [
+            {
+              "question": "How is this different from a PageSpeed audit?",
+              "answer": "PageSpeed mainly evaluates loading experience in the browser. My audit also connects that experience to server costs: Next.js rendering, API calls, Vercel functions, Supabase egress, SQL queries, CMS reads and caching strategy."
+            },
+            {
+              "question": "Can you optimize a live website without rebuilding it?",
+              "answer": "Yes. I start with high-impact, low-risk changes and expand only when the architecture requires it. The purpose is to improve the existing product, not force an unnecessary rebuild."
+            },
+            {
+              "question": "Do you only work with Vercel and Supabase?",
+              "answer": "No. This case uses Vercel, Supabase, Next.js and Payload, but the method applies to other hosts, databases, CMS platforms and APIs. Tools vary; measurement, caching and request-reduction principles remain the same."
+            },
+            {
+              "question": "Can caching show stale data?",
+              "answer": "A well-designed cache has an appropriate lifetime and invalidation strategy. Editorial pages can revalidate after publishing; a near-real-time dashboard can use a shared 30-second cache. Freshness is selected according to the business requirement."
+            },
+            {
+              "question": "What results should I expect?",
+              "answer": "Results depend on traffic and architecture. The measurable targets are fewer requests and transfers, lighter responses, faster loading and more headroom before quotas. I provide before-and-after values instead of a generic promise."
+            }
+          ]
+        }
+      },
+      {
         "title": "SEO + GEO consultant: rank on Google and get cited by AI",
         "description": "SEO and GEO together: rank on Google and get cited by ChatGPT, Claude, Perplexity and AI Overviews. Schema, entity authority, AI citability.",
         "slug": "seo-geo-consultant",

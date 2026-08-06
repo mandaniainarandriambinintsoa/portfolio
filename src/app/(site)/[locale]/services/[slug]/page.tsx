@@ -15,6 +15,7 @@ import { getServiceByKey, getServiceBySlug } from "@/lib/data/services";
 import { getRelatedSolutionsForService, type Solution } from "@/lib/data/solutions";
 import RefreshRouteOnSave from "@/components/preview/RefreshRouteOnSave";
 import SeoGrowthProof from "@/components/sections/SeoGrowthProof";
+import PerformanceOptimizationProof from "@/components/sections/PerformanceOptimizationProof";
 import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -235,6 +236,9 @@ export default async function ServicePage({
   const relatedSolutions = getRelatedSolutionsForService(locale, service.slug);
   const isSeoGeoLanding =
     service.slug === "consultant-seo-geo" || service.slug === "seo-geo-consultant";
+  const isPerformanceOptimizationLanding =
+    service.slug === "audit-performance-site-web" ||
+    service.slug === "website-performance-optimization-service";
 
   return (
     <main id="main-content" className="relative min-h-screen w-full min-w-0 px-6 pt-32 pb-24">
@@ -315,6 +319,7 @@ export default async function ServicePage({
         )}
 
         {isSeoGeoLanding && <SeoGrowthProof locale={locale} />}
+        {isPerformanceOptimizationLanding && <PerformanceOptimizationProof locale={locale} />}
 
         {/* Content sections */}
         {landing.sections?.map((section: any, idx: number) => (
