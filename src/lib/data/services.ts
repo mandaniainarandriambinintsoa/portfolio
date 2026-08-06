@@ -59,7 +59,7 @@ async function getServiceBySlugUncached(
 
 const getCachedServiceBySlug = unstable_cache(
   (slug: string, locale: Locale) => getServiceBySlugUncached(slug, locale),
-  ["public-service-by-slug"],
+  ["public-service-by-slug-v2"],
   { revalidate: 3600, tags: ["payload-services"] }
 );
 
