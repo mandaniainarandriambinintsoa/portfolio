@@ -87,7 +87,7 @@ export default function VisitorTracking({
 
   const fetchVisitors = useCallback(async () => {
     try {
-      const res = await fetch("/api/visitors", { cache: "no-store" });
+      const res = await fetch("/api/visitors");
       if (!res.ok) return;
       const data = await res.json();
       const newVisitors: VisitorRow[] = data.visitors || [];

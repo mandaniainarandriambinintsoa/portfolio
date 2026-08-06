@@ -150,7 +150,8 @@ export async function GET(request: NextRequest) {
     { visitors },
     {
       headers: {
-        "Cache-Control": "private, no-store",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Vercel-CDN-Cache-Control": "public, s-maxage=30",
       },
     }
   );
