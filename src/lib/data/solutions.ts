@@ -1300,17 +1300,17 @@ export const frSolutions: Solution[] = [
     slug: "developpeur-agent-vocal-ia",
     icon: "call",
     accent: "emerald",
-    title: "Développeur agent vocal IA : appels entrants, qualification et rendez-vous",
-    eyebrow: "Solution agent vocal IA",
-    seoTitle: "Développeur agent vocal IA | Appels, qualification et rendez-vous",
+    title: "Agent vocal IA pour entreprise : appels, qualification et rendez-vous",
+    eyebrow: "Solution téléphonique IA",
+    seoTitle: "Agent vocal IA entreprise | Téléphone et rendez-vous",
     seoDescription:
-      "Développeur agent vocal IA pour automatiser appels entrants, qualification client, prise de rendez-vous, relances et transfert humain avec ElevenLabs, Twilio et n8n.",
-    primaryKeyword: "développeur agent vocal IA",
+      "Agent vocal et téléphonique IA pour entreprise : appels entrants, qualification, rendez-vous, relances et transfert humain avec ElevenLabs, Twilio et n8n.",
+    primaryKeyword: "agent vocal IA entreprise",
     secondaryKeywords: [
-      "agent vocal IA",
+      "agent téléphonique IA",
+      "standard téléphonique IA",
       "assistant vocal IA entreprise",
-      "agent vocal ElevenLabs",
-      "agent IA téléphone",
+      "répondeur IA entreprise",
     ],
     shortAnswer:
       "Un agent vocal IA répond au téléphone, qualifie la demande, pose les bonnes questions, peut réserver un créneau et transmet les cas sensibles à un humain. Je construis l'agent avec un script cadré, une base de connaissance, des logs, des webhooks et une intégration n8n/CRM.",
@@ -1488,6 +1488,16 @@ export const frSolutions: Solution[] = [
         question: "Faut-il Twilio, ElevenLabs ou les deux ?",
         answer:
           "Cela dépend du parcours. ElevenLabs peut gérer l'agent conversationnel, Twilio peut gérer la téléphonie et les webhooks. Je choisis l'architecture selon le pays, le numéro, les coûts et les intégrations nécessaires.",
+      },
+      {
+        question: "Quel est le prix d'un agent téléphonique IA pour une entreprise ?",
+        answer:
+          "Le coût comprend la conception et l'intégration, puis l'usage récurrent de la téléphonie, de la voix et du modèle IA. Je chiffre le projet selon les scénarios et intégrations, puis je fournis une estimation du coût par appel afin de le comparer au volume d'appels manqués ou traités manuellement.",
+      },
+      {
+        question: "Dans quels cas un agent vocal IA est-il utile ?",
+        answer:
+          "Il est particulièrement utile pour les appels répétitifs à forte intention : qualification de prospects, prise de rendez-vous, réservations, questions fréquentes, rappels et support de premier niveau. Les demandes sensibles ou inhabituelles sont transférées à une personne.",
       },
     ],
     cta: {
@@ -2949,17 +2959,17 @@ export const enSolutions: Solution[] = [
     slug: "ai-voice-agent-developer",
     icon: "call",
     accent: "emerald",
-    title: "AI voice agent developer: inbound calls, qualification and bookings",
-    eyebrow: "AI voice agent solution",
-    seoTitle: "AI Voice Agent Developer | Calls, Qualification and Bookings",
+    title: "AI phone agent for business: calls, qualification and bookings",
+    eyebrow: "Business phone AI solution",
+    seoTitle: "AI Phone Agent for Business | Calls and Bookings",
     seoDescription:
-      "AI voice agent developer for inbound calls, customer qualification, appointment booking, follow-ups and human handoff with ElevenLabs, Twilio and n8n.",
-    primaryKeyword: "AI voice agent developer",
+      "AI phone agent for business: inbound calls, lead qualification, appointment booking, follow-ups and human handoff with ElevenLabs, Twilio and n8n.",
+    primaryKeyword: "AI phone agent for business",
     secondaryKeywords: [
-      "AI voice agent",
-      "AI phone agent",
-      "ElevenLabs voice agent",
+      "AI call assistant",
+      "AI telephone agent",
       "voice AI for business",
+      "AI receptionist for business",
     ],
     shortAnswer:
       "An AI voice agent answers phone calls, qualifies the request, asks the right questions, can prepare a booking and escalates sensitive cases to a human. I build it with a framed script, knowledge base, logs, webhooks and n8n/CRM integration.",
@@ -3137,6 +3147,16 @@ export const enSolutions: Solution[] = [
         question: "Do we need Twilio, ElevenLabs or both?",
         answer:
           "It depends on the journey. ElevenLabs can handle the conversational agent, Twilio can handle telephony and webhooks. I choose the architecture based on country, phone number, costs and required integrations.",
+      },
+      {
+        question: "How much does an AI phone agent cost for a business?",
+        answer:
+          "The cost includes design and integration, then recurring telephony, voice and AI model usage. I scope the project from its call flows and integrations, then provide an estimated cost per call so it can be compared with missed calls or manual handling.",
+      },
+      {
+        question: "What business calls should an AI phone agent handle?",
+        answer:
+          "It works best for repetitive, high-intent calls such as lead qualification, appointment booking, reservations, common questions, callbacks and tier-one support. Sensitive or unusual requests are handed to a person.",
       },
     ],
     cta: {

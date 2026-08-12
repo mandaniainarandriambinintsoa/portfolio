@@ -480,8 +480,8 @@
         "cardTitle": "Next.js + Supabase",
         "cardDescription": "Apps SaaS complètes : auth, PostgreSQL, API temps réel, stockage.",
         "isLanding": true,
-        "seoTitle": "Développeur Next.js & Supabase à Madagascar | SaaS Sur Mesure — Manda",
-        "seoDescription": "Développeur Next.js et Supabase freelance à Madagascar. Applications SaaS complètes : auth, PostgreSQL, API temps réel, dashboard. Alternative Firebase open-source. Devis gratuit.",
+        "seoTitle": "Développeur freelance Next.js & Supabase | SaaS sur mesure",
+        "seoDescription": "Recrutez un développeur freelance Next.js et Supabase pour votre MVP SaaS : authentification, PostgreSQL, paiements et dashboard. Livraison cadrée en 2 à 4 semaines.",
         "landing": {
           "heroText": "Vous voulez lancer un SaaS ou une application web avec un backend solide, sans exploser votre budget ? Next.js + Supabase est le stack le plus efficace en 2026 pour construire des produits scalables. Basé à Antananarivo, je conçois des applications complètes — authentification, base de données, API temps réel — avec des tarifs jusqu'à 2 fois inférieurs aux freelances européens.",
           "heroImage": {
@@ -925,8 +925,8 @@
         "cardTitle": "Codex + n8n",
         "cardDescription": "OpenAI Codex orchestré par n8n. Idéal pour les équipes déjà sur l'écosystème ChatGPT.",
         "isLanding": true,
-        "seoTitle": "Développeur OpenAI Codex + n8n freelance | Madagascar — Manda",
-        "seoDescription": "Développeur Codex + n8n freelance à Antananarivo. Intégration OpenAI Codex App, automatisations ChatGPT Enterprise, agents n8n. TJM compétitif marché EU.",
+        "seoTitle": "Intégration OpenAI Codex + n8n | API, MCP et workflows",
+        "seoDescription": "Intégration OpenAI Codex et n8n : API, MCP, workflows GitHub, sorties structurées, validation humaine et automatisations documentées.",
         "landing": {
           "heroText": "Votre équipe utilise déjà ChatGPT Plus, Pro, Business ou Enterprise, et vous voulez transformer cet usage individuel en système d'automatisation industrialisé ? Basé à Antananarivo, je conçois des intégrations OpenAI Codex + n8n pour transformer Codex (l'agent de codage d'OpenAI) en moteur d'automatisation branché sur tous vos outils métier.",
           "sections": [
@@ -1584,8 +1584,8 @@
         "cardTitle": "Agent vocal IA",
         "cardDescription": "ElevenLabs, Twilio, agents conversationnels",
         "isLanding": true,
-        "seoTitle": "Développeur d'agents vocaux IA : ElevenLabs & Twilio | Manda",
-        "seoDescription": "Développeur freelance d'agents vocaux et téléphoniques IA (ElevenLabs, Twilio, n8n). Agent conversationnel en production, démo live, devis sous 48h.",
+        "seoTitle": "Création d'agent vocal IA sur mesure | ElevenLabs & Twilio",
+        "seoDescription": "Création et intégration d'agents vocaux IA sur mesure avec ElevenLabs, Twilio et n8n : téléphone, CRM, rendez-vous, transfert humain et démo live.",
         "landing": {
           "heroText": "Je conçois des agents vocaux et téléphoniques IA qui parlent à vos clients comme un humain : ElevenLabs pour la voix, Twilio pour le téléphone, n8n et vos API pour brancher l'action métier. Pas une démo jouet, un agent en production qui qualifie, répond, prend rendez-vous et logue dans votre CRM. Une démo tourne déjà en live sur un site client.",
           "sections": [
@@ -1608,6 +1608,10 @@
             {
               "title": "Délai, tarif et propriété",
               "content": "Un premier agent vocal fonctionnel se livre généralement en 2 à 3 semaines selon le périmètre et les intégrations. Mon TJM est de 350 €/jour, facturé en direct sans marge d'intermédiaire, avec un périmètre et un prix fixés avant de démarrer et un devis sous 48h.\n\nJe travaille en remote avec des clients en Europe et à l'international. À la livraison, l'agent, ses prompts et l'orchestration vous appartiennent, documentés et déployables, sans verrouillage propriétaire."
+            },
+            {
+              "title": "Comment je construis un agent vocal IA en production",
+              "content": "Je commence par les conversations réelles : motifs d'appel, informations à collecter, réponses autorisées et cas qui doivent rester humains. Je choisis ensuite l'architecture adaptée : agent conversationnel ElevenLabs pour aller vite, ou chaîne plus contrôlée avec téléphonie, transcription, modèle IA et synthèse vocale lorsque les contraintes métier l'exigent.\n\nLa mise en production couvre aussi les tests de latence, interruptions, silences, accents, échecs d'API et transfert humain. Les coûts récurrents sont suivis séparément par minute de téléphonie, usage du modèle et outils connectés afin que vous connaissiez le coût réel par appel."
             }
           ],
           "features": [
@@ -1700,6 +1704,10 @@
             {
               "question": "Combien de temps pour mettre un agent vocal en production ?",
               "answer": "En général 2 à 3 semaines pour un premier agent fonctionnel, selon le périmètre et les intégrations (CRM, agenda, API). Le périmètre et le prix sont fixés avant de démarrer, avec un devis sous 48h."
+            },
+            {
+              "question": "Combien coûte la création d'un agent vocal IA ?",
+              "answer": "Le budget dépend du scénario, du nombre d'intégrations, du canal web ou téléphonique et du volume d'appels. Je chiffre d'abord la conception et l'intégration au forfait ou à mon TJM de 350 €/jour, puis je distingue les coûts récurrents de téléphonie, de voix et de modèle IA. Vous recevez une estimation du coût par appel avant la mise en production."
             },
             {
               "question": "Les données des appels sont-elles conformes RGPD ?",

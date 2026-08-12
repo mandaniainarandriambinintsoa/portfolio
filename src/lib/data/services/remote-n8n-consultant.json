@@ -240,6 +240,10 @@
           "content": "n8n can connect Apify, Apollo, a CRM and an AI model to collect an authorized signal, enrich a company, apply an ICP score and prepare a relevant outreach angle. The value comes from context and prioritization, not automatic send volume.\n\nI keep explicit safeguards in the workflow: approved sources, deduplication, frequency limits, exclusion lists, human message approval and an action log. The same architecture supports the [AI automation consulting use cases](/en/services/ai-integration) I deliver for customer service, document processing, reporting and data synchronization."
         },
         {
+          "title": "Verified work you can inspect before hiring",
+          "content": "My public n8n Creator template scores RSS opportunities, removes duplicates, writes the review queue to Google Sheets and sends a Gmail digest. It was reviewed and published by n8n, so you can inspect a real workflow structure before discussing a project.\n\nSee the [official n8n workflow template](https://n8n.io/workflows/17715-score-rss-opportunities-to-google-sheets-and-send-priority-digests-with-gmail/) or the [complete opportunity monitor case study](/en/projects/international-opportunity-agent-n8n). The public edition demonstrates naming, configuration, deterministic scoring, documentation and human review without exposing production credentials."
+        },
+        {
           "title": "Remote delivery that stays readable",
           "content": "I work from Antananarivo in GMT+3 with European and international teams. For a US team, we agree on a useful overlap window and keep the rest asynchronous through written specifications, short progress updates, recorded decisions and live or video demonstrations.\n\nWorkflows are delivered with stable naming, operating notes, versioned exports and a clear credential checklist. This reduces dependence on one person and leaves the internal team able to operate the system."
         },

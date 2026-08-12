@@ -637,8 +637,8 @@
         "cardTitle": "Next.js + Supabase",
         "cardDescription": "Complete SaaS apps: auth, PostgreSQL, real-time API, storage.",
         "isLanding": true,
-        "seoTitle": "Next.js & Supabase Developer in Madagascar | Custom SaaS — Manda",
-        "seoDescription": "Freelance Next.js and Supabase developer in Madagascar. Complete SaaS apps: auth, PostgreSQL, real-time API, dashboard. Open-source Firebase alternative. Free quote.",
+        "seoTitle": "Hire a Freelance Next.js & Supabase Developer | Manda",
+        "seoDescription": "Hire a freelance Next.js and Supabase developer for a SaaS MVP, authentication, PostgreSQL, payments and dashboards. Scoped delivery in 2–4 weeks.",
         "landing": {
           "heroText": "Want to launch a SaaS or web application with a solid backend without breaking the budget? Next.js + Supabase is the most efficient stack in 2026 for building scalable products. Based in Antananarivo, I build complete applications — authentication, database, real-time API — at rates up to 2x lower than US/European freelancers.",
           "heroImage": {
@@ -1078,8 +1078,8 @@
         "cardTitle": "Codex + n8n",
         "cardDescription": "OpenAI Codex orchestrated by n8n. Ideal for teams already in the ChatGPT ecosystem.",
         "isLanding": true,
-        "seoTitle": "OpenAI Codex + n8n Developer Freelance | Madagascar — Manda",
-        "seoDescription": "Freelance Codex + n8n developer in Antananarivo. OpenAI Codex App integration, ChatGPT Enterprise automation, n8n agents. Competitive rates for EU market.",
+        "seoTitle": "OpenAI Codex + n8n Integration | API, MCP & Workflows",
+        "seoDescription": "OpenAI Codex and n8n integration for API and MCP workflows, GitHub automation, structured outputs, human approval and documented delivery.",
         "landing": {
           "heroText": "Your team already uses ChatGPT Plus, Pro, Business or Enterprise, and you want to turn this individual usage into an industrialized automation system? Based in Antananarivo, I design OpenAI Codex + n8n integrations that turn Codex (OpenAI's coding agent) into an automation engine wired into all your business tools.",
           "sections": [
@@ -1737,8 +1737,8 @@
         "cardTitle": "AI voice agent",
         "cardDescription": "ElevenLabs, Twilio, conversational agents",
         "isLanding": true,
-        "seoTitle": "AI Voice Agent Developer: ElevenLabs & Twilio | Manda",
-        "seoDescription": "Freelance AI voice and phone agent developer (ElevenLabs, Twilio, n8n). Conversational agent in production, live demo, quote within 48h.",
+        "seoTitle": "AI Voice Agent Developer | ElevenLabs, Twilio & n8n",
+        "seoDescription": "Hire an AI voice agent developer for ElevenLabs, Twilio and n8n integration: phone calls, CRM actions, appointment booking, human handoff and a live demo.",
         "landing": {
           "heroText": "I build AI voice and phone agents that talk to your customers like a human: ElevenLabs for the voice, Twilio for telephony, n8n and your APIs to wire the business action. Not a toy demo, a production agent that qualifies, answers, books appointments and logs to your CRM. A live demo already runs on a client site.",
           "sections": [
@@ -1761,6 +1761,10 @@
             {
               "title": "Timeline, pricing and ownership",
               "content": "A first working voice agent typically ships in 2 to 3 weeks depending on scope and integrations. My day rate is €350, billed directly with no middleman markup, with scope and price fixed before we start and a quote within 48h.\n\nI work remotely with clients in Europe and internationally. On delivery, the agent, its prompts and the orchestration are yours, documented and deployable, with no proprietary lock-in."
+            },
+            {
+              "title": "How I build a production AI voice agent",
+              "content": "I start with real conversations: call reasons, information to collect, approved answers and cases that must remain human. I then choose the right architecture: an ElevenLabs conversational agent for a fast rollout, or a more controlled telephony, transcription, AI model and speech pipeline when the business constraints require it.\n\nProduction work also covers latency, interruptions, silence, accents, API failures and human handoff. Recurring costs are tracked separately for telephony minutes, model usage and connected tools so you know the real cost per call."
             }
           ],
           "features": [
@@ -1853,6 +1857,10 @@
             {
               "question": "How long to put a voice agent in production?",
               "answer": "Usually 2 to 3 weeks for a first working agent, depending on scope and integrations (CRM, calendar, APIs). Scope and price are fixed before we start, with a quote within 48h."
+            },
+            {
+              "question": "How much does it cost to build an AI voice agent?",
+              "answer": "The budget depends on the conversation flow, number of integrations, web or phone channel and expected call volume. I price design and integration as a scoped project or at my €350 day rate, then separate recurring telephony, voice and AI model costs. You receive an estimated cost per call before production."
             },
             {
               "question": "Is call data GDPR-compliant?",
