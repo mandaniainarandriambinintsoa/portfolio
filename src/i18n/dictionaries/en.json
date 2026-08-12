@@ -78,7 +78,9 @@
         "title": "Sites & SaaS Development",
         "description": "Complete web applications and custom SaaS. React, Next.js, Supabase — from MVP to production.",
         "slug": "sites-saas-development",
-        "color": "emerald"
+        "color": "emerald",
+        "seoTitle": "Custom Next.js website and SaaS development",
+        "seoDescription": "Business websites, MVPs and SaaS products built with Next.js, Supabase, APIs and analytics. Fast, measurable and production-ready."
       },
       {
         "icon": "psychology",
@@ -255,14 +257,18 @@
         "title": "n8n Automation",
         "description": "Custom workflows with n8n: tool connections, scraping, notifications, AI agents — zero manual intervention.",
         "slug": "n8n-automation",
-        "color": "indigo"
+        "color": "indigo",
+        "seoTitle": "Custom n8n automation: APIs, CRM and workflows",
+        "seoDescription": "Production n8n workflows for APIs, CRM, email and data with deduplication, retries, alerts, documentation and human approval."
       },
       {
         "icon": "speed",
         "title": "SaaS & Workflow Scaling",
         "description": "Cloud-native architecture for scaling: CI/CD, Vercel, Render, Redis Queue, monitoring.",
         "slug": "saas-workflow-scaling",
-        "color": "purple"
+        "color": "purple",
+        "seoTitle": "SaaS performance, cloud cost and workflow scaling",
+        "seoDescription": "Audit and optimize an existing SaaS: static rendering, caching, queries, cloud cost, queues, observability and evidence-based migration."
       },
       {
         "icon": "precision_manufacturing",

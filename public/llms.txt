@@ -1,81 +1,71 @@
-# Mandaniaina Randriambinintsoa — Portfolio
+# Manda - Product Builder IA et automatisation n8n
 
-> Product Builder freelance basé à Antananarivo, Madagascar. Spécialisé en développement fullstack JavaScript (Next.js, Supabase), automatisation N8N et intégration IA (Claude Code, LLMs). 4+ ans d'expérience, 20+ projets livrés, clients en France, USA et Madagascar.
+> Portfolio professionnel de Mandaniaina "Manda" Randriambinintsoa, Product Builder freelance base a Antananarivo, Madagascar. Le site documente des services de developpement Next.js, d'automatisation n8n, d'integration IA et d'optimisation SEO/GEO, ainsi que des projets livres pour des clients en France, aux Etats-Unis et a Madagascar.
 
-## About
+## Identite et methode
 
-Mandaniaina Randriambinintsoa (alias Manda) est un Product Builder freelance basé à Antananarivo, Madagascar. Diplômé en développement informatique (Master 1, ESTI), il a commencé par du JavaScript en alternance, puis s'est spécialisé en No-Code (Bubble, Webflow) de 2023 à 2025 pour livrer des MVP en quelques semaines. Fin 2025, il est revenu au code pur assisté par IA (Claude Code), avec une stack Next.js, Supabase/Neon, n8n et Python. Il sert des clients en France, aux États-Unis et à Madagascar.
+- [Accueil](https://manda-ia.com): Positionnement, services, realisations selectionnees et moyens de contact.
+- [A propos](https://manda-ia.com/about): Parcours, stack technique, experience et facon de travailler de Mandaniaina Randriambinintsoa.
+- [Services](https://manda-ia.com/services): Vue d'ensemble des prestations de developpement, automatisation, IA et optimisation web.
+- [Processus](https://manda-ia.com/#process): Etapes utilisees pour cadrer, construire, deployer et mesurer un projet.
+- [Contact](https://manda-ia.com/contact): Formulaire pour decrire un besoin et demander un cadrage.
 
-## Key Facts
+## Services principaux
 
-- Nom public: Mandaniaina Randriambinintsoa, alias Manda
-- Localisation: Antananarivo, Madagascar
-- Stack principale: Next.js, React, Supabase/Neon, Node.js, Python, n8n, Claude Code, OpenAI Codex
-- Expérience: 4+ ans, 20+ projets livrés pour clients en France, aux États-Unis et à Madagascar
-- Spécialisations 2026: API Mobile Money Madagascar, agents IA métier, workflows n8n, SEO/GEO et développement fullstack JavaScript
+- [Developpement de sites et SaaS](https://manda-ia.com/services/developpement-sites-saas): Conception de sites metier et applications SaaS avec Next.js, API, authentification et base de donnees.
+- [Integration IA](https://manda-ia.com/services/integration-ia): Integration d'agents IA, recherche documentaire, outils metier et validation humaine.
+- [Automatisation n8n](https://manda-ia.com/services/automatisation-n8n): Workflows n8n reliant formulaires, CRM, emails, API et outils internes.
+- [Scaling SaaS et workflows](https://manda-ia.com/services/scaling-saas-workflows): Fiabilisation, observabilite et passage a l'echelle d'applications et d'automatisations existantes.
+- [Consultant SEO et GEO](https://manda-ia.com/services/consultant-seo-geo): Audit technique, donnees Google Search Console, donnees produit, contenu et citabilite par les moteurs IA.
+- [Audit et optimisation de performance web](https://manda-ia.com/services/audit-performance-site-web): Diagnostic et correction des temps de chargement, appels serveur, cache et ressources frontend.
+- [Forward Deployed Engineer](https://manda-ia.com/services/forward-deployed-engineer): Accompagnement direct du probleme metier a une solution IA, n8n ou web mise en production.
 
-## Services
+## Services specialises
 
-- [Expert N8N Madagascar](https://manda-ia.com/services/automatisation-n8n-madagascar): Spécialiste automatisation N8N pour PME et entreprises — workflows sur mesure, intégrations API, orchestration de données
-- [Développeur React & Next.js Madagascar](https://manda-ia.com/services/developpeur-react-nextjs-madagascar): Applications web performantes — SSR, TypeScript, perf 95+
-- [Développeur Next.js + Supabase](https://manda-ia.com/services/developpeur-nextjs-supabase-madagascar): MVP SaaS clé en main avec auth, dashboard et paiements Stripe
-- [Conception de workflows](https://manda-ia.com/services/conception-workflows): Automatisation de processus métier avec N8N
-- [Développement d'applications](https://manda-ia.com/services/developpement-applications): Applications No-Code et fullstack pour entreprises
-- [Intégration IA](https://manda-ia.com/services/integration-ia): Agents IA autonomes, Claude Code, GPT — intégration d'intelligence artificielle
-- [Passage à l'échelle](https://manda-ia.com/services/passage-echelle): Architecture scalable, migration No-Code vers code, optimisation performance
+- [Expert n8n a Madagascar](https://manda-ia.com/services/automatisation-n8n-madagascar): Automatisations, integrations API, gestion des erreurs et deploiement n8n pour PME et equipes distantes.
+- [Developpeur React et Next.js a Madagascar](https://manda-ia.com/services/developpeur-react-nextjs-madagascar): Applications React, rendu Next.js, TypeScript, SEO technique et performance.
+- [Developpeur Next.js et Supabase](https://manda-ia.com/services/developpeur-nextjs-supabase-madagascar): MVP SaaS avec authentification, PostgreSQL, tableaux de bord et fonctions temps reel.
+- [Developpeur Node.js a Madagascar](https://manda-ia.com/services/developpeur-nodejs-madagascar): API REST ou GraphQL, NestJS, PostgreSQL, webhooks et services temps reel.
+- [Developpeur JavaScript a Madagascar](https://manda-ia.com/services/developpeur-javascript-madagascar): Developpement fullstack JavaScript et TypeScript, du frontend React au backend Node.js.
+- [Developpeur d'agents IA](https://manda-ia.com/services/developpeur-agent-ia-madagascar): Agents IA relies aux donnees et applications metier avec controles humains.
+
+## English services
+
+- [Remote n8n automation consultant](https://manda-ia.com/en/services/remote-n8n-automation-consultant): Production n8n workflows, API integrations, monitoring and self-hosted deployments for international teams.
+- [Forward Deployed AI Engineer for US teams](https://manda-ia.com/en/services/forward-deployed-engineer): Contract delivery from operational problem discovery to production AI agents, automations and custom applications.
+- [Next.js and Supabase developer](https://manda-ia.com/en/services/nextjs-supabase-developer-madagascar): SaaS MVP development with authentication, PostgreSQL, dashboards and real-time features.
+- [AI agent developer](https://manda-ia.com/en/services/ai-agent-developer-madagascar): Business AI agents with API integrations, data access, observability and human approval.
+- [Website performance optimization](https://manda-ia.com/en/services/website-performance-optimization-service): Performance audit and implementation covering server work, caching, frontend assets and Core Web Vitals.
+- [SEO and GEO consultant](https://manda-ia.com/en/services/seo-geo-consultant): Search and generative-engine optimization using technical audits, Search Console and product analytics.
 
 ## Solutions
 
-- [Automatisation n8n pour PME](https://manda-ia.com/solutions/automatisation-n8n-pme): Workflows CRM, emails, reporting, factures, relances et supervision pour PME
-- [Agent IA support client](https://manda-ia.com/solutions/agent-ia-support-client): Agent IA avec FAQ, tri des demandes, qualification de tickets et escalade humaine
-- [API Mobile Money Madagascar](https://manda-ia.com/solutions/api-mobile-money-madagascar): Intégration Orange Money, MVola, Airtel Money, callbacks sécurisés, mode test, dashboard et rapprochement
-- [Agent IA Facebook](https://manda-ia.com/solutions/agent-ia-facebook): Qualification Messenger, brouillons de réponse, création de leads CRM, validation humaine et orchestration n8n
-- [Automatisation marketing n8n](https://manda-ia.com/solutions/automatisation-marketing-n8n): Formulaires, CRM, segmentation, nurturing, relances, alertes commerciales et reporting
-- [Agent IA prospection](https://manda-ia.com/solutions/agent-ia-prospection): Qualification de leads, agent IA Facebook, scoring ICP, brouillons personnalisés, CRM et relances n8n
-- [Workflows n8n + Claude Code](https://manda-ia.com/solutions/workflows-n8n-claude-code): Workflows Claude Code n8n avec contexte repo, MCP, validation humaine, logs et Git
-- [Développeur agent vocal IA](https://manda-ia.com/solutions/developpeur-agent-vocal-ia): Appels entrants, qualification, prise de rendez-vous, transfert humain, ElevenLabs, Twilio et n8n
+- [API Mobile Money Madagascar](https://manda-ia.com/solutions/api-mobile-money-madagascar): Architecture Orange Money, MVola et Airtel Money avec callbacks, statuts et rapprochement.
+- [Automatisation n8n pour PME](https://manda-ia.com/solutions/automatisation-n8n-pme): Workflows CRM, emails, factures, relances, reporting et supervision.
+- [Agent IA support client](https://manda-ia.com/solutions/agent-ia-support-client): Qualification de demandes, brouillons de reponse et transfert humain.
+- [Agent IA Facebook](https://manda-ia.com/solutions/agent-ia-facebook): Qualification Messenger, creation de leads CRM et orchestration n8n.
+- [Agent IA prospection](https://manda-ia.com/solutions/agent-ia-prospection): Scoring ICP, enrichissement, brouillons personnalises et validation humaine.
+- [Workflows n8n et Claude Code](https://manda-ia.com/solutions/workflows-n8n-claude-code): Automatisations de developpement avec contexte du depot, MCP, logs et Git.
 
-## Solutions EN
+## Realisations
 
-- [n8n Automation for SMBs](https://manda-ia.com/en/solutions/n8n-automation-for-smbs): CRM, email, reporting, invoice, follow-up and monitoring workflows for SMBs
-- [AI Customer Support Agent](https://manda-ia.com/en/solutions/ai-customer-support-agent): FAQ answers, ticket triage, request qualification and human handoff
-- [Mobile Money API Madagascar](https://manda-ia.com/en/solutions/mobile-money-api-madagascar): Orange Money, MVola, Airtel Money, secure callbacks, test mode, dashboard and reconciliation
-- [Facebook AI Agent](https://manda-ia.com/en/solutions/facebook-ai-agent): Messenger qualification, reply drafts, CRM lead creation, human approval and n8n orchestration
-- [n8n Marketing Automation](https://manda-ia.com/en/solutions/n8n-marketing-automation): Forms, CRM, segmentation, nurturing, controlled follow-ups, sales alerts and reporting
-- [AI Prospecting Agent](https://manda-ia.com/en/solutions/ai-prospecting-agent): Lead qualification, Facebook AI agent, ICP scoring, personalized drafts, CRM sync and n8n follow-ups
-- [n8n + Claude Code Workflows](https://manda-ia.com/en/solutions/n8n-claude-code-workflows): Claude Code n8n workflows with repo context, MCP, human validation, logs and Git
-- [AI Voice Agent Developer](https://manda-ia.com/en/solutions/ai-voice-agent-developer): Inbound calls, qualification, appointment booking, human handoff, ElevenLabs, Twilio and n8n
+- [Toutes les realisations](https://manda-ia.com/projects): Index des produits, automatisations, integrations IA et sites livres.
+- [PaidMada Mobile Money](https://manda-ia.com/projects/paidmada-mobile-money): Backend et tableau de bord Mobile Money avec Orange Money, MVola et Airtel Money.
+- [Agent IA Facebook](https://manda-ia.com/projects/facebook-agen-ia): Qualification de conversations, intentions, scores et prochaines actions commerciales.
+- [International Opportunity Agent n8n](https://manda-ia.com/projects/international-opportunity-agent-n8n): Agent n8n de veille, scoring et preparation de candidatures internationales avec validation humaine.
+- [Optimisation GEO et SEO](https://manda-ia.com/projects/geo-seo-boost): Cas d'etude croisant donnees Search Console, analytics, structure de contenu et citabilite IA.
+- [Scraping FlowRemote](https://manda-ia.com/projects/scraping-flowremote): Extraction et suivi automatise d'offres avec n8n et notifications.
+- [Tracking visiteurs](https://manda-ia.com/projects/tracking-visiteurs): Demonstration d'une chaine de mesure reliant analytics, geolocalisation agregee et affichage web.
 
-## Projets
+## Ressources
 
-- [PaidMada Mobile Money](https://manda-ia.com/projects/paidmada-mobile-money): Backend et dashboard Mobile Money Madagascar pour Orange Money, MVola, Airtel Money, callbacks, statuts et rapprochement
-- [Facebook Agent IA](https://manda-ia.com/projects/facebook-agen-ia): Dashboard d'agent IA Facebook pour qualifier conversations, leads, intentions, scores et prochaines actions commerciales
-- [Animation Web](https://manda-ia.com/projects/animation-web): Démonstration React/Next.js d'animation frontend, micro-interactions, hero animé, performance et intégration production
-- [ScalApp](https://manda-ia.com/projects/scalapp): Plateforme SaaS de scaling pour freelances — dashboard Bubble avec gestion d'investissements
-- [Garagiste](https://manda-ia.com/projects/garagiste): Site vitrine premium pour garage a Antananarivo — Next.js 16, SEO/GEO, formulaire relaye vers n8n, Google Calendar et email
-- [ImmoPrive](https://manda-ia.com/projects/immoprive): Marketplace immobilière avec IA — Bubble, filtres avancés, matching intelligent
-- [Yalee Creek Ranch](https://manda-ia.com/projects/yalee-creek-ranch): Site vitrine pour ranch américain — gestion locative, design premium
-- [Alchiimy](https://manda-ia.com/projects/alchiimy): Plateforme de formation en ligne — Bubble, paiements, contenu interactif
-- [ArtiGen](https://manda-ia.com/projects/artigen): Générateur d'images IA — Next.js, API IA, galerie utilisateur
-- [Factumation](https://manda-ia.com/projects/factumation): Logiciel de facturation automatisé — construit en 3 jours avec Claude Code (vs 3-4 semaines traditionnel)
-- [Scraping FlowRemote](https://manda-ia.com/projects/scraping-flowremote): Scraping automatisé d'offres d'emploi — N8N, extraction multi-sites, notifications
-- [Tracking Visiteurs](https://manda-ia.com/projects/tracking-visiteurs): Système de tracking en temps réel GA4 + Supabase — démonstration live sur la homepage
+- [Automatiser son entreprise avec n8n](https://manda-ia.com/blog/automatiser-business-n8n-guide-complet): Choix d'hebergement, architecture, couts, erreurs et integration IA.
+- [Claude Code et n8n](https://manda-ia.com/blog/claude-code-developper-avec-ia): Methode de developpement assiste par IA et automatisation des taches techniques.
+- [Pourquoi Supabase remplace Firebase dans certains projets](https://manda-ia.com/blog/pourquoi-supabase-remplace-firebase): Comparaison de modele de donnees, open source, cout et exploitation.
+- [Cinq workflows n8n pour les PME](https://manda-ia.com/blog/5-workflows-n8n-indispensables-pme-madagascar): Exemples de facturation, relance, collecte, reporting et onboarding.
+- [Automatiser un business a Madagascar](https://manda-ia.com/blog/pourquoi-automatiser-business-madagascar-n8n): Cas d'usage et contraintes des PME malgaches.
 
-## Blog
+## Preuves externes
 
-- [Automatisation n8n : Cloud, Docker, IA et workflows](https://manda-ia.com/blog/automatiser-business-n8n-guide-complet): Guide de choix d'hébergement, architecture fiable, cas d'usage, coûts, erreurs et intégration IA
-- [Développer avec Claude Code](https://manda-ia.com/blog/claude-code-developper-avec-ia): Retour d'expérience — Factumation en 3 jours, limites de l'IA, workflow AI-driven
-- [Pourquoi Supabase remplace Firebase](https://manda-ia.com/blog/pourquoi-supabase-remplace-firebase): Comparaison technique Supabase vs Firebase en 2026 — prix, performance, open-source
-- [Automatisation N8N pour business à Madagascar](https://manda-ia.com/blog/pourquoi-automatiser-business-madagascar-n8n): Cas d'usage locaux, PME malgaches, retour sur investissement
-- [No-Code vs Low-Code](https://manda-ia.com/blog/no-code-vs-low-code-guide-entreprises-malgaches): Guide comparatif pour entreprises malgaches — coûts, délais, cas d'usage
-- [5 workflows N8N pour PME](https://manda-ia.com/blog/5-workflows-n8n-indispensables-pme-madagascar): Les 5 workflows indispensables — facturation, relance, scraping, reporting, onboarding
-- [Comment choisir un développeur No-Code](https://manda-ia.com/blog/comment-choisir-developpeur-no-code-madagascar): Critères de sélection, questions à poser, pièges à éviter
-
-## Contact
-
-- Website: https://manda-ia.com
-- Email: mandaniaina.randriambinintsoa@gmail.com
-- LinkedIn: https://www.linkedin.com/in/mandaniaina-randriambinintsoa-a75553178/
-- GitHub: https://github.com/mandaniainarandriambinintsoa
-- Malt: https://www.malt.fr/profile/mandaniaina
-- Location: Antananarivo, Madagascar
+- [Template officiel n8n Creator](https://n8n.io/workflows/17715-score-rss-opportunities-to-google-sheets-and-send-priority-digests-with-gmail/): Workflow publie et valide par n8n pour surveiller, dedupliquer et scorer des opportunites RSS.
+- [Depot GitHub du workflow](https://github.com/mandaniainarandriambinintsoa/n8n-ai-opportunity-monitor): JSON assaini, guide de configuration et structure Google Sheets du template n8n.

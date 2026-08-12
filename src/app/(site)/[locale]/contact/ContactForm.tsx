@@ -23,11 +23,12 @@ export default function ContactForm({
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const startedRef = useRef(false);
+  const path = locale === "en" ? "/en/contact" : "/contact";
 
   function trackFormStarted() {
     if (startedRef.current) return;
     startedRef.current = true;
-    trackPortfolioEvent("contact_form_started", { locale });
+    trackPortfolioEvent("contact_form_started", { locale, path });
   }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -47,6 +48,7 @@ export default function ContactForm({
     setErrorMsg("");
     trackPortfolioEvent("contact_form_submitted", {
       locale,
+      path,
       message_length: payload.message.length,
       has_name: payload.name.length > 0,
       has_email: payload.email.length > 0,
@@ -65,6 +67,7 @@ export default function ContactForm({
         setStatus("error");
         trackPortfolioEvent("contact_form_failed", {
           locale,
+          path,
           reason: json.error ?? "api_error",
         });
         return;
@@ -72,11 +75,12 @@ export default function ContactForm({
 
       form.reset();
       setStatus("success");
-      trackPortfolioEvent("contact_form_success", { locale });
+      trackPortfolioEvent("contact_form_success", { locale, path });
     } catch {
       setStatus("error");
       trackPortfolioEvent("contact_form_failed", {
         locale,
+        path,
         reason: "network_error",
       });
     }

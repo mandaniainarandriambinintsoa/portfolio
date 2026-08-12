@@ -6,11 +6,13 @@ export default function ServiceJsonLd({
   name,
   description,
   locale,
+  url,
   dateModified,
 }: {
   name: string;
   description: string;
   locale: Locale;
+  url: string;
   dateModified?: string;
 }) {
   return (
@@ -20,6 +22,8 @@ export default function ServiceJsonLd({
         "@type": "Service",
         name,
         description,
+        url,
+        serviceType: name,
         provider: {
           "@type": "Person",
           name: PERSONAL_INFO.name,

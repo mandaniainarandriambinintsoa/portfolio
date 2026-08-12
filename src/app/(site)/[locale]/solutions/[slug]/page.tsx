@@ -320,6 +320,7 @@ export default async function SolutionPage({
         name={solution.title}
         description={solution.seoDescription}
         locale={locale}
+        url={`${SITE_URL}${prefix}/solutions/${solution.slug}`}
         dateModified={SOLUTION_LAST_UPDATED}
       />
       <BreadcrumbJsonLd items={breadcrumbs} />

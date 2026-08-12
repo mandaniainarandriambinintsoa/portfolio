@@ -219,6 +219,7 @@ export default async function SolutionsPage({
         name={copy.h1}
         description={copy.serviceDescription}
         locale={locale}
+        url={`${SITE_URL}${prefix}/solutions`}
         dateModified={SOLUTION_LAST_UPDATED}
       />
       <BreadcrumbJsonLd items={breadcrumbs} />

@@ -16,6 +16,7 @@ import SeoGrowthProof from "@/components/sections/SeoGrowthProof";
 import PerformanceOptimizationProof from "@/components/sections/PerformanceOptimizationProof";
 import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { getCoreServiceContent } from "@/lib/data/core-service-content";
 
 export async function generateStaticParams() {
   return getServiceStaticParams();
@@ -161,6 +162,7 @@ export default async function ServicePage({
 
   const contactHref = locale === "fr" ? "/contact" : "/en/contact";
   const isLanding = !!service.isLanding && !!service.landing;
+  const coreContent = getCoreServiceContent(locale, slug);
   const lastUpdated = service.updatedAt || LANDING_LAST_UPDATED;
 
   const colorMap: Record<string, string> = {
@@ -191,9 +193,15 @@ export default async function ServicePage({
   if (!isLanding) {
     return (
       <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
-        <ServiceJsonLd name={service.title} description={service.description} locale={locale} />
+        <ServiceJsonLd
+          name={service.title}
+          description={service.description}
+          locale={locale}
+          url={`${SITE_URL}${prefix}/services/${slug}`}
+        />
         <BreadcrumbJsonLd items={breadcrumbs} />
-        <div className="max-w-4xl mx-auto">
+        {coreContent?.faq && <FAQJsonLd items={coreContent.faq} />}
+        <div className="max-w-5xl mx-auto">
           <LegacyIconScoutIcon
             name={service.icon}
             size={46}
@@ -202,30 +210,83 @@ export default async function ServicePage({
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-6 gradient-text">
             {service.title}
           </h1>
-          <p className="text-xl text-slate-400 mb-12 max-w-2xl">
-            {service.description}
-          </p>
-          <div className="glass-card rounded-2xl p-8 md:p-12 mb-12">
-            <p className="text-slate-300 leading-relaxed">
-              {service.description}
+          {coreContent && (
+            <p className={`mb-4 text-xs font-bold uppercase ${colorMap[service.color] || "text-indigo-400"}`}>
+              {coreContent.eyebrow}
             </p>
-          </div>
-          <Button
-            href={contactHref}
-            variant="primary"
-            analytics={{
-              event: "cta_clicked",
-              properties: {
-                area: "service_detail_simple",
-                cta_type: "contact",
-                service_slug: slug,
-                service_title: service.title,
-                locale,
-              },
-            }}
-          >
-            {dict.hero.cta_primary}
-          </Button>
+          )}
+          <p className="text-xl text-slate-300 mb-12 max-w-3xl leading-relaxed">
+            {coreContent?.intro || service.description}
+          </p>
+
+          {coreContent ? (
+            <>
+              <div className="mb-20 grid grid-cols-1 gap-4 md:grid-cols-3">
+                {coreContent.outcomes.map((outcome) => (
+                  <div key={outcome.title} className={`rounded-xl border p-6 ${bgColorMap[service.color] || bgColorMap.indigo}`}>
+                    <h2 className="mb-2 text-base font-bold text-white">{outcome.title}</h2>
+                    <p className="text-sm leading-relaxed text-slate-400">{outcome.description}</p>
+                  </div>
+                ))}
+              </div>
+
+              {coreContent.sections.map((section) => (
+                <section key={section.title} className="mb-16">
+                  <SectionHeading title={section.title} className="mb-6" />
+                  <div className="border-l border-indigo-400/25 pl-5 sm:pl-7">
+                    {section.content.map((paragraph) => (
+                      <p key={paragraph} className="mb-4 max-w-3xl text-slate-300 leading-relaxed last:mb-0">
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                </section>
+              ))}
+
+              <div className="mb-20">
+                <Link
+                  href={coreContent.relatedHref}
+                  className="inline-flex items-center text-sm font-semibold text-indigo-300 underline underline-offset-4 hover:text-indigo-200"
+                  data-ph-event="service_viewed"
+                  data-ph-props={JSON.stringify({ area: "core_service_related", service_slug: slug, href: coreContent.relatedHref, locale })}
+                >
+                  {coreContent.relatedLabel}
+                </Link>
+              </div>
+
+              <section className="mb-20">
+                <SectionHeading title={locale === "fr" ? "Questions fréquentes" : "Frequently asked questions"} className="mb-8" />
+                <div className="space-y-4">
+                  {coreContent.faq.map((item) => (
+                    <GlassCard key={item.question}>
+                      <h3 className="mb-3 font-bold text-white">{item.question}</h3>
+                      <p className="text-slate-400 leading-relaxed">{item.answer}</p>
+                    </GlassCard>
+                  ))}
+                </div>
+              </section>
+
+              <div className="glass-card rounded-2xl p-8 text-center md:p-12">
+                <h2 className="mb-4 text-2xl font-bold md:text-3xl">{coreContent.ctaTitle}</h2>
+                <p className="mx-auto mb-8 max-w-xl text-slate-400">{coreContent.ctaDescription}</p>
+                <Button
+                  href={contactHref}
+                  variant="primary"
+                  analytics={{ event: "cta_clicked", properties: { area: "core_service_final_cta", cta_type: "contact", service_slug: slug, service_title: service.title, locale } }}
+                >
+                  {dict.hero.cta_primary}
+                </Button>
+              </div>
+            </>
+          ) : (
+            <Button
+              href={contactHref}
+              variant="primary"
+              analytics={{ event: "cta_clicked", properties: { area: "service_detail_simple", cta_type: "contact", service_slug: slug, service_title: service.title, locale } }}
+            >
+              {dict.hero.cta_primary}
+            </Button>
+          )}
         </div>
       </main>
     );
@@ -238,10 +299,20 @@ export default async function ServicePage({
   const isPerformanceOptimizationLanding =
     service.slug === "audit-performance-site-web" ||
     service.slug === "website-performance-optimization-service";
+  const heroCtaLabel = service.slug === "forward-deployed-engineer"
+    ? locale === "fr"
+      ? "DÃ©crire mon problÃ¨me mÃ©tier"
+      : "Describe the business problem"
+    : landing.cta?.buttonLabel || dict.hero.cta_primary;
 
   return (
     <main id="main-content" className="relative min-h-screen w-full min-w-0 px-6 pt-32 pb-24">
-      <ServiceJsonLd name={service.title} description={service.description} locale={locale} />
+      <ServiceJsonLd
+        name={service.title}
+        description={service.description}
+        locale={locale}
+        url={`${SITE_URL}${prefix}/services/${slug}`}
+      />
       <BreadcrumbJsonLd items={breadcrumbs} />
       {landing.faq && <FAQJsonLd items={landing.faq} />}
 
@@ -280,7 +351,7 @@ export default async function ServicePage({
                 },
               }}
             >
-              {dict.hero.cta_primary}
+              {heroCtaLabel}
             </Button>
           </div>
 

@@ -78,28 +78,36 @@
         "title": "Développement Sites & SaaS",
         "description": "Applications web complètes et SaaS sur mesure. React, Next.js, Supabase — du MVP au produit en production.",
         "slug": "developpement-sites-saas",
-        "color": "emerald"
+        "color": "emerald",
+        "seoTitle": "Développement site web & SaaS Next.js sur mesure",
+        "seoDescription": "Développement de sites métier, MVP et SaaS avec Next.js, Supabase, API et analytics. Produit rapide, mesurable et prêt pour la production."
       },
       {
         "icon": "psychology",
         "title": "Intégration IA & Prompt Engineering",
         "description": "Agents IA et LLMs intégrés dans vos sites et SaaS. Prompt engineering, Claude Code, OpenAI Codex, GPT, automatisation intelligente de vos opérations.",
         "slug": "integration-ia",
-        "color": "blue"
+        "color": "blue",
+        "seoTitle": "Intégration IA & agents métier dans vos applications",
+        "seoDescription": "Intégration d'agents IA, LLM, RAG et automatisations dans vos outils métier avec garde-fous, validation humaine et mesure des résultats."
       },
       {
         "icon": "hub",
         "title": "Automatisation n8n",
         "description": "Workflows sur mesure avec n8n : connexion de vos outils, scraping, notifications, agents IA — zéro intervention manuelle.",
         "slug": "automatisation-n8n",
-        "color": "indigo"
+        "color": "indigo",
+        "seoTitle": "Automatisation n8n sur mesure : API, CRM et workflows",
+        "seoDescription": "Conception et fiabilisation de workflows n8n : API, CRM, emails, données, déduplication, retries, alertes et validation humaine."
       },
       {
         "icon": "speed",
         "title": "Scaling SaaS & Workflows",
         "description": "Architecture cloud-native pour la montée en charge : CI/CD, Vercel, Render, Redis Queue, monitoring.",
         "slug": "scaling-saas-workflows",
-        "color": "purple"
+        "color": "purple",
+        "seoTitle": "Optimisation et scaling SaaS, cloud et workflows",
+        "seoDescription": "Audit et optimisation d'un SaaS existant : rendu statique, cache, requêtes, coûts cloud, files, observabilité et migration raisonnée."
       },
       {
         "icon": "precision_manufacturing",
