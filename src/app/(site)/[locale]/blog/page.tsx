@@ -5,8 +5,6 @@ import { getBlogPosts } from "@/lib/data/blog";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import BlogListingClient from "@/components/blog/BlogListingClient";
 
-export const revalidate = 3600;
-
 export async function generateMetadata({
   params,
 }: {

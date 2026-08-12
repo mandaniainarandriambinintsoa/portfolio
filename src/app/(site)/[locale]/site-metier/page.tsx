@@ -7,8 +7,6 @@ import { SITE_URL } from "@/lib/constants";
 import { getProjects } from "@/lib/data/projects";
 import GlassCard from "@/components/ui/GlassCard";
 
-export const revalidate = 3600;
-
 export async function generateMetadata({
   params,
 }: {

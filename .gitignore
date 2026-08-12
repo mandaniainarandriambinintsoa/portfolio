@@ -15,7 +15,7 @@
 
 # next.js
 /.next/
-/.next-stale-before-payload*/
+/.next-stale*/
 /out/
 
 # production

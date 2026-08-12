@@ -12,8 +12,6 @@ import WhatsAppButton from "@/components/layout/WhatsAppButton";
 import PostHogProvider from "@/components/layout/PostHogProvider";
 import VisitorSignals from "@/components/layout/VisitorSignals";
 
-export const revalidate = 3600;
-
 export function generateStaticParams() {
   return i18n.locales.map((locale) => ({ locale }));
 }

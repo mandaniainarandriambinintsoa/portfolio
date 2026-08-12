@@ -1,14 +1,7 @@
 import { getStaticDictionary } from "@/i18n/dictionaries";
-import { unstable_cache } from "next/cache";
 import type { Locale } from "@/i18n/config";
 import type { ServiceItem } from "@/lib/types";
-import { isPayloadSitemapEnabled } from "@/lib/content-mode";
 import remoteN8nConsultant from "./services/remote-n8n-consultant.json";
-import {
-  getPayloadServiceBySlug,
-  getPayloadServices,
-  getPayloadServiceSitemapEntries,
-} from "./payload-content";
 
 function withFallbackKeys(items: ServiceItem[]): ServiceItem[] {
   return items.map((item, index) => ({
@@ -25,74 +18,32 @@ async function getDictionaryServices(locale: Locale): Promise<ServiceItem[]> {
   ]);
 }
 
-type PreviewReadOptions = {
-  draft?: boolean;
-};
-
-async function getServicesUncached(locale: Locale, options?: PreviewReadOptions): Promise<ServiceItem[]> {
-  const payloadServices = await getPayloadServices(locale, options);
-  if (payloadServices?.length) return withFallbackKeys(payloadServices);
+export async function getServices(locale: Locale): Promise<ServiceItem[]> {
   return getDictionaryServices(locale);
 }
 
-const getCachedServices = unstable_cache(
-  (locale: Locale) => getServicesUncached(locale),
-  ["public-services"],
-  { revalidate: 3600, tags: ["payload-services"] }
-);
-
-export async function getServices(locale: Locale, options?: PreviewReadOptions): Promise<ServiceItem[]> {
-  return options?.draft ? getServicesUncached(locale, options) : getCachedServices(locale);
-}
-
-async function getServiceBySlugUncached(
-  slug: string,
-  locale: Locale,
-  options?: PreviewReadOptions
-): Promise<ServiceItem | null> {
-  const payloadService = await getPayloadServiceBySlug(slug, locale, options);
-  if (payloadService) return payloadService;
-
-  const services = await getDictionaryServices(locale);
-  return services.find((service) => service.slug === slug) ?? null;
-}
-
-const getCachedServiceBySlug = unstable_cache(
-  (slug: string, locale: Locale) => getServiceBySlugUncached(slug, locale),
-  ["public-service-by-slug-v2"],
-  { revalidate: 3600, tags: ["payload-services"] }
-);
-
 export async function getServiceBySlug(
   slug: string,
-  locale: Locale,
-  options?: PreviewReadOptions
+  locale: Locale
 ): Promise<ServiceItem | null> {
-  return options?.draft
-    ? getServiceBySlugUncached(slug, locale, options)
-    : getCachedServiceBySlug(slug, locale);
+  const services = await getDictionaryServices(locale);
+  return services.find((service) => service.slug === slug) ?? null;
 }
 
 export async function getServiceByKey(
   key: string,
   locale: Locale
 ): Promise<ServiceItem | null> {
-  const services = await getServices(locale);
-  const service = services.find((item) => item.key === key);
-  if (service) return service;
-
-  const fallbackServices = await getDictionaryServices(locale);
-  return fallbackServices.find((item) => item.key === key) ?? null;
+  const services = await getDictionaryServices(locale);
+  return services.find((item) => item.key === key) ?? null;
 }
 
 export async function getServiceStaticParams(): Promise<{ locale: string; slug: string }[]> {
   const params: { locale: string; slug: string }[] = [];
 
   for (const locale of ["fr", "en"] as const) {
-    const services = await getServices(locale);
-    for (const service of services) {
-      params.push({ locale, slug: service.slug });
-    }
+    const services = await getDictionaryServices(locale);
+    for (const service of services) params.push({ locale, slug: service.slug });
   }
 
   return params;
@@ -101,30 +52,6 @@ export async function getServiceStaticParams(): Promise<{ locale: string; slug: 
 export async function getServiceSitemapPairs(): Promise<
   { frSlug: string; enSlug: string; updatedAt: string | null; createdAt: string | null }[]
 > {
-  const usePayload = isPayloadSitemapEnabled();
-  const [frPayload, enPayload] = usePayload
-    ? await Promise.all([
-        getPayloadServiceSitemapEntries("fr"),
-        getPayloadServiceSitemapEntries("en"),
-      ])
-    : [null, null];
-
-  if (frPayload?.length && enPayload?.length) {
-    const enByKey = new Map(enPayload.map((entry) => [entry.key, entry]));
-    return frPayload
-      .map((frEntry) => {
-        const enEntry = enByKey.get(frEntry.key);
-        if (!enEntry) return null;
-        return {
-          frSlug: frEntry.slug,
-          enSlug: enEntry.slug,
-          updatedAt: frEntry.updatedAt ?? enEntry.updatedAt,
-          createdAt: frEntry.createdAt ?? enEntry.createdAt,
-        };
-      })
-      .filter((entry): entry is NonNullable<typeof entry> => Boolean(entry));
-  }
-
   const [frServices, enServices] = await Promise.all([
     getDictionaryServices("fr"),
     getDictionaryServices("en"),

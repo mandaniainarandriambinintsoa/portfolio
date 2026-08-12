@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { draftMode } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
 import { notFound } from "next/navigation";
-import { getProjectBySlug } from "@/lib/data/projects";
+import { getAllProjectSlugs, getProjectBySlug } from "@/lib/data/projects";
 import { getProjectSeoDetails } from "@/lib/data/project-seo-details";
 import { getCaseStudy } from "@/lib/data/case-studies";
 import { getCategoryLabel, getProjectTone } from "@/lib/project-display";
@@ -14,9 +13,13 @@ import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import SoftwareAppJsonLd from "@/components/seo/SoftwareAppJsonLd";
 import Button from "@/components/ui/Button";
-import RefreshRouteOnSave from "@/components/preview/RefreshRouteOnSave";
 import { workflows } from "@/lib/data/workflows";
 import N8nWorkflowSection from "@/components/ui/N8nWorkflowSection";
+
+export async function generateStaticParams() {
+  const slugs = await getAllProjectSlugs();
+  return i18n.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+}
 
 function projectMetadataTitle(title: string, subtitle: string) {
   const normalizedTitle = title.trim();
@@ -37,8 +40,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: rawLocale, slug } = await params;
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
-  const { isEnabled: isDraftMode } = await draftMode();
-  const project = await getProjectBySlug(slug, locale, { draft: isDraftMode });
+  const project = await getProjectBySlug(slug, locale);
 
   if (!project) return {};
 
@@ -79,9 +81,8 @@ export default async function ProjectPage({
 }) {
   const { locale: rawLocale, slug } = await params;
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
-  const { isEnabled: isDraftMode } = await draftMode();
   const dict = await getDictionary(locale);
-  const project = await getProjectBySlug(slug, locale, { draft: isDraftMode });
+  const project = await getProjectBySlug(slug, locale);
 
   if (!project) notFound();
 
@@ -147,7 +148,6 @@ export default async function ProjectPage({
 
   return (
     <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
-      {isDraftMode && <RefreshRouteOnSave />}
       <BreadcrumbJsonLd items={breadcrumbs} />
       <SoftwareAppJsonLd
         name={project.title}

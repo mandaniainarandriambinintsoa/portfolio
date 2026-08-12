@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { i18n, type Locale } from "@/i18n/config";
 import { SITE_URL } from "@/lib/constants";
-import { getBlogPostBySlug } from "@/lib/data/blog";
+import { getAllBlogSlugs, getBlogPostBySlug } from "@/lib/data/blog";
 import { notFound } from "next/navigation";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import BlogPostJsonLd from "@/components/seo/BlogPostJsonLd";
@@ -11,6 +11,11 @@ import BlogPostAnim from "@/components/animations/BlogPostAnim";
 import MarkdownRenderer from "@/components/blog/MarkdownRenderer";
 import Button from "@/components/ui/Button";
 import IconScoutIcon from "@/components/icons/IconScoutIcon";
+
+export async function generateStaticParams() {
+  const slugs = await getAllBlogSlugs();
+  return i18n.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+}
 
 function withoutLeadingMarkdownTitle(content: string) {
   return content.replace(/^\s*#\s+[^\r\n]+\r?\n+/, "");

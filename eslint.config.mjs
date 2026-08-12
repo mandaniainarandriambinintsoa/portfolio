@@ -9,7 +9,8 @@ const eslintConfig = defineConfig([
   globalIgnores([
     // Default ignores of eslint-config-next:
     ".next/**",
-    ".next-stale-before-payload*/**",
+    ".next-stale*/**",
+    "legacy/**",
     ".playwright-mcp/**",
     ".tmp-chrome-debug-profile*/**",
     ".tmp-chrome-seo-verify*/**",

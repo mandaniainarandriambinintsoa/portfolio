@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import { withPayload } from "@payloadcms/next/withPayload";
 
 // Content Security Policy — whitelist only what the site actually loads
 const cspDirectives = [
@@ -13,16 +12,14 @@ const cspDirectives = [
   "font-src 'self' https://fonts.gstatic.com",
   // API calls: self + Supabase + Google Analytics + PostHog
   "connect-src 'self' https://lbabmflmjcouniefxwmv.supabase.co https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://eu.i.posthog.com https://us.i.posthog.com https://eu-assets.i.posthog.com https://us-assets.i.posthog.com https://*.public.blob.vercel-storage.com",
-  // Frames: self for Payload live preview.
-  "frame-src 'self' https://manda-ia.com",
+  "frame-src 'self'",
   // Objects: none (no Flash/plugins)
   "object-src 'none'",
   // Base URI: self only (prevent base tag hijacking)
   "base-uri 'self'",
   // Form submissions: self only
   "form-action 'self'",
-  // Frame ancestors: same origin only so Payload live preview can embed pages from the admin.
-  "frame-ancestors 'self' https://manda-ia.com https://www.manda-ia.com",
+  "frame-ancestors 'self'",
 ].join("; ");
 
 const commonSecurityHeaders = [
@@ -37,6 +34,19 @@ const securityHeaders = [
   { key: "Content-Security-Policy", value: cspDirectives },
   ...commonSecurityHeaders,
 ];
+
+const frenchPublicRoutes = [
+  "about",
+  "blog",
+  "contact",
+  "mentions-legales",
+  "privacy",
+  "projects",
+  "quiz",
+  "services",
+  "site-metier",
+  "solutions",
+] as const;
 
 const nextConfig: NextConfig = {
   images: {
@@ -67,6 +77,16 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      {
+        source: "/fr",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/fr/:path*",
+        destination: "/:path*",
+        permanent: true,
+      },
       {
         source: "/:path*",
         has: [
@@ -101,18 +121,25 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: "/", destination: "/fr" },
+        ...frenchPublicRoutes.flatMap((route) => [
+          { source: `/${route}`, destination: `/fr/${route}` },
+          { source: `/${route}/:path*`, destination: `/fr/${route}/:path*` },
+        ]),
+      ],
+    };
+  },
   async headers() {
     return [
       {
-        source: "/((?!admin|api/payload|api/graphql|api/graphql-playground).*)",
-        headers: securityHeaders,
-      },
-      {
         source: "/:path*",
-        headers: commonSecurityHeaders,
+        headers: securityHeaders,
       },
     ];
   },
 };
 
-export default withPayload(nextConfig);
+export default nextConfig;

@@ -75,7 +75,12 @@ function parseClickProperties(target: HTMLElement): Record<string, unknown> {
 
 export default function VisitorSignals({ locale }: { locale: string }) {
   useEffect(() => {
-    if (!readSessionValue(SESSION_KEY)) {
+    let sessionSignalSent = Boolean(readSessionValue(SESSION_KEY));
+    let dwellTimer: number | undefined;
+
+    function sendSessionSignal() {
+      if (sessionSignalSent || document.visibilityState !== "visible") return;
+      sessionSignalSent = true;
       void sendSignal(
         {
           event: "session_started",
@@ -85,6 +90,22 @@ export default function VisitorSignals({ locale }: { locale: string }) {
         },
         SESSION_KEY
       );
+    }
+
+    function onFirstEngagement() {
+      sendSessionSignal();
+      removeEngagementListeners();
+    }
+
+    function removeEngagementListeners() {
+      window.removeEventListener("scroll", onFirstEngagement);
+      document.removeEventListener("keydown", onFirstEngagement);
+    }
+
+    if (!sessionSignalSent) {
+      window.addEventListener("scroll", onFirstEngagement, { passive: true, once: true });
+      document.addEventListener("keydown", onFirstEngagement, { once: true });
+      dwellTimer = window.setTimeout(sendSessionSignal, 8_000);
     }
 
     function onClick(event: MouseEvent) {
@@ -124,7 +145,11 @@ export default function VisitorSignals({ locale }: { locale: string }) {
     }
 
     document.addEventListener("click", onClick);
-    return () => document.removeEventListener("click", onClick);
+    return () => {
+      document.removeEventListener("click", onClick);
+      removeEngagementListeners();
+      if (dwellTimer !== undefined) window.clearTimeout(dwellTimer);
+    };
   }, [locale]);
 
   return null;

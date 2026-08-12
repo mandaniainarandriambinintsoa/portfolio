@@ -1,8 +1,3 @@
-import type { Locale } from "@/i18n/config";
-import { getPayloadClient } from "@/lib/payload";
-import { unstable_cache } from "next/cache";
-import { isPayloadRemoteContentEnabled } from "@/lib/content-mode";
-
 export type HomeBlockType =
   | "homeHero"
   | "homeClientLogos"
@@ -25,16 +20,6 @@ export type PageLayoutBlock = {
   id?: string | null;
 };
 
-type PayloadPage = {
-  layout?: PageLayoutBlock[] | null;
-  slug?: string | null;
-  title?: string | null;
-};
-
-type PayloadReadOptions = {
-  draft?: boolean;
-};
-
 export const defaultHomeLayout: PageLayoutBlock[] = [
   { blockType: "homeHero" },
   { blockType: "homeClientLogos" },
@@ -52,55 +37,3 @@ export const defaultHomeLayout: PageLayoutBlock[] = [
   { blockType: "homeFAQ" },
   { blockType: "homeCTAFinal" },
 ];
-
-async function getPageBySlugUncached(
-  slug: string,
-  locale: Locale,
-  options?: PayloadReadOptions
-): Promise<PayloadPage | null> {
-  if (!isPayloadRemoteContentEnabled()) return null;
-
-  try {
-    const payload = await getPayloadClient();
-    const result = await payload.find({
-      collection: "pages",
-      depth: 0,
-      draft: Boolean(options?.draft),
-      fallbackLocale: "fr",
-      limit: 1,
-      locale,
-      overrideAccess: Boolean(options?.draft),
-      where: {
-        and: [
-          { slug: { equals: slug } },
-          ...(options?.draft
-            ? []
-            : [
-                { _status: { equals: "published" } },
-                { published: { not_equals: false } },
-              ]),
-        ],
-      },
-    } as never);
-
-    return (result.docs[0] as PayloadPage | undefined) ?? null;
-  } catch {
-    return null;
-  }
-}
-
-const getCachedPageBySlug = unstable_cache(
-  (slug: string, locale: Locale) => getPageBySlugUncached(slug, locale),
-  ["public-page-by-slug"],
-  { revalidate: 3600, tags: ["payload-pages"] }
-);
-
-export async function getPageBySlug(
-  slug: string,
-  locale: Locale,
-  options?: PayloadReadOptions
-): Promise<PayloadPage | null> {
-  return options?.draft
-    ? getPageBySlugUncached(slug, locale, options)
-    : getCachedPageBySlug(slug, locale);
-}

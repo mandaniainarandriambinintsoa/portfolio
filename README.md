@@ -11,20 +11,20 @@ Portfolio personnel de **Mandaniaina Randriambinintsoa** — Architecte IA & Aut
 | **Next.js 16** | Framework React (App Router, SSG/ISR, Turbopack) |
 | **Tailwind CSS v4** | Styling utility-first + Typography plugin |
 | **GSAP 3** | Animations scroll-triggered, parallax, stagger |
-| **Supabase** | Base de données PostgreSQL, RLS, API temps réel |
-| **Payload CMS** | Back-office principal pour projets, articles et médias |
+| **Supabase** | Données dynamiques ciblées : formulaires, quiz et visiteurs |
+| **Contenu local** | Pages, projets, services et articles versionnés dans Git |
 | **PostHog** | Product analytics, parcours utilisateurs, heatmaps et session replays |
 | **TypeScript** | Typage strict sur tout le projet |
 
 ## Fonctionnalites
 
 - **10 sections homepage** : Hero, Command Center, Services, Process, Testimonials, Stats, Tech Stack, Projects (bento layout), FAQ, CTA Final
-- **Blog dynamique** : Articles Markdown geres par Payload CMS, avec fallback Supabase pendant la migration
-- **Projets dynamiques** : Projets geres par Payload CMS, avec fallback Supabase + dictionnaires pendant la migration
+- **Blog statique** : Articles Markdown exportés dans `src/content/blog-posts.json`
+- **Projets statiques** : Projets et services gérés dans les dictionnaires FR/EN
 - **i18n FR/EN** : Francais par defaut (`/`), anglais secondaire (`/en/`)
 - **SEO optimise** : JSON-LD (Person, FAQ, BlogPosting, BreadcrumbList), sitemap dynamique, meta tags OpenGraph
 - **Product analytics** : PostHog optionnel pour comprendre les parcours, clics, conversions et abandons
-- **ISR** : Revalidation automatique toutes les heures + API de revalidation on-demand
+- **SSG** : Pages publiques générées au build et servies depuis le CDN
 - **Design** : Dark glassmorphism, animations fluides, responsive mobile-first
 
 ## Architecture
@@ -33,9 +33,8 @@ Portfolio personnel de **Mandaniaina Randriambinintsoa** — Architecte IA & Aut
 src/
   app/
     [locale]/          # Pages i18n (blog, projects, services, about, contact)
-    (payload)/         # Admin Payload + REST/GraphQL Payload
-    api/revalidate/    # API ISR on-demand
-    sitemap.ts         # Sitemap dynamique (blog + projets Payload/Supabase)
+    api/               # Endpoints métier : contact, tracking, quiz, visiteurs
+    sitemap.ts         # Sitemap généré depuis le contenu local
   components/
     animations/        # Wrappers GSAP (useGSAP + matchMedia)
     blog/              # BlogListingClient, MarkdownRenderer
@@ -44,10 +43,12 @@ src/
     seo/               # JSON-LD components
     ui/                # GlassCard, Button, N8nWorkflowViewer
   lib/
-    data/              # Data fetching Payload-first (blog.ts, projects.ts, workflows/)
+    data/              # Lecteurs de contenu local et workflows
     supabase/          # Client serveur/browser, types auto-generes
-  payload/             # Collections, globals et types Payload
+  content/             # Snapshot local des articles publiés
   i18n/                # Config + dictionnaires FR/EN
+legacy/
+  payload-cms/         # Ancienne expérimentation CMS, exclue du build
 ```
 
 ## Demarrage rapide
@@ -58,12 +59,9 @@ npm install
 
 # Configurer les variables d'environnement
 cp .env.example .env.local
-# Remplir NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY, REVALIDATION_SECRET
-# Remplir PAYLOAD_SECRET, NEXT_PUBLIC_SITE_URL
-# Remplir PAYLOAD_DATABASE_URI en production (fallback SQLite local sinon)
+# Remplir NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY et NEXT_PUBLIC_SITE_URL
 # Optionnel : NEXT_PUBLIC_POSTHOG_KEY, NEXT_PUBLIC_POSTHOG_HOST
 # Optionnel admin local : POSTHOG_PERSONAL_API_KEY, POSTHOG_PROJECT_ID
-# Optionnel medias Payload en production : BLOB_READ_WRITE_TOKEN
 
 # Lancer en developpement
 npm run dev
@@ -72,25 +70,19 @@ npm run dev
 npm run build
 ```
 
-## Payload CMS
+## Gestion du contenu
 
-Payload remplace l'ancien dashboard Supabase sous `/admin`.
-
-```bash
-npm run payload:generate:types
-npm run payload:generate:importmap
-npm run payload:migrate
-npm run payload:migrate:supabase
-```
-
-Details : `PAYLOAD-CMS-MIGRATION.md`.
+Le portfolio suit une approche content as code. Toute modification de page,
+service, projet ou article passe par Git et déclenche un nouveau déploiement.
+L'ancienne intégration Payload est conservée uniquement comme référence dans
+`legacy/payload-cms` et n'est ni compilée ni exposée en production.
 
 ## Deploiement
 
 Le site est deploye sur **Vercel** avec :
 - Build automatique sur push `main`
 - Variables d'environnement configurees dans le dashboard Vercel
-- ISR pour le blog et les projets (revalidation 1h)
+- pages publiques pré-rendues et servies depuis le CDN
 
 ## Auteur
 

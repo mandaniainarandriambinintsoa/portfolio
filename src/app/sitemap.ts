@@ -5,9 +5,6 @@ import { getAllProjectSitemapEntries } from "@/lib/data/projects";
 import { getServiceSitemapPairs } from "@/lib/data/services";
 import { getSolutions, SOLUTION_LAST_UPDATED } from "@/lib/data/solutions";
 
-// Revalidate every hour so lastmod reflects Supabase updates without a full redeploy
-export const revalidate = 3600;
-
 function asDate(value: string | null | undefined, fallback: Date): Date {
   if (!value) return fallback;
   const parsed = new Date(value);

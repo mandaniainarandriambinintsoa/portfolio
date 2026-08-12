@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { draftMode } from "next/headers";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL, LANDING_LAST_UPDATED } from "@/lib/constants";
@@ -11,13 +10,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
-import { getServiceByKey, getServiceBySlug } from "@/lib/data/services";
+import { getServiceByKey, getServiceBySlug, getServiceStaticParams } from "@/lib/data/services";
 import { getRelatedSolutionsForService, type Solution } from "@/lib/data/solutions";
-import RefreshRouteOnSave from "@/components/preview/RefreshRouteOnSave";
 import SeoGrowthProof from "@/components/sections/SeoGrowthProof";
 import PerformanceOptimizationProof from "@/components/sections/PerformanceOptimizationProof";
 import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
 import SectionHeading from "@/components/ui/SectionHeading";
+
+export async function generateStaticParams() {
+  return getServiceStaticParams();
+}
 
 function formatLastUpdated(iso: string, locale: "fr" | "en") {
   const d = new Date(iso);
@@ -108,8 +110,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: rawLocale, slug } = await params;
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
-  const { isEnabled: isDraftMode } = await draftMode();
-  const service = await getServiceBySlug(slug, locale, { draft: isDraftMode });
+  const service = await getServiceBySlug(slug, locale);
 
   if (!service) return {};
 
@@ -146,9 +147,8 @@ export default async function ServicePage({
 }) {
   const { locale: rawLocale, slug } = await params;
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
-  const { isEnabled: isDraftMode } = await draftMode();
   const dict = await getDictionary(locale);
-  const service = (await getServiceBySlug(slug, locale, { draft: isDraftMode })) as any;
+  const service = (await getServiceBySlug(slug, locale)) as any;
 
   if (!service) notFound();
 
@@ -191,7 +191,6 @@ export default async function ServicePage({
   if (!isLanding) {
     return (
       <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
-        {isDraftMode && <RefreshRouteOnSave />}
         <ServiceJsonLd name={service.title} description={service.description} locale={locale} />
         <BreadcrumbJsonLd items={breadcrumbs} />
         <div className="max-w-4xl mx-auto">
@@ -242,7 +241,6 @@ export default async function ServicePage({
 
   return (
     <main id="main-content" className="relative min-h-screen w-full min-w-0 px-6 pt-32 pb-24">
-      {isDraftMode && <RefreshRouteOnSave />}
       <ServiceJsonLd name={service.title} description={service.description} locale={locale} />
       <BreadcrumbJsonLd items={breadcrumbs} />
       {landing.faq && <FAQJsonLd items={landing.faq} />}
