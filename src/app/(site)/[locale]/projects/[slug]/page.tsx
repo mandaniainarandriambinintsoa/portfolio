@@ -416,7 +416,13 @@ export default async function ProjectPage({
                 },
               }}
             >
-              {locale === "fr" ? "Voir le projet" : "View Project"}
+              {slug === "factumation"
+                ? locale === "fr"
+                  ? "Créer une facture gratuitement"
+                  : "Create a free invoice"
+                : locale === "fr"
+                  ? "Voir le projet"
+                  : "View Project"}
             </Button>
           )}
           <Button

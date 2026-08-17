@@ -770,6 +770,200 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
     },
   },
+  factumation: {
+    fr: {
+      metaTitle: "Logiciel de facturation gratuit Madagascar | Factumation",
+      metaDescription:
+        "Créez gratuitement factures et devis en ligne à Madagascar avec Factumation : PDF professionnel, Ariary, suivi client et aucune carte bancaire.",
+      kicker: "Facturation en ligne à Madagascar",
+      title: "Un logiciel de facturation gratuit pensé pour Madagascar",
+      summary:
+        "Factumation permet à un freelance, un indépendant ou une petite entreprise malgache de créer une facture ou un devis professionnel sans installer de logiciel et sans fournir de carte bancaire. L'outil fonctionne dans le navigateur, prend en charge l'Ariary malgache et exporte les documents en PDF. Cette page présente le produit, ses usages et ses limites afin d'aider un professionnel à choisir entre un générateur simple et un logiciel de gestion plus complet.",
+      facts: [
+        { label: "Prix", value: "100 % gratuit, sans carte bancaire" },
+        { label: "Documents", value: "factures et devis exportables en PDF" },
+        { label: "Devise locale", value: "Ariary malgache (MGA)" },
+        { label: "Accès", value: "création sans inscription obligatoire" },
+      ],
+      sections: [
+        {
+          title: "Créer une facture en ligne à Madagascar sans tableur",
+          paragraphs: [
+            "Une facture préparée dans Word ou Excel demande de recopier les coordonnées, les lignes de prestation, les totaux et la mise en page. Factumation rassemble ces éléments dans un éditeur guidé, puis génère un PDF propre à télécharger ou à envoyer au client.",
+            "La création et le téléchargement d'une facture ou d'un devis ne nécessitent pas de compte. Un compte gratuit devient utile uniquement pour sauvegarder l'historique, gérer les clients et retrouver les documents. Cette séparation permet de tester l'outil immédiatement avant de décider de conserver ses données.",
+          ],
+        },
+        {
+          title: "Ariary, euro et devises utiles aux freelances malgaches",
+          paragraphs: [
+            "Un professionnel à Madagascar peut facturer localement en Ariary et travailler aussi avec des clients internationaux. Factumation prend en charge le MGA ainsi que plusieurs devises courantes, dont l'euro et le dollar américain, afin de produire un document cohérent avec le contrat ou le client.",
+            "L'outil vise notamment les freelances, consultants, prestataires, associations et petites structures qui ont besoin d'émettre rapidement des factures et devis. Les informations fiscales et mentions utilisées restent sous la responsabilité de l'émetteur : Factumation facilite la création du document, mais ne remplace pas un expert-comptable ni un conseil fiscal malgache.",
+          ],
+        },
+        {
+          title: "Factumation ou logiciel ERP de facturation ?",
+          paragraphs: [
+            "Factumation est pertinent lorsque le besoin principal est de créer rapidement des factures et devis, gérer quelques clients et exporter des PDF. Sa prise en main légère et son accès gratuit évitent de déployer un ERP pour un besoin encore simple.",
+            "Une entreprise qui doit gérer stocks, bons de livraison, comptabilité, paie, marges détaillées ou plusieurs équipes aura plutôt besoin d'un logiciel de gestion complet. Le bon choix dépend donc du processus réel : générateur gratuit pour démarrer et facturer proprement, ERP lorsque les opérations exigent un référentiel et des contrôles plus larges.",
+          ],
+        },
+        {
+          title: "Un produit Next.js construit et mesuré en conditions réelles",
+          paragraphs: [
+            "Factumation est aussi une réalisation technique : interface Next.js, génération de documents, gestion des données et architecture conçue pour être reliée à des automatisations métier. Le projet démontre comment un MVP utile peut être livré rapidement sans sacrifier la lisibilité du parcours.",
+            "Les données GSC du portfolio ont déjà placé cette page dans les premiers résultats sur plusieurs requêtes liées à l'invoicing. L'objectif de cet enrichissement est maintenant de répondre plus précisément aux recherches locales autour du logiciel de facturation gratuit à Madagascar, tout en donnant un accès direct au produit.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Créer une facture gratuitement avec Factumation",
+          href: "https://factumation.vercel.app/fr",
+          description:
+            "Ouvrir le générateur en ligne pour créer une facture ou un devis et l'exporter en PDF.",
+        },
+        {
+          label: "Développeur Next.js et Supabase freelance",
+          href: "/services/developpeur-nextjs-supabase-madagascar",
+          description:
+            "Conception de SaaS, applications métier et tableaux de bord avec une stack web moderne.",
+        },
+        {
+          label: "Automatisation n8n à Madagascar",
+          href: "/services/automatisation-n8n-madagascar",
+          description:
+            "Relier facturation, email, CRM et relances avec des workflows contrôlés et documentés.",
+        },
+        {
+          label: "Développement d'applications métier",
+          href: "/services/developpement-sites-saas",
+          description:
+            "Transformer un processus manuel en application web claire, maintenable et mesurable.",
+        },
+      ],
+      faq: [
+        {
+          question: "Quel logiciel de facturation gratuit utiliser à Madagascar ?",
+          answer:
+            "Factumation convient aux freelances et petites structures qui veulent créer gratuitement des factures et devis en ligne, utiliser l'Ariary et exporter un PDF. Pour la comptabilité complète, la gestion de stock ou la paie, il faut plutôt choisir un ERP adapté à la législation et au fonctionnement de l'entreprise.",
+        },
+        {
+          question: "Peut-on créer une facture sans inscription ?",
+          answer:
+            "Oui. La création et le téléchargement d'une facture ou d'un devis peuvent se faire sans compte. Un compte gratuit est seulement nécessaire pour sauvegarder l'historique, gérer les clients et utiliser les fonctions liées à l'envoi.",
+        },
+        {
+          question: "Factumation prend-il en charge l'Ariary malgache ?",
+          answer:
+            "Oui. L'Ariary malgache (MGA) fait partie des devises proposées, avec l'euro, le dollar américain et plusieurs autres devises utiles aux professionnels qui travaillent à l'international.",
+        },
+        {
+          question: "Factumation remplace-t-il un logiciel de comptabilité ?",
+          answer:
+            "Non. Factumation facilite la création, le suivi et l'export de factures et devis. Il ne remplace pas un logiciel comptable complet, un ERP ni l'accompagnement d'un professionnel pour les obligations fiscales et comptables.",
+        },
+        {
+          question: "Le logiciel est-il vraiment gratuit ?",
+          answer:
+            "Oui. Factumation permet de créer des factures et devis, de les exporter en PDF et de démarrer sans carte bancaire. Les éventuels services externes connectés à une automatisation peuvent avoir leurs propres coûts.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Free Invoicing Software for Madagascar | Factumation",
+      metaDescription:
+        "Create free invoices and quotes online in Madagascar with Factumation: professional PDF, Malagasy Ariary, client records and no credit card.",
+      kicker: "Online invoicing in Madagascar",
+      title: "Free invoicing software built for Madagascar",
+      summary:
+        "Factumation helps freelancers, independent professionals and small businesses in Madagascar create professional invoices and quotes without installing software or entering a credit card. It runs in the browser, supports the Malagasy Ariary and exports documents as PDF. This page explains where the lightweight tool fits and when a complete accounting or ERP platform is more appropriate.",
+      facts: [
+        { label: "Price", value: "100% free, no credit card" },
+        { label: "Documents", value: "invoices and quotes exported as PDF" },
+        { label: "Local currency", value: "Malagasy Ariary (MGA)" },
+        { label: "Access", value: "creation without mandatory signup" },
+      ],
+      sections: [
+        {
+          title: "Create an invoice online without a spreadsheet",
+          paragraphs: [
+            "Preparing invoices in Word or Excel means copying customer details, services, totals and formatting every time. Factumation brings these fields into a guided editor and generates a clean PDF ready to download or send.",
+            "Creating and downloading an invoice or quote does not require an account. A free account is only needed to save history, manage customers and retrieve documents later, so the product can be tested immediately.",
+          ],
+        },
+        {
+          title: "Ariary and international currencies",
+          paragraphs: [
+            "Professionals in Madagascar may invoice locally in Ariary and also work with international customers. Factumation supports MGA together with common currencies such as EUR and USD, letting the document match the customer agreement.",
+            "The tool is suitable for freelancers, consultants, service providers, associations and small businesses. Tax details and mandatory invoice information remain the issuer's responsibility: Factumation creates the document but does not replace an accountant or local tax advice.",
+          ],
+        },
+        {
+          title: "Factumation or a complete invoicing ERP?",
+          paragraphs: [
+            "Factumation fits when the main need is to create invoices and quotes quickly, keep a lightweight customer list and export professional PDFs without paying for a large system.",
+            "A company that needs stock, delivery notes, payroll, full accounting, detailed margins or multi-team controls should use a complete management platform. The right choice depends on the operating process, not on the longest feature list.",
+          ],
+        },
+        {
+          title: "A real Next.js product, not a static concept",
+          paragraphs: [
+            "Factumation is also a technical case study covering a Next.js interface, document generation, data management and integration-ready architecture. It shows how a useful MVP can ship quickly while keeping a clear customer journey.",
+            "The portfolio page already receives organic impressions and visits. This richer version now answers local invoicing intent directly and gives visitors a clear path to the working product.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Create a free invoice with Factumation",
+          href: "https://factumation.vercel.app/en",
+          description: "Open the online generator to create an invoice or quote and export it as PDF.",
+        },
+        {
+          label: "Freelance Next.js and Supabase developer",
+          href: "/en/services/nextjs-supabase-developer-madagascar",
+          description: "Custom SaaS products, business applications and dashboards built on a modern web stack.",
+        },
+        {
+          label: "n8n automation consultant",
+          href: "/en/services/remote-n8n-automation-consultant",
+          description: "Connect invoicing, email, CRM and reminders with controlled, documented workflows.",
+        },
+        {
+          label: "Business application development",
+          href: "/en/services/sites-saas-development",
+          description: "Turn a manual business process into a clear, maintainable and measurable web application.",
+        },
+      ],
+      faq: [
+        {
+          question: "Which free invoicing software can I use in Madagascar?",
+          answer:
+            "Factumation suits freelancers and small businesses that need free online invoices and quotes, Malagasy Ariary support and PDF export. Full accounting, inventory or payroll requires a broader ERP aligned with the company's obligations.",
+        },
+        {
+          question: "Can I create an invoice without signing up?",
+          answer:
+            "Yes. An invoice or quote can be created and downloaded without an account. A free account is only required to save history, manage customers and use sending-related features.",
+        },
+        {
+          question: "Does Factumation support Malagasy Ariary?",
+          answer:
+            "Yes. Malagasy Ariary (MGA) is available alongside EUR, USD and several other currencies useful for professionals working internationally.",
+        },
+        {
+          question: "Does Factumation replace accounting software?",
+          answer:
+            "No. Factumation helps create, track and export invoices and quotes. It does not replace complete accounting software, an ERP or professional advice for tax and accounting obligations.",
+        },
+        {
+          question: "Is Factumation really free?",
+          answer:
+            "Yes. Factumation lets users create invoices and quotes, export PDFs and start without a credit card. External services connected through automation may have their own charges.",
+        },
+      ],
+    },
+  },
 };
 
 export function getProjectSeoDetails(slug: string, locale: Locale) {

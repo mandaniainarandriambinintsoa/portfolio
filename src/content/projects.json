@@ -151,14 +151,16 @@
     "slug": "factumation",
     "title_fr": "Factumation",
     "title_en": "Factumation",
-    "subtitle_fr": "Logiciel de facturation",
-    "subtitle_en": "Invoicing Software",
+    "subtitle_fr": "Logiciel de facturation gratuit à Madagascar",
+    "subtitle_en": "Free invoicing software for Madagascar",
     "description_fr": "Logiciel de facturation en ligne pensé pour les freelances, auto-entrepreneurs et PME à Madagascar et en Europe. Factumation permet de créer des factures et devis élégants en quelques secondes avec un éditeur intuitif, d'exporter en PDF professionnel prêt à envoyer, et de connecter ses outils métier via Webhook pour automatiser la comptabilité. Le logiciel est 100% gratuit, sans inscription complexe et sans carte bancaire requise. Il intègre la gestion multi-devises (Ariary, Euro), le suivi des paiements et les relances automatiques. Projet emblématique entièrement développé avec Claude Code et automatisé via N8N, démontrant la puissance de l'IA dans le développement logiciel.",
     "description_en": "Online invoicing software designed for freelancers, self-employed professionals, and SMBs in Madagascar and Europe. Factumation lets you create polished invoices and quotes in seconds with an intuitive editor, export them as professional ready-to-send PDFs, and connect your business tools via Webhook for automated accounting. The software is 100% free, with no complex signup and no credit card required. It features multi-currency support (Ariary, Euro), payment tracking, and automated reminders. A flagship project entirely built with Claude Code and automated via N8N, showcasing the power of AI in software development.",
     "tags": [
+      "Facturation",
+      "Madagascar",
+      "Next.js",
       "Claude Code",
-      "N8N",
-      "Automatisation"
+      "N8N"
     ],
     "link": "https://factumation.vercel.app",
     "featured": false,
@@ -168,7 +170,7 @@
     "sort_order": 7,
     "published": true,
     "created_at": "2026-02-18T15:07:08.980579+00:00",
-    "updated_at": "2026-05-12T16:10:56.874359+00:00"
+    "updated_at": "2026-08-17T15:00:00.000000+00:00"
   },
   {
     "id": "2607d9a8-fe4e-4fe1-aed2-7a09fb2ba643",
