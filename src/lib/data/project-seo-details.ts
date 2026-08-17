@@ -34,6 +34,224 @@ export type ProjectSeoDetails = {
 };
 
 const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
+  teamia: {
+    fr: {
+      metaTitle: "Refonte TeamIA : Next.js, Payload CMS et agents IA",
+      metaDescription:
+        "Étude de cas de la refonte TeamIA : stratégie, UX, Next.js, Payload CMS, Supabase, n8n, SEO/GEO et plateforme multilingue France-Luxembourg.",
+      kicker: "Refonte d'une plateforme IA B2B",
+      title: "Transformer un site Webflow en plateforme métier pilotable",
+      summary:
+        "TeamIA devait passer d'un site vitrine généraliste à une plateforme capable d'expliquer, démontrer et vendre des agents IA métier en France et au Luxembourg. J'ai pris en charge le reverse engineering de l'existant, la clarification du positionnement, la direction UI/UX, l'architecture Next.js et Payload CMS, les connexions Supabase et n8n, ainsi que la migration SEO/GEO. Le résultat est un système éditorial multilingue, mesurable et conçu pour rester disponible même lorsque le CMS distant ne répond pas.",
+      facts: [
+        { label: "Périmètre", value: "stratégie, design, code, CMS et acquisition" },
+        { label: "Stack", value: "Next.js 16, Payload CMS 3 et PostgreSQL" },
+        { label: "Automatisation", value: "formulaires et 9 démonstrateurs reliés à n8n" },
+        { label: "Marchés", value: "France, Luxembourg et contenus FR/EN/DE" },
+      ],
+      sections: [
+        {
+          title: "Commencer par le positionnement, pas par la maquette",
+          paragraphs: [
+            "L'ancien site présentait de nombreuses capacités IA sans hiérarchie assez nette entre diagnostic, intégration et résultat métier. Le travail a donc commencé par un reverse engineering des pages, des messages, des parcours et des signaux de confiance. L'enjeu n'était pas de repeindre Webflow, mais de décider ce que TeamIA devait devenir dans l'esprit d'un dirigeant de PME.",
+            "Le positionnement retenu présente TeamIA comme l'intégrateur transfrontalier qui transforme un processus métier en agent IA opérationnel, mesurable et finançable. Le parcours relie maintenant deux étapes cohérentes : cadrer le cas d'usage, puis déployer l'agent et mesurer sa valeur. France et Luxembourg restent deux portes locales sans imposer de redirection géographique au visiteur.",
+          ],
+        },
+        {
+          title: "Une direction UI/UX conçue pour rassurer un décideur B2B",
+          paragraphs: [
+            "Plusieurs directions pleine page ont été explorées avant de consolider une interface claire, blanche et opérationnelle. Le premier écran pose une promesse, un seul appel à l'action et un schéma lisible : données et processus entrent dans un agent sécurisé, puis produisent des actions dans les outils, du temps gagné et un ROI suivi.",
+            "La suite de la page donne la priorité au parcours, aux démonstrateurs et aux preuves. Les références presse, le fondateur, les marchés locaux, la FAQ et le contact ont chacun une fonction précise. L'iconographie, la typographie et les dimensions des composants sont normalisées afin que l'équipe puisse enrichir le site sans casser sa cohérence visuelle.",
+          ],
+        },
+        {
+          title: "Next.js et Payload CMS sans rendre le site dépendant du CMS",
+          paragraphs: [
+            "Le frontend a été reconstruit avec Next.js tandis que Payload CMS administre les pages, articles, marchés, aides, cas d'usage, démonstrateurs, FAQ, équipe, presse et redirections. PostgreSQL sur Supabase porte les données structurées et un stockage objet séparé accueille les médias.",
+            "La lecture distante de Payload est volontairement optionnelle pour le site public. Un snapshot statique sert de contenu de secours : si la base ou le CMS est indisponible, les pages marketing continuent de répondre sans ouvrir une connexion PostgreSQL à chaque visite. Cette décision améliore à la fois la disponibilité, la vitesse et la maîtrise des quotas Vercel/Supabase.",
+          ],
+        },
+        {
+          title: "Des démonstrateurs branchés à n8n avec une frontière serveur",
+          paragraphs: [
+            "Les neuf démonstrateurs ne contactent jamais directement les webhooks depuis le navigateur. Une route Next.js vérifie la demande, applique les limites et relaie l'appel vers n8n avec un secret conservé côté serveur. Le même principe protège le formulaire de contact avant son enregistrement et sa transmission au workflow métier.",
+            "Cette architecture sépare la démonstration visible des credentials et de l'orchestration. Elle permet d'ajouter journalisation, contrôle de volume, reprise sur erreur et évolution des workflows sans exposer l'instance n8n ni obliger le frontend à connaître les détails techniques.",
+          ],
+        },
+        {
+          title: "Une migration SEO/GEO pensée URL par URL",
+          paragraphs: [
+            "La refonte conserve l'autorité acquise par l'ancien domaine grâce à une matrice de migration : URL source, nouvelle destination, redirection, canonical et équivalent linguistique. Les pages natives remplacent les contenus difficiles à indexer, avec sitemap, hreflang, métadonnées, données structurées et fichiers lisibles par les agents IA.",
+            "Les hubs France, Luxembourg et Paris répondent à des intentions locales distinctes. Les articles, pages marché, cas d'usage et démonstrateurs sont reliés par sujet afin d'éviter des pages isolées. GA4, GTM et PostHog restent soumis au consentement, ce qui permet de mesurer les parcours sans charger les outils marketing avant le choix du visiteur.",
+          ],
+        },
+        {
+          title: "Une livraison exploitable après la mise en ligne",
+          paragraphs: [
+            "Le projet comprend les migrations Payload, les contenus statiques de secours, les scripts d'administration, les procédures Supabase, la sécurité des accès et la documentation d'exploitation. Les comptes de production, le dépôt, les données et les services critiques appartiennent à TeamIA afin d'éviter toute dépendance au prestataire.",
+            "Cette réalisation rassemble mon approche complète d'un site métier : comprendre l'offre, dessiner le parcours, construire l'outil éditorial, connecter les opérations, préserver le SEO puis documenter la maintenance. La mise en ligne n'est pas la fin du projet ; elle ouvre une boucle mesurable d'amélioration du contenu et de la conversion.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Voir la plateforme TeamIA",
+          href: "https://www.teamia.ai/",
+          description: "Découvrir le site en production, ses marchés, ses démonstrateurs et ses contenus métier.",
+        },
+        {
+          label: "Développement de sites et SaaS",
+          href: "/services/developpement-sites-saas",
+          description: "Conception Next.js, architecture de contenu et intégrations pour produits et sites métier.",
+        },
+        {
+          label: "Automatisation n8n à Madagascar",
+          href: "/services/automatisation-n8n-madagascar",
+          description: "Webhooks sécurisés, workflows documentés, reprise sur erreur et validation humaine.",
+        },
+        {
+          label: "Consultant SEO et GEO",
+          href: "/services/consultant-seo-geo",
+          description: "Architecture de recherche, contenus utiles, données structurées et visibilité dans les moteurs IA.",
+        },
+      ],
+      faq: [
+        {
+          question: "Quel était l'objectif principal de la refonte TeamIA ?",
+          answer:
+            "Faire passer TeamIA d'un catalogue généraliste autour de l'IA à une plateforme B2B qui explique un parcours clair : identifier un cas d'usage, déployer un agent connecté aux outils, sécuriser les actions et mesurer le résultat.",
+        },
+        {
+          question: "Pourquoi avoir combiné Next.js et Payload CMS ?",
+          answer:
+            "Next.js apporte le rendu, la performance et le contrôle SEO. Payload fournit une administration structurée pour les pages, articles, marchés, démonstrateurs et preuves. Un fallback statique évite que le site public dépende d'une lecture CMS à chaque visite.",
+        },
+        {
+          question: "Comment les démonstrateurs TeamIA sont-ils sécurisés ?",
+          answer:
+            "Le navigateur appelle une route serveur Next.js. Celle-ci contrôle la requête et transmet ensuite au webhook n8n avec un secret non exposé au client. Des limites et des chemins d'erreur réduisent les appels abusifs ou incomplets.",
+        },
+        {
+          question: "La refonte conserve-t-elle le référencement de l'ancien site ?",
+          answer:
+            "Oui. Une matrice de migration associe les anciennes URL aux nouvelles pages et pilote redirections, canonicals, hreflang et sitemap. Le contenu a aussi été restructuré en hubs thématiques et locaux plutôt qu'en pages isolées.",
+        },
+        {
+          question: "TeamIA peut-il modifier le site sans développeur ?",
+          answer:
+            "Oui pour le contenu prévu dans Payload : pages, articles, FAQ, marchés, presse, cas d'usage et démonstrateurs. Les composants et types de sections restent encadrés afin de conserver la direction UI/UX et la qualité technique.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "TeamIA Redesign: Next.js, Payload CMS and AI Agents",
+      metaDescription:
+        "TeamIA redesign case study: strategy, UX, Next.js, Payload CMS, Supabase, n8n, SEO/GEO and a multilingual France-Luxembourg platform.",
+      kicker: "B2B AI platform redesign",
+      title: "Turning a Webflow website into an operational platform",
+      summary:
+        "TeamIA needed to move from a broad showcase website to a platform that could explain, demonstrate and sell business AI agents in France and Luxembourg. I handled reverse engineering, positioning, UI/UX direction, the Next.js and Payload CMS architecture, Supabase and n8n integration, and the SEO/GEO migration. The result is a measurable multilingual content system designed to remain available even when the remote CMS is unavailable.",
+      facts: [
+        { label: "Scope", value: "strategy, design, engineering, CMS and acquisition" },
+        { label: "Stack", value: "Next.js 16, Payload CMS 3 and PostgreSQL" },
+        { label: "Automation", value: "forms and 9 demos connected to n8n" },
+        { label: "Markets", value: "France, Luxembourg and FR/EN/DE content" },
+      ],
+      sections: [
+        {
+          title: "Positioning before interface design",
+          paragraphs: [
+            "The previous website presented many AI capabilities without a strong hierarchy between diagnosis, integration and business outcomes. The work started with reverse engineering of the pages, messages, journeys and trust signals. The goal was not to repaint Webflow, but to define what TeamIA should represent to an SME decision-maker.",
+            "The selected position presents TeamIA as a cross-border integrator that turns a business process into an operational, measurable and fundable AI agent. The journey now connects two stages: frame the use case, then deploy the agent and measure value. France and Luxembourg remain local entry points without forcing an IP-based redirect.",
+          ],
+        },
+        {
+          title: "UI/UX designed to reassure B2B decision-makers",
+          paragraphs: [
+            "Several full-page directions were explored before consolidating a clear and operational interface. The first viewport delivers one promise, one primary action and one readable system diagram: data and processes enter a secured agent, then produce tool actions, time savings and measurable ROI.",
+            "The rest of the page prioritizes the journey, demos and evidence. Press coverage, founder profile, local markets, FAQ and contact each have a defined role. Icons, typography and component dimensions are normalized so the team can extend the website without losing visual coherence.",
+          ],
+        },
+        {
+          title: "Next.js and Payload CMS without runtime dependency",
+          paragraphs: [
+            "The frontend was rebuilt with Next.js while Payload CMS manages pages, articles, markets, funding programs, use cases, demos, FAQ, team, press and redirects. PostgreSQL on Supabase stores structured content and separate object storage hosts media.",
+            "Remote Payload reads are intentionally optional for the public site. A static snapshot acts as a fallback: if the database or CMS is unavailable, marketing pages continue to respond without opening a PostgreSQL connection on every visit. This improves availability, speed and Vercel/Supabase quota control.",
+          ],
+        },
+        {
+          title: "n8n demos protected by a server boundary",
+          paragraphs: [
+            "The nine demos never call webhooks directly from the browser. A Next.js route validates the request, applies limits and relays it to n8n with a server-only secret. The contact form follows the same boundary before persistence and workflow delivery.",
+            "This separates the visible experience from credentials and orchestration. Logging, volume controls, retries and workflow changes can evolve without exposing the n8n instance or coupling the frontend to technical implementation details.",
+          ],
+        },
+        {
+          title: "An SEO/GEO migration managed URL by URL",
+          paragraphs: [
+            "The redesign preserves existing domain authority through a migration matrix covering source URL, destination, redirect, canonical and language equivalent. Native pages replace hard-to-index embedded content, with sitemap, hreflang, metadata, structured data and files readable by AI agents.",
+            "France, Luxembourg and Paris hubs address distinct local intent. Articles, market pages, use cases and demos are connected by topic to avoid orphan pages. GA4, GTM and PostHog remain consent-aware, enabling journey measurement without loading optional tracking before the visitor's choice.",
+          ],
+        },
+        {
+          title: "A platform that can be operated after launch",
+          paragraphs: [
+            "The delivery includes Payload migrations, static content fallbacks, admin scripts, Supabase procedures, access security and operational documentation. Production accounts, source code, data and essential services belong to TeamIA to prevent provider lock-in.",
+            "This case study combines my complete business website approach: understand the offer, design the journey, build the editorial system, connect operations, preserve search equity and document maintenance. Launch is the beginning of a measurable content and conversion improvement loop.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Visit TeamIA",
+          href: "https://www.teamia.ai/en",
+          description: "Explore the live platform, markets, AI demos and business content.",
+        },
+        {
+          label: "Website and SaaS development",
+          href: "/en/services/sites-saas-development",
+          description: "Next.js products, content architecture and integrations for business platforms.",
+        },
+        {
+          label: "n8n automation consultant",
+          href: "/en/services/n8n-automation-expert-madagascar",
+          description: "Secure webhooks, documented workflows, retries and human approval paths.",
+        },
+        {
+          label: "SEO and GEO consulting",
+          href: "/en/services/seo-geo-consultant",
+          description: "Search architecture, useful content, structured data and AI search visibility.",
+        },
+      ],
+      faq: [
+        {
+          question: "What was the primary objective of the TeamIA redesign?",
+          answer:
+            "To move TeamIA from a broad AI catalogue to a B2B platform with a clear journey: identify a use case, deploy an agent connected to business tools, secure its actions and measure the outcome.",
+        },
+        {
+          question: "Why combine Next.js and Payload CMS?",
+          answer:
+            "Next.js provides rendering, performance and SEO control. Payload offers structured administration for pages, articles, markets, demos and evidence. A static fallback prevents public pages from depending on a CMS query for every visit.",
+        },
+        {
+          question: "How are TeamIA demos secured?",
+          answer:
+            "The browser calls a Next.js server route. It validates the request and then contacts the n8n webhook with a secret that is never exposed to the client. Limits and error paths reduce abusive or incomplete calls.",
+        },
+        {
+          question: "Does the redesign preserve the previous site's search visibility?",
+          answer:
+            "Yes. A migration matrix maps legacy URLs to new pages and controls redirects, canonicals, hreflang and sitemap entries. Content is also organized into local and topical hubs rather than isolated pages.",
+        },
+        {
+          question: "Can TeamIA edit the website without a developer?",
+          answer:
+            "Yes for content modeled in Payload: pages, articles, FAQ, markets, press, use cases and demos. Components and section types remain governed to preserve UI/UX and engineering quality.",
+        },
+      ],
+    },
+  },
   "international-opportunity-agent-n8n": {
     fr: {
       metaTitle: "Agent de prospection internationale n8n | Étude de cas",

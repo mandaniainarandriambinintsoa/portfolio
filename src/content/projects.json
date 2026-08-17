@@ -1,5 +1,31 @@
 [
   {
+    "id": "6eae9acf-86c7-4d50-b837-082370b13582",
+    "slug": "teamia",
+    "title_fr": "TeamIA",
+    "title_en": "TeamIA",
+    "subtitle_fr": "Plateforme d'agents IA et d'automatisation métier",
+    "subtitle_en": "AI agent and business automation platform",
+    "description_fr": "Refonte stratégique, UX et technique complète de TeamIA, intégrateur d'agents IA en France et au Luxembourg. Le projet a commencé par le reverse engineering de l'ancien site Webflow, un audit SEO/GEO et la clarification du positionnement. J'ai ensuite conçu la direction visuelle, l'architecture de contenu et la plateforme Next.js reliée à Payload CMS, PostgreSQL/Supabase, n8n et Resend. Le site réunit des pages marché locales, des démonstrateurs d'agents IA, des cas d'usage, les aides et financements, un espace presse, un blog multilingue et un formulaire métier sécurisé. Le contenu public dispose d'un fallback statique afin que le site reste rapide et disponible même lorsque le CMS est temporairement indisponible.",
+    "description_en": "Complete strategic, UX and technical redesign of TeamIA, an AI agent integrator operating in France and Luxembourg. The project began with reverse engineering of the previous Webflow site, an SEO/GEO audit and a sharper market position. I then designed the visual direction, content architecture and Next.js platform connected to Payload CMS, PostgreSQL/Supabase, n8n and Resend. The website brings together local market pages, interactive AI agent demos, use cases, funding guidance, press coverage, a multilingual blog and a secure business enquiry flow. Public content has a static fallback so the site remains fast and available when the CMS is temporarily unavailable.",
+    "tags": [
+      "Next.js",
+      "Payload CMS",
+      "Supabase",
+      "n8n",
+      "SEO/GEO"
+    ],
+    "link": "https://www.teamia.ai/",
+    "featured": true,
+    "category": "site-metier",
+    "image": "/images/projects/teamia-agents-ia-platform.png",
+    "workflow_file": null,
+    "sort_order": 0,
+    "published": true,
+    "created_at": "2026-08-17T16:30:00.000000+00:00",
+    "updated_at": "2026-08-17T16:30:00.000000+00:00"
+  },
+  {
     "id": "423bfab3-771c-4d9a-ad2a-e81b55844d9f",
     "slug": "scalapp",
     "title_fr": "ScalApp",

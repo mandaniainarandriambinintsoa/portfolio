@@ -24,6 +24,7 @@ type FilterType = "all" | ProjectCategory;
 /** Reorder the homepage grid priority, with ScalApp last. */
 function reorderForDisplay(items: ProjectItem[]): ProjectItem[] {
   const order = [
+    "teamia",
     "madavoyage",
     "garagiste",
     "bati-diaspora",

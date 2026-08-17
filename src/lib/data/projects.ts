@@ -3,7 +3,21 @@ import { getStaticDictionary } from "@/i18n/dictionaries";
 import type { ProjectItem } from "@/lib/types";
 import projectRows from "@/content/projects.json";
 
-const siteMetierSlugs = new Set(["madavoyage", "garagiste", "bati-diaspora"]);
+const siteMetierSlugs = new Set(["teamia", "madavoyage", "garagiste", "bati-diaspora"]);
+
+const priorityProjectSlugs = ["teamia"];
+
+function prioritizeProjects(projects: ProjectItem[]): ProjectItem[] {
+  return [...projects].sort((a, b) => {
+    const aIndex = priorityProjectSlugs.indexOf(a.slug);
+    const bIndex = priorityProjectSlugs.indexOf(b.slug);
+
+    if (aIndex === -1 && bIndex === -1) return 0;
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+    return aIndex - bIndex;
+  });
+}
 
 function normalizeCategory(project: ProjectItem): ProjectItem {
   return siteMetierSlugs.has(project.slug)
@@ -36,10 +50,10 @@ export async function getProjects(locale: Locale): Promise<ProjectItem[]> {
   const dictionary = await getDictionaryProjects(locale);
   const snapshotSlugs = new Set(snapshot.map((project) => project.slug));
 
-  return [
+  return prioritizeProjects([
     ...dictionary.filter((project) => !snapshotSlugs.has(project.slug)),
     ...snapshot,
-  ];
+  ]);
 }
 
 export async function getProjectBySlug(
