@@ -2,12 +2,15 @@ import type { SVGProps } from "react";
 import UilArrowRight from "@iconscout/react-unicons/icons/uil-arrow-right";
 import UilArrowUpRight from "@iconscout/react-unicons/icons/uil-arrow-up-right";
 import UilBalanceScale from "@iconscout/react-unicons/icons/uil-balance-scale";
+import UilBedDouble from "@iconscout/react-unicons/icons/uil-bed-double";
+import UilBrushAlt from "@iconscout/react-unicons/icons/uil-brush-alt";
 import UilBookOpen from "@iconscout/react-unicons/icons/uil-book-open";
 import UilBolt from "@iconscout/react-unicons/icons/uil-bolt";
 import UilBrain from "@iconscout/react-unicons/icons/uil-brain";
 import UilBracketsCurly from "@iconscout/react-unicons/icons/uil-brackets-curly";
 import UilBuilding from "@iconscout/react-unicons/icons/uil-building";
 import UilCalendarAlt from "@iconscout/react-unicons/icons/uil-calendar-alt";
+import UilCarSideview from "@iconscout/react-unicons/icons/uil-car-sideview";
 import UilChartGrowth from "@iconscout/react-unicons/icons/uil-chart-growth";
 import UilCheckCircle from "@iconscout/react-unicons/icons/uil-check-circle";
 import UilClipboardNotes from "@iconscout/react-unicons/icons/uil-clipboard-notes";
@@ -20,6 +23,7 @@ import UilCrosshairs from "@iconscout/react-unicons/icons/uil-crosshairs";
 import UilCube from "@iconscout/react-unicons/icons/uil-cube";
 import UilDatabase from "@iconscout/react-unicons/icons/uil-database";
 import UilEnvelope from "@iconscout/react-unicons/icons/uil-envelope";
+import UilEstate from "@iconscout/react-unicons/icons/uil-estate";
 import UilEye from "@iconscout/react-unicons/icons/uil-eye";
 import UilFileAlt from "@iconscout/react-unicons/icons/uil-file-alt";
 import UilFileDownload from "@iconscout/react-unicons/icons/uil-file-download";
@@ -35,9 +39,11 @@ import UilMapMarker from "@iconscout/react-unicons/icons/uil-map-marker";
 import UilMegaphone from "@iconscout/react-unicons/icons/uil-megaphone";
 import UilMoneyBill from "@iconscout/react-unicons/icons/uil-money-bill";
 import UilPhone from "@iconscout/react-unicons/icons/uil-phone";
+import UilPlaneDeparture from "@iconscout/react-unicons/icons/uil-plane-departure";
 import UilProcess from "@iconscout/react-unicons/icons/uil-process";
 import UilPlus from "@iconscout/react-unicons/icons/uil-plus";
 import UilRobot from "@iconscout/react-unicons/icons/uil-robot";
+import UilRestaurant from "@iconscout/react-unicons/icons/uil-restaurant";
 import UilRocket from "@iconscout/react-unicons/icons/uil-rocket";
 import UilSearch from "@iconscout/react-unicons/icons/uil-search";
 import UilServerNetwork from "@iconscout/react-unicons/icons/uil-server-network";
@@ -45,6 +51,7 @@ import UilShieldCheck from "@iconscout/react-unicons/icons/uil-shield-check";
 import UilSpinnerAlt from "@iconscout/react-unicons/icons/uil-spinner-alt";
 import UilSync from "@iconscout/react-unicons/icons/uil-sync";
 import UilUser from "@iconscout/react-unicons/icons/uil-user";
+import UilWrench from "@iconscout/react-unicons/icons/uil-wrench";
 import UilWindowGrid from "@iconscout/react-unicons/icons/uil-window-grid";
 
 const ICONS = {
@@ -53,10 +60,13 @@ const ICONS = {
   arrowUpRight: UilArrowUpRight,
   automation: UilProcess,
   balance: UilBalanceScale,
+  beauty: UilBrushAlt,
+  bed: UilBedDouble,
   book: UilBookOpen,
   bolt: UilBolt,
   building: UilBuilding,
   calendar: UilCalendarAlt,
+  car: UilCarSideview,
   call: UilPhone,
   check: UilCheckCircle,
   chat: UilComments,
@@ -70,6 +80,7 @@ const ICONS = {
   document: UilFileAlt,
   download: UilFileDownload,
   envelope: UilEnvelope,
+  estate: UilEstate,
   eye: UilEye,
   growth: UilChartGrowth,
   headphones: UilHeadphones,
@@ -85,6 +96,7 @@ const ICONS = {
   megaphone: UilMegaphone,
   money: UilMoneyBill,
   product: UilCube,
+  restaurant: UilRestaurant,
   plus: UilPlus,
   quiz: UilClipboardNotes,
   robot: UilRobot,
@@ -94,7 +106,9 @@ const ICONS = {
   shield: UilShieldCheck,
   spinner: UilSpinnerAlt,
   sync: UilSync,
+  travel: UilPlaneDeparture,
   user: UilUser,
+  wrench: UilWrench,
 } as const;
 
 export type IconScoutName = keyof typeof ICONS;

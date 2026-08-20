@@ -4,6 +4,10 @@ import { getAllBlogSitemapEntries } from "@/lib/data/blog";
 import { getAllProjectSitemapEntries } from "@/lib/data/projects";
 import { getServiceSitemapPairs } from "@/lib/data/services";
 import { getSolutions, SOLUTION_LAST_UPDATED } from "@/lib/data/solutions";
+import {
+  BUSINESS_VERTICALS_UPDATED_AT,
+  getBusinessVerticalSitemapPairs,
+} from "@/lib/data/business-verticals";
 
 function asDate(value: string | null | undefined, fallback: Date): Date {
   if (!value) return fallback;
@@ -62,6 +66,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Solutions SEO/GEO — map by array index to keep FR/EN pairs in sync
+  const businessVerticalLastModified = asDate(BUSINESS_VERTICALS_UPDATED_AT, now);
+  for (const vertical of getBusinessVerticalSitemapPairs()) {
+    const pathFr = `/site-metier/${vertical.frSlug}`;
+    const pathEn = `/en/site-metier/${vertical.enSlug}`;
+    items.push(entry(pathFr, pathEn, businessVerticalLastModified, "fr"));
+    items.push(entry(pathFr, pathEn, businessVerticalLastModified, "en"));
+  }
+
   const solutionLastModified = asDate(SOLUTION_LAST_UPDATED, now);
   items.push(entry("/solutions", "/en/solutions", solutionLastModified, "fr"));
   items.push(entry("/solutions", "/en/solutions", solutionLastModified, "en"));

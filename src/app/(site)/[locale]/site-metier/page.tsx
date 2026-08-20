@@ -5,7 +5,21 @@ import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
 import { getProjects } from "@/lib/data/projects";
+import { getBusinessVerticals, type BusinessVerticalTone } from "@/lib/data/business-verticals";
 import GlassCard from "@/components/ui/GlassCard";
+import IconScoutIcon from "@/components/icons/IconScoutIcon";
+import SectionHeading from "@/components/ui/SectionHeading";
+
+const verticalTone: Record<BusinessVerticalTone, { text: string; border: string; bg: string }> = {
+  amber: { text: "text-amber-300", border: "border-amber-400/25", bg: "bg-amber-400/8" },
+  blue: { text: "text-blue-300", border: "border-blue-400/25", bg: "bg-blue-400/8" },
+  cyan: { text: "text-cyan-300", border: "border-cyan-400/25", bg: "bg-cyan-400/8" },
+  emerald: { text: "text-emerald-300", border: "border-emerald-400/25", bg: "bg-emerald-400/8" },
+  orange: { text: "text-orange-300", border: "border-orange-400/25", bg: "bg-orange-400/8" },
+  rose: { text: "text-rose-300", border: "border-rose-400/25", bg: "bg-rose-400/8" },
+  sky: { text: "text-sky-300", border: "border-sky-400/25", bg: "bg-sky-400/8" },
+  violet: { text: "text-violet-300", border: "border-violet-400/25", bg: "bg-violet-400/8" },
+};
 
 export async function generateMetadata({
   params,
@@ -15,11 +29,11 @@ export async function generateMetadata({
   const { locale: rawLocale } = await params;
   const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
   const prefix = locale === "fr" ? "" : "/en";
-  const title = locale === "fr" ? "Sites métier premium" : "Premium Business Websites";
+  const title = locale === "fr" ? "Création de sites internet métier" : "Business website development";
   const description =
     locale === "fr"
-      ? "Catalogue de sites métier premium conçus pour vendre une activité locale ou sectorielle avec preuve, SEO/GEO, formulaire et workflow de conversion."
-      : "Catalog of premium business websites built to sell a local or sector-specific activity with proof, SEO/GEO, forms and conversion workflow.";
+      ? "Sites internet métier conçus pour générer des demandes : voyage, garage, BTP, beauté, hôtel, restaurant et location de voiture, avec SEO et automatisation."
+      : "Business websites designed to generate enquiries for travel, automotive, construction, beauty, hotels, restaurants and car rental, with SEO and automation.";
 
   return {
     title,
@@ -62,22 +76,31 @@ export default async function SiteMetierPage({
   const projects = (await getProjects(locale)).filter(
     (project) => project.category === "site-metier",
   );
+  const verticals = getBusinessVerticals(locale);
 
   const copy =
     locale === "fr"
       ? {
-          kicker: "Catalogue métier",
-          title: "Sites métier premium",
+          kicker: "Acquisition par secteur",
+          title: "Des sites métier conçus pour générer des demandes",
           intro:
-            "Des sites vitrine vendables, pensés par secteur : brief business, maquettes IA, preuves de confiance, SEO/GEO, formulaire qualifié et workflow de suivi.",
+            "Chaque secteur possède ses propres objections, informations et actions de conversion. Je construis le site, son référencement et, si utile, les automatisations qui relient la demande aux opérations.",
+          verticalTitle: "Choisissez votre activité",
+          verticalIntro: "Chaque page détaille le parcours client, les fonctions utiles, les automatisations possibles et les preuves qui soutiennent la proposition.",
+          proofTitle: "Réalisations et systèmes déjà construits",
+          proofIntro: "Ces études de cas montrent la méthode, les choix UI/UX et les intégrations derrière les pages commerciales.",
           cta: "Voir l'étude",
           live: "Site en ligne",
         }
       : {
-          kicker: "Business catalog",
-          title: "Premium business websites",
+          kicker: "Sector acquisition",
+          title: "Business websites designed to generate enquiries",
           intro:
-            "Sellable showcase websites shaped by industry: business brief, AI design directions, trust proof, SEO/GEO, qualified forms and follow-up workflow.",
+            "Each sector has different objections, information and conversion actions. I build the website, its search structure and, when useful, the automation connecting enquiries to operations.",
+          verticalTitle: "Choose your business",
+          verticalIntro: "Each page explains the customer journey, useful features, optional automation and evidence supporting the offer.",
+          proofTitle: "Delivered websites and systems",
+          proofIntro: "These case studies document the method, UI/UX decisions and integrations behind the commercial pages.",
           cta: "View case study",
           live: "Live site",
         };
@@ -97,7 +120,40 @@ export default async function SiteMetierPage({
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section className="mb-24">
+          <SectionHeading title={copy.verticalTitle} description={copy.verticalIntro} />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {verticals.map((vertical) => {
+              const tone = verticalTone[vertical.tone];
+              return (
+                <Link
+                  key={vertical.key}
+                  href={`${prefix}/site-metier/${vertical.slug}`}
+                  className={`group min-h-64 rounded-lg border ${tone.border} ${tone.bg} p-6 transition-transform hover:-translate-y-1`}
+                  data-ph-event="business_vertical_opened"
+                  data-ph-props={JSON.stringify({ business_vertical: vertical.key, locale, area: "business_vertical_hub" })}
+                >
+                  <div className={`flex h-11 w-11 items-center justify-center rounded-lg border ${tone.border} bg-black/20 ${tone.text}`}>
+                    <IconScoutIcon name={vertical.icon} size={23} />
+                  </div>
+                  <h2 className="mt-7 text-xl font-bold text-white">{vertical.name}</h2>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-400">{vertical.primaryAction}</p>
+                  <div className="mt-7 flex flex-wrap gap-2">
+                    {vertical.heroHighlights.slice(0, 2).map((item) => (
+                      <span key={item} className="rounded-md border border-white/10 px-2 py-1 text-xs text-slate-400">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+
+        <section>
+          <SectionHeading title={copy.proofTitle} description={copy.proofIntro} />
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {projects.map((project) => (
             <GlassCard
               key={project.slug}
@@ -146,7 +202,8 @@ export default async function SiteMetierPage({
               </Link>
             </GlassCard>
           ))}
-        </div>
+          </div>
+        </section>
       </div>
     </main>
   );

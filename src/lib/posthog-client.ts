@@ -116,6 +116,7 @@ function getFunnelContext(event: string, properties: AnalyticsProperties): Analy
     [
       "service_viewed",
       "solution_viewed",
+      "business_vertical_viewed",
       "project_opened",
       "project_viewed",
       "demo_opened",

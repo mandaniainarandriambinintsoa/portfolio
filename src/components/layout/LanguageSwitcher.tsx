@@ -24,6 +24,13 @@ const SLUG_MAP_FR_TO_EN: Record<string, string> = {
   "solutions/workflows-n8n-claude-code": "solutions/n8n-claude-code-workflows",
   "solutions/developpeur-agent-vocal-ia": "solutions/ai-voice-agent-developer",
   "solutions/automatisation-marketing-n8n": "solutions/n8n-marketing-automation",
+  "site-metier/agence-voyage": "site-metier/travel-agency",
+  "site-metier/garage-automobile": "site-metier/auto-repair-shop",
+  "site-metier/entreprise-btp": "site-metier/construction-company",
+  "site-metier/salon-beaute": "site-metier/beauty-salon",
+  "site-metier/hotel": "site-metier/hotel",
+  "site-metier/restaurant": "site-metier/restaurant",
+  "site-metier/location-voiture": "site-metier/car-rental",
 };
 
 const SLUG_MAP_EN_TO_FR: Record<string, string> = Object.fromEntries(
