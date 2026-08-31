@@ -91,6 +91,9 @@ export default async function SiteMetierPage({
           proofIntro: "Ces études de cas montrent la méthode, les choix UI/UX et les intégrations derrière les pages commerciales.",
           cta: "Voir l'étude",
           live: "Site en ligne",
+          contactTitle: "Votre activité n'est pas dans la liste ?",
+          contactText: "Je peux cartographier le parcours de recherche, les demandes clients et les automatisations utiles avant de proposer la structure du site.",
+          contactCta: "Parler de votre activité",
         }
       : {
           kicker: "Sector acquisition",
@@ -103,6 +106,9 @@ export default async function SiteMetierPage({
           proofIntro: "These case studies document the method, UI/UX decisions and integrations behind the commercial pages.",
           cta: "View case study",
           live: "Live site",
+          contactTitle: "Is your business not listed?",
+          contactText: "I can map the search journey, customer enquiries and useful automations before proposing the website structure.",
+          contactCta: "Discuss your business",
         };
 
   return (
@@ -149,6 +155,21 @@ export default async function SiteMetierPage({
               );
             })}
           </div>
+        </section>
+
+        <section className="mb-24 border-y border-white/10 py-10 md:flex md:items-center md:justify-between md:gap-10">
+          <div className="max-w-2xl">
+            <h2 className="text-2xl font-bold text-white">{copy.contactTitle}</h2>
+            <p className="mt-3 leading-relaxed text-slate-400">{copy.contactText}</p>
+          </div>
+          <Link
+            href={`${prefix}/contact`}
+            className="mt-6 inline-flex min-h-12 items-center justify-center rounded-lg bg-white px-6 font-bold text-slate-950 transition-colors hover:bg-slate-200 md:mt-0"
+            data-ph-event="cta_clicked"
+            data-ph-props={JSON.stringify({ cta_type: "contact", cta_location: "business_vertical_hub", locale })}
+          >
+            {copy.contactCta}
+          </Link>
         </section>
 
         <section>

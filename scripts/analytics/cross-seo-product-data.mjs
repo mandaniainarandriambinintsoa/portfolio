@@ -188,6 +188,7 @@ async function getSearchConsoleData() {
   const [
     currentTotalsRows,
     previousTotalsRows,
+    currentDailyRows,
     currentPageRows,
     previousPageRows,
     currentQueryRows,
@@ -201,6 +202,7 @@ async function getSearchConsoleData() {
   ] = await Promise.all([
     query(current, []),
     query(previous, []),
+    query(current, ["date"]),
     query(current, ["page"]),
     query(previous, ["page"]),
     query(current, ["query"]),
@@ -218,6 +220,13 @@ async function getSearchConsoleData() {
     ranges: { current, previous, last90 },
     current: summarize(currentTotalsRows),
     previous: summarize(previousTotalsRows),
+    currentDaily: currentDailyRows.map((row) => ({
+      date: row.keys?.[0],
+      clicks: row.clicks,
+      impressions: row.impressions,
+      ctr: row.ctr,
+      position: row.position,
+    })),
     currentPages: currentPageRows.map((row) => ({
       path: normalizePath(row.keys?.[0]),
       clicks: row.clicks,

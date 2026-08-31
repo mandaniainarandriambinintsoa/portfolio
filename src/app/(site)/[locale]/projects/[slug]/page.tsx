@@ -99,6 +99,7 @@ export default async function ProjectPage({
   const usesWideWorkflowScreenshot = slug === "international-opportunity-agent-n8n";
   const caseStudy = getCaseStudy(slug, locale);
   const projectSeo = getProjectSeoDetails(slug, locale);
+  const projectLinkIsExternal = Boolean(project.link && /^https?:\/\//.test(project.link));
   const seoTone = categoryTone === "emerald"
     ? {
         text: "text-emerald-300",
@@ -203,24 +204,51 @@ export default async function ProjectPage({
         </p>
 
         {/* Hero visual: Image for webapp, N8N viewer for workflow */}
-        {isWorkflow && workflow && !usesProductScreenshot ? (
-          <N8nWorkflowSection workflow={workflow} />
-        ) : (
-          <div
-            className={`relative overflow-hidden rounded-2xl border border-white/10 mb-12 ${
-              usesWideWorkflowScreenshot ? "aspect-[2/1] bg-white" : "aspect-video"
-            }`}
-          >
-            <Image
-              src={project.image}
-              alt={`${project.title} - ${project.subtitle}`}
-              fill
-              sizes="(max-width: 768px) 100vw, 896px"
-              className={usesWideWorkflowScreenshot ? "object-contain" : "object-cover"}
-              priority
-            />
-          </div>
-        )}
+        <div className="mb-12">
+          {isWorkflow && workflow && !usesProductScreenshot ? (
+            <N8nWorkflowSection workflow={workflow} className="mb-0" />
+          ) : (
+            <div
+              className={`relative overflow-hidden rounded-2xl border border-white/10 ${
+                usesWideWorkflowScreenshot ? "aspect-[2/1] bg-white" : "aspect-video"
+              }`}
+            >
+              <Image
+                src={project.image}
+                alt={`${project.title} - ${project.subtitle}`}
+                fill
+                sizes="(max-width: 768px) 100vw, 896px"
+                className={usesWideWorkflowScreenshot ? "object-contain" : "object-cover"}
+                priority
+              />
+            </div>
+          )}
+
+          {project.link && (
+            <div className="mt-4 flex justify-stretch sm:justify-end">
+              <Button
+                href={project.link}
+                target={projectLinkIsExternal ? "_blank" : "_self"}
+                rel={projectLinkIsExternal ? "noopener noreferrer" : undefined}
+                variant="primary"
+                className="w-full sm:w-auto"
+                analytics={{
+                  event: "demo_opened",
+                  properties: {
+                    area: "project_cover",
+                    slug,
+                    title: project.title,
+                    category: project.category,
+                    href: project.link,
+                    locale,
+                  },
+                }}
+              >
+                {locale === "fr" ? "Voir le projet" : "View project"}
+              </Button>
+            </div>
+          )}
+        </div>
 
         {/* Description */}
         <div className="glass-card rounded-2xl p-8 md:p-12 mb-12">

@@ -109,6 +109,10 @@ export default async function BusinessVerticalPage({
         searchEyebrow: "SEO sectoriel",
         proofEyebrow: "Preuve de réalisation",
         viewProof: "Voir l'étude de cas complète",
+        performanceEyebrow: "Performance par conception",
+        performanceTitle: `Un site ${vertical.name.toLowerCase()} rapide sur mobile`,
+        performanceIntro: "La vitesse n'est pas un correctif de fin de projet. Le rendu, le CSS, les images et les scripts sont cadrés avant la mise en ligne, puis mesurés sur la version réellement déployée.",
+        performanceLink: "Voir la méthode d'audit performance",
         linksTitle: "Relier le site à une stratégie complète",
         linksIntro: "Ces ressources précisent la construction, l'automatisation et l'acquisition autour du site métier.",
         faqTitle: "Questions avant de lancer le site",
@@ -125,6 +129,10 @@ export default async function BusinessVerticalPage({
         searchEyebrow: "Sector SEO",
         proofEyebrow: "Delivered work",
         viewProof: "View the complete case study",
+        performanceEyebrow: "Performance by design",
+        performanceTitle: `A fast mobile website for ${vertical.name.toLowerCase()}`,
+        performanceIntro: "Speed is not a final-project patch. Rendering, CSS, images and scripts are framed before launch, then measured on the production build.",
+        performanceLink: "View the web performance audit method",
         linksTitle: "Connect the website to a complete strategy",
         linksIntro: "These resources explain the build, automation and acquisition surrounding the business website.",
         faqTitle: "Questions before starting",
@@ -135,6 +143,17 @@ export default async function BusinessVerticalPage({
     { name: locale === "fr" ? "Accueil" : "Home", href: locale === "fr" ? "/" : "/en" },
     { name: copy.hub, href: `${prefix}/site-metier` },
     { name: vertical.name, href: `${prefix}/site-metier/${vertical.slug}` },
+  ];
+  const performanceHref = `${prefix}/services/${locale === "fr" ? "audit-performance-site-web" : "website-performance-optimization-service"}`;
+  const strategyLinks = [
+    ...vertical.links,
+    {
+      label: copy.performanceLink,
+      href: performanceHref,
+      description: locale === "fr"
+        ? "Core Web Vitals, architecture CSS, rendu Next.js, cache et coûts cloud mesurés."
+        : "Measured Core Web Vitals, CSS architecture, Next.js rendering, caching and cloud costs.",
+    },
   ];
 
   return (
@@ -208,7 +227,7 @@ export default async function BusinessVerticalPage({
         </div>
       </section>
 
-      <section className="border-y border-white/8 bg-black/20 px-6 py-20 md:py-24">
+      <section id="performance" className="scroll-mt-28 border-y border-white/8 bg-black/20 px-6 py-20 md:py-24">
         <div className="mx-auto max-w-6xl">
           <SectionHeading title={vertical.painsTitle} description={vertical.painsIntro} />
           <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 md:grid-cols-3">
@@ -237,6 +256,46 @@ export default async function BusinessVerticalPage({
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="border-y border-white/8 bg-black/20 px-6 py-20 md:py-24">
+        <div className="mx-auto max-w-6xl">
+          <SectionHeading eyebrow={copy.performanceEyebrow} title={copy.performanceTitle} description={copy.performanceIntro} />
+          <div className="grid gap-8 border-y border-white/10 py-8 md:grid-cols-3">
+            {[
+              {
+                icon: "server" as const,
+                title: locale === "fr" ? "Rendu proportionné" : "Proportionate rendering",
+                description: locale === "fr"
+                  ? "Statique, ISR ou dynamique uniquement lorsque la donnée doit réellement changer."
+                  : "Static, ISR or dynamic only when the data genuinely needs to change.",
+              },
+              {
+                icon: "image" as const,
+                title: locale === "fr" ? "CSS et médias maîtrisés" : "Controlled CSS and media",
+                description: locale === "fr"
+                  ? "Tailwind compilé, polices, images responsives et chemin de rendu critique contrôlés."
+                  : "Compiled Tailwind, fonts, responsive images and the critical rendering path under control.",
+              },
+              {
+                icon: "growth" as const,
+                title: locale === "fr" ? "Mesure après livraison" : "Measurement after delivery",
+                description: locale === "fr"
+                  ? "Baseline Lighthouse, Core Web Vitals terrain et suivi des régressions après mise en ligne."
+                  : "Lighthouse baseline, field Core Web Vitals and regression monitoring after launch.",
+              },
+            ].map((item) => (
+              <article key={item.title}>
+                <IconScoutIcon name={item.icon} size={23} className={tone.text} />
+                <h3 className="mt-5 font-bold text-white">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">{item.description}</p>
+              </article>
+            ))}
+          </div>
+          <Link href={performanceHref} className={`mt-7 inline-flex text-sm font-bold underline underline-offset-4 ${tone.text}`}>
+            {copy.performanceLink}
+          </Link>
         </div>
       </section>
 
@@ -323,7 +382,7 @@ export default async function BusinessVerticalPage({
         <div className="mx-auto max-w-6xl">
           <SectionHeading title={copy.linksTitle} description={copy.linksIntro} />
           <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 md:grid-cols-2">
-            {vertical.links.map((item) => (
+            {strategyLinks.map((item) => (
               <Link key={item.href} href={item.href} className="min-h-40 bg-[#090a10] p-6 transition-colors hover:bg-white/5">
                 <h3 className="font-bold text-white">{item.label}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-400">{item.description}</p>

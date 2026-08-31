@@ -17,6 +17,7 @@ import PerformanceOptimizationProof from "@/components/sections/PerformanceOptim
 import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { getCoreServiceContent } from "@/lib/data/core-service-content";
+import { getBusinessVerticals } from "@/lib/data/business-verticals";
 
 export async function generateStaticParams() {
   return getServiceStaticParams();
@@ -299,6 +300,9 @@ export default async function ServicePage({
   const isPerformanceOptimizationLanding =
     service.slug === "audit-performance-site-web" ||
     service.slug === "website-performance-optimization-service";
+  const performanceVerticals = isPerformanceOptimizationLanding
+    ? getBusinessVerticals(locale).slice(0, 6)
+    : [];
   const heroCtaLabel = service.slug === "forward-deployed-engineer"
     ? locale === "fr"
       ? "DÃ©crire mon problÃ¨me mÃ©tier"
@@ -389,6 +393,51 @@ export default async function ServicePage({
 
         {isSeoGeoLanding && <SeoGrowthProof locale={locale} />}
         {isPerformanceOptimizationLanding && <PerformanceOptimizationProof locale={locale} />}
+
+        {isPerformanceOptimizationLanding && (
+          <section className="mb-20">
+            <SectionHeading
+              eyebrow={locale === "fr" ? "Applications concrètes" : "Practical applications"}
+              title={locale === "fr" ? "La performance appliquée aux sites métier" : "Performance applied to business websites"}
+              description={
+                locale === "fr"
+                  ? "Le même travail de rendu, CSS, médias et mesure est intégré dès la conception de chaque site métier. L'audit reste aussi disponible pour un produit déjà en ligne."
+                  : "The same rendering, CSS, media and measurement work is built into every business website from the start. The audit is also available for an existing production product."
+              }
+            />
+            <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-3">
+              <Link
+                href={`${prefix}/projects/optimisation-performance-manda-ia`}
+                className="min-h-44 bg-[#090a10] p-6 transition-colors hover:bg-amber-500/8"
+                data-ph-event="project_opened"
+                data-ph-props={JSON.stringify({ area: "performance_related_work", project_slug: "optimisation-performance-manda-ia", locale })}
+              >
+                <p className="text-xs font-bold uppercase text-amber-300">
+                  {locale === "fr" ? "Étude de cas" : "Case study"}
+                </p>
+                <h3 className="mt-4 font-bold text-white">manda-ia.com</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">
+                  {locale === "fr"
+                    ? "Mesures Lighthouse, coût cloud, cache et décisions d'architecture."
+                    : "Lighthouse metrics, cloud cost, caching and architecture decisions."}
+                </p>
+              </Link>
+              {performanceVerticals.map((vertical) => (
+                <Link
+                  key={vertical.key}
+                  href={`${prefix}/site-metier/${vertical.slug}`}
+                  className="min-h-44 bg-[#090a10] p-6 transition-colors hover:bg-white/5"
+                >
+                  <p className="text-xs font-bold uppercase text-slate-500">
+                    {locale === "fr" ? "Site métier" : "Business website"}
+                  </p>
+                  <h3 className="mt-4 font-bold text-white">{vertical.name}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-400">{vertical.primaryAction}</p>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Content sections */}
         {landing.sections?.map((section: any, idx: number) => (

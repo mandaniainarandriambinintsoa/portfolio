@@ -34,6 +34,192 @@ export type ProjectSeoDetails = {
 };
 
 const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
+  "optimisation-performance-manda-ia": {
+    fr: {
+      metaTitle: "Audit performance Next.js : étude de cas manda-ia.com",
+      metaDescription:
+        "Étude de cas d'un audit performance Next.js : Lighthouse, Core Web Vitals, Tailwind CSS, rendu, cache, Vercel, Supabase et réduction des coûts cloud.",
+      kicker: "Audit performance en production",
+      title: "Relier PageSpeed, architecture CSS et coûts cloud au même diagnostic",
+      summary:
+        "manda-ia.com fonctionnait déjà et gagnait du trafic, mais les quotas Vercel et Supabase révélaient une architecture trop coûteuse. J'ai audité le parcours complet de la requête, du navigateur jusqu'à la base, puis séparé trois problèmes souvent confondus : la vitesse visible, le travail JavaScript et CSS côté client, et les lectures serveur répétées. Le résultat est une base plus statique, un cache partagé et une preuve Lighthouse datée qui montre aussi honnêtement le prochain chantier mobile.",
+      facts: [
+        { label: "Desktop Lighthouse", value: "99/100, LCP 0,5 s, TBT 30 ms" },
+        { label: "Mobile Lighthouse", value: "80/100, LCP 2,4 s, TBT 680 ms" },
+        { label: "Stabilité visuelle", value: "CLS 0 sur les deux profils" },
+        { label: "Snapshot", value: "26 août 2026, 58 requêtes, environ 653 KiB" },
+      ],
+      sections: [
+        {
+          title: "Commencer par une baseline reproductible",
+          paragraphs: [
+            "Un score seul ne constitue pas un audit. Le snapshot Lighthouse précise l'URL, la date, le profil mobile ou desktop et les métriques qui composent le résultat. Les données de laboratoire servent à reproduire un scénario contrôlé ; elles restent distinctes des Core Web Vitals terrain collectées auprès des vrais visiteurs.",
+            "Le profil desktop atteint 99/100 avec un LCP de 0,5 seconde et un TBT de 30 millisecondes. Le profil mobile reste à 80/100 avec un TBT de 680 millisecondes. Cet écart évite une conclusion artificielle : le rendu initial est solide, mais le thread principal exécute encore trop de JavaScript dans les conditions mobiles simulées.",
+          ],
+        },
+        {
+          title: "Auditer Tailwind par sa sortie, pas par sa réputation",
+          paragraphs: [
+            "L'audit CSS inspecte ce qui arrive réellement dans le navigateur : taille transférée, règles inutilisées, ordre des feuilles de style, polices, styles critiques et capacité de l'équipe à maintenir les composants. Tailwind peut produire un CSS compact lorsqu'il est correctement compilé, mais il ne dispense pas d'examiner les dépendances, les variantes et les conventions qui s'accumulent.",
+            "Le benchmark d'une autre approche CSS n'a de sens qu'avec les mêmes écrans, le même contenu et les mêmes conditions de mesure. Je compare donc le poids, le blocage du rendu, la répétition des règles et le coût de migration avant de recommander Tailwind, CSS Modules, du CSS natif moderne ou une combinaison ciblée.",
+          ],
+        },
+        {
+          title: "Le problème serveur caché derrière une page rapide",
+          paragraphs: [
+            "La base Supabase contenait environ 25 Mo, mais l'organisation avait dépassé 5,5 Go d'egress. Le volume stocké n'expliquait pas ce transfert. Les pages publiques étaient rendues dynamiquement et relisaient le CMS, les fallbacks et certaines données à chaque requête, y compris lors du passage des crawlers.",
+            "Les contenus publics ont été pré-rendus, Payload rendu optionnel en production et les lectures fréquentes remplacées par un cache partagé. Le tableau visiteurs conserve une fraîcheur maximale de 30 secondes tout en renvoyant une réponse légère, sans ouvrir une lecture Supabase directe pour chaque navigateur.",
+          ],
+        },
+        {
+          title: "Corriger sans casser le produit existant",
+          paragraphs: [
+            "L'ordre des changements compte autant que leur nature. Je commence par les corrections à fort impact et faible risque : rendu statique des contenus éditoriaux, cache adapté, suppression des appels dupliqués, chargement différé des scripts tiers et images dimensionnées. Les changements plus profonds arrivent seulement lorsque les mesures les justifient.",
+            "Chaque correction est vérifiée sur les parcours réels, les erreurs réseau, les pages localisées et le comportement mobile. Cette méthode permet d'améliorer un site déjà en production sans transformer l'audit en refonte imposée.",
+          ],
+        },
+        {
+          title: "Appliquer la même discipline aux sites métier",
+          paragraphs: [
+            "Les sites métier utilisent cette méthode dès leur conception : rendre statique ce qui peut l'être, charger les médias selon le viewport, limiter les composants client et mesurer la version déployée. La performance devient alors une contrainte d'architecture, pas une opération cosmétique avant livraison.",
+            "Pour un hôtel, un restaurant, une agence de voyage ou un loueur, cette vitesse protège directement la conversion mobile. La page doit rester légère au moment où le visiteur compare une offre, consulte un menu, vérifie une disponibilité ou remplit une demande.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Audit performance site web",
+          href: "/services/audit-performance-site-web",
+          description: "La méthode, les livrables et le périmètre d'une intervention sur un site existant.",
+        },
+        {
+          label: "Sites métier performants",
+          href: "/site-metier",
+          description: "Voir comment la performance, le SEO et la conversion sont intégrés par secteur.",
+        },
+        {
+          label: "Développeur React et Next.js",
+          href: "/services/developpeur-react-nextjs-madagascar",
+          description: "Rendu Next.js, composants React et architecture frontend maintenable.",
+        },
+        {
+          label: "Projet TeamIA",
+          href: "/projects/teamia",
+          description: "Un site métier Next.js avec fallback statique, CMS Payload et intégrations sécurisées.",
+        },
+      ],
+      faq: [
+        {
+          question: "Pourquoi le score mobile est-il inférieur au desktop ?",
+          answer: "Le profil mobile Lighthouse simule un appareil et un réseau plus contraints. Le TBT de 680 ms indique surtout du travail JavaScript sur le thread principal ; il devient le prochain chantier mesurable au lieu d'être masqué derrière le score desktop.",
+        },
+        {
+          question: "Un score Lighthouse prouve-t-il les Core Web Vitals ?",
+          answer: "Non. Lighthouse fournit une mesure de laboratoire reproductible. Les Core Web Vitals terrain viennent de vrais utilisateurs et doivent être suivis séparément dans CrUX, Search Console ou une solution RUM.",
+        },
+        {
+          question: "Faut-il abandonner Tailwind pour améliorer la performance ?",
+          answer: "Pas automatiquement. Il faut mesurer le CSS produit, le rendu critique et la maintenabilité. Un changement de framework sans benchmark comparable peut coûter plus qu'il ne rapporte.",
+        },
+        {
+          question: "Peut-on auditer un site sans le reconstruire ?",
+          answer: "Oui. Le diagnostic priorise les changements à fort impact et faible risque. Une refonte n'est recommandée que lorsque l'architecture existante empêche réellement les corrections nécessaires.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Next.js performance audit: manda-ia.com case study",
+      metaDescription:
+        "Next.js performance audit case study covering Lighthouse, Core Web Vitals, Tailwind CSS, rendering, caching, Vercel, Supabase and cloud cost reduction.",
+      kicker: "Production performance audit",
+      title: "Connecting PageSpeed, CSS architecture and cloud costs in one diagnosis",
+      summary:
+        "manda-ia.com was already working and gaining traffic, but Vercel and Supabase quotas exposed an expensive architecture. I audited the complete request path from browser to database, then separated three problems that are often mixed together: visible loading speed, client-side JavaScript and CSS work, and repeated server reads. The result is a more static foundation, shared caching and a dated Lighthouse proof that also states the next mobile improvement honestly.",
+      facts: [
+        { label: "Desktop Lighthouse", value: "99/100, 0.5 s LCP, 30 ms TBT" },
+        { label: "Mobile Lighthouse", value: "80/100, 2.4 s LCP, 680 ms TBT" },
+        { label: "Visual stability", value: "CLS 0 on both profiles" },
+        { label: "Snapshot", value: "August 26, 2026, 58 requests, about 653 KiB" },
+      ],
+      sections: [
+        {
+          title: "Start with a reproducible baseline",
+          paragraphs: [
+            "A score alone is not an audit. The Lighthouse snapshot records the URL, date, mobile or desktop profile and the metrics composing the result. Lab data reproduces a controlled scenario; it remains distinct from field Core Web Vitals collected from real visitors.",
+            "Desktop reaches 99/100 with a 0.5-second LCP and 30-millisecond TBT. Mobile remains at 80/100 with 680-millisecond TBT. This gap prevents an artificial conclusion: initial rendering is strong, while the main thread still runs too much JavaScript under simulated mobile conditions.",
+          ],
+        },
+        {
+          title: "Audit Tailwind by its output, not its reputation",
+          paragraphs: [
+            "The CSS audit inspects what actually reaches the browser: transferred size, unused rules, stylesheet order, fonts, critical styles and the team's ability to maintain components. Tailwind can ship compact CSS when compiled correctly, but it does not remove the need to inspect dependencies, variants and accumulating conventions.",
+            "Benchmarking another CSS approach only makes sense with the same screens, content and test conditions. I compare weight, render blocking, rule repetition and migration cost before recommending Tailwind, CSS Modules, modern native CSS or a targeted combination.",
+          ],
+        },
+        {
+          title: "The server problem hidden behind a fast page",
+          paragraphs: [
+            "The Supabase database held about 25 MB, yet the organization exceeded 5.5 GB of egress. Stored volume did not explain the transfer. Public pages were dynamically rendered and re-read the CMS, fallbacks and some data on every request, including crawler visits.",
+            "Public content was pre-rendered, Payload became optional in production and frequent reads were replaced with shared caching. The visitor dashboard keeps a maximum freshness delay of 30 seconds while returning a lightweight response without a direct Supabase read for every browser.",
+          ],
+        },
+        {
+          title: "Fix the existing product without breaking it",
+          paragraphs: [
+            "The order of changes matters as much as their nature. I begin with high-impact, low-risk corrections: static rendering for editorial content, appropriate caching, removal of duplicated calls, deferred third-party scripts and correctly sized images. Deeper changes only follow when measurements justify them.",
+            "Each correction is checked against real journeys, network failures, localized pages and mobile behaviour. This method improves an existing production site without turning the audit into a forced rebuild.",
+          ],
+        },
+        {
+          title: "Apply the same discipline to business websites",
+          paragraphs: [
+            "Business websites use this method from the design stage: render statically where possible, load media for the actual viewport, minimize client components and measure the deployed build. Performance becomes an architecture constraint rather than a cosmetic task before delivery.",
+            "For hotels, restaurants, travel agencies or rental companies, that speed directly protects mobile conversion. The page must remain light when a visitor compares an offer, reads a menu, checks availability or completes an enquiry.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Website performance audit",
+          href: "/en/services/website-performance-optimization-service",
+          description: "Method, deliverables and scope for improving an existing website.",
+        },
+        {
+          label: "High-performance business websites",
+          href: "/en/site-metier",
+          description: "See how performance, SEO and conversion are integrated by sector.",
+        },
+        {
+          label: "React and Next.js developer",
+          href: "/en/services/hire-react-nextjs-developer-madagascar",
+          description: "Next.js rendering, React components and maintainable frontend architecture.",
+        },
+        {
+          label: "TeamIA project",
+          href: "/en/projects/teamia",
+          description: "A Next.js business website with static fallback, Payload CMS and secured integrations.",
+        },
+      ],
+      faq: [
+        {
+          question: "Why is the mobile score lower than desktop?",
+          answer: "The mobile Lighthouse profile simulates a constrained device and network. The 680 ms TBT mainly signals JavaScript work on the main thread; it becomes the next measurable target instead of being hidden behind the desktop score.",
+        },
+        {
+          question: "Does a Lighthouse score prove Core Web Vitals?",
+          answer: "No. Lighthouse provides a reproducible lab measurement. Field Core Web Vitals come from real users and must be monitored separately through CrUX, Search Console or a RUM solution.",
+        },
+        {
+          question: "Should Tailwind be removed to improve performance?",
+          answer: "Not automatically. The generated CSS, critical rendering path and maintainability must be measured. Changing frameworks without a comparable benchmark can cost more than it returns.",
+        },
+        {
+          question: "Can an existing website be audited without rebuilding it?",
+          answer: "Yes. The diagnosis prioritizes high-impact, low-risk changes. A rebuild is recommended only when the existing architecture genuinely blocks the required corrections.",
+        },
+      ],
+    },
+  },
   teamia: {
     fr: {
       metaTitle: "Refonte TeamIA : Next.js, Payload CMS et agents IA",
@@ -734,13 +920,13 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
   },
   "facebook-agen-ia": {
     fr: {
-      metaTitle: "Projet Agent IA Facebook : Messenger, leads et CRM",
+      metaTitle: "Qualification de leads Facebook avec n8n | Étude de cas",
       metaDescription:
-        "Étude de cas Agent IA Facebook : qualification Messenger, scoring de leads, synthèse, dashboard CRM et validation humaine des actions sensibles.",
-      kicker: "Agent IA Facebook",
-      title: "Ce que montre Facebook Agent IA pour la prospection",
+        "Étude de cas : workflow n8n de qualification Facebook, scoring de leads, synthèse, dashboard CRM et validation humaine des actions sensibles.",
+      kicker: "Étude de cas n8n et CRM",
+      title: "Qualifier des leads Facebook sans automatiser les decisions sensibles",
       summary:
-        "Facebook Agent IA montre comment transformer des messages, commentaires ou formulaires Facebook en leads exploitables sans automatiser une réponse risquée. L'agent peut détecter l'intention, résumer la demande, classer le lead, préparer une réponse et créer une action commerciale. La valeur vient du cadrage : l'IA aide à qualifier et structurer, tandis que l'humain garde la validation pour les réponses sensibles ou les opportunités importantes.",
+        "Cette étude de cas montre comment transformer des messages, commentaires ou formulaires Facebook en leads exploitables avec n8n et un CRM, sans automatiser une réponse risquée. Le workflow détecte l'intention, résume la demande, classe le lead, prépare une réponse et crée une action commerciale. L'IA aide à qualifier et structurer, tandis que l'humain garde la validation pour les réponses sensibles ou les opportunités importantes.",
       facts: [
         { label: "Canal", value: "Facebook, Messenger, commentaires ou formulaires" },
         { label: "Sortie utile", value: "résumé, intention, score, prochaine action" },
@@ -772,10 +958,10 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
       relatedLinks: [
         {
-          label: "Solution Agent IA Facebook",
+          label: "Créer un agent IA Facebook pour Messenger",
           href: "/solutions/agent-ia-facebook",
           description:
-            "Architecture complète pour qualifier Messenger, préparer les réponses et synchroniser le CRM avec n8n.",
+            "Voir la solution complète pour qualifier Messenger, préparer les réponses et synchroniser le CRM avec n8n.",
         },
         {
           label: "Développeur agent IA",
@@ -803,13 +989,13 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
     },
     en: {
-      metaTitle: "Facebook AI Agent Case Study: Messenger, Leads and CRM",
+      metaTitle: "Qualify Facebook Leads with n8n | Case Study",
       metaDescription:
-        "Facebook AI agent case study: Messenger qualification, lead scoring, summaries, CRM dashboard and human approval for sensitive actions.",
-      kicker: "Facebook AI agent",
-      title: "What Facebook AI Agent shows for prospecting",
+        "Case study: n8n workflow for Facebook lead qualification, scoring, summaries, CRM dashboard and human approval for sensitive actions.",
+      kicker: "n8n and CRM case study",
+      title: "Qualifying Facebook leads without automating sensitive decisions",
       summary:
-        "Facebook AI Agent shows how to turn Facebook messages, comments or forms into usable leads without automating risky replies. The agent can detect intent, summarize the request, classify the lead, prepare a reply and create a sales action. The value comes from framing: AI helps qualify and structure conversations, while humans keep validation for sensitive replies or important opportunities.",
+        "This case study shows how to turn Facebook messages, comments or forms into usable leads with n8n and a CRM without automating risky replies. The workflow detects intent, summarizes the request, classifies the lead, prepares a reply and creates a sales action. AI structures the conversation while people keep control of sensitive replies and important opportunities.",
       facts: [
         { label: "Channel", value: "Facebook, Messenger, comments or forms" },
         { label: "Useful output", value: "summary, intent, score, next action" },
@@ -841,7 +1027,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
       relatedLinks: [
         {
-          label: "Facebook AI Agent solution",
+          label: "Build a Facebook AI agent for Messenger",
           href: "/en/solutions/facebook-ai-agent",
           description:
             "Complete architecture for Messenger qualification, reply drafts and CRM synchronization with n8n.",

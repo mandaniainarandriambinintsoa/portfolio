@@ -1279,6 +1279,14 @@
           },
           "faq": [
             {
+              "question": "Where can I find a freelance web developer in Madagascar?",
+              "answer": "Google results mix agencies, platforms and individual profiles. Check public production work, the developer's exact role, availability, day rate, Git history and ability to explain technical decisions. This page brings together my portfolio, specializations and direct contact without an intermediary."
+            },
+            {
+              "question": "Should I hire a freelancer or a web agency in Madagascar?",
+              "answer": "A freelancer fits when you want direct technical ownership, short decision loops and a controlled scope. An agency helps when several disciplines or significant delivery capacity are required at once. In both cases, ask for verifiable references, acceptance criteria and clear code ownership."
+            },
+            {
               "question": "What is a fullstack JavaScript developer?",
               "answer": "A developer who covers the front (React, Next.js), the back (Node.js) and applied AI with a single language, JavaScript. They build a product end to end without relying on several teams."
             },
@@ -1884,7 +1892,7 @@
         "isLanding": true,
         "seoTitle": "Website Performance Optimization Service | Manda",
         "seoDescription": "Website performance optimization for existing sites: Core Web Vitals, caching, API requests, Vercel, Supabase and cloud cost reduction.",
-        "updatedAt": "2026-08-06",
+        "updatedAt": "2026-08-26",
         "landing": {
           "heroText": "Your website already works, but pages are slowing down, infrastructure usage is rising or Vercel and Supabase quotas are disappearing too quickly. I audit the full request path, from browser to database, then fix the structural causes across rendering, caching, CMS, APIs, images and polling. The goal is not just a better score: it is a faster, more reliable and less expensive product to operate.",
           "features": [
@@ -1930,7 +1938,11 @@
             },
             {
               "title": "The manda-ia.com case: data volume was not the problem",
-              "content": "The database held about **25 MB**, yet the organization had exceeded **5.5 GB of egress**. The audit showed that public pages were dynamically rendered and fetched several remote sources on every request. Crawlers, visitors and refreshes repeatedly triggered the same work.\n\nI replaced those reads with pre-rendered pages and revalidation, made the remote CMS opt-in in production, added shared caches, limited visitor dashboard polling to visible tabs and moved its cache to the Vercel edge. The dashboard stays less than 30 seconds behind without querying Supabase for every visitor."
+              "content": "The database held about **25 MB**, yet the organization had exceeded **5.5 GB of egress**. The audit showed that public pages were dynamically rendered and fetched several remote sources on every request. Crawlers, visitors and refreshes repeatedly triggered the same work.\n\nI replaced those reads with pre-rendered pages and revalidation, made the remote CMS opt-in in production, added shared caches, limited visitor dashboard polling to visible tabs and moved its cache to the Vercel edge. The dashboard stays less than 30 seconds behind without querying Supabase for every visitor. The intervention is documented in the [complete case study](/en/projects/optimisation-performance-manda-ia)."
+            },
+            {
+              "title": "CSS architecture, Tailwind and the critical rendering path",
+              "content": "The audit does not stop at the backend. I measure the CSS actually transferred, unused styles, component dependencies, fonts, the LCP image and stylesheets blocking render. With Tailwind, the goal is not to defend the framework: it is to inspect what compilation produces, whether classes remain maintainable and whether another CSS strategy would create a measurable gain.\n\nI then connect the critical rendering path to JavaScript running before interaction: client components, hydration, third-party scripts, global listeners and libraries loaded too early. On the August 26, 2026 Lighthouse snapshot, manda-ia.com reaches **99/100 on desktop**, with a **0.5 s LCP** and zero CLS. The **80/100 mobile** score and **680 ms TBT** identify the next clear target: reducing main-thread JavaScript work."
             },
             {
               "title": "My four-step optimization method",
@@ -2313,8 +2325,8 @@
         "description": "Premium site, SEO/GEO-ready, no useless dashboard",
         "example": {
           "label": "VIEW AN EXAMPLE",
-          "title": "This portfolio, 100/100 PageSpeed",
-          "href": "/en/projects"
+          "title": "This portfolio, audited performance",
+          "href": "/en/projects/optimisation-performance-manda-ia"
         },
         "tiers": [
           {
@@ -2430,6 +2442,24 @@
     "category_site_metier": "Business Websites",
     "category_workflow": "N8N Workflows",
     "items": [
+      {
+        "slug": "optimisation-performance-manda-ia",
+        "title": "manda-ia.com performance optimization",
+        "subtitle": "Lighthouse audit, Next.js architecture and cloud costs",
+        "description": "Technical case study of an existing production Next.js portfolio. The audit connects Lighthouse measurements, the critical rendering path, JavaScript, generated Tailwind CSS, Supabase reads, dynamic rendering and Vercel functions to the responsible code paths. Public pages were moved to pre-rendered content, Payload became optional, shared caching was introduced and the visitor dashboard stayed fresh without querying the database on every visit. August 26, 2026 snapshot: 99/100 desktop, 0.5 s LCP and zero CLS; the 80/100 mobile profile still identifies JavaScript work to reduce.",
+        "tags": [
+          "Web Performance",
+          "Next.js",
+          "Core Web Vitals",
+          "Tailwind CSS",
+          "Vercel"
+        ],
+        "link": "/en/services/website-performance-optimization-service",
+        "featured": true,
+        "category": "webapp",
+        "image": "/images/projects/optimisation-performance-manda-ia.svg",
+        "workflowFile": null
+      },
       {
         "slug": "madavoyage",
         "title": "MadaVoyage",

@@ -348,10 +348,10 @@
   {
     "id": "c23eb61e-c774-4ea1-bb76-bc4160045faf",
     "slug": "facebook-agen-ia",
-    "title_fr": "Facebook Agent IA",
-    "title_en": "Facebook AI Agent",
-    "subtitle_fr": "Agent d'automatisation Facebook intelligent",
-    "subtitle_en": "AI-powered Facebook Automation Agent",
+    "title_fr": "Qualification de leads Facebook avec n8n",
+    "title_en": "Facebook Lead Qualification with n8n",
+    "subtitle_fr": "Étude de cas : messages, scoring et synchronisation CRM",
+    "subtitle_en": "Case study: messages, scoring and CRM synchronization",
     "description_fr": "Agent d'automatisation Facebook propulsé par l'intelligence artificielle, capable de gérer automatiquement les interactions sur les pages Facebook. Le système repose sur une architecture RAG (Retrieval-Augmented Generation) qui indexe les documents métier (FAQ, catalogues produits, politiques) pour générer des réponses contextuelles et précises. Le backend FastAPI reçoit les événements Facebook via webhooks, analyse le contenu des commentaires et messages Messenger, recherche les informations pertinentes dans la base vectorielle, puis génère une réponse personnalisée via Anthropic Claude ou OpenAI. Le projet inclut un dashboard Next.js complet pour monitorer les conversations, visualiser les statistiques d'engagement et configurer les règles de réponse automatique. L'agent gère également la planification intelligente des publications et l'analyse d'audience. Conçu pour les entreprises malgaches souhaitant automatiser leur présence Facebook sans sacrifier la qualité des interactions.",
     "description_en": "AI-powered Facebook automation agent capable of automatically managing interactions on Facebook pages. The system relies on a RAG (Retrieval-Augmented Generation) architecture that indexes business documents (FAQs, product catalogs, policies) to generate contextual and accurate responses. The FastAPI backend receives Facebook events via webhooks, analyzes comment and Messenger message content, searches for relevant information in the vector database, then generates a personalized response via Anthropic Claude or OpenAI. The project includes a complete Next.js dashboard for monitoring conversations, visualizing engagement statistics, and configuring auto-reply rules. The agent also handles intelligent post scheduling and audience analysis. Designed for Malagasy businesses looking to automate their Facebook presence without sacrificing interaction quality.",
     "tags": [

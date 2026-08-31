@@ -14,14 +14,95 @@ const RESULTS = [
   { value: "30 s", labelFr: "fraicheur maximale du tableau", labelEn: "maximum dashboard freshness" },
 ];
 
+const LAB_METRICS = {
+  desktop: [
+    { label: "FCP", value: "0.4 s" },
+    { label: "LCP", value: "0.5 s" },
+    { label: "TBT", value: "30 ms" },
+    { label: "CLS", value: "0" },
+  ],
+  mobile: [
+    { label: "FCP", value: "1.3 s" },
+    { label: "LCP", value: "2.4 s" },
+    { label: "TBT", value: "680 ms" },
+    { label: "CLS", value: "0" },
+  ],
+};
+
+const FRONTEND_AUDIT = [
+  {
+    icon: "code",
+    titleFr: "CSS et Tailwind produits",
+    titleEn: "Generated CSS and Tailwind",
+    textFr: "CSS réellement livré, classes inutilisées, styles critiques, spécificité et coût de maintenance.",
+    textEn: "CSS actually shipped, unused classes, critical styles, specificity and maintenance cost.",
+  },
+  {
+    icon: "speed",
+    titleFr: "Chemin de rendu critique",
+    titleEn: "Critical rendering path",
+    textFr: "Polices, feuilles de style, images LCP, scripts tiers et ressources qui retardent le premier rendu.",
+    textEn: "Fonts, stylesheets, LCP images, third-party scripts and resources delaying first render.",
+  },
+  {
+    icon: "javascript",
+    titleFr: "JavaScript et hydratation",
+    titleEn: "JavaScript and hydration",
+    textFr: "Composants client, travail du thread principal, dépendances et code chargé avant d'être utile.",
+    textEn: "Client components, main-thread work, dependencies and code loaded before it becomes useful.",
+  },
+];
+
 export default function PerformanceOptimizationProof({ locale }: { locale: Locale }) {
   const isFrench = locale === "fr";
 
   return (
-    <section
-      aria-label={isFrench ? "Preuve de l'optimisation technique" : "Technical optimization proof"}
-      className="mb-20 min-w-0"
-    >
+    <section id="preuves-performance" aria-label={isFrench ? "Preuve de l'optimisation technique" : "Technical optimization proof"} className="mb-20 min-w-0 scroll-mt-28">
+      <SectionHeading
+        eyebrow={isFrench ? "Snapshot Lighthouse du 26 août 2026" : "Lighthouse snapshot from August 26, 2026"}
+        title={isFrench ? "Une performance mesurée, pas un score isolé" : "Measured performance, not an isolated score"}
+        description={
+          isFrench
+            ? "La version en production est testée dans deux conditions. Le desktop est déjà très solide ; le mobile révèle encore du travail JavaScript à réduire."
+            : "The production version is tested under two conditions. Desktop is already very strong; mobile still exposes JavaScript work to reduce."
+        }
+      />
+
+      <div className="mb-20 grid overflow-hidden rounded-lg border border-white/10 bg-white/10 lg:grid-cols-2">
+        {([
+          { key: "desktop", score: 99, labelFr: "Ordinateur", labelEn: "Desktop", tone: "text-emerald-300" },
+          { key: "mobile", score: 80, labelFr: "Mobile", labelEn: "Mobile", tone: "text-amber-300" },
+        ] as const).map((profile) => (
+          <article key={profile.key} className="bg-[#0b0d14] p-6 sm:p-8">
+            <div className="flex items-end justify-between gap-5 border-b border-white/10 pb-6">
+              <div>
+                <p className={`text-xs font-bold uppercase ${profile.tone}`}>
+                  {isFrench ? profile.labelFr : profile.labelEn}
+                </p>
+                <p className="mt-2 text-sm text-slate-500">Lighthouse Performance</p>
+              </div>
+              <p className={`text-5xl font-black ${profile.tone}`}>
+                {profile.score}<span className="text-base text-slate-500">/100</span>
+              </p>
+            </div>
+            <dl className="mt-6 grid grid-cols-2 gap-x-5 gap-y-6 sm:grid-cols-4">
+              {LAB_METRICS[profile.key].map((metric) => (
+                <div key={metric.label}>
+                  <dt className="text-xs font-semibold text-slate-500">{metric.label}</dt>
+                  <dd className="mt-1 text-lg font-bold text-white">{metric.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </article>
+        ))}
+      </div>
+
+      <p className="-mt-16 mb-20 text-xs leading-relaxed text-slate-500">
+        {isFrench
+          ? "Mesures de laboratoire Lighthouse sur la page d'accueil en production, avec 58 requêtes et environ 653 KiB transférés. Un run peut varier selon le réseau et la charge ; les Core Web Vitals terrain restent à suivre séparément."
+          : "Lighthouse lab measurements on the production homepage, with 58 requests and about 653 KiB transferred. A run can vary with network and load; field Core Web Vitals must still be monitored separately."}
+      </p>
+
       <SectionHeading
         eyebrow={isFrench ? "Cas reel audite et mesure" : "Audited and measured case study"}
         title={
@@ -116,6 +197,27 @@ export default function PerformanceOptimizationProof({ locale }: { locale: Local
           ? "Mesures issues de l'audit de manda-ia.com. Les gains exacts dependent du trafic, de l'hebergement et de l'architecture du site audite."
           : "Measurements from the manda-ia.com audit. Exact gains depend on traffic, hosting and the audited site's architecture."}
       </p>
+
+      <div className="mt-20">
+        <SectionHeading
+          eyebrow={isFrench ? "Audit frontend" : "Frontend audit"}
+          title={isFrench ? "Ce que j'analyse derrière Tailwind et PageSpeed" : "What I inspect behind Tailwind and PageSpeed"}
+          description={
+            isFrench
+              ? "Un framework CSS n'est pas jugé sur son nom, mais sur ce qu'il produit dans le navigateur et sur la façon dont l'architecture tient lorsque le produit grandit."
+              : "A CSS framework is not judged by its name, but by what it ships to the browser and how the architecture holds as the product grows."
+          }
+        />
+        <div className="grid gap-px overflow-hidden rounded-lg border border-white/10 bg-white/10 md:grid-cols-3">
+          {FRONTEND_AUDIT.map((item) => (
+            <article key={item.titleEn} className="min-h-56 bg-[#0b0d14] p-6 sm:p-7">
+              <LegacyIconScoutIcon name={item.icon} size={25} className="text-amber-300" />
+              <h3 className="mt-8 text-lg font-bold text-white">{isFrench ? item.titleFr : item.titleEn}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-400">{isFrench ? item.textFr : item.textEn}</p>
+            </article>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

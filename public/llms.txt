@@ -50,8 +50,9 @@
 ## Realisations
 
 - [Toutes les realisations](https://manda-ia.com/projects): Index des produits, automatisations, integrations IA et sites livres.
+- [Audit performance de manda-ia.com](https://manda-ia.com/projects/optimisation-performance-manda-ia): Etude de cas Next.js avec Lighthouse, Core Web Vitals, architecture CSS, cache, Vercel, Supabase et cout cloud.
 - [PaidMada Mobile Money](https://manda-ia.com/projects/paidmada-mobile-money): Backend et tableau de bord Mobile Money avec Orange Money, MVola et Airtel Money.
-- [Agent IA Facebook](https://manda-ia.com/projects/facebook-agen-ia): Qualification de conversations, intentions, scores et prochaines actions commerciales.
+- [Qualification de leads Facebook avec n8n](https://manda-ia.com/projects/facebook-agen-ia): Etude de cas sur la qualification de conversations, le scoring et la synchronisation CRM.
 - [International Opportunity Agent n8n](https://manda-ia.com/projects/international-opportunity-agent-n8n): Agent n8n de veille, scoring et preparation de candidatures internationales avec validation humaine.
 - [Optimisation GEO et SEO](https://manda-ia.com/projects/geo-seo-boost): Cas d'etude croisant donnees Search Console, analytics, structure de contenu et citabilite IA.
 - [Scraping FlowRemote](https://manda-ia.com/projects/scraping-flowremote): Extraction et suivi automatise d'offres avec n8n et notifications.

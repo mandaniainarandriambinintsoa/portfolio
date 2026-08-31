@@ -115,9 +115,10 @@ export const workflowTrackingVisiteurs = {
     {
       parameters: {
         sendTo: "***@***.com",
-        subject: "Vue Portfolio",
+        subject:
+          "=Vue Portfolio — {{ $(`Webhook`).item.json.body.acquisition_source || 'Direct / inconnu' }}",
         message:
-          "=Il y a quelqu`un qui visite ton portfolio en ce moment à {{ $(`Airtable`).item.json.fields.Pays }} region {{ $(`Airtable`).item.json.fields.Region }}",
+          "=Il y a quelqu`un qui visite ton portfolio en ce moment à {{ $(`Airtable`).item.json.fields.Pays }} région {{ $(`Airtable`).item.json.fields.Region }}\n\nPage d'entrée : {{ $(`Webhook`).item.json.body.entry_url || $(`Webhook`).item.json.body.path || 'Inconnue' }}\nSource : {{ $(`Webhook`).item.json.body.acquisition_source || 'Direct / inconnu' }}\nReferrer : {{ $(`Webhook`).item.json.body.referrer || 'Aucun' }}",
         options: {},
       },
       type: "n8n-nodes-base.gmail",

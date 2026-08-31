@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Audit performance de manda-ia.com</title>
+  <desc id="desc">Snapshot Lighthouse du 26 aout 2026 avec un score de 99 sur ordinateur et 80 sur mobile.</desc>
+  <rect width="1200" height="675" fill="#07090f"/>
+  <rect x="52" y="48" width="1096" height="579" rx="12" fill="#0b0d14" stroke="#273042"/>
+  <text x="92" y="103" fill="#f8fafc" font-family="Arial, sans-serif" font-size="30" font-weight="700">AUDIT PERFORMANCE WEB</text>
+  <text x="92" y="136" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">manda-ia.com - Lighthouse lab snapshot - 26 AUG 2026</text>
+  <line x1="92" y1="170" x2="1108" y2="170" stroke="#273042"/>
+
+  <rect x="92" y="211" width="470" height="227" rx="8" fill="#0f141d" stroke="#244c3d"/>
+  <text x="126" y="255" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="17" font-weight="700">DESKTOP</text>
+  <text x="126" y="349" fill="#6ee7b7" font-family="Arial, sans-serif" font-size="104" font-weight="800">99</text>
+  <text x="285" y="349" fill="#64748b" font-family="Arial, sans-serif" font-size="25">/100</text>
+  <text x="126" y="399" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="19">LCP 0.5 s</text>
+  <text x="273" y="399" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="19">TBT 30 ms</text>
+  <text x="420" y="399" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="19">CLS 0</text>
+
+  <rect x="638" y="211" width="470" height="227" rx="8" fill="#0f141d" stroke="#5b4720"/>
+  <text x="672" y="255" fill="#fcd34d" font-family="Arial, sans-serif" font-size="17" font-weight="700">MOBILE</text>
+  <text x="672" y="349" fill="#fcd34d" font-family="Arial, sans-serif" font-size="104" font-weight="800">80</text>
+  <text x="831" y="349" fill="#64748b" font-family="Arial, sans-serif" font-size="25">/100</text>
+  <text x="672" y="399" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="19">LCP 2.4 s</text>
+  <text x="819" y="399" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="19">TBT 680 ms</text>
+  <text x="982" y="399" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="19">CLS 0</text>
+
+  <line x1="92" y1="483" x2="1108" y2="483" stroke="#273042"/>
+  <text x="92" y="532" fill="#f8fafc" font-family="Arial, sans-serif" font-size="20" font-weight="700">MEASURE</text>
+  <text x="92" y="565" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16">Rendering - CSS - JavaScript - Network - Cache - Cloud usage</text>
+  <text x="908" y="532" fill="#f8fafc" font-family="Arial, sans-serif" font-size="20" font-weight="700">58 REQUESTS</text>
+  <text x="952" y="565" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16">653 KiB transferred</text>
+</svg>

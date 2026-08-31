@@ -3,6 +3,8 @@ import Link from "next/link";
 type ButtonProps = {
   variant?: "primary" | "glass";
   href?: string;
+  target?: "_blank" | "_self";
+  rel?: string;
   children: React.ReactNode;
   className?: string;
   analytics?: {
@@ -14,6 +16,8 @@ type ButtonProps = {
 export default function Button({
   variant = "primary",
   href,
+  target,
+  rel,
   children,
   className = "",
   analytics,
@@ -34,6 +38,8 @@ export default function Button({
     return (
       <Link
         href={href}
+        target={target}
+        rel={rel}
         className={cls}
         data-ph-event={analytics?.event}
         data-ph-props={analytics ? JSON.stringify({ ...analytics.properties, href }) : undefined}

@@ -1126,6 +1126,14 @@
           },
           "faq": [
             {
+              "question": "Où trouver un développeur web freelance à Madagascar ?",
+              "answer": "Les résultats Google mélangent agences, plateformes et profils individuels. Vérifiez surtout des projets publics en production, le rôle exact du développeur, sa disponibilité, son TJM, son dépôt Git et sa capacité à expliquer les choix techniques. Cette page réunit mon portfolio, mes spécialisations et un contact direct sans intermédiaire."
+            },
+            {
+              "question": "Comment choisir entre un freelance et une agence web à Madagascar ?",
+              "answer": "Un freelance convient lorsque vous voulez un interlocuteur technique direct, une boucle de décision courte et un périmètre maîtrisé. Une agence devient utile si le projet exige plusieurs expertises simultanées ou une capacité importante. Dans les deux cas, demandez des références vérifiables, des critères de livraison et la propriété du code."
+            },
+            {
               "question": "Qu'est-ce qu'un développeur JavaScript fullstack ?",
               "answer": "C'est un développeur qui couvre le front (React, Next.js), le back (Node.js) et l'IA appliquée avec un seul langage, JavaScript. Il construit un produit de bout en bout sans dépendre de plusieurs équipes."
             },
@@ -1731,7 +1739,7 @@
         "isLanding": true,
         "seoTitle": "Audit performance site web & coûts cloud | Manda",
         "seoDescription": "Audit et optimisation d'un site web existant : vitesse, Core Web Vitals, cache, requêtes API, Vercel, Supabase et réduction des coûts cloud.",
-        "updatedAt": "2026-08-06",
+        "updatedAt": "2026-08-26",
         "landing": {
           "heroText": "Votre site fonctionne déjà, mais il devient lent, consomme trop de ressources ou approche les quotas Vercel et Supabase ? J'audite le parcours complet de la requête, du navigateur à la base de données, puis je corrige les causes structurelles : rendu, cache, CMS, API, images et polling. L'objectif n'est pas seulement un meilleur score, mais un site plus rapide, plus fiable et moins coûteux à exploiter.",
           "features": [
@@ -1777,7 +1785,11 @@
             },
             {
               "title": "Le cas manda-ia.com : le volume n'était pas le problème",
-              "content": "La base occupait environ **25 Mo**, mais l'organisation avait dépassé **5,5 Go d'egress**. L'audit a montré que les pages publiques étaient rendues dynamiquement et relisaient plusieurs sources distantes à chaque requête. Les crawlers, visiteurs et rafraîchissements répétaient donc le même travail.\n\nJ'ai remplacé ces lectures par des pages pré-rendues avec revalidation, rendu le CMS distant optionnel en production, ajouté des caches partagés, limité le rafraîchissement du tableau visiteurs aux onglets visibles et déplacé le cache à l'edge Vercel. Le tableau reste actualisé à moins de 30 secondes sans interroger Supabase à chaque visite."
+              "content": "La base occupait environ **25 Mo**, mais l'organisation avait dépassé **5,5 Go d'egress**. L'audit a montré que les pages publiques étaient rendues dynamiquement et relisaient plusieurs sources distantes à chaque requête. Les crawlers, visiteurs et rafraîchissements répétaient donc le même travail.\n\nJ'ai remplacé ces lectures par des pages pré-rendues avec revalidation, rendu le CMS distant optionnel en production, ajouté des caches partagés, limité le rafraîchissement du tableau visiteurs aux onglets visibles et déplacé le cache à l'edge Vercel. Le tableau reste actualisé à moins de 30 secondes sans interroger Supabase à chaque visite. Cette intervention est documentée dans l'[étude de cas complète](/projects/optimisation-performance-manda-ia)."
+            },
+            {
+              "title": "Architecture CSS, Tailwind et Critical Rendering Path",
+              "content": "L'audit ne s'arrête pas au backend. Je mesure le CSS réellement transféré, les styles inutilisés, les dépendances entre composants, les polices, l'image LCP et les feuilles de style qui bloquent le rendu. Avec Tailwind, la question n'est pas de défendre le framework : il faut vérifier ce que la compilation produit, si les classes restent maîtrisables et si une autre stratégie CSS apporterait un gain mesurable.\n\nJe relie ensuite le Critical Rendering Path au JavaScript exécuté avant l'interaction : composants client, hydratation, scripts tiers, écouteurs globaux et bibliothèques chargées trop tôt. Sur le snapshot Lighthouse du 26 août 2026, manda-ia.com atteint **99/100 sur ordinateur** avec un LCP de **0,5 s** et un CLS nul. Le score mobile de **80/100** et un TBT de **680 ms** indiquent clairement le prochain chantier : réduire le travail JavaScript du thread principal."
             },
             {
               "title": "Ma méthode en quatre étapes",
@@ -2156,8 +2168,8 @@
         "description": "Site premium, SEO/GEO-ready, sans dashboard inutile",
         "example": {
           "label": "VOIR UN EXEMPLE",
-          "title": "Ce portfolio, 100/100 PageSpeed",
-          "href": "/fr/projects"
+          "title": "Ce portfolio, performance auditée",
+          "href": "/projects/optimisation-performance-manda-ia"
         },
         "tiers": [
           {
@@ -2273,6 +2285,24 @@
     "category_site_metier": "Sites métier",
     "category_workflow": "Workflows N8N",
     "items": [
+      {
+        "slug": "optimisation-performance-manda-ia",
+        "title": "Optimisation performance de manda-ia.com",
+        "subtitle": "Audit Lighthouse, architecture Next.js et coûts cloud",
+        "description": "Étude de cas technique de l'optimisation d'un portfolio Next.js déjà en production. L'audit relie les mesures Lighthouse, le Critical Rendering Path, le JavaScript, le CSS Tailwind, les lectures Supabase, le rendu dynamique et les fonctions Vercel aux chemins de code responsables. Les corrections ont transformé les pages publiques en contenu pré-rendu, rendu Payload optionnel, ajouté un cache partagé et conservé un tableau visiteurs actualisé sans lecture directe de la base à chaque visite. Snapshot du 26 août 2026 : 99/100 sur ordinateur, LCP 0,5 s, CLS 0 ; le profil mobile à 80/100 identifie encore le travail JavaScript à réduire.",
+        "tags": [
+          "Web Performance",
+          "Next.js",
+          "Core Web Vitals",
+          "Tailwind CSS",
+          "Vercel"
+        ],
+        "link": "/services/audit-performance-site-web",
+        "featured": true,
+        "category": "webapp",
+        "image": "/images/projects/optimisation-performance-manda-ia.svg",
+        "workflowFile": null
+      },
       {
         "slug": "madavoyage",
         "title": "MadaVoyage",

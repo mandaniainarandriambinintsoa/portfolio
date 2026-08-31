@@ -44,6 +44,63 @@ function getCountryName(countryCode: string, locale: string): string {
   }
 }
 
+function getAcquisitionDetails(path: string, referrer: string, request: NextRequest) {
+  let entryUrl = path || "/";
+  let referringDomain = "";
+
+  try {
+    entryUrl = new URL(path || "/", request.nextUrl.origin).toString();
+  } catch {
+    // Keep the sanitized path when it cannot be converted to an absolute URL.
+  }
+
+  let entry: URL | null = null;
+  try {
+    entry = new URL(entryUrl);
+  } catch {
+    entry = null;
+  }
+
+  if (referrer) {
+    try {
+      referringDomain = new URL(referrer).hostname.replace(/^www\./, "").toLowerCase();
+    } catch {
+      referringDomain = "";
+    }
+  }
+
+  const utmSource = entry?.searchParams.get("utm_source")?.trim().toLowerCase() || "";
+  const hasFacebookClickId = Boolean(entry?.searchParams.get("fbclid"));
+  const hasGoogleClickId = Boolean(
+    entry?.searchParams.get("gclid") || entry?.searchParams.get("gbraid")
+  );
+
+  let acquisitionSource = "Direct / inconnu";
+  if (utmSource) {
+    acquisitionSource = `Campagne — ${utmSource}`;
+  } else if (hasFacebookClickId || /(^|\.)(facebook|fb|instagram)\.com$/.test(referringDomain)) {
+    acquisitionSource = "Facebook / Instagram";
+  } else if (hasGoogleClickId) {
+    acquisitionSource = "Google Ads";
+  } else if (/(^|\.)google\./.test(referringDomain)) {
+    acquisitionSource = "Google organic";
+  } else if (/(^|\.)(bing\.com|duckduckgo\.com|search\.yahoo\.com)$/.test(referringDomain)) {
+    acquisitionSource = "Moteur de recherche";
+  } else if (
+    /(^|\.)(chatgpt\.com|perplexity\.ai|claude\.ai|gemini\.google\.com)$/.test(
+      referringDomain
+    )
+  ) {
+    acquisitionSource = "Assistant IA";
+  } else if (referringDomain === request.nextUrl.hostname.toLowerCase()) {
+    acquisitionSource = "Navigation interne";
+  } else if (referringDomain) {
+    acquisitionSource = `Site référent — ${referringDomain}`;
+  }
+
+  return { entryUrl, referringDomain, acquisitionSource };
+}
+
 function isSameOriginRequest(request: NextRequest): boolean {
   if (request.headers.get("x-manda-signal") !== "portfolio") return false;
 
@@ -190,13 +247,24 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Webhook not configured" }, { status: 503 });
   }
 
+  const path = cleanText(body.path, 500);
+  const referrer = cleanText(body.referrer, 500);
+  const { entryUrl, referringDomain, acquisitionSource } = getAcquisitionDetails(
+    path,
+    referrer,
+    request
+  );
+
   const payload = {
     event: signalEvent,
     source: "portfolio",
     timestamp: new Date().toISOString(),
     locale,
-    path: cleanText(body.path, 500),
-    referrer: cleanText(body.referrer, 500),
+    path,
+    entry_url: entryUrl,
+    referrer,
+    referring_domain: referringDomain,
+    acquisition_source: acquisitionSource,
     action: cleanText(body.action, 100),
     area: cleanText(body.area, 100),
     label: cleanText(body.label, 160),
