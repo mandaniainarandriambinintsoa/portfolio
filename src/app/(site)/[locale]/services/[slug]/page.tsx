@@ -305,7 +305,7 @@ export default async function ServicePage({
     : [];
   const heroCtaLabel = service.slug === "forward-deployed-engineer"
     ? locale === "fr"
-      ? "DÃ©crire mon problÃ¨me mÃ©tier"
+      ? "Décrire mon problème métier"
       : "Describe the business problem"
     : landing.cta?.buttonLabel || dict.hero.cta_primary;
 
