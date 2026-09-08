@@ -253,6 +253,138 @@
         }
       },
       {
+        "icon": "manage_search",
+        "title": "RAG Developer for Business: AI on Your Data",
+        "description": "RAG chatbots and assistants connected to your documents, with hybrid retrieval, citations, permissions and evaluations.",
+        "slug": "rag-developer",
+        "color": "sky",
+        "cardTitle": "RAG Developer",
+        "cardDescription": "Reliable AI assistants grounded in your private documents",
+        "isLanding": true,
+        "seoTitle": "RAG Developer | AI Search on Your Business Data",
+        "seoDescription": "RAG developer for enterprise document search and grounded chatbots with citations, access control, evaluation and secure production deployment.",
+        "updatedAt": "2026-09-08",
+        "landing": {
+          "heroText": "I build RAG systems that search your documents before an AI assistant answers. Responses can cite their sources, respect user permissions and say when the required information is missing. The result is controllable business search, not a chatbot that improvises.",
+          "features": [
+            {
+              "icon": "library_books",
+              "title": "Controlled sources",
+              "description": "PDFs, pages, procedures, tickets and business data prepared for retrieval."
+            },
+            {
+              "icon": "manage_search",
+              "title": "Hybrid retrieval",
+              "description": "Keywords, embeddings and reranking selected for the data."
+            },
+            {
+              "icon": "format_quote",
+              "title": "Citations",
+              "description": "Answers link back to the passages they actually used."
+            },
+            {
+              "icon": "lock",
+              "title": "Permissions",
+              "description": "Users only search content they are allowed to access."
+            },
+            {
+              "icon": "fact_check",
+              "title": "RAG evaluation",
+              "description": "Retrieval relevance, groundedness and correct refusals are tested."
+            },
+            {
+              "icon": "monitoring",
+              "title": "RAGOps",
+              "description": "Quality, latency, cost and failures monitored in production."
+            }
+          ],
+          "sections": [
+            {
+              "title": "What is a RAG system?",
+              "content": "RAG stands for Retrieval-Augmented Generation. Before asking a large language model to answer, the system retrieves relevant passages from a knowledge base and adds them to the model context. Google Cloud describes the flow as retrieval, prompt augmentation and grounded generation.\n\nThis architecture fits procedures, catalogs, contracts, tickets and internal documentation that changes faster than a model's training data. See [Google Cloud's RAG definition](https://cloud.google.com/use-cases/retrieval-augmented-generation)."
+            },
+            {
+              "title": "Useful RAG chatbot applications",
+              "content": "A support chatbot retrieves the procedure that matches a question, cites the passage and escalates when no adequate source is found. An internal assistant lets employees query manuals, contracts or ticket history without searching several folders.\n\nThe same architecture can power product search, sales assistance or a multilingual French and Malagasy knowledge base. Source quality and access control matter more than the raw number of imported documents."
+            },
+            {
+              "title": "From documents to dependable retrieval",
+              "content": "I inventory source formats, owners and update frequency. Documents are cleaned, split into coherent passages and indexed with metadata such as title, date, customer and access level.\n\nAt query time, hybrid search can combine semantic similarity with keywords. A reranker orders the candidate passages. The LLM receives only useful evidence and must answer from it or state that the information is unavailable."
+            },
+            {
+              "title": "Evaluate retrieval before the answer",
+              "content": "A RAG pipeline can write a fluent answer from the wrong passage. I therefore measure two separate stages: whether retrieval found the expected source and whether the generated answer remains faithful to it. Test sets include normal questions, ambiguous wording, missing answers and permission boundaries.\n\nMetrics cover passage relevance, groundedness, completeness, citations and correct refusal. This creates a baseline for improving sources, chunking, search and prompts."
+            },
+            {
+              "title": "RAG architecture and LLM integration",
+              "content": "Depending on the constraints, I use PostgreSQL with pgvector, Supabase, a managed search engine or a specialized vector database. The API can run in Python with FastAPI or inside a Next.js product. Claude, OpenAI or Gemini generate the answer while n8n orchestrates ingestion and updates.\n\nThe choice follows volume, update frequency, filters, latency and control requirements. [AWS guidance on production RAG components](https://docs.aws.amazon.com/prescriptive-guidance/latest/retrieval-augmented-generation-options/what-is-rag.html) also separates embeddings, storage and retrieval concerns."
+            },
+            {
+              "title": "Security and production rollout",
+              "content": "The index must enforce the same permissions as the original documents. API keys remain server-side, sensitive content is excluded from unnecessary logs and deletions propagate to the index. Responses expose sources so users can verify them.\n\nI start with one bounded corpus, measure failures and expand gradually. When the system must also act in business tools, RAG becomes one component of an [AI integration](/en/services/ai-integration), with human approval for sensitive actions."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Basic chatbot or RAG chatbot?",
+            "intro": "RAG is valuable when answers must be verifiable and grounded in your data.",
+            "headers": ["Criterion", "Chatbot without RAG", "Chatbot with RAG"],
+            "rows": [
+              {
+                "criterion": "Business knowledge",
+                "noCode": "Relies on general model training",
+                "nextjs": "Searches your documents for each question",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Freshness",
+                "noCode": "Information may be outdated",
+                "nextjs": "Changed sources can be reindexed",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Verification",
+                "noCode": "Answer without internal evidence",
+                "nextjs": "Source passages and links are displayed",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Confidentiality",
+                "noCode": "Same context for everyone",
+                "nextjs": "Filters follow user permissions",
+                "winner": "nextjs"
+              }
+            ],
+            "conclusion": "A general chatbot is sufficient for conversations without private knowledge. When answers must use your documents and remain verifiable, RAG is the stronger foundation."
+          },
+          "faq": [
+            {
+              "question": "What does RAG mean in artificial intelligence?",
+              "answer": "RAG means Retrieval-Augmented Generation. It retrieves passages from a knowledge base, adds them to the LLM context and generates an answer grounded in those sources."
+            },
+            {
+              "question": "What is the difference between RAG and fine-tuning?",
+              "answer": "RAG supplies external, updateable information for each request. Fine-tuning changes model behavior using examples. RAG is generally a better fit for private or frequently updated documents."
+            },
+            {
+              "question": "Does RAG prevent every hallucination?",
+              "answer": "No. Retrieval can miss a passage and a model can misread evidence. Retrieval relevance, groundedness, refusals and citations still require evaluation."
+            },
+            {
+              "question": "Which documents can a RAG chatbot use?",
+              "answer": "PDFs, web pages, procedures, contracts, tickets, databases and technical documentation can be indexed when ownership, freshness, format and access rights are controlled."
+            },
+            {
+              "question": "Can you build a French and Malagasy RAG system?",
+              "answer": "Yes. Multilingual embeddings and a bilingual test set can support and measure retrieval in both languages, provided the underlying source material is reliable."
+            },
+            {
+              "question": "How much does RAG development cost?",
+              "answer": "Cost depends on source volume and formats, permissions, update frequency, query volume, evaluations and product integration. I start with one bounded corpus and use case."
+            }
+          ]
+        }
+      },
+      {
         "icon": "hub",
         "title": "n8n Automation",
         "description": "Custom workflows with n8n: tool connections, scraping, notifications, AI agents — zero manual intervention.",

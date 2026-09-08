@@ -84,12 +84,267 @@
       },
       {
         "icon": "psychology",
-        "title": "Intégration IA & Prompt Engineering",
-        "description": "Agents IA et LLMs intégrés dans vos sites et SaaS. Prompt engineering, Claude Code, OpenAI Codex, GPT, automatisation intelligente de vos opérations.",
+        "title": "Consultant IA générative freelance : prompts & LLM",
+        "description": "Intégration d'IA générative, optimisation de prompts et évaluation de LLM dans vos produits et processus métier.",
         "slug": "integration-ia",
         "color": "blue",
-        "seoTitle": "Intégration IA & agents métier dans vos applications",
-        "seoDescription": "Intégration d'agents IA, LLM, RAG et automatisations dans vos outils métier avec garde-fous, validation humaine et mesure des résultats."
+        "cardTitle": "IA générative & LLM",
+        "cardDescription": "Prompts évalués, intégrations LLM et systèmes IA mesurables",
+        "isLanding": true,
+        "seoTitle": "Consultant IA générative freelance | Prompt & LLM",
+        "seoDescription": "Consultant IA générative freelance : prompt engineering, intégration Claude, GPT et Gemini, évaluations, garde-fous et mise en production.",
+        "updatedAt": "2026-09-08",
+        "landing": {
+          "heroText": "J'intègre l'IA générative dans vos outils à partir d'un résultat métier mesurable : classer des demandes, extraire des informations, rédiger sous contraintes ou assister une équipe. Le prompt n'est qu'une partie du système. Je versionne les instructions, construis un jeu de tests, mesure les réponses et encadre les actions sensibles avant la mise en production.",
+          "features": [
+            {
+              "icon": "psychology",
+              "title": "Prompt engineering",
+              "description": "Instructions structurées, exemples, sorties typées et gestion des cas ambigus."
+            },
+            {
+              "icon": "fact_check",
+              "title": "Évaluations",
+              "description": "Jeux de tests, critères de réussite et comparaison des versions."
+            },
+            {
+              "icon": "hub",
+              "title": "Intégration LLM",
+              "description": "Claude, OpenAI ou Gemini reliés à vos API et données métier."
+            },
+            {
+              "icon": "shield",
+              "title": "Garde-fous",
+              "description": "Validation humaine, formats contrôlés et limites d'action explicites."
+            },
+            {
+              "icon": "monitoring",
+              "title": "Observabilité",
+              "description": "Coût, latence, erreurs et qualité suivis après le déploiement."
+            },
+            {
+              "icon": "swap_horiz",
+              "title": "Choix du modèle",
+              "description": "Le modèle est choisi sur vos tests, pas sur sa popularité."
+            }
+          ],
+          "sections": [
+            {
+              "title": "Une IA générative utile, pas une démonstration isolée",
+              "content": "Une intégration GenAI devient utile lorsqu'elle reçoit un contexte fiable, produit un format exploitable et s'insère dans un parcours métier. Un simple chat branché sur une API ne suffit pas : il faut définir les entrées, les sorties attendues, les erreurs acceptables et les décisions qui restent humaines.\n\nJe pars d'un flux réel puis j'intègre le modèle dans votre site, SaaS, CRM, base documentaire ou workflow n8n. Les cas pertinents incluent la classification d'emails, l'extraction de données depuis des documents, la préparation de réponses, la synthèse et l'assistance à la recherche."
+            },
+            {
+              "title": "Prompt engineer freelance : ce que je livre réellement",
+              "content": "Le prompt engineering professionnel ne consiste pas à trouver une phrase magique. Je transforme les règles métier en instructions versionnées, exemples représentatifs, formats de sortie structurés et scénarios de refus. Chaque modification est comparée sur un jeu de cas réels.\n\nCette démarche suit les recommandations des plateformes de modèles : définir des critères de réussite, tester des formulations réalistes et évaluer les sorties avant de changer de modèle. Les résultats sont documentés afin que votre équipe puisse comprendre pourquoi une version est conservée. Voir les [bonnes pratiques de prompting d'Anthropic](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/prompt-templates-and-variables) et le système d'[évaluations OpenAI](https://platform.openai.com/docs/guides/evals)."
+            },
+            {
+              "title": "Prompt, RAG ou fine-tuning : choisir la bonne approche",
+              "content": "Un prompt suffit quand le contexte est court et stable. Un système [RAG](/services/developpeur-rag) devient pertinent lorsque la réponse doit s'appuyer sur une base documentaire volumineuse, privée ou régulièrement mise à jour. Le fine-tuning sert plutôt à spécialiser un comportement répétitif ou un style à partir d'exemples de qualité.\n\nCes techniques peuvent se combiner, mais chacune ajoute du coût et de la maintenance. Le guide de [Google Cloud sur prompt, RAG et fine-tuning](https://cloud.google.com/blog/products/ai-machine-learning/to-tune-or-not-to-tune-a-guide-to-leveraging-your-data-with-llms) confirme que le choix dépend de la fraîcheur des données, du besoin de citations et du comportement attendu."
+            },
+            {
+              "title": "Cas d'usage d'une intégration LLM en entreprise",
+              "content": "Pour le support, le LLM prépare une réponse à partir du ticket et des règles de service, puis laisse les cas sensibles à un humain. Pour les documents, il extrait des champs dans un schéma JSON contrôlé et signale les valeurs incertaines. Pour la prospection, il résume une entreprise ou personnalise un brouillon sans envoyer automatiquement du spam.\n\nDans un produit SaaS, le modèle peut expliquer une donnée, assister une recherche ou générer un premier livrable. L'interface doit toujours montrer la source, le statut et la possibilité de corriger le résultat."
+            },
+            {
+              "title": "Des preuves d'intégration, du prototype à la production",
+              "content": "[TeamIA](/projects/teamia) documente une plateforme d'agents et de démonstrateurs métier. Mon [agent d'opportunités internationales](/projects/international-opportunity-agent-n8n) combine collecte, déduplication, scoring explicable et validation humaine. [Factumation](/projects/factumation) illustre l'orchestration de documents et de workflows.\n\nCes projets montrent la même méthode : cadrer une sortie vérifiable, connecter les outils, tester les échecs puis instrumenter le système. Je peux intervenir sur un produit existant ou livrer un premier pilote limité."
+            },
+            {
+              "title": "Sécurité, confidentialité et maintien de la qualité",
+              "content": "Avant l'envoi d'une donnée à un modèle, je distingue les informations publiques, internes et sensibles. Les secrets restent côté serveur, les accès sont limités et les actions d'écriture critiques demandent une validation. Les logs évitent de stocker inutilement des contenus confidentiels.\n\nAprès le lancement, je surveille la latence, le coût par tâche, les erreurs de format et la réussite sur le jeu d'évaluation. Une mise à jour de modèle ou de prompt n'est déployée que si elle maintient ou améliore ces critères."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Prompt engineering, RAG ou fine-tuning ?",
+            "intro": "La bonne technique dépend du problème, pas de la mode du moment.",
+            "headers": ["Besoin", "Approche simple", "Approche recommandée"],
+            "rows": [
+              {
+                "criterion": "Contexte court et stable",
+                "noCode": "Ajouter une base documentaire complète",
+                "nextjs": "Prompt structuré avec exemples et tests",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Documents privés ou souvent mis à jour",
+                "noCode": "Copier les documents dans le prompt",
+                "nextjs": "RAG avec recherche, permissions et sources",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Comportement spécialisé répétitif",
+                "noCode": "Accumuler les instructions",
+                "nextjs": "Évaluer d'abord, puis envisager le fine-tuning",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Actions dans des outils métier",
+                "noCode": "Laisser le modèle agir directement",
+                "nextjs": "Workflow déterministe avec validation humaine",
+                "winner": "nextjs"
+              }
+            ],
+            "conclusion": "Je commence par la solution la plus simple qui passe les tests. RAG ou fine-tuning ne sont ajoutés que lorsqu'un besoin mesuré les justifie."
+          },
+          "faq": [
+            {
+              "question": "Que fait un prompt engineer freelance ?",
+              "answer": "Un prompt engineer transforme un besoin métier en instructions testables pour un LLM. Il prépare les exemples, structure les sorties, définit les cas d'échec et compare les versions sur un jeu d'évaluation avant la production."
+            },
+            {
+              "question": "Pouvez-vous intégrer Claude, OpenAI ou Gemini dans mon application ?",
+              "answer": "Oui. J'intègre le modèle adapté via API dans un site, un SaaS, n8n ou un outil interne, avec authentification, formats structurés, suivi des coûts et garde-fous."
+            },
+            {
+              "question": "Quelle différence entre IA générative et agent IA ?",
+              "answer": "L'IA générative produit un contenu à partir d'une instruction. Un agent IA utilise aussi des outils et une boucle de décision pour exécuter plusieurs actions vers un objectif."
+            },
+            {
+              "question": "Quand faut-il utiliser un RAG ?",
+              "answer": "Le RAG est adapté lorsque les réponses doivent être fondées sur vos documents, rester à jour, respecter des droits d'accès ou afficher leurs sources."
+            },
+            {
+              "question": "Comment mesurez-vous la qualité d'un prompt ?",
+              "answer": "Je définis des critères de réussite, constitue un jeu de cas réels puis mesure notamment la justesse, le respect du format, la complétude, le coût et la latence."
+            },
+            {
+              "question": "Travaillez-vous depuis Madagascar avec des équipes étrangères ?",
+              "answer": "Oui. Je travaille depuis Antananarivo avec des équipes à Madagascar, en Europe et à l'international, en français ou en anglais."
+            }
+          ]
+        }
+      },
+      {
+        "icon": "manage_search",
+        "title": "Développeur RAG freelance : IA sur vos données",
+        "description": "Chatbots et assistants RAG reliés à vos documents, avec recherche hybride, citations, permissions et évaluations.",
+        "slug": "developpeur-rag",
+        "color": "sky",
+        "cardTitle": "Développeur RAG",
+        "cardDescription": "Assistants IA fiables sur vos documents et données privées",
+        "isLanding": true,
+        "seoTitle": "Développeur RAG freelance | Chatbot sur vos données",
+        "seoDescription": "Développeur RAG freelance pour chatbot et recherche IA sur vos documents : citations, droits d'accès, évaluation et déploiement sécurisé.",
+        "updatedAt": "2026-09-08",
+        "landing": {
+          "heroText": "Je développe des systèmes RAG qui permettent à un assistant IA de chercher dans vos documents avant de répondre. Chaque réponse peut afficher ses sources, respecter les droits d'accès et signaler quand l'information manque. Le résultat : une recherche métier contrôlable, pas un chatbot qui improvise.",
+          "features": [
+            {
+              "icon": "library_books",
+              "title": "Sources maîtrisées",
+              "description": "PDF, pages, procédures, tickets et bases métier préparés pour la recherche."
+            },
+            {
+              "icon": "manage_search",
+              "title": "Recherche hybride",
+              "description": "Mots-clés, embeddings et reranking selon la nature des données."
+            },
+            {
+              "icon": "format_quote",
+              "title": "Citations",
+              "description": "Les réponses renvoient vers les passages réellement utilisés."
+            },
+            {
+              "icon": "lock",
+              "title": "Permissions",
+              "description": "Chaque utilisateur ne recherche que dans les contenus autorisés."
+            },
+            {
+              "icon": "fact_check",
+              "title": "Évaluation RAG",
+              "description": "Pertinence des passages, ancrage des réponses et refus testés."
+            },
+            {
+              "icon": "monitoring",
+              "title": "RAGOps",
+              "description": "Qualité, latence, coût et échecs suivis en production."
+            }
+          ],
+          "sections": [
+            {
+              "title": "Qu'est-ce qu'un système RAG ?",
+              "content": "RAG signifie Retrieval-Augmented Generation, ou génération augmentée par récupération. Avant de demander au LLM de répondre, le système recherche les passages pertinents dans une base de connaissances puis les ajoute au contexte. Google Cloud décrit ce flux en trois étapes : récupérer, enrichir le prompt et générer une réponse fondée sur les informations retrouvées.\n\nCette architecture convient aux procédures, catalogues, contrats, tickets, documentations techniques et connaissances internes qui changent plus vite que l'entraînement d'un modèle. Voir la [définition et les étapes RAG de Google Cloud](https://cloud.google.com/use-cases/retrieval-augmented-generation)."
+            },
+            {
+              "title": "Chatbot RAG pour l'entreprise : les cas d'usage utiles",
+              "content": "Un chatbot RAG de support recherche la procédure correspondant à la question, cite le passage et transfère le cas si aucune source suffisante n'est trouvée. Un assistant interne permet aux collaborateurs d'interroger des manuels, contrats ou historiques de tickets sans parcourir plusieurs dossiers.\n\nLe même principe peut alimenter une recherche produit, un assistant commercial ou une base de connaissances multilingue en français et en malgache. La priorité reste la qualité des sources et la clarté des droits d'accès, pas le nombre de documents importés."
+            },
+            {
+              "title": "De vos documents à une recherche fiable",
+              "content": "Je commence par inventorier les sources, les formats, les propriétaires et la fréquence de mise à jour. Les documents sont nettoyés, découpés en passages cohérents puis indexés avec leurs métadonnées : titre, date, type, client ou niveau d'accès.\n\nÀ la question de l'utilisateur, une recherche hybride combine similarité sémantique et mots-clés. Un reranker peut ensuite réordonner les passages. Le LLM reçoit seulement les éléments utiles et doit répondre à partir de ce contexte ou reconnaître que la réponse n'est pas disponible."
+            },
+            {
+              "title": "Évaluer le retrieval avant d'évaluer la réponse",
+              "content": "Un RAG peut produire une réponse fluide à partir d'un mauvais passage. Je sépare donc deux mesures : le retrieval a-t-il retrouvé la bonne source, puis la réponse respecte-t-elle cette source ? Le jeu de tests contient des questions normales, ambiguës, sans réponse et limitées par des permissions.\n\nLes métriques portent sur la pertinence des passages, l'ancrage, la complétude, les citations et le taux de refus correct. Google recommande une approche RAGOps pilotée par les métriques pour améliorer les sources, le découpage, la recherche et les questions."
+            },
+            {
+              "title": "Architecture et intégration LLM",
+              "content": "Selon le besoin, j'utilise PostgreSQL avec pgvector, Supabase, un moteur de recherche géré ou une base vectorielle spécialisée. L'API peut être développée en Python/FastAPI ou intégrée dans une application Next.js. Claude, OpenAI ou Gemini génèrent la réponse, tandis que n8n orchestre l'ingestion et les mises à jour.\n\nLe choix dépend du volume, de la fréquence d'indexation, des filtres, de la latence et du niveau de contrôle requis. La [documentation AWS sur les composants d'un RAG en production](https://docs.aws.amazon.com/prescriptive-guidance/latest/retrieval-augmented-generation-options/what-is-rag.html) souligne également le rôle des embeddings, du stockage et de la récupération."
+            },
+            {
+              "title": "Sécurité et mise en production",
+              "content": "L'index doit appliquer les mêmes permissions que les documents d'origine. Les clés API restent côté serveur, les contenus sensibles ne sont pas ajoutés aux logs et les suppressions doivent se propager à l'index. Les réponses affichent leurs sources afin qu'un utilisateur puisse les vérifier.\n\nJe déploie d'abord un pilote sur un corpus limité, mesure les erreurs, puis élargis progressivement. Pour une IA qui doit aussi agir dans vos outils, le RAG devient une brique d'une [intégration IA générative](/services/integration-ia), avec validation humaine avant les actions sensibles."
+            }
+          ],
+          "comparisonTable": {
+            "title": "Chatbot classique ou chatbot RAG ?",
+            "intro": "Le RAG est utile lorsque la réponse doit être vérifiable et fondée sur vos données.",
+            "headers": ["Critère", "Chatbot sans RAG", "Chatbot avec RAG"],
+            "rows": [
+              {
+                "criterion": "Connaissance métier",
+                "noCode": "Dépend de l'entraînement général du modèle",
+                "nextjs": "Recherche vos documents au moment de la question",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Mise à jour",
+                "noCode": "Information potentiellement ancienne",
+                "nextjs": "Réindexation des sources modifiées",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Vérification",
+                "noCode": "Réponse sans preuve interne",
+                "nextjs": "Passages et liens sources affichés",
+                "winner": "nextjs"
+              },
+              {
+                "criterion": "Confidentialité",
+                "noCode": "Même contexte pour tous",
+                "nextjs": "Filtres selon les droits de l'utilisateur",
+                "winner": "nextjs"
+              }
+            ],
+            "conclusion": "Un chatbot généraliste suffit pour une conversation sans connaissance privée. Dès qu'une réponse doit utiliser vos documents et être vérifiable, le RAG devient la meilleure base."
+          },
+          "faq": [
+            {
+              "question": "Que signifie RAG en intelligence artificielle ?",
+              "answer": "RAG signifie Retrieval-Augmented Generation. Le système recherche des passages dans une base de connaissances, les ajoute au contexte du LLM puis génère une réponse fondée sur ces sources."
+            },
+            {
+              "question": "Quelle différence entre RAG et fine-tuning ?",
+              "answer": "Le RAG apporte des informations externes et actualisables à chaque requête. Le fine-tuning modifie le comportement d'un modèle à partir d'exemples. Pour des documents privés ou fréquemment mis à jour, le RAG est généralement plus adapté."
+            },
+            {
+              "question": "Un RAG empêche-t-il toutes les hallucinations ?",
+              "answer": "Non. Il réduit le risque en fondant la réponse sur des sources, mais la recherche peut manquer un passage ou le modèle peut mal l'interpréter. Il faut tester le retrieval, l'ancrage, les refus et les citations."
+            },
+            {
+              "question": "Quels documents peut-on connecter à un chatbot RAG ?",
+              "answer": "PDF, pages web, procédures, contrats, tickets, bases de données et documentations peuvent être indexés si leur format, leur propriétaire, leur fraîcheur et leurs droits d'accès sont maîtrisés."
+            },
+            {
+              "question": "Peut-on construire un RAG français et malgache ?",
+              "answer": "Oui. Les embeddings multilingues et un jeu de tests dans les deux langues permettent de construire et mesurer une recherche bilingue, sous réserve de disposer de sources de qualité."
+            },
+            {
+              "question": "Combien coûte le développement d'un RAG ?",
+              "answer": "Le coût dépend du nombre et du format des sources, des droits d'accès, de la fréquence de mise à jour, du volume de recherches, des évaluations et de l'intégration au produit existant. Je commence par un corpus et un cas d'usage limités."
+            }
+          ]
+        }
       },
       {
         "icon": "hub",

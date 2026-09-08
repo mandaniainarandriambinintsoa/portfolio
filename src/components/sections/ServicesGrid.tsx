@@ -36,19 +36,19 @@ const sectionLabel: Record<Locale, string> = {
 const priorityLandingSlugs: Record<Locale, string[]> = {
   fr: [
     "developpeur-agent-ia-madagascar",
+    "developpeur-rag",
+    "integration-ia",
     "automatisation-n8n-madagascar",
     "developpeur-react-nextjs-madagascar",
     "developpeur-nextjs-supabase-madagascar",
-    "developpeur-python-ia-madagascar",
-    "consultant-seo-geo",
   ],
   en: [
     "ai-agent-developer-madagascar",
+    "rag-developer",
+    "ai-integration",
     "n8n-automation-expert-madagascar",
     "hire-react-nextjs-developer-madagascar",
     "nextjs-supabase-developer-madagascar",
-    "python-ai-developer-madagascar",
-    "seo-geo-consultant",
   ],
 };
 

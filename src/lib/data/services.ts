@@ -61,7 +61,7 @@ export async function getServiceSitemapPairs(): Promise<
   return Array.from({ length: count }, (_, index) => ({
     frSlug: frServices[index].slug,
     enSlug: enServices[index].slug,
-    updatedAt: null,
-    createdAt: null,
+    updatedAt: frServices[index].updatedAt ?? enServices[index].updatedAt ?? null,
+    createdAt: frServices[index].createdAt ?? enServices[index].createdAt ?? null,
   }));
 }
