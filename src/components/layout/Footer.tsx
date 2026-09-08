@@ -44,7 +44,7 @@ export default function Footer({
           { label: "React / Next.js", href: "/services/developpeur-react-nextjs-madagascar" },
           { label: "Node.js / API", href: "/services/developpeur-nodejs-madagascar" },
           { label: "Next.js + Supabase", href: "/services/developpeur-nextjs-supabase-madagascar" },
-          { label: "Agents IA", href: "/services/developpeur-agent-ia-madagascar" },
+          { label: "Agent IA Madagascar", href: "/services/developpeur-agent-ia-madagascar" },
           { label: "Python & IA", href: "/services/developpeur-python-ia-madagascar" },
           { label: "Claude Code + n8n", href: "/services/developpeur-claude-code-n8n" },
           { label: "Codex + n8n", href: "/services/developpeur-codex-n8n" },

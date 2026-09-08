@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "analytics:cross": "node scripts/analytics/cross-seo-product-data.mjs --output .tmp-analytics/seo-product-report.json",
+    "analytics:serp": "node scripts/analytics/serp-keyword-audit.mjs",
     "analytics:trends": "node scripts/analytics/keyword-trends.mjs --output .tmp-analytics/keyword-trends-report.json",
     "analytics:posthog-ai": "node scripts/analytics/configure-posthog-ai.mjs"
   },

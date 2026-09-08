@@ -33,12 +33,34 @@ const sectionLabel: Record<Locale, string> = {
   en: "Dedicated pages by expertise",
 };
 
+const priorityLandingSlugs: Record<Locale, string[]> = {
+  fr: [
+    "developpeur-agent-ia-madagascar",
+    "automatisation-n8n-madagascar",
+    "developpeur-react-nextjs-madagascar",
+    "developpeur-nextjs-supabase-madagascar",
+    "developpeur-python-ia-madagascar",
+    "consultant-seo-geo",
+  ],
+  en: [
+    "ai-agent-developer-madagascar",
+    "n8n-automation-expert-madagascar",
+    "hire-react-nextjs-developer-madagascar",
+    "nextjs-supabase-developer-madagascar",
+    "python-ai-developer-madagascar",
+    "seo-geo-consultant",
+  ],
+};
+
 export default async function ServicesGrid({ locale }: { locale: Locale }) {
   const services = await getServices(locale);
   const prefix = locale === "fr" ? "" : "/en";
-  const links = services
-    .filter((service) => service.isLanding)
-    .slice(0, 6)
+  const landingServicesBySlug = new Map(
+    services.filter((service) => service.isLanding).map((service) => [service.slug, service]),
+  );
+  const links = priorityLandingSlugs[locale]
+    .map((slug) => landingServicesBySlug.get(slug))
+    .filter((service) => service !== undefined)
     .map((service) => ({
       href: `${prefix}/services/${service.slug}`,
       label: service.cardTitle || service.title,
