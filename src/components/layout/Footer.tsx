@@ -13,6 +13,7 @@ export default function Footer({
 
   const siteLinks: { label: string; href: string; ariaLabel?: string }[] = [
     { label: "Blog", href: `${prefix}/blog` },
+    { label: locale === "fr" ? "Lab IA" : "AI Lab", href: `${prefix}/labs` },
     { label: "Services", href: `${prefix}/services` },
     {
       label: "Solutions",

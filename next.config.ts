@@ -39,6 +39,7 @@ const frenchPublicRoutes = [
   "about",
   "blog",
   "contact",
+  "labs",
   "mentions-legales",
   "privacy",
   "projects",

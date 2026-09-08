@@ -53,6 +53,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { fr: "/contact", en: "/en/contact" },
     { fr: "/services", en: "/en/services" },
     { fr: "/projects", en: "/en/projects" },
+    { fr: "/labs", en: "/en/labs" },
     { fr: "/site-metier", en: "/en/site-metier" },
     { fr: "/blog", en: "/en/blog" },
     { fr: "/quiz", en: "/en/quiz" },

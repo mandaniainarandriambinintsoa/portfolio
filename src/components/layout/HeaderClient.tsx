@@ -65,7 +65,7 @@ export default function HeaderClient({
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((item) => (
               <Link
                 key={item.href}

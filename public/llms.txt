@@ -46,6 +46,7 @@
 - [Agent IA Facebook](https://manda-ia.com/solutions/agent-ia-facebook): Qualification Messenger, creation de leads CRM et orchestration n8n.
 - [Agent IA prospection](https://manda-ia.com/solutions/agent-ia-prospection): Scoring ICP, enrichissement, brouillons personnalises et validation humaine.
 - [Workflows n8n et Claude Code](https://manda-ia.com/solutions/workflows-n8n-claude-code): Automatisations de developpement avec contexte du depot, MCP, logs et Git.
+- [AI Engineering Lab](https://manda-ia.com/labs): Etudes de cas Claude Code, agents multi-modeles, MCP, garde-fous et evaluations OpenAI/Anthropic.
 
 ## Realisations
 
