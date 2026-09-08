@@ -20,9 +20,9 @@ const copy = {
     metaDescription:
       "Laboratoire public de Manda : produits construits avec Claude Code, agents multi-modèles, RAG, MCP, automatisation et évaluations de systèmes IA.",
     eyebrow: "AI Engineering Lab / Journal de construction",
-    title: "Construire des agents utiles. Montrer les preuves.",
+    title: "AI ENGINEERING LAB",
     intro:
-      "Ce laboratoire documente comment je transforme des modèles comme Claude et OpenAI en produits observables : architecture, outils, garde-fous, déploiement et limites. Les projets terminés sont séparés des expérimentations en cours.",
+      "Construire des agents utiles et montrer les preuves : architecture, outils, garde-fous, déploiement et limites de systèmes conçus avec Claude et OpenAI.",
     independence:
       "Laboratoire indépendant. Manda n’est ni affilié, ni certifié, ni sponsorisé par Anthropic ou OpenAI.",
     shipped: "Livré et documenté",
@@ -98,9 +98,9 @@ const copy = {
     metaDescription:
       "Manda's public engineering lab: products built with Claude Code, multi-model agents, RAG, MCP, automation and AI system evaluations.",
     eyebrow: "AI Engineering Lab / Build log",
-    title: "Build useful agents. Show the evidence.",
+    title: "AI ENGINEERING LAB",
     intro:
-      "This lab documents how I turn models such as Claude and OpenAI into observable products: architecture, tools, safeguards, deployment and limitations. Shipped work is kept separate from ongoing experiments.",
+      "Building useful agents and showing the evidence: architecture, tools, safeguards, deployment and limitations of systems designed with Claude and OpenAI.",
     independence:
       "Independent lab. Manda is not affiliated with, certified by, or sponsored by Anthropic or OpenAI.",
     shipped: "Shipped and documented",
@@ -225,7 +225,7 @@ export default async function LabsPage({
   const prefix = locale === "fr" ? "" : "/en";
 
   return (
-    <main id="main-content" className="relative min-h-screen overflow-hidden px-6 pb-24 pt-32">
+    <main id="main-content" className="relative min-h-screen px-6 pb-24 pt-32">
       <BreadcrumbJsonLd
         items={[
           { name: locale === "fr" ? "Accueil" : "Home", href: locale === "fr" ? "/" : "/en" },
@@ -233,18 +233,17 @@ export default async function LabsPage({
         ]}
       />
 
-      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-[42rem] max-w-7xl bg-[radial-gradient(circle_at_26%_18%,rgba(16,185,129,0.16),transparent_34%),radial-gradient(circle_at_78%_22%,rgba(99,102,241,0.2),transparent_36%)]" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 mx-auto h-96 max-w-6xl bg-[radial-gradient(circle_at_70%_0%,rgba(16,185,129,0.08),transparent_55%)]" />
 
-      <section className="relative mx-auto max-w-7xl pb-24 pt-8">
-        <div className="mb-10 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-emerald-300">
-          <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,0.9)]" />
+      <section className="relative mx-auto max-w-6xl pb-16">
+        <div className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-indigo-300">
           {content.eyebrow}
         </div>
-        <h1 className="max-w-5xl text-5xl font-black tracking-[-0.055em] text-white sm:text-6xl md:text-8xl">
+        <h1 className="gradient-text max-w-5xl text-balance text-5xl font-extrabold tracking-tighter md:text-7xl">
           {content.title}
         </h1>
-        <div className="mt-10 grid gap-8 border-t border-white/10 pt-8 md:grid-cols-[1.35fr_0.65fr]">
-          <p className="max-w-3xl text-xl leading-relaxed text-slate-300 md:text-2xl">
+        <div className="mt-6 grid gap-5 md:grid-cols-[1.35fr_0.65fr] md:items-end">
+          <p className="max-w-3xl text-pretty text-xl leading-relaxed text-slate-400">
             {content.intro}
           </p>
           <p className="self-end text-sm leading-relaxed text-slate-500">
@@ -253,88 +252,90 @@ export default async function LabsPage({
         </div>
       </section>
 
-      <section aria-label="AI platforms" className="relative mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
-        <article id="claude" className="group relative overflow-hidden rounded-[2rem] border border-orange-200/15 bg-[#171310] p-7 sm:p-10">
-          <div aria-hidden="true" className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-orange-400/10 blur-3xl transition-transform duration-500 group-hover:scale-125" />
+      <section aria-label="AI platforms" className="relative mx-auto grid max-w-6xl gap-8 md:grid-cols-2">
+        <article id="claude" className="scroll-mt-32 glass-card relative overflow-hidden rounded-2xl border-service-emerald p-6 md:p-8">
           <div className="relative">
-            <div className="mb-12 flex items-center justify-between gap-4">
-              <span className="font-serif text-3xl font-semibold tracking-tight text-[#f2e8dd]">Claude</span>
+            <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+              <span translate="no" className="text-2xl font-extrabold tracking-tighter text-emerald-300">Claude</span>
               <span className="rounded-full border border-emerald-300/20 bg-emerald-300/10 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-emerald-200">
                 {content.shipped}
               </span>
             </div>
-            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">{content.claudeTitle}</h2>
-            <p className="mt-5 text-base leading-relaxed text-stone-300 sm:text-lg">{content.claudeBody}</p>
-            <ul className="mt-8 flex flex-wrap gap-2" aria-label="Claude engineering topics">
+            <h2 className="text-balance text-2xl font-bold text-white">{content.claudeTitle}</h2>
+            <p className="mt-4 text-pretty leading-relaxed text-slate-400">{content.claudeBody}</p>
+            <ul className="mt-6 flex flex-wrap gap-2" aria-label="Claude engineering topics">
               {content.claudeSignals.map((signal) => (
-                <li key={signal} className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-stone-300">{signal}</li>
+                <li key={signal} translate="no" className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 text-xs text-slate-300">{signal}</li>
               ))}
             </ul>
           </div>
         </article>
 
-        <article id="openai" className="group relative overflow-hidden rounded-[2rem] border border-cyan-200/15 bg-[#091515] p-7 sm:p-10">
-          <div aria-hidden="true" className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-cyan-300/10 blur-3xl transition-transform duration-500 group-hover:scale-125" />
+        <article id="openai" className="scroll-mt-32 glass-card relative overflow-hidden rounded-2xl border-service-indigo p-6 md:p-8">
           <div className="relative">
-            <div className="mb-12 flex items-center justify-between gap-4">
-              <span className="text-3xl font-semibold tracking-[-0.06em] text-[#dffbf6]">OpenAI</span>
+            <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
+              <span translate="no" className="text-2xl font-extrabold tracking-tighter text-indigo-300">OpenAI</span>
               <span className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.14em] text-cyan-100">
                 {content.exploring}
               </span>
             </div>
-            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">{content.openaiTitle}</h2>
-            <p className="mt-5 text-base leading-relaxed text-slate-300 sm:text-lg">{content.openaiBody}</p>
-            <ul className="mt-8 flex flex-wrap gap-2" aria-label="OpenAI engineering topics">
+            <h2 className="text-balance text-2xl font-bold text-white">{content.openaiTitle}</h2>
+            <p className="mt-4 text-pretty leading-relaxed text-slate-400">{content.openaiBody}</p>
+            <ul className="mt-6 flex flex-wrap gap-2" aria-label="OpenAI engineering topics">
               {content.openaiSignals.map((signal) => (
-                <li key={signal} className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-slate-300">{signal}</li>
+                <li key={signal} translate="no" className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 text-xs text-slate-300">{signal}</li>
               ))}
             </ul>
           </div>
         </article>
       </section>
 
-      <section className="below-fold relative mx-auto max-w-7xl py-28">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-300">{content.methodEyebrow}</p>
-        <div className="mt-5 grid gap-8 md:grid-cols-2 md:items-end">
-          <h2 className="text-4xl font-black tracking-[-0.04em] text-white sm:text-6xl">{content.methodTitle}</h2>
-          <p className="text-lg leading-relaxed text-slate-400">{content.methodIntro}</p>
+      <section className="below-fold relative mx-auto max-w-6xl py-20 md:py-28">
+        <p className="mb-3 text-xs font-semibold uppercase text-indigo-300">{content.methodEyebrow}</p>
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+          <span className="h-0.5 w-8 shrink-0 rounded-full bg-indigo-400 sm:w-10" aria-hidden="true" />
+          <h2 className="min-w-0 text-balance text-2xl font-bold leading-tight text-white sm:text-3xl">{content.methodTitle}</h2>
         </div>
-        <ol className="mt-12 grid border-l border-t border-white/10 sm:grid-cols-2 lg:grid-cols-3">
+        <p className="mt-4 max-w-2xl text-pretty text-sm leading-relaxed text-slate-400 sm:text-base">{content.methodIntro}</p>
+        <ol className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {content.method.map(([number, title, description]) => (
-            <li key={number} className="min-h-52 border-b border-r border-white/10 p-6 transition-colors hover:bg-white/[0.025] sm:p-8">
-              <span className="font-mono text-xs text-slate-600">{number}</span>
-              <h3 className="mt-8 text-xl font-bold text-white">{title}</h3>
+            <li key={number} className="glass-card rounded-2xl border-service-indigo p-6">
+              <span className="font-mono text-xs font-bold text-indigo-400">{number}</span>
+              <h3 className="mt-5 text-xl font-bold text-white">{title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-slate-400">{description}</p>
             </li>
           ))}
         </ol>
       </section>
 
-      <section className="below-fold relative mx-auto max-w-7xl pb-28">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-300">{content.evidenceEyebrow}</p>
-        <h2 className="mt-5 max-w-4xl text-4xl font-black tracking-[-0.04em] text-white sm:text-6xl">{content.evidenceTitle}</h2>
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+      <section className="below-fold relative mx-auto max-w-6xl pb-20 md:pb-28">
+        <p className="mb-3 text-xs font-semibold uppercase text-emerald-300">{content.evidenceEyebrow}</p>
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
+          <span className="h-0.5 w-8 shrink-0 rounded-full bg-emerald-400 sm:w-10" aria-hidden="true" />
+          <h2 className="min-w-0 text-balance text-2xl font-bold leading-tight text-white sm:text-3xl">{content.evidenceTitle}</h2>
+        </div>
+        <div className="mt-10 grid gap-6 lg:grid-cols-3">
           {content.projects.map((project) => (
-            <article key={project.slug} className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.025]">
-              <div className="relative aspect-[16/10] overflow-hidden border-b border-white/10 bg-slate-950">
+            <article key={project.slug} className="glass-card overflow-hidden rounded-2xl border-service-emerald">
+              <div className="relative aspect-video overflow-hidden border-b border-white/10 bg-slate-950">
                 <Image
                   src={project.image}
                   alt=""
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+                  className="object-cover transition-transform duration-300 motion-reduce:transition-none lg:hover:scale-[1.02]"
                 />
               </div>
               <div className="p-6 sm:p-7">
                 <p className="text-xs font-bold uppercase tracking-[0.15em] text-emerald-300">{project.label}</p>
-                <h3 className="mt-3 text-2xl font-extrabold text-white">{project.title}</h3>
-                <p className="mt-4 min-h-24 text-sm leading-relaxed text-slate-400">{project.description}</p>
+                <h3 className="mt-3 text-xl font-bold text-white">{project.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-400">{project.description}</p>
                 <ul className="mt-5 flex flex-wrap gap-x-3 gap-y-1 text-xs text-slate-500" aria-label={`${project.title} stack`}>
-                  {project.stack.map((item) => <li key={item}>{item}</li>)}
+                  {project.stack.map((item) => <li key={item} translate="no">{item}</li>)}
                 </ul>
                 <Link
                   href={`${prefix}/projects/${project.slug}`}
-                  className="mt-7 inline-flex min-h-11 items-center text-sm font-bold text-white underline decoration-white/30 underline-offset-4 transition-colors hover:text-emerald-200"
+                  className="mt-6 inline-flex min-h-11 items-center text-sm font-bold text-indigo-300 underline decoration-indigo-300/30 underline-offset-4 transition-colors hover:text-white focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
                   data-ph-event="lab_case_opened"
                   data-ph-props={JSON.stringify({ project: project.slug, locale })}
                 >
@@ -346,13 +347,12 @@ export default async function LabsPage({
         </div>
       </section>
 
-      <section className="below-fold relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-indigo-300/15 bg-indigo-950/20 p-7 sm:p-12 lg:p-16">
-        <div aria-hidden="true" className="absolute -bottom-36 -right-24 h-96 w-96 rounded-full bg-indigo-500/15 blur-3xl" />
-        <div className="relative grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
+      <section className="below-fold glass-card relative mx-auto max-w-6xl rounded-2xl border-service-indigo p-6 md:p-10">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-300">{content.roadmapEyebrow}</p>
-            <h2 className="mt-5 text-4xl font-black tracking-[-0.04em] text-white sm:text-6xl">{content.roadmapTitle}</h2>
-            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-300">{content.roadmapBody}</p>
+            <p className="mb-3 text-xs font-semibold uppercase text-indigo-300">{content.roadmapEyebrow}</p>
+            <h2 className="text-balance text-3xl font-extrabold tracking-tighter text-white md:text-4xl">{content.roadmapTitle}</h2>
+            <p className="mt-5 max-w-2xl text-pretty leading-relaxed text-slate-400">{content.roadmapBody}</p>
           </div>
           <ol className="space-y-4">
             {content.roadmapSteps.map((step, index) => (
@@ -365,12 +365,12 @@ export default async function LabsPage({
         </div>
       </section>
 
-      <section className="below-fold relative mx-auto max-w-5xl py-28 text-center">
-        <h2 className="text-4xl font-black tracking-[-0.04em] text-white sm:text-6xl">{content.contactTitle}</h2>
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-400">{content.contactBody}</p>
+      <section className="below-fold glass-card relative mx-auto mt-8 max-w-6xl rounded-2xl border-service-emerald p-8 text-center md:mt-12 md:p-12">
+        <h2 className="mx-auto max-w-3xl text-balance text-3xl font-extrabold tracking-tighter text-white md:text-4xl">{content.contactTitle}</h2>
+        <p className="mx-auto mt-5 max-w-2xl text-pretty leading-relaxed text-slate-400">{content.contactBody}</p>
         <Link
           href={`${prefix}/contact`}
-          className="mt-9 inline-flex min-h-12 items-center justify-center rounded-full bg-white px-7 py-3 text-sm font-extrabold text-slate-950 transition-transform hover:-translate-y-0.5"
+          className="mt-8 inline-flex min-h-12 items-center justify-center rounded-xl bg-indigo-600 px-7 py-3 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition-colors hover:bg-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050507]"
           data-ph-event="cta_clicked"
           data-ph-props={JSON.stringify({ area: "ai_lab", cta_type: "contact", locale })}
         >
