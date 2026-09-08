@@ -2448,7 +2448,7 @@
   },
   "pricing": {
     "title": "PRICING",
-    "subtitle": "From business websites to SaaS, with maintenance and SEO/GEO monitoring to keep the site alive after launch.",
+    "subtitle": "Three areas of expertise, one clear day rate. Each project is then scoped with a tailored quote.",
     "lines": [
       {
         "icon": "code",
@@ -2459,16 +2459,7 @@
           "label": "VIEW AN EXAMPLE",
           "title": "This portfolio, audited performance",
           "href": "/en/projects/optimisation-performance-manda-ia"
-        },
-        "tiers": [
-          {
-            "name": "Starting at",
-            "price": "$1,800",
-            "delay": "2-3 weeks",
-            "details": "Complete business website, custom UI direction, SEO/GEO, connected form and production launch",
-            "featured": true
-          }
-        ]
+        }
       },
       {
         "icon": "deployed_code",
@@ -2479,16 +2470,7 @@
           "label": "VIEW AN EXAMPLE",
           "title": "Factumation, invoicing software",
           "href": "https://factumation.vercel.app"
-        },
-        "tiers": [
-          {
-            "name": "Starting at",
-            "price": "$4,000",
-            "delay": "3-5 weeks",
-            "details": "Authentication, dashboard, database and the first core business feature",
-            "featured": true
-          }
-        ]
+        }
       },
       {
         "icon": "hub",
@@ -2499,22 +2481,13 @@
           "label": "VIEW AN EXAMPLE",
           "title": "AI automation showcase",
           "href": "https://quick-flow-demos.lovable.app/"
-        },
-        "tiers": [
-          {
-            "name": "Starting at",
-            "price": "$1,500",
-            "delay": "1-3 weeks",
-            "details": "Custom workflow, integrations, AI qualification, testing and documentation",
-            "featured": true
-          }
-        ]
+        }
       }
     ],
-    "tjm_label": "Long-term or evolving engagement?",
+    "tjm_label": "Day rate",
     "tjm_value": "Day rate $400 / day",
-    "tjm_note": "Audits, team extension and advisory. 5-day minimum.",
-    "cta": "Discuss my project",
+    "tjm_note": "Final scope and budget are defined in a tailored quote.",
+    "cta": "Request a quote",
     "cta_href": "/en/contact"
   },
   "approach": {

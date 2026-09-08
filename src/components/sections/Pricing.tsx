@@ -5,14 +5,6 @@ import IconScoutIcon, {
   type IconScoutName,
 } from "@/components/icons/IconScoutIcon";
 
-type PricingTier = {
-  name: string;
-  price: string;
-  delay: string;
-  details: string;
-  featured?: boolean;
-};
-
 type PricingExample = {
   label: string;
   title: string;
@@ -25,7 +17,6 @@ type PricingLine = {
   title: string;
   description: string;
   example?: PricingExample;
-  tiers: PricingTier[];
 };
 
 type PricingDict = {
@@ -64,7 +55,6 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
         {dict.lines.map((line) => {
           const colors = colorMap[line.color] || colorMap.indigo;
           const isExternal = line.example?.href.startsWith("http");
-          const offer = line.tiers[0];
           return (
             <div key={line.title} className="pricing-line flex h-full flex-col gap-3">
               {line.example && (
@@ -99,7 +89,7 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
               )}
 
               <GlassCard borderColor={colors.border} className="flex flex-1 flex-col">
-                <div className="mb-8">
+                <div>
                   <IconScoutIcon
                     name={pricingIconMap[line.icon] ?? "product"}
                     size={28}
@@ -108,30 +98,21 @@ export default function Pricing({ dict }: { dict: PricingDict }) {
                   <h3 className="font-bold text-lg mb-1">{line.title}</h3>
                   <p className="text-xs text-slate-400">{line.description}</p>
                 </div>
-
-                {offer && (
-                  <div className="mt-auto border-t border-white/10 pt-6">
-                    <div className="mb-2 flex items-baseline justify-between gap-3">
-                      <span className={`text-xs font-semibold uppercase ${colors.text}`}>
-                        {offer.name}
-                      </span>
-                      <span className="text-xs text-slate-400">{offer.delay}</span>
-                    </div>
-                    <div className="mb-3 text-3xl font-bold text-white">{offer.price}</div>
-                    <p className="text-sm leading-relaxed text-slate-400">{offer.details}</p>
-                  </div>
-                )}
               </GlassCard>
             </div>
           );
         })}
       </div>
 
-      <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-6 rounded-2xl border border-white/5 bg-white/[0.02] px-6 py-5">
-        <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 text-center md:text-left">
-          <span className="text-sm text-slate-400">{dict.tjm_label}</span>
-          <span className="text-lg font-bold gradient-text">{dict.tjm_value}</span>
-          <span className="text-xs text-slate-400">{dict.tjm_note}</span>
+      <div className="mt-8 flex flex-col items-center justify-between gap-6 rounded-2xl border border-indigo-400/15 bg-indigo-400/[0.04] px-6 py-6 sm:flex-row sm:px-8">
+        <div className="text-center sm:text-left">
+          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-indigo-300">
+            {dict.tjm_label}
+          </span>
+          <div className="mt-1 flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-4">
+            <span className="text-2xl font-bold text-white">{dict.tjm_value}</span>
+            <span className="text-sm text-slate-400">{dict.tjm_note}</span>
+          </div>
         </div>
         <Link
           href={dict.cta_href}

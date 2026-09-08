@@ -16,39 +16,30 @@ import SectionHeading from "@/components/ui/SectionHeading";
 
 type FilterType = "all" | ProjectCategory;
 
+const HOME_PROJECT_ORDER = [
+  "teamia",
+  "madavoyage",
+  "garagiste",
+  "bati-diaspora",
+  "geo-seo-boost",
+  "international-opportunity-agent-n8n",
+  "factumation",
+  "leads-automation-showcase",
+];
+
 /*
  * Finsweet-style portfolio: uniform 2-column grid of large cards.
  * Site metier showcases lead, then product and automation work follow.
  */
 
-/** Reorder the homepage grid priority, with ScalApp last. */
-function reorderForDisplay(items: ProjectItem[]): ProjectItem[] {
-  const order = [
-    "teamia",
-    "madavoyage",
-    "garagiste",
-    "bati-diaspora",
-    "geo-seo-boost",
-    "international-opportunity-agent-n8n",
-    "factumation",
-    "veille-codeur-automatisation-n8n",
-    "leads-automation-showcase",
-  ];
-  const last = ["scalapp"];
-  const copy = [...items];
-  const front: ProjectItem[] = [];
-  const back: ProjectItem[] = [];
+/** Keep the homepage focused and end the selection on the two requested demos. */
+function selectHomepageProjects(items: ProjectItem[]): ProjectItem[] {
+  const projectsBySlug = new Map(items.map((item) => [item.slug, item]));
 
-  for (const slug of order) {
-    const idx = copy.findIndex((p) => p.slug === slug);
-    if (idx !== -1) front.push(...copy.splice(idx, 1));
-  }
-  for (const slug of last) {
-    const idx = copy.findIndex((p) => p.slug === slug);
-    if (idx !== -1) back.push(...copy.splice(idx, 1));
-  }
-
-  return [...front, ...copy, ...back];
+  return HOME_PROJECT_ORDER.flatMap((slug) => {
+    const project = projectsBySlug.get(slug);
+    return project ? [project] : [];
+  });
 }
 
 export default function Projects({
@@ -71,9 +62,10 @@ export default function Projects({
   const allLabel = locale === "fr" ? "Tous" : "All";
 
   const filtered = useMemo(() => {
-    const base =
-      filter === "all" ? items : items.filter((p) => p.category === filter);
-    return filter === "all" ? reorderForDisplay(base) : base;
+    const selection = selectHomepageProjects(items);
+    return filter === "all"
+      ? selection
+      : selection.filter((project) => project.category === filter);
   }, [filter, items]);
 
   // Lazy-load GSAP + ScrollTrigger (keeps them out of initial bundle)
@@ -153,15 +145,6 @@ export default function Projects({
               ))}
             </div>
 
-            <Link
-              href={`${prefix}/projects`}
-              data-ph-event="cta_clicked"
-              data-ph-props={JSON.stringify({ area: "homepage_projects", cta_type: "view_all_projects", label: viewAll, href: `${prefix}/projects`, locale })}
-              className="text-slate-400 hover:text-indigo-400 transition-colors text-sm font-medium hidden sm:flex items-center gap-1 underline underline-offset-4 decoration-slate-400/30 hover:decoration-indigo-400/50"
-            >
-              {viewAll}
-              <IconScoutIcon name="arrowUpRight" size={17} />
-            </Link>
           </div>
         </div>
 
@@ -180,6 +163,22 @@ export default function Projects({
               trailingIcon={<IconScoutIcon name="arrowRight" size={24} />}
             />
           ))}
+        </div>
+
+        <div className="mt-14 flex justify-center sm:mt-16">
+          <Link
+            href={`${prefix}/projects`}
+            data-ph-event="cta_clicked"
+            data-ph-props={JSON.stringify({ area: "homepage_projects", cta_type: "view_all_projects", label: viewAll, href: `${prefix}/projects`, locale })}
+            className="group inline-flex items-center gap-2 rounded-full border border-indigo-400/25 bg-indigo-400/[0.08] px-6 py-3 text-sm font-semibold text-indigo-100 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-300/50 hover:bg-indigo-400/[0.14] hover:shadow-lg hover:shadow-indigo-500/10"
+          >
+            {viewAll}
+            <IconScoutIcon
+              name="arrowRight"
+              size={18}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </Link>
         </div>
       </div>
     </section>

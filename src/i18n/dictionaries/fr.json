@@ -2427,7 +2427,7 @@
   },
   "pricing": {
     "title": "TARIFS",
-    "subtitle": "Du site metier au SaaS, avec maintenance et surveillance SEO/GEO pour garder le site vivant apres livraison.",
+    "subtitle": "Trois expertises, un tarif journalier clair. Chaque projet est ensuite cadré avec un devis adapté à son périmètre.",
     "lines": [
       {
         "icon": "code",
@@ -2438,16 +2438,7 @@
           "label": "VOIR UN EXEMPLE",
           "title": "Ce portfolio, performance auditée",
           "href": "/projects/optimisation-performance-manda-ia"
-        },
-        "tiers": [
-          {
-            "name": "À partir de",
-            "price": "1 500 €",
-            "delay": "2-3 semaines",
-            "details": "Site métier complet, direction UI sur mesure, SEO/GEO, formulaire connecté et mise en production",
-            "featured": true
-          }
-        ]
+        }
       },
       {
         "icon": "deployed_code",
@@ -2458,16 +2449,7 @@
           "label": "VOIR UN EXEMPLE",
           "title": "Factumation, logiciel de facturation",
           "href": "https://factumation.vercel.app"
-        },
-        "tiers": [
-          {
-            "name": "À partir de",
-            "price": "3 500 €",
-            "delay": "3-5 semaines",
-            "details": "Authentification, dashboard, base de données et première fonctionnalité métier",
-            "featured": true
-          }
-        ]
+        }
       },
       {
         "icon": "hub",
@@ -2478,22 +2460,13 @@
           "label": "VOIR UN EXEMPLE",
           "title": "Showcase d'automatisations IA",
           "href": "https://quick-flow-demos.lovable.app/"
-        },
-        "tiers": [
-          {
-            "name": "À partir de",
-            "price": "1 200 €",
-            "delay": "1-3 semaines",
-            "details": "Workflow sur mesure, intégrations, qualification IA, tests et documentation",
-            "featured": true
-          }
-        ]
+        }
       }
     ],
-    "tjm_label": "Mission longue ou évolutive ?",
+    "tjm_label": "Tarif journalier",
     "tjm_value": "TJM 350 € / jour",
-    "tjm_note": "Audit, renfort et accompagnement d'équipe. Minimum 5 jours.",
-    "cta": "Discuter mon projet",
+    "tjm_note": "Le périmètre et le budget final sont définis sur devis.",
+    "cta": "Demander un devis",
     "cta_href": "/fr/contact"
   },
   "approach": {
