@@ -1,7 +1,16 @@
 "use client";
 
+import Script from "next/script";
 import { useRef, useState } from "react";
 import { trackPortfolioEvent } from "@/lib/posthog-client";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      reset: () => void;
+    };
+  }
+}
 
 type Labels = {
   name_label: string;
@@ -23,11 +32,14 @@ export default function ContactForm({
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const startedRef = useRef(false);
+  const formStartedAtRef = useRef(0);
   const path = locale === "en" ? "/en/contact" : "/contact";
+  const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
   function trackFormStarted() {
     if (startedRef.current) return;
     startedRef.current = true;
+    formStartedAtRef.current = Date.now();
     trackPortfolioEvent("contact_form_started", { locale, path });
   }
 
@@ -41,6 +53,8 @@ export default function ContactForm({
       email: String(data.get("email") ?? ""),
       message: String(data.get("message") ?? ""),
       website: String(data.get("website") ?? ""),
+      turnstileToken: String(data.get("cf-turnstile-response") ?? ""),
+      formStartedAt: formStartedAtRef.current,
       locale,
     };
 
@@ -65,6 +79,7 @@ export default function ContactForm({
         const json = (await res.json().catch(() => ({}))) as { error?: string };
         setErrorMsg(json.error ?? "");
         setStatus("error");
+        window.turnstile?.reset();
         trackPortfolioEvent("contact_form_failed", {
           locale,
           path,
@@ -74,10 +89,14 @@ export default function ContactForm({
       }
 
       form.reset();
+      startedRef.current = false;
+      formStartedAtRef.current = 0;
+      window.turnstile?.reset();
       setStatus("success");
       trackPortfolioEvent("contact_form_success", { locale, path });
     } catch {
       setStatus("error");
+      window.turnstile?.reset();
       trackPortfolioEvent("contact_form_failed", {
         locale,
         path,
@@ -89,7 +108,14 @@ export default function ContactForm({
   const isSending = status === "sending";
 
   return (
-    <form className="space-y-6" onSubmit={handleSubmit} noValidate>
+    <form
+      className="space-y-6"
+      onSubmit={handleSubmit}
+      onFocusCapture={trackFormStarted}
+      onPointerDownCapture={trackFormStarted}
+      onKeyDownCapture={trackFormStarted}
+      noValidate
+    >
       <div className="absolute -left-[9999px]" aria-hidden="true">
         <label htmlFor="website">Website</label>
         <input
@@ -148,6 +174,21 @@ export default function ContactForm({
       </div>
 
       <div className="flex items-center gap-4 flex-wrap">
+        {turnstileSiteKey && (
+          <>
+            <Script
+              src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+              strategy="afterInteractive"
+            />
+            <div
+              className="cf-turnstile w-full"
+              data-sitekey={turnstileSiteKey}
+              data-theme="dark"
+              data-action="contact-form"
+            />
+          </>
+        )}
+
         <button
           type="submit"
           disabled={isSending}

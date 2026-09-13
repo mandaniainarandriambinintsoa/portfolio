@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 // Content Security Policy — whitelist only what the site actually loads
 const cspDirectives = [
   // Scripts: self + GTM + N8n demo components
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://cdn.jsdelivr.net https://www.unpkg.com https://eu-assets.i.posthog.com https://us-assets.i.posthog.com",
+  `script-src 'self' 'unsafe-inline'${process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : ""} https://www.googletagmanager.com https://cdn.jsdelivr.net https://www.unpkg.com https://eu-assets.i.posthog.com https://us-assets.i.posthog.com https://challenges.cloudflare.com`,
   // Styles: self + inline (Next.js requires unsafe-inline for styles)
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
   // Images: self + Supabase storage + Google + flagcdn + data URIs (Next.js blur placeholders)
@@ -11,8 +11,8 @@ const cspDirectives = [
   // Fonts: Inter plus any remaining self-hosted assets
   "font-src 'self' https://fonts.gstatic.com",
   // API calls: self + Supabase + Google Analytics + PostHog
-  "connect-src 'self' https://lbabmflmjcouniefxwmv.supabase.co https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://eu.i.posthog.com https://us.i.posthog.com https://eu-assets.i.posthog.com https://us-assets.i.posthog.com https://*.public.blob.vercel-storage.com",
-  "frame-src 'self'",
+  "connect-src 'self' https://lbabmflmjcouniefxwmv.supabase.co https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://eu.i.posthog.com https://us.i.posthog.com https://eu-assets.i.posthog.com https://us-assets.i.posthog.com https://*.public.blob.vercel-storage.com https://challenges.cloudflare.com",
+  "frame-src 'self' https://challenges.cloudflare.com",
   // Objects: none (no Flash/plugins)
   "object-src 'none'",
   // Base URI: self only (prevent base tag hijacking)
@@ -28,6 +28,7 @@ const commonSecurityHeaders = [
   { key: "X-XSS-Protection", value: "1; mode=block" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
 ];
 
 const securityHeaders = [
