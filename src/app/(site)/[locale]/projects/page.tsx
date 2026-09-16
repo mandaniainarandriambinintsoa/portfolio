@@ -4,6 +4,7 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
 import { getProjects } from "@/lib/data/projects";
 import ProjectsListing from "@/components/sections/ProjectsListing";
+import PartnershipOpportunities from "@/components/sections/PartnershipOpportunities";
 
 export async function generateMetadata({
   params,
@@ -56,9 +57,13 @@ export default async function ProjectsPage({
   return (
     <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-16 gradient-text">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-10 gradient-text">
           {dict.projects.title}
         </h1>
+        <PartnershipOpportunities
+          locale={locale}
+          contactHref={`${prefix}/contact`}
+        />
         <ProjectsListing
           items={projects}
           prefix={prefix}
