@@ -10,6 +10,19 @@ export const CONTACT_LIMITS = {
   maxTurnstileTokenLength: 2_048,
 } as const;
 
+export const CONTACT_RATE_LIMITS = {
+  perClientPerHour: 5,
+  perEmailPerHour: 3,
+} as const;
+
+export type ContactRateLimitStatus =
+  | {
+      kind: "available";
+      clientCount: number;
+      emailCount: number;
+    }
+  | { kind: "unavailable" };
+
 const EMAIL_RE = /^[a-z0-9.!#$%*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)+$/iu;
 const CONTROL_CHARACTER_RE = /[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/u;
 const NAME_CONTROL_CHARACTER_RE = /[\u0000-\u001F\u007F]/u;
@@ -147,6 +160,17 @@ export function getClientHash(ip: string, userAgent: string, secret: string): st
   return createHmac("sha256", secret)
     .update(ip || `unknown-ip\n${userAgent}`)
     .digest("hex");
+}
+
+export function getContactRateLimitDecision(
+  status: ContactRateLimitStatus,
+): "allow" | "reject" {
+  if (status.kind === "unavailable") return "allow";
+
+  return status.clientCount >= CONTACT_RATE_LIMITS.perClientPerHour ||
+    status.emailCount >= CONTACT_RATE_LIMITS.perEmailPerHour
+    ? "reject"
+    : "allow";
 }
 
 export function isSameSiteRequest(request: Request): boolean {

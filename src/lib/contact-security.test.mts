@@ -5,6 +5,7 @@ import {
   cleanRequestMetadata,
   escapeHtmlText,
   getClientHash,
+  getContactRateLimitDecision,
   isSameSiteRequest,
   validateContactSubmission,
 } from "./contact-security.ts";
@@ -110,4 +111,35 @@ test("rejects cross-site browser requests", () => {
 
   assert.equal(isSameSiteRequest(sameSite), true);
   assert.equal(isSameSiteRequest(crossSite), false);
+});
+
+test("keeps rate limits when CRM is available and fails open during a CRM outage", () => {
+  assert.equal(
+    getContactRateLimitDecision({
+      kind: "available",
+      clientCount: 4,
+      emailCount: 2,
+    }),
+    "allow",
+  );
+  assert.equal(
+    getContactRateLimitDecision({
+      kind: "available",
+      clientCount: 5,
+      emailCount: 0,
+    }),
+    "reject",
+  );
+  assert.equal(
+    getContactRateLimitDecision({
+      kind: "available",
+      clientCount: 0,
+      emailCount: 3,
+    }),
+    "reject",
+  );
+  assert.equal(
+    getContactRateLimitDecision({ kind: "unavailable" }),
+    "allow",
+  );
 });
