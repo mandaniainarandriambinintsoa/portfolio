@@ -2905,7 +2905,9 @@
     "col_country": "Country",
     "col_when": "When",
     "active_now": "active now",
-    "empty": "Waiting for the first visitor..."
+    "empty": "Waiting for the first visitor...",
+    "unavailable": "Data is temporarily unavailable. The website remains operational.",
+    "status_unavailable": "UNAVAILABLE"
   },
   "cta_final": {
     "title": "Ready to ",

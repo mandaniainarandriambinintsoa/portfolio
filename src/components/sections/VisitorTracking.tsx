@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState, useRef, useCallback } from "react";
 import type { gsap as GsapType } from "gsap";
-import type { VisitorRow } from "@/app/api/visitors/route";
+import type { VisitorFeedResponse, VisitorRow } from "@/lib/visitor-data";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 function FlagIcon({ code }: { code: string }) {
@@ -46,6 +46,8 @@ type VisitorTrackingProps = {
     col_when: string;
     empty: string;
     active_now: string;
+    unavailable: string;
+    status_unavailable: string;
   };
   locale: string;
 };
@@ -55,6 +57,7 @@ export default function VisitorTracking({
   locale,
 }: VisitorTrackingProps) {
   const [visitors, setVisitors] = useState<VisitorRow[]>([]);
+  const [feedAvailable, setFeedAvailable] = useState(true);
   const previousVisitorKeysRef = useRef<Set<string>>(new Set());
   const tableRef = useRef<HTMLDivElement>(null);
   const gsapRef = useRef<typeof GsapType | null>(null);
@@ -88,8 +91,13 @@ export default function VisitorTracking({
   const fetchVisitors = useCallback(async () => {
     try {
       const res = await fetch("/api/visitors");
-      if (!res.ok) return;
-      const data = await res.json();
+      const data = (await res.json()) as VisitorFeedResponse;
+      if (!res.ok || !data.available) {
+        setFeedAvailable(false);
+        return;
+      }
+
+      setFeedAvailable(true);
       const newVisitors: VisitorRow[] = data.visitors || [];
       const previousKeys = previousVisitorKeysRef.current;
       const currentKeys = newVisitors.map((v) => `${v.city}-${v.country}-${v.created_at}`);
@@ -104,7 +112,7 @@ export default function VisitorTracking({
         }
       });
     } catch {
-      // silent fail
+      setFeedAvailable(false);
     }
   }, [animateNewRows]);
 
@@ -160,12 +168,24 @@ export default function VisitorTracking({
       <div className="mx-auto max-w-4xl px-6">
         <div className="mb-3 flex flex-wrap items-start justify-between gap-3">
           <SectionHeading title={dict.title} className="mb-0" />
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-medium text-emerald-400">
+          <span
+            className={`inline-flex items-center gap-2 px-3 py-1 rounded-full border text-xs font-medium ${
+              feedAvailable
+                ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
+                : "bg-amber-500/10 border-amber-500/20 text-amber-200/70"
+            }`}
+          >
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+              {feedAvailable ? (
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              ) : null}
+              <span
+                className={`relative inline-flex rounded-full h-2 w-2 ${
+                  feedAvailable ? "bg-emerald-500" : "bg-amber-300/70"
+                }`}
+              />
             </span>
-            {dict.badge}
+            {feedAvailable ? dict.badge : dict.status_unavailable}
           </span>
         </div>
 
@@ -187,7 +207,14 @@ export default function VisitorTracking({
           </div>
 
           {/* Rows */}
-          {visitors.length === 0 ? (
+          {!feedAvailable ? (
+            <div
+              className="px-6 py-8 text-center text-amber-200/70 text-sm"
+              role="status"
+            >
+              {dict.unavailable}
+            </div>
+          ) : visitors.length === 0 ? (
             <div className="px-6 py-8 text-center text-white/50 text-sm">
               {dict.empty}
             </div>

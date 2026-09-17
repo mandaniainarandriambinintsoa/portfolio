@@ -2884,7 +2884,9 @@
     "col_country": "Pays",
     "col_when": "Quand",
     "active_now": "actifs maintenant",
-    "empty": "En attente du premier visiteur..."
+    "empty": "En attente du premier visiteur...",
+    "unavailable": "Données momentanément indisponibles. Le site reste opérationnel.",
+    "status_unavailable": "INDISPONIBLE"
   },
   "cta_final": {
     "title": "Prêt à ",

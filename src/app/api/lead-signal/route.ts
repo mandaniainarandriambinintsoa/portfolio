@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createHash } from "crypto";
-import { createAdminClient } from "@/lib/supabase/admin";
+import { insertVisitor } from "@/lib/neon/visitors";
+import { getVisitorDedupeBucket, getVisitorHash } from "@/lib/visitor-security";
 
 type SignalBody = {
   event?: unknown;
@@ -14,7 +15,7 @@ type SignalBody = {
 
 type LeadSignalEvent = "session_started" | "high_intent";
 
-const SESSION_COOKIE = "manda_visitor_session_notified";
+const SESSION_COOKIE = "manda_visitor_session_notified_v2";
 const BOT_USER_AGENT =
   /bot|crawler|spider|slurp|facebookexternalhit|linkedinbot|whatsapp|headless|lighthouse/i;
 const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim();
@@ -135,7 +136,7 @@ function getDistinctId(request: NextRequest): string {
   return `server:${createHash("sha256").update(visitorSeed).digest("hex").slice(0, 32)}`;
 }
 
-async function mirrorVisitorToSupabase(payload: {
+async function mirrorVisitorToNeon(payload: {
   event: LeadSignalEvent;
   city: string;
   country: string;
@@ -144,33 +145,31 @@ async function mirrorVisitorToSupabase(payload: {
   if (payload.event !== "session_started") return;
 
   try {
-    const supabase = createAdminClient();
-    const ip = getClientIp(request);
-    const thirtyMinAgo = new Date(Date.now() - 30 * 60 * 1000).toISOString();
-
-    let existingQuery = supabase
-      .from("visitor_logs")
-      .select("id")
-      .gte("created_at", thirtyMinAgo)
-      .limit(1);
-
-    if (ip) {
-      existingQuery = existingQuery.eq("ip", ip);
-    } else {
-      existingQuery = existingQuery.eq("city", payload.city).eq("country", payload.country);
+    const hashSecret = (
+      process.env.VISITOR_HASH_SECRET ?? process.env.CONTACT_RATE_LIMIT_SECRET
+    )?.trim();
+    if (!hashSecret) {
+      throw new Error("Visitor hash secret is not configured");
     }
 
-    const { data: existing } = await existingQuery;
-    if (existing && existing.length > 0) return;
+    const ip = getClientIp(request);
+    const visitorHash = getVisitorHash(
+      ip,
+      request.headers.get("user-agent") ?? "",
+      hashSecret,
+    );
 
-    await supabase.from("visitor_logs").insert({
+    await insertVisitor({
       city: payload.city,
       country: payload.country,
-      country_code: payload.country_code,
-      ip: ip || null,
+      countryCode: payload.country_code,
+      visitorHash,
+      dedupeBucket: getVisitorDedupeBucket(),
     });
   } catch (error) {
-    console.error("Lead signal Supabase mirror failed", error);
+    console.error("Lead signal Neon mirror failed", {
+      error: error instanceof Error ? error.message : "Unknown error",
+    });
   }
 }
 
@@ -295,7 +294,7 @@ export async function POST(request: NextRequest) {
   }
 
   await Promise.all([
-    mirrorVisitorToSupabase(payload, request),
+    mirrorVisitorToNeon(payload, request),
     mirrorSignalToPostHog(payload, request),
   ]);
 

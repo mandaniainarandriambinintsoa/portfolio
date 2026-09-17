@@ -92,10 +92,11 @@ function PrivacyFR() {
       <h3>2.3 Showcase d'automatisation (visiteurs en temps réel)</h3>
       <p>
         La page d'accueil affiche un tableau de visiteurs en temps réel à des fins de démonstration technique.
-        Les données affichées (ville, pays) proviennent de Google Analytics en temps réel et sont stockées
-        dans notre base de données Supabase. L'adresse IP est conservée temporairement (1 heure maximum)
-        pour permettre la déduplication des visites, puis supprimée automatiquement. Aucune adresse IP n'est
-        affichée ni partagée avec des tiers, et aucun nom ou email n'est associé à ces données.
+        Les données affichées (ville et pays approximatifs) proviennent des informations de localisation
+        fournies par l'infrastructure d'hébergement et sont stockées dans une base PostgreSQL Neon dédiée. L'adresse IP brute n'est
+        jamais enregistrée dans cette table : elle est immédiatement transformée en empreinte HMAC non
+        réversible pour dédupliquer les visites. Les entrées sont supprimées après 30 jours et la table est
+        limitée en taille. Aucun nom ou email n'est associé à ces données.
       </p>
 
       <h3>2.4 Formulaire de contact</h3>
@@ -203,10 +204,11 @@ function PrivacyEN() {
       <h3>2.3 Automation Showcase (Real-time Visitors)</h3>
       <p>
         The homepage displays a real-time visitor table for technical demonstration purposes.
-        The displayed data (city, country) comes from Google Analytics real-time data and is stored
-        in our Supabase database. IP addresses are temporarily retained (1 hour maximum) for visit
-        deduplication, then automatically deleted. No IP address is displayed or shared with third
-        parties, and no name or email is associated with this data.
+        The displayed data (approximate city and country) comes from location information supplied by
+        the hosting infrastructure and is stored in a dedicated Neon PostgreSQL database. The raw IP address is never stored in this
+        table: it is immediately transformed into a non-reversible HMAC fingerprint for deduplication.
+        Entries are removed after 30 days and the table has a hard size limit. No name or email is
+        associated with this data.
       </p>
 
       <h3>2.4 Contact Form</h3>
