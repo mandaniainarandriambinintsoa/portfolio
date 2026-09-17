@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createHash } from "crypto";
-import { insertVisitor } from "@/lib/neon/visitors";
+import { checkBotId } from "botid/server";
+import { revalidateTag } from "next/cache";
+import { insertVisitor, VISITOR_FEED_CACHE_TAG } from "@/lib/neon/visitors";
 import { getVisitorDedupeBucket, getVisitorHash } from "@/lib/visitor-security";
 
 type SignalBody = {
@@ -159,13 +161,17 @@ async function mirrorVisitorToNeon(payload: {
       hashSecret,
     );
 
-    await insertVisitor({
+    const inserted = await insertVisitor({
       city: payload.city,
       country: payload.country,
       countryCode: payload.country_code,
       visitorHash,
       dedupeBucket: getVisitorDedupeBucket(),
     });
+
+    if (inserted) {
+      revalidateTag(VISITOR_FEED_CACHE_TAG, "max");
+    }
   } catch (error) {
     console.error("Lead signal Neon mirror failed", {
       error: error instanceof Error ? error.message : "Unknown error",
@@ -212,6 +218,11 @@ async function mirrorSignalToPostHog(
 export async function POST(request: NextRequest) {
   if (!isSameOriginRequest(request)) {
     return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
+  const verification = await checkBotId();
+  if (verification.isBot) {
+    return NextResponse.json({ error: "Automated request blocked" }, { status: 403 });
   }
 
   const userAgent = request.headers.get("user-agent") ?? "";

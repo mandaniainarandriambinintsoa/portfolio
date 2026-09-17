@@ -116,51 +116,23 @@ export default function VisitorTracking({
     }
   }, [animateNewRows]);
 
-  // Refresh only while the live visitor proof is visible and the tab is active.
+  // Fetch once when the proof enters the viewport. Fresh visitor inserts
+  // invalidate the server cache without background polling keeping Neon awake.
   useEffect(() => {
     const target = tableRef.current;
     if (!target) return;
 
-    let isIntersecting = false;
-    let intervalId: number | null = null;
-
-    const stopPolling = () => {
-      if (intervalId !== null) {
-        window.clearInterval(intervalId);
-        intervalId = null;
-      }
-    };
-
-    const syncPolling = () => {
-      const shouldPoll = isIntersecting && document.visibilityState === "visible";
-
-      if (!shouldPoll) {
-        stopPolling();
-        return;
-      }
-
-      if (intervalId === null) {
-        void fetchVisitors();
-        intervalId = window.setInterval(() => void fetchVisitors(), 30_000);
-      }
-    };
-
     const observer = new IntersectionObserver(
       ([entry]) => {
-        isIntersecting = entry.isIntersecting;
-        syncPolling();
+        if (!entry.isIntersecting) return;
+        observer.disconnect();
+        void fetchVisitors();
       },
       { rootMargin: "200px 0px" }
     );
 
     observer.observe(target);
-    document.addEventListener("visibilitychange", syncPolling);
-
-    return () => {
-      observer.disconnect();
-      document.removeEventListener("visibilitychange", syncPolling);
-      stopPolling();
-    };
+    return () => observer.disconnect();
   }, [fetchVisitors]);
 
   return (

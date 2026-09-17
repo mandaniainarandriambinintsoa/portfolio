@@ -1,9 +1,11 @@
 import { neon } from "@neondatabase/serverless";
+import { unstable_cache } from "next/cache";
 import type { VisitorRow } from "@/lib/visitor-data";
 import { validateVisitorDatabaseUrl } from "@/lib/visitor-database";
 
 const QUERY_TIMEOUT_MS = 4_000;
 const MAX_FEED_ROWS = 6;
+export const VISITOR_FEED_CACHE_TAG = "visitor-feed";
 
 type NewVisitor = {
   city: string;
@@ -49,7 +51,7 @@ function parseVisitorRow(value: unknown): VisitorRow | null {
   };
 }
 
-export async function getLatestVisitors(): Promise<VisitorRow[]> {
+async function queryLatestVisitors(): Promise<VisitorRow[]> {
   const sql = createVisitorSql();
   const result: unknown = await sql.query(
     `select city, country, country_code, created_at
@@ -70,9 +72,21 @@ export async function getLatestVisitors(): Promise<VisitorRow[]> {
   });
 }
 
-export async function insertVisitor(visitor: NewVisitor): Promise<void> {
+// Keep database reads behind Next.js' persistent Data Cache. This cache key is
+// independent of the request URL, so cache-busting query strings cannot force
+// repeated Neon queries. Successful visitor inserts invalidate the tag.
+export const getLatestVisitors = unstable_cache(
+  queryLatestVisitors,
+  ["visitor-feed-v1"],
+  {
+    tags: [VISITOR_FEED_CACHE_TAG],
+    revalidate: 15 * 60,
+  },
+);
+
+export async function insertVisitor(visitor: NewVisitor): Promise<boolean> {
   const sql = createVisitorSql();
-  await sql.query(
+  const result: unknown = await sql.query(
     `insert into public.visitor_logs (
        city,
        country,
@@ -80,7 +94,8 @@ export async function insertVisitor(visitor: NewVisitor): Promise<void> {
        visitor_hash,
        dedupe_bucket
      ) values ($1, $2, $3, $4, $5)
-     on conflict (visitor_hash, dedupe_bucket) do nothing`,
+     on conflict (visitor_hash, dedupe_bucket) do nothing
+     returning id`,
     [
       visitor.city,
       visitor.country,
@@ -90,4 +105,6 @@ export async function insertVisitor(visitor: NewVisitor): Promise<void> {
     ],
     { fetchOptions: { signal: AbortSignal.timeout(QUERY_TIMEOUT_MS) } },
   );
+
+  return Array.isArray(result) && result.length === 1;
 }
