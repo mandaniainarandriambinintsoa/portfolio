@@ -15,6 +15,9 @@ import SoftwareAppJsonLd from "@/components/seo/SoftwareAppJsonLd";
 import Button from "@/components/ui/Button";
 import { workflows } from "@/lib/data/workflows";
 import N8nWorkflowSection from "@/components/ui/N8nWorkflowSection";
+import PartnershipOpportunities, {
+  type PartnershipProduct,
+} from "@/components/sections/PartnershipOpportunities";
 
 export async function generateStaticParams() {
   const slugs = await getAllProjectSlugs();
@@ -100,6 +103,8 @@ export default async function ProjectPage({
   const caseStudy = getCaseStudy(slug, locale);
   const projectSeo = getProjectSeoDetails(slug, locale);
   const projectLinkIsExternal = Boolean(project.link && /^https?:\/\//.test(project.link));
+  const partnershipProduct: PartnershipProduct | null =
+    slug === "poker-mada" || slug === "paidmada-mobile-money" ? slug : null;
   const seoTone = categoryTone === "emerald"
     ? {
         text: "text-emerald-300",
@@ -256,6 +261,14 @@ export default async function ProjectPage({
             {project.description}
           </p>
         </div>
+
+        {partnershipProduct ? (
+          <PartnershipOpportunities
+            locale={locale}
+            product={partnershipProduct}
+            contactHref={`${prefix}/contact`}
+          />
+        ) : null}
 
         {projectSeo && (
           <section aria-labelledby="project-seo-title" className="mb-12">

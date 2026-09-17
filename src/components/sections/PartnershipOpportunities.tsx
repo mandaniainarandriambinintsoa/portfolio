@@ -2,239 +2,243 @@ import Link from "next/link";
 import IconScoutIcon from "@/components/icons/IconScoutIcon";
 import type { Locale } from "@/i18n/config";
 
-type PartnershipCopy = {
+export type PartnershipProduct =
+  | "poker-mada"
+  | "api-mobile-money"
+  | "paidmada-mobile-money";
+
+type ProductPartnershipCopy = {
   eyebrow: string;
+  status: string;
   title: string;
   intro: string;
-  search: string;
-  ownershipLabel: string;
-  ownership: string[];
-  closing: string;
+  opportunity: string;
+  partnerLabel: string;
+  needs: string[];
   cta: string;
-  statusLabel: string;
-  partnerExpertiseLabel: string;
-  products: Array<{
-    name: string;
-    status: string;
-    description: string;
-    needs: string[];
-  }>;
+  modes: string;
 };
 
-const COPY: Record<Locale, PartnershipCopy> = {
+const TECHNICAL_OWNERSHIP: Record<Locale, { label: string; items: string[] }> = {
   fr: {
-    eyebrow: "Opportunités de partenariat",
-    title: "Des produits construits. À la recherche des bons partenaires.",
-    intro:
-      "Je conçois et construis la technologie, le produit et l’infrastructure qui portent ces projets. PokerMada, API Mobile Money et PaidMada sont techniquement cadrés, avec des implémentations fonctionnelles ou avancées.",
-    search:
-      "Je recherche maintenant des partenaires business et stratégiques capables d’apporter les expertises complémentaires nécessaires pour les amener sur le marché.",
-    ownershipLabel: "Périmètre déjà pris en charge",
-    ownership: [
-      "Produit",
-      "Développement",
-      "Architecture",
-      "API & intégrations",
-      "Automatisation",
-      "Infrastructure",
-    ],
-    closing:
-      "Vous voyez une opportunité autour de l’un de ces produits ? Construisons ensemble la prochaine étape.",
-    cta: "Discuter d’un partenariat",
-    statusLabel: "État technique",
-    partnerExpertiseLabel: "Expertises partenaires recherchées",
-    products: [
-      {
-        name: "PokerMada",
-        status: "Produit fonctionnel",
-        description:
-          "La plateforme technique est développée et opérationnelle. Le lancement dépend désormais surtout de partenaires marché.",
-        needs: ["Juridique & réglementation", "Business development", "Marketing & acquisition", "Partenariats de lancement"],
-      },
-      {
-        name: "API Mobile Money",
-        status: "Architecture définie",
-        description:
-          "Une infrastructure conçue pour simplifier l’intégration des paiements Mobile Money à Madagascar.",
-        needs: ["Relations opérateurs", "Expertise réglementaire", "Distribution commerciale", "Marché des paiements"],
-      },
-      {
-        name: "PaidMada",
-        status: "Construction avancée",
-        description:
-          "Une couche d’orchestration plus large : API, checkout, webhooks et services pour entreprises et développeurs.",
-        needs: ["Conformité & juridique", "Acteurs du paiement", "Go-to-market", "Développement du marché"],
-      },
-    ],
+    label: "Socle technique déjà pris en charge",
+    items: ["Produit", "Développement", "Architecture", "API", "Automatisation", "Infrastructure"],
   },
   en: {
-    eyebrow: "Partnership opportunities",
-    title: "Built products. Looking for the right partners.",
-    intro:
-      "I build the technology, product and infrastructure behind these projects. PokerMada, API Mobile Money and PaidMada are already technically well-defined, with working or advanced implementations.",
-    search:
-      "I’m now looking for business and strategic partners who can bring complementary expertise to help bring these products to market.",
-    ownershipLabel: "Technical ownership already covered",
-    ownership: [
-      "Product",
-      "Engineering",
-      "Architecture",
-      "APIs & integrations",
-      "Automation",
-      "Infrastructure",
-    ],
-    closing:
-      "If you see an opportunity around one of these products, let’s build the next stage together.",
-    cta: "Discuss a partnership",
-    statusLabel: "Technical status",
-    partnerExpertiseLabel: "Partner expertise sought",
-    products: [
-      {
-        name: "PokerMada",
-        status: "Working product",
-        description:
-          "The technical platform is developed and operational. The next step depends primarily on market-facing partners.",
-        needs: ["Legal & regulatory", "Business development", "Marketing & acquisition", "Launch partnerships"],
-      },
-      {
-        name: "API Mobile Money",
-        status: "Architecture defined",
-        description:
-          "Infrastructure designed to simplify Mobile Money payment integrations across Madagascar.",
-        needs: ["Operator relationships", "Regulatory expertise", "Commercial distribution", "Payments market"],
-      },
-      {
-        name: "PaidMada",
-        status: "Advanced build",
-        description:
-          "A broader payment orchestration layer: APIs, checkout, webhooks and services for businesses and developers.",
-        needs: ["Compliance & legal", "Payment partnerships", "Go-to-market", "Market development"],
-      },
-    ],
+    label: "Technical foundation already covered",
+    items: ["Product", "Engineering", "Architecture", "APIs", "Automation", "Infrastructure"],
+  },
+};
+
+const COPY: Record<Locale, Record<PartnershipProduct, ProductPartnershipCopy>> = {
+  fr: {
+    "poker-mada": {
+      eyebrow: "Opportunité · PokerMada",
+      status: "Produit fonctionnel",
+      title: "Le produit fonctionne. Construisons maintenant son lancement.",
+      intro:
+        "PokerMada n’est pas un concept à développer : la plateforme technique est déjà construite et opérationnelle. Je continue à porter le produit, le développement et l’infrastructure.",
+      opportunity:
+        "La prochaine étape consiste à réunir les compétences marché capables de transformer ce socle en activité commerciale solide.",
+      partnerLabel: "Partenaires recherchés",
+      needs: [
+        "Cadre légal et réglementaire",
+        "Business development",
+        "Marketing et acquisition",
+        "Partenariats de lancement",
+      ],
+      cta: "Discuter de PokerMada",
+      modes: "Partenariat stratégique · Distribution · Acquisition",
+    },
+    "api-mobile-money": {
+      eyebrow: "Opportunité · API Mobile Money",
+      status: "Architecture définie",
+      title: "L’infrastructure est cadrée. Connectons-la aux bons acteurs du paiement.",
+      intro:
+        "L’architecture, les API, les webhooks et les mécanismes d’intégration sont déjà définis. La force technique du projet est prise en charge ; l’enjeu se situe désormais dans l’accès au marché.",
+      opportunity:
+        "Je suis ouvert à une intégration, une distribution ou un partenariat stratégique avec des acteurs capables d’accélérer son déploiement à Madagascar.",
+      partnerLabel: "Expertises complémentaires",
+      needs: [
+        "Relations opérateurs et finance",
+        "Réglementation et conformité",
+        "Distribution commerciale",
+        "Connaissance des paiements",
+      ],
+      cta: "Discuter de l’API",
+      modes: "Partenariat · Intégration · Licence ou acquisition",
+    },
+    "paidmada-mobile-money": {
+      eyebrow: "Opportunité · PaidMada",
+      status: "Construction avancée",
+      title: "Le socle d’orchestration prend forme. Accélérons sa mise sur le marché.",
+      intro:
+        "PaidMada réunit API, checkout, webhooks et services de paiement pour les entreprises et développeurs. Le produit et son infrastructure sont dans une phase de construction avancée.",
+      opportunity:
+        "Je recherche des partenaires capables de compléter cette exécution technique par la conformité, les accords de paiement et une vraie capacité de distribution.",
+      partnerLabel: "Partenaires recherchés",
+      needs: [
+        "Conformité et juridique",
+        "Acteurs du paiement",
+        "Go-to-market",
+        "Développement du marché",
+      ],
+      cta: "Discuter de PaidMada",
+      modes: "Partenariat stratégique · Distribution · Acquisition",
+    },
+  },
+  en: {
+    "poker-mada": {
+      eyebrow: "Opportunity · PokerMada",
+      status: "Working product",
+      title: "The product works. Now let’s build its path to market.",
+      intro:
+        "PokerMada is not a concept waiting to be built: the technical platform is already developed and operational. I continue to own the product, engineering and infrastructure.",
+      opportunity:
+        "The next stage is about bringing together the market expertise required to turn that foundation into a strong commercial business.",
+      partnerLabel: "Partners sought",
+      needs: [
+        "Legal and regulatory",
+        "Business development",
+        "Marketing and acquisition",
+        "Launch partnerships",
+      ],
+      cta: "Discuss PokerMada",
+      modes: "Strategic partnership · Distribution · Acquisition",
+    },
+    "api-mobile-money": {
+      eyebrow: "Opportunity · Mobile Money API",
+      status: "Architecture defined",
+      title: "The infrastructure is defined. Let’s connect it to the right payment players.",
+      intro:
+        "The architecture, APIs, webhooks and integration mechanisms are already defined. The technical foundation is covered; the next challenge is market access.",
+      opportunity:
+        "I’m open to integration, distribution or a strategic partnership with organizations that can accelerate deployment across Madagascar.",
+      partnerLabel: "Complementary expertise",
+      needs: [
+        "Operator and finance relationships",
+        "Regulation and compliance",
+        "Commercial distribution",
+        "Payments market knowledge",
+      ],
+      cta: "Discuss the API",
+      modes: "Partnership · Integration · Licensing or acquisition",
+    },
+    "paidmada-mobile-money": {
+      eyebrow: "Opportunity · PaidMada",
+      status: "Advanced build",
+      title: "The orchestration layer is taking shape. Let’s accelerate its path to market.",
+      intro:
+        "PaidMada brings together APIs, checkout, webhooks and payment services for businesses and developers. The product and its infrastructure are at an advanced build stage.",
+      opportunity:
+        "I’m looking for partners who can complement the technical execution with compliance, payment agreements and real distribution capacity.",
+      partnerLabel: "Partners sought",
+      needs: [
+        "Compliance and legal",
+        "Payment providers",
+        "Go-to-market",
+        "Market development",
+      ],
+      cta: "Discuss PaidMada",
+      modes: "Strategic partnership · Distribution · Acquisition",
+    },
   },
 };
 
 export default function PartnershipOpportunities({
   locale,
+  product,
   contactHref,
 }: {
   locale: Locale;
+  product: PartnershipProduct;
   contactHref: string;
 }) {
-  const copy = COPY[locale];
+  const copy = COPY[locale][product];
+  const ownership = TECHNICAL_OWNERSHIP[locale];
+  const titleId = `${product}-partnership-title`;
 
   return (
     <section
-      aria-labelledby="partnership-opportunities-title"
-      className="relative mb-16 overflow-hidden rounded-[1.75rem] border border-white/[0.09] bg-[#090a0f]/80 p-5 shadow-2xl shadow-black/20 sm:p-8 lg:p-10"
+      aria-labelledby={titleId}
+      className="relative mb-12 overflow-hidden rounded-[1.75rem] border border-indigo-400/15 bg-[#090b13]/85 p-6 shadow-2xl shadow-black/20 sm:p-8 md:p-10"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-24 -top-32 h-80 w-80 rounded-full bg-indigo-500/[0.10] blur-3xl"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-36 left-1/3 h-72 w-72 rounded-full bg-emerald-500/[0.07] blur-3xl"
+        className="pointer-events-none absolute -right-24 -top-28 h-64 w-64 rounded-full bg-indigo-500/[0.11] blur-3xl"
       />
 
-      <div className="relative grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12">
-        <div className="flex flex-col items-start">
-          <p className="mb-5 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-indigo-300">
-            <span className="h-px w-8 bg-indigo-400/60" aria-hidden="true" />
-            {copy.eyebrow}
-          </p>
+      <div className="relative grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
+        <div>
+          <div className="mb-5 flex flex-wrap items-center gap-3">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-indigo-300">
+              {copy.eyebrow}
+            </p>
+            <span className="rounded-full border border-emerald-400/20 bg-emerald-400/[0.07] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-emerald-300">
+              {copy.status}
+            </span>
+          </div>
 
           <h2
-            id="partnership-opportunities-title"
-            className="max-w-xl text-3xl font-bold leading-[1.08] tracking-tight text-white sm:text-4xl"
+            id={titleId}
+            className="max-w-2xl text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl"
           >
             {copy.title}
           </h2>
 
-          <div className="mt-6 max-w-xl space-y-4 text-sm leading-7 text-slate-300 sm:text-base">
+          <div className="mt-5 max-w-2xl space-y-3 text-sm leading-7 text-slate-300 sm:text-base">
             <p>{copy.intro}</p>
-            <p>{copy.search}</p>
+            <p>{copy.opportunity}</p>
           </div>
 
-          <div className="mt-7 border-l border-indigo-400/40 pl-4">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-              {copy.ownershipLabel}
+          <div className="mt-7">
+            <Link
+              href={contactHref}
+              data-ph-event="partnership_cta_clicked"
+              data-ph-props={JSON.stringify({ area: "product_partnership", product, locale })}
+              className="group inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#090b13] sm:w-auto"
+            >
+              {copy.cta}
+              <IconScoutIcon
+                name="arrowRight"
+                size={17}
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </Link>
+            <p className="mt-3 text-[10px] font-medium uppercase tracking-[0.14em] text-slate-500">
+              {copy.modes}
             </p>
-            <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2" aria-label={copy.ownershipLabel}>
-              {copy.ownership.map((item) => (
-                <li key={item} className="flex items-center gap-2 text-xs font-medium text-slate-300">
-                  <span className="h-1 w-1 rounded-full bg-indigo-400" aria-hidden="true" />
-                  {item}
-                </li>
-              ))}
-            </ul>
           </div>
-
-          <p className="mt-8 max-w-lg text-sm font-medium leading-6 text-white">
-            {copy.closing}
-          </p>
-
-          <Link
-            href={contactHref}
-            data-ph-event="partnership_cta_clicked"
-            data-ph-props={JSON.stringify({ area: "projects_partnership", locale })}
-            className="group mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/15 transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-500 hover:shadow-indigo-500/25 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#090a0f]"
-          >
-            {copy.cta}
-            <IconScoutIcon
-              name="arrowRight"
-              size={17}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </Link>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-white/[0.08] bg-black/20">
-          {copy.products.map((product, index) => (
-            <article
-              key={product.name}
-              className="relative p-5 sm:p-6 [&:not(:last-child)]:border-b [&:not(:last-child)]:border-white/[0.07]"
-            >
-              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
-                <div>
-                  <div className="flex items-center gap-3">
-                    <span className="font-mono text-[10px] text-white/30" aria-hidden="true">
-                      0{index + 1}
-                    </span>
-                    <h3 className="text-lg font-semibold tracking-tight text-white sm:text-xl">
-                      {product.name}
-                    </h3>
-                  </div>
-                  <p className="mt-3 max-w-xl text-sm leading-6 text-slate-400">
-                    {product.description}
-                  </p>
-                </div>
-
-                <div className="shrink-0 sm:text-right">
-                  <p className="text-[9px] font-semibold uppercase tracking-[0.16em] text-slate-600">
-                    {copy.statusLabel}
-                  </p>
-                  <p className="mt-1 text-xs font-semibold text-emerald-300">
-                    {product.status}
-                  </p>
-                </div>
-              </div>
-
-              <ul
-                className="mt-4 flex flex-wrap gap-2"
-                aria-label={`${product.name}: ${copy.partnerExpertiseLabel}`}
+        <div className="rounded-2xl border border-white/[0.08] bg-black/20 p-5 sm:p-6">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+            {ownership.label}
+          </p>
+          <ul className="mt-4 flex flex-wrap gap-2" aria-label={ownership.label}>
+            {ownership.items.map((item) => (
+              <li
+                key={item}
+                className="rounded-full border border-indigo-400/15 bg-indigo-400/[0.05] px-3 py-1.5 text-xs font-medium text-indigo-100"
               >
-                {product.needs.map((need) => (
-                  <li
-                    key={need}
-                    className="rounded-full border border-white/[0.08] bg-white/[0.035] px-3 py-1.5 text-[10px] font-medium tracking-wide text-slate-300"
-                  >
-                    {need}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          <div className="my-6 h-px bg-white/[0.07]" />
+
+          <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500">
+            {copy.partnerLabel}
+          </p>
+          <ul className="mt-4 space-y-3">
+            {copy.needs.map((need) => (
+              <li key={need} className="flex items-start gap-3 text-sm leading-5 text-slate-300">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" aria-hidden="true" />
+                {need}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

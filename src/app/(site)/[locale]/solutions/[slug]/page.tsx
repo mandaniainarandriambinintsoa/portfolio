@@ -14,6 +14,7 @@ import {
 } from "@/lib/data/solutions";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
+import PartnershipOpportunities from "@/components/sections/PartnershipOpportunities";
 import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
@@ -308,6 +309,9 @@ export default async function SolutionPage({
   const style = accentStyles[solution.accent];
   const copy = solutionPageCopy[locale];
   const prefix = locale === "fr" ? "" : "/en";
+  const hasMobileMoneyPartnership =
+    solution.slug === "api-mobile-money-madagascar" ||
+    solution.slug === "mobile-money-api-madagascar";
   const breadcrumbs = [
     { name: copy.breadcrumbHome, href: locale === "fr" ? "/" : "/en" },
     { name: copy.breadcrumbSolutions, href: `${prefix}/solutions` },
@@ -414,6 +418,14 @@ export default async function SolutionPage({
             </p>
           </GlassCard>
         </section>
+
+        {hasMobileMoneyPartnership ? (
+          <PartnershipOpportunities
+            locale={locale}
+            product="api-mobile-money"
+            contactHref={`${prefix}/contact`}
+          />
+        ) : null}
 
         <section className="mb-16" aria-labelledby="fit-title">
           <SectionTitle id="fit-title" eyebrow={copy.fitEyebrow} title={copy.fitTitle} />
