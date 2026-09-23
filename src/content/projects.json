@@ -26,6 +26,26 @@
     "updated_at": "2026-08-17T16:30:00.000000+00:00"
   },
   {
+    "id": "e601d40d-f773-4e89-b3ef-9b2f7d513e6a",
+    "slug": "automatisation-prospection-n8n-lemlist",
+    "title_fr": "Automatisation de prospection B2B avec n8n et Lemlist",
+    "title_en": "Automated B2B Prospecting — n8n + Lemlist",
+    "subtitle_fr": "Workflow n8n de sourcing, qualification et validation humaine multi-campagnes",
+    "subtitle_en": "Multi-campaign sourcing, qualification and human review",
+    "description_fr": "Automatisation de prospection commerciale B2B avec n8n et Lemlist : ce workflow multi-campagnes charge les segments actifs, recherche et classe les entreprises, dédoublonne, sélectionne les décideurs, recherche des signaux publics et prépare des messages pour validation humaine. Lemlist apporte la recherche d'entreprises et de décideurs ; aucun email n'est envoyé automatiquement par le moteur.",
+    "description_en": "n8n workflow built to orchestrate multi-campaign B2B prospecting: active-segment loading, company search and ranking, deduplication, decision-maker selection, public-signal research and message preparation for human review. Lemlist provides company and decision-maker search; the engine does not send prospect emails automatically.",
+    "tags": ["n8n", "Lemlist", "API", "Automation", "B2B"],
+    "link": null,
+    "featured": true,
+    "category": "workflow",
+    "image": "/images/projects/automatisation-prospection-n8n-lemlist.svg",
+    "workflow_file": "teamia-prospecting",
+    "sort_order": 1,
+    "published": true,
+    "created_at": "2026-09-23T00:00:00.000000+00:00",
+    "updated_at": "2026-09-23T00:00:00.000000+00:00"
+  },
+  {
     "id": "423bfab3-771c-4d9a-ad2a-e81b55844d9f",
     "slug": "scalapp",
     "title_fr": "ScalApp",

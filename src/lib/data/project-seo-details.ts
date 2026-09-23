@@ -1368,6 +1368,68 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
     },
   },
+  "automatisation-prospection-n8n-lemlist": {
+    fr: {
+      metaTitle: "Automatiser sa prospection commerciale avec n8n et Lemlist | Manda IA",
+      metaDescription: "Étude de cas d'une automatisation de prospection B2B avec n8n et Lemlist : sourcing, dédoublonnage, qualification et validation humaine.",
+      kicker: "Automatisation commerciale contrôlée",
+      title: "Automatiser sa prospection commerciale avec n8n, Lemlist et une validation humaine",
+      summary: "Cette réalisation pour TeamIA orchestre une prospection multi-campagnes sans transformer l'automatisation en envoi aveugle. n8n charge les segments actifs, recherche et classe les entreprises, réserve les comptes inédits, sélectionne les décideurs puis prépare une recherche et un message soumis à validation humaine. Lemlist est utilisé pour les données entreprises et personnes ; le moteur ne déclenche aucun email prospect automatiquement.",
+      facts: [
+        { label: "Orchestrateur", value: "n8n, avec déclenchement quotidien ou manuel" },
+        { label: "Sources", value: "Campagnes actives, base entreprises et décideurs Lemlist" },
+        { label: "Garde-fous", value: "Déduplication et plafond de 10 prospects par exécution" },
+        { label: "Sortie", value: "File de validation humaine avant toute action commerciale" },
+      ],
+      sections: [
+        { title: "Le contexte : une prospection commerciale B2B composée d'étapes dispersées", paragraphs: ["Une équipe commerciale doit normalement passer d'une campagne à une liste d'entreprises, vérifier qu'un compte n'a pas déjà été travaillé, identifier le bon interlocuteur et préparer un message cohérent. Répéter ces opérations entre plusieurs segments fragilise la qualité des données et rend le processus difficile à piloter."] },
+        { title: "La solution : un pipeline n8n en six étapes", paragraphs: ["Le workflow lit les campagnes actives et leurs segments, interroge Lemlist pour trouver les entreprises correspondantes, puis les classe selon les critères de campagne. Les comptes déjà examinés sont réservés et écartés avant la recherche de décideurs. Les profils sont ensuite sélectionnés selon les intitulés recherchés ou exclus, dans la limite des quotas. Enfin, le workflow recherche des signaux publics, prépare un message, normalise le résultat et l'envoie dans une file de revue.", "Le workflow de retour Lemlist complète ce flux par un callback asynchrone : il rattache l'enrichissement à la bonne ligne avec une clé de déduplication, met à jour le statut, puis soumet le message à une validation. Une approbation ne provoque pas d'envoi automatique au prospect."] },
+        { title: "Intégration n8n et API Lemlist : architecture et règles métier", paragraphs: ["n8n joue le rôle d'orchestrateur entre le cockpit de campagnes, les API Lemlist, les règles JavaScript de qualification et la file de validation. Les appels critiques au cockpit sont configurés avec des tentatives limitées ; les limites de volume sont vérifiées dans les nœuds de transformation. La déduplication intervient avant l'enrichissement des décideurs, ce qui évite de retraiter inutilement les mêmes entreprises."] },
+        { title: "Ce que ce système permet", paragraphs: ["Le processus centralise la préparation des prospects tout en gardant la décision commerciale à une personne. Il réduit les gestes répétitifs, rend les quotas explicites et laisse une base évolutive pour connecter un CRM, une source de leads ou un autre outil d'outreach. Aucun chiffre de conversion ou de ROI n'est revendiqué ici : le bénéfice démontré est la fiabilité et la reproductibilité du pipeline."] },
+        { title: "À qui s'adresse cette automatisation", paragraphs: ["Ce type d'intégration convient aux agences B2B, équipes growth, cabinets de conseil, SaaS et entreprises de services qui utilisent Lemlist ou souhaitent relier leurs sources de leads, règles de qualification et processus commercial. Le bon périmètre commence par les règles métier, les données autorisées et le niveau de contrôle humain attendu."] },
+      ],
+      relatedLinks: [
+        { label: "Service d'automatisation n8n", href: "/services/automatisation-n8n-madagascar", description: "Concevoir des workflows n8n fiables, connectés aux outils métier et documentés." },
+        { label: "Plateforme TeamIA", href: "/projects/teamia", description: "Voir la plateforme métier où s'inscrit cette automatisation." },
+        { label: "Me contacter pour un système similaire", href: "/contact", description: "Parlons des étapes de prospection encore manuelles dans votre processus." },
+      ],
+      faq: [
+        { question: "Comment automatiser sa prospection commerciale avec n8n ?", answer: "Il faut d'abord formaliser les segments, critères de sélection, règles de déduplication, quotas et point de contrôle humain. n8n peut alors orchestrer les sources de prospects, l'enrichissement, la qualification et la préparation des messages, tout en laissant l'envoi sous validation lorsque le processus l'exige." },
+        { question: "Le workflow envoie-t-il automatiquement des emails aux prospects ?", answer: "Non. Le moteur prépare des résultats et des messages dans une file de validation humaine. Le workflow de retour Lemlist prévoit aussi une approbation explicite, sans envoi prospect automatique." },
+        { question: "Quel est le rôle de Lemlist dans cette automatisation ?", answer: "Lemlist sert à rechercher les entreprises et les décideurs correspondant aux segments, puis à retourner certains enrichissements de manière asynchrone. n8n orchestre la logique de campagne, les filtres, la déduplication et la préparation des résultats." },
+        { question: "Comment les doublons sont-ils évités ?", answer: "Les entreprises candidates sont réservées avant la recherche des décideurs. Une clé de déduplication rattache aussi les retours d'enrichissement au bon prospect dans le workflow complémentaire." },
+      ],
+    },
+    en: {
+      metaTitle: "B2B Prospecting Automation with n8n & Lemlist | Manda IA",
+      metaDescription: "Case study: an n8n workflow connected to Lemlist to source, deduplicate, qualify decision makers and prepare B2B outreach with human review.",
+      kicker: "Controlled sales automation",
+      title: "Connecting B2B sourcing, Lemlist and human review in one workflow",
+      summary: "This TeamIA delivery orchestrates multi-campaign prospecting without turning automation into blind outreach. n8n loads active segments, searches and ranks companies, reserves unseen accounts, selects decision makers, then prepares research and a message for human review. Lemlist supplies company and people data; the engine does not automatically send prospect emails.",
+      facts: [
+        { label: "Orchestrator", value: "n8n, with daily or manual triggering" },
+        { label: "Sources", value: "Active campaigns plus Lemlist company and people data" },
+        { label: "Guardrails", value: "Deduplication and a 10-prospect execution cap" },
+        { label: "Output", value: "Human review queue before any sales action" },
+      ],
+      sections: [
+        { title: "The business context", paragraphs: ["B2B prospecting often requires moving from a campaign to company research, duplicate checks, decision-maker selection and message preparation. Repeating these steps across segments makes data quality and oversight harder to maintain."] },
+        { title: "How the workflow works", paragraphs: ["The workflow loads active campaigns and segments, searches Lemlist for matching companies and ranks them. It excludes previously reviewed accounts before looking for decision makers, applies title rules and quotas, then researches public signals and prepares a message for review.", "A companion Lemlist callback workflow links asynchronous enrichment to the correct prospect with a deduplication key, updates its status and requests explicit human approval. Approval itself does not send an email to a prospect."] },
+        { title: "Technical architecture", paragraphs: ["n8n orchestrates the campaign cockpit, Lemlist APIs, JavaScript qualification rules and review queue. Bounded retries protect critical requests, volume limits are checked during transformation and deduplication happens before decision-maker enrichment."] },
+        { title: "Who this is for", paragraphs: ["This pattern suits B2B agencies, growth teams, consultancies, SaaS companies and service businesses that need to connect lead sources, qualification rules and outreach tools without removing human judgment."] },
+      ],
+      relatedLinks: [
+        { label: "n8n automation service", href: "/en/services/remote-n8n-automation-consultant", description: "Reliable n8n workflows connected to business tools." },
+        { label: "TeamIA platform", href: "/en/projects/teamia", description: "See the business platform behind this automation." },
+        { label: "Discuss a similar system", href: "/en/contact", description: "Talk through the manual steps in your current prospecting process." },
+      ],
+      faq: [
+        { question: "Does the workflow automatically email prospects?", answer: "No. It prepares results and messages for human review. The Lemlist return workflow also requires explicit approval and does not automatically send prospect emails." },
+        { question: "What does Lemlist do in this automation?", answer: "Lemlist is used to find companies and decision makers matching campaign segments, and to return some enrichment asynchronously. n8n orchestrates campaign logic, filtering, deduplication and result preparation." },
+        { question: "How are duplicates avoided?", answer: "Candidate companies are reserved before decision-maker research. A deduplication key also links enrichment callbacks to the right prospect in the companion workflow." },
+      ],
+    },
+  },
 };
 
 export function getProjectSeoDetails(slug: string, locale: Locale) {

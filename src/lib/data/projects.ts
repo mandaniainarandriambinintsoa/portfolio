@@ -5,7 +5,7 @@ import projectRows from "@/content/projects.json";
 
 const siteMetierSlugs = new Set(["teamia", "madavoyage", "garagiste", "bati-diaspora"]);
 
-const priorityProjectSlugs = ["teamia"];
+const priorityProjectSlugs = ["teamia", "automatisation-prospection-n8n-lemlist"];
 
 function prioritizeProjects(projects: ProjectItem[]): ProjectItem[] {
   return [...projects].sort((a, b) => {
