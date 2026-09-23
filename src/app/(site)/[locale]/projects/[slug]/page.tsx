@@ -98,8 +98,15 @@ export default async function ProjectPage({
   });
   const categoryTone = getProjectTone(project.category);
   const workflow = project.workflowFile ? workflows[project.workflowFile] : null;
-  const usesProductScreenshot = slug === "veille-codeur-automatisation-n8n";
-  const usesWideWorkflowScreenshot = slug === "international-opportunity-agent-n8n";
+  // Some public workflow visualisations are deliberately rendered as static
+  // assets: this avoids loading an external interactive viewer and prevents
+  // private workflow details from being exposed.
+  const usesStaticWorkflowVisual =
+    slug === "veille-codeur-automatisation-n8n" ||
+    slug === "automatisation-prospection-n8n-lemlist";
+  const usesWideWorkflowScreenshot =
+    slug === "international-opportunity-agent-n8n" ||
+    slug === "automatisation-prospection-n8n-lemlist";
   const caseStudy = getCaseStudy(slug, locale);
   const projectSeo = getProjectSeoDetails(slug, locale);
   const projectLinkIsExternal = Boolean(project.link && /^https?:\/\//.test(project.link));
@@ -210,7 +217,7 @@ export default async function ProjectPage({
 
         {/* Hero visual: Image for webapp, N8N viewer for workflow */}
         <div className="mb-12">
-          {isWorkflow && workflow && !usesProductScreenshot ? (
+          {isWorkflow && workflow && !usesStaticWorkflowVisual ? (
             <N8nWorkflowSection workflow={workflow} className="mb-0" />
           ) : (
             <div
