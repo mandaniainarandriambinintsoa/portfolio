@@ -220,6 +220,132 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
     },
   },
+  meckia: {
+    fr: {
+      metaTitle: "Meckia : SaaS de gestion de flotte Next.js et NestJS",
+      metaDescription:
+        "Étude de cas Meckia : application de gestion de flotte construite avec Next.js, NestJS, PostgreSQL et une PWA pour la saisie terrain hors ligne.",
+      kicker: "Application métier SaaS · gestion de flotte",
+      title: "Réunir la flotte, le bureau et le terrain dans une application",
+      summary:
+        "Meckia centralise le suivi des véhicules, des entretiens, des dépenses et des documents pour une organisation. J'ai conçu et développé le produit de bout en bout : interface Next.js, API métier NestJS, base PostgreSQL sur Neon et parcours de saisie terrain PWA. La capture ci-dessus représente l'aperçu public de la plateforme avec des données d'exemple, et non les données d'un client.",
+      facts: [
+        { label: "Produit", value: "SaaS/PWA de gestion de flotte" },
+        { label: "Interface et API", value: "Next.js et NestJS / TypeScript" },
+        { label: "Données", value: "PostgreSQL sur Neon" },
+        { label: "Terrain", value: "saisie hors ligne puis synchronisation" },
+      ],
+      sections: [
+        {
+          title: "Un espace de travail commun pour les opérations",
+          paragraphs: [
+            "Les informations de flotte sont souvent dispersées entre tableurs, échanges de messages et dossiers de documents. Meckia les rassemble autour des véhicules : suivi administratif, entretiens, dépenses et événements opérationnels. L'interface privilégie une lecture claire et des actions courtes, y compris sur mobile.",
+            "Le produit est organisé par entreprise. L'API applique les règles d'accès côté serveur et vérifie l'appartenance des ressources à l'organisation, au lieu de laisser l'interface décider seule de ce qu'un utilisateur peut consulter ou modifier.",
+          ],
+        },
+        {
+          title: "Une architecture NestJS qui sépare métier et intégrations",
+          paragraphs: [
+            "L'API NestJS est structurée par domaines et s'appuie sur des DTO validés, des services métier, des migrations de base de données et des tests ciblés. PostgreSQL sur Neon porte les relations et les contraintes ; les fichiers sont conservés dans un stockage compatible S3, distinct de la base.",
+            "Les services externes restent optionnels ou isolés selon leur rôle : Resend pour les emails transactionnels et Traccar pour la connexion GPS quand elle est configurée. Ce découpage permet de faire évoluer les opérations de flotte sans coupler chaque écran à un fournisseur tiers.",
+          ],
+        },
+        {
+          title: "Conserver la saisie possible sans réseau",
+          paragraphs: [
+            "En déplacement, la connexion n'est pas garantie. Le mode terrain permet de préparer certaines saisies hors ligne, puis de les synchroniser après reconnexion. La synchronisation vérifie à nouveau la session et doit gérer les doublons pour éviter qu'un nouvel essai ne crée deux événements.",
+            "Cette fonction ne signifie pas que toute l'application ou le suivi GPS fonctionne sans réseau. Elle couvre les opérations de saisie prévues par la PWA ; les données qui exigent le serveur restent dépendantes d'une connexion.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Découvrir Meckia",
+          href: "https://meckia.manda-ia.com/",
+          description: "Voir la plateforme et son aperçu public avec des données d'exemple.",
+        },
+        {
+          label: "Développement d'applications métier",
+          href: "/services/developpement-sites-saas",
+          description: "Conception d'applications web et SaaS adaptées à un processus métier.",
+        },
+      ],
+      faq: [
+        {
+          question: "Meckia fonctionne-t-il hors ligne ?",
+          answer:
+            "Le mode terrain permet de préparer certaines saisies sans connexion. Elles sont synchronisées après reconnexion et vérification de la session. Le reste de l'application et les données en temps réel nécessitent le réseau.",
+        },
+        {
+          question: "Le suivi GPS est-il inclus dans toutes les installations ?",
+          answer:
+            "Non. La connexion GPS repose sur Traccar et doit être configurée pour l'organisation concernée. Elle n'est pas nécessaire pour utiliser les autres fonctions de gestion de flotte.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Meckia: fleet management SaaS built with Next.js and NestJS",
+      metaDescription:
+        "Meckia case study: fleet management app built with Next.js, NestJS, PostgreSQL and a PWA for offline field entries.",
+      kicker: "Fleet management SaaS application",
+      title: "Bring fleet operations, office teams and field work together",
+      summary:
+        "Meckia brings vehicles, maintenance, expenses and documents into one organization workspace. I designed and built the product end to end: a Next.js interface, NestJS business API, PostgreSQL on Neon and a PWA workflow for field entries. The image above is the public platform preview with sample data, not customer information.",
+      facts: [
+        { label: "Product", value: "Fleet management SaaS/PWA" },
+        { label: "Interface and API", value: "Next.js and NestJS / TypeScript" },
+        { label: "Data", value: "PostgreSQL on Neon" },
+        { label: "Field work", value: "offline entry, then synchronization" },
+      ],
+      sections: [
+        {
+          title: "One workspace for fleet operations",
+          paragraphs: [
+            "Fleet information often ends up spread across spreadsheets, messages and document folders. Meckia organizes it around each vehicle: records, maintenance, expenses and operational events. The interface focuses on clear information and short actions, including on mobile.",
+            "The product is organized by company. The API enforces access rules on the server and checks that resources belong to the user's organization, rather than trusting the interface to decide what can be read or changed.",
+          ],
+        },
+        {
+          title: "A NestJS architecture with clear integration boundaries",
+          paragraphs: [
+            "The NestJS API is organized by domain, with validated DTOs, business services, database migrations and focused tests. PostgreSQL on Neon holds relationships and constraints; files live in separate S3-compatible storage.",
+            "External services have distinct roles: Resend handles transactional email and Traccar provides the GPS connection when configured. This separation lets fleet workflows evolve without coupling every screen to a third-party provider.",
+          ],
+        },
+        {
+          title: "Keep field entry available when the network is not",
+          paragraphs: [
+            "Connectivity is not guaranteed on the road. Field mode lets users prepare supported entries offline and synchronize them after reconnection. Synchronization rechecks the session and handles duplicate attempts so a retry does not create two events.",
+            "This does not mean the whole app or GPS tracking works offline. The PWA covers specific entry workflows; server-backed data still requires a connection.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Explore Meckia",
+          href: "https://meckia.manda-ia.com/",
+          description: "See the platform and its public preview with sample data.",
+        },
+        {
+          label: "Business application development",
+          href: "/en/services/developpement-sites-saas",
+          description: "Design and development of web apps and SaaS products for business workflows.",
+        },
+      ],
+      faq: [
+        {
+          question: "Can Meckia be used offline?",
+          answer:
+            "Field mode supports preparing specific entries without a connection. They sync after reconnection and session verification. The rest of the app and live data still require a network connection.",
+        },
+        {
+          question: "Is GPS tracking included in every installation?",
+          answer:
+            "No. GPS connectivity uses Traccar and must be configured for the organization. The other fleet-management features do not depend on it.",
+        },
+      ],
+    },
+  },
   teamia: {
     fr: {
       metaTitle: "Refonte TeamIA : Next.js, Payload CMS et agents IA",

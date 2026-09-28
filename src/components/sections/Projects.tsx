@@ -18,6 +18,7 @@ type FilterType = "all" | ProjectCategory;
 
 const HOME_PROJECT_ORDER = [
   "teamia",
+  "meckia",
   "madavoyage",
   "garagiste",
   "bati-diaspora",

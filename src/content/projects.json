@@ -26,6 +26,26 @@
     "updated_at": "2026-08-17T16:30:00.000000+00:00"
   },
   {
+    "id": "ebd5cfa4-046b-4bfb-a635-68b8106f5969",
+    "slug": "meckia",
+    "title_fr": "Meckia",
+    "title_en": "Meckia",
+    "subtitle_fr": "SaaS de gestion de flotte automobile, du bureau au terrain",
+    "subtitle_en": "Fleet management SaaS, from the office to the field",
+    "description_fr": "Conception et développement de Meckia, une application SaaS/PWA de gestion de flotte. Les équipes regroupent véhicules, entretiens, dépenses et documents dans un espace partagé. Le produit associe une interface Next.js, une API NestJS, PostgreSQL sur Neon et un stockage de fichiers compatible S3. La saisie terrain peut être préparée hors ligne puis synchronisée après reconnexion et vérification de la session. L'intégration GPS est prévue via Traccar selon la configuration de l'organisation. La capture montre un aperçu du produit avec des données d'exemple.",
+    "description_en": "Designed and built Meckia, a fleet management SaaS/PWA. Teams bring vehicles, maintenance, expenses and documents together in one workspace. The product combines a Next.js interface, a NestJS API, PostgreSQL on Neon and S3-compatible file storage. Field entries can be prepared offline and synchronized after reconnection and session verification. GPS integration is available through Traccar when configured for the organization. The screenshot shows a product preview with sample data.",
+    "tags": ["Next.js", "NestJS", "PostgreSQL", "PWA", "SaaS"],
+    "link": "https://meckia.manda-ia.com/",
+    "featured": true,
+    "category": "webapp",
+    "image": "/images/projects/meckia-flotte-platform.webp",
+    "workflow_file": null,
+    "sort_order": 1,
+    "published": true,
+    "created_at": "2026-09-28T00:00:00.000000+00:00",
+    "updated_at": "2026-09-28T00:00:00.000000+00:00"
+  },
+  {
     "id": "e601d40d-f773-4e89-b3ef-9b2f7d513e6a",
     "slug": "automatisation-prospection-n8n-lemlist",
     "title_fr": "Automatisation de prospection B2B avec n8n et Lemlist",
