@@ -70,7 +70,7 @@ const solutionIndexCopy: Record<
   }
 > = {
   fr: {
-    title: "Automatiser une PME avec IA, n8n et APIs | Manda",
+    title: "Automatiser une PME avec IA, n8n et APIs",
     description:
       "Automatisation pour PME : agent vocal IA, workflows n8n, support client IA, prospection, API Mobile Money et workflows Claude Code.",
     ogAlt: "Automatiser une PME avec IA, n8n et APIs",
@@ -111,7 +111,7 @@ const solutionIndexCopy: Record<
     readLabel: "Voir comment je le construis",
   },
   en: {
-    title: "Automate an SMB with AI, n8n and APIs | Manda",
+    title: "Automate an SMB with AI, n8n and APIs",
     description:
       "Automation for SMBs: AI voice agent, n8n workflows, AI customer support, prospecting, Mobile Money APIs and Claude Code workflows.",
     ogAlt: "Automate an SMB with AI, n8n and APIs",

@@ -82,6 +82,23 @@ export default async function ServicesPage({
             : "Automation, development and artificial intelligence — everything you need to digitalize your business."}
         </p>
 
+        <Link
+          href={`${prefix}/vibe-coding-developpeur`}
+          className="mb-16 block rounded-xl border border-indigo-400/25 bg-indigo-500/10 p-6 transition-colors hover:bg-indigo-500/15 sm:p-8"
+        >
+          <p className="text-xs font-semibold uppercase tracking-widest text-indigo-300">
+            {locale === "fr" ? "Développement assisté par IA" : "AI-assisted development"}
+          </p>
+          <h2 className="mt-3 text-xl font-bold text-white sm:text-2xl">
+            {locale === "fr" ? "Le Vibe Coding à la portée d'un développeur" : "Vibe coding in a developer's hands"}
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate-300 sm:text-base">
+            {locale === "fr"
+              ? "Découvrez comment j'associe architecture clean et IA agentic pour construire des applications maintenables."
+              : "See how I combine clean architecture and agentic AI to build maintainable applications."}
+          </p>
+        </Link>
+
         {/* Core services */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {coreServices.map((service: ServiceItem) => {

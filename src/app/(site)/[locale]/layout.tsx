@@ -26,10 +26,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
 
   return {
-    title: {
-      default: dict.meta.home.title,
-      template: `%s | Manda`,
-    },
+    title: dict.meta.home.title,
     description: dict.meta.home.description,
     metadataBase: new URL(SITE_URL),
     alternates: {

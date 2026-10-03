@@ -48,6 +48,7 @@ const frenchPublicRoutes = [
   "quiz",
   "services",
   "site-metier",
+  "vibe-coding-developpeur",
   "solutions",
 ] as const;
 

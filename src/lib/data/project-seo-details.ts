@@ -1496,7 +1496,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
   },
   "automatisation-prospection-n8n-lemlist": {
     fr: {
-      metaTitle: "Automatiser sa prospection commerciale avec n8n et Lemlist | Manda IA",
+      metaTitle: "Automatiser sa prospection commerciale avec n8n et Lemlist",
       metaDescription: "Étude de cas d'une automatisation de prospection B2B avec n8n et Lemlist : sourcing, dédoublonnage, qualification et validation humaine.",
       kicker: "Automatisation commerciale contrôlée",
       title: "Automatiser sa prospection commerciale avec n8n, Lemlist et une validation humaine",
@@ -1527,7 +1527,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
     },
     en: {
-      metaTitle: "B2B Prospecting Automation with n8n & Lemlist | Manda IA",
+      metaTitle: "B2B Prospecting Automation with n8n & Lemlist",
       metaDescription: "Case study: an n8n workflow connected to Lemlist to source, deduplicate, qualify decision makers and prepare B2B outreach with human review.",
       kicker: "Controlled sales automation",
       title: "Connecting B2B sourcing, Lemlist and human review in one workflow",

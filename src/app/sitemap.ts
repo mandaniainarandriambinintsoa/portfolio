@@ -55,6 +55,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { fr: "/projects", en: "/en/projects" },
     { fr: "/labs", en: "/en/labs" },
     { fr: "/site-metier", en: "/en/site-metier" },
+    { fr: "/vibe-coding-developpeur", en: "/en/vibe-coding-developpeur" },
     { fr: "/blog", en: "/en/blog" },
     { fr: "/quiz", en: "/en/quiz" },
     { fr: "/privacy", en: "/en/privacy" },

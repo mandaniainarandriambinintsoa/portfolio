@@ -13,7 +13,7 @@
       "description": "Contactez Mandaniaina Randriambinintsoa pour vos projets d'automatisation, développement no-code et intégration IA."
     },
     "quiz": {
-      "title": "Quiz Automatisation | Trouvez la solution idéale pour votre business — Manda",
+      "title": "Quiz Automatisation | Trouvez la solution idéale pour votre business",
       "description": "Répondez à 5 questions et découvrez quel type d'automatisation correspond le mieux à votre business. Résultat personnalisé en 2 minutes."
     }
   },
@@ -373,7 +373,7 @@
         "cardTitle": "Automatisation N8N",
         "cardDescription": "Workflows sur mesure, scraping, agents IA, élimination du travail manuel répétitif.",
         "isLanding": true,
-        "seoTitle": "Expert N8N & Automatisation Madagascar | Workflows Sur Mesure — Manda",
+        "seoTitle": "Expert N8N & Automatisation Madagascar | Workflows Sur Mesure",
         "seoDescription": "Expert N8N à Madagascar. Automatisation de workflows, intégrations API, scraping et agents IA. Optimisez vos processus métier. Devis gratuit.",
         "landing": {
           "heroText": "Vos équipes perdent des heures sur des tâches répétitives ? En tant qu'expert N8N basé à Antananarivo, je conçois des workflows d'automatisation sur mesure qui éliminent le travail manuel et connectent tous vos outils métier — CRM, facturation, email, bases de données.",
@@ -573,6 +573,10 @@
             }
           ],
           "sections": [
+            {
+              "title": "Développement React assisté par IA",
+              "content": "Pour accélérer un MVP ou une fonctionnalité React sans sacrifier la qualité du code, découvrez mon approche du [Vibe Coding avec architecture clean et agents IA](/vibe-coding-developpeur). Cette méthode complète mon travail React et Next.js ; elle ne remplace ni le cadrage ni les tests."
+            },
             {
               "title": "Développeur React à Madagascar : pourquoi React et Next.js en 2026 ?",
               "content": "React est la bibliothèque JavaScript la plus utilisée au monde pour construire des interfaces utilisateur. Selon le [sondage Stack Overflow Developer Survey](https://survey.stackoverflow.co/), React reste largement en tête sur les frameworks web professionnels, loin devant Angular et Vue.js.\n\nNext.js, le framework React de Vercel, ajoute le rendu serveur (SSR/SSG), le routage automatique, l'optimisation d'images et le déploiement instantané. En 2026, [Next.js propulse les sites de Netflix, TikTok, Twitch, Notion et des milliers de SaaS](https://nextjs.org/showcase).\n\nPourquoi ça compte pour votre projet : une application Next.js charge en moins d'une seconde (LCP < 1s), se référence parfaitement sur Google grâce au rendu serveur, et scale de 10 à 100 000 utilisateurs sans changement d'architecture."
@@ -908,7 +912,7 @@
         "cardTitle": "Python & IA (FastAPI, LLM)",
         "cardDescription": "Apps IA, scripts d'automatisation, API backend Python. Modèles Claude/GPT intégrés.",
         "isLanding": true,
-        "seoTitle": "Développeur Python & IA à Madagascar | FastAPI, Claude, GPT — Manda",
+        "seoTitle": "Développeur Python & IA à Madagascar | FastAPI, Claude, GPT",
         "seoDescription": "Développeur Python et IA freelance à Antananarivo, Madagascar. FastAPI, Claude Code, GPT, automatisation, scraping, agents IA. Tarifs compétitifs. Devis gratuit.",
         "landing": {
           "heroText": "Vous voulez intégrer l'intelligence artificielle dans votre produit ou automatiser des processus complexes avec Python ? Basé à Antananarivo, je développe des applications IA, des API performantes avec FastAPI, et des agents intelligents connectés à Claude et GPT. Plus de 20 projets livrés, tarifs jusqu'à 2x inférieurs aux freelances européens.",
@@ -1081,7 +1085,7 @@
         "cardTitle": "Claude Code + n8n",
         "cardDescription": "Agents IA, workflows auto-construits, prompt engineering. Claude Code orchestre, n8n exécute.",
         "isLanding": true,
-        "seoTitle": "Développeur Claude Code + n8n freelance — Madagascar | Manda",
+        "seoTitle": "Développeur Claude Code + n8n freelance — Madagascar",
         "seoDescription": "Développeur Claude Code + n8n freelance basé à Antananarivo. Agents IA, automatisations MCP, prompt engineering. TJM compétitif marché EU. 20+ projets livrés.",
         "landing": {
           "heroText": "Vous avez un agent IA à construire, des workflows n8n à industrialiser, ou un produit entier à livrer avec Claude Code ? Basé à Antananarivo, je conçois des systèmes Claude Code + n8n pour des startups et PME européennes — du prototype au runtime production. Claude Code écrit et orchestre, n8n exécute, et vous récupérez une stack documentée et auto-hébergeable.",
@@ -1279,11 +1283,15 @@
         "cardTitle": "Freelance full stack",
         "cardDescription": "Sites, SaaS, front React, API Node.js et IA à Madagascar",
         "isLanding": true,
-        "seoTitle": "Développeur web freelance full stack Madagascar | Manda",
+        "seoTitle": "Développeur web freelance full stack Madagascar",
         "seoDescription": "Développeur web freelance full stack à Madagascar : React, Next.js, Node.js, Supabase et IA. Un interlocuteur direct pour votre site ou SaaS.",
         "landing": {
           "heroText": "Je conçois des sites, SaaS et applications métier de bout en bout : interface React ou Next.js, API Node.js, base Supabase et automatisations IA quand elles servent vraiment le produit. Vous travaillez directement avec la personne qui cadre, développe, teste et met en production.",
           "sections": [
+            {
+              "title": "JavaScript et développement assisté par IA",
+              "content": "Je peux utiliser des agents de codage pour accélérer l'implémentation JavaScript, tout en restant responsable de l'architecture et des vérifications. Cette approche est détaillée sur ma page [Vibe Coding à la portée d'un développeur](/vibe-coding-developpeur)."
+            },
             {
               "title": "Pourquoi travailler avec un développeur web freelance full stack",
               "content": "Un développeur web freelance full stack prend en charge le parcours complet : cadrage, interface, API, données, déploiement et suivi. Vous évitez les passages répétés entre un commercial, un chef de projet, une équipe front et une équipe back pour chaque décision.\n\nMa stack principale reste JavaScript et TypeScript : React et Next.js pour l'interface, Node.js pour les API, PostgreSQL ou Supabase pour les données. Ce socle commun garde les types et les règles métier cohérents d'un bout à l'autre. Pour les clients en France, le travail à distance reste simple : je suis francophone, basé à Antananarivo en UTC+3, avec plusieurs heures de recouvrement chaque jour.\n\nMon TJM indicatif est de 350 €/jour. Le devis précise le périmètre, les livrables et les critères de validation avant le démarrage. Vous pouvez vérifier le niveau attendu dans le portfolio, puis choisir la spécialisation adaptée : React/Next.js, Node.js/API, Supabase ou agents IA."
@@ -1430,6 +1438,10 @@
           "heroText": "Vous cherchez un développeur Node.js à Madagascar pour créer ou reprendre une API backend ? Je suis indépendant, basé à Antananarivo, et je construis des API REST et GraphQL, des services temps réel et des intégrations sur mesure, pas des slides. Vous travaillez avec une personne identifiable et un portfolio vérifiable, pas avec un pool d'agence anonyme.",
           "sections": [
             {
+              "title": "Un backend Node.js maîtrisé, même avec des agents IA",
+              "content": "Les agents IA peuvent accélérer l'écriture d'API ou de tests, mais les données, les permissions et la fiabilité du backend restent sous ma responsabilité. Je détaille ce mode de travail dans [mon approche Vibe Coding et architecture clean](/vibe-coding-developpeur)."
+            },
+            {
               "title": "Développeur Node.js à Madagascar, identifiable et direct",
               "content": "Sur les requêtes \"développeur node js madagascar\" et \"développeur node.js madagascar\", la première page de Google renvoie surtout des agences, des fiches métier et des job boards (Code-Talent, MadaAllStar, Indeed, Freelancer, Maasil). Peu de freelances individuels montrent un portfolio public et vérifiable.\n\nJe comble cette faille : vous parlez directement à la personne qui écrira le code, sans intermédiaire commercial ni rotation de prestataires. Mon travail backend est documenté à travers des projets réels comme paidmada (backend mobile money), scalapp et alchiimy. Vous savez qui développe, vous voyez ce qui a déjà tourné en production, et vous gardez un interlocuteur unique du devis à la livraison."
             },
@@ -1561,7 +1573,7 @@
         "cardTitle": "Agents IA",
         "cardDescription": "Agents IA autonomes connectés à vos outils",
         "isLanding": true,
-        "seoTitle": "Agent IA Madagascar : développement sur mesure | Manda",
+        "seoTitle": "Agent IA Madagascar : développement sur mesure",
         "seoDescription": "Agent IA à Madagascar pour le support, la prospection et les documents : intégration CRM et n8n, garde-fous, validation humaine et suivi en production.",
         "updatedAt": "2026-09-08",
         "landing": {
@@ -1711,7 +1723,7 @@
         "cardTitle": "Freelance ou agence offshore ?",
         "cardDescription": "Le comparatif honnête pour bien choisir",
         "isLanding": true,
-        "seoTitle": "Freelance ou agence offshore Madagascar : comparatif 2026 | Manda",
+        "seoTitle": "Freelance ou agence offshore Madagascar : comparatif 2026",
         "seoDescription": "Freelance senior ou agence offshore à Madagascar ? Comparatif honnête : coûts réels sur 3 ans, transparence, délais, qualité. Devis sous 48h, portfolio vérifiable.",
         "landing": {
           "heroText": "Une agence offshore vous apporte une structure et du backup, mais avec des intermédiaires, des développeurs anonymes et parfois de la sous-traitance cachée. Un freelance senior offshore identifiable vous donne le même avantage de coût (TJM 350 €/jour, contre 400 à 700 €/jour en Europe) sans la marge ni l'opacité. Le bon choix dépend de la taille du projet et du niveau de transparence que vous attendez. Voici la comparaison factuelle pour décider.",
@@ -2005,7 +2017,7 @@
         "cardTitle": "Performance & coûts cloud",
         "cardDescription": "Auditer, accélérer et fiabiliser un site existant",
         "isLanding": true,
-        "seoTitle": "Audit performance site web & coûts cloud | Manda",
+        "seoTitle": "Audit performance site web & coûts cloud",
         "seoDescription": "Audit et optimisation d'un site web existant : vitesse, Core Web Vitals, cache, requêtes API, Vercel, Supabase et réduction des coûts cloud.",
         "updatedAt": "2026-08-26",
         "landing": {
@@ -2143,7 +2155,7 @@
         "cardTitle": "SEO + GEO",
         "cardDescription": "Ranker sur Google ET être cité par les IA",
         "isLanding": true,
-        "seoTitle": "Consultant SEO + GEO : Google et recherche IA | Manda",
+        "seoTitle": "Consultant SEO + GEO : Google et recherche IA",
         "seoDescription": "Consultant SEO et GEO : ranker sur Google et être cité par ChatGPT, Claude, Perplexity et les AI Overviews. Schema, llms.txt, autorité d'entité, citabilité IA.",
         "landing": {
           "heroText": "Le SEO vous fait ranker sur Google. Le GEO vous fait citer par ChatGPT, Claude, Perplexity et les Google AI Overviews. Les deux comptent désormais, et je les traite ensemble : contenu structuré, autorité d'entité, schema, llms.txt et une vraie stratégie de citabilité IA. La meilleure preuve : ce site applique tout ça à lui-même.",
@@ -2276,11 +2288,15 @@
         "cardTitle": "Forward Deployed Engineer",
         "cardDescription": "Du problème métier à la solution en prod",
         "isLanding": true,
-        "seoTitle": "Forward Deployed Engineer freelance | Manda",
+        "seoTitle": "Forward Deployed Engineer freelance",
         "seoDescription": "Forward Deployed Engineer freelance : je pars de votre problème métier, j'en discute avec vous et je livre la solution en production (agent IA, n8n, app sur mesure). Devis sous 48h.",
         "landing": {
           "heroText": "Un Forward Deployed Engineer ne livre pas du code isolé : il va au contact du besoin métier et construit la solution qui le résout. C'est ma façon de travailler. Je pars de votre problème (du temps perdu sur une tâche, un process manuel, un produit à sortir), j'en discute avec vous, puis je conçois et mets en production la solution concrète : agent IA, automatisation n8n, application sur mesure. Entre le développeur, le consultant et le product builder, avec un livrable qui tourne, pas un slide.",
           "sections": [
+            {
+              "title": "Quand l'IA accélère la réalisation",
+              "content": "Sur une mission FDE, j'utilise les agents IA pour réduire le temps entre le besoin métier et un premier livrable vérifiable. L'architecture, la revue du code et la mise en production restent pilotées par un développeur : c'est mon approche du [Vibe Coding à la portée d'un développeur](/vibe-coding-developpeur)."
+            },
             {
               "title": "C'est quoi un Forward Deployed Engineer",
               "content": "Un Forward Deployed Engineer (FDE) est un développeur qui travaille très près du client et du métier pour construire vite des solutions concrètes. Il se situe entre plusieurs rôles : développeur, consultant technique, product builder, intégrateur IA et ingénieur terrain.\n\nLe terme a été popularisé par Palantir, puis adopté par les labs IA et les grandes entreprises (OpenAI, Anthropic, Salesforce) : les offres de FDE ont explosé en un an. La différence avec un développeur classique tient en une phrase : il ne code pas une spec en silo, il résout un problème métier avec une solution qui colle au besoin réel."

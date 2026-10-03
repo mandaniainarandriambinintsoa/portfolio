@@ -13,7 +13,7 @@
       "description": "Contact Mandaniaina Randriambinintsoa for your automation projects, no-code development and AI integration."
     },
     "quiz": {
-      "title": "Automation Quiz | Find the Perfect Solution for Your Business — Manda",
+      "title": "Automation Quiz | Find the Perfect Solution for Your Business",
       "description": "Answer 5 questions and discover which type of automation best fits your business. Personalized result in 2 minutes."
     }
   },
@@ -91,7 +91,7 @@
         "cardTitle": "AI Automation Consulting",
         "cardDescription": "Practical AI workflows for small business operations",
         "isLanding": true,
-        "seoTitle": "AI Automation Consultant for Small Business | Manda",
+        "seoTitle": "AI Automation Consultant for Small Business",
         "seoDescription": "AI automation consultant for US small businesses. Practical AI agents, CRM workflows and API integrations built with controls and measurable outcomes.",
         "landing": {
           "heroText": "I help US small businesses turn repetitive operations into reliable AI-assisted workflows. We start with one measurable bottleneck, map the people and tools involved, then deploy the smallest production system that solves it: lead qualification, customer support, document processing, CRM updates, reporting or a custom internal tool. You work directly with the consultant who scopes, builds and monitors the solution.",
@@ -411,7 +411,7 @@
         "cardTitle": "N8N Automation",
         "cardDescription": "Custom workflows, scraping, AI agents, eliminate repetitive manual work.",
         "isLanding": true,
-        "seoTitle": "N8N Expert & Automation Madagascar | Custom Workflows — Manda",
+        "seoTitle": "N8N Expert & Automation Madagascar | Custom Workflows",
         "seoDescription": "N8N automation expert in Madagascar. Custom workflows, API integrations, scraping and AI agents. Optimize your business processes. Free quote.",
         "landing": {
           "heroText": "Your teams are spending hours on repetitive tasks? As an N8N expert based in Antananarivo, I design custom automation workflows that eliminate manual work and connect all your business tools — CRM, billing, email, databases.",
@@ -612,6 +612,10 @@
           ],
           "sections": [
             {
+              "title": "AI-assisted React development",
+              "content": "Coding agents can accelerate a React feature or MVP, while I remain responsible for architecture, review and tests. See my [AI-assisted software development approach](/en/vibe-coding-developpeur) for how this fits into a maintainable product."
+            },
+            {
               "title": "Why React and Next.js in 2026?",
               "content": "React is the world's most popular JavaScript library for building user interfaces. According to the [Stack Overflow Developer Survey](https://survey.stackoverflow.co/), React remains the dominant web framework among professional developers, far ahead of Angular and Vue.js.\n\nNext.js, Vercel's React framework, adds server-side rendering (SSR/SSG), automatic routing, image optimization and instant deployment. In 2026, [Next.js powers Netflix, TikTok, Twitch, Notion and thousands of SaaS products](https://nextjs.org/showcase).\n\nWhy this matters for your project: a Next.js application loads in under one second (LCP < 1s), ranks perfectly on Google thanks to server rendering, and scales from 10 to 100,000 users without architecture changes."
             },
@@ -769,7 +773,7 @@
         "cardTitle": "Next.js + Supabase",
         "cardDescription": "Complete SaaS apps: auth, PostgreSQL, real-time API, storage.",
         "isLanding": true,
-        "seoTitle": "Hire a Freelance Next.js & Supabase Developer | Manda",
+        "seoTitle": "Hire a Freelance Next.js & Supabase Developer",
         "seoDescription": "Hire a freelance Next.js and Supabase developer for a SaaS MVP, authentication, PostgreSQL, payments and dashboards. Scoped delivery in 2–4 weeks.",
         "landing": {
           "heroText": "Want to launch a SaaS or web application with a solid backend without breaking the budget? Next.js + Supabase is the most efficient stack in 2026 for building scalable products. Based in Antananarivo, I build complete applications — authentication, database, real-time API — at rates up to 2x lower than US/European freelancers.",
@@ -938,7 +942,7 @@
         "cardTitle": "Python & AI (FastAPI, LLM)",
         "cardDescription": "AI apps, automation scripts, Python backend APIs. Claude/GPT models integrated.",
         "isLanding": true,
-        "seoTitle": "Python & AI Developer in Madagascar | FastAPI, Claude, GPT — Manda",
+        "seoTitle": "Python & AI Developer in Madagascar | FastAPI, Claude, GPT",
         "seoDescription": "Freelance Python and AI developer in Antananarivo, Madagascar. FastAPI, Claude Code, GPT, automation, scraping, AI agents. Competitive rates. Free quote.",
         "landing": {
           "heroText": "Want to integrate artificial intelligence into your product or automate complex processes with Python? Based in Antananarivo, I build AI applications, high-performance APIs with FastAPI, and intelligent agents connected to Claude and GPT. 20+ projects delivered, rates up to 2x lower than US/European freelancers.",
@@ -1111,7 +1115,7 @@
         "cardTitle": "Claude Code + n8n",
         "cardDescription": "AI agents, self-building workflows, prompt engineering. Claude Code orchestrates, n8n executes.",
         "isLanding": true,
-        "seoTitle": "Claude Code + n8n Developer — Freelance Madagascar | Manda",
+        "seoTitle": "Claude Code + n8n Developer — Freelance Madagascar",
         "seoDescription": "Freelance Claude Code + n8n developer based in Antananarivo. AI agents, MCP automations, prompt engineering. Competitive rates for EU market. 20+ projects shipped.",
         "landing": {
           "heroText": "You have an AI agent to build, n8n workflows to industrialize, or an entire product to ship with Claude Code? Based in Antananarivo, I design Claude Code + n8n systems for European startups and SMBs — from prototype to production runtime. Claude Code writes and orchestrates, n8n executes, and you keep a documented and self-hostable stack.",
@@ -1309,11 +1313,15 @@
         "cardTitle": "Full stack freelancer",
         "cardDescription": "Websites, SaaS, React, Node.js and AI from Madagascar",
         "isLanding": true,
-        "seoTitle": "Freelance Full Stack Web Developer Madagascar | Manda",
+        "seoTitle": "Freelance Full Stack Web Developer Madagascar",
         "seoDescription": "Freelance full stack web developer in Madagascar: React, Next.js, Node.js, Supabase and AI. One direct contact for your website or SaaS.",
         "landing": {
           "heroText": "I build websites, SaaS products and business applications end to end: React or Next.js interfaces, Node.js APIs, Supabase data and AI automation when it serves the product. You work directly with the person who scopes, builds, tests and deploys the project.",
           "sections": [
+            {
+              "title": "JavaScript and AI-assisted delivery",
+              "content": "I use coding agents where they help with implementation, without delegating ownership of architecture or production checks. My [vibe coding service](/en/vibe-coding-developpeur) explains how that works for a real application."
+            },
             {
               "title": "Why work with a freelance full stack web developer",
               "content": "A freelance full stack web developer can own the complete delivery path: scoping, interface, API, data, deployment and follow-up. You avoid routing every decision through a sales contact, project manager, front-end team and back-end team.\n\nMy main stack is JavaScript and TypeScript: React and Next.js for the interface, Node.js for APIs, PostgreSQL or Supabase for data. That shared foundation keeps types and business rules consistent from end to end. Remote work with European clients is straightforward: I work in French and English from Antananarivo on UTC+3, with several hours of daily overlap.\n\nMy indicative day rate is €350. The quote defines scope, deliverables and acceptance criteria before work starts. You can check the expected level in the portfolio, then choose the relevant specialization: React/Next.js, Node.js/API, Supabase or AI agents."
@@ -1460,6 +1468,10 @@
           "heroText": "I'm an independent Node.js backend developer based in Antananarivo. I build REST and GraphQL APIs, real-time services and custom integrations, not slide decks. You work with one named, accountable person and a verifiable portfolio, not an anonymous agency pool.",
           "sections": [
             {
+              "title": "Node.js delivery with coding agents and human ownership",
+              "content": "Agents can speed up API implementation and testing, but I still own data boundaries, permissions and backend reliability. Read about my [AI-assisted development and clean architecture approach](/en/vibe-coding-developpeur)."
+            },
+            {
               "title": "A named Node.js freelancer, not an anonymous agency",
               "content": "Search \"node.js developer madagascar\" and Google's first page returns only agencies and job boards (Code-Talent, MadaAllStar, Indeed, Freelancer, Maasil). Not a single individual freelancer with a public, verifiable portfolio.\n\nI fill that gap: you talk directly to the person who writes the code, with no sales layer and no rotating subcontractors. My backend work is documented through real projects like paidmada (a mobile money backend), scalapp and alchiimy. You know who builds it, you can see what has already run in production, and you keep one single point of contact from quote to delivery."
             },
@@ -1591,7 +1603,7 @@
         "cardTitle": "AI Agents",
         "cardDescription": "Autonomous AI agents wired to your tools",
         "isLanding": true,
-        "seoTitle": "AI Agent Developer for Hire in Madagascar | Manda",
+        "seoTitle": "AI Agent Developer for Hire in Madagascar",
         "seoDescription": "Hire an AI agent developer in Madagascar: autonomous agents for support, prospecting and data processing. Built on n8n, Claude, GPT. Get a free project quote.",
         "landing": {
           "heroText": "An AI agent does more than reply, it reasons, decides and acts autonomously through your tools (APIs, databases, the web). I build reliable agents, framed by proper guardrails, to automate your business processes from Madagascar for clients worldwide.",
@@ -1728,7 +1740,7 @@
         "cardTitle": "Freelance or offshore agency?",
         "cardDescription": "The honest comparison to choose right",
         "isLanding": true,
-        "seoTitle": "Freelance or Offshore Agency Madagascar: 2026 Comparison | Manda",
+        "seoTitle": "Freelance or Offshore Agency Madagascar: 2026 Comparison",
         "seoDescription": "Senior freelance or offshore agency in Madagascar? An honest comparison: real 3-year costs, transparency, timelines, quality. Quote within 48h, verifiable portfolio.",
         "landing": {
           "heroText": "An offshore agency gives you structure and backup, but with intermediaries, anonymous developers and sometimes hidden subcontracting. An identifiable senior offshore freelance gives you the same cost advantage (€350/day, versus €400 to €700/day in Europe) without the markup or the opacity. The right choice depends on project size and the level of transparency you expect. Here is the factual comparison to decide.",
@@ -2022,7 +2034,7 @@
         "cardTitle": "Performance & cloud costs",
         "cardDescription": "Audit, speed up and harden an existing website",
         "isLanding": true,
-        "seoTitle": "Website Performance Optimization Service | Manda",
+        "seoTitle": "Website Performance Optimization Service",
         "seoDescription": "Website performance optimization for existing sites: Core Web Vitals, caching, API requests, Vercel, Supabase and cloud cost reduction.",
         "updatedAt": "2026-08-26",
         "landing": {
@@ -2160,7 +2172,7 @@
         "cardTitle": "SEO + GEO",
         "cardDescription": "Rank on Google AND get cited by AI",
         "isLanding": true,
-        "seoTitle": "SEO + GEO Consultant: Google and AI search | Manda",
+        "seoTitle": "SEO + GEO Consultant: Google and AI search",
         "seoDescription": "SEO and GEO consultant: rank on Google and get cited by ChatGPT, Claude, Perplexity and AI Overviews. Schema, llms.txt, entity authority, AI citability.",
         "landing": {
           "heroText": "SEO gets you ranking on Google. GEO gets you cited by ChatGPT, Claude, Perplexity and Google AI Overviews. Both matter now, and I handle them together: structured content, entity authority, schema, llms.txt and a real AI citability strategy. The best proof: this site applies all of it to itself.",
@@ -2293,11 +2305,15 @@
         "cardTitle": "Forward Deployed Engineer",
         "cardDescription": "Remote AI delivery for US product teams",
         "isLanding": true,
-        "seoTitle": "Forward Deployed AI Engineer for US Teams | Manda",
+        "seoTitle": "Forward Deployed AI Engineer for US Teams",
         "seoDescription": "Remote Forward Deployed AI Engineer for US startups: AI agents, n8n automations and custom apps shipped from business problem to production.",
         "landing": {
           "heroText": "I work remotely as a contract Forward Deployed AI Engineer for US startups and product teams. I start with the operational problem, work directly with the people who own it, then design, build and deploy the complete solution: an AI agent, an n8n automation, an API integration or a custom Next.js application. You get one technical partner from discovery to production, with working software and measurable outcomes rather than a prototype handoff.",
           "sections": [
+            {
+              "title": "Using AI agents to shorten the path to delivery",
+              "content": "For a forward-deployed engagement, I use coding agents to move from a business problem to a testable release faster. Architecture, code review and deployment remain developer-owned; see my [vibe coding and clean architecture approach](/en/vibe-coding-developpeur)."
+            },
             {
               "title": "What is a Forward Deployed AI Engineer?",
               "content": "A Forward Deployed Engineer (FDE) works close to customers and operators to turn a business problem into production software. The role combines software engineering, technical consulting, product judgment and implementation. A Forward Deployed AI Engineer adds AI systems, workflow automation and model integration to that delivery responsibility.\n\nThe title was popularized by Palantir and is now used by AI companies including OpenAI and Anthropic. Unlike a developer waiting for a fixed specification, an FDE helps discover the right solution, builds it inside the customer's environment and remains accountable for whether it works in practice."
