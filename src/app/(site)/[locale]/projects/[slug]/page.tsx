@@ -311,6 +311,26 @@ export default async function ProjectPage({
               ))}
             </dl>
 
+            {projectSeo.gallery ? (
+              <div className="space-y-6 mb-10">
+                {projectSeo.gallery.map((visual) => (
+                  <figure key={visual.src} className="overflow-hidden rounded-2xl border border-white/10">
+                    <Image
+                      src={visual.src}
+                      alt={visual.alt}
+                      width={visual.width}
+                      height={visual.height}
+                      sizes="(max-width: 768px) 100vw, 896px"
+                      className="h-auto w-full"
+                    />
+                    <figcaption className="bg-white/[0.03] px-5 py-4 text-sm leading-relaxed text-slate-400">
+                      {visual.caption}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            ) : null}
+
             <div className="space-y-8 mb-10">
               {projectSeo.sections.map((section) => (
                 <div key={section.title}>

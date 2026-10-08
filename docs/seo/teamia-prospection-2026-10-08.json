@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-08",
+  "provider": "SerpApi",
+  "implementationEvidence": {
+    "sourceProject": "teamia/prospection-dashboard",
+    "reviewedFiles": [
+      "README.md",
+      "components/Dashboard.tsx",
+      "components/CampaignsPanel.tsx",
+      "lib/types.ts",
+      "lib/prospects.ts",
+      "lib/auth.ts",
+      "app/api/campaigns/route.ts",
+      "app/api/campaigns/run/route.ts",
+      "app/api/companies/route.ts",
+      "app/api/ingest/route.ts",
+      "app/api/prospects/route.ts"
+    ],
+    "screenshots": "Actual UI run in an isolated source copy with no environment files and synthetic prospect fixtures. External browser requests blocked. No production database accessed.",
+    "scope": "Dashboard and its API verified from source; no live commercial performance or production security certification claimed.",
+    "structuredData": "Removed the shared, unsupported zero-price software offer. Case studies do not establish that client applications are free to acquire. No software rich-result eligibility is claimed."
+  },
+  "market": "France",
+  "language": "fr",
+  "primaryKeyword": "logiciel de prospection B2B sur mesure",
+  "secondaryKeywords": [
+    "qualification leads IA",
+    "automatisation prospection commerciale IA",
+    "prospection commerciale B2B",
+    "dashboard prospection commerciale"
+  ],
+  "intent": "Custom development case study, with the dashboard separated from the existing n8n workflow page.",
+  "interpretation": [
+    "The broad automation query returned guides and software vendors; the case study differentiates through a specific delivered application and real interface evidence.",
+    "Qualification results mix conversational qualification and scoring: describe the actual research/review process, not a chatbot or predictive model.",
+    "Trends related queries showed B2B as a relevant topic. The rising training query is outside this project scope and was rejected.",
+    "Trends related topics included irrelevant terms and were not used as demand evidence.",
+    "The exact custom-software and dashboard queries timed out after a bounded retry. The primary long-tail is an editorial choice within the observed B2B cluster, not a validated volume or ranking opportunity."
+  ],
+  "limitations": [
+    "SerpApi Google Search and Google Trends are not Google Ads Keyword Planner. No monthly search volumes, CPC or keyword difficulty were obtained.",
+    "No ranking, traffic, conversion or revenue improvement is claimed.",
+    "English copy is localized; no separate English-market keyword research was performed."
+  ],
+  "results": [
+    {
+      "query": "logiciel de prospection B2B sur mesure",
+      "engine": "google",
+      "dataType": null,
+      "checkedAt": null,
+      "status": "timeout"
+    },
+    {
+      "query": "automatisation prospection commerciale IA",
+      "engine": "google",
+      "dataType": null,
+      "checkedAt": "2026-10-08T13:07:54.292Z",
+      "status": "Success",
+      "organic": [
+        {
+          "position": 1,
+          "title": "L'intelligence artificielle au service de la prospection et ...",
+          "url": "https://www.francenum.gouv.fr/guides-et-conseils/intelligence-artificielle/comprendre-et-adopter-lia/lintelligence-artificielle-4"
+        },
+        {
+          "position": 2,
+          "title": "Prospection IA : 8 usages concrets en B2B - Mi4",
+          "url": "https://mi4.fr/blog/prospection-ia"
+        },
+        {
+          "position": 3,
+          "title": "Les 10 outils d'IA incontournables pour les commerciaux",
+          "url": "https://www.orsys.fr/orsys-lemag/10-outils-ia-incontournables-pour-les-commerciaux/"
+        },
+        {
+          "position": 4,
+          "title": "L'IA au service de la prospection commerciale",
+          "url": "https://www.ibm.com/fr-fr/think/topics/ai-sales-prospecting"
+        },
+        {
+          "position": 5,
+          "title": "Agent de prospection IA pour les équipes commerciales",
+          "url": "https://www.hubspot.fr/products/sales/ai-prospecting-agent"
+        },
+        {
+          "position": 6,
+          "title": "Automatiser la prospection commerciale avec Chat...",
+          "url": "https://datascientist.fr/blog/automatiser-la-prospection-commerciale-avec-chatgpt-search"
+        },
+        {
+          "position": 7,
+          "title": "Comment utiliser l'IA dans sa prospection ? | Kompass",
+          "url": "https://fr.solutions.kompass.com/comment-utiliser-lia-dans-sa-prospection-2/"
+        },
+        {
+          "position": 8,
+          "title": "Prospection IA : comment l'utiliser vraiment en B2B (2026)",
+          "url": "https://www.oltega.fr/blog/prospection-ia"
+        }
+      ],
+      "questions": [
+        "Quelle IA pour la prospection commerciale ?",
+        "Quelle est la différence entre l'IA et l'automatisation ?",
+        "Comment puis-je automatiser ma prospection ?",
+        "Quelle IA pour le commerce ?"
+      ],
+      "relatedSearches": [
+        "IA prospection commerciale",
+        "Agent IA prospection commerciale",
+        "Prospection téléphonique IA",
+        "IA pour trouver des clients",
+        "Waalaxy",
+        "Lemlist",
+        "IA commercial",
+        "La Growth Machine"
+      ]
+    },
+    {
+      "query": "qualification leads IA",
+      "engine": "google",
+      "dataType": null,
+      "checkedAt": "2026-10-08T13:05:20.578Z",
+      "status": "Success",
+      "organic": [
+        {
+          "position": 1,
+          "title": "QualifLeads: Qualification de leads par IA en 30 secondes",
+          "url": "https://qualifleads.ai/"
+        },
+        {
+          "position": 2,
+          "title": "Qualifier des leads par l'IA : quelles sont les meilleures ...",
+          "url": "https://www.edilead.com/qualifier-des-leads-par-lia-quelles-sont-les-meilleures-techniques-pour-attirer-des-prospects-de-qualite/actualites-lead-et-prospects-qualifies/"
+        },
+        {
+          "position": 3,
+          "title": "Qualification de leads par IA avec AVA",
+          "url": "https://leads-farmer.com/solutions/qualification-de-leads/?srsltid=AU7gw4WOuL7rCcYkt2WvqI3xT61BM1DNxJs-y96xDGmFJmmCAHuKnawM"
+        },
+        {
+          "position": 4,
+          "title": "L'IA au service de la génération de leads : outils, stratégies ...",
+          "url": "https://www.vtiger.com/fr/blog/ai-for-lead-generation/"
+        },
+        {
+          "position": 5,
+          "title": "Comment la qualification de leads IA transforme vos ventes",
+          "url": "https://www.botlib.ai/qualification-de-leads-ia"
+        },
+        {
+          "position": 6,
+          "title": "Leads qualifiés par IA : comment nous vérifions chaque prospect",
+          "url": "https://www.one-online.fr/generation-leads-ia"
+        },
+        {
+          "position": 7,
+          "title": "Agent IA de qualification de leads le guide complet pour PME",
+          "url": "https://www.automatisation-intelligence-artificielle.fr/guide-agent-commercial-qualification-leads/"
+        },
+        {
+          "position": 8,
+          "title": "Qualification de leads par IA sur WhatsApp - Actyve",
+          "url": "https://actyve.ai/blog/qualification-leads-ia-whatsapp"
+        },
+        {
+          "position": 9,
+          "title": "▷ Automatiser la qualification des leads : méthode et outils",
+          "url": "https://airagent.fr/guide/qualification-leads-automatisation/"
+        }
+      ],
+      "questions": [
+        "Comment qualifier des leads ?",
+        "Quelle est la meilleure certification IA ?",
+        "Combien coûte un lead qualifié ?",
+        "Qu'est-ce que la certification IA ?"
+      ]
+    },
+    {
+      "query": "dashboard prospection commerciale",
+      "engine": "google",
+      "dataType": null,
+      "checkedAt": null,
+      "status": "timeout"
+    },
+    {
+      "query": "prospection commerciale",
+      "engine": "google_trends",
+      "dataType": "RELATED_QUERIES",
+      "checkedAt": "2026-10-08T13:05:52.818Z",
+      "status": "Success",
+      "relatedQueries": {
+        "top": [
+          {
+            "query": "prospection commerciale b2b",
+            "value": "100"
+          },
+          {
+            "query": "formation prospection commerciale",
+            "value": "98"
+          }
+        ],
+        "rising": [
+          {
+            "query": "formation prospection commerciale",
+            "value": "+100 %"
+          }
+        ]
+      }
+    },
+    {
+      "query": "prospection commerciale",
+      "engine": "google_trends",
+      "dataType": "RELATED_TOPICS",
+      "checkedAt": "2026-10-08T13:05:53.808Z",
+      "status": "Success"
+    }
+  ]
+}

@@ -30,12 +30,6 @@ export default function SoftwareAppJsonLd({
         applicationCategory:
           category === "workflow" ? "UtilitiesApplication" : "BusinessApplication",
         operatingSystem: "Web",
-        offers: {
-          "@type": "Offer",
-          price: "0",
-          priceCurrency: "EUR",
-          availability: "https://schema.org/OnlineOnly",
-        },
         author: {
           "@type": "Person",
           name: PERSONAL_INFO.name,

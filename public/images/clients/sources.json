@@ -2,6 +2,12 @@
   "checkedAt": "2026-10-08",
   "logos": [
     {
+      "company": "Multi Solutions La Réunion",
+      "file": "multisolutions-white.svg",
+      "source": "Logo reference supplied by the user on 2026-10-08.",
+      "adaptation": "Simplified vector tracing of the MS monogram and check mark, converted to white without the background or wordmark; the company name is displayed alongside it."
+    },
+    {
       "company": "ARPON",
       "file": "arpon-white.svg",
       "source": "Logo reference supplied by the user on 2026-10-08.",
@@ -23,7 +29,6 @@
   ],
   "pendingSources": [
     "ImmoPrive: app.immoprive.fr currently serves a generic Bubble page, not a usable company logo.",
-    "Yalee Creek Ranch: no verified public logo found.",
-    "Multisolution La Réunion: company website needs confirmation before choosing a logo."
+    "Yalee Creek Ranch: no verified public logo found."
   ]
 }

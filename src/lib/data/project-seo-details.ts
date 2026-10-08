@@ -1,4 +1,5 @@
 import type { Locale } from "@/i18n/config";
+import { teamiaProspectionCaseStudy } from "./teamia-prospection-case-study";
 
 type ProjectSeoFact = {
   label: string;
@@ -31,9 +32,11 @@ export type ProjectSeoDetails = {
   sections: ProjectSeoSection[];
   relatedLinks: ProjectSeoLink[];
   faq: ProjectSeoFaq[];
+  gallery?: { src: string; alt: string; caption: string; width: number; height: number }[];
 };
 
 const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
+  "logiciel-prospection-b2b-teamia": teamiaProspectionCaseStudy,
   "optimisation-performance-manda-ia": {
     fr: {
       metaTitle: "Audit performance Next.js : étude de cas manda-ia.com",
@@ -1516,6 +1519,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
       relatedLinks: [
         { label: "Service d'automatisation n8n", href: "/services/automatisation-n8n-madagascar", description: "Concevoir des workflows n8n fiables, connectés aux outils métier et documentés." },
+        { label: "Cockpit de prospection TeamIA", href: "/projects/logiciel-prospection-b2b-teamia", description: "Voir l’application de configuration des campagnes et de validation humaine des prospects." },
         { label: "Plateforme TeamIA", href: "/projects/teamia", description: "Voir la plateforme métier où s'inscrit cette automatisation." },
         { label: "Me contacter pour un système similaire", href: "/contact", description: "Parlons des étapes de prospection encore manuelles dans votre processus." },
       ],
@@ -1546,6 +1550,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
       relatedLinks: [
         { label: "n8n automation service", href: "/en/services/remote-n8n-automation-consultant", description: "Reliable n8n workflows connected to business tools." },
+        { label: "TeamIA prospecting dashboard", href: "/en/projects/logiciel-prospection-b2b-teamia", description: "Explore the application for campaign settings and human review of prospects." },
         { label: "TeamIA platform", href: "/en/projects/teamia", description: "See the business platform behind this automation." },
         { label: "Discuss a similar system", href: "/en/contact", description: "Talk through the manual steps in your current prospecting process." },
       ],

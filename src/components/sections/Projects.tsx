@@ -21,7 +21,7 @@ const HOME_PROJECT_ORDER = [
   "meckia",
   "madavoyage",
   "garagiste",
-  "bati-diaspora",
+  "logiciel-prospection-b2b-teamia",
   "geo-seo-boost",
   "international-opportunity-agent-n8n",
   "factumation",

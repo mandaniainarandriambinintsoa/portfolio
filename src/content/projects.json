@@ -1,5 +1,25 @@
 [
   {
+    "id": "a49e8015-3dea-4ff8-a61f-70eb9e30b437",
+    "slug": "logiciel-prospection-b2b-teamia",
+    "title_fr": "TeamIA Prospection B2B",
+    "title_en": "TeamIA B2B Prospecting",
+    "subtitle_fr": "Logiciel de prospection sur mesure, qualification IA et validation humaine",
+    "subtitle_en": "Custom prospecting software, AI qualification and human review",
+    "description_fr": "Conception et développement du cockpit privé de prospection B2B de TeamIA : configuration des campagnes et segments, réception des prospects enrichis par n8n et Lemlist, recherche et filtres, analyse IA, édition des messages et validation humaine. L’application Next.js et React s’appuie sur PostgreSQL/Supabase, des API d’ingestion et une déduplication des entreprises. Les captures montrent l’interface réelle avec des données fictives. La validation sauvegarde une décision et ne déclenche aucun envoi d’email.",
+    "description_en": "Designed and built TeamIA’s private B2B prospecting dashboard: campaign and segment settings, ingestion of prospects enriched through n8n and Lemlist, search and filters, AI research, message editing and human review. The Next.js and React application uses PostgreSQL/Supabase, ingestion APIs and company deduplication. Screenshots show the real interface with fictional data. Approval saves a decision and does not send an email.",
+    "tags": ["Next.js", "n8n", "Lemlist", "Supabase", "IA"],
+    "link": null,
+    "featured": true,
+    "category": "webapp",
+    "image": "/images/projects/teamia-prospection-cockpit.webp",
+    "workflow_file": null,
+    "sort_order": 1,
+    "published": true,
+    "created_at": "2026-10-08T00:00:00.000000+00:00",
+    "updated_at": "2026-10-08T00:00:00.000000+00:00"
+  },
+  {
     "id": "6eae9acf-86c7-4d50-b837-082370b13582",
     "slug": "teamia",
     "title_fr": "TeamIA",
