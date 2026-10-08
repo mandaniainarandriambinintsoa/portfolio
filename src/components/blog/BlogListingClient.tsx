@@ -69,7 +69,7 @@ export default function BlogListingClient({
   const categoryLabels: Record<string, string> = {
     Automatisation: prefix ? "Automation" : "Automatisation",
     "IA / AI": prefix ? "AI" : "IA",
-    "D?veloppement / Development": prefix ? "Development" : "D?veloppement",
+    "Développement / Development": prefix ? "Development" : "Développement",
     Madagascar: "Madagascar",
     Business: "Business",
   };
