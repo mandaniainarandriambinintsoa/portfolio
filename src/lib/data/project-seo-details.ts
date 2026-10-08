@@ -696,7 +696,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
           label: "Prospection B2B avec n8n et Lemlist",
           href: "/projects/automatisation-prospection-n8n-lemlist",
           description:
-            "Sourcing, qualification et pr?paration de messages avec validation humaine.",
+            "Sourcing, qualification et préparation de messages avec validation humaine.",
         },
         {
           label: "Showcase d'automatisations commerciales",

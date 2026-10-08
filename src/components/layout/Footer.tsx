@@ -228,11 +228,11 @@ export default function Footer({
     {
       key: "automation",
       label:
-        locale === "fr" ? "Automatiser les op?rations" : "Automate operations",
+        locale === "fr" ? "Automatiser les opérations" : "Automate operations",
     },
     {
       key: "advice",
-      label: locale === "fr" ? "Choisir et am?liorer" : "Choose and improve",
+      label: locale === "fr" ? "Choisir et améliorer" : "Choose and improve",
     },
   ];
 
