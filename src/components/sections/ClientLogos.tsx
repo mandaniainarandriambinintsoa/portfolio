@@ -1,18 +1,13 @@
+import Image from "next/image";
+
 type ClientLogoItem = {
   name: string;
-  color: string;
+  logo?: string;
 };
 
 type ClientLogosDict = {
   label: string;
   items: ClientLogoItem[];
-};
-
-const dotColorMap: Record<string, string> = {
-  indigo: "bg-indigo-400",
-  emerald: "bg-emerald-400",
-  blue: "bg-blue-400",
-  purple: "bg-purple-400",
 };
 
 export default function ClientLogos({ dict }: { dict: ClientLogosDict }) {
@@ -24,25 +19,31 @@ export default function ClientLogos({ dict }: { dict: ClientLogosDict }) {
       <p className="mx-auto max-w-[20rem] text-center text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 mb-6">
         {dict.label}
       </p>
-      <div
-        className="flex flex-wrap items-center justify-center gap-x-6 gap-y-5 sm:gap-x-12"
+      <ul
+        className="flex flex-wrap items-center justify-center gap-x-6 gap-y-6 sm:gap-x-12"
       >
         {dict.items.map((item) => (
-          <div
+          <li
             key={item.name}
-            className="flex min-w-0 basis-full items-center justify-center text-slate-300 hover:text-white transition-colors duration-300 sm:basis-auto"
-            style={{ gap: "0.625rem" }}
+            className="flex min-w-0 basis-full items-center justify-center gap-3 text-slate-300 sm:basis-auto"
           >
-            <span
-              className={`inline-block w-2 h-2 rounded-full ${dotColorMap[item.color] || dotColorMap.indigo} opacity-80`}
-              aria-hidden="true"
-            />
+            {item.logo ? (
+              <Image
+                src={item.logo}
+                alt=""
+                aria-hidden="true"
+                width={36}
+                height={36}
+                unoptimized
+                className="size-8 shrink-0 object-contain sm:size-9"
+              />
+            ) : null}
             <span className="text-sm sm:text-lg md:text-xl font-bold tracking-tight break-words [overflow-wrap:anywhere]">
               {item.name}
             </span>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }

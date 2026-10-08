@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-08",
+  "logos": [
+    {
+      "company": "ARPON",
+      "file": "arpon-white.svg",
+      "source": "Logo reference supplied by the user on 2026-10-08.",
+      "adaptation": "Simplified vector tracing of the white A from the supplied LinkedIn thumbnail; purple background omitted."
+    },
+    {
+      "company": "TeamIA",
+      "file": "teamia-white.svg",
+      "source": "https://www.teamia.ai/images/teamia/brand/teamia-mark.svg",
+      "adaptation": "Existing brand monogram paths preserved; fills changed to white."
+    },
+    {
+      "company": "GetHumanCall",
+      "file": "gethumancall-white.svg",
+      "source": "https://cdn.prod.website-files.com/6894986ec5c21d3aac01584a/6894986ec5c21d3aac0159b2_Frame%203.svg",
+      "sourcePage": "https://www.gethumancall.com/",
+      "adaptation": "Original eight symbol paths preserved; gradients replaced with white; surrounding whitespace reduced."
+    }
+  ],
+  "pendingSources": [
+    "ImmoPrive: app.immoprive.fr currently serves a generic Bubble page, not a usable company logo.",
+    "Yalee Creek Ranch: no verified public logo found.",
+    "Multisolution La Réunion: company website needs confirmation before choosing a logo."
+  ]
+}

@@ -42,19 +42,24 @@
     "items": [
       {
         "name": "ARPON",
-        "color": "indigo"
+        "logo": "/images/clients/arpon-white.svg"
       },
       {
-        "name": "ImmoPrive",
-        "color": "blue"
+        "name": "ImmoPrive"
       },
       {
-        "name": "Yalee Creek Ranch",
-        "color": "purple"
+        "name": "Yalee Creek Ranch"
       },
       {
         "name": "GetHumanCall",
-        "color": "emerald"
+        "logo": "/images/clients/gethumancall-white.svg"
+      },
+      {
+        "name": "TeamIA",
+        "logo": "/images/clients/teamia-white.svg"
+      },
+      {
+        "name": "Multisolution La Réunion"
       }
     ]
   },
