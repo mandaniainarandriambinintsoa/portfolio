@@ -21,7 +21,15 @@ import PartnershipOpportunities, {
 
 export async function generateStaticParams() {
   const slugs = await getAllProjectSlugs();
-  return i18n.locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+  return i18n.locales.flatMap((locale) =>
+    slugs.map((slug) => ({
+      locale,
+      slug:
+        locale === "en" && slug === "tracking-visiteurs"
+          ? "visitor-tracking"
+          : slug,
+    })),
+  );
 }
 
 function projectMetadataTitle(title: string, subtitle: string) {
@@ -29,7 +37,9 @@ function projectMetadataTitle(title: string, subtitle: string) {
   const normalizedSubtitle = subtitle.trim();
   if (
     !normalizedSubtitle ||
-    normalizedTitle.localeCompare(normalizedSubtitle, undefined, { sensitivity: "accent" }) === 0
+    normalizedTitle.localeCompare(normalizedSubtitle, undefined, {
+      sensitivity: "accent",
+    }) === 0
   ) {
     return normalizedTitle;
   }
@@ -42,13 +52,17 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale: rawLocale, slug } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
   const project = await getProjectBySlug(slug, locale);
 
   if (!project) return {};
 
   const projectSeo = getProjectSeoDetails(slug, locale);
-  const metaTitle = projectSeo?.metaTitle ?? projectMetadataTitle(project.title, project.subtitle);
+  const metaTitle =
+    projectSeo?.metaTitle ??
+    projectMetadataTitle(project.title, project.subtitle);
   const metaDescription = projectSeo?.metaDescription ?? project.description;
   const prefix = locale === "fr" ? "" : "/en";
   return {
@@ -57,9 +71,9 @@ export async function generateMetadata({
     alternates: {
       canonical: `${SITE_URL}${prefix}/projects/${slug}`,
       languages: {
-        fr: `${SITE_URL}/projects/${slug}`,
-        en: `${SITE_URL}/en/projects/${slug}`,
-        "x-default": `${SITE_URL}/projects/${slug}`,
+        fr: `${SITE_URL}/projects/${slug === "visitor-tracking" ? "tracking-visiteurs" : slug}`,
+        en: `${SITE_URL}/en/projects/${slug === "tracking-visiteurs" ? "visitor-tracking" : slug}`,
+        "x-default": `${SITE_URL}/projects/${slug === "visitor-tracking" ? "tracking-visiteurs" : slug}`,
       },
     },
     openGraph: {
@@ -83,7 +97,9 @@ export default async function ProjectPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale: rawLocale, slug } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
   const dict = await getDictionary(locale);
   const project = await getProjectBySlug(slug, locale);
 
@@ -97,7 +113,9 @@ export default async function ProjectPage({
     siteMetier: dict.projects.category_site_metier,
   });
   const categoryTone = getProjectTone(project.category);
-  const workflow = project.workflowFile ? workflows[project.workflowFile] : null;
+  const workflow = project.workflowFile
+    ? workflows[project.workflowFile]
+    : null;
   // Some public workflow visualisations are deliberately rendered as static
   // assets: this avoids loading an external interactive viewer and prevents
   // private workflow details from being exposed.
@@ -109,52 +127,59 @@ export default async function ProjectPage({
     slug === "automatisation-prospection-n8n-lemlist";
   const caseStudy = getCaseStudy(slug, locale);
   const projectSeo = getProjectSeoDetails(slug, locale);
-  const projectLinkIsExternal = Boolean(project.link && /^https?:\/\//.test(project.link));
+  const projectLinkIsExternal = Boolean(
+    project.link && /^https?:\/\//.test(project.link),
+  );
   const partnershipProduct: PartnershipProduct | null =
     slug === "poker-mada" || slug === "paidmada-mobile-money" ? slug : null;
-  const seoTone = categoryTone === "emerald"
-    ? {
-        text: "text-emerald-300",
-        softText: "text-emerald-200",
-        border: "border-emerald-500/25",
-        strongBorder: "border-emerald-400/50",
-        bg: "bg-emerald-500/10",
-      }
-    : categoryTone === "amber"
+  const seoTone =
+    categoryTone === "emerald"
       ? {
-          text: "text-amber-300",
-          softText: "text-amber-200",
-          border: "border-amber-500/25",
-          strongBorder: "border-amber-400/50",
-          bg: "bg-amber-500/10",
+          text: "text-emerald-300",
+          softText: "text-emerald-200",
+          border: "border-emerald-500/25",
+          strongBorder: "border-emerald-400/50",
+          bg: "bg-emerald-500/10",
+        }
+      : categoryTone === "amber"
+        ? {
+            text: "text-amber-300",
+            softText: "text-amber-200",
+            border: "border-amber-500/25",
+            strongBorder: "border-amber-400/50",
+            bg: "bg-amber-500/10",
+          }
+        : {
+            text: "text-indigo-300",
+            softText: "text-indigo-200",
+            border: "border-indigo-500/25",
+            strongBorder: "border-indigo-400/50",
+            bg: "bg-indigo-500/10",
+          };
+  const caseStudyLabels =
+    locale === "fr"
+      ? {
+          sectionTitle: "Du brief au code",
+          sectionKicker: "Workflow design IA-first",
+          briefTitle: "Le brief",
+          variantsTitle: "Les variantes design IA",
+          decisionTitle: "La direction retenue",
+          finalTitle: "L'intégration finale",
         }
       : {
-          text: "text-indigo-300",
-          softText: "text-indigo-200",
-          border: "border-indigo-500/25",
-          strongBorder: "border-indigo-400/50",
-          bg: "bg-indigo-500/10",
+          sectionTitle: "From brief to code",
+          sectionKicker: "AI-first design workflow",
+          briefTitle: "The brief",
+          variantsTitle: "AI design variants",
+          decisionTitle: "Selected direction",
+          finalTitle: "Final build",
         };
-  const caseStudyLabels = locale === "fr"
-    ? {
-        sectionTitle: "Du brief au code",
-        sectionKicker: "Workflow design IA-first",
-        briefTitle: "Le brief",
-        variantsTitle: "Les variantes design IA",
-        decisionTitle: "La direction retenue",
-        finalTitle: "L'intégration finale",
-      }
-    : {
-        sectionTitle: "From brief to code",
-        sectionKicker: "AI-first design workflow",
-        briefTitle: "The brief",
-        variantsTitle: "AI design variants",
-        decisionTitle: "Selected direction",
-        finalTitle: "Final build",
-      };
 
   const breadcrumbs = [
-    { name: locale === "fr" ? "Accueil" : "Home", href: locale === "fr" ? "/" : "/en" },
+    {
+      name: locale === "fr" ? "Accueil" : "Home",
+      href: locale === "fr" ? "/" : "/en",
+    },
     { name: dict.projects.title, href: `${prefix}/projects` },
     { name: project.title, href: `${prefix}/projects/${slug}` },
   ];
@@ -180,7 +205,7 @@ export default async function ProjectPage({
                 ? "bg-emerald-600/20 border border-emerald-500/30 text-emerald-300"
                 : categoryTone === "amber"
                   ? "bg-amber-600/20 border border-amber-500/30 text-amber-300"
-                : "bg-indigo-600/20 border border-indigo-500/30 text-indigo-300"
+                  : "bg-indigo-600/20 border border-indigo-500/30 text-indigo-300"
             }`}
           >
             {categoryLabel}
@@ -193,7 +218,7 @@ export default async function ProjectPage({
                   ? "bg-emerald-600/20 border border-emerald-500/30 text-emerald-300"
                   : categoryTone === "amber"
                     ? "bg-amber-600/20 border border-amber-500/30 text-amber-300"
-                  : "bg-indigo-600/20 border border-indigo-500/30 text-indigo-300"
+                    : "bg-indigo-600/20 border border-indigo-500/30 text-indigo-300"
               }`}
             >
               {tag}
@@ -205,13 +230,15 @@ export default async function ProjectPage({
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-2 gradient-text">
           {project.title}
         </h1>
-        <p className={`text-xl font-medium mb-8 ${
-          categoryTone === "emerald"
-            ? "text-emerald-400"
-            : categoryTone === "amber"
-              ? "text-amber-400"
-              : "text-indigo-400"
-        }`}>
+        <p
+          className={`text-xl font-medium mb-8 ${
+            categoryTone === "emerald"
+              ? "text-emerald-400"
+              : categoryTone === "amber"
+                ? "text-amber-400"
+                : "text-indigo-400"
+          }`}
+        >
           {project.subtitle}
         </p>
 
@@ -222,7 +249,9 @@ export default async function ProjectPage({
           ) : (
             <div
               className={`relative overflow-hidden rounded-2xl border border-white/10 ${
-                usesWideWorkflowScreenshot ? "aspect-[2/1] bg-white" : "aspect-video"
+                usesWideWorkflowScreenshot
+                  ? "aspect-[2/1] bg-white"
+                  : "aspect-video"
               }`}
             >
               <Image
@@ -230,7 +259,9 @@ export default async function ProjectPage({
                 alt={`${project.title} - ${project.subtitle}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 896px"
-                className={usesWideWorkflowScreenshot ? "object-contain" : "object-cover"}
+                className={
+                  usesWideWorkflowScreenshot ? "object-contain" : "object-cover"
+                }
                 priority
               />
             </div>
@@ -279,7 +310,9 @@ export default async function ProjectPage({
 
         {projectSeo && (
           <section aria-labelledby="project-seo-title" className="mb-12">
-            <p className={`text-xs font-bold tracking-[0.2em] uppercase ${seoTone.text} mb-3`}>
+            <p
+              className={`text-xs font-bold tracking-[0.2em] uppercase ${seoTone.text} mb-3`}
+            >
               {projectSeo.kicker}
             </p>
             <h2
@@ -289,7 +322,9 @@ export default async function ProjectPage({
               {projectSeo.title}
             </h2>
 
-            <div className={`glass-card rounded-2xl p-8 md:p-10 mb-6 border-l-4 ${seoTone.strongBorder} ${seoTone.bg}`}>
+            <div
+              className={`glass-card rounded-2xl p-8 md:p-10 mb-6 border-l-4 ${seoTone.strongBorder} ${seoTone.bg}`}
+            >
               <p className="text-base md:text-lg text-slate-200 leading-relaxed">
                 {projectSeo.summary}
               </p>
@@ -314,7 +349,10 @@ export default async function ProjectPage({
             {projectSeo.gallery ? (
               <div className="space-y-6 mb-10">
                 {projectSeo.gallery.map((visual) => (
-                  <figure key={visual.src} className="overflow-hidden rounded-2xl border border-white/10">
+                  <figure
+                    key={visual.src}
+                    className="overflow-hidden rounded-2xl border border-white/10"
+                  >
                     <Image
                       src={visual.src}
                       alt={visual.alt}
@@ -348,8 +386,14 @@ export default async function ProjectPage({
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
               {projectSeo.relatedLinks.map((item) => (
-                <Link key={item.href} href={item.href} className="group block h-full">
-                  <div className={`glass-card rounded-2xl p-6 h-full border ${seoTone.border} transition-colors group-hover:bg-white/[0.04]`}>
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group block h-full"
+                >
+                  <div
+                    className={`glass-card rounded-2xl p-6 h-full border ${seoTone.border} transition-colors group-hover:bg-white/[0.04]`}
+                  >
                     <h3 className="font-bold text-white mb-2 group-hover:underline underline-offset-4">
                       {item.label}
                     </h3>
@@ -365,7 +409,9 @@ export default async function ProjectPage({
               {projectSeo.faq.map((item) => (
                 <div key={item.question} className="glass-card rounded-2xl p-6">
                   <h3 className="font-bold text-white mb-3">{item.question}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.answer}</p>
+                  <p className="text-slate-400 leading-relaxed">
+                    {item.answer}
+                  </p>
                 </div>
               ))}
             </div>
@@ -374,10 +420,7 @@ export default async function ProjectPage({
 
         {/* Case study (optionnel) */}
         {caseStudy && (
-          <section
-            aria-labelledby="case-study-title"
-            className="mb-12"
-          >
+          <section aria-labelledby="case-study-title" className="mb-12">
             <p className="text-xs font-bold tracking-[0.2em] uppercase text-indigo-400 mb-3">
               {caseStudyLabels.sectionKicker}
             </p>

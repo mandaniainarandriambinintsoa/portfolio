@@ -29,7 +29,9 @@ export default function ContactForm({
   locale: string;
   labels: Labels;
 }) {
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const startedRef = useRef(false);
   const formStartedAtRef = useRef(0);
@@ -45,8 +47,19 @@ export default function ContactForm({
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (status === "sending" || !e.currentTarget.reportValidity()) return;
     const form = e.currentTarget;
     const data = new FormData(form);
+    const attemptId = crypto.randomUUID();
+    if (turnstileSiteKey && !data.get("cf-turnstile-response")) {
+      setErrorMsg(
+        locale === "fr"
+          ? "La vérification de sécurité doit être terminée avant l’envoi."
+          : "Complete the security check before sending.",
+      );
+      setStatus("error");
+      return;
+    }
 
     const payload = {
       name: String(data.get("name") ?? ""),
@@ -63,6 +76,7 @@ export default function ContactForm({
     trackPortfolioEvent("contact_form_submitted", {
       locale,
       path,
+      attempt_id: attemptId,
       message_length: payload.message.length,
       has_name: payload.name.length > 0,
       has_email: payload.email.length > 0,
@@ -84,6 +98,8 @@ export default function ContactForm({
           locale,
           path,
           reason: json.error ?? "api_error",
+          attempt_id: attemptId,
+          http_status: res.status,
         });
         return;
       }
@@ -93,7 +109,11 @@ export default function ContactForm({
       formStartedAtRef.current = 0;
       window.turnstile?.reset();
       setStatus("success");
-      trackPortfolioEvent("contact_form_success", { locale, path });
+      trackPortfolioEvent("contact_form_success", {
+        locale,
+        path,
+        attempt_id: attemptId,
+      });
     } catch {
       setStatus("error");
       window.turnstile?.reset();
@@ -101,6 +121,7 @@ export default function ContactForm({
         locale,
         path,
         reason: "network_error",
+        attempt_id: attemptId,
       });
     }
   }
@@ -109,13 +130,21 @@ export default function ContactForm({
 
   return (
     <form
+      method="post"
+      action="/api/contact"
       className="space-y-6"
       onSubmit={handleSubmit}
       onFocusCapture={trackFormStarted}
       onPointerDownCapture={trackFormStarted}
       onKeyDownCapture={trackFormStarted}
-      noValidate
     >
+      <noscript>
+        <p role="alert">
+          {locale === "fr"
+            ? "Activez JavaScript pour envoyer ce formulaire, ou utilisez le lien email ci-dessous."
+            : "Enable JavaScript to send this form, or use the email link below."}
+        </p>
+      </noscript>
       <div className="absolute -left-[9999px]" aria-hidden="true">
         <label htmlFor="website">Website</label>
         <input
@@ -128,7 +157,10 @@ export default function ContactForm({
       </div>
 
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-slate-300 mb-2"
+        >
           {labels.name_label}
         </label>
         <input
@@ -143,7 +175,10 @@ export default function ContactForm({
         />
       </div>
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-slate-300 mb-2"
+        >
           {labels.email_label}
         </label>
         <input
@@ -158,7 +193,10 @@ export default function ContactForm({
         />
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-slate-300 mb-2"
+        >
           {labels.message_label}
         </label>
         <textarea
@@ -193,7 +231,12 @@ export default function ContactForm({
           type="submit"
           disabled={isSending}
           data-ph-event="cta_clicked"
-          data-ph-props={JSON.stringify({ area: "contact_form", cta_type: "submit", label: labels.submit, locale })}
+          data-ph-props={JSON.stringify({
+            area: "contact_form",
+            cta_type: "submit",
+            label: labels.submit,
+            locale,
+          })}
           className="px-10 py-4 bg-indigo-600 hover:bg-indigo-500 disabled:bg-indigo-600/50 disabled:cursor-not-allowed text-white font-bold rounded-2xl transition-all shadow-lg shadow-indigo-500/20 cursor-pointer"
         >
           {isSending ? labels.sending : labels.submit}

@@ -1,6 +1,6 @@
 {
   "fr": {
-    "key": "service-18",
+    "key": "remote-n8n-consultant",
     "icon": "hub",
     "title": "Consultant n8n international",
     "description": "Audit, migration, self-hosting et fiabilisation de workflows n8n pour les équipes internationales qui ont besoin d'une automatisation exploitable en production.",
@@ -172,7 +172,7 @@
     }
   },
   "en": {
-    "key": "service-18",
+    "key": "remote-n8n-consultant",
     "icon": "hub",
     "title": "n8n Consultant for US Teams: Migration, Automation & Support",
     "description": "Hire a remote n8n consultant for production audits, cloud-to-self-hosted migration, workflow automation, API integrations and operational support.",
@@ -185,7 +185,7 @@
     "seoDescription": "Hire a remote n8n consultant for workflow audits, migration, self-hosting, API integration and reliable AI automation. US overlap, $400/day.",
     "updatedAt": "2026-07-28T00:00:00.000Z",
     "landing": {
-        "heroText": "Hire a remote n8n consultant when your workflows have become business-critical but hosting, error recovery or future changes still rely on fragile manual work. I help US teams audit, migrate and operate n8n reliably, then build the API and AI workflows that need to hold up in production.",
+      "heroText": "Hire a remote n8n consultant when your workflows have become business-critical but hosting, error recovery or future changes still rely on fragile manual work. I help US teams audit, migrate and operate n8n reliably, then build the API and AI workflows that need to hold up in production.",
       "heroImage": {
         "src": "/images/projects/leads-automation-showcase.png",
         "alt": "n8n lead collection and qualification workflow delivered by Manda"

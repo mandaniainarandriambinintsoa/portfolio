@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import Image from "next/image";
 import { i18n, type Locale } from "@/i18n/config";
@@ -12,7 +13,9 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
   const dict = await getDictionary(locale);
 
   const path = locale === "fr" ? "/about" : "/en/about";
@@ -33,7 +36,14 @@ export async function generateMetadata({
       url: `${SITE_URL}${path}`,
       type: "profile",
       locale: locale === "fr" ? "fr_FR" : "en_US",
-      images: [{ url: `${SITE_URL}/images/manda-photo2.webp`, width: 288, height: 336, alt: "Mandaniaina Randriambinintsoa" }],
+      images: [
+        {
+          url: `${SITE_URL}/images/manda-photo2.webp`,
+          width: 288,
+          height: 336,
+          alt: "Mandaniaina Randriambinintsoa",
+        },
+      ],
     },
   };
 }
@@ -44,12 +54,17 @@ export default async function AboutPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: rawLocale } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
   const dict = await getDictionary(locale);
   const about = dict.about;
 
   const breadcrumbs = [
-    { name: locale === "fr" ? "Accueil" : "Home", href: locale === "fr" ? "/" : "/en" },
+    {
+      name: locale === "fr" ? "Accueil" : "Home",
+      href: locale === "fr" ? "/" : "/en",
+    },
     { name: about.title, href: locale === "fr" ? "/about" : "/en/about" },
   ];
 
@@ -87,7 +102,9 @@ export default async function AboutPage({
             &ldquo;{about.philosophy}&rdquo;
           </blockquote>
 
-          <h3 className="text-xl font-bold mb-4 text-white">{about.approach_title}</h3>
+          <h3 className="text-xl font-bold mb-4 text-white">
+            {about.approach_title}
+          </h3>
           <ul className="space-y-3 mb-8">
             {about.approach_items.map((item: string) => (
               <li key={item} className="flex items-start gap-3 text-slate-300">
@@ -104,7 +121,30 @@ export default async function AboutPage({
           <p className="text-slate-300 leading-relaxed mb-4">
             {about.experience}
           </p>
-          <p className="text-indigo-400 font-semibold">{about.cta}</p>
+          <div className="flex flex-wrap gap-6">
+            <Link
+              className="text-indigo-300 underline underline-offset-4"
+              href={locale === "fr" ? "/contact" : "/en/contact"}
+            >
+              {about.cta}
+            </Link>
+            <Link
+              className="text-indigo-300 underline underline-offset-4"
+              href={
+                locale === "fr" ? "/projects/teamia" : "/en/projects/teamia"
+              }
+            >
+              TeamIA
+            </Link>
+            <Link
+              className="text-indigo-300 underline underline-offset-4"
+              href={
+                locale === "fr" ? "/projects/meckia" : "/en/projects/meckia"
+              }
+            >
+              Meckia
+            </Link>
+          </div>
         </div>
 
         {/* Timeline */}
@@ -112,20 +152,35 @@ export default async function AboutPage({
           {locale === "fr" ? "Parcours" : "Career Path"}
         </h2>
         <div className="space-y-8">
-          {[...about.timeline].reverse().map((item: { period: string; title: string; company: string; description: string }) => (
-            <div key={item.period} className="flex gap-6">
-              <div className="flex flex-col items-center">
-                <div className="w-3 h-3 bg-indigo-500 rounded-full" />
-                <div className="w-0.5 flex-1 bg-white/10" />
-              </div>
-              <div className="pb-8">
-                <p className="text-sm text-indigo-400 font-bold mb-1">{item.period}</p>
-                <h3 className="text-lg font-bold text-white mb-1">{item.title}</h3>
-                <p className="text-sm text-slate-500 mb-2">{item.company}</p>
-                <p className="text-slate-400">{item.description}</p>
-              </div>
-            </div>
-          ))}
+          {[...about.timeline]
+            .reverse()
+            .map(
+              (item: {
+                period: string;
+                title: string;
+                company: string;
+                description: string;
+              }) => (
+                <div key={item.period} className="flex gap-6">
+                  <div className="flex flex-col items-center">
+                    <div className="w-3 h-3 bg-indigo-500 rounded-full" />
+                    <div className="w-0.5 flex-1 bg-white/10" />
+                  </div>
+                  <div className="pb-8">
+                    <p className="text-sm text-indigo-400 font-bold mb-1">
+                      {item.period}
+                    </p>
+                    <h3 className="text-lg font-bold text-white mb-1">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-slate-500 mb-2">
+                      {item.company}
+                    </p>
+                    <p className="text-slate-400">{item.description}</p>
+                  </div>
+                </div>
+              ),
+            )}
         </div>
       </div>
     </main>

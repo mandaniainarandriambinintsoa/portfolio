@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Facebook : parcours contrôlé</title>
+  <desc id="desc">Schéma illustratif : message, recherche documentaire, brouillon et validation humaine.</desc>
+  <rect width="1200" height="675" fill="#0b1020"/>
+  <circle cx="1050" cy="90" r="220" fill="#152b42"/>
+  <text x="75" y="100" fill="#6ee7b7" font-family="Arial,sans-serif" font-size="22" letter-spacing="3">MANDA · IA / AI</text>
+  <text x="75" y="190" fill="#f8fafc" font-family="Arial,sans-serif" font-size="48" font-weight="700">Facebook → CRM</text>
+  <text x="75" y="242" fill="#a8b6ce" font-family="Arial,sans-serif" font-size="24">Sources · Contrôles / Controls · Validation</text>
+  <path d="M300 405H380M630 405H710" stroke="#818cf8" stroke-width="5"/>
+  <g fill="#151f36" stroke="#46588a" stroke-width="2">
+    <rect x="75" y="325" width="225" height="160" rx="18"/>
+    <rect x="380" y="325" width="250" height="160" rx="18"/>
+    <rect x="710" y="325" width="365" height="160" rx="18"/>
+  </g>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <g fill="#a5b4fc" font-size="20"><text x="187" y="370">01</text><text x="505" y="370">02</text><text x="892" y="370">03</text></g>
+    <g fill="#f8fafc" font-size="27" font-weight="700"><text x="187" y="424">Message</text><text x="505" y="424">Sources / RAG</text><text x="892" y="424">Validation humaine</text></g>
+    <text x="892" y="458" fill="#a8b6ce" font-size="19">Human review</text>
+  </g>
+  <text x="75" y="585" fill="#94a3b8" font-family="Arial,sans-serif" font-size="21">Schéma illustratif / Illustrative workflow</text>
+</svg>

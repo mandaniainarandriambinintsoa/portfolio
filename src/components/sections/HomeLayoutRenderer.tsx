@@ -18,19 +18,36 @@ import FAQ from "@/components/sections/FAQ";
 import CTAFinal from "@/components/sections/CTAFinal";
 import HeroAnimations from "@/components/animations/HeroAnimations";
 
-const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
 const Projects = dynamic(() => import("@/components/sections/Projects"));
-const VisitorTracking = dynamic(() => import("@/components/sections/VisitorTracking"));
-const CommandCenterAnim = dynamic(() => import("@/components/animations/CommandCenterAnim"));
-const PricingAnim = dynamic(() => import("@/components/animations/PricingAnim"));
-const ProcessAnim = dynamic(() => import("@/components/animations/ProcessAnim"));
-const ApproachAnim = dynamic(() => import("@/components/animations/ApproachAnim"));
+const VisitorTracking = dynamic(
+  () => import("@/components/sections/VisitorTracking"),
+);
+const CommandCenterAnim = dynamic(
+  () => import("@/components/animations/CommandCenterAnim"),
+);
+const PricingAnim = dynamic(
+  () => import("@/components/animations/PricingAnim"),
+);
+const ProcessAnim = dynamic(
+  () => import("@/components/animations/ProcessAnim"),
+);
+const ApproachAnim = dynamic(
+  () => import("@/components/animations/ApproachAnim"),
+);
 const StatsAnim = dynamic(() => import("@/components/animations/StatsAnim"));
-const CollaborationGuidesAnim = dynamic(() => import("@/components/animations/CollaborationGuidesAnim"));
-const TechStackAnim = dynamic(() => import("@/components/animations/TechStackAnim"));
+const CollaborationGuidesAnim = dynamic(
+  () => import("@/components/animations/CollaborationGuidesAnim"),
+);
+const TechStackAnim = dynamic(
+  () => import("@/components/animations/TechStackAnim"),
+);
 const FAQAnim = dynamic(() => import("@/components/animations/FAQAnim"));
-const VisitorTrackingAnim = dynamic(() => import("@/components/animations/VisitorTrackingAnim"));
-const CTAFinalAnim = dynamic(() => import("@/components/animations/CTAFinalAnim"));
+const VisitorTrackingAnim = dynamic(
+  () => import("@/components/animations/VisitorTrackingAnim"),
+);
+const CTAFinalAnim = dynamic(
+  () => import("@/components/animations/CTAFinalAnim"),
+);
 
 type Props = {
   dict: Dictionary;
@@ -39,7 +56,12 @@ type Props = {
   projects: ProjectItem[];
 };
 
-export default function HomeLayoutRenderer({ dict, layout, locale, projects }: Props) {
+export default function HomeLayoutRenderer({
+  dict,
+  layout,
+  locale,
+  projects,
+}: Props) {
   return (
     <>
       {layout.map((block, index) => {
@@ -88,13 +110,18 @@ export default function HomeLayoutRenderer({ dict, layout, locale, projects }: P
                   }
                   locale={locale}
                   url={locale === "fr" ? "/" : "/en"}
-                  steps={dict.process.steps.map((step: { title: string; description: string }) => ({
-                    name: step.title,
-                    text: step.description,
-                  }))}
+                  steps={dict.process.steps.map(
+                    (step: { title: string; description: string }) => ({
+                      name: step.title,
+                      text: step.description,
+                    }),
+                  )}
                 />
                 <ProcessAnim>
-                  <Process title={dict.process.title} steps={dict.process.steps} />
+                  <Process
+                    title={dict.process.title}
+                    steps={dict.process.steps}
+                  />
                 </ProcessAnim>
               </div>
             );
@@ -109,11 +136,8 @@ export default function HomeLayoutRenderer({ dict, layout, locale, projects }: P
             );
 
           case "homeTestimonials":
-            return (
-              <div key={key} className="below-fold">
-                <Testimonials dict={dict.testimonials} locale={locale} />
-              </div>
-            );
+            // Restore only after the original quotes and publication consent are documented.
+            return null;
 
           case "homeStats":
             return (
@@ -180,7 +204,10 @@ export default function HomeLayoutRenderer({ dict, layout, locale, projects }: P
             return (
               <div key={key} className="below-fold">
                 <VisitorTrackingAnim>
-                  <VisitorTracking dict={dict.visitor_tracking} locale={locale} />
+                  <VisitorTracking
+                    dict={dict.visitor_tracking}
+                    locale={locale}
+                  />
                 </VisitorTrackingAnim>
               </div>
             );

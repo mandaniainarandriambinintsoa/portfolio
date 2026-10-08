@@ -18,19 +18,24 @@ export default function Footer({
     {
       label: "Solutions",
       href: `${prefix}/solutions`,
-      ariaLabel: locale === "fr"
-        ? "Explorer les solutions IA, n8n et API"
-        : "Explore AI, n8n and API solutions",
+      ariaLabel:
+        locale === "fr"
+          ? "Explorer les solutions IA, n8n et API"
+          : "Explore AI, n8n and API solutions",
     },
     {
       label: locale === "fr" ? "Projets" : "Projects",
       href: `${prefix}/projects`,
-      ariaLabel: locale === "fr" ? "Voir tous les projets" : "View all projects",
+      ariaLabel:
+        locale === "fr" ? "Voir tous les projets" : "View all projects",
     },
     {
       label: locale === "fr" ? "Sites métier" : "Business Sites",
       href: `${prefix}/site-metier`,
-      ariaLabel: locale === "fr" ? "Voir le catalogue de sites métier" : "View business website catalog",
+      ariaLabel:
+        locale === "fr"
+          ? "Voir le catalogue de sites métier"
+          : "View business website catalog",
     },
     { label: locale === "fr" ? "À propos" : "About", href: `${prefix}/about` },
     { label: "Contact", href: `${prefix}/contact` },
@@ -41,55 +46,195 @@ export default function Footer({
   const expertiseLinks: { label: string; href: string }[] =
     locale === "fr"
       ? [
-          { label: "JavaScript Fullstack", href: "/services/developpeur-javascript-madagascar" },
-          { label: "React / Next.js", href: "/services/developpeur-react-nextjs-madagascar" },
-          { label: "Node.js / API", href: "/services/developpeur-nodejs-madagascar" },
-          { label: "Next.js + Supabase", href: "/services/developpeur-nextjs-supabase-madagascar" },
-          { label: "Agent IA Madagascar", href: "/services/developpeur-agent-ia-madagascar" },
+          {
+            label: "JavaScript Fullstack",
+            href: "/services/developpeur-javascript-madagascar",
+          },
+          {
+            label: "React / Next.js",
+            href: "/services/developpeur-react-nextjs-madagascar",
+          },
+          {
+            label: "Node.js / API",
+            href: "/services/developpeur-nodejs-madagascar",
+          },
+          {
+            label: "Next.js + Supabase",
+            href: "/services/developpeur-nextjs-supabase-madagascar",
+          },
+          {
+            label: "Agent IA Madagascar",
+            href: "/services/developpeur-agent-ia-madagascar",
+          },
           { label: "Développeur RAG", href: "/services/developpeur-rag" },
           { label: "IA générative & LLM", href: "/services/integration-ia" },
-          { label: "Python & IA", href: "/services/developpeur-python-ia-madagascar" },
-          { label: "Claude Code + n8n", href: "/services/developpeur-claude-code-n8n" },
+          {
+            label: "Python & IA",
+            href: "/services/developpeur-python-ia-madagascar",
+          },
+          {
+            label: "Claude Code + n8n",
+            href: "/services/developpeur-claude-code-n8n",
+          },
           { label: "Codex + n8n", href: "/services/developpeur-codex-n8n" },
-          { label: "Automatisation N8N", href: "/services/automatisation-n8n-madagascar" },
-          { label: "Freelance ou agence ?", href: "/services/freelance-vs-agence-offshore-madagascar" },
-          { label: "Agent vocal IA", href: "/services/developpeur-agent-vocal-ia" },
+          {
+            label: "Automatisation N8N",
+            href: "/services/automatisation-n8n-madagascar",
+          },
+          {
+            label: "Freelance ou agence ?",
+            href: "/services/freelance-vs-agence-offshore-madagascar",
+          },
+          {
+            label: "Agent vocal IA",
+            href: "/services/developpeur-agent-vocal-ia",
+          },
           { label: "SEO + GEO", href: "/services/consultant-seo-geo" },
-          { label: "Forward Deployed Engineer", href: "/services/forward-deployed-engineer" },
-          { label: "Automatisation PME", href: "/solutions/automatisation-n8n-pme" },
-          { label: "Agent IA support", href: "/solutions/agent-ia-support-client" },
-          { label: "API Mobile Money", href: "/solutions/api-mobile-money-madagascar" },
+          {
+            label: "Forward Deployed Engineer",
+            href: "/services/forward-deployed-engineer",
+          },
+          {
+            label: "Automatisation PME",
+            href: "/solutions/automatisation-n8n-pme",
+          },
+          {
+            label: "Agent IA support",
+            href: "/solutions/agent-ia-support-client",
+          },
+          {
+            label: "API Mobile Money",
+            href: "/solutions/api-mobile-money-madagascar",
+          },
           { label: "Agent IA Facebook", href: "/solutions/agent-ia-facebook" },
-          { label: "Marketing automation", href: "/solutions/automatisation-marketing-n8n" },
-          { label: "Agent IA prospection", href: "/solutions/agent-ia-prospection" },
-          { label: "Workflows Claude Code", href: "/solutions/workflows-n8n-claude-code" },
-          { label: "Agent vocal IA appels", href: "/solutions/developpeur-agent-vocal-ia" },
+          {
+            label: "Marketing automation",
+            href: "/solutions/automatisation-marketing-n8n",
+          },
+          {
+            label: "Agent IA prospection",
+            href: "/solutions/agent-ia-prospection",
+          },
+          {
+            label: "Workflows Claude Code",
+            href: "/solutions/workflows-n8n-claude-code",
+          },
+          {
+            label: "Agent vocal IA appels",
+            href: "/solutions/developpeur-agent-vocal-ia",
+          },
         ]
       : [
-          { label: "JavaScript Fullstack", href: "/en/services/javascript-developer-madagascar" },
-          { label: "React / Next.js", href: "/en/services/hire-react-nextjs-developer-madagascar" },
-          { label: "Node.js / APIs", href: "/en/services/hire-nodejs-developer-madagascar" },
-          { label: "Next.js + Supabase", href: "/en/services/nextjs-supabase-developer-madagascar" },
-          { label: "AI Agents", href: "/en/services/ai-agent-developer-madagascar" },
+          {
+            label: "JavaScript Fullstack",
+            href: "/en/services/javascript-developer-madagascar",
+          },
+          {
+            label: "React / Next.js",
+            href: "/en/services/hire-react-nextjs-developer-madagascar",
+          },
+          {
+            label: "Node.js / APIs",
+            href: "/en/services/hire-nodejs-developer-madagascar",
+          },
+          {
+            label: "Next.js + Supabase",
+            href: "/en/services/nextjs-supabase-developer-madagascar",
+          },
+          {
+            label: "AI Agents",
+            href: "/en/services/ai-agent-developer-madagascar",
+          },
           { label: "RAG Developer", href: "/en/services/rag-developer" },
           { label: "Generative AI & LLM", href: "/en/services/ai-integration" },
-          { label: "Python & AI", href: "/en/services/python-ai-developer-madagascar" },
-          { label: "Claude Code + n8n", href: "/en/services/claude-code-n8n-developer" },
+          {
+            label: "Python & AI",
+            href: "/en/services/python-ai-developer-madagascar",
+          },
+          {
+            label: "Claude Code + n8n",
+            href: "/en/services/claude-code-n8n-developer",
+          },
           { label: "Codex + n8n", href: "/en/services/codex-n8n-developer" },
-          { label: "N8N Automation", href: "/en/services/n8n-automation-expert-madagascar" },
-          { label: "Freelance or agency?", href: "/en/services/freelance-vs-offshore-agency-madagascar" },
-          { label: "AI Voice Agents", href: "/en/services/ai-voice-agent-developer" },
+          {
+            label: "N8N Automation",
+            href: "/en/services/n8n-automation-expert-madagascar",
+          },
+          {
+            label: "Freelance or agency?",
+            href: "/en/services/freelance-vs-offshore-agency-madagascar",
+          },
+          {
+            label: "AI Voice Agents",
+            href: "/en/services/ai-voice-agent-developer",
+          },
           { label: "SEO + GEO", href: "/en/services/seo-geo-consultant" },
-          { label: "Forward Deployed Engineer", href: "/en/services/forward-deployed-engineer" },
-          { label: "SMB automation", href: "/en/solutions/n8n-automation-for-smbs" },
-          { label: "AI support agent", href: "/en/solutions/ai-customer-support-agent" },
-          { label: "Mobile Money API", href: "/en/solutions/mobile-money-api-madagascar" },
-          { label: "Facebook AI agent", href: "/en/solutions/facebook-ai-agent" },
-          { label: "Marketing automation", href: "/en/solutions/n8n-marketing-automation" },
-          { label: "AI prospecting", href: "/en/solutions/ai-prospecting-agent" },
-          { label: "Claude Code workflows", href: "/en/solutions/n8n-claude-code-workflows" },
-          { label: "AI voice calls", href: "/en/solutions/ai-voice-agent-developer" },
+          {
+            label: "Forward Deployed Engineer",
+            href: "/en/services/forward-deployed-engineer",
+          },
+          {
+            label: "SMB automation",
+            href: "/en/solutions/n8n-automation-for-smbs",
+          },
+          {
+            label: "AI support agent",
+            href: "/en/solutions/ai-customer-support-agent",
+          },
+          {
+            label: "Mobile Money API",
+            href: "/en/solutions/mobile-money-api-madagascar",
+          },
+          {
+            label: "Facebook AI agent",
+            href: "/en/solutions/facebook-ai-agent",
+          },
+          {
+            label: "Marketing automation",
+            href: "/en/solutions/n8n-marketing-automation",
+          },
+          {
+            label: "AI prospecting",
+            href: "/en/solutions/ai-prospecting-agent",
+          },
+          {
+            label: "Claude Code workflows",
+            href: "/en/solutions/n8n-claude-code-workflows",
+          },
+          {
+            label: "AI voice calls",
+            href: "/en/solutions/ai-voice-agent-developer",
+          },
         ];
+
+  const groupFor = (href: string) => {
+    if (/seo|offshore/.test(href)) return "advice";
+    if (
+      /javascript|react|nodejs|supabase|python|codex|claude|forward/.test(href)
+    )
+      return "development";
+    if (/agent|rag|integration-ia|ai-integration/.test(href)) return "ai";
+    return "automation";
+  };
+  const expertiseGroups = [
+    {
+      key: "development",
+      label: locale === "fr" ? "Applications et API" : "Applications and APIs",
+    },
+    {
+      key: "ai",
+      label: locale === "fr" ? "IA et documents" : "AI and documents",
+    },
+    {
+      key: "automation",
+      label:
+        locale === "fr" ? "Automatiser les op?rations" : "Automate operations",
+    },
+    {
+      key: "advice",
+      label: locale === "fr" ? "Choisir et am?liorer" : "Choose and improve",
+    },
+  ];
 
   const expertiseHeading = locale === "fr" ? "Expertise" : "Expertise";
   const siteHeading = locale === "fr" ? "Navigation" : "Navigation";
@@ -97,7 +242,10 @@ export default function Footer({
   const socialHeading = locale === "fr" ? "Réseaux" : "Social";
 
   return (
-    <footer className="w-full border-t border-white/5 py-12 px-6 md:px-10" role="contentinfo">
+    <footer
+      className="w-full border-t border-white/5 py-12 px-6 md:px-10"
+      role="contentinfo"
+    >
       <div className="max-w-7xl mx-auto flex flex-col gap-8">
         {/* Navigation — primary site links */}
         <nav aria-label={siteHeading}>
@@ -120,18 +268,29 @@ export default function Footer({
         {/* Expertise — internal linking to landing pages, diversified anchor text */}
         <nav aria-label={expertiseHeading}>
           <h2 className="sr-only">{expertiseHeading}</h2>
-          <ul className="flex flex-wrap justify-center gap-4 md:gap-6 list-none p-0">
-            {expertiseLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-xs py-2 text-slate-400 hover:text-white transition-colors"
-                >
-                  {link.label}
-                </Link>
-              </li>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {expertiseGroups.map((group) => (
+              <div key={group.key}>
+                <h3 className="mb-4 text-sm font-semibold text-slate-200">
+                  {group.label}
+                </h3>
+                <ul className="space-y-3 list-none p-0">
+                  {expertiseLinks
+                    .filter((link) => groupFor(link.href) === group.key)
+                    .map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="text-xs text-slate-400 hover:text-white transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      </li>
+                    ))}
+                </ul>
+              </div>
             ))}
-          </ul>
+          </div>
         </nav>
 
         {/* Legal */}
@@ -143,7 +302,9 @@ export default function Footer({
                 href={`${prefix}/privacy`}
                 className="text-xs py-2 text-slate-400 hover:text-white transition-colors"
               >
-                {locale === "fr" ? "Politique de confidentialité" : "Privacy Policy"}
+                {locale === "fr"
+                  ? "Politique de confidentialité"
+                  : "Privacy Policy"}
               </Link>
             </li>
             <li>
@@ -161,8 +322,12 @@ export default function Footer({
         <div className="text-center text-xs text-slate-400 leading-relaxed">
           <p>
             {locale === "fr" ? "Édité par " : "Published by "}
-            <strong className="text-slate-200">{PERSONAL_INFO.legalName}</strong>
-            {locale === "fr" ? " — entrepreneur individuel" : " — sole proprietor"}
+            <strong className="text-slate-200">
+              {PERSONAL_INFO.legalName}
+            </strong>
+            {locale === "fr"
+              ? " — entrepreneur individuel"
+              : " — sole proprietor"}
           </p>
           <p>{PERSONAL_INFO.legalAddress.full}</p>
         </div>

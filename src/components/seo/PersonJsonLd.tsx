@@ -7,12 +7,13 @@ export default function PersonJsonLd() {
       data={{
         "@context": "https://schema.org",
         "@type": "Person",
+        "@id": `${SITE_URL}/#person`,
         name: PERSONAL_INFO.name,
         alternateName: PERSONAL_INFO.shortName,
         url: SITE_URL,
         image: `${SITE_URL}/images/manda-photo2.webp`,
         description:
-          "Développeur Full Stack et Architecte IA basé à Antananarivo, Madagascar. Spécialisé en automatisation N8N, développement No-Code/Low-Code et intégration IA.",
+          "Développeur Full Stack et Architecte IA basé à Antananarivo, Madagascar. Applications métier, SaaS, API, automatisation n8n et intégration IA.",
         email: `mailto:${PERSONAL_INFO.email}`,
         telephone: PERSONAL_INFO.phone,
         jobTitle: PERSONAL_INFO.jobTitle.en,
@@ -24,7 +25,8 @@ export default function PersonJsonLd() {
         },
         worksFor: {
           "@type": "ProfessionalService",
-          name: "Manda — Automatisation & Développement No-Code",
+          "@id": `${SITE_URL}/#business`,
+          name: "Manda — Applications métier, IA et automatisation",
           url: SITE_URL,
         },
         sameAs: [
@@ -37,11 +39,11 @@ export default function PersonJsonLd() {
         ],
         knowsAbout: [
           "N8N",
-          "No-Code Development",
+          "Business application development",
           "AI Integration",
           "Workflow Automation",
-          "Bubble",
-          "Webflow",
+          "RAG",
+          "PostgreSQL",
           "Next.js",
           "Claude Code",
           "Supabase",

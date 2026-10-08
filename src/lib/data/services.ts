@@ -4,9 +4,9 @@ import type { ServiceItem } from "@/lib/types";
 import remoteN8nConsultant from "./services/remote-n8n-consultant.json";
 
 function withFallbackKeys(items: ServiceItem[]): ServiceItem[] {
-  return items.map((item, index) => ({
+  return items.map((item) => ({
     ...item,
-    key: item.key ?? `service-${String(index + 1).padStart(2, "0")}`,
+    key: item.key ?? item.slug,
   }));
 }
 
@@ -24,7 +24,7 @@ export async function getServices(locale: Locale): Promise<ServiceItem[]> {
 
 export async function getServiceBySlug(
   slug: string,
-  locale: Locale
+  locale: Locale,
 ): Promise<ServiceItem | null> {
   const services = await getDictionaryServices(locale);
   return services.find((service) => service.slug === slug) ?? null;
@@ -32,13 +32,15 @@ export async function getServiceBySlug(
 
 export async function getServiceByKey(
   key: string,
-  locale: Locale
+  locale: Locale,
 ): Promise<ServiceItem | null> {
   const services = await getDictionaryServices(locale);
   return services.find((item) => item.key === key) ?? null;
 }
 
-export async function getServiceStaticParams(): Promise<{ locale: string; slug: string }[]> {
+export async function getServiceStaticParams(): Promise<
+  { locale: string; slug: string }[]
+> {
   const params: { locale: string; slug: string }[] = [];
 
   for (const locale of ["fr", "en"] as const) {
@@ -50,18 +52,25 @@ export async function getServiceStaticParams(): Promise<{ locale: string; slug: 
 }
 
 export async function getServiceSitemapPairs(): Promise<
-  { frSlug: string; enSlug: string; updatedAt: string | null; createdAt: string | null }[]
+  {
+    frSlug: string;
+    enSlug: string;
+    updatedAt: string | null;
+    createdAt: string | null;
+  }[]
 > {
   const [frServices, enServices] = await Promise.all([
     getDictionaryServices("fr"),
     getDictionaryServices("en"),
   ]);
-  const count = Math.min(frServices.length, enServices.length);
-
-  return Array.from({ length: count }, (_, index) => ({
-    frSlug: frServices[index].slug,
-    enSlug: enServices[index].slug,
-    updatedAt: frServices[index].updatedAt ?? enServices[index].updatedAt ?? null,
-    createdAt: frServices[index].createdAt ?? enServices[index].createdAt ?? null,
-  }));
+  return frServices.map((fr) => {
+    const en = enServices.find((service) => service.key === fr.key);
+    if (!en) throw new Error(`Missing service translation: ${fr.key}`);
+    return {
+      frSlug: fr.slug,
+      enSlug: en.slug,
+      updatedAt: fr.updatedAt ?? en.updatedAt ?? null,
+      createdAt: fr.createdAt ?? en.createdAt ?? null,
+    };
+  });
 }

@@ -32,7 +32,13 @@ export type ProjectSeoDetails = {
   sections: ProjectSeoSection[];
   relatedLinks: ProjectSeoLink[];
   faq: ProjectSeoFaq[];
-  gallery?: { src: string; alt: string; caption: string; width: number; height: number }[];
+  gallery?: {
+    src: string;
+    alt: string;
+    caption: string;
+    width: number;
+    height: number;
+  }[];
 };
 
 const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
@@ -43,14 +49,18 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       metaDescription:
         "Étude de cas d'un audit performance Next.js : Lighthouse, Core Web Vitals, Tailwind CSS, rendu, cache, Vercel, Supabase et réduction des coûts cloud.",
       kicker: "Audit performance en production",
-      title: "Relier PageSpeed, architecture CSS et coûts cloud au même diagnostic",
+      title:
+        "Relier PageSpeed, architecture CSS et coûts cloud au même diagnostic",
       summary:
         "manda-ia.com fonctionnait déjà et gagnait du trafic, mais les quotas Vercel et Supabase révélaient une architecture trop coûteuse. J'ai audité le parcours complet de la requête, du navigateur jusqu'à la base, puis séparé trois problèmes souvent confondus : la vitesse visible, le travail JavaScript et CSS côté client, et les lectures serveur répétées. Le résultat est une base plus statique, un cache partagé et une preuve Lighthouse datée qui montre aussi honnêtement le prochain chantier mobile.",
       facts: [
         { label: "Desktop Lighthouse", value: "99/100, LCP 0,5 s, TBT 30 ms" },
         { label: "Mobile Lighthouse", value: "80/100, LCP 2,4 s, TBT 680 ms" },
         { label: "Stabilité visuelle", value: "CLS 0 sur les deux profils" },
-        { label: "Snapshot", value: "26 août 2026, 58 requêtes, environ 653 KiB" },
+        {
+          label: "Snapshot",
+          value: "26 août 2026, 58 requêtes, environ 653 KiB",
+        },
       ],
       sections: [
         {
@@ -93,40 +103,49 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         {
           label: "Audit performance site web",
           href: "/services/audit-performance-site-web",
-          description: "La méthode, les livrables et le périmètre d'une intervention sur un site existant.",
+          description:
+            "La méthode, les livrables et le périmètre d'une intervention sur un site existant.",
         },
         {
           label: "Sites métier performants",
           href: "/site-metier",
-          description: "Voir comment la performance, le SEO et la conversion sont intégrés par secteur.",
+          description:
+            "Voir comment la performance, le SEO et la conversion sont intégrés par secteur.",
         },
         {
           label: "Développeur React et Next.js",
           href: "/services/developpeur-react-nextjs-madagascar",
-          description: "Rendu Next.js, composants React et architecture frontend maintenable.",
+          description:
+            "Rendu Next.js, composants React et architecture frontend maintenable.",
         },
         {
           label: "Projet TeamIA",
           href: "/projects/teamia",
-          description: "Un site métier Next.js avec fallback statique, CMS Payload et intégrations sécurisées.",
+          description:
+            "Un site métier Next.js avec fallback statique, CMS Payload et intégrations sécurisées.",
         },
       ],
       faq: [
         {
           question: "Pourquoi le score mobile est-il inférieur au desktop ?",
-          answer: "Le profil mobile Lighthouse simule un appareil et un réseau plus contraints. Le TBT de 680 ms indique surtout du travail JavaScript sur le thread principal ; il devient le prochain chantier mesurable au lieu d'être masqué derrière le score desktop.",
+          answer:
+            "Le profil mobile Lighthouse simule un appareil et un réseau plus contraints. Le TBT de 680 ms indique surtout du travail JavaScript sur le thread principal ; il devient le prochain chantier mesurable au lieu d'être masqué derrière le score desktop.",
         },
         {
           question: "Un score Lighthouse prouve-t-il les Core Web Vitals ?",
-          answer: "Non. Lighthouse fournit une mesure de laboratoire reproductible. Les Core Web Vitals terrain viennent de vrais utilisateurs et doivent être suivis séparément dans CrUX, Search Console ou une solution RUM.",
+          answer:
+            "Non. Lighthouse fournit une mesure de laboratoire reproductible. Les Core Web Vitals terrain viennent de vrais utilisateurs et doivent être suivis séparément dans CrUX, Search Console ou une solution RUM.",
         },
         {
-          question: "Faut-il abandonner Tailwind pour améliorer la performance ?",
-          answer: "Pas automatiquement. Il faut mesurer le CSS produit, le rendu critique et la maintenabilité. Un changement de framework sans benchmark comparable peut coûter plus qu'il ne rapporte.",
+          question:
+            "Faut-il abandonner Tailwind pour améliorer la performance ?",
+          answer:
+            "Pas automatiquement. Il faut mesurer le CSS produit, le rendu critique et la maintenabilité. Un changement de framework sans benchmark comparable peut coûter plus qu'il ne rapporte.",
         },
         {
           question: "Peut-on auditer un site sans le reconstruire ?",
-          answer: "Oui. Le diagnostic priorise les changements à fort impact et faible risque. Une refonte n'est recommandée que lorsque l'architecture existante empêche réellement les corrections nécessaires.",
+          answer:
+            "Oui. Le diagnostic priorise les changements à fort impact et faible risque. Une refonte n'est recommandée que lorsque l'architecture existante empêche réellement les corrections nécessaires.",
         },
       ],
     },
@@ -135,14 +154,18 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       metaDescription:
         "Next.js performance audit case study covering Lighthouse, Core Web Vitals, Tailwind CSS, rendering, caching, Vercel, Supabase and cloud cost reduction.",
       kicker: "Production performance audit",
-      title: "Connecting PageSpeed, CSS architecture and cloud costs in one diagnosis",
+      title:
+        "Connecting PageSpeed, CSS architecture and cloud costs in one diagnosis",
       summary:
         "manda-ia.com was already working and gaining traffic, but Vercel and Supabase quotas exposed an expensive architecture. I audited the complete request path from browser to database, then separated three problems that are often mixed together: visible loading speed, client-side JavaScript and CSS work, and repeated server reads. The result is a more static foundation, shared caching and a dated Lighthouse proof that also states the next mobile improvement honestly.",
       facts: [
         { label: "Desktop Lighthouse", value: "99/100, 0.5 s LCP, 30 ms TBT" },
         { label: "Mobile Lighthouse", value: "80/100, 2.4 s LCP, 680 ms TBT" },
         { label: "Visual stability", value: "CLS 0 on both profiles" },
-        { label: "Snapshot", value: "August 26, 2026, 58 requests, about 653 KiB" },
+        {
+          label: "Snapshot",
+          value: "August 26, 2026, 58 requests, about 653 KiB",
+        },
       ],
       sections: [
         {
@@ -185,40 +208,48 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         {
           label: "Website performance audit",
           href: "/en/services/website-performance-optimization-service",
-          description: "Method, deliverables and scope for improving an existing website.",
+          description:
+            "Method, deliverables and scope for improving an existing website.",
         },
         {
           label: "High-performance business websites",
           href: "/en/site-metier",
-          description: "See how performance, SEO and conversion are integrated by sector.",
+          description:
+            "See how performance, SEO and conversion are integrated by sector.",
         },
         {
           label: "React and Next.js developer",
           href: "/en/services/hire-react-nextjs-developer-madagascar",
-          description: "Next.js rendering, React components and maintainable frontend architecture.",
+          description:
+            "Next.js rendering, React components and maintainable frontend architecture.",
         },
         {
           label: "TeamIA project",
           href: "/en/projects/teamia",
-          description: "A Next.js business website with static fallback, Payload CMS and secured integrations.",
+          description:
+            "A Next.js business website with static fallback, Payload CMS and secured integrations.",
         },
       ],
       faq: [
         {
           question: "Why is the mobile score lower than desktop?",
-          answer: "The mobile Lighthouse profile simulates a constrained device and network. The 680 ms TBT mainly signals JavaScript work on the main thread; it becomes the next measurable target instead of being hidden behind the desktop score.",
+          answer:
+            "The mobile Lighthouse profile simulates a constrained device and network. The 680 ms TBT mainly signals JavaScript work on the main thread; it becomes the next measurable target instead of being hidden behind the desktop score.",
         },
         {
           question: "Does a Lighthouse score prove Core Web Vitals?",
-          answer: "No. Lighthouse provides a reproducible lab measurement. Field Core Web Vitals come from real users and must be monitored separately through CrUX, Search Console or a RUM solution.",
+          answer:
+            "No. Lighthouse provides a reproducible lab measurement. Field Core Web Vitals come from real users and must be monitored separately through CrUX, Search Console or a RUM solution.",
         },
         {
           question: "Should Tailwind be removed to improve performance?",
-          answer: "Not automatically. The generated CSS, critical rendering path and maintainability must be measured. Changing frameworks without a comparable benchmark can cost more than it returns.",
+          answer:
+            "Not automatically. The generated CSS, critical rendering path and maintainability must be measured. Changing frameworks without a comparable benchmark can cost more than it returns.",
         },
         {
           question: "Can an existing website be audited without rebuilding it?",
-          answer: "Yes. The diagnosis prioritizes high-impact, low-risk changes. A rebuild is recommended only when the existing architecture genuinely blocks the required corrections.",
+          answer:
+            "Yes. The diagnosis prioritizes high-impact, low-risk changes. A rebuild is recommended only when the existing architecture genuinely blocks the required corrections.",
         },
       ],
     },
@@ -265,12 +296,14 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         {
           label: "Découvrir Meckia",
           href: "https://meckia.manda-ia.com/",
-          description: "Voir la plateforme et son aperçu public avec des données d'exemple.",
+          description:
+            "Voir la plateforme et son aperçu public avec des données d'exemple.",
         },
         {
           label: "Développement d'applications métier",
           href: "/services/developpement-sites-saas",
-          description: "Conception d'applications web et SaaS adaptées à un processus métier.",
+          description:
+            "Conception d'applications web et SaaS adaptées à un processus métier.",
         },
       ],
       faq: [
@@ -280,7 +313,8 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "Le mode terrain permet de préparer certaines saisies sans connexion. Elles sont synchronisées après reconnexion et vérification de la session. Le reste de l'application et les données en temps réel nécessitent le réseau.",
         },
         {
-          question: "Le suivi GPS est-il inclus dans toutes les installations ?",
+          question:
+            "Le suivi GPS est-il inclus dans toutes les installations ?",
           answer:
             "Non. La connexion GPS repose sur Traccar et doit être configurée pour l'organisation concernée. Elle n'est pas nécessaire pour utiliser les autres fonctions de gestion de flotte.",
         },
@@ -296,7 +330,10 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         "Meckia brings vehicles, maintenance, expenses and documents into one organization workspace. I designed and built the product end to end: a Next.js interface, NestJS business API, PostgreSQL on Neon and a PWA workflow for field entries. The image above is the public platform preview with sample data, not customer information.",
       facts: [
         { label: "Product", value: "Fleet management SaaS/PWA" },
-        { label: "Interface and API", value: "Next.js and NestJS / TypeScript" },
+        {
+          label: "Interface and API",
+          value: "Next.js and NestJS / TypeScript",
+        },
         { label: "Data", value: "PostgreSQL on Neon" },
         { label: "Field work", value: "offline entry, then synchronization" },
       ],
@@ -327,12 +364,14 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         {
           label: "Explore Meckia",
           href: "https://meckia.manda-ia.com/",
-          description: "See the platform and its public preview with sample data.",
+          description:
+            "See the platform and its public preview with sample data.",
         },
         {
           label: "Business application development",
-          href: "/en/services/developpement-sites-saas",
-          description: "Design and development of web apps and SaaS products for business workflows.",
+          href: "/en/services/sites-saas-development",
+          description:
+            "Design and development of web apps and SaaS products for business workflows.",
         },
       ],
       faq: [
@@ -359,9 +398,15 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       summary:
         "TeamIA devait passer d'un site vitrine généraliste à une plateforme capable d'expliquer, démontrer et vendre des agents IA métier en France et au Luxembourg. J'ai pris en charge le reverse engineering de l'existant, la clarification du positionnement, la direction UI/UX, l'architecture Next.js et Payload CMS, les connexions Supabase et n8n, ainsi que la migration SEO/GEO. Le résultat est un système éditorial multilingue, mesurable et conçu pour rester disponible même lorsque le CMS distant ne répond pas.",
       facts: [
-        { label: "Périmètre", value: "stratégie, design, code, CMS et acquisition" },
+        {
+          label: "Périmètre",
+          value: "stratégie, design, code, CMS et acquisition",
+        },
         { label: "Stack", value: "Next.js 16, Payload CMS 3 et PostgreSQL" },
-        { label: "Automatisation", value: "formulaires et 9 démonstrateurs reliés à n8n" },
+        {
+          label: "Automatisation",
+          value: "formulaires et 9 démonstrateurs reliés à n8n",
+        },
         { label: "Marchés", value: "France, Luxembourg et contenus FR/EN/DE" },
       ],
       sections: [
@@ -412,22 +457,26 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         {
           label: "Voir la plateforme TeamIA",
           href: "https://www.teamia.ai/",
-          description: "Découvrir le site en production, ses marchés, ses démonstrateurs et ses contenus métier.",
+          description:
+            "Découvrir le site en production, ses marchés, ses démonstrateurs et ses contenus métier.",
         },
         {
           label: "Développement de sites et SaaS",
           href: "/services/developpement-sites-saas",
-          description: "Conception Next.js, architecture de contenu et intégrations pour produits et sites métier.",
+          description:
+            "Conception Next.js, architecture de contenu et intégrations pour produits et sites métier.",
         },
         {
           label: "Automatisation n8n à Madagascar",
           href: "/services/automatisation-n8n-madagascar",
-          description: "Webhooks sécurisés, workflows documentés, reprise sur erreur et validation humaine.",
+          description:
+            "Webhooks sécurisés, workflows documentés, reprise sur erreur et validation humaine.",
         },
         {
           label: "Consultant SEO et GEO",
           href: "/services/consultant-seo-geo",
-          description: "Architecture de recherche, contenus utiles, données structurées et visibilité dans les moteurs IA.",
+          description:
+            "Architecture de recherche, contenus utiles, données structurées et visibilité dans les moteurs IA.",
         },
       ],
       faq: [
@@ -447,7 +496,8 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "Le navigateur appelle une route serveur Next.js. Celle-ci contrôle la requête et transmet ensuite au webhook n8n avec un secret non exposé au client. Des limites et des chemins d'erreur réduisent les appels abusifs ou incomplets.",
         },
         {
-          question: "La refonte conserve-t-elle le référencement de l'ancien site ?",
+          question:
+            "La refonte conserve-t-elle le référencement de l'ancien site ?",
           answer:
             "Oui. Une matrice de migration associe les anciennes URL aux nouvelles pages et pilote redirections, canonicals, hreflang et sitemap. Le contenu a aussi été restructuré en hubs thématiques et locaux plutôt qu'en pages isolées.",
         },
@@ -467,7 +517,10 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       summary:
         "TeamIA needed to move from a broad showcase website to a platform that could explain, demonstrate and sell business AI agents in France and Luxembourg. I handled reverse engineering, positioning, UI/UX direction, the Next.js and Payload CMS architecture, Supabase and n8n integration, and the SEO/GEO migration. The result is a measurable multilingual content system designed to remain available even when the remote CMS is unavailable.",
       facts: [
-        { label: "Scope", value: "strategy, design, engineering, CMS and acquisition" },
+        {
+          label: "Scope",
+          value: "strategy, design, engineering, CMS and acquisition",
+        },
         { label: "Stack", value: "Next.js 16, Payload CMS 3 and PostgreSQL" },
         { label: "Automation", value: "forms and 9 demos connected to n8n" },
         { label: "Markets", value: "France, Luxembourg and FR/EN/DE content" },
@@ -520,22 +573,26 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         {
           label: "Visit TeamIA",
           href: "https://www.teamia.ai/en",
-          description: "Explore the live platform, markets, AI demos and business content.",
+          description:
+            "Explore the live platform, markets, AI demos and business content.",
         },
         {
           label: "Website and SaaS development",
           href: "/en/services/sites-saas-development",
-          description: "Next.js products, content architecture and integrations for business platforms.",
+          description:
+            "Next.js products, content architecture and integrations for business platforms.",
         },
         {
           label: "n8n automation consultant",
           href: "/en/services/n8n-automation-expert-madagascar",
-          description: "Secure webhooks, documented workflows, retries and human approval paths.",
+          description:
+            "Secure webhooks, documented workflows, retries and human approval paths.",
         },
         {
           label: "SEO and GEO consulting",
           href: "/en/services/seo-geo-consultant",
-          description: "Search architecture, useful content, structured data and AI search visibility.",
+          description:
+            "Search architecture, useful content, structured data and AI search visibility.",
         },
       ],
       faq: [
@@ -555,7 +612,8 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "The browser calls a Next.js server route. It validates the request and then contacts the n8n webhook with a secret that is never exposed to the client. Limits and error paths reduce abusive or incomplete calls.",
         },
         {
-          question: "Does the redesign preserve the previous site's search visibility?",
+          question:
+            "Does the redesign preserve the previous site's search visibility?",
           answer:
             "Yes. A migration matrix maps legacy URLs to new pages and controls redirects, canonicals, hreflang and sitemap entries. Content is also organized into local and topical hubs rather than isolated pages.",
         },
@@ -578,9 +636,18 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         "Cet agent transforme plusieurs flux d'offres internationales en une file de décisions courte et exploitable. n8n orchestre la collecte, PostgreSQL élimine les doublons, des règles métier filtrent le bruit et OpenRouter analyse uniquement les opportunités qui méritent un examen approfondi. Gmail sert ensuite d'interface de validation : rien ne part tant que je n'ai pas explicitement approuvé la candidature.",
       facts: [
         { label: "Cadence", value: "une exécution toutes les 60 minutes" },
-        { label: "Sources", value: "4 flux RSS publics traités séquentiellement" },
-        { label: "Exécution observée", value: "128 annonces lues sur un cycle complet" },
-        { label: "Garde-fou", value: "validation humaine et email public obligatoire" },
+        {
+          label: "Sources",
+          value: "4 flux RSS publics traités séquentiellement",
+        },
+        {
+          label: "Exécution observée",
+          value: "128 annonces lues sur un cycle complet",
+        },
+        {
+          label: "Garde-fou",
+          value: "validation humaine et email public obligatoire",
+        },
       ],
       sections: [
         {
@@ -626,10 +693,10 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "Ajouter une couche IA mesurable sans lui confier les décisions sensibles.",
         },
         {
-          label: "Pipeline de veille Codeur.com",
-          href: "/projects/veille-codeur-automatisation-n8n",
+          label: "Prospection B2B avec n8n et Lemlist",
+          href: "/projects/automatisation-prospection-n8n-lemlist",
           description:
-            "Le premier pipeline local de collecte, scoring explicable et validation humaine.",
+            "Sourcing, qualification et pr?paration de messages avec validation humaine.",
         },
         {
           label: "Showcase d'automatisations commerciales",
@@ -640,7 +707,8 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
       faq: [
         {
-          question: "L'agent postule-t-il automatiquement à toutes les offres ?",
+          question:
+            "L'agent postule-t-il automatiquement à toutes les offres ?",
           answer:
             "Non. Il filtre et prépare les meilleures opportunités, mais un envoi exige une approbation humaine explicite. Les annonces sans adresse email publique restent entièrement manuelles.",
         },
@@ -655,7 +723,8 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "Chaque annonce reçoit une empreinte persistée dans PostgreSQL. Les décisions, approbations et résultats d'envoi sont enregistrés, ce qui empêche une annonce déjà traitée de repartir comme une nouvelle opportunité.",
         },
         {
-          question: "Cette architecture peut-elle servir à une équipe commerciale ?",
+          question:
+            "Cette architecture peut-elle servir à une équipe commerciale ?",
           answer:
             "Oui. Les sources, critères, seuils, modèles et canaux d'approbation peuvent être adaptés à des leads commerciaux, appels d'offres, partenaires ou demandes entrantes.",
         },
@@ -671,9 +740,18 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         "This agent turns several international opportunity feeds into a short, actionable decision queue. n8n orchestrates collection, PostgreSQL removes duplicates, business rules filter noise and OpenRouter analyzes only the listings worth deeper review. Gmail then becomes the approval interface: no application leaves the system until I explicitly approve it.",
       facts: [
         { label: "Cadence", value: "one execution every 60 minutes" },
-        { label: "Sources", value: "4 public RSS feeds processed sequentially" },
-        { label: "Observed run", value: "128 listings read in one complete cycle" },
-        { label: "Safeguard", value: "human approval and public email required" },
+        {
+          label: "Sources",
+          value: "4 public RSS feeds processed sequentially",
+        },
+        {
+          label: "Observed run",
+          value: "128 listings read in one complete cycle",
+        },
+        {
+          label: "Safeguard",
+          value: "human approval and public email required",
+        },
       ],
       sections: [
         {
@@ -720,7 +798,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         },
         {
           label: "Codeur.com opportunity pipeline",
-          href: "/en/projects/veille-codeur-automatisation-n8n",
+          href: "/en/projects/automatisation-prospection-n8n-lemlist",
           description:
             "The earlier local pipeline for collection, explainable scoring and human review.",
         },
@@ -767,8 +845,14 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       facts: [
         { label: "Fréquence", value: "une veille toutes les 10 minutes" },
         { label: "Capacité", value: "10 recherches et 50 annonces par flux" },
-        { label: "Qualification", value: "score explicable, alerte dès 75/100" },
-        { label: "Garde-fou", value: "validation humaine, aucun envoi automatique" },
+        {
+          label: "Qualification",
+          value: "score explicable, alerte dès 75/100",
+        },
+        {
+          label: "Garde-fou",
+          value: "validation humaine, aucun envoi automatique",
+        },
       ],
       sections: [
         {
@@ -836,7 +920,10 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       facts: [
         { label: "Frequency", value: "one monitoring run every 10 minutes" },
         { label: "Capacity", value: "10 searches and 50 listings per feed" },
-        { label: "Qualification", value: "explainable score, alert from 75/100" },
+        {
+          label: "Qualification",
+          value: "explainable score, alert from 75/100",
+        },
         { label: "Safeguard", value: "human review, no automatic outreach" },
       ],
       sections: [
@@ -917,14 +1004,24 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       summary:
         "PaidMada Mobile Money démontre comment une application Madagascar peut structurer des paiements Orange Money, MVola et Airtel Money sans dépendre d'une confirmation fragile côté frontend. Le coeur du projet est la logique serveur : créer une tentative de paiement, stocker la référence fournisseur, recevoir le callback, vérifier le statut et rapprocher la transaction avec la commande. Cette approche réduit les paiements perdus, les confirmations ambiguës et les recherches manuelles dans plusieurs outils.",
       facts: [
-        { label: "Fournisseurs ciblés", value: "Orange Money, MVola, Airtel Money" },
+        {
+          label: "Fournisseurs ciblés",
+          value: "Orange Money, MVola, Airtel Money",
+        },
         { label: "Bloc critique", value: "callbacks, statuts, rapprochement" },
-        { label: "Usage métier", value: "commande, facture, réservation ou abonnement" },
-        { label: "Risque traité", value: "double callback, statut inconnu, paiement non associé" },
+        {
+          label: "Usage métier",
+          value: "commande, facture, réservation ou abonnement",
+        },
+        {
+          label: "Risque traité",
+          value: "double callback, statut inconnu, paiement non associé",
+        },
       ],
       sections: [
         {
-          title: "Pourquoi PaidMada aide à juger une API Mobile Money Madagascar",
+          title:
+            "Pourquoi PaidMada aide à juger une API Mobile Money Madagascar",
           paragraphs: [
             "Une API Mobile Money Madagascar devient fiable quand le paiement est traité comme un cycle complet, pas comme un simple bouton. PaidMada sert de cas concret pour cadrer les statuts, les références fournisseur, le suivi côté serveur et le dashboard de contrôle.",
             "Le projet montre aussi pourquoi Orange Money, MVola et Airtel Money doivent être isolés dans des adaptateurs fournisseur. Chaque opérateur peut avoir ses propres paramètres, statuts et contraintes d'accès, tandis que l'application a besoin d'un modèle commun pour rester maintenable.",
@@ -971,7 +1068,8 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "Il faut stocker chaque tentative avec une référence interne, recevoir le callback côté serveur, traiter le statut de manière idempotente et rendre le paiement recherchable dans un dashboard par client, commande ou référence fournisseur.",
         },
         {
-          question: "Pourquoi prévoir un mode test pour Orange Money, MVola ou Airtel Money ?",
+          question:
+            "Pourquoi prévoir un mode test pour Orange Money, MVola ou Airtel Money ?",
           answer:
             "Un mode test permet de vérifier les écrans, statuts, notifications et cas d'erreur avant la mise en production. C'est utile quand les accès fournisseur ou sandbox arrivent progressivement.",
         },
@@ -986,10 +1084,22 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       summary:
         "PaidMada Mobile Money demonstrates how a Madagascar application can structure Orange Money, MVola and Airtel Money payments without relying on fragile frontend confirmation. The core of the project is server-side logic: create a payment attempt, store the provider reference, receive the callback, verify the status and reconcile the transaction with the order. This approach reduces lost payments, ambiguous confirmations and manual searches across multiple tools.",
       facts: [
-        { label: "Target providers", value: "Orange Money, MVola, Airtel Money" },
-        { label: "Critical block", value: "callbacks, statuses, reconciliation" },
-        { label: "Business use", value: "order, invoice, booking or subscription" },
-        { label: "Risk handled", value: "double callback, unknown status, unmatched payment" },
+        {
+          label: "Target providers",
+          value: "Orange Money, MVola, Airtel Money",
+        },
+        {
+          label: "Critical block",
+          value: "callbacks, statuses, reconciliation",
+        },
+        {
+          label: "Business use",
+          value: "order, invoice, booking or subscription",
+        },
+        {
+          label: "Risk handled",
+          value: "double callback, unknown status, unmatched payment",
+        },
       ],
       sections: [
         {
@@ -1040,7 +1150,8 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "Store each attempt with an internal reference, receive the callback server-side, process the status idempotently and make the payment searchable in a dashboard by customer, order or provider reference.",
         },
         {
-          question: "Why plan a test mode for Orange Money, MVola or Airtel Money?",
+          question:
+            "Why plan a test mode for Orange Money, MVola or Airtel Money?",
           answer:
             "A test mode verifies screens, statuses, notifications and error cases before production. It is useful when provider or sandbox access arrives progressively.",
         },
@@ -1053,14 +1164,27 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       metaDescription:
         "Étude de cas : workflow n8n de qualification Facebook, scoring de leads, synthèse, dashboard CRM et validation humaine des actions sensibles.",
       kicker: "Étude de cas n8n et CRM",
-      title: "Qualifier des leads Facebook sans automatiser les decisions sensibles",
+      title:
+        "Qualifier des leads Facebook sans automatiser les decisions sensibles",
       summary:
         "Cette étude de cas montre comment transformer des messages, commentaires ou formulaires Facebook en leads exploitables avec n8n et un CRM, sans automatiser une réponse risquée. Le workflow détecte l'intention, résume la demande, classe le lead, prépare une réponse et crée une action commerciale. L'IA aide à qualifier et structurer, tandis que l'humain garde la validation pour les réponses sensibles ou les opportunités importantes.",
       facts: [
-        { label: "Canal", value: "Facebook, Messenger, commentaires ou formulaires" },
-        { label: "Sortie utile", value: "résumé, intention, score, prochaine action" },
-        { label: "Contrôle", value: "validation humaine sur les cas sensibles" },
-        { label: "Usage", value: "prospection, support léger, qualification commerciale" },
+        {
+          label: "Canal",
+          value: "Facebook, Messenger, commentaires ou formulaires",
+        },
+        {
+          label: "Sortie utile",
+          value: "résumé, intention, score, prochaine action",
+        },
+        {
+          label: "Contrôle",
+          value: "validation humaine sur les cas sensibles",
+        },
+        {
+          label: "Usage",
+          value: "prospection, support léger, qualification commerciale",
+        },
       ],
       sections: [
         {
@@ -1106,7 +1230,8 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "Oui. Un agent IA Facebook peut analyser un message, commentaire ou formulaire, détecter l'intention, résumer le besoin, attribuer un score et créer une prochaine action commerciale.",
         },
         {
-          question: "Faut-il laisser l'IA répondre automatiquement sur Facebook ?",
+          question:
+            "Faut-il laisser l'IA répondre automatiquement sur Facebook ?",
           answer:
             "Pas au début. Je recommande de commencer avec des brouillons et une validation humaine, puis d'automatiser seulement les réponses simples et répétitives une fois les scénarios testés.",
         },
@@ -1127,9 +1252,15 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         "This case study shows how to turn Facebook messages, comments or forms into usable leads with n8n and a CRM without automating risky replies. The workflow detects intent, summarizes the request, classifies the lead, prepares a reply and creates a sales action. AI structures the conversation while people keep control of sensitive replies and important opportunities.",
       facts: [
         { label: "Channel", value: "Facebook, Messenger, comments or forms" },
-        { label: "Useful output", value: "summary, intent, score, next action" },
+        {
+          label: "Useful output",
+          value: "summary, intent, score, next action",
+        },
         { label: "Control", value: "human validation on sensitive cases" },
-        { label: "Use case", value: "prospecting, light support, sales qualification" },
+        {
+          label: "Use case",
+          value: "prospecting, light support, sales qualification",
+        },
       ],
       sections: [
         {
@@ -1198,9 +1329,18 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         "Animation Web démontre une approche d'animation frontend utile pour un site ou une application React/Next.js : mouvement visible, interface lisible et performance gardée sous contrôle. L'objectif n'est pas d'ajouter des effets partout, mais d'utiliser l'animation pour guider l'attention, expliquer une interaction et rendre une page plus mémorable sans bloquer le chargement ni l'accessibilité.",
       facts: [
         { label: "Domaine", value: "React, Next.js, UI motion" },
-        { label: "Usage", value: "hero animé, micro-interactions, transitions" },
-        { label: "Point de contrôle", value: "performance, responsive, lisibilité" },
-        { label: "Risque traité", value: "animation lourde, mouvement inutile, CLS" },
+        {
+          label: "Usage",
+          value: "hero animé, micro-interactions, transitions",
+        },
+        {
+          label: "Point de contrôle",
+          value: "performance, responsive, lisibilité",
+        },
+        {
+          label: "Risque traité",
+          value: "animation lourde, mouvement inutile, CLS",
+        },
       ],
       sections: [
         {
@@ -1227,7 +1367,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         },
         {
           label: "Développement applications",
-          href: "/services/developpement-applications",
+          href: "/services/developpement-sites-saas",
           description:
             "Applications web métier, dashboards et interfaces interactives.",
         },
@@ -1255,8 +1395,14 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         "Web Animation demonstrates a useful frontend animation approach for a React/Next.js website or application: visible motion, readable interface and controlled performance. The objective is not to add effects everywhere, but to use animation to guide attention, explain an interaction and make a page more memorable without harming loading or accessibility.",
       facts: [
         { label: "Domain", value: "React, Next.js, UI motion" },
-        { label: "Use", value: "animated hero, micro-interactions, transitions" },
-        { label: "Control point", value: "performance, responsive, readability" },
+        {
+          label: "Use",
+          value: "animated hero, micro-interactions, transitions",
+        },
+        {
+          label: "Control point",
+          value: "performance, responsive, readability",
+        },
         { label: "Risk handled", value: "heavy motion, useless effects, CLS" },
       ],
       sections: [
@@ -1284,7 +1430,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         },
         {
           label: "Application Development",
-          href: "/en/services/application-development",
+          href: "/en/services/sites-saas-development",
           description:
             "Business web applications, dashboards and interactive interfaces.",
         },
@@ -1376,7 +1522,8 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       ],
       faq: [
         {
-          question: "Quel logiciel de facturation gratuit utiliser à Madagascar ?",
+          question:
+            "Quel logiciel de facturation gratuit utiliser à Madagascar ?",
           answer:
             "Factumation convient aux freelances et petites structures qui veulent créer gratuitement des factures et devis en ligne, utiliser l'Ariary et exporter un PDF. Pour la comptabilité complète, la gestion de stock ou la paie, il faut plutôt choisir un ERP adapté à la législation et au fonctionnement de l'entreprise.",
         },
@@ -1450,22 +1597,26 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         {
           label: "Create a free invoice with Factumation",
           href: "https://factumation.manda-ia.com/en",
-          description: "Open the online generator to create an invoice or quote and export it as PDF.",
+          description:
+            "Open the online generator to create an invoice or quote and export it as PDF.",
         },
         {
           label: "Freelance Next.js and Supabase developer",
           href: "/en/services/nextjs-supabase-developer-madagascar",
-          description: "Custom SaaS products, business applications and dashboards built on a modern web stack.",
+          description:
+            "Custom SaaS products, business applications and dashboards built on a modern web stack.",
         },
         {
           label: "n8n automation consultant",
           href: "/en/services/remote-n8n-automation-consultant",
-          description: "Connect invoicing, email, CRM and reminders with controlled, documented workflows.",
+          description:
+            "Connect invoicing, email, CRM and reminders with controlled, documented workflows.",
         },
         {
           label: "Business application development",
           href: "/en/services/sites-saas-development",
-          description: "Turn a manual business process into a clear, maintainable and measurable web application.",
+          description:
+            "Turn a manual business process into a clear, maintainable and measurable web application.",
         },
       ],
       faq: [
@@ -1500,64 +1651,210 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
   "automatisation-prospection-n8n-lemlist": {
     fr: {
       metaTitle: "Automatiser sa prospection commerciale avec n8n et Lemlist",
-      metaDescription: "Étude de cas d'une automatisation de prospection B2B avec n8n et Lemlist : sourcing, dédoublonnage, qualification et validation humaine.",
+      metaDescription:
+        "Étude de cas d'une automatisation de prospection B2B avec n8n et Lemlist : sourcing, dédoublonnage, qualification et validation humaine.",
       kicker: "Automatisation commerciale contrôlée",
-      title: "Automatiser sa prospection commerciale avec n8n, Lemlist et une validation humaine",
-      summary: "Cette réalisation pour TeamIA orchestre une prospection multi-campagnes sans transformer l'automatisation en envoi aveugle. n8n charge les segments actifs, recherche et classe les entreprises, réserve les comptes inédits, sélectionne les décideurs puis prépare une recherche et un message soumis à validation humaine. Lemlist est utilisé pour les données entreprises et personnes ; le moteur ne déclenche aucun email prospect automatiquement.",
+      title:
+        "Automatiser sa prospection commerciale avec n8n, Lemlist et une validation humaine",
+      summary:
+        "Cette réalisation pour TeamIA orchestre une prospection multi-campagnes sans transformer l'automatisation en envoi aveugle. n8n charge les segments actifs, recherche et classe les entreprises, réserve les comptes inédits, sélectionne les décideurs puis prépare une recherche et un message soumis à validation humaine. Lemlist est utilisé pour les données entreprises et personnes ; le moteur ne déclenche aucun email prospect automatiquement.",
       facts: [
-        { label: "Orchestrateur", value: "n8n, avec déclenchement quotidien ou manuel" },
-        { label: "Sources", value: "Campagnes actives, base entreprises et décideurs Lemlist" },
-        { label: "Garde-fous", value: "Déduplication et plafond de 10 prospects par exécution" },
-        { label: "Sortie", value: "File de validation humaine avant toute action commerciale" },
+        {
+          label: "Orchestrateur",
+          value: "n8n, avec déclenchement quotidien ou manuel",
+        },
+        {
+          label: "Sources",
+          value: "Campagnes actives, base entreprises et décideurs Lemlist",
+        },
+        {
+          label: "Garde-fous",
+          value: "Déduplication et plafond de 10 prospects par exécution",
+        },
+        {
+          label: "Sortie",
+          value: "File de validation humaine avant toute action commerciale",
+        },
       ],
       sections: [
-        { title: "Le contexte : une prospection commerciale B2B composée d'étapes dispersées", paragraphs: ["Une équipe commerciale doit normalement passer d'une campagne à une liste d'entreprises, vérifier qu'un compte n'a pas déjà été travaillé, identifier le bon interlocuteur et préparer un message cohérent. Répéter ces opérations entre plusieurs segments fragilise la qualité des données et rend le processus difficile à piloter."] },
-        { title: "La solution : un pipeline n8n en six étapes", paragraphs: ["Le workflow lit les campagnes actives et leurs segments, interroge Lemlist pour trouver les entreprises correspondantes, puis les classe selon les critères de campagne. Les comptes déjà examinés sont réservés et écartés avant la recherche de décideurs. Les profils sont ensuite sélectionnés selon les intitulés recherchés ou exclus, dans la limite des quotas. Enfin, le workflow recherche des signaux publics, prépare un message, normalise le résultat et l'envoie dans une file de revue.", "Le workflow de retour Lemlist complète ce flux par un callback asynchrone : il rattache l'enrichissement à la bonne ligne avec une clé de déduplication, met à jour le statut, puis soumet le message à une validation. Une approbation ne provoque pas d'envoi automatique au prospect."] },
-        { title: "Intégration n8n et API Lemlist : architecture et règles métier", paragraphs: ["n8n joue le rôle d'orchestrateur entre le cockpit de campagnes, les API Lemlist, les règles JavaScript de qualification et la file de validation. Les appels critiques au cockpit sont configurés avec des tentatives limitées ; les limites de volume sont vérifiées dans les nœuds de transformation. La déduplication intervient avant l'enrichissement des décideurs, ce qui évite de retraiter inutilement les mêmes entreprises."] },
-        { title: "Ce que ce système permet", paragraphs: ["Le processus centralise la préparation des prospects tout en gardant la décision commerciale à une personne. Il réduit les gestes répétitifs, rend les quotas explicites et laisse une base évolutive pour connecter un CRM, une source de leads ou un autre outil d'outreach. Aucun chiffre de conversion ou de ROI n'est revendiqué ici : le bénéfice démontré est la fiabilité et la reproductibilité du pipeline."] },
-        { title: "À qui s'adresse cette automatisation", paragraphs: ["Ce type d'intégration convient aux agences B2B, équipes growth, cabinets de conseil, SaaS et entreprises de services qui utilisent Lemlist ou souhaitent relier leurs sources de leads, règles de qualification et processus commercial. Le bon périmètre commence par les règles métier, les données autorisées et le niveau de contrôle humain attendu."] },
+        {
+          title:
+            "Le contexte : une prospection commerciale B2B composée d'étapes dispersées",
+          paragraphs: [
+            "Une équipe commerciale doit normalement passer d'une campagne à une liste d'entreprises, vérifier qu'un compte n'a pas déjà été travaillé, identifier le bon interlocuteur et préparer un message cohérent. Répéter ces opérations entre plusieurs segments fragilise la qualité des données et rend le processus difficile à piloter.",
+          ],
+        },
+        {
+          title: "La solution : un pipeline n8n en six étapes",
+          paragraphs: [
+            "Le workflow lit les campagnes actives et leurs segments, interroge Lemlist pour trouver les entreprises correspondantes, puis les classe selon les critères de campagne. Les comptes déjà examinés sont réservés et écartés avant la recherche de décideurs. Les profils sont ensuite sélectionnés selon les intitulés recherchés ou exclus, dans la limite des quotas. Enfin, le workflow recherche des signaux publics, prépare un message, normalise le résultat et l'envoie dans une file de revue.",
+            "Le workflow de retour Lemlist complète ce flux par un callback asynchrone : il rattache l'enrichissement à la bonne ligne avec une clé de déduplication, met à jour le statut, puis soumet le message à une validation. Une approbation ne provoque pas d'envoi automatique au prospect.",
+          ],
+        },
+        {
+          title:
+            "Intégration n8n et API Lemlist : architecture et règles métier",
+          paragraphs: [
+            "n8n joue le rôle d'orchestrateur entre le cockpit de campagnes, les API Lemlist, les règles JavaScript de qualification et la file de validation. Les appels critiques au cockpit sont configurés avec des tentatives limitées ; les limites de volume sont vérifiées dans les nœuds de transformation. La déduplication intervient avant l'enrichissement des décideurs, ce qui évite de retraiter inutilement les mêmes entreprises.",
+          ],
+        },
+        {
+          title: "Ce que ce système permet",
+          paragraphs: [
+            "Le processus centralise la préparation des prospects tout en gardant la décision commerciale à une personne. Il réduit les gestes répétitifs, rend les quotas explicites et laisse une base évolutive pour connecter un CRM, une source de leads ou un autre outil d'outreach. Aucun chiffre de conversion ou de ROI n'est revendiqué ici : le bénéfice démontré est la fiabilité et la reproductibilité du pipeline.",
+          ],
+        },
+        {
+          title: "À qui s'adresse cette automatisation",
+          paragraphs: [
+            "Ce type d'intégration convient aux agences B2B, équipes growth, cabinets de conseil, SaaS et entreprises de services qui utilisent Lemlist ou souhaitent relier leurs sources de leads, règles de qualification et processus commercial. Le bon périmètre commence par les règles métier, les données autorisées et le niveau de contrôle humain attendu.",
+          ],
+        },
       ],
       relatedLinks: [
-        { label: "Service d'automatisation n8n", href: "/services/automatisation-n8n-madagascar", description: "Concevoir des workflows n8n fiables, connectés aux outils métier et documentés." },
-        { label: "Cockpit de prospection TeamIA", href: "/projects/logiciel-prospection-b2b-teamia", description: "Voir l’application de configuration des campagnes et de validation humaine des prospects." },
-        { label: "Plateforme TeamIA", href: "/projects/teamia", description: "Voir la plateforme métier où s'inscrit cette automatisation." },
-        { label: "Me contacter pour un système similaire", href: "/contact", description: "Parlons des étapes de prospection encore manuelles dans votre processus." },
+        {
+          label: "Service d'automatisation n8n",
+          href: "/services/automatisation-n8n-madagascar",
+          description:
+            "Concevoir des workflows n8n fiables, connectés aux outils métier et documentés.",
+        },
+        {
+          label: "Cockpit de prospection TeamIA",
+          href: "/projects/logiciel-prospection-b2b-teamia",
+          description:
+            "Voir l’application de configuration des campagnes et de validation humaine des prospects.",
+        },
+        {
+          label: "Plateforme TeamIA",
+          href: "/projects/teamia",
+          description:
+            "Voir la plateforme métier où s'inscrit cette automatisation.",
+        },
+        {
+          label: "Me contacter pour un système similaire",
+          href: "/contact",
+          description:
+            "Parlons des étapes de prospection encore manuelles dans votre processus.",
+        },
       ],
       faq: [
-        { question: "Comment automatiser sa prospection commerciale avec n8n ?", answer: "Il faut d'abord formaliser les segments, critères de sélection, règles de déduplication, quotas et point de contrôle humain. n8n peut alors orchestrer les sources de prospects, l'enrichissement, la qualification et la préparation des messages, tout en laissant l'envoi sous validation lorsque le processus l'exige." },
-        { question: "Le workflow envoie-t-il automatiquement des emails aux prospects ?", answer: "Non. Le moteur prépare des résultats et des messages dans une file de validation humaine. Le workflow de retour Lemlist prévoit aussi une approbation explicite, sans envoi prospect automatique." },
-        { question: "Quel est le rôle de Lemlist dans cette automatisation ?", answer: "Lemlist sert à rechercher les entreprises et les décideurs correspondant aux segments, puis à retourner certains enrichissements de manière asynchrone. n8n orchestre la logique de campagne, les filtres, la déduplication et la préparation des résultats." },
-        { question: "Comment les doublons sont-ils évités ?", answer: "Les entreprises candidates sont réservées avant la recherche des décideurs. Une clé de déduplication rattache aussi les retours d'enrichissement au bon prospect dans le workflow complémentaire." },
+        {
+          question: "Comment automatiser sa prospection commerciale avec n8n ?",
+          answer:
+            "Il faut d'abord formaliser les segments, critères de sélection, règles de déduplication, quotas et point de contrôle humain. n8n peut alors orchestrer les sources de prospects, l'enrichissement, la qualification et la préparation des messages, tout en laissant l'envoi sous validation lorsque le processus l'exige.",
+        },
+        {
+          question:
+            "Le workflow envoie-t-il automatiquement des emails aux prospects ?",
+          answer:
+            "Non. Le moteur prépare des résultats et des messages dans une file de validation humaine. Le workflow de retour Lemlist prévoit aussi une approbation explicite, sans envoi prospect automatique.",
+        },
+        {
+          question: "Quel est le rôle de Lemlist dans cette automatisation ?",
+          answer:
+            "Lemlist sert à rechercher les entreprises et les décideurs correspondant aux segments, puis à retourner certains enrichissements de manière asynchrone. n8n orchestre la logique de campagne, les filtres, la déduplication et la préparation des résultats.",
+        },
+        {
+          question: "Comment les doublons sont-ils évités ?",
+          answer:
+            "Les entreprises candidates sont réservées avant la recherche des décideurs. Une clé de déduplication rattache aussi les retours d'enrichissement au bon prospect dans le workflow complémentaire.",
+        },
       ],
     },
     en: {
       metaTitle: "B2B Prospecting Automation with n8n & Lemlist",
-      metaDescription: "Case study: an n8n workflow connected to Lemlist to source, deduplicate, qualify decision makers and prepare B2B outreach with human review.",
+      metaDescription:
+        "Case study: an n8n workflow connected to Lemlist to source, deduplicate, qualify decision makers and prepare B2B outreach with human review.",
       kicker: "Controlled sales automation",
-      title: "Connecting B2B sourcing, Lemlist and human review in one workflow",
-      summary: "This TeamIA delivery orchestrates multi-campaign prospecting without turning automation into blind outreach. n8n loads active segments, searches and ranks companies, reserves unseen accounts, selects decision makers, then prepares research and a message for human review. Lemlist supplies company and people data; the engine does not automatically send prospect emails.",
+      title:
+        "Connecting B2B sourcing, Lemlist and human review in one workflow",
+      summary:
+        "This TeamIA delivery orchestrates multi-campaign prospecting without turning automation into blind outreach. n8n loads active segments, searches and ranks companies, reserves unseen accounts, selects decision makers, then prepares research and a message for human review. Lemlist supplies company and people data; the engine does not automatically send prospect emails.",
       facts: [
-        { label: "Orchestrator", value: "n8n, with daily or manual triggering" },
-        { label: "Sources", value: "Active campaigns plus Lemlist company and people data" },
-        { label: "Guardrails", value: "Deduplication and a 10-prospect execution cap" },
-        { label: "Output", value: "Human review queue before any sales action" },
+        {
+          label: "Orchestrator",
+          value: "n8n, with daily or manual triggering",
+        },
+        {
+          label: "Sources",
+          value: "Active campaigns plus Lemlist company and people data",
+        },
+        {
+          label: "Guardrails",
+          value: "Deduplication and a 10-prospect execution cap",
+        },
+        {
+          label: "Output",
+          value: "Human review queue before any sales action",
+        },
       ],
       sections: [
-        { title: "The business context", paragraphs: ["B2B prospecting often requires moving from a campaign to company research, duplicate checks, decision-maker selection and message preparation. Repeating these steps across segments makes data quality and oversight harder to maintain."] },
-        { title: "How the workflow works", paragraphs: ["The workflow loads active campaigns and segments, searches Lemlist for matching companies and ranks them. It excludes previously reviewed accounts before looking for decision makers, applies title rules and quotas, then researches public signals and prepares a message for review.", "A companion Lemlist callback workflow links asynchronous enrichment to the correct prospect with a deduplication key, updates its status and requests explicit human approval. Approval itself does not send an email to a prospect."] },
-        { title: "Technical architecture", paragraphs: ["n8n orchestrates the campaign cockpit, Lemlist APIs, JavaScript qualification rules and review queue. Bounded retries protect critical requests, volume limits are checked during transformation and deduplication happens before decision-maker enrichment."] },
-        { title: "Who this is for", paragraphs: ["This pattern suits B2B agencies, growth teams, consultancies, SaaS companies and service businesses that need to connect lead sources, qualification rules and outreach tools without removing human judgment."] },
+        {
+          title: "The business context",
+          paragraphs: [
+            "B2B prospecting often requires moving from a campaign to company research, duplicate checks, decision-maker selection and message preparation. Repeating these steps across segments makes data quality and oversight harder to maintain.",
+          ],
+        },
+        {
+          title: "How the workflow works",
+          paragraphs: [
+            "The workflow loads active campaigns and segments, searches Lemlist for matching companies and ranks them. It excludes previously reviewed accounts before looking for decision makers, applies title rules and quotas, then researches public signals and prepares a message for review.",
+            "A companion Lemlist callback workflow links asynchronous enrichment to the correct prospect with a deduplication key, updates its status and requests explicit human approval. Approval itself does not send an email to a prospect.",
+          ],
+        },
+        {
+          title: "Technical architecture",
+          paragraphs: [
+            "n8n orchestrates the campaign cockpit, Lemlist APIs, JavaScript qualification rules and review queue. Bounded retries protect critical requests, volume limits are checked during transformation and deduplication happens before decision-maker enrichment.",
+          ],
+        },
+        {
+          title: "Who this is for",
+          paragraphs: [
+            "This pattern suits B2B agencies, growth teams, consultancies, SaaS companies and service businesses that need to connect lead sources, qualification rules and outreach tools without removing human judgment.",
+          ],
+        },
       ],
       relatedLinks: [
-        { label: "n8n automation service", href: "/en/services/remote-n8n-automation-consultant", description: "Reliable n8n workflows connected to business tools." },
-        { label: "TeamIA prospecting dashboard", href: "/en/projects/logiciel-prospection-b2b-teamia", description: "Explore the application for campaign settings and human review of prospects." },
-        { label: "TeamIA platform", href: "/en/projects/teamia", description: "See the business platform behind this automation." },
-        { label: "Discuss a similar system", href: "/en/contact", description: "Talk through the manual steps in your current prospecting process." },
+        {
+          label: "n8n automation service",
+          href: "/en/services/remote-n8n-automation-consultant",
+          description: "Reliable n8n workflows connected to business tools.",
+        },
+        {
+          label: "TeamIA prospecting dashboard",
+          href: "/en/projects/logiciel-prospection-b2b-teamia",
+          description:
+            "Explore the application for campaign settings and human review of prospects.",
+        },
+        {
+          label: "TeamIA platform",
+          href: "/en/projects/teamia",
+          description: "See the business platform behind this automation.",
+        },
+        {
+          label: "Discuss a similar system",
+          href: "/en/contact",
+          description:
+            "Talk through the manual steps in your current prospecting process.",
+        },
       ],
       faq: [
-        { question: "Does the workflow automatically email prospects?", answer: "No. It prepares results and messages for human review. The Lemlist return workflow also requires explicit approval and does not automatically send prospect emails." },
-        { question: "What does Lemlist do in this automation?", answer: "Lemlist is used to find companies and decision makers matching campaign segments, and to return some enrichment asynchronously. n8n orchestrates campaign logic, filtering, deduplication and result preparation." },
-        { question: "How are duplicates avoided?", answer: "Candidate companies are reserved before decision-maker research. A deduplication key also links enrichment callbacks to the right prospect in the companion workflow." },
+        {
+          question: "Does the workflow automatically email prospects?",
+          answer:
+            "No. It prepares results and messages for human review. The Lemlist return workflow also requires explicit approval and does not automatically send prospect emails.",
+        },
+        {
+          question: "What does Lemlist do in this automation?",
+          answer:
+            "Lemlist is used to find companies and decision makers matching campaign segments, and to return some enrichment asynchronously. n8n orchestrates campaign logic, filtering, deduplication and result preparation.",
+        },
+        {
+          question: "How are duplicates avoided?",
+          answer:
+            "Candidate companies are reserved before decision-maker research. A deduplication key also links enrichment callbacks to the right prospect in the companion workflow.",
+        },
       ],
     },
   },

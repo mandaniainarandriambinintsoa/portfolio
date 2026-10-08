@@ -9,7 +9,10 @@ import {
   getBusinessVerticalSitemapPairs,
 } from "@/lib/data/business-verticals";
 
-function asDate(value: string | null | undefined, fallback: Date): Date {
+function asDate(
+  value: string | null | undefined,
+  fallback?: Date,
+): Date | undefined {
   if (!value) return fallback;
   const parsed = new Date(value);
   return Number.isNaN(parsed.getTime()) ? fallback : parsed;
@@ -18,7 +21,7 @@ function asDate(value: string | null | undefined, fallback: Date): Date {
 function entry(
   pathFr: string,
   pathEn: string,
-  lastModified: Date,
+  lastModified: Date | undefined,
   current: "fr" | "en",
 ): MetadataRoute.Sitemap[number] {
   const urlFr = `${SITE_URL}${pathFr}`;
@@ -37,7 +40,6 @@ function entry(
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
   const [blogEntries, projectEntries, servicePairs] = await Promise.all([
     getAllBlogSitemapEntries(),
     getAllProjectSitemapEntries(),
@@ -63,12 +65,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   for (const route of staticRoutes) {
-    items.push(entry(route.fr, route.en, now, "fr"));
-    items.push(entry(route.fr, route.en, now, "en"));
+    items.push(entry(route.fr, route.en, undefined, "fr"));
+    items.push(entry(route.fr, route.en, undefined, "en"));
   }
 
   // Solutions SEO/GEO — map by array index to keep FR/EN pairs in sync
-  const businessVerticalLastModified = asDate(BUSINESS_VERTICALS_UPDATED_AT, now);
+  const businessVerticalLastModified = asDate(BUSINESS_VERTICALS_UPDATED_AT);
   for (const vertical of getBusinessVerticalSitemapPairs()) {
     const pathFr = `/site-metier/${vertical.frSlug}`;
     const pathEn = `/en/site-metier/${vertical.enSlug}`;
@@ -76,7 +78,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     items.push(entry(pathFr, pathEn, businessVerticalLastModified, "en"));
   }
 
-  const solutionLastModified = asDate(SOLUTION_LAST_UPDATED, now);
+  const solutionLastModified = asDate(SOLUTION_LAST_UPDATED);
   items.push(entry("/solutions", "/en/solutions", solutionLastModified, "fr"));
   items.push(entry("/solutions", "/en/solutions", solutionLastModified, "en"));
 
@@ -92,7 +94,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Services (generic + landing) from Payload first, dictionary fallback.
   for (const service of servicePairs) {
-    const lastmod = asDate(service.updatedAt ?? service.createdAt, now);
+    const lastmod = asDate(service.updatedAt ?? service.createdAt);
     const pathFr = `/services/${service.frSlug}`;
     const pathEn = `/en/services/${service.enSlug}`;
     items.push(entry(pathFr, pathEn, lastmod, "fr"));
@@ -101,16 +103,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Projects — same slug for both locales (single column in Supabase)
   for (const project of projectEntries) {
-    const lastmod = asDate(project.updatedAt ?? project.createdAt, now);
+    const lastmod = asDate(project.updatedAt ?? project.createdAt);
     const pathFr = `/projects/${project.slug}`;
-    const pathEn = `/en/projects/${project.slug}`;
+    const pathEn = `/en/projects/${project.slug === "tracking-visiteurs" ? "visitor-tracking" : project.slug}`;
     items.push(entry(pathFr, pathEn, lastmod, "fr"));
     items.push(entry(pathFr, pathEn, lastmod, "en"));
   }
 
   // Blog posts — same slug for both locales (bilingual columns per row)
   for (const post of blogEntries) {
-    const lastmod = asDate(post.updatedAt ?? post.publishedAt, now);
+    const lastmod = asDate(post.updatedAt ?? post.publishedAt);
     const pathFr = `/blog/${post.slug}`;
     const pathEn = `/en/blog/${post.slug}`;
     items.push(entry(pathFr, pathEn, lastmod, "fr"));

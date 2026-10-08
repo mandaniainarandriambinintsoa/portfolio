@@ -26,14 +26,14 @@
     "blog": "Blog"
   },
   "hero": {
-    "line1": "I DEVELOP WEBSITES, SAAS MVPS, AND INTEGRATE AI (CLAUDE/OPENAI).",
-    "line2": "I DESIGN SCALABLE N8N WORKFLOWS.",
+    "line1": "Business applications and automation",
+    "line2": "to simplify your work.",
     "line3": "",
-    "subtitle_prefix": "Do you have a product idea or manual tasks slowing you down? I turn them into",
-    "subtitle_highlight": "SaaS MVPs or systems that run without you",
-    "subtitle_rest": ", delivered in a few weeks with AI and ",
-    "subtitle_highlight2": "no-code automation (n8n)",
-    "subtitle_rest2": ". 4+ years of experience, 20+ products delivered from Madagascar.",
+    "subtitle_prefix": "I build",
+    "subtitle_highlight": "SaaS products, websites and AI integrations",
+    "subtitle_rest": ", from scoping to deployment, with ",
+    "subtitle_highlight2": "verifiable deliverables and maintainable code",
+    "subtitle_rest2": ". Based in Madagascar, I work with local and international teams.",
     "cta_primary": "Start a Project",
     "cta_secondary": "View My Work"
   },
@@ -70,10 +70,22 @@
     "caption": "A clear interface, automations that execute, reliable data and measurable visibility on Google and in AI answers. A complete product, not just one piece.",
     "note": "Each part can also be delivered separately: website, SaaS, automation, data or SEO/GEO support.",
     "nodes": [
-      { "label": "Interface", "sublabel": "Responsive web experience · Next.js" },
-      { "label": "Automation", "sublabel": "n8n workflows · connected APIs" },
-      { "label": "Data", "sublabel": "Supabase · real-time monitoring" },
-      { "label": "SEO, GEO & analytics", "sublabel": "GSC · PostHog · citations in AI answers" }
+      {
+        "label": "Interface",
+        "sublabel": "Responsive web experience · Next.js"
+      },
+      {
+        "label": "Automation",
+        "sublabel": "n8n workflows · connected APIs"
+      },
+      {
+        "label": "Data",
+        "sublabel": "Supabase · real-time monitoring"
+      },
+      {
+        "label": "SEO, GEO & analytics",
+        "sublabel": "GSC · PostHog · citations in AI answers"
+      }
     ]
   },
   "services": {
@@ -86,7 +98,9 @@
         "slug": "sites-saas-development",
         "color": "emerald",
         "seoTitle": "Custom Next.js website and SaaS development",
-        "seoDescription": "Business websites, MVPs and SaaS products built with Next.js, Supabase, APIs and analytics. Fast, measurable and production-ready."
+        "seoDescription": "Business websites, MVPs and SaaS products built with Next.js, Supabase, APIs and analytics. Fast, measurable and production-ready.",
+        "key": "developpement-sites-saas",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "psychology",
@@ -166,11 +180,7 @@
           "comparisonTable": {
             "title": "A quick AI demo or an operational automation system?",
             "intro": "Both can validate an idea, but only one is designed to carry a recurring business process.",
-            "headers": [
-              "Criterion",
-              "AI demo",
-              "Production automation"
-            ],
+            "headers": ["Criterion", "AI demo", "Production automation"],
             "rows": [
               {
                 "criterion": "Starting point",
@@ -256,7 +266,9 @@
             "description": "Describe the current steps, tools and main bottleneck. I will help you identify a realistic first production workflow.",
             "buttonLabel": "Review my workflow"
           }
-        }
+        },
+        "key": "integration-ia",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "manage_search",
@@ -269,7 +281,7 @@
         "isLanding": true,
         "seoTitle": "RAG Developer | AI Search on Your Business Data",
         "seoDescription": "RAG developer for enterprise document search and grounded chatbots with citations, access control, evaluation and secure production deployment.",
-        "updatedAt": "2026-09-08",
+        "updatedAt": "2026-10-08T00:00:00Z",
         "landing": {
           "heroText": "I build RAG systems that search your documents before an AI assistant answers. Responses can cite their sources, respect user permissions and say when the required information is missing. The result is controllable business search, not a chatbot that improvises.",
           "features": [
@@ -388,16 +400,19 @@
               "answer": "Cost depends on source volume and formats, permissions, update frequency, query volume, evaluations and product integration. I start with one bounded corpus and use case."
             }
           ]
-        }
+        },
+        "key": "developpeur-rag"
       },
       {
         "icon": "hub",
         "title": "n8n Automation",
-        "description": "Custom workflows with n8n: tool connections, scraping, notifications, AI agents — zero manual intervention.",
+        "description": "Custom workflows with n8n: tool connections, scraping, notifications, AI agents — controls, alerts and human handoff.",
         "slug": "n8n-automation",
         "color": "indigo",
         "seoTitle": "Custom n8n automation: APIs, CRM and workflows",
-        "seoDescription": "Production n8n workflows for APIs, CRM, email and data with deduplication, retries, alerts, documentation and human approval."
+        "seoDescription": "Production n8n workflows for APIs, CRM, email and data with deduplication, retries, alerts, documentation and human approval.",
+        "key": "automatisation-n8n",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "speed",
@@ -406,7 +421,9 @@
         "slug": "saas-workflow-scaling",
         "color": "purple",
         "seoTitle": "SaaS performance, cloud cost and workflow scaling",
-        "seoDescription": "Audit and optimize an existing SaaS: static rendering, caching, queries, cloud cost, queues, observability and evidence-based migration."
+        "seoDescription": "Audit and optimize an existing SaaS: static rendering, caching, queries, cloud cost, queues, observability and evidence-based migration.",
+        "key": "scaling-saas-workflows",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "precision_manufacturing",
@@ -571,7 +588,9 @@
               "answer": "n8n runs on any Docker-capable VPS. My 2026 recommendations: Hetzner ($5/month, EU, GDPR-friendly), Render (free tier to start), or Railway ($5/month, one-click deploy). For heavier loads, an OVH or Scaleway VPS at $10-20/month easily handles thousands of executions per day."
             }
           ]
-        }
+        },
+        "key": "automatisation-n8n-madagascar",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "code",
@@ -607,7 +626,7 @@
               "src": "/images/projects/artigen-generateur-images-ia.png",
               "alt": "AI image generator built with Next.js and FastAPI - Artigen",
               "title": "Artigen — Next.js AI App",
-              "description": "AI image generator handling 100 concurrent users on free hosting."
+              "description": "Image generation interface and backend processing."
             },
             {
               "src": "/images/projects/scraping-flowremote-automatisation-emploi.png",
@@ -618,94 +637,26 @@
           ],
           "sections": [
             {
-              "title": "AI-assisted React development",
-              "content": "Coding agents can accelerate a React feature or MVP, while I remain responsible for architecture, review and tests. See my [AI-assisted software development approach](/en/vibe-coding-developpeur) for how this fits into a maintainable product."
+              "title": "Applications shaped around requirements",
+              "content": "[Meckia](/en/projects/meckia), [Factumation](/en/projects/factumation) and [TeamIA](/en/projects/teamia) illustrate different contexts: business operations, invoicing and a content platform. Each project needs its own business rules, permissions and integrations."
             },
             {
-              "title": "Why React and Next.js in 2026?",
-              "content": "React is the world's most popular JavaScript library for building user interfaces. According to the [Stack Overflow Developer Survey](https://survey.stackoverflow.co/), React remains the dominant web framework among professional developers, far ahead of Angular and Vue.js.\n\nNext.js, Vercel's React framework, adds server-side rendering (SSR/SSG), automatic routing, image optimization and instant deployment. In 2026, [Next.js powers Netflix, TikTok, Twitch, Notion and thousands of SaaS products](https://nextjs.org/showcase).\n\nWhy this matters for your project: a Next.js application loads in under one second (LCP < 1s), ranks perfectly on Google thanks to server rendering, and scales from 10 to 100,000 users without architecture changes."
+              "title": "Architecture and maintenance",
+              "content": "React builds the interface; Next.js organizes rendering and routes. TypeScript helps detect certain errors but does not replace tests. I separate components, business rules and data access, then document important decisions."
             },
             {
-              "title": "My tech stack",
-              "content": "**React 19 + Next.js 16** — Primary framework. App Router, Server Components, Streaming SSR. Maximum performance with Turbopack.\n\n**TypeScript** — Static typing for robust, maintainable, bug-free production code.\n\n**Supabase** — Complete backend: PostgreSQL, authentication, storage, real-time API. Open-source Firebase alternative.\n\n**Tailwind CSS v4** — Utility-first design system for modern, responsive, consistent interfaces.\n\n**Node.js + Python** — Backend and scripting: REST APIs, microservices, automation scripts, AI integrations.\n\n**Vercel + Render** — Deployment: global CDN, automatic CI/CD, monitoring and scaling.\n\n**N8N** — Business workflow automation: tool connections, scraping, notifications, AI agents.\n\n**GSAP** — Smooth, performant animations for high-impact interfaces."
+              "title": "Performance: measure a real journey",
+              "content": "A framework does not guarantee sub-second LCP or unlimited capacity. Measurements need a URL, date, device and conditions. Lab results, field data and cloud costs are separate. See [manda-ia.com](/en/projects/optimisation-performance-manda-ia)."
             },
             {
-              "title": "Why hire a React developer from Madagascar?",
-              "content": "Madagascar has become an emerging tech hub for qualified digital outsourcing. As a React / Next.js developer based in Antananarivo, I offer:\n\n**Competitive rates**: my international day rate is $400/day. A complete Next.js business website starts at $1,800 and a SaaS MVP at $4,000. Scope and price are agreed before work begins.\n\n**Bilingual**: fluent in French and English. Meetings, documentation and code reviews are available in your preferred language.\n\n**GMT+3 timezone**: compatible with European business hours and overlapping with US East Coast mornings. Real-time collaboration via Slack, Notion and Google Meet.\n\n**International quality**: 20+ projects delivered with PageSpeed scores of 98-100/100. Typed TypeScript code, tests, CI/CD and technical documentation.\n\n**AI-assisted development**: I use Claude Code and GitHub Copilot to accelerate development while maintaining professional code quality. An MVP that used to take 6 weeks ships in 2-3 weeks."
+              "title": "Collaboration and budget",
+              "content": "Based in Antananarivo, I work in French and English. We agree on overlap hours, milestones and acceptance criteria. My published rate is €350/day. Quotes depend on scope, existing systems and dependencies, with third-party costs and maintenance made explicit."
             },
             {
-              "title": "Types of React / Next.js projects",
-              "content": "**SaaS (Software as a Service)** — Complete business applications with auth, dashboard, billing and API. Examples: Factumation (invoicing), ScalApp (investment management).\n\n**Marketplaces** — Matching platforms with integrated payments, advanced search and user profiles. Example: ImmoPrive (real estate).\n\n**Dashboards & Admin panels** — Admin interfaces with real-time charts, advanced CRUD and role management.\n\n**Premium websites** — Corporate sites and portfolios with GSAP animations, optimal SEO and 100/100 PageSpeed scores. Example: this portfolio.\n\n**AI applications** — Integration of AI models (Claude, GPT) into React interfaces. Chatbots, content generators, analysis tools. Example: Artigen (image generation).\n\n**Mobile apps** — With React Native, the same JavaScript codebase runs on iOS and Android."
-            },
-            {
-              "title": "My work process",
-              "content": "**1. Free discovery call (30 min)** — We define your needs, business goals and technical scope. I advise on the best-suited stack.\n\n**2. Proposal and 3 design variants** — Detailed quote with timeline. I generate 3 AI design variants based on your brief, your design system and your logo. You pick the direction you like, we tweak if needed, then we move to code.\n\n**3. Iterative development** — 1-2 week sprints with demos at each step. You follow progress in real-time on a shared Git repo.\n\n**4. Testing and optimization** — Unit tests, integration tests, PageSpeed and SEO audits. Target: 95+ on all criteria.\n\n**5. Deployment and support** — Production deployment on Vercel or Render. 30 days of technical support included. Complete documentation for your team."
-            },
-            {
-              "title": "Performance and results",
-              "content": "**PageSpeed** — Average score across my projects: 98/100 mobile, 100/100 desktop. LCP under 1 second.\n\n**SEO** — Next.js server rendering, dynamic metadata, automatic sitemap, schema.org. Lighthouse SEO score 100/100.\n\n**Delivery time** — MVP in 2-4 weeks. Full application in 6-10 weeks.\n\n**Uptime** — 99.9% on Vercel CDN. Automatic deployment on every commit.\n\n**Code quality** — Strict TypeScript, ESLint, Prettier, conventional commits. Maintainable and documented code."
+              "title": "Improve or build",
+              "content": "Before rebuilding, I assess what works, platform constraints and migration cost. No-code may remain suitable. When custom code is needed, the plan covers data, deployment, backups, testing and handover."
             }
           ],
-          "comparisonTable": {
-            "title": "Next.js vs No-Code (Bubble, Webflow): what you gain",
-            "intro": "I shipped no-code projects for 3 years before going back to pure code. Here's why I made the switch, on the criteria that actually matter for a serious project in 2026.",
-            "headers": [
-              "Criterion",
-              "No-Code (Bubble / Webflow)",
-              "Next.js (my choice)"
-            ],
-            "rows": [
-              {
-                "criterion": "Technical SEO",
-                "noCode": "Client-side HTML rendering, limited metadata, partial schema",
-                "nextjs": "Native SSR/SSG, dynamic metadata, auto sitemap, full schema.org",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "GEO — AI citation (ChatGPT, Claude, Perplexity)",
-                "noCode": "AI crawlers struggle with JS rendering, content rarely cited",
-                "nextjs": "Pure SSR HTML served, structured content indexable, easy llms.txt",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Core Web Vitals (LCP, INP, CLS)",
-                "noCode": "LCP 2-4s, heavy JS bundle, PageSpeed score 50-75",
-                "nextjs": "LCP < 1s, automatic code-splitting, PageSpeed score 95-100",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Customization",
-                "noCode": "Locked by platform capabilities",
-                "nextjs": "No ceiling, full source code ownership",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Total cost over 3 years",
-                "noCode": "Recurring Bubble/Webflow subscription (€600-2,400/year) + plugins",
-                "nextjs": "Vercel or Render hosting (€0-50/month), no license fees",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Ownership & vendor lock-in",
-                "noCode": "Migration impossible, data trapped in the platform",
-                "nextjs": "Code and database 100% yours, deploy anywhere",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Scaling beyond 10k users",
-                "noCode": "Technical ceiling hit fast, performance collapses",
-                "nextjs": "Unlimited cloud scaling, edge functions, global CDN",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Initial time-to-market (MVP)",
-                "noCode": "2-4 weeks (no-code's historical advantage)",
-                "nextjs": "1-3 weeks with Claude Code as copilot — equivalent or better",
-                "winner": "tie"
-              }
-            ],
-            "conclusion": "No-code still makes sense for very simple prototypes. For any project meant to last, grow, or be discoverable on Google and cited by AIs, Next.js wins on every criterion that matters."
-          },
           "features": [
             {
               "icon": "bolt",
@@ -741,7 +692,7 @@
           "faq": [
             {
               "question": "How much does a React / Next.js project cost from Madagascar?",
-              "answer": "A Next.js business website starts at $1,800 and a SaaS MVP starts at $4,000. The final price depends on scope, integrations and timeline. For long-term or evolving engagements, my international day rate is $400/day with a 5-day minimum."
+              "answer": "The published rate is €350/day. Timeline and budget are estimated after reviewing scope, existing systems, access and required approvals."
             },
             {
               "question": "What's the difference between React and Next.js?",
@@ -753,7 +704,7 @@
             },
             {
               "question": "What are your delivery timelines?",
-              "answer": "A Next.js website is delivered in 1-3 weeks. A SaaS MVP takes 3-6 weeks. A full-featured application takes 6-12 weeks. Each project starts with a precise timeline agreed together."
+              "answer": "The published rate is €350/day. Timeline and budget are estimated after reviewing scope, existing systems, access and required approvals."
             },
             {
               "question": "Why hire a freelancer instead of an agency?",
@@ -761,14 +712,16 @@
             },
             {
               "question": "Is the code maintainable after delivery?",
-              "answer": "Absolutely. I deliver strict TypeScript code with ESLint, Prettier and conventional commits. Technical documentation is included. You or another developer can pick up the code without difficulty. I also offer monthly maintenance contracts if needed."
+              "answer": "The published rate is €350/day. Timeline and budget are estimated after reviewing scope, existing systems, access and required approvals."
             },
             {
               "question": "Can you take over an existing React project?",
               "answer": "Yes. I can audit your existing application, fix bugs, improve performance, add features or migrate to Next.js. An initial technical audit (paid) identifies priorities before starting."
             }
           ]
-        }
+        },
+        "key": "developpeur-react-nextjs-madagascar",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "database",
@@ -937,7 +890,9 @@
               "answer": "Yes. 30 days of technical support are included after each delivery. I also offer monthly maintenance contracts for updates, bug fixes and new features."
             }
           ]
-        }
+        },
+        "key": "developpeur-nextjs-supabase-madagascar",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "smart_toy",
@@ -1110,7 +1065,9 @@
               "answer": "Yes. AI systems require monitoring: model updates, prompt adjustments, performance monitoring. I offer monthly maintenance contracts adapted to your system's complexity."
             }
           ]
-        }
+        },
+        "key": "developpeur-python-ia-madagascar",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "smart_toy",
@@ -1209,7 +1166,9 @@
               "answer": "Yes with the right setup. n8n can run self-hosted on your VPS (Hetzner, Scaleway, OVH) — your data never leaves your infrastructure. For Claude Code, requests go through the Anthropic API (encryption in transit, no training on client data per ToS). For the most sensitive data, we can switch to self-hosted Llama or Mistral with reduced quality but total confidentiality."
             }
           ]
-        }
+        },
+        "key": "developpeur-claude-code-n8n",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "auto_awesome",
@@ -1308,7 +1267,9 @@
               "answer": "With ChatGPT Enterprise and the no-training option, client data is not used to train OpenAI models. Encryption in transit and at rest is standard. For very sensitive data (health, regulated finance, defense), I recommend self-hosted models (Llama, Mistral) rather than a cloud solution."
             }
           ]
-        }
+        },
+        "key": "developpeur-codex-n8n",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "javascript",
@@ -1384,11 +1345,7 @@
           "comparisonTable": {
             "title": "Which need, which JavaScript specialization",
             "intro": "JavaScript covers the full spectrum of a web product. Here is how to point your project to the most relevant page based on your main need.",
-            "headers": [
-              "Need",
-              "Recommended specialization",
-              "Why"
-            ],
+            "headers": ["Need", "Recommended specialization", "Why"],
             "rows": [
               {
                 "criterion": "Marketing site or SaaS",
@@ -1457,7 +1414,9 @@
               "answer": "My day rate is €350, adjusted to project complexity. It stays clearly competitive against the €400 to 700/day of European markets, for equivalent quality."
             }
           ]
-        }
+        },
+        "key": "developpeur-javascript-madagascar",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "dns",
@@ -1533,11 +1492,7 @@
           "comparisonTable": {
             "title": "Node.js, PHP or Python for your API backend?",
             "intro": "For a modern API backend with real-time needs, the language choice drives both performance and development speed. Here is how Node.js compares with PHP and Python on the criteria that matter.",
-            "headers": [
-              "Criterion",
-              "PHP / other",
-              "Node.js (my choice)"
-            ],
+            "headers": ["Criterion", "PHP / other", "Node.js (my choice)"],
             "rows": [
               {
                 "criterion": "I/O performance (concurrent connections)",
@@ -1598,7 +1553,9 @@
               "answer": "Yes. I built the mobile money backend for paidmada and I handle third-party integrations (payments, external APIs) and n8n automations, with authentication and role management."
             }
           ]
-        }
+        },
+        "key": "developpeur-nodejs-madagascar",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "icon": "smart_toy",
@@ -1735,7 +1692,9 @@
               "answer": "It is a system where several specialized agents collaborate, each with a clear role (research, drafting, verification). This approach splits complex goals into reliable sub-tasks that are easier to control."
             }
           ]
-        }
+        },
+        "key": "developpeur-agent-ia-madagascar",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "title": "Freelance or offshore agency in Madagascar: the honest comparison",
@@ -1749,27 +1708,19 @@
         "seoTitle": "Freelance or Offshore Agency Madagascar: 2026 Comparison",
         "seoDescription": "Senior freelance or offshore agency in Madagascar? An honest comparison: real 3-year costs, transparency, timelines, quality. Quote within 48h, verifiable portfolio.",
         "landing": {
-          "heroText": "An offshore agency gives you structure and backup, but with intermediaries, anonymous developers and sometimes hidden subcontracting. An identifiable senior offshore freelance gives you the same cost advantage (€350/day, versus €400 to €700/day in Europe) without the markup or the opacity. The right choice depends on project size and the level of transparency you expect. Here is the factual comparison to decide.",
+          "heroText": "The right choice depends on scope, availability and continuity. Compare the people involved, deliverables and handover conditions rather than location alone.",
           "sections": [
             {
-              "title": "Offshore agency or offshore freelance: what we are really talking about",
-              "content": "The Malagasy offshore market has three distinct models. An agency or ESN (digital services firm) is a structure of dozens to hundreds of people: you sign a contract, a sales rep guides you, a project manager coordinates a team you do not pick. The individual freelance is an identifiable person you work with directly. In between, marketplaces and staffing platforms place developers without you always knowing who actually writes the code.\n\nThe often invisible point: some providers who present themselves as an agency subcontract to freelances or other structures, with no transparency about who runs the project. You pay agency rates for work sometimes handed to a junior or a subcontractor. So the real question is not agency versus freelance, but who writes my code, and can I verify it."
+              "title": "Bounded project or full team?",
+              "content": "A freelancer offers direct contact with the person delivering the work. An agency can combine specializations. Availability, subcontracting and continuity should be checked in both cases."
             },
             {
-              "title": "The real 3-year cost, not just the headline day rate",
-              "content": "On paper, Malagasy offshore rates run 40 to 60% below European rates. But the headline day rate is not the real cost. An agency adds a structure margin (sales, project manager, offices, oversight) that can double the effective hourly cost of the developer who actually codes. On top of that come hidden costs: coordination time, back-and-forth caused by intermediaries, and code rework if the provider changes mid-project.\n\nMy day rate is €350, billed directly, with no middleman markup. It is accessible premium positioning: well below the €400 to €700/day of European freelances and agencies, and below the real total cost of an offshore agency once the structure margin is included. Scope, timeline and price are fixed before we start, with a quote within 48h. No surprise billing, no commercial layer to fund."
+              "title": "Compare total cost",
+              "content": "Compare equal scopes: discovery, implementation, tests, licenses, hosting, documentation and maintenance. My published rate is €350/day; this does not prove that one model is always cheaper."
             },
             {
-              "title": "When to choose a senior offshore freelance",
-              "content": "A senior freelance is the right choice when you want a single, identifiable, reachable point of contact, from scoping to production. You talk directly to the person who writes the code, with no sales rep or project manager filtering information. Iterations are fast, technical decisions happen live, and you keep control of the budget.\n\nIt fits scoped, high-transparency projects especially well: a SaaS MVP, a custom API, an AI agent integration, a high-performance site optimized for SEO and GEO. The proof is verifiable: my work is documented through real projects like paidmada (mobile money backend), scalapp, alchiimy and madavoyage. You know who builds and you see what already runs in production, which no anonymous agency profile offers. For technical detail, see [React / Next.js developer](/en/services/hire-react-nextjs-developer-madagascar) and [Node.js developer](/en/services/hire-nodejs-developer-madagascar)."
-            },
-            {
-              "title": "When an offshore agency is still the right choice",
-              "content": "Honesty is the basis of trust, so let us be clear: an agency keeps real advantages. On a very large project that needs several profiles in parallel (multiple developers, a UX designer, a QA tester, a dedicated project manager), a structure absorbs the load better than a single person. It also offers formal backup if someone is unavailable and long-term contractual continuity.\n\nIf your need is a large team mobilizable immediately on a broad, evolving scope, an established ESN like those operating in Madagascar since the 1990s is a legitimate choice. A freelance, even a senior one, is not meant to replace ten simultaneous engineers. The right reflex: choose by the real nature of the project, not by the sales pitch. For a scoped project with a single point of contact, the freelance wins. For a long-running multi-team program, the agency is justified."
-            },
-            {
-              "title": "The transparent alternative: the offshore advantage without the opacity",
-              "content": "If you want the cost advantage of Malagasy offshore without the anonymity of a large structure, that is exactly the niche I occupy. You work with a named, verifiable person based in Antananarivo, on the EAT time zone (UTC+3) compatible with European working days.\n\nConcretely: a single point of contact from quote to delivery, a quote fixed within 48h, code versioned on Git that belongs to you with no proprietary lock-in, and a public portfolio you can audit before signing. No anonymous pool, no hidden subcontracting, no commercial markup. If your project is scoped and transparency matters to you, [let's talk in a free discovery call](/en/contact)."
+              "title": "Verify before committing",
+              "content": "Ask for documented cases, roles, acceptance criteria, code ownership and handover terms. Repositories, accounts and access should be covered by the agreement. A bounded first milestone helps evaluate collaboration."
             }
           ],
           "features": [
@@ -1804,87 +1755,19 @@
               "description": "Technical decisions taken live."
             }
           ],
-          "comparisonTable": {
-            "title": "Offshore agency vs senior offshore freelance: the table",
-            "intro": "On a scoped project, here is how an offshore agency and a senior offshore freelance compare on the criteria that really drive the decision.",
-            "headers": [
-              "Criterion",
-              "Offshore agency",
-              "Senior freelance (my model)"
-            ],
-            "rows": [
-              {
-                "criterion": "Real cost (margin included)",
-                "noCode": "Developer day rate + structure margin (sales, project manager)",
-                "nextjs": "€350/day billed directly, no middleman markup",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Point of contact",
-                "noCode": "Sales rep then project manager, rarely the developer",
-                "nextjs": "The person who writes the code, from quote to delivery",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Team transparency",
-                "noCode": "Often anonymous developers, subcontracting possible",
-                "nextjs": "Named identity, public verifiable portfolio",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Capacity on very large project",
-                "noCode": "Several profiles mobilizable in parallel",
-                "nextjs": "One person, ideal on scoped project, not 10 simultaneous profiles",
-                "winner": "noCode"
-              },
-              {
-                "criterion": "Backup and continuity",
-                "noCode": "Formal backup and contractual continuity",
-                "nextjs": "Depends on one person, to anticipate long term",
-                "winner": "noCode"
-              },
-              {
-                "criterion": "Iteration speed",
-                "noCode": "Slowed by intermediaries",
-                "nextjs": "Decisions and adjustments live",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Code ownership",
-                "noCode": "Varies by contract, sometimes locked",
-                "nextjs": "Code versioned on Git, yours, no lock-in",
-                "winner": "nextjs"
-              }
-            ],
-            "conclusion": "On a long-running multi-team program, the agency is justified. On a scoped project where transparency, direct cost and a single point of contact matter, the senior offshore freelance is the best value."
-          },
           "faq": [
             {
-              "question": "Freelance or offshore agency: which should I choose for my project?",
-              "answer": "For a scoped project (MVP, API, site, AI agent) with a single point of contact and a need for transparency, a senior offshore freelance is the best choice. For a program needing several profiles in parallel and formal long-term backup, an agency is justified. The decisive criterion: the real nature of the project, not the sales pitch."
+              "question": "How should I choose?",
+              "answer": "Define the need, skills, availability and backup requirements, then compare proposals against the same criteria."
             },
             {
-              "question": "Is an offshore freelance really cheaper than an agency?",
-              "answer": "Yes, at equivalent expertise. An agency adds a structure margin (sales, project manager, oversight) on top of the developer's cost. My €350/day rate is billed directly, without that margin, and stays below the €400 to €700/day of European providers."
-            },
-            {
-              "question": "How do I verify the transparency of an offshore provider?",
-              "answer": "Ask who actually codes, request a public verifiable portfolio, and direct access to that person. Be wary of structures that never name developers or refuse to say whether the work is subcontracted. An identifiable freelance removes that opacity by definition."
-            },
-            {
-              "question": "Is the time difference a problem from Madagascar?",
-              "answer": "No. I work on the EAT time zone (UTC+3), so 1 to 2 hours from Europe depending on the season. Our working days overlap widely and I stay directly reachable by WhatsApp and email throughout the project."
-            },
-            {
-              "question": "Can a freelance handle a large project alone?",
-              "answer": "A senior freelance handles a scoped project very well: SaaS MVP, API, AI integration, high-performance site. For a program needing ten simultaneous profiles, an agency is more suitable. I say it openly: picking the right model for the project beats handing everything to the same provider by default."
-            },
-            {
-              "question": "Who owns the code at the end of the project?",
-              "answer": "The code is entirely yours. It is versioned on Git, documented and deployable, with no proprietary lock-in. You can take it back, evolve it or hand it to another team without depending on me, which is not always the case with an agency."
+              "question": "Who owns the code?",
+              "answer": "Ownership, third-party licenses and access are specified in the contract regardless of provider type."
             }
           ]
-        }
+        },
+        "key": "freelance-vs-agence-offshore-madagascar",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "title": "AI Voice Agent Developer (ElevenLabs, Twilio)",
@@ -2029,7 +1912,9 @@
               "answer": "The agent detects what it should not handle alone and hands over to a human with the context of the exchange. The goal is not to automate everything, but to absorb repetitive volume and keep your team for high-value cases."
             }
           ]
-        }
+        },
+        "key": "developpeur-agent-vocal-ia",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "title": "Website performance audit & cloud cost optimization",
@@ -2042,7 +1927,7 @@
         "isLanding": true,
         "seoTitle": "Website Performance Optimization Service",
         "seoDescription": "Website performance optimization for existing sites: Core Web Vitals, caching, API requests, Vercel, Supabase and cloud cost reduction.",
-        "updatedAt": "2026-08-26",
+        "updatedAt": "2026-10-08T00:00:00Z",
         "landing": {
           "heroText": "Your website already works, but pages are slowing down, infrastructure usage is rising or Vercel and Supabase quotas are disappearing too quickly. I audit the full request path, from browser to database, then fix the structural causes across rendering, caching, CMS, APIs, images and polling. The goal is not just a better score: it is a faster, more reliable and less expensive product to operate.",
           "features": [
@@ -2106,11 +1991,7 @@
           "comparisonTable": {
             "title": "Quick patch or structural optimization?",
             "intro": "Both can improve a score in the short term, but only end-to-end analysis reduces infrastructure usage and risk sustainably.",
-            "headers": [
-              "Criterion",
-              "Isolated patch",
-              "Audit + optimization"
-            ],
+            "headers": ["Criterion", "Isolated patch", "Audit + optimization"],
             "rows": [
               {
                 "criterion": "Diagnosis",
@@ -2167,41 +2048,38 @@
               "answer": "Results depend on traffic and architecture. The measurable targets are fewer requests and transfers, lighter responses, faster loading and more headroom before quotas. I provide before-and-after values instead of a generic promise."
             }
           ]
-        }
+        },
+        "key": "audit-performance-site-web"
       },
       {
-        "title": "SEO + GEO consultant: rank on Google and get cited by AI",
-        "description": "SEO and GEO together: rank on Google and get cited by ChatGPT, Claude, Perplexity and AI Overviews. Schema, entity authority, AI citability.",
+        "title": "SEO and GEO consultant: visibility and measurement",
+        "description": "Technical, content and evidence audit with enquiry measurement. Track Google Search Console and observed AI citations without ranking guarantees.",
         "slug": "seo-geo-consultant",
         "color": "indigo",
         "icon": "manage_search",
         "cardTitle": "SEO + GEO",
-        "cardDescription": "Rank on Google AND get cited by AI",
+        "cardDescription": "Technical, content and evidence audit with enquiry measurement. Track Google Search Console and observed AI citations without ranking guarantees.",
         "isLanding": true,
-        "seoTitle": "SEO + GEO Consultant: Google and AI search",
-        "seoDescription": "SEO and GEO consultant: rank on Google and get cited by ChatGPT, Claude, Perplexity and AI Overviews. Schema, llms.txt, entity authority, AI citability.",
+        "seoTitle": "SEO and GEO consultant: visibility and measurement",
+        "seoDescription": "Technical, content and evidence audit with enquiry measurement. Track Google Search Console and observed AI citations without ranking guarantees.",
         "landing": {
-          "heroText": "SEO gets you ranking on Google. GEO gets you cited by ChatGPT, Claude, Perplexity and Google AI Overviews. Both matter now, and I handle them together: structured content, entity authority, schema, llms.txt and a real AI citability strategy. The best proof: this site applies all of it to itself.",
+          "heroText": "I improve website discoverability, clear answers and verifiable evidence. Measurement connects Google Search Console, observed AI citations and enquiries. Optimization does not guarantee rankings or recommendations by AI engines.",
           "sections": [
             {
-              "title": "SEO and GEO are not the same, and you need both",
-              "content": "SEO (Search Engine Optimization) optimizes your position in Google results: keywords, backlinks, technical health, clicks to your site. GEO (Generative Engine Optimization) optimizes something else: being retrieved, understood and cited by AI models when a user asks them a question.\n\nMore and more searches end without a click, inside an AI answer. If you only optimize for classic SEO, you gain rankings but disappear from AI answers. If you only do GEO, you exist in ChatGPT but lose Google traffic. Handling them together covers both surfaces where your customers search."
+              "title": "Diagnosis before promises",
+              "content": "The crawl checks pages, links, languages and indexing signals. GSC identifies observed queries and countries. Contact events help distinguish traffic from enquiries. Falling impressions alone do not establish a technical problem."
             },
             {
-              "title": "What I do concretely",
-              "content": "On the technical and SEO side: crawlability, indexation, server-side rendering, Core Web Vitals, URL structure, internal linking, and clean JSON-LD schema (Organization, Person, Article, FAQ, Breadcrumb).\n\nOn the GEO side: content structuring for citability (direct answers, TL;DR, question-answer sections, data tables), entity authority (Wikidata, sameAs, consistent profiles), an llms.txt file, and controlled AI crawler access. The goal is twofold: that Google ranks you and that AI cites you as a reliable source."
+              "title": "Verifiable content",
+              "content": "I connect services to delivered work, clarify scope and replace undocumented promises with examples and sources. FAQs and structured data should describe the visible content."
             },
             {
-              "title": "Proof: this portfolio optimizes itself",
-              "content": "I do not theorize GEO, I apply it to my own site and can show the results. This portfolio ranks first on its target queries, has a Wikidata entity linked via sameAs, seven JSON-LD schema types, an llms.txt file, and a structure built for AI citability.\n\nThat is the opposite of an agency promising without showing: you can audit my own site before trusting me with yours. I transpose exactly this method to your case. See also the [freelance vs offshore agency comparison](/en/services/freelance-vs-offshore-agency-madagascar) for how I work."
+              "title": "What GEO measurement can establish",
+              "content": "Observe citations using recorded prompts, engines, dates and languages. A ChatGPT referrer is not proof of a recommendation. Google requires neither a special AI file nor a particular schema for its AI features. [Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)."
             },
             {
-              "title": "Who it is for and the expected outcome",
-              "content": "It fits SaaS, founders and B2B content sites that want to exist in AI search before competitors settle in. GEO is a window: the ground is still lightly occupied, and taking it early pays.\n\nConcretely, you gain two things: better Google positioning on your queries, and presence in the answers of ChatGPT, Perplexity and AI Overviews when a prospect asks a question in your category. I work in prioritized workstreams, starting with an audit that says what to do and in what order."
-            },
-            {
-              "title": "Method and pricing",
-              "content": "I start with an SEO + GEO audit that measures the current state (technical, content, schema, authority, citability) and produces a prioritized action plan. We then execute the highest-impact workstreams first.\n\nMy day rate is €350, billed directly, with no middleman markup and a quote within 48h. I work remotely with clients in Europe and internationally. The work is documented and reproducible: you keep the method, not just the result."
+              "title": "Method and deliverables",
+              "content": "A dated baseline, URL-level evidence, priorities, corrections and fresh verification. Compare equivalent periods and separate brand, services, countries and conversions. The published daily rate is €350; scope is quoted individually."
             }
           ],
           "features": [
@@ -2236,71 +2114,23 @@
               "description": "Direct answers, TL;DR, Q&A, tables."
             }
           ],
-          "comparisonTable": {
-            "title": "SEO alone vs SEO + GEO",
-            "intro": "Optimizing only for Google is no longer enough when part of search ends in an AI answer. Here is what the combination adds.",
-            "headers": [
-              "Criterion",
-              "SEO alone",
-              "SEO + GEO (my approach)"
-            ],
-            "rows": [
-              {
-                "criterion": "Surface covered",
-                "noCode": "Google results (blue links)",
-                "nextjs": "Google + AI answers (ChatGPT, Perplexity, AI Overviews)",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Zero-click searches",
-                "noCode": "Invisible in the AI answer",
-                "nextjs": "Cited as a source in the answer",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Signals worked",
-                "noCode": "Keywords, backlinks",
-                "nextjs": "+ schema, entity, llms.txt, citability",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Current competition",
-                "noCode": "Saturated for 20 years",
-                "nextjs": "GEO still lightly occupied, window open",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Direct click traffic",
-                "noCode": "Still the core of SEO",
-                "nextjs": "Kept, GEO adds on top",
-                "winner": "tie"
-              }
-            ],
-            "conclusion": "SEO stays essential for click traffic. GEO adds presence in AI answers, where the ground is still open. Handling them together covers both surfaces where your customers search today."
-          },
           "faq": [
             {
-              "question": "What is GEO (Generative Engine Optimization)?",
-              "answer": "It is optimization to be retrieved, understood and cited by generative AI engines (ChatGPT, Claude, Perplexity, Google AI Overviews) when a user asks them a question. Where SEO targets ranking and clicks, GEO targets the citation inside the AI answer."
+              "question": "Do you guarantee first position or AI citations?",
+              "answer": "No. I commit to defined, verifiable work. Indexing, rankings and engine responses are not under my control."
             },
             {
-              "question": "Should I drop SEO for GEO?",
-              "answer": "No. SEO remains the foundation of click traffic from Google. GEO adds on top to capture presence in AI answers. I handle them together because your customers now search on both surfaces."
+              "question": "How are results evaluated?",
+              "answer": "Compare queries, pages and countries over equivalent periods, then track qualified enquiries. For AI engines, retain responses and sources using a repeatable protocol."
             },
             {
-              "question": "How do I get cited by ChatGPT or Perplexity?",
-              "answer": "By combining structured content (direct answers, question-answer sections, tables), entity authority (Wikidata, sameAs, consistent profiles), clean JSON-LD schema, an llms.txt file and controlled AI crawler access. That is exactly the method I apply to my own site."
-            },
-            {
-              "question": "What proof of your results?",
-              "answer": "My own portfolio: first position on its target queries, a linked Wikidata entity, seven schema types, llms.txt, a structure built for citability. You can audit it before trusting me with your site."
-            },
-            {
-              "question": "How long until I see an effect?",
-              "answer": "Technical and structural fixes act within a few weeks on indexation and citability. Durable positioning builds over a few months, especially on a young domain. The starting audit prioritizes what gives the most effect the fastest."
+              "question": "Is llms.txt required?",
+              "answer": "Not for Google AI features. The file can describe a site but does not replace accessible, indexable pages and useful evidence."
             }
           ]
-        }
+        },
+        "key": "consultant-seo-geo",
+        "updatedAt": "2026-10-08T00:00:00Z"
       },
       {
         "title": "Forward Deployed AI Engineer for US teams: from business problem to production",
@@ -2441,7 +2271,9 @@
               "answer": "My standard international rate is $400 per day. Depending on scope, a first production release often ships in a few weeks. You receive a written scope and estimate within 48 hours, with no agency markup."
             }
           ]
-        }
+        },
+        "key": "forward-deployed-engineer",
+        "updatedAt": "2026-10-08T00:00:00Z"
       }
     ]
   },
@@ -2514,11 +2346,11 @@
   },
   "approach": {
     "title": "THE APPROACH",
-    "heading": "From Webflow and Bubble to Claude Code: a no-code developer's approach, based in Madagascar",
+    "heading": "From no-code experience to business application development",
     "paragraphs": [
-      "For four years, I delivered from Madagascar dozens of marketing sites and SaaS MVPs entirely in [no-code](/en/services/no-code-developer-madagascar). Webflow for premium sites, Bubble for business apps, [n8n to plug everything](/en/services/n8n-automation-expert-madagascar) into client tools. An approach proven with my French and international clients: iteration in days rather than months, clean delivery, and pricing that stays grounded.",
-      "Late 2025, Claude Code changed the game. After months of daily use on production projects, I watched pure code regain the speed of no-code, without any of its technical ceilings. Today I build with [Next.js and React](/en/services/hire-react-nextjs-developer-madagascar) and with [Python plus AI agents](/en/services/python-ai-developer-madagascar) as permanent copilot. Same delivery speed as before, depth of a real fullstack dev.",
-      "Current positioning: fullstack JavaScript developer based in Madagascar, with a [no-code and low-code dual culture](/en/services/low-code-developer-madagascar) few freelancers combine. Whether you're aiming for a high-performance website, well-ranked on Google and cited by AI (SEO + GEO), a [Next.js + Supabase SaaS to ship in weeks](/en/services/nextjs-supabase-developer-madagascar), or AI agents integrated into your existing product, that's exactly what I deliver daily from Madagascar. This is the posture of a [Forward Deployed Engineer](/en/services/forward-deployed-engineer): start from the business problem, talk it through with the client, then build the solution that fits the need, not code shipped in a silo."
+      "From 2023, I delivered from Madagascar dozens of marketing sites and SaaS MVPs entirely in [no-code](/en/services/no-code-developer-madagascar). Webflow for premium sites, Bubble for business apps, [n8n to plug everything](/en/services/n8n-automation-expert-madagascar) into client tools. An approach proven with my French and international clients: iteration in days rather than months, clean delivery, and pricing that stays grounded.",
+      "Late 2025, Claude Code changed the game. After months of daily use on production projects, I watched pure code regain the speed of no-code, with more control over architecture. Today I build with [Next.js and React](/en/services/hire-react-nextjs-developer-madagascar) and with [Python plus AI agents](/en/services/python-ai-developer-madagascar) as permanent copilot. Same delivery speed as before, depth of a real fullstack dev.",
+      "Current positioning: fullstack JavaScript developer based in Madagascar, with a [no-code and low-code dual culture](/en/services/low-code-developer-madagascar) few freelancers combine. Whether you're aiming for a high-performance website, designed for search discoverability and clear AI-readable content (SEO + GEO), a [Next.js + Supabase SaaS to ship in weeks](/en/services/nextjs-supabase-developer-madagascar), or AI agents integrated into your existing product, that's exactly what I deliver daily from Madagascar. This is the posture of a [Forward Deployed Engineer](/en/services/forward-deployed-engineer): start from the business problem, talk it through with the client, then build the solution that fits the need, not code shipped in a silo."
     ]
   },
   "testimonials": {
@@ -2592,12 +2424,7 @@
         "title": "MadaVoyage",
         "subtitle": "Premium travel agency landing page",
         "description": "Premium landing page for a Madagascar travel agency. Built from scratch with an AI-first design workflow: 3 variants generated by AI from a product brief and design system, client validation, then pixel-perfect integration in Next.js 16 + GSAP. Decoupled architecture (data, components, lib) ready to be duplicated for other travel or booking clients. SEO/GEO included: JSON-LD TravelAgency + TouristTrip + FAQPage, dynamic sitemap, Open Graph, optimized performance. See the section below for the design-to-code process breakdown.",
-        "tags": [
-          "AI Design",
-          "Next.js 16",
-          "GSAP",
-          "JSON-LD"
-        ],
+        "tags": ["AI Design", "Next.js 16", "GSAP", "JSON-LD"],
         "link": "https://madavoyage.vercel.app/",
         "featured": true,
         "category": "site-metier",
@@ -2609,12 +2436,7 @@
         "title": "Garagiste",
         "subtitle": "Premium garage website for Antananarivo",
         "description": "Premium showcase website for an automotive garage in Antananarivo. Built with the same business-website workflow as MadaVoyage: sector + city brief, 3 AI-generated design directions, validation of a dark premium direction, then Next.js 16 integration. The site highlights clear diagnostics, quotes before repair, workshop services, fleet/taxi/VTC offers, service areas and a booking request form. The form goes through a secured Next.js API route, relays to n8n, creates a Google Calendar event and sends an internal email notification. Final WebP assets, SEO/GEO, Open Graph, sitemap and documented n8n workflow included.",
-        "tags": [
-          "Next.js 16",
-          "n8n",
-          "Business site",
-          "WebP"
-        ],
+        "tags": ["Next.js 16", "n8n", "Business site", "WebP"],
         "link": "https://garagiste-zeta.vercel.app/",
         "featured": true,
         "category": "site-metier",
@@ -2626,12 +2448,7 @@
         "title": "Bati Diaspora",
         "subtitle": "Construction website for diaspora clients",
         "description": "Premium showcase website for a fictional construction and renovation company serving diaspora clients who want to build back home remotely. The page sells a clear trust journey: detailed quote, milestone payments, photo/video reporting, one dedicated project lead and a qualified evaluation form. Full business-website workflow: positioning brief, three AI design directions, selected V3 A - Diaspora Assurance direction, Next.js 16 integration, SEO/GEO, JSON-LD, n8n-ready API route and light animations verified on desktop/mobile.",
-        "tags": [
-          "Next.js 16",
-          "Business site",
-          "Diaspora",
-          "Vercel"
-        ],
+        "tags": ["Next.js 16", "Business site", "Diaspora", "Vercel"],
         "link": "https://batit-diasporat.vercel.app",
         "featured": true,
         "category": "site-metier",
@@ -2643,12 +2460,7 @@
         "title": "Website SEO/GEO ranking consultant",
         "subtitle": "Audits, Google rankings and visibility in AI search",
         "description": "SEO and GEO consulting for websites: Google Search Console query analysis, technical audits, content optimization around search intent and performance monitoring. The service connects Google rankings, visibility in AI search and conversion journeys.",
-        "tags": [
-          "SEO",
-          "GEO",
-          "Google Search Console",
-          "PostHog"
-        ],
+        "tags": ["SEO", "GEO", "Google Search Console", "PostHog"],
         "link": null,
         "featured": true,
         "category": "webapp",
@@ -2660,11 +2472,7 @@
         "title": "ScalApp",
         "subtitle": "Investment Management Dashboard · ScalApp France",
         "description": "Full-featured platform built for ScalApp, a France-based no-code development agency. The project includes a premium showcase website with smooth animations, an investment management dashboard enabling real-time portfolio tracking for clients, and automated API bridges connecting multiple financial data sources. The custom admin interface provides a consolidated performance overview. Pixel-perfect design crafted in Figma, then developed on Webflow with constant attention to detail and user experience.",
-        "tags": [
-          "ScalApp",
-          "Webflow",
-          "Figma"
-        ],
+        "tags": ["ScalApp", "Webflow", "Figma"],
         "link": "https://scalapp.fr",
         "featured": true,
         "category": "webapp",
@@ -2676,11 +2484,7 @@
         "title": "ImmoPrive",
         "subtitle": "Real Estate Marketplace",
         "description": "Comprehensive real estate marketplace connecting buyers and sellers in real time on the French market. The platform features advanced geolocation search with an interactive map, detailed property listings with HD photo galleries, a built-in messaging system between buyers and sellers, and secure payments via Stripe. The back-office allows agents to manage their listings, track leads, and analyze performance metrics. Over 200 active listings within the first month of launch. Entirely built on Bubble.",
-        "tags": [
-          "ImmoPrive",
-          "Bubble",
-          "Stripe"
-        ],
+        "tags": ["ImmoPrive", "Bubble", "Stripe"],
         "link": "https://app.immoprive.fr",
         "featured": false,
         "category": "webapp",
@@ -2710,13 +2514,7 @@
         "title": "n8n automation workflow showcase",
         "subtitle": "n8n automation workflow showcase",
         "description": "I took my 7 most useful n8n use cases for B2B and made them playable live on a single interface.\n\nOn the menu:\n• LinkedIn lead generation with AI ICP scoring (5 profiles in 37s)\n• French prospect search on official INSEE/INPI data (free, unlimited)\n• Email + InMail + connection request generation in 3 variants\n• LinkedIn text post + HD visual in one click (Gemini 2.5 Flash Image)\n• LinkedIn profile enrichment with quota management\n• Free vs HD image comparator side by side\n• AI chat agent that qualifies, books meetings and sends emails\n\nEverything runs on self-hosted n8n (Contabo VPS + Coolify), with Apify, Groq, Gemini and the recherche-entreprises gov API. Cost per run: between $0 and $0.12.\n\nThe goal: show what you can ship fast with n8n, and provide a ready-to-plug base for a CRM or an internal client tool.\n\n→ Demos playable without signup at the project link.",
-        "tags": [
-          "n8n",
-          "Lovable",
-          "Apify",
-          "Groq",
-          "Gemini"
-        ],
+        "tags": ["n8n", "Lovable", "Apify", "Groq", "Gemini"],
         "link": "https://quick-flow-demos.lovable.app/",
         "featured": true,
         "category": "workflow",
@@ -2728,11 +2526,7 @@
         "title": "Yalee Creek Ranch",
         "subtitle": "Property Management",
         "description": "Turnkey property management application built for Yalee Creek Ranch, a Texas-based estate. The owner dashboard centralizes reservation tracking with an interactive calendar, automated rent collection, dynamic generation of custom lease contracts, and automated payment reminders via email. The system also handles maintenance requests and a complete history for each tenant. Built on Bubble with a Figma design, streamlining daily multi-unit rental management without any technical skills required.",
-        "tags": [
-          "Yalee Creek Ranch",
-          "Bubble",
-          "Figma"
-        ],
+        "tags": ["Yalee Creek Ranch", "Bubble", "Figma"],
         "link": null,
         "featured": true,
         "category": "webapp",
@@ -2744,11 +2538,7 @@
         "title": "Alchiimy",
         "subtitle": "AI Dating App · Emotional Matching & Verified Profiles",
         "description": "Alchiimy is a next-generation dating app that goes beyond appearances. The Alchiimy app uses an advanced AI matching algorithm based on emotional and intellectual compatibility, analyzing each user's interests, values, and life goals. The Alchiimy platform offers verified profiles, a step-by-step guided conversation system to build authentic connections before the first date, and themed group events. The UX was entirely designed to encourage real-life meetups over endless swiping. Built on Bubble with special attention to data privacy and security.",
-        "tags": [
-          "Alchiimy",
-          "Bubble",
-          "AI Dating App"
-        ],
+        "tags": ["Alchiimy", "Bubble", "AI Dating App"],
         "link": "https://alchiimy.fr",
         "featured": false,
         "category": "webapp",
@@ -2760,13 +2550,7 @@
         "title": "Artigen",
         "subtitle": "AI Image Generator",
         "description": "AI-powered image generator — completely free with no creation limits. Users describe their idea in text and receive an HD image in seconds. The fullstack architecture relies on Next.js for the frontend and FastAPI (Python) for the backend, with a smart queue system capable of handling 50 to 100 concurrent users even on free-tier hosting. The project includes a generation history, artistic style presets, and a high-resolution mode. Deployed on Vercel (frontend) and Render (API), achieving near-permanent uptime with zero infrastructure costs.",
-        "tags": [
-          "Next.js",
-          "FastAPI",
-          "Python",
-          "Vercel",
-          "Render"
-        ],
+        "tags": ["Next.js", "FastAPI", "Python", "Vercel", "Render"],
         "link": "https://artigen-pro.vercel.app",
         "featured": false,
         "category": "webapp",
@@ -2778,11 +2562,7 @@
         "title": "Factumation",
         "subtitle": "Invoicing Software",
         "description": "Online invoicing software designed for freelancers, self-employed professionals, and SMBs in Madagascar and Europe. Factumation lets you create polished invoices and quotes in seconds with an intuitive editor, export them as professional ready-to-send PDFs, and connect your business tools via Webhook for automated accounting. The software is 100% free, with no complex signup and no credit card required. It features multi-currency support (Ariary, Euro), payment tracking, and automated reminders. A flagship project entirely built with Claude Code and automated via N8N, showcasing the power of AI in software development.",
-        "tags": [
-          "Claude Code",
-          "N8N",
-          "Automation"
-        ],
+        "tags": ["Claude Code", "N8N", "Automation"],
         "link": "https://factumation.manda-ia.com",
         "featured": false,
         "category": "webapp",
@@ -2794,10 +2574,7 @@
         "title": "Portfolio Webflow",
         "subtitle": "My previous personal portfolio",
         "description": "First professional portfolio built on Webflow, showcasing my no-code development, N8N automation and AI integration services. The site features a projects section, a technical toolkit overview and a contact system. Clean design with red accents and bold typography, optimized for client conversion. This portfolio served as my main showcase on LinkedIn and freelance platforms before the full Next.js redesign.",
-        "tags": [
-          "Webflow",
-          "Figma"
-        ],
+        "tags": ["Webflow", "Figma"],
         "link": "https://portofolio-manda.webflow.io/",
         "featured": false,
         "category": "webapp",
@@ -2809,10 +2586,7 @@
         "title": "Scraping FlowRemote",
         "subtitle": "Job Listing Automation",
         "description": "Comprehensive N8N workflow that automatically scrapes new remote job listings published on FlowRemote. The system extracts HTML data from each listing (title, company, salary, location, publication date), structures it cleanly, then filters results based on custom criteria. Relevant offers are sent daily via Gmail with professional formatting. The workflow includes a date filter to surface only recent listings and avoid duplicates. Zero manual intervention required — the pipeline runs continuously and adapts automatically to site structure changes.",
-        "tags": [
-          "N8N",
-          "Automation"
-        ],
+        "tags": ["N8N", "Automation"],
         "link": null,
         "featured": false,
         "category": "workflow",
@@ -2824,10 +2598,7 @@
         "title": "Visitor Tracking",
         "subtitle": "Real-time Analytics",
         "description": "Real-time visitor tracking system designed to monitor website traffic without relying on Google Analytics. Every visit is automatically captured via a webhook, precisely geolocated (country, city, IP address, ISP), and stored in a structured Airtable database. The N8N workflow filters known IPs to avoid duplicates, enriches data with Webflow CMS information, and feeds an Airtable dashboard with advanced filters. Ideal for analyzing traffic in real time, identifying returning visitors, understanding the geographic origin of your audience, and optimizing conversion rates.",
-        "tags": [
-          "N8N",
-          "Airtable"
-        ],
+        "tags": ["N8N", "Airtable"],
         "link": null,
         "featured": false,
         "category": "workflow",
@@ -2853,11 +2624,6 @@
         "value": 3,
         "suffix": "",
         "label": "Countries Served"
-      },
-      {
-        "value": 100,
-        "suffix": "%",
-        "label": "Client Satisfaction"
       }
     ]
   },

@@ -6,24 +6,47 @@ import Link from "next/link";
 // FR path → EN path for routes where slugs differ (services, projects, solutions).
 // Paths are stored without leading "/", matched against the cleaned pathname.
 const SLUG_MAP_FR_TO_EN: Record<string, string> = {
+  "services/forward-deployed-engineer": "services/forward-deployed-engineer",
+  "services/consultant-seo-geo": "services/seo-geo-consultant",
+  "services/audit-performance-site-web":
+    "services/website-performance-optimization-service",
+  "services/developpeur-agent-vocal-ia": "services/ai-voice-agent-developer",
+  "services/freelance-vs-agence-offshore-madagascar":
+    "services/freelance-vs-offshore-agency-madagascar",
+  "services/developpeur-agent-ia-madagascar":
+    "services/ai-agent-developer-madagascar",
+  "services/developpeur-nodejs-madagascar":
+    "services/hire-nodejs-developer-madagascar",
+  "services/developpeur-javascript-madagascar":
+    "services/javascript-developer-madagascar",
+  "services/developpeur-codex-n8n": "services/codex-n8n-developer",
+  "services/developpeur-claude-code-n8n": "services/claude-code-n8n-developer",
+  "services/developpeur-rag": "services/rag-developer",
   "services/developpement-sites-saas": "services/sites-saas-development",
   "services/integration-ia": "services/ai-integration",
   "services/automatisation-n8n": "services/n8n-automation",
   "services/scaling-saas-workflows": "services/saas-workflow-scaling",
-  "services/automatisation-n8n-madagascar": "services/n8n-automation-expert-madagascar",
-  "services/consultant-automatisation-n8n-international": "services/remote-n8n-automation-consultant",
-  "services/developpeur-react-nextjs-madagascar": "services/hire-react-nextjs-developer-madagascar",
-  "services/developpeur-nextjs-supabase-madagascar": "services/nextjs-supabase-developer-madagascar",
-  "services/developpeur-python-ia-madagascar": "services/python-ai-developer-madagascar",
+  "services/automatisation-n8n-madagascar":
+    "services/n8n-automation-expert-madagascar",
+  "services/consultant-automatisation-n8n-international":
+    "services/remote-n8n-automation-consultant",
+  "services/developpeur-react-nextjs-madagascar":
+    "services/hire-react-nextjs-developer-madagascar",
+  "services/developpeur-nextjs-supabase-madagascar":
+    "services/nextjs-supabase-developer-madagascar",
+  "services/developpeur-python-ia-madagascar":
+    "services/python-ai-developer-madagascar",
   "projects/tracking-visiteurs": "projects/visitor-tracking",
   "solutions/automatisation-n8n-pme": "solutions/n8n-automation-for-smbs",
   "solutions/agent-ia-support-client": "solutions/ai-customer-support-agent",
-  "solutions/api-mobile-money-madagascar": "solutions/mobile-money-api-madagascar",
+  "solutions/api-mobile-money-madagascar":
+    "solutions/mobile-money-api-madagascar",
   "solutions/agent-ia-facebook": "solutions/facebook-ai-agent",
   "solutions/agent-ia-prospection": "solutions/ai-prospecting-agent",
   "solutions/workflows-n8n-claude-code": "solutions/n8n-claude-code-workflows",
   "solutions/developpeur-agent-vocal-ia": "solutions/ai-voice-agent-developer",
-  "solutions/automatisation-marketing-n8n": "solutions/n8n-marketing-automation",
+  "solutions/automatisation-marketing-n8n":
+    "solutions/n8n-marketing-automation",
   "site-metier/agence-voyage": "site-metier/travel-agency",
   "site-metier/garage-automobile": "site-metier/auto-repair-shop",
   "site-metier/entreprise-btp": "site-metier/construction-company",
@@ -64,7 +87,10 @@ export default function LanguageSwitcher({ locale }: { locale: string }) {
       className="px-4 py-2 text-xs font-bold tracking-widest uppercase text-slate-400 hover:text-white border border-white/10 rounded-full transition-colors"
       aria-label={`Switch to ${targetLocale === "fr" ? "French" : "English"}`}
       data-ph-event="language_switched"
-      data-ph-props={JSON.stringify({ from_locale: locale, to_locale: targetLocale })}
+      data-ph-props={JSON.stringify({
+        from_locale: locale,
+        to_locale: targetLocale,
+      })}
     >
       {targetLocale.toUpperCase()}
     </Link>

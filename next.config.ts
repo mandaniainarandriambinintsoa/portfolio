@@ -28,8 +28,14 @@ const commonSecurityHeaders = [
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
   { key: "X-XSS-Protection", value: "1; mode=block" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
-  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
-  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
+  {
+    key: "Permissions-Policy",
+    value: "camera=(), microphone=(), geolocation=(), interest-cohort=()",
+  },
+  {
+    key: "Strict-Transport-Security",
+    value: "max-age=63072000; includeSubDomains",
+  },
 ];
 
 const securityHeaders = [
@@ -76,11 +82,142 @@ const nextConfig: NextConfig = {
       // Remove built-in polyfills (Array.at, Array.flat, Object.fromEntries, Object.hasOwn)
       // All target browsers (Chrome 111+, Edge 111+, Firefox 111+, Safari 16.4+) support these natively
       "../build/polyfills/polyfill-module": "./src/lib/empty-polyfill.js",
-      "next/dist/build/polyfills/polyfill-module": "./src/lib/empty-polyfill.js",
+      "next/dist/build/polyfills/polyfill-module":
+        "./src/lib/empty-polyfill.js",
     },
   },
   async redirects() {
     return [
+      {
+        source: "/en/services/developpeur-rag",
+        destination: "/en/services/rag-developer",
+        permanent: true,
+      },
+      {
+        source: "/services/rag-developer",
+        destination: "/services/developpeur-rag",
+        permanent: true,
+      },
+      {
+        source: "/en/services/developpeur-claude-code-n8n",
+        destination: "/en/services/claude-code-n8n-developer",
+        permanent: true,
+      },
+      {
+        source: "/services/claude-code-n8n-developer",
+        destination: "/services/developpeur-claude-code-n8n",
+        permanent: true,
+      },
+      {
+        source: "/en/services/developpeur-codex-n8n",
+        destination: "/en/services/codex-n8n-developer",
+        permanent: true,
+      },
+      {
+        source: "/services/codex-n8n-developer",
+        destination: "/services/developpeur-codex-n8n",
+        permanent: true,
+      },
+      {
+        source: "/en/services/developpeur-javascript-madagascar",
+        destination: "/en/services/javascript-developer-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/services/javascript-developer-madagascar",
+        destination: "/services/developpeur-javascript-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/en/services/developpeur-nodejs-madagascar",
+        destination: "/en/services/hire-nodejs-developer-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/services/hire-nodejs-developer-madagascar",
+        destination: "/services/developpeur-nodejs-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/en/services/developpeur-agent-ia-madagascar",
+        destination: "/en/services/ai-agent-developer-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/services/ai-agent-developer-madagascar",
+        destination: "/services/developpeur-agent-ia-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/en/services/freelance-vs-agence-offshore-madagascar",
+        destination: "/en/services/freelance-vs-offshore-agency-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/services/freelance-vs-offshore-agency-madagascar",
+        destination: "/services/freelance-vs-agence-offshore-madagascar",
+        permanent: true,
+      },
+      {
+        source: "/en/services/developpeur-agent-vocal-ia",
+        destination: "/en/services/ai-voice-agent-developer",
+        permanent: true,
+      },
+      {
+        source: "/services/ai-voice-agent-developer",
+        destination: "/services/developpeur-agent-vocal-ia",
+        permanent: true,
+      },
+      {
+        source: "/en/services/audit-performance-site-web",
+        destination: "/en/services/website-performance-optimization-service",
+        permanent: true,
+      },
+      {
+        source: "/services/website-performance-optimization-service",
+        destination: "/services/audit-performance-site-web",
+        permanent: true,
+      },
+      {
+        source: "/en/services/consultant-seo-geo",
+        destination: "/en/services/seo-geo-consultant",
+        permanent: true,
+      },
+      {
+        source: "/services/seo-geo-consultant",
+        destination: "/services/consultant-seo-geo",
+        permanent: true,
+      },
+      {
+        source: "/en/services/developpement-sites-saas",
+        destination: "/en/services/sites-saas-development",
+        permanent: true,
+      },
+      {
+        source: "/projects/veille-codeur-automatisation-n8n",
+        destination: "/projects/international-opportunity-agent-n8n",
+        permanent: true,
+      },
+      {
+        source: "/en/projects/veille-codeur-automatisation-n8n",
+        destination: "/en/projects/international-opportunity-agent-n8n",
+        permanent: true,
+      },
+      {
+        source: "/services/developpement-applications",
+        destination: "/services/developpement-sites-saas",
+        permanent: true,
+      },
+      {
+        source: "/en/services/application-development",
+        destination: "/en/services/sites-saas-development",
+        permanent: true,
+      },
+      {
+        source: "/en/projects/tracking-visiteurs",
+        destination: "/en/projects/visitor-tracking",
+        permanent: true,
+      },
       {
         source: "/fr",
         destination: "/",

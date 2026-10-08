@@ -24,16 +24,61 @@ type BlogListingClientProps = {
 export default function BlogListingClient({
   posts,
   prefix,
-  allTags,
   labels,
 }: BlogListingClientProps) {
   const [activeTag, setActiveTag] = useState<string>("all");
   const gridRef = useRef<HTMLDivElement>(null);
 
+  const categories: Record<string, string[]> = {
+    Automatisation: ["n8n", "automatisation", "automation"],
+    "IA / AI": [
+      "agent ia",
+      "agents ia",
+      "ia",
+      "genai",
+      "rag",
+      "ia agentique",
+      "ia générative",
+      "intelligence artificielle",
+    ],
+    "Développement / Development": [
+      "développement",
+      "react",
+      "next.js",
+      "backend",
+      "supabase",
+      "firebase",
+      "vibe coding",
+      "claude code",
+    ],
+    Madagascar: ["madagascar"],
+    Business: [
+      "business",
+      "crm",
+      "prospection",
+      "hiring",
+      "freelance",
+      "comptabilité",
+      "facturation",
+    ],
+  };
+  const matches = (post: BlogPost, category: string) =>
+    post.tags.some((tag) =>
+      categories[category]?.includes(tag.toLocaleLowerCase()),
+    );
+  const categoryLabels: Record<string, string> = {
+    Automatisation: prefix ? "Automation" : "Automatisation",
+    "IA / AI": prefix ? "AI" : "IA",
+    "D?veloppement / Development": prefix ? "Development" : "D?veloppement",
+    Madagascar: "Madagascar",
+    Business: "Business",
+  };
+  const allTags = Object.keys(categories).filter((category) =>
+    posts.some((post) => matches(post, category)),
+  );
+
   const filtered =
-    activeTag === "all"
-      ? posts
-      : posts.filter((p) => p.tags.includes(activeTag));
+    activeTag === "all" ? posts : posts.filter((p) => matches(p, activeTag));
 
   const animateCards = useCallback(() => {
     if (!gridRef.current) return;
@@ -47,21 +92,27 @@ export default function BlogListingClient({
         duration: 0.4,
         stagger: 0.08,
         ease: "power2.out",
-      }
+      },
     );
   }, []);
 
-  useGSAP(() => {
-    animateCards();
-  }, { dependencies: [activeTag], scope: gridRef });
+  useGSAP(
+    () => {
+      animateCards();
+    },
+    { dependencies: [activeTag], scope: gridRef },
+  );
 
   function formatDate(dateStr: string | null) {
     if (!dateStr) return "";
-    return new Date(dateStr).toLocaleDateString(prefix === "" ? "fr-FR" : "en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+    return new Date(dateStr).toLocaleDateString(
+      prefix === "" ? "fr-FR" : "en-US",
+      {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      },
+    );
   }
 
   return (
@@ -89,9 +140,9 @@ export default function BlogListingClient({
                 : "bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white"
             }`}
           >
-            {tag}
+            {categoryLabels[tag]}
             <span className="ml-2 text-xs opacity-60">
-              {posts.filter((p) => p.tags.includes(tag)).length}
+              {posts.filter((p) => matches(p, tag)).length}
             </span>
           </button>
         ))}

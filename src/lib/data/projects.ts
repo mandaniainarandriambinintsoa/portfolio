@@ -3,9 +3,18 @@ import { getStaticDictionary } from "@/i18n/dictionaries";
 import type { ProjectItem } from "@/lib/types";
 import projectRows from "@/content/projects.json";
 
-const siteMetierSlugs = new Set(["teamia", "madavoyage", "garagiste", "bati-diaspora"]);
+const siteMetierSlugs = new Set([
+  "teamia",
+  "madavoyage",
+  "garagiste",
+  "bati-diaspora",
+]);
 
-const priorityProjectSlugs = ["teamia", "logiciel-prospection-b2b-teamia", "automatisation-prospection-n8n-lemlist"];
+const priorityProjectSlugs = [
+  "teamia",
+  "logiciel-prospection-b2b-teamia",
+  "automatisation-prospection-n8n-lemlist",
+];
 
 function prioritizeProjects(projects: ProjectItem[]): ProjectItem[] {
   return [...projects].sort((a, b) => {
@@ -25,9 +34,15 @@ function normalizeCategory(project: ProjectItem): ProjectItem {
     : project;
 }
 
-function mapRow(row: (typeof projectRows)[number], locale: Locale): ProjectItem {
+function mapRow(
+  row: (typeof projectRows)[number],
+  locale: Locale,
+): ProjectItem {
   return normalizeCategory({
-    slug: row.slug,
+    slug:
+      locale === "en" && row.slug === "tracking-visiteurs"
+        ? "visitor-tracking"
+        : row.slug,
     title: locale === "fr" ? row.title_fr : row.title_en,
     subtitle: locale === "fr" ? row.subtitle_fr : row.subtitle_en,
     description: locale === "fr" ? row.description_fr : row.description_en,
@@ -58,7 +73,7 @@ export async function getProjects(locale: Locale): Promise<ProjectItem[]> {
 
 export async function getProjectBySlug(
   slug: string,
-  locale: Locale
+  locale: Locale,
 ): Promise<ProjectItem | null> {
   const projects = await getProjects(locale);
   return projects.find((project) => project.slug === slug) ?? null;

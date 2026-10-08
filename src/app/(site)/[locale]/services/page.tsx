@@ -14,14 +14,18 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
 
-  const title = locale === "fr"
-    ? "Mes services freelance : Développement, IA & Automatisation"
-    : "My freelance services: Development, AI & Automation";
-  const description = locale === "fr"
-    ? "Mes prestations freelance : développement de sites et SaaS, intégration IA, automatisation n8n, scaling cloud. Index complet pour explorer chaque service en détail."
-    : "My freelance services: site and SaaS development, AI integration, n8n automation, cloud scaling. Full index to explore each service in detail.";
+  const title =
+    locale === "fr"
+      ? "Mes services freelance : Développement, IA & Automatisation"
+      : "My freelance services: Development, AI & Automation";
+  const description =
+    locale === "fr"
+      ? "Mes prestations freelance : développement de sites et SaaS, intégration IA, automatisation n8n, scaling cloud. Index complet pour explorer chaque service en détail."
+      : "My freelance services: site and SaaS development, AI integration, n8n automation, cloud scaling. Full index to explore each service in detail.";
 
   const prefix = locale === "fr" ? "" : "/en";
 
@@ -42,7 +46,14 @@ export async function generateMetadata({
       url: `${SITE_URL}${prefix}/services`,
       type: "website",
       locale: locale === "fr" ? "fr_FR" : "en_US",
-      images: [{ url: `${SITE_URL}/images/manda-photo2.webp`, width: 288, height: 336, alt: "Manda - Services" }],
+      images: [
+        {
+          url: `${SITE_URL}/images/manda-photo2.webp`,
+          width: 288,
+          height: 336,
+          alt: "Manda - Services",
+        },
+      ],
     },
   };
 }
@@ -62,13 +73,21 @@ export default async function ServicesPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: rawLocale } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
   const dict = await getDictionary(locale);
   const services = await getServices(locale);
   const prefix = locale === "fr" ? "" : "/en";
 
-  const coreServices = services.filter((s: ServiceItem) => !s.isLanding);
-  const landingPages = services.filter((s: ServiceItem) => s.isLanding);
+  const coreServices = services.filter(
+    (s: ServiceItem) =>
+      !s.isLanding || s.key === "developpeur-rag" || s.key === "integration-ia",
+  );
+  const landingPages = services.filter(
+    (s: ServiceItem) =>
+      s.isLanding && s.key !== "developpeur-rag" && s.key !== "integration-ia",
+  );
 
   return (
     <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
@@ -99,7 +118,10 @@ export default async function ServicesPage({
                   locale,
                 })}
               >
-                <GlassCard borderColor={colors.border} className="h-full hover:bg-white/5 transition-colors">
+                <GlassCard
+                  borderColor={colors.border}
+                  className="h-full hover:bg-white/5 transition-colors"
+                >
                   <LegacyIconScoutIcon
                     name={service.icon}
                     size={34}
@@ -140,14 +162,21 @@ export default async function ServicesPage({
                       locale,
                     })}
                   >
-                    <GlassCard borderColor={colors.border} className="h-full hover:bg-white/5 transition-colors">
+                    <GlassCard
+                      borderColor={colors.border}
+                      className="h-full hover:bg-white/5 transition-colors"
+                    >
                       <LegacyIconScoutIcon
                         name={service.icon}
                         size={30}
                         className={`mb-3 ${colors.icon}`}
                       />
-                      <h3 className="text-lg font-bold mb-2">{service.cardTitle || service.title}</h3>
-                      <p className="text-sm text-slate-400">{service.cardDescription || service.description}</p>
+                      <h3 className="text-lg font-bold mb-2">
+                        {service.cardTitle || service.title}
+                      </h3>
+                      <p className="text-sm text-slate-400">
+                        {service.cardDescription || service.description}
+                      </p>
                     </GlassCard>
                   </Link>
                 );

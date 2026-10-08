@@ -1,3 +1,4 @@
+import ServiceProjectProof from "@/components/sections/ServiceProjectProof";
 import type { Metadata } from "next";
 import { i18n, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
@@ -10,8 +11,15 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
-import { getServiceByKey, getServiceBySlug, getServiceStaticParams } from "@/lib/data/services";
-import { getRelatedSolutionsForService, type Solution } from "@/lib/data/solutions";
+import {
+  getServiceByKey,
+  getServiceBySlug,
+  getServiceStaticParams,
+} from "@/lib/data/services";
+import {
+  getRelatedSolutionsForService,
+  type Solution,
+} from "@/lib/data/solutions";
 import SeoGrowthProof from "@/components/sections/SeoGrowthProof";
 import PerformanceOptimizationProof from "@/components/sections/PerformanceOptimizationProof";
 import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
@@ -54,7 +62,11 @@ function renderLink(href: string, label: string, key: number) {
     );
   }
   return (
-    <Link key={key} href={href} className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2">
+    <Link
+      key={key}
+      href={href}
+      className="text-indigo-400 hover:text-indigo-300 underline underline-offset-2"
+    >
       {label}
     </Link>
   );
@@ -71,7 +83,9 @@ function renderInlineMarkdown(text: string) {
     const linkMatch = remaining.match(/\[([^\]]+)\]\(([^)]+)\)/);
     const boldMatch = remaining.match(/\*\*([^*]+)\*\*/);
 
-    const boldLinkIdx = boldLinkMatch ? remaining.indexOf(boldLinkMatch[0]) : Infinity;
+    const boldLinkIdx = boldLinkMatch
+      ? remaining.indexOf(boldLinkMatch[0])
+      : Infinity;
     const linkIdx = linkMatch ? remaining.indexOf(linkMatch[0]) : Infinity;
     const boldIdx = boldMatch ? remaining.indexOf(boldMatch[0]) : Infinity;
 
@@ -83,21 +97,28 @@ function renderInlineMarkdown(text: string) {
     }
 
     if (minIdx === boldLinkIdx && boldLinkMatch) {
-      if (boldLinkIdx > 0) parts.push(<span key={key++}>{remaining.slice(0, boldLinkIdx)}</span>);
+      if (boldLinkIdx > 0)
+        parts.push(<span key={key++}>{remaining.slice(0, boldLinkIdx)}</span>);
       const linkEl = renderLink(boldLinkMatch[2], boldLinkMatch[1], key++);
       parts.push(
         <strong key={key++} className="text-white font-semibold">
           {linkEl}
-        </strong>
+        </strong>,
       );
       remaining = remaining.slice(boldLinkIdx + boldLinkMatch[0].length);
     } else if (minIdx === linkIdx && linkMatch) {
-      if (linkIdx > 0) parts.push(<span key={key++}>{remaining.slice(0, linkIdx)}</span>);
+      if (linkIdx > 0)
+        parts.push(<span key={key++}>{remaining.slice(0, linkIdx)}</span>);
       parts.push(renderLink(linkMatch[2], linkMatch[1], key++));
       remaining = remaining.slice(linkIdx + linkMatch[0].length);
     } else if (boldMatch) {
-      if (boldIdx > 0) parts.push(<span key={key++}>{remaining.slice(0, boldIdx)}</span>);
-      parts.push(<strong key={key++} className="text-white font-semibold">{boldMatch[1]}</strong>);
+      if (boldIdx > 0)
+        parts.push(<span key={key++}>{remaining.slice(0, boldIdx)}</span>);
+      parts.push(
+        <strong key={key++} className="text-white font-semibold">
+          {boldMatch[1]}
+        </strong>,
+      );
       remaining = remaining.slice(boldIdx + boldMatch[0].length);
     }
   }
@@ -111,7 +132,9 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale: rawLocale, slug } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
   const service = await getServiceBySlug(slug, locale);
 
   if (!service) return {};
@@ -128,15 +151,18 @@ export async function generateMetadata({
     alternates: {
       canonical: `${SITE_URL}${prefix}/services/${slug}`,
       languages: {
-        fr: locale === "fr"
-          ? `${SITE_URL}/services/${slug}`
-          : `${SITE_URL}/services/${otherService?.slug || slug}`,
-        en: locale === "en"
-          ? `${SITE_URL}/en/services/${slug}`
-          : `${SITE_URL}/en/services/${otherService?.slug || slug}`,
-        "x-default": locale === "fr"
-          ? `${SITE_URL}/services/${slug}`
-          : `${SITE_URL}/services/${otherService?.slug || slug}`,
+        fr:
+          locale === "fr"
+            ? `${SITE_URL}/services/${slug}`
+            : `${SITE_URL}/services/${otherService?.slug || slug}`,
+        en:
+          locale === "en"
+            ? `${SITE_URL}/en/services/${slug}`
+            : `${SITE_URL}/en/services/${otherService?.slug || slug}`,
+        "x-default":
+          locale === "fr"
+            ? `${SITE_URL}/services/${slug}`
+            : `${SITE_URL}/services/${otherService?.slug || slug}`,
       },
     },
   };
@@ -148,7 +174,9 @@ export default async function ServicePage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale: rawLocale, slug } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
   const dict = await getDictionary(locale);
   const service = (await getServiceBySlug(slug, locale)) as any;
 
@@ -156,7 +184,10 @@ export default async function ServicePage({
 
   const prefix = locale === "fr" ? "" : "/en";
   const breadcrumbs = [
-    { name: locale === "fr" ? "Accueil" : "Home", href: locale === "fr" ? "/" : "/en" },
+    {
+      name: locale === "fr" ? "Accueil" : "Home",
+      href: locale === "fr" ? "/" : "/en",
+    },
     { name: "Services", href: `${prefix}/services` },
     { name: service.title, href: `${prefix}/services/${slug}` },
   ];
@@ -184,16 +215,38 @@ export default async function ServicePage({
     amber: "bg-amber-500/10 border-amber-500/20",
   };
 
-  const solutionAccentMap: Record<Solution["accent"], { icon: string; border: string; bg: string }> = {
-    indigo: { icon: "text-indigo-300", border: "border-indigo-500/25", bg: "bg-indigo-500/10" },
-    emerald: { icon: "text-emerald-300", border: "border-emerald-500/25", bg: "bg-emerald-500/10" },
-    blue: { icon: "text-blue-300", border: "border-blue-500/25", bg: "bg-blue-500/10" },
-    purple: { icon: "text-purple-300", border: "border-purple-500/25", bg: "bg-purple-500/10" },
+  const solutionAccentMap: Record<
+    Solution["accent"],
+    { icon: string; border: string; bg: string }
+  > = {
+    indigo: {
+      icon: "text-indigo-300",
+      border: "border-indigo-500/25",
+      bg: "bg-indigo-500/10",
+    },
+    emerald: {
+      icon: "text-emerald-300",
+      border: "border-emerald-500/25",
+      bg: "bg-emerald-500/10",
+    },
+    blue: {
+      icon: "text-blue-300",
+      border: "border-blue-500/25",
+      bg: "bg-blue-500/10",
+    },
+    purple: {
+      icon: "text-purple-300",
+      border: "border-purple-500/25",
+      bg: "bg-purple-500/10",
+    },
   };
 
   if (!isLanding) {
     return (
-      <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
+      <main
+        id="main-content"
+        className="relative min-h-screen pt-32 pb-24 px-6"
+      >
         <ServiceJsonLd
           name={service.title}
           description={service.description}
@@ -212,7 +265,9 @@ export default async function ServicePage({
             {service.title}
           </h1>
           {coreContent && (
-            <p className={`mb-4 text-xs font-bold uppercase ${colorMap[service.color] || "text-indigo-400"}`}>
+            <p
+              className={`mb-4 text-xs font-bold uppercase ${colorMap[service.color] || "text-indigo-400"}`}
+            >
               {coreContent.eyebrow}
             </p>
           )}
@@ -220,13 +275,29 @@ export default async function ServicePage({
             {coreContent?.intro || service.description}
           </p>
 
+          <div className="mb-10">
+            <Button href={contactHref} variant="primary">
+              {dict.hero.cta_primary}
+            </Button>
+          </div>
+          <ServiceProjectProof
+            serviceKey={service.key || service.slug}
+            locale={locale}
+          />
           {coreContent ? (
             <>
               <div className="mb-20 grid grid-cols-1 gap-4 md:grid-cols-3">
                 {coreContent.outcomes.map((outcome) => (
-                  <div key={outcome.title} className={`rounded-xl border p-6 ${bgColorMap[service.color] || bgColorMap.indigo}`}>
-                    <h2 className="mb-2 text-base font-bold text-white">{outcome.title}</h2>
-                    <p className="text-sm leading-relaxed text-slate-400">{outcome.description}</p>
+                  <div
+                    key={outcome.title}
+                    className={`rounded-xl border p-6 ${bgColorMap[service.color] || bgColorMap.indigo}`}
+                  >
+                    <h2 className="mb-2 text-base font-bold text-white">
+                      {outcome.title}
+                    </h2>
+                    <p className="text-sm leading-relaxed text-slate-400">
+                      {outcome.description}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -236,7 +307,10 @@ export default async function ServicePage({
                   <SectionHeading title={section.title} className="mb-6" />
                   <div className="border-l border-indigo-400/25 pl-5 sm:pl-7">
                     {section.content.map((paragraph) => (
-                      <p key={paragraph} className="mb-4 max-w-3xl text-slate-300 leading-relaxed last:mb-0">
+                      <p
+                        key={paragraph}
+                        className="mb-4 max-w-3xl text-slate-300 leading-relaxed last:mb-0"
+                      >
                         {paragraph}
                       </p>
                     ))}
@@ -249,31 +323,60 @@ export default async function ServicePage({
                   href={coreContent.relatedHref}
                   className="inline-flex items-center text-sm font-semibold text-indigo-300 underline underline-offset-4 hover:text-indigo-200"
                   data-ph-event="service_viewed"
-                  data-ph-props={JSON.stringify({ area: "core_service_related", service_slug: slug, href: coreContent.relatedHref, locale })}
+                  data-ph-props={JSON.stringify({
+                    area: "core_service_related",
+                    service_slug: slug,
+                    href: coreContent.relatedHref,
+                    locale,
+                  })}
                 >
                   {coreContent.relatedLabel}
                 </Link>
               </div>
 
               <section className="mb-20">
-                <SectionHeading title={locale === "fr" ? "Questions fréquentes" : "Frequently asked questions"} className="mb-8" />
+                <SectionHeading
+                  title={
+                    locale === "fr"
+                      ? "Questions fréquentes"
+                      : "Frequently asked questions"
+                  }
+                  className="mb-8"
+                />
                 <div className="space-y-4">
                   {coreContent.faq.map((item) => (
                     <GlassCard key={item.question}>
-                      <h3 className="mb-3 font-bold text-white">{item.question}</h3>
-                      <p className="text-slate-400 leading-relaxed">{item.answer}</p>
+                      <h3 className="mb-3 font-bold text-white">
+                        {item.question}
+                      </h3>
+                      <p className="text-slate-400 leading-relaxed">
+                        {item.answer}
+                      </p>
                     </GlassCard>
                   ))}
                 </div>
               </section>
 
               <div className="glass-card rounded-2xl p-8 text-center md:p-12">
-                <h2 className="mb-4 text-2xl font-bold md:text-3xl">{coreContent.ctaTitle}</h2>
-                <p className="mx-auto mb-8 max-w-xl text-slate-400">{coreContent.ctaDescription}</p>
+                <h2 className="mb-4 text-2xl font-bold md:text-3xl">
+                  {coreContent.ctaTitle}
+                </h2>
+                <p className="mx-auto mb-8 max-w-xl text-slate-400">
+                  {coreContent.ctaDescription}
+                </p>
                 <Button
                   href={contactHref}
                   variant="primary"
-                  analytics={{ event: "cta_clicked", properties: { area: "core_service_final_cta", cta_type: "contact", service_slug: slug, service_title: service.title, locale } }}
+                  analytics={{
+                    event: "cta_clicked",
+                    properties: {
+                      area: "core_service_final_cta",
+                      cta_type: "contact",
+                      service_slug: slug,
+                      service_title: service.title,
+                      locale,
+                    },
+                  }}
                 >
                   {dict.hero.cta_primary}
                 </Button>
@@ -283,7 +386,16 @@ export default async function ServicePage({
             <Button
               href={contactHref}
               variant="primary"
-              analytics={{ event: "cta_clicked", properties: { area: "service_detail_simple", cta_type: "contact", service_slug: slug, service_title: service.title, locale } }}
+              analytics={{
+                event: "cta_clicked",
+                properties: {
+                  area: "service_detail_simple",
+                  cta_type: "contact",
+                  service_slug: slug,
+                  service_title: service.title,
+                  locale,
+                },
+              }}
             >
               {dict.hero.cta_primary}
             </Button>
@@ -296,21 +408,26 @@ export default async function ServicePage({
   const landing = service.landing;
   const relatedSolutions = getRelatedSolutionsForService(locale, service.slug);
   const isSeoGeoLanding =
-    service.slug === "consultant-seo-geo" || service.slug === "seo-geo-consultant";
+    service.slug === "consultant-seo-geo" ||
+    service.slug === "seo-geo-consultant";
   const isPerformanceOptimizationLanding =
     service.slug === "audit-performance-site-web" ||
     service.slug === "website-performance-optimization-service";
   const performanceVerticals = isPerformanceOptimizationLanding
     ? getBusinessVerticals(locale).slice(0, 6)
     : [];
-  const heroCtaLabel = service.slug === "forward-deployed-engineer"
-    ? locale === "fr"
-      ? "Décrire mon problème métier"
-      : "Describe the business problem"
-    : landing.cta?.buttonLabel || dict.hero.cta_primary;
+  const heroCtaLabel =
+    service.slug === "forward-deployed-engineer"
+      ? locale === "fr"
+        ? "Décrire mon problème métier"
+        : "Describe the business problem"
+      : landing.cta?.buttonLabel || dict.hero.cta_primary;
 
   return (
-    <main id="main-content" className="relative min-h-screen w-full min-w-0 px-6 pt-32 pb-24">
+    <main
+      id="main-content"
+      className="relative min-h-screen w-full min-w-0 px-6 pt-32 pb-24"
+    >
       <ServiceJsonLd
         name={service.title}
         description={service.description}
@@ -374,31 +491,56 @@ export default async function ServicePage({
           )}
         </div>
 
+        <ServiceProjectProof
+          serviceKey={service.key || service.slug}
+          locale={locale}
+        />
         {/* Features grid */}
         {landing.features && (
-          <div className="mb-20 grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 md:grid-cols-3" role="list">
+          <div
+            className="mb-20 grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 md:grid-cols-3"
+            role="list"
+          >
             {landing.features.map((f: any) => (
-              <div key={f.title} role="listitem" className={`min-w-0 rounded-xl border p-5 ${bgColorMap[service.color] || bgColorMap.indigo}`}>
+              <div
+                key={f.title}
+                role="listitem"
+                className={`min-w-0 rounded-xl border p-5 ${bgColorMap[service.color] || bgColorMap.indigo}`}
+              >
                 <LegacyIconScoutIcon
                   name={f.icon}
                   size={24}
                   className={`mb-2 ${colorMap[service.color] || "text-indigo-400"}`}
                 />
-                <p className="mb-1 break-words text-sm font-bold text-white">{f.title}</p>
-                <p className="break-words text-xs text-slate-400">{f.description}</p>
+                <p className="mb-1 break-words text-sm font-bold text-white">
+                  {f.title}
+                </p>
+                <p className="break-words text-xs text-slate-400">
+                  {f.description}
+                </p>
               </div>
             ))}
           </div>
         )}
 
         {isSeoGeoLanding && <SeoGrowthProof locale={locale} />}
-        {isPerformanceOptimizationLanding && <PerformanceOptimizationProof locale={locale} />}
+        {isPerformanceOptimizationLanding && (
+          <PerformanceOptimizationProof locale={locale} />
+        )}
 
         {isPerformanceOptimizationLanding && (
           <section className="mb-20">
             <SectionHeading
-              eyebrow={locale === "fr" ? "Applications concrètes" : "Practical applications"}
-              title={locale === "fr" ? "La performance appliquée aux sites métier" : "Performance applied to business websites"}
+              eyebrow={
+                locale === "fr"
+                  ? "Applications concrètes"
+                  : "Practical applications"
+              }
+              title={
+                locale === "fr"
+                  ? "La performance appliquée aux sites métier"
+                  : "Performance applied to business websites"
+              }
               description={
                 locale === "fr"
                   ? "Le même travail de rendu, CSS, médias et mesure est intégré dès la conception de chaque site métier. L'audit reste aussi disponible pour un produit déjà en ligne."
@@ -410,7 +552,11 @@ export default async function ServicePage({
                 href={`${prefix}/projects/optimisation-performance-manda-ia`}
                 className="min-h-44 bg-[#090a10] p-6 transition-colors hover:bg-amber-500/8"
                 data-ph-event="project_opened"
-                data-ph-props={JSON.stringify({ area: "performance_related_work", project_slug: "optimisation-performance-manda-ia", locale })}
+                data-ph-props={JSON.stringify({
+                  area: "performance_related_work",
+                  project_slug: "optimisation-performance-manda-ia",
+                  locale,
+                })}
               >
                 <p className="text-xs font-bold uppercase text-amber-300">
                   {locale === "fr" ? "Étude de cas" : "Case study"}
@@ -432,7 +578,9 @@ export default async function ServicePage({
                     {locale === "fr" ? "Site métier" : "Business website"}
                   </p>
                   <h3 className="mt-4 font-bold text-white">{vertical.name}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-400">{vertical.primaryAction}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-slate-400">
+                    {vertical.primaryAction}
+                  </p>
                 </Link>
               ))}
             </div>
@@ -444,11 +592,16 @@ export default async function ServicePage({
           <div key={idx} className="mb-16">
             <SectionHeading title={section.title} className="mb-6 md:mb-7" />
             <div className="prose-content border-l border-indigo-400/25 pl-5 sm:pl-7">
-              {section.content.split("\n\n").map((paragraph: string, pIdx: number) => (
-                <p key={pIdx} className="text-slate-300 leading-relaxed mb-4 last:mb-0">
-                  {renderInlineMarkdown(paragraph)}
-                </p>
-              ))}
+              {section.content
+                .split("\n\n")
+                .map((paragraph: string, pIdx: number) => (
+                  <p
+                    key={pIdx}
+                    className="text-slate-300 leading-relaxed mb-4 last:mb-0"
+                  >
+                    {renderInlineMarkdown(paragraph)}
+                  </p>
+                ))}
             </div>
           </div>
         ))}
@@ -467,32 +620,49 @@ export default async function ServicePage({
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/10 bg-white/[0.03]">
-                    {landing.comparisonTable.headers.map((header: string, hIdx: number) => (
-                      <th
-                        key={hIdx}
-                        className={`px-5 py-4 text-left font-semibold ${
-                          hIdx === 0 ? "text-slate-300 w-1/4" : hIdx === 2 ? "text-emerald-300" : "text-slate-400"
-                        }`}
-                      >
-                        {header}
-                      </th>
-                    ))}
+                    {landing.comparisonTable.headers.map(
+                      (header: string, hIdx: number) => (
+                        <th
+                          key={hIdx}
+                          className={`px-5 py-4 text-left font-semibold ${
+                            hIdx === 0
+                              ? "text-slate-300 w-1/4"
+                              : hIdx === 2
+                                ? "text-emerald-300"
+                                : "text-slate-400"
+                          }`}
+                        >
+                          {header}
+                        </th>
+                      ),
+                    )}
                   </tr>
                 </thead>
                 <tbody>
-                  {landing.comparisonTable.rows.map((row: any, rIdx: number) => (
-                    <tr key={rIdx} className="border-b border-white/5 last:border-b-0">
-                      <td className="px-5 py-4 font-medium text-white align-top">{row.criterion}</td>
-                      <td className="px-5 py-4 text-slate-400 align-top leading-relaxed">{row.noCode}</td>
-                      <td
-                        className={`px-5 py-4 align-top leading-relaxed ${
-                          row.winner === "nextjs" ? "text-emerald-200" : "text-slate-300"
-                        }`}
+                  {landing.comparisonTable.rows.map(
+                    (row: any, rIdx: number) => (
+                      <tr
+                        key={rIdx}
+                        className="border-b border-white/5 last:border-b-0"
                       >
-                        {row.nextjs}
-                      </td>
-                    </tr>
-                  ))}
+                        <td className="px-5 py-4 font-medium text-white align-top">
+                          {row.criterion}
+                        </td>
+                        <td className="px-5 py-4 text-slate-400 align-top leading-relaxed">
+                          {row.noCode}
+                        </td>
+                        <td
+                          className={`px-5 py-4 align-top leading-relaxed ${
+                            row.winner === "nextjs"
+                              ? "text-emerald-200"
+                              : "text-slate-300"
+                          }`}
+                        >
+                          {row.nextjs}
+                        </td>
+                      </tr>
+                    ),
+                  )}
                 </tbody>
               </table>
             </div>
@@ -501,15 +671,29 @@ export default async function ServicePage({
             <div className="md:hidden space-y-4">
               {landing.comparisonTable.rows.map((row: any, rIdx: number) => (
                 <GlassCard key={rIdx}>
-                  <h3 className="font-bold text-white mb-3 text-sm">{row.criterion}</h3>
+                  <h3 className="font-bold text-white mb-3 text-sm">
+                    {row.criterion}
+                  </h3>
                   <div className="space-y-2 text-xs">
                     <div>
-                      <span className="text-slate-500 block mb-1">{landing.comparisonTable.headers[1]}</span>
-                      <span className="text-slate-400 leading-relaxed">{row.noCode}</span>
+                      <span className="text-slate-500 block mb-1">
+                        {landing.comparisonTable.headers[1]}
+                      </span>
+                      <span className="text-slate-400 leading-relaxed">
+                        {row.noCode}
+                      </span>
                     </div>
                     <div>
-                      <span className="text-emerald-400/70 block mb-1">{landing.comparisonTable.headers[2]}</span>
-                      <span className={row.winner === "nextjs" ? "text-emerald-200 leading-relaxed" : "text-slate-300 leading-relaxed"}>
+                      <span className="text-emerald-400/70 block mb-1">
+                        {landing.comparisonTable.headers[2]}
+                      </span>
+                      <span
+                        className={
+                          row.winner === "nextjs"
+                            ? "text-emerald-200 leading-relaxed"
+                            : "text-slate-300 leading-relaxed"
+                        }
+                      >
                         {row.nextjs}
                       </span>
                     </div>
@@ -567,7 +751,9 @@ export default async function ServicePage({
                           className={`rounded-lg border p-2 ${accent.border} ${accent.bg} ${accent.icon}`}
                         />
                         <div>
-                          <p className={`text-xs font-bold tracking-[0.16em] uppercase ${accent.icon} mb-2`}>
+                          <p
+                            className={`text-xs font-bold tracking-[0.16em] uppercase ${accent.icon} mb-2`}
+                          >
                             {solution.primaryKeyword}
                           </p>
                           <h3 className="font-bold text-white mb-2 group-hover:underline underline-offset-4">
@@ -590,14 +776,20 @@ export default async function ServicePage({
         {landing.faq && (
           <div className="mb-20">
             <SectionHeading
-              title={locale === "fr" ? "Questions fréquentes" : "Frequently asked questions"}
+              title={
+                locale === "fr"
+                  ? "Questions fréquentes"
+                  : "Frequently asked questions"
+              }
               className="mb-8"
             />
             <div className="space-y-4">
               {landing.faq.map((item: any, idx: number) => (
                 <GlassCard key={idx}>
                   <h3 className="font-bold text-white mb-3">{item.question}</h3>
-                  <p className="text-slate-400 leading-relaxed">{item.answer}</p>
+                  <p className="text-slate-400 leading-relaxed">
+                    {item.answer}
+                  </p>
                 </GlassCard>
               ))}
             </div>
@@ -608,12 +800,17 @@ export default async function ServicePage({
         {landing.showcase && (
           <div className="mb-20">
             <SectionHeading
-              title={locale === "fr" ? "Projets réalisés" : "Projects delivered"}
+              title={
+                locale === "fr" ? "Projets réalisés" : "Projects delivered"
+              }
               className="mb-8"
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {landing.showcase.map((item: any, idx: number) => (
-                <div key={idx} className="group rounded-2xl overflow-hidden border border-white/10 bg-white/5">
+                <div
+                  key={idx}
+                  className="group rounded-2xl overflow-hidden border border-white/10 bg-white/5"
+                >
                   <div className="relative aspect-video">
                     <Image
                       src={item.src}
@@ -624,8 +821,12 @@ export default async function ServicePage({
                     />
                   </div>
                   <div className="p-4">
-                    <h3 className="font-bold text-white text-sm">{item.title}</h3>
-                    <p className="text-xs text-slate-400 mt-1">{item.description}</p>
+                    <h3 className="font-bold text-white text-sm">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-slate-400 mt-1">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -637,7 +838,9 @@ export default async function ServicePage({
         <div className="glass-card rounded-2xl p-8 md:p-12 text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             {landing.cta?.title ||
-              (locale === "fr" ? "Prêt à démarrer votre projet ?" : "Ready to start your project?")}
+              (locale === "fr"
+                ? "Prêt à démarrer votre projet ?"
+                : "Ready to start your project?")}
           </h2>
           <p className="text-slate-400 mb-8 max-w-xl mx-auto">
             {landing.cta?.description ||

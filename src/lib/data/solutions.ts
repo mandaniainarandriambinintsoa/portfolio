@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/config";
 
-export const SOLUTION_LAST_UPDATED = "2026-07-27";
+export const SOLUTION_LAST_UPDATED = "2026-10-08";
 
 export type SolutionAccent = "indigo" | "emerald" | "blue" | "purple";
 
@@ -236,7 +236,8 @@ export const frSolutions: Solution[] = [
     ],
     faq: [
       {
-        question: "Combien de temps faut-il pour automatiser un processus PME avec n8n ?",
+        question:
+          "Combien de temps faut-il pour automatiser un processus PME avec n8n ?",
         answer:
           "Un workflow simple prend souvent 3 à 5 jours ouvrés. Un système avec plusieurs outils, des conditions, un dashboard et une gestion d'erreur demande plutôt 1 à 3 semaines selon les accès disponibles et la qualité des données.",
       },
@@ -262,7 +263,8 @@ export const frSolutions: Solution[] = [
     slug: "agent-ia-support-client",
     icon: "support_agent",
     accent: "indigo",
-    title: "Agent IA support client : FAQ, tri des demandes et escalade humaine",
+    title:
+      "Agent IA support client : FAQ, tri des demandes et escalade humaine",
     eyebrow: "Solution agent IA",
     seoTitle: "Agent IA support client | FAQ, tickets et escalade humaine",
     seoDescription:
@@ -431,7 +433,8 @@ export const frSolutions: Solution[] = [
     ],
     faq: [
       {
-        question: "Un agent IA support peut-il répondre automatiquement aux clients ?",
+        question:
+          "Un agent IA support peut-il répondre automatiquement aux clients ?",
         answer:
           "Oui, mais seulement sur les sujets cadrés. Je recommande souvent une réponse automatique pour la FAQ simple et une validation humaine pour les sujets commerciaux, juridiques, financiers ou sensibles.",
       },
@@ -457,7 +460,8 @@ export const frSolutions: Solution[] = [
     slug: "api-mobile-money-madagascar",
     icon: "payments",
     accent: "blue",
-    title: "API Mobile Money Madagascar : Orange Money, MVola, Airtel et dashboard",
+    title:
+      "API Mobile Money Madagascar : Orange Money, MVola, Airtel et dashboard",
     eyebrow: "Solution paiement local",
     seoTitle: "API Orange Money Madagascar | MVola & Airtel Money",
     seoDescription:
@@ -649,7 +653,8 @@ export const frSolutions: Solution[] = [
           "Pour intégrer l'API Orange Money à Madagascar, il faut d'abord obtenir les accès fournisseur, créer une intention de paiement côté backend, stocker la référence interne, recevoir le callback Orange Money, vérifier le statut serveur et mettre à jour la commande. Le frontend ne doit afficher une confirmation définitive qu'après validation backend.",
       },
       {
-        question: "Peut-on intégrer Orange Money, MVola et Airtel Money dans une même application ?",
+        question:
+          "Peut-on intégrer Orange Money, MVola et Airtel Money dans une même application ?",
         answer:
           "Oui. La bonne approche consiste à traiter Orange Money, MVola et Airtel Money comme trois adaptateurs fournisseur, puis à exposer un modèle commun à l'application : montant, devise, client, commande, statut, référence fournisseur et historique des callbacks.",
       },
@@ -659,7 +664,8 @@ export const frSolutions: Solution[] = [
           "Un callback Mobile Money doit être reçu sur un endpoint serveur, vérifié avec les mécanismes fournis par l'opérateur, journalisé, puis traité de façon idempotente. Même si le même callback arrive deux fois, la commande ne doit être validée qu'une seule fois.",
       },
       {
-        question: "Faut-il un dashboard admin pour les paiements Mobile Money ?",
+        question:
+          "Faut-il un dashboard admin pour les paiements Mobile Money ?",
         answer:
           "Oui, surtout pour une application métier. Le dashboard permet de chercher un paiement par client, numéro, commande ou référence fournisseur, de repérer les statuts ambigus et de rapprocher les paiements avec les factures ou réservations.",
       },
@@ -845,7 +851,8 @@ export const frSolutions: Solution[] = [
           "Il peut qualifier un message ou un commentaire, détecter l'intention, résumer le besoin, préparer une réponse, créer un lead dans le CRM et transférer les cas sensibles à un humain.",
       },
       {
-        question: "Quelle différence entre un chatbot et un agent IA Facebook ?",
+        question:
+          "Quelle différence entre un chatbot et un agent IA Facebook ?",
         answer:
           "Un chatbot suit surtout un arbre de réponses. Un agent IA peut interpréter un texte libre, utiliser du contexte et déclencher une action métier, mais il doit rester encadré par des règles et des validations.",
       },
@@ -855,7 +862,8 @@ export const frSolutions: Solution[] = [
           "Oui, selon les accès Meta disponibles. Le webhook alimente n8n, qui peut enrichir la demande puis créer ou mettre à jour un contact dans HubSpot, Airtable, Supabase, Google Sheets ou une API interne.",
       },
       {
-        question: "L'agent doit-il répondre automatiquement à tous les messages ?",
+        question:
+          "L'agent doit-il répondre automatiquement à tous les messages ?",
         answer:
           "Non. Le meilleur démarrage consiste à automatiser la qualification et les brouillons, puis à autoriser seulement quelques réponses simples après mesure de leur qualité.",
       },
@@ -1017,8 +1025,8 @@ export const frSolutions: Solution[] = [
           "Démonstration de pipeline n8n pour génération, qualification et synchronisation de leads.",
       },
       {
-        label: "Scraping FlowRemote",
-        href: "/projects/scraping-flowremote",
+        label: "Prospection n8n + Lemlist",
+        href: "/projects/automatisation-prospection-n8n-lemlist",
         description:
           "Extraction automatisée multi-sources, filtrage et notification quotidienne.",
       },
@@ -1069,12 +1077,14 @@ export const frSolutions: Solution[] = [
           "Oui, si les accès Meta, les règles de confidentialité et les scénarios sont définis. L'agent peut lire une demande Facebook, détecter l'intention, classer le lead, préparer une réponse et créer une fiche CRM avec une prochaine action.",
       },
       {
-        question: "Un agent IA peut-il envoyer les messages de prospection automatiquement ?",
+        question:
+          "Un agent IA peut-il envoyer les messages de prospection automatiquement ?",
         answer:
           "Techniquement oui, mais je recommande de commencer avec une validation humaine. La qualité, la délivrabilité et l'image de marque valent plus qu'un volume non contrôlé.",
       },
       {
-        question: "Peut-on brancher ce workflow à HubSpot, Airtable ou Google Sheets ?",
+        question:
+          "Peut-on brancher ce workflow à HubSpot, Airtable ou Google Sheets ?",
         answer:
           "Oui. n8n peut synchroniser les données avec un CRM, une base Airtable, Google Sheets, Notion ou une API custom.",
       },
@@ -1095,7 +1105,8 @@ export const frSolutions: Solution[] = [
     slug: "workflows-n8n-claude-code",
     icon: "terminal",
     accent: "indigo",
-    title: "Workflows n8n + Claude Code : automatiser le développement assisté par IA",
+    title:
+      "Workflows n8n + Claude Code : automatiser le développement assisté par IA",
     eyebrow: "Solution Claude Code + n8n",
     seoTitle: "Claude Code n8n | Workflows IA, MCP et Git",
     seoDescription:
@@ -1269,7 +1280,8 @@ export const frSolutions: Solution[] = [
     ],
     faq: [
       {
-        question: "Claude Code peut-il être déclenché automatiquement par n8n ?",
+        question:
+          "Claude Code peut-il être déclenché automatiquement par n8n ?",
         answer:
           "Oui, selon l'environnement et les outils disponibles, n8n peut préparer le contexte, créer une tâche, notifier un humain ou appeler une API IA. Pour les actions de code, je recommande que Claude Code produise une proposition contrôlée, puis qu'un humain valide le patch via Git, build et tests.",
       },
@@ -1300,7 +1312,8 @@ export const frSolutions: Solution[] = [
     slug: "developpeur-agent-vocal-ia",
     icon: "call",
     accent: "emerald",
-    title: "Agent vocal IA pour entreprise : appels, qualification et rendez-vous",
+    title:
+      "Agent vocal IA pour entreprise : appels, qualification et rendez-vous",
     eyebrow: "Solution téléphonique IA",
     seoTitle: "Agent vocal IA entreprise | Téléphone et rendez-vous",
     seoDescription:
@@ -1340,7 +1353,8 @@ export const frSolutions: Solution[] = [
       },
     ],
     problem: {
-      title: "Un appel client est souvent le moment où l'intention est la plus forte",
+      title:
+        "Un appel client est souvent le moment où l'intention est la plus forte",
       paragraphs: [
         "Quand une personne appelle, elle veut souvent une réponse rapide : prix, disponibilité, réservation, devis, support ou urgence. Si personne ne décroche, la demande peut partir chez un concurrent ou rester bloquée dans une messagerie vocale.",
         "Un agent vocal IA peut traiter les demandes répétitives et collecter le contexte avant qu'un humain reprenne. Il ne doit pas improviser : son rôle est d'accueillir, clarifier, qualifier, résumer et transférer quand la décision demande une personne.",
@@ -1490,7 +1504,8 @@ export const frSolutions: Solution[] = [
           "Cela dépend du parcours. ElevenLabs peut gérer l'agent conversationnel, Twilio peut gérer la téléphonie et les webhooks. Je choisis l'architecture selon le pays, le numéro, les coûts et les intégrations nécessaires.",
       },
       {
-        question: "Quel est le prix d'un agent téléphonique IA pour une entreprise ?",
+        question:
+          "Quel est le prix d'un agent téléphonique IA pour une entreprise ?",
         answer:
           "Le coût comprend la conception et l'intégration, puis l'usage récurrent de la téléphonie, de la voix et du modèle IA. Je chiffre le projet selon les scénarios et intégrations, puis je fournis une estimation du coût par appel afin de le comparer au volume d'appels manqués ou traités manuellement.",
       },
@@ -1552,7 +1567,8 @@ export const frSolutions: Solution[] = [
       },
     ],
     problem: {
-      title: "Le problème n'est pas le manque d'outils, mais les passages entre eux",
+      title:
+        "Le problème n'est pas le manque d'outils, mais les passages entre eux",
       paragraphs: [
         "Un parcours marketing courant commence avec une publicité, une page de contenu ou un formulaire. La demande arrive ensuite dans une boîte mail, un tableur ou un CRM. Si personne ne reprend les données rapidement, le contexte se perd : source inconnue, doublons, mauvaise segmentation et relance tardive.",
         "n8n sert de couche d'orchestration. Il reçoit l'événement, normalise les champs, vérifie le consentement et les exclusions, met à jour le CRM, déclenche une action autorisée puis journalise le résultat. Il ne remplace ni votre CRM ni votre outil email ; il évite les copier-coller entre eux.",
@@ -1707,7 +1723,8 @@ export const frSolutions: Solution[] = [
           "Oui. Les réponses, rendez-vous, achats ou autres conversions peuvent revenir dans le CRM et alimenter un dashboard. Il faut définir une source de vérité et des identifiants stables dès le départ.",
       },
       {
-        question: "L'IA peut-elle écrire et envoyer les emails automatiquement ?",
+        question:
+          "L'IA peut-elle écrire et envoyer les emails automatiquement ?",
         answer:
           "Elle peut préparer des brouillons à partir de données vérifiables. Pour les campagnes importantes, je recommande une validation humaine du message et de l'audience avant l'envoi.",
       },
@@ -1766,7 +1783,8 @@ export const enSolutions: Solution[] = [
       },
     ],
     problem: {
-      title: "The real problem: your tools do not talk to each other well enough",
+      title:
+        "The real problem: your tools do not talk to each other well enough",
       paragraphs: [
         "Most SMBs do not have a software problem. They have an information flow problem. A lead arrives from a form, someone copies it into a CRM, another person prepares an email, then someone else has to verify payment, update a spreadsheet and notify the team.",
         "At first, this manual system holds. Then volume grows, copy-paste errors appear, follow-ups go out late and nobody knows which data source is reliable. This is where n8n becomes useful: it orchestrates your existing tools.",
@@ -2116,7 +2134,8 @@ export const enSolutions: Solution[] = [
     slug: "mobile-money-api-madagascar",
     icon: "payments",
     accent: "blue",
-    title: "Mobile Money API Madagascar: Orange Money, MVola, Airtel and dashboard",
+    title:
+      "Mobile Money API Madagascar: Orange Money, MVola, Airtel and dashboard",
     eyebrow: "Local payment solution",
     seoTitle: "Mobile Money API Madagascar | MVola, Orange & Airtel",
     seoDescription:
@@ -2277,8 +2296,7 @@ export const enSolutions: Solution[] = [
       {
         label: "MVola Developer Portal",
         href: "https://developer.mvola.mg/devportal/",
-        description:
-          "MVola developer portal for API documentation and access.",
+        description: "MVola developer portal for API documentation and access.",
       },
       {
         label: "Airtel Africa Developer Portal",
@@ -2308,7 +2326,8 @@ export const enSolutions: Solution[] = [
           "To integrate the Orange Money API in Madagascar, first get provider access, create a payment intent server-side, store the internal reference, receive the Orange Money callback, verify the server status and update the order. The frontend should only display final confirmation after backend validation.",
       },
       {
-        question: "Can Orange Money, MVola and Airtel Money be integrated into one app?",
+        question:
+          "Can Orange Money, MVola and Airtel Money be integrated into one app?",
         answer:
           "Yes. The right approach is to treat Orange Money, MVola and Airtel Money as three provider adapters, then expose a shared model to the application: amount, currency, customer, order, status, provider reference and callback history.",
       },
@@ -2504,7 +2523,8 @@ export const enSolutions: Solution[] = [
           "It can qualify a message or comment, detect intent, summarize the need, prepare a reply, create a CRM lead and hand sensitive cases to a human.",
       },
       {
-        question: "What is the difference between a chatbot and a Facebook AI agent?",
+        question:
+          "What is the difference between a chatbot and a Facebook AI agent?",
         answer:
           "A chatbot mainly follows a reply tree. An AI agent can interpret free text, use context and trigger a business action, but it still needs explicit rules and approvals.",
       },
@@ -2676,10 +2696,10 @@ export const enSolutions: Solution[] = [
           "n8n pipeline demo for lead generation, qualification and CRM synchronization.",
       },
       {
-        label: "Scraping FlowRemote",
-        href: "/en/projects/scraping-flowremote",
+        label: "n8n + Lemlist prospecting",
+        href: "/en/projects/automatisation-prospection-n8n-lemlist",
         description:
-          "Automated multi-source extraction, filtering and daily notification.",
+          "Sourcing, qualification and message preparation with human approval.",
       },
       {
         label: "n8n Automation Expert",
@@ -2733,7 +2753,8 @@ export const enSolutions: Solution[] = [
           "Technically yes, but I recommend starting with human validation. Quality, deliverability and brand reputation matter more than uncontrolled volume.",
       },
       {
-        question: "Can this workflow connect to HubSpot, Airtable or Google Sheets?",
+        question:
+          "Can this workflow connect to HubSpot, Airtable or Google Sheets?",
         answer:
           "Yes. n8n can sync data with a CRM, Airtable, Google Sheets, Notion or a custom API.",
       },
@@ -3211,7 +3232,8 @@ export const enSolutions: Solution[] = [
       },
     ],
     problem: {
-      title: "The problem is not a lack of tools, but the handoffs between them",
+      title:
+        "The problem is not a lack of tools, but the handoffs between them",
       paragraphs: [
         "A common marketing journey starts with an ad, content page or form. The request then lands in an inbox, spreadsheet or CRM. If nobody picks it up quickly, context disappears: unknown source, duplicates, poor segmentation and late follow-up.",
         "n8n acts as the orchestration layer. It receives the event, normalizes fields, checks consent and exclusions, updates the CRM, triggers an allowed action and logs the result. It does not replace your CRM or email platform; it removes copy and paste between them.",
@@ -3472,20 +3494,33 @@ export function getSolutions(locale: Locale): Solution[] {
   return solutionsByLocale[locale];
 }
 
-export function getSolutionBySlug(locale: Locale, slug: string): Solution | undefined {
+export function getSolutionBySlug(
+  locale: Locale,
+  slug: string,
+): Solution | undefined {
   return getSolutions(locale).find((solution) => solution.slug === slug);
 }
 
-export function getAlternateSolution(locale: Locale, slug: string): Solution | undefined {
-  const index = getSolutions(locale).findIndex((solution) => solution.slug === slug);
+export function getAlternateSolution(
+  locale: Locale,
+  slug: string,
+): Solution | undefined {
+  const index = getSolutions(locale).findIndex(
+    (solution) => solution.slug === slug,
+  );
   if (index < 0) return undefined;
   const alternateLocale: Locale = locale === "fr" ? "en" : "fr";
   return getSolutions(alternateLocale)[index];
 }
 
-export function getRelatedSolutionsForService(locale: Locale, serviceSlug: string): Solution[] {
+export function getRelatedSolutionsForService(
+  locale: Locale,
+  serviceSlug: string,
+): Solution[] {
   const slugs = serviceToSolutionSlugs[serviceSlug] ?? [];
-  const solutionsBySlug = new Map(getSolutions(locale).map((solution) => [solution.slug, solution]));
+  const solutionsBySlug = new Map(
+    getSolutions(locale).map((solution) => [solution.slug, solution]),
+  );
   return slugs.flatMap((slug) => {
     const solution = solutionsBySlug.get(slug);
     return solution ? [solution] : [];

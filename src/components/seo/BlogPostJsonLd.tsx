@@ -41,6 +41,7 @@ export default function BlogPostJsonLd({
         ...(wordCount ? { wordCount } : {}),
         author: {
           "@type": "Person",
+          "@id": `${SITE_URL}/#person`,
           name: author,
           url: `${SITE_URL}${prefix}/about`,
           jobTitle: PERSONAL_INFO.jobTitle[locale as "fr" | "en"],
@@ -49,7 +50,8 @@ export default function BlogPostJsonLd({
         },
         publisher: {
           "@type": "ProfessionalService",
-          name: "Manda — Automatisation & Développement No-Code",
+          "@id": `${SITE_URL}/#business`,
+          name: "Manda — Applications métier, IA et automatisation",
           url: SITE_URL,
           logo: {
             "@type": "ImageObject",
@@ -69,7 +71,11 @@ export default function BlogPostJsonLd({
         },
         speakable: {
           "@type": "SpeakableSpecification",
-          cssSelector: ["article h1", "article > p:first-of-type", ".blog-summary"],
+          cssSelector: [
+            "article h1",
+            "article > p:first-of-type",
+            ".blog-summary",
+          ],
         },
       }}
     />

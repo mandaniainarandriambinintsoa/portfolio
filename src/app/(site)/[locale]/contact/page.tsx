@@ -12,7 +12,9 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
   const dict = await getDictionary(locale);
 
   const prefix = locale === "fr" ? "" : "/en";
@@ -34,7 +36,14 @@ export async function generateMetadata({
       url: `${SITE_URL}${prefix}/contact`,
       type: "website",
       locale: locale === "fr" ? "fr_FR" : "en_US",
-      images: [{ url: `${SITE_URL}/images/manda-photo2.webp`, width: 288, height: 336, alt: "Manda - Contact" }],
+      images: [
+        {
+          url: `${SITE_URL}/images/manda-photo2.webp`,
+          width: 288,
+          height: 336,
+          alt: "Manda - Contact",
+        },
+      ],
     },
   };
 }
@@ -45,43 +54,70 @@ export default async function ContactPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale: rawLocale } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
   const dict = await getDictionary(locale);
   const contact = dict.contact;
 
   return (
     <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto flex flex-col">
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 gradient-text">
           {contact.title}
         </h1>
-        <p className="text-xl text-slate-400 mb-16">
-          {contact.subtitle}
-        </p>
+        <p className="text-xl text-slate-400 mb-16">{contact.subtitle}</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="order-2 md:order-none grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 md:mt-0 md:mb-12">
           <GlassCard>
-            <IconScoutIcon name="envelope" size={24} className="mb-3 text-indigo-400" />
+            <IconScoutIcon
+              name="envelope"
+              size={24}
+              className="mb-3 text-indigo-400"
+            />
             <p className="text-sm text-slate-400 mb-1">{contact.email_label}</p>
-            <a href={`mailto:${contact.info_email}`} className="text-white hover:text-indigo-400 transition-colors text-sm break-all">
+            <a
+              href={`mailto:${contact.info_email}`}
+              className="text-white hover:text-indigo-400 transition-colors text-sm break-all"
+            >
               {contact.info_email}
             </a>
           </GlassCard>
           <GlassCard>
-            <IconScoutIcon name="link" size={24} className="mb-3 text-emerald-400" />
+            <IconScoutIcon
+              name="link"
+              size={24}
+              className="mb-3 text-emerald-400"
+            />
             <p className="text-sm text-slate-400 mb-1">LinkedIn</p>
-            <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-white hover:text-emerald-400 transition-colors text-sm">
+            <a
+              href={SOCIAL_LINKS.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-emerald-400 transition-colors text-sm"
+            >
               {locale === "fr" ? "Mon profil LinkedIn" : "My LinkedIn Profile"}
             </a>
           </GlassCard>
           <GlassCard>
-            <IconScoutIcon name="location" size={24} className="mb-3 text-blue-400" />
-            <p className="text-sm text-slate-400 mb-1">{locale === "fr" ? "Localisation" : "Location"}</p>
+            <IconScoutIcon
+              name="location"
+              size={24}
+              className="mb-3 text-blue-400"
+            />
+            <p className="text-sm text-slate-400 mb-1">
+              {locale === "fr" ? "Localisation" : "Location"}
+            </p>
             <p className="text-white text-sm">{contact.info_location}</p>
           </GlassCard>
         </div>
 
-        <GlassCard className="!p-8 md:!p-12">
+        <GlassCard className="!p-6 md:!p-12">
+          <p className="mb-6 text-slate-300">
+            {locale === "fr"
+              ? "Décrivez votre besoin, les outils existants et vos contraintes. Je vous recontacte pour préciser le périmètre et les prochaines étapes."
+              : "Describe your needs, existing tools and constraints. I will get back to you to clarify the scope and next steps."}
+          </p>
           <ContactForm
             locale={locale}
             labels={{

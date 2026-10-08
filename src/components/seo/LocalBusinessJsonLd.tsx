@@ -7,14 +7,15 @@ export default function LocalBusinessJsonLd() {
       data={{
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
-        name: "Manda — Automatisation & Développement No-Code",
+        "@id": `${SITE_URL}/#business`,
+        name: "Manda — Applications métier, IA et automatisation",
         legalName: PERSONAL_INFO.legalName,
         alternateName: "Manda Dev",
         url: SITE_URL,
         telephone: PERSONAL_INFO.phone,
         email: PERSONAL_INFO.email,
         description:
-          "Expert en automatisation N8N, développement No-Code (Bubble, Webflow) et Low-Code (Next.js, Supabase) basé à Antananarivo, Madagascar. Applications sur mesure et workflows intelligents pour entreprises françaises et internationales.",
+          "Développeur d’applications métier, SaaS, API et intégrations IA avec Next.js, Node.js et Supabase basé à Antananarivo, Madagascar. Applications sur mesure et workflows intelligents pour entreprises françaises et internationales.",
         image: `${SITE_URL}/images/manda-photo2.webp`,
         priceRange: "€€",
         address: {
@@ -46,6 +47,7 @@ export default function LocalBusinessJsonLd() {
         ],
         founder: {
           "@type": "Person",
+          "@id": `${SITE_URL}/#person`,
           name: PERSONAL_INFO.name,
           url: SITE_URL,
         },
@@ -63,13 +65,20 @@ export default function LocalBusinessJsonLd() {
           contactType: "customer service",
           availableLanguage: ["French", "English"],
         },
-        sameAs: [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.github, SOCIAL_LINKS.malt, SOCIAL_LINKS.wikidata, SOCIAL_LINKS.youtube, SOCIAL_LINKS.tiktok],
+        sameAs: [
+          SOCIAL_LINKS.linkedin,
+          SOCIAL_LINKS.github,
+          SOCIAL_LINKS.malt,
+          SOCIAL_LINKS.wikidata,
+          SOCIAL_LINKS.youtube,
+          SOCIAL_LINKS.tiktok,
+        ],
         knowsAbout: [
           "N8N Automation",
-          "No-Code Development",
-          "Low-Code Development",
-          "Bubble.io",
-          "Webflow",
+          "Business application development",
+          "API integration",
+          "Node.js",
+          "PostgreSQL",
           "Next.js",
           "Supabase",
           "AI Integration",
@@ -84,9 +93,9 @@ export default function LocalBusinessJsonLd() {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Développement No-Code",
+                name: "Applications métier et SaaS",
                 description:
-                  "Applications Bubble et sites Webflow pour entreprises",
+                  "Applications Next.js, API et bases de données pour entreprises",
               },
             },
             {
@@ -94,8 +103,7 @@ export default function LocalBusinessJsonLd() {
               itemOffered: {
                 "@type": "Service",
                 name: "Automatisation N8N",
-                description:
-                  "Workflows d'automatisation sur mesure avec N8N",
+                description: "Workflows d'automatisation sur mesure avec N8N",
               },
             },
             {

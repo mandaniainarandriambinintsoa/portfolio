@@ -25,11 +25,18 @@ function mapRow(row: BlogPostRow, locale: Locale): BlogPost {
     excerpt: locale === "fr" ? row.excerpt_fr : row.excerpt_en,
     content: locale === "fr" ? row.content_fr : row.content_en,
     seoTitle: locale === "fr" ? row.seo_title_fr : row.seo_title_en,
-    seoDescription: locale === "fr" ? row.seo_description_fr : row.seo_description_en,
+    seoDescription:
+      locale === "fr" ? row.seo_description_fr : row.seo_description_en,
     coverImage: row.cover_image,
     tags: row.tags,
     author: row.author,
-    readingTime: row.reading_time,
+    readingTime: Math.max(
+      1,
+      Math.ceil(
+        (locale === "fr" ? row.content_fr : row.content_en).split(/\s+/)
+          .length / 200,
+      ),
+    ),
     publishedAt: row.published_at,
     updatedAt: row.updated_at,
   };
@@ -41,7 +48,7 @@ export async function getBlogPosts(locale: Locale): Promise<BlogPost[]> {
 
 export async function getBlogPostBySlug(
   slug: string,
-  locale: Locale
+  locale: Locale,
 ): Promise<BlogPost | null> {
   const post = blogPosts.find((entry) => entry.slug === slug);
   return post ? mapRow(post, locale) : null;
