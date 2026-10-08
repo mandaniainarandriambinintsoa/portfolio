@@ -1144,7 +1144,7 @@
             },
             {
               "title": "Client case: Factumation shipped in 3 days",
-              "content": "[Factumation](https://factumation.vercel.app) is a complete invoicing SaaS: auth, clients/invoices CRUD, PDF generation, CSV export, multi-currency, dashboard. Stack: Next.js 16, Supabase, Tailwind.\n\nEnd-to-end development in 3 days with Claude Code as copilot. n8n workflow wired in for automatic invoice sending and payment reminders.\n\nWithout Claude Code + n8n, the same project would have taken 3 to 4 weeks the classical way. Savings: 90% of development time, 100% of control kept on the client side (open-source code, data in your Supabase, exportable n8n workflow). See the live app and source code in my [projects](/en/projects)."
+              "content": "[Factumation](https://factumation.manda-ia.com) is a complete invoicing SaaS: auth, clients/invoices CRUD, PDF generation, CSV export, multi-currency, dashboard. Stack: Next.js 16, Supabase, Tailwind.\n\nEnd-to-end development in 3 days with Claude Code as copilot. n8n workflow wired in for automatic invoice sending and payment reminders.\n\nWithout Claude Code + n8n, the same project would have taken 3 to 4 weeks the classical way. Savings: 90% of development time, 100% of control kept on the client side (open-source code, data in your Supabase, exportable n8n workflow). See the live app and source code in my [projects](/en/projects)."
             },
             {
               "title": "The Madagascar advantage for Claude Code + n8n",
@@ -2491,7 +2491,7 @@
         "example": {
           "label": "VIEW AN EXAMPLE",
           "title": "Factumation, invoicing software",
-          "href": "https://factumation.vercel.app"
+          "href": "https://factumation.manda-ia.com"
         }
       },
       {
@@ -2783,7 +2783,7 @@
           "N8N",
           "Automation"
         ],
-        "link": "https://factumation.vercel.app",
+        "link": "https://factumation.manda-ia.com",
         "featured": false,
         "category": "webapp",
         "image": "/images/projects/factumation-logiciel-facturation.png",

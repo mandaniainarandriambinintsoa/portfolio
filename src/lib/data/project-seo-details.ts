@@ -1351,7 +1351,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       relatedLinks: [
         {
           label: "Créer une facture gratuitement avec Factumation",
-          href: "https://factumation.vercel.app/fr",
+          href: "https://factumation.manda-ia.com/fr",
           description:
             "Ouvrir le générateur en ligne pour créer une facture ou un devis et l'exporter en PDF.",
         },
@@ -1449,7 +1449,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       relatedLinks: [
         {
           label: "Create a free invoice with Factumation",
-          href: "https://factumation.vercel.app/en",
+          href: "https://factumation.manda-ia.com/en",
           description: "Open the online generator to create an invoice or quote and export it as PDF.",
         },
         {

@@ -1114,7 +1114,7 @@
             },
             {
               "title": "Cas client : Factumation livré en 3 jours",
-              "content": "[Factumation](https://factumation.vercel.app) est un SaaS de facturation complet : auth, CRUD clients/factures, génération PDF, export CSV, multi-devises, dashboard. Stack : Next.js 16, Supabase, Tailwind.\n\nDéveloppement de A à Z en 3 jours avec Claude Code en copilote. Workflow n8n branché pour l'envoi automatique des factures et les relances de paiement.\n\nSans Claude Code + n8n, le même projet aurait pris 3 à 4 semaines en mode classique. Économie : 90% du temps de développement, 100% du contrôle conservé côté client (code open-source, données dans son Supabase, workflow n8n exportable). Voir l'application live et le code source associé dans mes [projets](/projects)."
+              "content": "[Factumation](https://factumation.manda-ia.com) est un SaaS de facturation complet : auth, CRUD clients/factures, génération PDF, export CSV, multi-devises, dashboard. Stack : Next.js 16, Supabase, Tailwind.\n\nDéveloppement de A à Z en 3 jours avec Claude Code en copilote. Workflow n8n branché pour l'envoi automatique des factures et les relances de paiement.\n\nSans Claude Code + n8n, le même projet aurait pris 3 à 4 semaines en mode classique. Économie : 90% du temps de développement, 100% du contrôle conservé côté client (code open-source, données dans son Supabase, workflow n8n exportable). Voir l'application live et le code source associé dans mes [projets](/projects)."
             },
             {
               "title": "L'avantage Madagascar pour Claude Code + n8n",
@@ -2470,7 +2470,7 @@
         "example": {
           "label": "VOIR UN EXEMPLE",
           "title": "Factumation, logiciel de facturation",
-          "href": "https://factumation.vercel.app"
+          "href": "https://factumation.manda-ia.com"
         }
       },
       {
@@ -2762,7 +2762,7 @@
           "N8N",
           "Automatisation"
         ],
-        "link": "https://factumation.vercel.app",
+        "link": "https://factumation.manda-ia.com",
         "featured": false,
         "category": "webapp",
         "image": "/images/projects/factumation-logiciel-facturation.png",
