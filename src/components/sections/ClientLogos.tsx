@@ -19,13 +19,11 @@ export default function ClientLogos({ dict }: { dict: ClientLogosDict }) {
       <p className="mx-auto max-w-[20rem] text-center text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 mb-6">
         {dict.label}
       </p>
-      <ul
-        className="flex flex-wrap items-center justify-center gap-x-6 gap-y-6 sm:gap-x-12"
-      >
+      <ul className="grid grid-cols-2 items-center gap-x-4 gap-y-6 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-12">
         {dict.items.map((item) => (
           <li
             key={item.name}
-            className="flex min-w-0 basis-full items-center justify-center gap-3 text-slate-300 sm:basis-auto"
+            className="flex min-w-0 items-center justify-center gap-3 text-slate-300"
           >
             {item.logo ? (
               <Image
