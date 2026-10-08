@@ -460,28 +460,27 @@
   {
     "id": "de0880d4-e616-42f1-8756-7b8f1b94b969",
     "slug": "geo-seo-boost",
-    "title_fr": "GEO SEO Boost",
-    "title_en": "GEO SEO Boost",
-    "subtitle_fr": "Skill Claude Code pour audit GEO+SEO",
-    "subtitle_en": "Claude Code Skill for GEO+SEO Auditing",
-    "description_fr": "Skill open-source pour Claude Code qui automatise les audits GEO (Generative Engine Optimization) et SEO avec données réelles Google Search Console. L'outil propose 13 sous-commandes couvrant l'intégralité du spectre d'optimisation : audit complet, analyse de citabilité IA, vérification des crawlers IA (robots.txt, meta tags, headers HTTP), génération de fichiers llms.txt, scan des mentions de marque, analyse par plateforme (Google AI Overviews, ChatGPT, Perplexity, Gemini, Bing Copilot), audit de schema markup, analyse technique SEO, évaluation de contenu E-E-A-T et génération de rapports PDF professionnels. Le système produit un double scoring : GEO Score (0-100) pour la visibilité IA et SEO Health Score (0-10) pour le référencement classique. L'architecture repose sur 5 agents parallèles spécialisés, des scripts Python (BeautifulSoup, ReportLab) et une intégration native avec l'API Google Search Console via MCP.",
-    "description_en": "Open-source Claude Code skill that automates GEO (Generative Engine Optimization) and SEO audits with real Google Search Console data. The tool offers 13 sub-commands covering the full optimization spectrum: comprehensive audit, AI citability analysis, AI crawler verification (robots.txt, meta tags, HTTP headers), llms.txt file generation, brand mention scanning, platform-specific analysis (Google AI Overviews, ChatGPT, Perplexity, Gemini, Bing Copilot), schema markup audit, technical SEO analysis, E-E-A-T content evaluation, and professional PDF report generation. The system produces dual scoring: GEO Score (0-100) for AI visibility and SEO Health Score (0-10) for traditional search ranking. The architecture relies on 5 specialized parallel agents, Python scripts (BeautifulSoup, ReportLab), and native Google Search Console API integration via MCP.",
+    "title_fr": "Consultant en ranking SEO/GEO d'un site",
+    "title_en": "Website SEO/GEO ranking consultant",
+    "subtitle_fr": "Audit, positionnement Google et visibilité dans les moteurs IA",
+    "subtitle_en": "Audits, Google rankings and visibility in AI search",
+    "description_fr": "Accompagnement SEO et GEO pour un site web : analyse des requêtes Google Search Console, audit technique, optimisation des contenus selon les intentions de recherche et suivi des performances. La prestation relie le positionnement sur Google, la visibilité dans les moteurs IA et les parcours de conversion.",
+    "description_en": "SEO and GEO consulting for websites: Google Search Console query analysis, technical audits, content optimization around search intent and performance monitoring. The service connects Google rankings, visibility in AI search and conversion journeys.",
     "tags": [
-      "Python",
-      "Claude Code",
       "SEO",
       "GEO",
-      "BeautifulSoup"
+      "Google Search Console",
+      "PostHog"
     ],
-    "link": "https://github.com/mandaniainarandriambinintsoa/geo-seo-boost",
-    "featured": false,
-    "category": "workflow",
-    "image": "/images/projects/geo-seo-boost.svg",
+    "link": null,
+    "featured": true,
+    "category": "webapp",
+    "image": "/images/projects/consultant-seo-geo-gsc.png",
     "workflow_file": null,
     "sort_order": 16,
     "published": true,
     "created_at": "2026-03-11T17:36:58.067554+00:00",
-    "updated_at": "2026-05-12T16:10:56.874359+00:00"
+    "updated_at": "2026-10-08T00:00:00.000000+00:00"
   },
   {
     "id": "ac7a636f-ba8c-40d1-9c70-eac3ef09ea25",

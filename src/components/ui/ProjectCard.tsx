@@ -62,7 +62,7 @@ export default function ProjectCard({
         <span
           className={`absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-semibold tracking-wider uppercase text-white backdrop-blur-md ${badgeTone[tone]}`}
         >
-          {categoryLabel}
+          {project.slug === "geo-seo-boost" ? "SEO / GEO" : categoryLabel}
         </span>
       </div>
 
