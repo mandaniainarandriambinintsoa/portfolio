@@ -9,14 +9,6 @@ export const navItems: NavItem[] = [
     href: { fr: "/services", en: "/en/services" },
   },
   {
-    label: { fr: "Process", en: "Process" },
-    href: { fr: "/#process", en: "/en/#process" },
-  },
-  {
-    label: { fr: "Projets", en: "Projects" },
-    href: { fr: "/#projects", en: "/en/#projects" },
-  },
-  {
     label: { fr: "Lab IA", en: "AI Lab" },
     href: { fr: "/labs", en: "/en/labs" },
   },
