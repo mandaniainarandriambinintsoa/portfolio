@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-10-13T19:01:01.192Z",
+  "params": {
+    "engine": "google",
+    "q": "agent IA création vidéo",
+    "hl": "fr",
+    "gl": "fr",
+    "google_domain": "google.fr",
+    "location": "France"
+  },
+  "status": "Success",
+  "error": null,
+  "organic": [
+    {
+      "position": 1,
+      "title": "HeyGen : créez des vidéos IA avec votre avatar personnel",
+      "link": "https://www.heygen.com/fr-fr",
+      "snippet": "Donnez le meilleur de vous-même, à chaque fois. Créez des vidéos IA claires et convaincantes avec votre avatar personnel — votre visage et votre voix, ..."
+    },
+    {
+      "position": 2,
+      "title": "24 générateurs de vidéo par intelligence artificielle - IA - BDM",
+      "link": "https://www.blogdumoderateur.com/tools/ia/generateur-video-ia/",
+      "snippet": "Un générateur de vidéo par IA crée des vidéos à partir d'un texte, d'une image ou d'un prompt, sans tournage ni compétences de montage. L'intelligence ..."
+    },
+    {
+      "position": 3,
+      "title": "Générateur de vidéo par IA",
+      "link": "https://www.canva.com/fr_fr/outils/generateur-de-video-ia/",
+      "snippet": "Générez une vidéo avec l'IA en quelques instants à partir d'une simple consigne en utilisant le meilleur générateur de vidéo IA de Canva."
+    },
+    {
+      "position": 4,
+      "title": "Générateur vidéo IA avec Seedance 2,5",
+      "link": "https://www.capcut.com/fr-fr/tools/ai-video-generator",
+      "snippet": "Créez des vidéos instantanément avec le générateur vidéo Seedance 2,5 IA de CapCut à l'aide d'avatars, de modèles, de conversion de texte en vidéo et de ..."
+    },
+    {
+      "position": 5,
+      "title": "Générateur de vidéos IA - Créez une vidéo IA gratuite",
+      "link": "https://www.synthesia.io/fr",
+      "snippet": "Créez des vidéos professionnelle avec avatars et voix off IA dans plus de 140 langues. Réduisez vos délais et coûts jusqu'à 90 %. Commencer GRATUITEMENT."
+    },
+    {
+      "position": 6,
+      "title": "créez des vidéos incroyables avec l'IA",
+      "link": "https://deevid.ai/fr",
+      "snippet": "Le meilleur générateur de vidéo IA gratuit. DeeVid AI est l'agent vidéo & image IA le plus avancé et le plus abordable, compatible avec Veo 3.1, ..."
+    },
+    {
+      "position": 7,
+      "title": "Existe-t-il un agent IA capable de créer des vidéos, de les ...",
+      "link": "https://www.reddit.com/r/AI_Agents/comments/1jsp39p/is_there_an_ai_agent_that_can_create_videos_post/?tl=fr",
+      "snippet": "Je me demandais s'il existait un agent IA capable de gérer tout le processus de création de contenu vidéo de manière autonome : création des ..."
+    },
+    {
+      "position": 8,
+      "title": "Générateur de vidéo avec IA gratuit",
+      "link": "https://invideo.io/fr/creer/generateur-video-avec-ia/",
+      "snippet": "Générez des vidéos d'IA à partir d'un simple texte. Proposez votre idée de vidéo etnotre générateur de vidéos IA rédige le script, y ajoute des éléments visuels ..."
+    }
+  ],
+  "questions": [
+    "Quelle IA peut créer une vidéo ?",
+    "Quel est le meilleur logiciel de création vidéo gratuit ?",
+    "Quel est le meilleur outil gratuit pour créer des vidéos ?",
+    "Existe-t-il un générateur d'animation IA gratuit ?"
+  ],
+  "relatedSearches": [
+    "IA montage vidéo gratuit",
+    "Meilleur générateur vidéo IA gratuit",
+    "Créer une vidéo à partir d'un texte IA gratuit",
+    "Générateur de vidéo IA",
+    "Création vidéo IA",
+    "Vidéo IA",
+    "Générateur de vidéo gratuit",
+    "Générateur vidéo IA réaliste"
+  ]
+}

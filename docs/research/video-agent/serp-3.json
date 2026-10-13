@@ -1,0 +1,13 @@
+{
+  "checkedAt": "2026-10-13T19:00:35.313Z",
+  "params": {
+    "engine": "google_trends",
+    "q": "vidéo IA",
+    "data_type": "RELATED_QUERIES",
+    "date": "today 3-m",
+    "geo": "FR",
+    "hl": "fr"
+  },
+  "status": "Success",
+  "error": "Google Trends hasn't returned any results for this query."
+}

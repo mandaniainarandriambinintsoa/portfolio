@@ -1,0 +1,362 @@
+{
+  "checkedAt": "2026-10-13T19:01:20.797Z",
+  "query": "video ia",
+  "geo": "FR",
+  "period": "today 12-m",
+  "relatedQueries": {
+    "rising": [
+      {
+        "query": "mind video",
+        "value": "Record",
+        "extracted_value": 21250,
+        "link": "https://trends.google.com/trends/explore?q=mind+video&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=mind+video&tz=420"
+      },
+      {
+        "query": "veo 3.1",
+        "value": "Record",
+        "extracted_value": 18350,
+        "link": "https://trends.google.com/trends/explore?q=veo+3.1&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=veo+3.1&tz=420"
+      },
+      {
+        "query": "shortfy",
+        "value": "Record",
+        "extracted_value": 16700,
+        "link": "https://trends.google.com/trends/explore?q=shortfy&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=shortfy&tz=420"
+      },
+      {
+        "query": "shortfy io",
+        "value": "Record",
+        "extracted_value": 11150,
+        "link": "https://trends.google.com/trends/explore?q=shortfy+io&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=shortfy+io&tz=420"
+      },
+      {
+        "query": "nanobanana",
+        "value": "Record",
+        "extracted_value": 7150,
+        "link": "https://trends.google.com/trends/explore?q=nanobanana&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=nanobanana&tz=420"
+      },
+      {
+        "query": "sora2",
+        "value": "Record",
+        "extracted_value": 6600,
+        "link": "https://trends.google.com/trends/explore?q=sora2&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=sora2&tz=420"
+      },
+      {
+        "query": "runway gen-3",
+        "value": "Record",
+        "extracted_value": 5450,
+        "link": "https://trends.google.com/trends/explore?q=runway+gen-3&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=runway+gen-3&tz=420"
+      },
+      {
+        "query": "seedance 2.0",
+        "value": "+900 %",
+        "extracted_value": 900,
+        "link": "https://trends.google.com/trends/explore?q=seedance+2.0&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=seedance+2.0&tz=420"
+      },
+      {
+        "query": "sora 2",
+        "value": "+800 %",
+        "extracted_value": 800,
+        "link": "https://trends.google.com/trends/explore?q=sora+2&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=sora+2&tz=420"
+      },
+      {
+        "query": "higgsfield ai",
+        "value": "+750 %",
+        "extracted_value": 750,
+        "link": "https://trends.google.com/trends/explore?q=higgsfield+ai&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=higgsfield+ai&tz=420"
+      },
+      {
+        "query": "google ai studio",
+        "value": "+650 %",
+        "extracted_value": 650,
+        "link": "https://trends.google.com/trends/explore?q=google+ai+studio&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=google+ai+studio&tz=420"
+      },
+      {
+        "query": "meta ai",
+        "value": "+500 %",
+        "extracted_value": 500,
+        "link": "https://trends.google.com/trends/explore?q=meta+ai&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=meta+ai&tz=420"
+      },
+      {
+        "query": "seedance",
+        "value": "+500 %",
+        "extracted_value": 500,
+        "link": "https://trends.google.com/trends/explore?q=seedance&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=seedance&tz=420"
+      },
+      {
+        "query": "ia claude",
+        "value": "+450 %",
+        "extracted_value": 450,
+        "link": "https://trends.google.com/trends/explore?q=ia+claude&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+claude&tz=420"
+      },
+      {
+        "query": "higgsfield",
+        "value": "+450 %",
+        "extracted_value": 450,
+        "link": "https://trends.google.com/trends/explore?q=higgsfield&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=higgsfield&tz=420"
+      },
+      {
+        "query": "nano banana",
+        "value": "+450 %",
+        "extracted_value": 450,
+        "link": "https://trends.google.com/trends/explore?q=nano+banana&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=nano+banana&tz=420"
+      },
+      {
+        "query": "luma dream machine",
+        "value": "+400 %",
+        "extracted_value": 400,
+        "link": "https://trends.google.com/trends/explore?q=luma+dream+machine&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=luma+dream+machine&tz=420"
+      },
+      {
+        "query": "grok ai",
+        "value": "+400 %",
+        "extracted_value": 400,
+        "link": "https://trends.google.com/trends/explore?q=grok+ai&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=grok+ai&tz=420"
+      },
+      {
+        "query": "shortfy.io",
+        "value": "+400 %",
+        "extracted_value": 400,
+        "link": "https://trends.google.com/trends/explore?q=shortfy.io&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=shortfy.io&tz=420"
+      },
+      {
+        "query": "grok",
+        "value": "+350 %",
+        "extracted_value": 350,
+        "link": "https://trends.google.com/trends/explore?q=grok&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=grok&tz=420"
+      },
+      {
+        "query": "grok ia",
+        "value": "+350 %",
+        "extracted_value": 350,
+        "link": "https://trends.google.com/trends/explore?q=grok+ia&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=grok+ia&tz=420"
+      },
+      {
+        "query": "nano banana 2",
+        "value": "+250 %",
+        "extracted_value": 250,
+        "link": "https://trends.google.com/trends/explore?q=nano+banana+2&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=nano+banana+2&tz=420"
+      },
+      {
+        "query": "flow",
+        "value": "+250 %",
+        "extracted_value": 250,
+        "link": "https://trends.google.com/trends/explore?q=flow&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=flow&tz=420"
+      },
+      {
+        "query": "meta ia",
+        "value": "+250 %",
+        "extracted_value": 250,
+        "link": "https://trends.google.com/trends/explore?q=meta+ia&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=meta+ia&tz=420"
+      },
+      {
+        "query": "comfyui",
+        "value": "+250 %",
+        "extracted_value": 250,
+        "link": "https://trends.google.com/trends/explore?q=comfyui&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=comfyui&tz=420"
+      }
+    ],
+    "top": [
+      {
+        "query": "ia gratuit",
+        "value": "100",
+        "extracted_value": 100,
+        "link": "https://trends.google.com/trends/explore?q=ia+gratuit&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+gratuit&tz=420"
+      },
+      {
+        "query": "video ai",
+        "value": "83",
+        "extracted_value": 83,
+        "link": "https://trends.google.com/trends/explore?q=video+ai&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=video+ai&tz=420"
+      },
+      {
+        "query": "ia photo",
+        "value": "35",
+        "extracted_value": 35,
+        "link": "https://trends.google.com/trends/explore?q=ia+photo&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+photo&tz=420"
+      },
+      {
+        "query": "ia generateur video",
+        "value": "33",
+        "extracted_value": 33,
+        "link": "https://trends.google.com/trends/explore?q=ia+generateur+video&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+generateur+video&tz=420"
+      },
+      {
+        "query": "ia image",
+        "value": "33",
+        "extracted_value": 33,
+        "link": "https://trends.google.com/trends/explore?q=ia+image&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+image&tz=420"
+      },
+      {
+        "query": "vidéo ia",
+        "value": "32",
+        "extracted_value": 32,
+        "link": "https://trends.google.com/trends/explore?q=vid%C3%A9o+ia&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=vid%C3%A9o+ia&tz=420"
+      },
+      {
+        "query": "ia gratuite",
+        "value": "29",
+        "extracted_value": 29,
+        "link": "https://trends.google.com/trends/explore?q=ia+gratuite&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+gratuite&tz=420"
+      },
+      {
+        "query": "montage video",
+        "value": "27",
+        "extracted_value": 27,
+        "link": "https://trends.google.com/trends/explore?q=montage+video&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=montage+video&tz=420"
+      },
+      {
+        "query": "montage video ia",
+        "value": "27",
+        "extracted_value": 27,
+        "link": "https://trends.google.com/trends/explore?q=montage+video+ia&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=montage+video+ia&tz=420"
+      },
+      {
+        "query": "ia google",
+        "value": "23",
+        "extracted_value": 23,
+        "link": "https://trends.google.com/trends/explore?q=ia+google&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+google&tz=420"
+      },
+      {
+        "query": "ia video google",
+        "value": "23",
+        "extracted_value": 23,
+        "link": "https://trends.google.com/trends/explore?q=ia+video+google&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+video+google&tz=420"
+      },
+      {
+        "query": "ia video free",
+        "value": "22",
+        "extracted_value": 22,
+        "link": "https://trends.google.com/trends/explore?q=ia+video+free&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+video+free&tz=420"
+      },
+      {
+        "query": "ia creation video",
+        "value": "18",
+        "extracted_value": 18,
+        "link": "https://trends.google.com/trends/explore?q=ia+creation+video&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+creation+video&tz=420"
+      },
+      {
+        "query": "video ai gratuit",
+        "value": "18",
+        "extracted_value": 18,
+        "link": "https://trends.google.com/trends/explore?q=video+ai+gratuit&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=video+ai+gratuit&tz=420"
+      },
+      {
+        "query": "generateur de video ia",
+        "value": "17",
+        "extracted_value": 17,
+        "link": "https://trends.google.com/trends/explore?q=generateur+de+video+ia&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=generateur+de+video+ia&tz=420"
+      },
+      {
+        "query": "ia vidéo gratuit",
+        "value": "17",
+        "extracted_value": 17,
+        "link": "https://trends.google.com/trends/explore?q=ia+vid%C3%A9o+gratuit&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+vid%C3%A9o+gratuit&tz=420"
+      },
+      {
+        "query": "sora video",
+        "value": "16",
+        "extracted_value": 16,
+        "link": "https://trends.google.com/trends/explore?q=sora+video&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=sora+video&tz=420"
+      },
+      {
+        "query": "sora ia",
+        "value": "16",
+        "extracted_value": 16,
+        "link": "https://trends.google.com/trends/explore?q=sora+ia&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=sora+ia&tz=420"
+      },
+      {
+        "query": "sora",
+        "value": "16",
+        "extracted_value": 16,
+        "link": "https://trends.google.com/trends/explore?q=sora&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=sora&tz=420"
+      },
+      {
+        "query": "ia video generator",
+        "value": "15",
+        "extracted_value": 15,
+        "link": "https://trends.google.com/trends/explore?q=ia+video+generator&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+video+generator&tz=420"
+      },
+      {
+        "query": "generer video ia",
+        "value": "15",
+        "extracted_value": 15,
+        "link": "https://trends.google.com/trends/explore?q=generer+video+ia&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=generer+video+ia&tz=420"
+      },
+      {
+        "query": "ia claude",
+        "value": "10",
+        "extracted_value": 10,
+        "link": "https://trends.google.com/trends/explore?q=ia+claude&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=ia+claude&tz=420"
+      },
+      {
+        "query": "grok ia",
+        "value": "9",
+        "extracted_value": 9,
+        "link": "https://trends.google.com/trends/explore?q=grok+ia&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=grok+ia&tz=420"
+      },
+      {
+        "query": "grok",
+        "value": "9",
+        "extracted_value": 9,
+        "link": "https://trends.google.com/trends/explore?q=grok&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=grok&tz=420"
+      },
+      {
+        "query": "meta ia",
+        "value": "4",
+        "extracted_value": 4,
+        "link": "https://trends.google.com/trends/explore?q=meta+ia&date=today+12-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_QUERIES&date=today+12-m&engine=google_trends&geo=FR&hl=fr&q=meta+ia&tz=420"
+      }
+    ]
+  }
+}

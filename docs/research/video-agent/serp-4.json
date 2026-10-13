@@ -1,0 +1,448 @@
+{
+  "checkedAt": "2026-10-13T19:01:04.596Z",
+  "params": {
+    "engine": "google_trends",
+    "q": "vidéo IA",
+    "data_type": "RELATED_TOPICS",
+    "date": "today 3-m",
+    "geo": "FR",
+    "hl": "fr"
+  },
+  "status": "Success",
+  "error": null,
+  "relatedTopics": {
+    "rising": [
+      {
+        "topic": {
+          "value": "/g/11zdgr2ssq",
+          "title": "Google Flow",
+          "type": "Sujet"
+        },
+        "value": "Record",
+        "extracted_value": 71250,
+        "link": "https://trends.google.com/trends/explore?q=/g/11zdgr2ssq&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11zdgr2ssq&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11y2ckf_9j",
+          "title": "invideo AI",
+          "type": "Application"
+        },
+        "value": "Record",
+        "extracted_value": 43800,
+        "link": "https://trends.google.com/trends/explore?q=/g/11y2ckf_9j&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11y2ckf_9j&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11y3ky1nl0",
+          "title": "Higgsfield Inc.",
+          "type": "Entreprise"
+        },
+        "value": "Record",
+        "extracted_value": 42900,
+        "link": "https://trends.google.com/trends/explore?q=/g/11y3ky1nl0&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11y3ky1nl0&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11b6v5l_k0",
+          "title": "Adobe Premiere Pro",
+          "type": "Logiciel"
+        },
+        "value": "Record",
+        "extracted_value": 31700,
+        "link": "https://trends.google.com/trends/explore?q=/g/11b6v5l_k0&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11b6v5l_k0&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11x6yqz1wf",
+          "title": "Arena",
+          "type": "Site web"
+        },
+        "value": "Record",
+        "extracted_value": 27850,
+        "link": "https://trends.google.com/trends/explore?q=/g/11x6yqz1wf&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11x6yqz1wf&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/1hh_pccp0",
+          "title": "Spot publicitaire",
+          "type": "Sujet"
+        },
+        "value": "Record",
+        "extracted_value": 21750,
+        "link": "https://trends.google.com/trends/explore?q=/g/1hh_pccp0&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F1hh_pccp0&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/043dqq",
+          "title": "Adobe Premiere Pro",
+          "type": "Logiciel"
+        },
+        "value": "Record",
+        "extracted_value": 19000,
+        "link": "https://trends.google.com/trends/explore?q=/m/043dqq&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F043dqq&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/09d341",
+          "title": "Script",
+          "type": "Cinéma"
+        },
+        "value": "+2 400 %",
+        "extracted_value": 2400,
+        "link": "https://trends.google.com/trends/explore?q=/m/09d341&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F09d341&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/0yhh",
+          "title": "Format de fichier audio",
+          "type": "Format de données"
+        },
+        "value": "+250 %",
+        "extracted_value": 250,
+        "link": "https://trends.google.com/trends/explore?q=/m/0yhh&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F0yhh&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11jpgjr_k0",
+          "title": "Amélioration qualité vidéo",
+          "type": "Application"
+        },
+        "value": "+200 %",
+        "extracted_value": 200,
+        "link": "https://trends.google.com/trends/explore?q=/g/11jpgjr_k0&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11jpgjr_k0&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11rxks667j",
+          "title": "change",
+          "type": "Sujet"
+        },
+        "value": "+70 %",
+        "extracted_value": 70,
+        "link": "https://trends.google.com/trends/explore?q=/g/11rxks667j&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11rxks667j&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11khkg2rwf",
+          "title": "Intelligence artificielle générative",
+          "type": "Sujet"
+        },
+        "value": "+70 %",
+        "extracted_value": 70,
+        "link": "https://trends.google.com/trends/explore?q=/g/11khkg2rwf&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11khkg2rwf&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/02bcsd",
+          "title": "Not safe for work",
+          "type": "Sujet"
+        },
+        "value": "+60 %",
+        "extracted_value": 60,
+        "link": "https://trends.google.com/trends/explore?q=/m/02bcsd&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F02bcsd&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/0mdxd",
+          "title": "Clip",
+          "type": "Sujet"
+        },
+        "value": "+60 %",
+        "extracted_value": 60,
+        "link": "https://trends.google.com/trends/explore?q=/m/0mdxd&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F0mdxd&tz=420"
+      }
+    ],
+    "top": [
+      {
+        "topic": {
+          "value": "/m/07z4p",
+          "title": "Vidéo",
+          "type": "Format de données"
+        },
+        "value": "100",
+        "extracted_value": 100,
+        "link": "https://trends.google.com/trends/explore?q=/m/07z4p&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F07z4p&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/0mkz",
+          "title": "Intelligence artificielle",
+          "type": "Domaine professionnel"
+        },
+        "value": "96",
+        "extracted_value": 96,
+        "link": "https://trends.google.com/trends/explore?q=/m/0mkz&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F0mkz&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11p12b0z2g",
+          "title": "Gratuit",
+          "type": "Sujet"
+        },
+        "value": "35",
+        "extracted_value": 35,
+        "link": "https://trends.google.com/trends/explore?q=/g/11p12b0z2g&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11p12b0z2g&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/0l4dz",
+          "title": "Générateur électrique",
+          "type": "Sujet"
+        },
+        "value": "16",
+        "extracted_value": 16,
+        "link": "https://trends.google.com/trends/explore?q=/m/0l4dz&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F0l4dz&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/02p14rx",
+          "title": "Montage vidéo",
+          "type": "Sujet"
+        },
+        "value": "8",
+        "extracted_value": 8,
+        "link": "https://trends.google.com/trends/explore?q=/m/02p14rx&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F02p14rx&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/05wkw",
+          "title": "Photographie",
+          "type": "Forme d'art visuel"
+        },
+        "value": "8",
+        "extracted_value": 8,
+        "link": "https://trends.google.com/trends/explore?q=/m/05wkw&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F05wkw&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/0jg24",
+          "title": "Image",
+          "type": "Sujet"
+        },
+        "value": "7",
+        "extracted_value": 7,
+        "link": "https://trends.google.com/trends/explore?q=/m/0jg24&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F0jg24&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/01mw1",
+          "title": "Jeu vidéo",
+          "type": "Sujet"
+        },
+        "value": "4",
+        "extracted_value": 4,
+        "link": "https://trends.google.com/trends/explore?q=/m/01mw1&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F01mw1&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11ts49p01g",
+          "title": "Gemini",
+          "type": "IA"
+        },
+        "value": "3",
+        "extracted_value": 3,
+        "link": "https://trends.google.com/trends/explore?q=/g/11ts49p01g&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11ts49p01g&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/0mdxd",
+          "title": "Clip",
+          "type": "Sujet"
+        },
+        "value": "3",
+        "extracted_value": 3,
+        "link": "https://trends.google.com/trends/explore?q=/m/0mdxd&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F0mdxd&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11kq5ghr35",
+          "title": "Claude",
+          "type": "Modèle de langage"
+        },
+        "value": "2",
+        "extracted_value": 2,
+        "link": "https://trends.google.com/trends/explore?q=/g/11kq5ghr35&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11kq5ghr35&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/01mf0",
+          "title": "Logiciel",
+          "type": "Sujet"
+        },
+        "value": "2",
+        "extracted_value": 2,
+        "link": "https://trends.google.com/trends/explore?q=/m/01mf0&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F01mf0&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11khkg2rwf",
+          "title": "Intelligence artificielle générative",
+          "type": "Sujet"
+        },
+        "value": "2",
+        "extracted_value": 2,
+        "link": "https://trends.google.com/trends/explore?q=/g/11khkg2rwf&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11khkg2rwf&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/07k1x",
+          "title": "Outil",
+          "type": "Sujet"
+        },
+        "value": "2",
+        "extracted_value": 2,
+        "link": "https://trends.google.com/trends/explore?q=/m/07k1x&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F07k1x&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11jrsgj6bz",
+          "title": "CapCut",
+          "type": "Application"
+        },
+        "value": "2",
+        "extracted_value": 2,
+        "link": "https://trends.google.com/trends/explore?q=/g/11jrsgj6bz&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11jrsgj6bz&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/07s6nbt",
+          "title": "Texte",
+          "type": "Sujet"
+        },
+        "value": "2",
+        "extracted_value": 2,
+        "link": "https://trends.google.com/trends/explore?q=/m/07s6nbt&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F07s6nbt&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/02bj4k",
+          "title": "Application",
+          "type": "Informatique"
+        },
+        "value": "2",
+        "extracted_value": 2,
+        "link": "https://trends.google.com/trends/explore?q=/m/02bj4k&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F02bj4k&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/09l8g",
+          "title": "Voix humaine",
+          "type": "Domaine d'étude"
+        },
+        "value": "2",
+        "extracted_value": 2,
+        "link": "https://trends.google.com/trends/explore?q=/m/09l8g&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F09l8g&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11rxks667j",
+          "title": "change",
+          "type": "Sujet"
+        },
+        "value": "2",
+        "extracted_value": 2,
+        "link": "https://trends.google.com/trends/explore?q=/g/11rxks667j&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11rxks667j&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11jpgjr_k0",
+          "title": "Amélioration qualité vidéo",
+          "type": "Application"
+        },
+        "value": "1",
+        "extracted_value": 1,
+        "link": "https://trends.google.com/trends/explore?q=/g/11jpgjr_k0&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11jpgjr_k0&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/02bcsd",
+          "title": "Not safe for work",
+          "type": "Sujet"
+        },
+        "value": "1",
+        "extracted_value": 1,
+        "link": "https://trends.google.com/trends/explore?q=/m/02bcsd&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F02bcsd&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11zdgr2ssq",
+          "title": "Google Flow",
+          "type": "Sujet"
+        },
+        "value": "1",
+        "extracted_value": 1,
+        "link": "https://trends.google.com/trends/explore?q=/g/11zdgr2ssq&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11zdgr2ssq&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/m/0yhh",
+          "title": "Format de fichier audio",
+          "type": "Format de données"
+        },
+        "value": "1",
+        "extracted_value": 1,
+        "link": "https://trends.google.com/trends/explore?q=/m/0yhh&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fm%2F0yhh&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11y2ckf_9j",
+          "title": "invideo AI",
+          "type": "Application"
+        },
+        "value": "< 1",
+        "extracted_value": 0,
+        "link": "https://trends.google.com/trends/explore?q=/g/11y2ckf_9j&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11y2ckf_9j&tz=420"
+      },
+      {
+        "topic": {
+          "value": "/g/11y3ky1nl0",
+          "title": "Higgsfield Inc.",
+          "type": "Entreprise"
+        },
+        "value": "< 1",
+        "extracted_value": 0,
+        "link": "https://trends.google.com/trends/explore?q=/g/11y3ky1nl0&date=today+3-m&geo=FR",
+        "serpapi_link": "https://serpapi.com/search.json?data_type=RELATED_TOPICS&date=today+3-m&engine=google_trends&geo=FR&hl=fr&q=%2Fg%2F11y3ky1nl0&tz=420"
+      }
+    ]
+  }
+}
