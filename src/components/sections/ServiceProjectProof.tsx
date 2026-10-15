@@ -3,7 +3,11 @@ import type { Locale } from "@/i18n/config";
 import { getProjects } from "@/lib/data/projects";
 
 const projectsByService: Record<string, string[]> = {
-  "developpement-sites-saas": ["meckia", "factumation", "teamia"],
+  "developpement-sites-saas": [
+    "meckia",
+    "factumation",
+    "logiciel-prospection-b2b-teamia",
+  ],
   "integration-ia": ["facebook-agen-ia", "international-opportunity-agent-n8n"],
   "developpeur-rag": ["facebook-agen-ia"],
   "automatisation-n8n": [
@@ -38,6 +42,7 @@ const projectsByService: Record<string, string[]> = {
   "consultant-seo-geo": ["teamia", "optimisation-performance-manda-ia"],
   "forward-deployed-engineer": ["logiciel-prospection-b2b-teamia", "meckia"],
   "remote-n8n-consultant": [
+    "logiciel-prospection-b2b-teamia",
     "automatisation-prospection-n8n-lemlist",
     "international-opportunity-agent-n8n",
   ],

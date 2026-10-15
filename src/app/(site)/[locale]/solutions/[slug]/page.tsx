@@ -24,7 +24,13 @@ export const dynamicParams = false;
 
 const accentStyles: Record<
   Solution["accent"],
-  { text: string; bg: string; border: string; strongBorder: string; softText: string }
+  {
+    text: string;
+    bg: string;
+    border: string;
+    strongBorder: string;
+    softText: string;
+  }
 > = {
   indigo: {
     text: "text-indigo-300",
@@ -142,7 +148,12 @@ function SmartLink({
 }) {
   if (isExternalHref(href)) {
     return (
-      <a href={href} target="_blank" rel="noopener external" className={className}>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener external"
+        className={className}
+      >
         {children}
       </a>
     );
@@ -171,7 +182,10 @@ function SectionTitle({
           {eyebrow}
         </p>
       )}
-      <h2 id={id} className="text-2xl md:text-4xl font-extrabold tracking-tighter text-white">
+      <h2
+        id={id}
+        className="text-2xl md:text-4xl font-extrabold tracking-tighter text-white"
+      >
         {title}
       </h2>
     </div>
@@ -190,9 +204,15 @@ function PointGrid({
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {items.map((item) => (
-        <GlassCard key={item.title} borderColor={style.border} className="h-full">
+        <GlassCard
+          key={item.title}
+          borderColor={style.border}
+          className="h-full"
+        >
           <h3 className={`font-bold mb-3 ${style.softText}`}>{item.title}</h3>
-          <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
+          <p className="text-sm text-slate-400 leading-relaxed">
+            {item.description}
+          </p>
         </GlassCard>
       ))}
     </div>
@@ -223,7 +243,9 @@ function LinkGrid({
             <h3 className="font-bold text-white mb-2 group-hover:underline underline-offset-4">
               {item.label}
             </h3>
-            <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
+            <p className="text-sm text-slate-400 leading-relaxed">
+              {item.description}
+            </p>
           </GlassCard>
         </SmartLink>
       ))}
@@ -231,12 +253,15 @@ function LinkGrid({
   );
 }
 
-function formatUpdatedDate(locale: Locale) {
-  return new Date(SOLUTION_LAST_UPDATED).toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+function formatUpdatedDate(locale: Locale, updatedAt: string) {
+  return new Date(updatedAt).toLocaleDateString(
+    locale === "fr" ? "fr-FR" : "en-US",
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    },
+  );
 }
 
 export async function generateStaticParams() {
@@ -254,18 +279,22 @@ export async function generateMetadata({
   params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
   const { locale: rawLocale, slug } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
 
   const solution = getSolutionBySlug(locale, slug);
   if (!solution) return {};
   const alternate = getAlternateSolution(locale, slug);
   const prefix = locale === "fr" ? "" : "/en";
-  const frPath = locale === "fr"
-    ? `/solutions/${solution.slug}`
-    : `/solutions/${alternate?.slug ?? solution.slug}`;
-  const enPath = locale === "en"
-    ? `/en/solutions/${solution.slug}`
-    : `/en/solutions/${alternate?.slug ?? solution.slug}`;
+  const frPath =
+    locale === "fr"
+      ? `/solutions/${solution.slug}`
+      : `/solutions/${alternate?.slug ?? solution.slug}`;
+  const enPath =
+    locale === "en"
+      ? `/en/solutions/${solution.slug}`
+      : `/en/solutions/${alternate?.slug ?? solution.slug}`;
 
   return {
     title: solution.seoTitle,
@@ -302,7 +331,9 @@ export default async function SolutionPage({
   params: Promise<{ locale: string; slug: string }>;
 }) {
   const { locale: rawLocale, slug } = await params;
-  const locale = (i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale) as Locale;
+  const locale = (
+    i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
+  ) as Locale;
   const solution = getSolutionBySlug(locale, slug);
   if (!solution) notFound();
 
@@ -325,7 +356,7 @@ export default async function SolutionPage({
         description={solution.seoDescription}
         locale={locale}
         url={`${SITE_URL}${prefix}/solutions/${solution.slug}`}
-        dateModified={SOLUTION_LAST_UPDATED}
+        dateModified={solution.updatedAt ?? SOLUTION_LAST_UPDATED}
       />
       <BreadcrumbJsonLd items={breadcrumbs} />
       <FAQJsonLd items={solution.faq} />
@@ -338,7 +369,9 @@ export default async function SolutionPage({
               size={30}
               className={`rounded-lg border p-3 ${style.border} ${style.bg} ${style.text}`}
             />
-            <span className={`rounded-full border ${style.border} ${style.bg} px-4 py-2 text-xs font-bold tracking-[0.18em] uppercase ${style.text}`}>
+            <span
+              className={`rounded-full border ${style.border} ${style.bg} px-4 py-2 text-xs font-bold tracking-[0.18em] uppercase ${style.text}`}
+            >
               {solution.eyebrow}
             </span>
           </div>
@@ -351,20 +384,28 @@ export default async function SolutionPage({
           </p>
           <p className="mt-5 text-sm text-slate-500">
             {copy.updatedPrefix}{" "}
-            <time dateTime={SOLUTION_LAST_UPDATED} className="text-slate-400">
-              {formatUpdatedDate(locale)}
+            <time
+              dateTime={solution.updatedAt ?? SOLUTION_LAST_UPDATED}
+              className="text-slate-400"
+            >
+              {formatUpdatedDate(
+                locale,
+                solution.updatedAt ?? SOLUTION_LAST_UPDATED,
+              )}
             </time>
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2">
-            {[solution.primaryKeyword, ...solution.secondaryKeywords].map((keyword) => (
-              <span
-                key={keyword}
-                className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-slate-400"
-              >
-                {keyword}
-              </span>
-            ))}
+            {[solution.primaryKeyword, ...solution.secondaryKeywords].map(
+              (keyword) => (
+                <span
+                  key={keyword}
+                  className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-slate-400"
+                >
+                  {keyword}
+                </span>
+              ),
+            )}
           </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -407,7 +448,9 @@ export default async function SolutionPage({
             borderColor={style.strongBorder}
             className={`p-7 md:p-10 border-l-4 ${style.bg}`}
           >
-            <p className={`text-xs font-bold tracking-[0.2em] uppercase ${style.text} mb-4`}>
+            <p
+              className={`text-xs font-bold tracking-[0.2em] uppercase ${style.text} mb-4`}
+            >
               {copy.shortAnswer}
             </p>
             <h2 id="short-answer-title" className="sr-only">
@@ -428,10 +471,17 @@ export default async function SolutionPage({
         ) : null}
 
         <section className="mb-16" aria-labelledby="fit-title">
-          <SectionTitle id="fit-title" eyebrow={copy.fitEyebrow} title={copy.fitTitle} />
+          <SectionTitle
+            id="fit-title"
+            eyebrow={copy.fitEyebrow}
+            title={copy.fitTitle}
+          />
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none p-0">
             {solution.fit.map((item) => (
-              <li key={item} className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 text-slate-300 leading-relaxed">
+              <li
+                key={item}
+                className="rounded-2xl border border-white/10 bg-white/[0.02] p-5 text-slate-300 leading-relaxed"
+              >
                 {item}
               </li>
             ))}
@@ -439,12 +489,20 @@ export default async function SolutionPage({
         </section>
 
         <section className="mb-16" aria-labelledby="outcomes-title">
-          <SectionTitle id="outcomes-title" eyebrow={copy.outcomesEyebrow} title={copy.outcomesTitle} />
+          <SectionTitle
+            id="outcomes-title"
+            eyebrow={copy.outcomesEyebrow}
+            title={copy.outcomesTitle}
+          />
           <PointGrid items={solution.outcomes} accent={solution.accent} />
         </section>
 
         <section className="mb-16" aria-labelledby="problem-title">
-          <SectionTitle id="problem-title" eyebrow={copy.problemEyebrow} title={solution.problem.title} />
+          <SectionTitle
+            id="problem-title"
+            eyebrow={copy.problemEyebrow}
+            title={solution.problem.title}
+          />
           <div className="space-y-5 text-lg text-slate-300 leading-relaxed">
             {solution.problem.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
@@ -453,45 +511,86 @@ export default async function SolutionPage({
         </section>
 
         <section className="mb-16" aria-labelledby="deliverables-title">
-          <SectionTitle id="deliverables-title" eyebrow={copy.deliverablesEyebrow} title={solution.deliverables.title} />
-          <PointGrid items={solution.deliverables.items} accent={solution.accent} />
+          <SectionTitle
+            id="deliverables-title"
+            eyebrow={copy.deliverablesEyebrow}
+            title={solution.deliverables.title}
+          />
+          <PointGrid
+            items={solution.deliverables.items}
+            accent={solution.accent}
+          />
         </section>
 
         <section className="mb-16" aria-labelledby="architecture-title">
-          <SectionTitle id="architecture-title" eyebrow={copy.architectureEyebrow} title={solution.architecture.title} />
+          <SectionTitle
+            id="architecture-title"
+            eyebrow={copy.architectureEyebrow}
+            title={solution.architecture.title}
+          />
           <p className="text-lg text-slate-300 leading-relaxed mb-8 max-w-3xl">
             {solution.architecture.intro}
           </p>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             {solution.architecture.steps.map((step) => (
-              <GlassCard key={step.title} borderColor={style.border} className="h-full">
-                <h3 className={`font-bold mb-3 ${style.softText}`}>{step.title}</h3>
-                <p className="text-sm text-slate-400 leading-relaxed">{step.description}</p>
+              <GlassCard
+                key={step.title}
+                borderColor={style.border}
+                className="h-full"
+              >
+                <h3 className={`font-bold mb-3 ${style.softText}`}>
+                  {step.title}
+                </h3>
+                <p className="text-sm text-slate-400 leading-relaxed">
+                  {step.description}
+                </p>
               </GlassCard>
             ))}
           </div>
         </section>
 
         <section className="mb-16" aria-labelledby="safeguards-title">
-          <SectionTitle id="safeguards-title" eyebrow={copy.safeguardsEyebrow} title={solution.safeguards.title} />
-          <PointGrid items={solution.safeguards.items} accent={solution.accent} />
+          <SectionTitle
+            id="safeguards-title"
+            eyebrow={copy.safeguardsEyebrow}
+            title={solution.safeguards.title}
+          />
+          <PointGrid
+            items={solution.safeguards.items}
+            accent={solution.accent}
+          />
         </section>
 
         <section className="mb-16" aria-labelledby="proofs-title">
-          <SectionTitle id="proofs-title" eyebrow={copy.proofsEyebrow} title={copy.proofsTitle} />
+          <SectionTitle
+            id="proofs-title"
+            eyebrow={copy.proofsEyebrow}
+            title={copy.proofsTitle}
+          />
           <div className="space-y-10">
             <LinkGrid items={solution.proofs} accent={solution.accent} />
-            <LinkGrid items={solution.relatedServices} accent={solution.accent} />
+            <LinkGrid
+              items={solution.relatedServices}
+              accent={solution.accent}
+            />
           </div>
         </section>
 
         <section className="mb-16" aria-labelledby="sources-title">
-          <SectionTitle id="sources-title" eyebrow={copy.sourcesEyebrow} title={copy.sourcesTitle} />
+          <SectionTitle
+            id="sources-title"
+            eyebrow={copy.sourcesEyebrow}
+            title={copy.sourcesTitle}
+          />
           <LinkGrid items={solution.sources} accent={solution.accent} />
         </section>
 
         <section className="mb-20" aria-labelledby="faq-title">
-          <SectionTitle id="faq-title" eyebrow={copy.faqEyebrow} title={copy.faqTitle} />
+          <SectionTitle
+            id="faq-title"
+            eyebrow={copy.faqEyebrow}
+            title={copy.faqTitle}
+          />
           <div className="space-y-4">
             {solution.faq.map((item) => (
               <GlassCard key={item.question}>
@@ -504,7 +603,10 @@ export default async function SolutionPage({
 
         <section aria-labelledby="cta-title">
           <div className="glass-card rounded-2xl p-8 md:p-12 text-center">
-            <h2 id="cta-title" className="text-2xl md:text-4xl font-extrabold tracking-tighter mb-4">
+            <h2
+              id="cta-title"
+              className="text-2xl md:text-4xl font-extrabold tracking-tighter mb-4"
+            >
               {solution.cta.title}
             </h2>
             <p className="text-slate-400 leading-relaxed mb-8 max-w-2xl mx-auto">

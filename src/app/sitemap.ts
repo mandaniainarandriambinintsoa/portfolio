@@ -88,8 +88,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   for (let i = 0; i < solutionCount; i++) {
     const pathFr = `/solutions/${frSolutions[i].slug}`;
     const pathEn = `/en/solutions/${enSolutions[i].slug}`;
-    items.push(entry(pathFr, pathEn, solutionLastModified, "fr"));
-    items.push(entry(pathFr, pathEn, solutionLastModified, "en"));
+    items.push(
+      entry(
+        pathFr,
+        pathEn,
+        asDate(frSolutions[i].updatedAt, solutionLastModified),
+        "fr",
+      ),
+    );
+    items.push(
+      entry(
+        pathFr,
+        pathEn,
+        asDate(enSolutions[i].updatedAt, solutionLastModified),
+        "en",
+      ),
+    );
   }
 
   // Services (generic + landing) from Payload first, dictionary fallback.

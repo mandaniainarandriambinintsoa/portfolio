@@ -1002,13 +1002,16 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       kicker: "Architecture paiement",
       title: "Ce que démontre PaidMada côté Mobile Money",
       summary:
-        "PaidMada Mobile Money démontre comment une application Madagascar peut structurer des paiements Orange Money, MVola et Airtel Money sans dépendre d'une confirmation fragile côté frontend. Le coeur du projet est la logique serveur : créer une tentative de paiement, stocker la référence fournisseur, recevoir le callback, vérifier le statut et rapprocher la transaction avec la commande. Cette approche réduit les paiements perdus, les confirmations ambiguës et les recherches manuelles dans plusieurs outils.",
+        "PaidMada est un projet d’API REST qui regroupe les interfaces MVola, Orange Money et Airtel Money pour une application à Madagascar. Son dépôt public documente un SDK TypeScript, des callbacks et un mode mock. Cette fiche distingue le socle logiciel consultable des vérifications à réaliser avec chaque opérateur avant un encaissement réel.",
       facts: [
         {
           label: "Fournisseurs ciblés",
           value: "Orange Money, MVola, Airtel Money",
         },
-        { label: "Bloc critique", value: "callbacks, statuts, rapprochement" },
+        {
+          label: "Bloc critique",
+          value: "callbacks, statuts, rapprochement",
+        },
         {
           label: "Usage métier",
           value: "commande, facture, réservation ou abonnement",
@@ -1019,6 +1022,13 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         },
       ],
       sections: [
+        {
+          title: "Ce que vous pouvez vérifier dans le dépôt public",
+          paragraphs: [
+            "Le README décrit la création d’un paiement, la consultation de son statut et un client TypeScript. Le mode mock sert à explorer le parcours sans connexion aux API réelles. Il permet de discuter du contrat entre application et backend avant la recette opérateur.",
+            "Ces éléments ne prouvent ni un agrément opérateur, ni un volume de paiements encaissés, ni une certification de sécurité. Pour votre projet, les accès marchands, les tests fournisseur et les conditions de mise en production restent à valider.",
+          ],
+        },
         {
           title:
             "Pourquoi PaidMada aide à juger une API Mobile Money Madagascar",
@@ -1041,8 +1051,21 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "Pour un lancement sérieux, je recommande aussi un mode test ou mock fournisseur. Il permet de simuler les cas réussis, échoués, expirés et ambigus avant d'avoir tous les accès opérateur.",
           ],
         },
+        {
+          title: "Les scénarios à valider pour votre application",
+          paragraphs: [
+            "La recette doit couvrir un paiement confirmé, un refus, une attente prolongée, un callback dupliqué et une réponse inconnue. Pour chaque scénario, on vérifie le statut affiché, la référence conservée et l’absence de double livraison.",
+            "Le rapprochement doit relier le paiement au montant, à la devise et à la bonne commande. Les cas incertains sont placés en revue manuelle. Ce sont des critères de recette proposés, pas des résultats de tests de production revendiqués pour PaidMada.",
+          ],
+        },
       ],
       relatedLinks: [
+        {
+          label: "Consulter le code et le README PaidMada",
+          href: "https://github.com/mandaniainarandriambinintsoa/paidmada-mobile-money",
+          description:
+            "API, client TypeScript et mode mock documentés dans le dépôt public.",
+        },
         {
           label: "Solution API Mobile Money Madagascar",
           href: "/solutions/api-mobile-money-madagascar",
@@ -1073,6 +1096,12 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
           answer:
             "Un mode test permet de vérifier les écrans, statuts, notifications et cas d'erreur avant la mise en production. C'est utile quand les accès fournisseur ou sandbox arrivent progressivement.",
         },
+        {
+          question:
+            "Le mode mock PaidMada prouve-t-il qu’un paiement réel fonctionne ?",
+          answer:
+            "Non. Il simule le comportement du fournisseur pour développer et tester le parcours applicatif. Les accès, les réponses réelles et les conditions de production doivent être validés séparément avec l’opérateur.",
+        },
       ],
     },
     en: {
@@ -1082,7 +1111,7 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
       kicker: "Payment architecture",
       title: "What PaidMada demonstrates for Mobile Money",
       summary:
-        "PaidMada Mobile Money demonstrates how a Madagascar application can structure Orange Money, MVola and Airtel Money payments without relying on fragile frontend confirmation. The core of the project is server-side logic: create a payment attempt, store the provider reference, receive the callback, verify the status and reconcile the transaction with the order. This approach reduces lost payments, ambiguous confirmations and manual searches across multiple tools.",
+        "PaidMada is a REST API project that groups MVola, Orange Money and Airtel Money interfaces for applications in Madagascar. Its public repository documents a TypeScript SDK, callbacks and a mock mode. This case study distinguishes the reviewable software foundation from provider checks required before collecting real payments.",
       facts: [
         {
           label: "Target providers",
@@ -1102,6 +1131,13 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
         },
       ],
       sections: [
+        {
+          title: "What you can review in the public repository",
+          paragraphs: [
+            "The README describes payment creation, status lookup and a TypeScript client. Mock mode lets you explore the workflow without connecting to live APIs. It helps discuss the contract between the application and backend before provider acceptance testing.",
+            "These materials do not establish provider approval, a volume of collected payments or security certification. Merchant access, provider tests and production conditions still need validation for your project.",
+          ],
+        },
         {
           title: "Why PaidMada helps assess a Madagascar Mobile Money API",
           paragraphs: [
@@ -1123,8 +1159,21 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "For a serious launch, I also recommend a test or provider mock mode. It helps simulate successful, failed, expired and ambiguous cases before all operator accesses are available.",
           ],
         },
+        {
+          title: "Scenarios to validate for your application",
+          paragraphs: [
+            "Acceptance testing should cover a confirmed payment, a refusal, a prolonged pending state, a duplicate callback and an unknown response. Each scenario checks the displayed status, retained reference and absence of duplicate fulfilment.",
+            "Reconciliation must match the payment to the amount, currency and correct order. Uncertain cases go to manual review. These are proposed acceptance criteria, not claimed production test results for PaidMada.",
+          ],
+        },
       ],
       relatedLinks: [
+        {
+          label: "Review the PaidMada code and README",
+          href: "https://github.com/mandaniainarandriambinintsoa/paidmada-mobile-money",
+          description:
+            "API, TypeScript client and mock mode documented in the public repository.",
+        },
         {
           label: "Mobile Money API Madagascar solution",
           href: "/en/solutions/mobile-money-api-madagascar",
@@ -1154,6 +1203,11 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "Why plan a test mode for Orange Money, MVola or Airtel Money?",
           answer:
             "A test mode verifies screens, statuses, notifications and error cases before production. It is useful when provider or sandbox access arrives progressively.",
+        },
+        {
+          question: "Does PaidMada mock mode prove that real payments work?",
+          answer:
+            "No. It simulates provider behavior to develop and test the application workflow. Access, real responses and production conditions must be validated separately with the operator.",
         },
       ],
     },

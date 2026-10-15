@@ -22,6 +22,7 @@ export type SolutionFaq = {
 
 export type Solution = {
   slug: string;
+  updatedAt?: string;
   icon: string;
   accent: SolutionAccent;
   title: string;
@@ -514,6 +515,11 @@ export const frSolutions: Solution[] = [
       title: "Ce que je peux intégrer",
       items: [
         {
+          title: "Accès opérateur et périmètre",
+          description:
+            "Inventaire des comptes marchands, accès API et environnements disponibles. Les fonctionnalités de chaque opérateur sont confirmées avant le devis.",
+        },
+        {
           title: "Backend de paiement",
           description:
             "Création d'intentions de paiement, stockage des références fournisseur, appels API Orange Money/MVola/Airtel et gestion des statuts serveur.",
@@ -553,7 +559,7 @@ export const frSolutions: Solution[] = [
         {
           title: "2. Routage fournisseur",
           description:
-            "Le backend choisit Orange Money, MVola ou Airtel Money, appelle l'API avec les paramètres attendus et stocke la réponse brute utile.",
+            "Le backend appelle le fournisseur autorisé et conserve les références et statuts nécessaires au rapprochement, sans journaliser les secrets ni les données personnelles inutiles.",
         },
         {
           title: "3. Callback sécurisé",
@@ -588,7 +594,7 @@ export const frSolutions: Solution[] = [
         {
           title: "Traçabilité",
           description:
-            "Chaque statut garde une trace : date, fournisseur, référence, payload utile et action déclenchée.",
+            "Historique limité aux références, dates, statuts et actions utiles. Les accès et la durée de conservation sont définis avec votre équipe.",
         },
       ],
     },
@@ -669,13 +675,43 @@ export const frSolutions: Solution[] = [
         answer:
           "Oui, surtout pour une application métier. Le dashboard permet de chercher un paiement par client, numéro, commande ou référence fournisseur, de repérer les statuts ambigus et de rapprocher les paiements avec les factures ou réservations.",
       },
+      {
+        question: "Comment obtenir un accès à l’API MVola ?",
+        answer:
+          "Le point de départ est le portail développeur MVola. Les accès disponibles, les exigences du compte marchand et le passage en production doivent être confirmés avec MVola. Une clé de test ou un mock ne constitue pas une autorisation d’encaisser en production.",
+      },
+      {
+        question:
+          "Quels prérequis pour Orange Money Web Payment à Madagascar ?",
+        answer:
+          "Orange présente Web Payment comme une offre réservée aux marchands inscrits et cite Madagascar parmi les pays couverts. Il faut confirmer votre éligibilité et les modalités auprès d’Orange localement avant de préparer les accès et les tests de votre application.",
+      },
+      {
+        question:
+          "Peut-on tester Mobile Money sans effectuer de vrai paiement ?",
+        answer:
+          "Un mock permet de tester votre application sans appeler un opérateur. Une sandbox, lorsqu’elle est disponible pour votre compte, teste l’intégration fournisseur. La recette en production reste une étape séparée, avec les accès et validations de l’opérateur.",
+      },
+      {
+        question:
+          "Que faire si le paiement reste en attente ou si le callback arrive deux fois ?",
+        answer:
+          "Conservez la référence et vérifiez le statut via le mécanisme documenté par le fournisseur avant de conclure. Un événement déjà traité ne doit pas relivrer la commande. Une réponse ambiguë reste à vérifier ; ne déclenchez pas un nouveau débit à l’aveugle.",
+      },
+      {
+        question:
+          "Combien coûte une intégration MVola, Orange Money ou Airtel Money ?",
+        answer:
+          "Le devis dépend des opérateurs, des accès disponibles, du parcours de commande et du back-office. Il distingue développement, hébergement et frais opérateur. Les commissions, remboursements et fonctions disponibles sont à confirmer auprès de chaque fournisseur.",
+      },
     ],
     cta: {
       title: "Vous voulez brancher Mobile Money dans votre produit ?",
       description:
-        "On peut cadrer le parcours paiement, les fournisseurs visés, les statuts, le dashboard et la logique de rapprochement avant d'écrire le backend.",
+        "Précisez votre application, les opérateurs visés, les accès déjà obtenus et le volume attendu. Nous définirons le parcours de paiement, les tests et le budget d’intégration.",
       buttonLabel: "Cadrer mon intégration paiement",
     },
+    updatedAt: "2026-10-15",
   },
   {
     slug: "agent-ia-facebook",
@@ -2188,6 +2224,11 @@ export const enSolutions: Solution[] = [
       title: "What I can integrate",
       items: [
         {
+          title: "Provider access and scope",
+          description:
+            "Inventory of merchant accounts, API access and available environments. Each provider’s supported operations are confirmed before estimating implementation.",
+        },
+        {
           title: "Payment backend",
           description:
             "Payment intent creation, provider reference storage, Orange Money/MVola/Airtel API calls and server-side status handling.",
@@ -2227,7 +2268,7 @@ export const enSolutions: Solution[] = [
         {
           title: "2. Provider routing",
           description:
-            "The backend selects Orange Money, MVola or Airtel Money, calls the API with expected parameters and stores the useful raw response.",
+            "The backend calls the authorized provider and retains the references and statuses needed for reconciliation, without logging secrets or unnecessary personal data.",
         },
         {
           title: "3. Secure callback",
@@ -2262,7 +2303,7 @@ export const enSolutions: Solution[] = [
         {
           title: "Traceability",
           description:
-            "Each status keeps a trace: date, provider, reference, useful payload and triggered action.",
+            "History limited to useful references, dates, statuses and actions. Access and retention are defined with your team.",
         },
       ],
     },
@@ -2341,13 +2382,41 @@ export const enSolutions: Solution[] = [
         answer:
           "Yes, especially for a business application. The dashboard lets the team search payments by customer, phone number, order or provider reference, identify ambiguous statuses and reconcile payments with invoices or bookings.",
       },
+      {
+        question: "How do I obtain access to the MVola API?",
+        answer:
+          "Start with the MVola developer portal. Available access, merchant account requirements and production activation must be confirmed with MVola. A test key or mock is not authorization to collect real payments.",
+      },
+      {
+        question: "What does Orange Money Web Payment require in Madagascar?",
+        answer:
+          "Orange describes Web Payment as a service for registered merchants and lists Madagascar as a supported country. Confirm your eligibility and terms with the local Orange operator before preparing access and application tests.",
+      },
+      {
+        question: "Can I test Mobile Money without making a real payment?",
+        answer:
+          "A mock tests your application without calling an operator. A sandbox, where available for your account, tests the provider integration. Production acceptance is a separate step requiring provider access and approval.",
+      },
+      {
+        question:
+          "What if a payment stays pending or a callback arrives twice?",
+        answer:
+          "Keep the reference and verify the status through the provider’s documented mechanism before reaching a conclusion. An event already processed must not fulfil the order again. An ambiguous response remains subject to review; do not blindly initiate another charge.",
+      },
+      {
+        question:
+          "How much does MVola, Orange Money or Airtel Money integration cost?",
+        answer:
+          "The estimate depends on providers, available access, the order workflow and the back office. It separates development, hosting and provider charges. Confirm commissions, refunds and supported operations with each provider.",
+      },
     ],
     cta: {
       title: "Want to connect Mobile Money to your product?",
       description:
-        "We can frame the payment journey, target providers, statuses, dashboard and reconciliation logic before writing the backend.",
+        "Describe your application, target providers, access already obtained and expected volume. We will define the payment journey, acceptance tests and implementation budget.",
       buttonLabel: "Scope my payment integration",
     },
+    updatedAt: "2026-10-15",
   },
   {
     slug: "facebook-ai-agent",

@@ -366,8 +366,8 @@
     "title_en": "PaidMada",
     "subtitle_fr": "API paiement mobile money Madagascar",
     "subtitle_en": "Madagascar Mobile Money Payment API",
-    "description_fr": "API REST unifiée de paiement mobile money pour Madagascar, centralisant les trois opérateurs du pays en une seule interface : MVola (Telma, préfixes 034/038), Orange Money (préfixes 032/037) et Airtel Money (préfixe 033). Le système détecte automatiquement le provider à partir du numéro de téléphone et route la transaction vers le bon opérateur. L'architecture inclut un SDK TypeScript client prêt à l'emploi, des callbacks webhook pour le suivi des transactions en temps réel, un mode mock pour les tests sans connexion aux APIs réelles, une vérification de signature HMAC pour la sécurité, et un rate limiting pour la protection contre les abus. Chaque provider implémente une classe abstraite commune (BaseProvider), garantissant une interface cohérente. La validation des données est assurée par Zod avec des schémas stricts pour chaque requête. Conçu spécifiquement pour le marché malgache, PaidMada simplifie drastiquement l'intégration du paiement mobile money dans toute application web ou mobile.",
-    "description_en": "Unified REST API for mobile money payments in Madagascar, centralizing the country's three operators into a single interface: MVola (Telma, prefixes 034/038), Orange Money (prefixes 032/037), and Airtel Money (prefix 033). The system automatically detects the provider from the phone number and routes the transaction to the correct operator. The architecture includes a ready-to-use TypeScript client SDK, webhook callbacks for real-time transaction tracking, a mock mode for testing without connecting to real APIs, HMAC signature verification for security, and rate limiting for abuse protection. Each provider implements a common abstract class (BaseProvider), ensuring a consistent interface. Data validation is handled by Zod with strict schemas for every request. Specifically designed for the Malagasy market, PaidMada drastically simplifies mobile money payment integration in any web or mobile application.",
+    "description_fr": "Projet d’API REST unifiée pour les paiements Mobile Money à Madagascar : MVola, Orange Money et Airtel Money. Le dépôt public documente une interface commune, un client TypeScript, des callbacks et un mode mock pour explorer le parcours sans connexion aux API réelles. Ce socle permet de discuter de l’intégration applicative ; les accès marchands, les tests opérateur et les conditions d’encaissement en production restent à valider pour chaque déploiement.",
+    "description_en": "Unified REST API project for Mobile Money payments in Madagascar: MVola, Orange Money and Airtel Money. The public repository documents a shared interface, a TypeScript client, callbacks and mock mode for exploring the workflow without live API connections. This foundation supports application integration discussions; merchant access, provider tests and production collection conditions still need validation for each deployment.",
     "tags": ["Node.js", "TypeScript", "Express", "Zod", "API"],
     "link": "https://github.com/mandaniainarandriambinintsoa/paidmada-mobile-money",
     "featured": false,
@@ -377,7 +377,7 @@
     "sort_order": 15,
     "published": true,
     "created_at": "2026-03-11T17:36:58.067554+00:00",
-    "updated_at": "2026-05-12T16:10:56.874359+00:00"
+    "updated_at": "2026-10-15T00:00:00Z"
   },
   {
     "id": "de0880d4-e616-42f1-8756-7b8f1b94b969",

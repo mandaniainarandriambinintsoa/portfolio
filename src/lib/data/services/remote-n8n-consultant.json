@@ -2,18 +2,18 @@
   "fr": {
     "key": "remote-n8n-consultant",
     "icon": "hub",
-    "title": "Consultant n8n international",
-    "description": "Audit, migration, self-hosting et fiabilisation de workflows n8n pour les équipes internationales qui ont besoin d'une automatisation exploitable en production.",
+    "title": "Développeur et consultant n8n freelance à distance",
+    "description": "Développeur n8n freelance : workflows métier, API, audit et migration. Exemples livrés, documentation et accompagnement à distance depuis Madagascar.",
     "slug": "consultant-automatisation-n8n-international",
     "color": "emerald",
     "isLanding": true,
-    "cardTitle": "Consultant n8n international",
+    "cardTitle": "Développeur n8n à distance",
     "cardDescription": "Migration, self-hosting, scaling et workflows IA pour des automatisations n8n fiables en production.",
-    "seoTitle": "Consultant n8n international",
-    "seoDescription": "Consultant n8n pour migration, self-hosting, scaling, intégrations API et workflows IA. Accompagnement à distance pour équipes internationales.",
-    "updatedAt": "2026-07-28T00:00:00.000Z",
+    "seoTitle": "Développeur n8n freelance | Automatisation & intégrations",
+    "seoDescription": "Développeur n8n freelance : workflows métier, API, audit et migration. Exemples livrés, documentation et accompagnement à distance depuis Madagascar.",
+    "updatedAt": "2026-10-15T00:00:00Z",
     "landing": {
-      "heroText": "Vos workflows n8n sont devenus critiques, mais leur hébergement, leur reprise sur erreur ou leur évolution reposent encore sur des manipulations fragiles ? J'aide les équipes internationales à auditer, migrer et fiabiliser leur instance n8n, puis à construire les automatisations et intégrations IA qui doivent vraiment tenir en production.",
+      "heroText": "Vous cherchez un développeur n8n pour connecter vos outils ou reprendre des workflows difficiles à maintenir ? Je construis des automatisations métier, intègre vos API et audite vos scénarios existants. Chaque mission commence par un processus précis, des critères de validation et un périmètre de livraison convenu.",
       "heroImage": {
         "src": "/images/projects/leads-automation-showcase.png",
         "alt": "Workflow n8n de collecte et qualification de leads livré par Manda"
@@ -52,6 +52,10 @@
       ],
       "sections": [
         {
+          "title": "Ce que vous recevez à la livraison",
+          "content": "Le périmètre peut couvrir un workflow, une intégration API ou la reprise d’une instance. Nous définissons le déclencheur, les données attendues, les cas d’erreur et les actions qui nécessitent votre validation.\n\nLa livraison comprend les workflows versionnés, les tests convenus, une liste des accès à configurer et les consignes d’exploitation. Vos comptes et credentials restent sous votre contrôle. Le calendrier et le budget dépendent des intégrations et du volume à traiter."
+        },
+        {
           "title": "Quand un consultant n8n devient utile",
           "content": "Un workflow isolé peut être corrigé rapidement. Une instance qui orchestre des leads, des paiements, des données clients ou des opérations quotidiennes demande une autre approche : propriétaire identifié, gestion des erreurs, reprise sans doublon et visibilité sur chaque exécution.\n\nJ'interviens quand plusieurs workflows et APIs doivent évoluer ensemble, lorsqu'une migration ne peut pas interrompre la production, ou quand l'équipe a besoin d'un interlocuteur capable de relier infrastructure, logique métier et IA. Le premier livrable est un état des lieux priorisé, pas une reconstruction automatique de tout l'existant."
         },
@@ -66,6 +70,10 @@
         {
           "title": "Prospection et workflows IA avec des contrôles",
           "content": "n8n peut relier Apify, Apollo, un CRM et un modèle IA pour collecter un signal autorisé, enrichir une entreprise, appliquer un score ICP et préparer un angle de contact. La valeur vient du contexte et de la priorisation, pas d'un volume d'envoi automatique.\n\nJe conserve des contrôles explicites : sources autorisées, déduplication, limites de fréquence, liste d'exclusion, validation humaine des messages et journal des actions. La même architecture sert aussi au support, au traitement de documents, au reporting ou à la synchronisation de données entre plusieurs outils."
+        },
+        {
+          "title": "Des réalisations à examiner avant de démarrer",
+          "content": "Mon [template officiel n8n](https://n8n.io/workflows/17715-score-rss-opportunities-to-google-sheets-and-send-priority-digests-with-gmail/) classe des opportunités RSS, retire les doublons et prépare un récapitulatif Gmail. Consultez aussi le [cas de veille d’opportunités](/projects/international-opportunity-agent-n8n) pour comprendre le périmètre et la validation humaine.\n\nLe [cas TeamIA Prospection](/projects/logiciel-prospection-b2b-teamia) montre comment une interface métier complète n8n : campagnes, recherche, déduplication et revue humaine des messages. La validation enregistre une décision ; elle ne déclenche pas un envoi."
         },
         {
           "title": "Une collaboration a distance qui reste lisible",
@@ -142,6 +150,10 @@
         {
           "question": "Faut-il choisir n8n Cloud ou le self-hosting ?",
           "answer": "n8n Cloud réduit l'exploitation technique. Le self-hosting donne davantage de contrôle sur l'infrastructure et les données, mais demande sauvegardes, mises à jour, monitoring et sécurité. Le bon choix dépend du risque, du volume et des compétences internes."
+        },
+        {
+          "question": "Comment se déroule la collaboration à distance ?",
+          "answer": "Je travaille depuis Madagascar, en GMT+3. Les échanges se font en français. Nous convenons des horaires communs, des supports écrits et des éventuels besoins de traduction avant de démarrer."
         }
       ],
       "showcase": [
@@ -165,8 +177,8 @@
         }
       ],
       "cta": {
-        "title": "Votre instance n8n doit devenir fiable en production ?",
-        "description": "Envoyez-moi votre architecture actuelle, les workflows critiques et la contrainte principale. Nous cadrerons l'audit, la migration ou le prochain lot d'automatisation.",
+        "title": "Quel processus souhaitez-vous automatiser ?",
+        "description": "Indiquez les outils à connecter, le résultat attendu et ce qui bloque aujourd’hui. Nous cadrerons le premier workflow ou l’audit nécessaire.",
         "buttonLabel": "Cadrer mon projet n8n"
       }
     }
@@ -174,18 +186,18 @@
   "en": {
     "key": "remote-n8n-consultant",
     "icon": "hub",
-    "title": "n8n Consultant for US Teams: Migration, Automation & Support",
-    "description": "Hire a remote n8n consultant for production audits, cloud-to-self-hosted migration, workflow automation, API integrations and operational support.",
+    "title": "Hire a Remote n8n Developer & Automation Consultant",
+    "description": "Hire a remote n8n developer for business workflows, API integrations, audits and migration. Review delivered work and scope a documented handoff.",
     "slug": "remote-n8n-automation-consultant",
     "color": "emerald",
     "isLanding": true,
-    "cardTitle": "n8n Consultant for US Teams",
+    "cardTitle": "Remote n8n Developer",
     "cardDescription": "Migration, self-hosting, scaling and AI workflows built for reliable n8n operations.",
-    "seoTitle": "n8n Consultant for US Teams | Migration & Automation",
-    "seoDescription": "Hire a remote n8n consultant for workflow audits, migration, self-hosting, API integration and reliable AI automation. US overlap, $400/day.",
-    "updatedAt": "2026-07-28T00:00:00.000Z",
+    "seoTitle": "Hire an n8n Developer | Remote Automation Consultant",
+    "seoDescription": "Hire a remote n8n developer for business workflows, API integrations, audits and migration. Review delivered work and scope a documented handoff.",
+    "updatedAt": "2026-10-15T00:00:00Z",
     "landing": {
-      "heroText": "Hire a remote n8n consultant when your workflows have become business-critical but hosting, error recovery or future changes still rely on fragile manual work. I help US teams audit, migrate and operate n8n reliably, then build the API and AI workflows that need to hold up in production.",
+      "heroText": "Need an n8n developer to connect your tools or improve workflows that are hard to maintain? I build business automations, integrate APIs and audit existing workflows. Each engagement starts with a specific process, acceptance criteria and an agreed delivery scope.",
       "heroImage": {
         "src": "/images/projects/leads-automation-showcase.png",
         "alt": "n8n lead collection and qualification workflow delivered by Manda"
@@ -224,6 +236,10 @@
       ],
       "sections": [
         {
+          "title": "What you receive at handoff",
+          "content": "The scope may cover one workflow, an API integration or an existing instance. We define the trigger, expected data, failure cases and actions that require your approval.\n\nDelivery includes versioned workflows, agreed tests, an access configuration checklist and operating notes. Your accounts and credentials remain under your control. Schedule and budget depend on integrations and processing volume."
+        },
+        {
           "title": "When an n8n consultant becomes useful",
           "content": "A single broken workflow can be fixed quickly. An instance that moves leads, payments, customer data or daily operations needs a different level of ownership: visible failures, safe retries, duplicate prevention and a clear person responsible for each critical path.\n\nI step in when multiple workflows and APIs must evolve together, when a migration cannot interrupt production, or when the team needs one consultant who can connect infrastructure, business logic and AI. The first deliverable is a prioritized view of the current system, not an automatic rebuild of everything."
         },
@@ -241,7 +257,7 @@
         },
         {
           "title": "Verified work you can inspect before hiring",
-          "content": "My public n8n Creator template scores RSS opportunities, removes duplicates, writes the review queue to Google Sheets and sends a Gmail digest. It was reviewed and published by n8n, so you can inspect a real workflow structure before discussing a project.\n\nSee the [official n8n workflow template](https://n8n.io/workflows/17715-score-rss-opportunities-to-google-sheets-and-send-priority-digests-with-gmail/) or the [complete opportunity monitor case study](/en/projects/international-opportunity-agent-n8n). The public edition demonstrates naming, configuration, deterministic scoring, documentation and human review without exposing production credentials."
+          "content": "My public n8n Creator template scores RSS opportunities, removes duplicates, writes the review queue to Google Sheets and sends a Gmail digest. It was reviewed and published by n8n, so you can inspect a real workflow structure before discussing a project.\n\nSee the [official n8n workflow template](https://n8n.io/workflows/17715-score-rss-opportunities-to-google-sheets-and-send-priority-digests-with-gmail/) or the [complete opportunity monitor case study](/en/projects/international-opportunity-agent-n8n). The public edition demonstrates naming, configuration, deterministic scoring, documentation and human review without exposing production credentials.\n\nThe [TeamIA prospecting case study](/en/projects/logiciel-prospection-b2b-teamia) shows how a business interface complements n8n: campaigns, research, deduplication and human message review. Approval records a decision; it does not send a message."
         },
         {
           "title": "Remote delivery that stays readable",
@@ -318,6 +334,10 @@
         {
           "question": "Is n8n Cloud or self-hosting the better choice?",
           "answer": "n8n Cloud reduces infrastructure work. Self-hosting gives more control over infrastructure and data but requires backups, upgrades, monitoring and security ownership. The right choice depends on risk, volume and internal capability."
+        },
+        {
+          "question": "How does remote collaboration work?",
+          "answer": "I work from Madagascar in GMT+3. Working conversations are in French. We agree on overlap hours, written deliverables and any translation needs before starting."
         }
       ],
       "showcase": [
@@ -341,8 +361,8 @@
         }
       ],
       "cta": {
-        "title": "Does your n8n instance need to become production-ready?",
-        "description": "Send me the current architecture, critical workflows and main constraint. We will scope the audit, migration or next automation batch.",
+        "title": "What process would you like to automate?",
+        "description": "Share the tools to connect, the expected result and what is currently blocking you. We will scope the first workflow or the audit needed.",
         "buttonLabel": "Scope my n8n project"
       }
     }

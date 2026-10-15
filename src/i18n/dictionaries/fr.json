@@ -93,14 +93,14 @@
     "items": [
       {
         "icon": "deployed_code",
-        "title": "Développement Sites & SaaS",
-        "description": "Applications web complètes et SaaS sur mesure. React, Next.js, Supabase — du MVP au produit en production.",
+        "title": "Développement de MVP SaaS et sites métier",
+        "description": "Un premier parcours métier utilisable, de la définition du besoin à la livraison. Sites métier et MVP SaaS avec périmètre, budget et étapes convenus.",
         "slug": "developpement-sites-saas",
         "color": "emerald",
-        "seoTitle": "Développement site web & SaaS Next.js sur mesure",
-        "seoDescription": "Développement de sites métier, MVP et SaaS avec Next.js, Supabase, API et analytics. Produit rapide, mesurable et prêt pour la production.",
+        "seoTitle": "Développement MVP SaaS sur mesure | Next.js & Supabase",
+        "seoDescription": "Développeur freelance pour votre MVP SaaS : cadrage, authentification, parcours métier, tests et transmission. Next.js et Supabase, devis selon le périmètre.",
         "key": "developpement-sites-saas",
-        "updatedAt": "2026-10-08T00:00:00Z"
+        "updatedAt": "2026-10-15T00:00:00Z"
       },
       {
         "icon": "psychology",
@@ -691,16 +691,16 @@
       {
         "icon": "database",
         "title": "Développeur Next.js & Supabase à Madagascar",
-        "description": "Applications SaaS complètes avec Next.js et Supabase. Authentification, base de données PostgreSQL, API temps réel, stockage — du prototype au produit scalable.",
+        "description": "Développement et reprise d’applications Next.js et Supabase : authentification, PostgreSQL, permissions et intégrations API, avec tests et documentation.",
         "slug": "developpeur-nextjs-supabase-madagascar",
         "color": "emerald",
         "cardTitle": "Next.js + Supabase",
         "cardDescription": "Apps SaaS complètes : auth, PostgreSQL, API temps réel, stockage.",
         "isLanding": true,
         "seoTitle": "Développeur freelance Next.js & Supabase | SaaS sur mesure",
-        "seoDescription": "Recrutez un développeur freelance Next.js et Supabase pour votre MVP SaaS : authentification, PostgreSQL, paiements et dashboard. Livraison cadrée en 2 à 4 semaines.",
+        "seoDescription": "Développeur freelance Next.js et Supabase : applications, authentification, PostgreSQL, permissions et API. Reprise de projet et livraison documentée.",
         "landing": {
-          "heroText": "Vous voulez lancer un SaaS ou une application web avec un backend solide, sans exploser votre budget ? Next.js + Supabase est le stack le plus efficace en 2026 pour construire des produits scalables. Basé à Antananarivo, je conçois des applications complètes — authentification, base de données, API temps réel — avec des tarifs jusqu'à 2 fois inférieurs aux freelances européens.",
+          "heroText": "Votre application a besoin d’une authentification, de données structurées ou d’intégrations fiables ? Je développe et fais évoluer des applications Next.js et Supabase depuis Madagascar. Nous définissons les permissions, les parcours à tester et les contraintes de votre projet avant de chiffrer la réalisation.",
           "heroImage": {
             "src": "/images/projects/factumation-logiciel-facturation.png",
             "alt": "Application SaaS développée avec Next.js et Supabase - Factumation"
@@ -733,104 +733,56 @@
           ],
           "sections": [
             {
-              "title": "Pourquoi Next.js + Supabase en 2026 ?",
-              "content": "Next.js + Supabase est devenu le stack de référence pour les startups et les SaaS en 2026. Ce duo remplace les architectures traditionnelles (Express + MongoDB, Django + PostgreSQL) avec une productivité 3 à 5 fois supérieure.\n\n**[Next.js](https://nextjs.org)** fournit le frontend et le serveur : rendu côté serveur (SSR), API Routes, Server Components, optimisation automatique des images et du code. La [vitrine officielle Next.js](https://nextjs.org/showcase) liste des produits comme TikTok, Notion, Twitch ou Hulu construits avec ce framework. Score PageSpeed moyen sur mes projets : 98/100.\n\n**[Supabase](https://supabase.com)** fournit le backend complet : base de données PostgreSQL, authentification (email, OAuth, magic links), stockage de fichiers, API REST et temps réel, fonctions Edge. C'est l'alternative open-source à Firebase, adoptée par plus de 1 million de développeurs, avec plus de 70 000 étoiles sur [GitHub](https://github.com/supabase/supabase). La [documentation officielle](https://supabase.com/docs) reste ma référence quotidienne.\n\nEnsemble, ils permettent de lancer un MVP fonctionnel en 2 à 4 semaines, avec une architecture qui scale de 10 à 100 000 utilisateurs sans refactoring."
+              "title": "Une expertise technique au service de votre produit",
+              "content": "Je peux intervenir sur un projet existant ou construire son socle : interface Next.js, modèle PostgreSQL, authentification Supabase et intégrations API. Le choix dépend de vos données, de votre équipe et des contraintes d’exploitation.\n\nPour cadrer un produit complet plutôt qu’une intervention technique, consultez l’offre de [développement de MVP SaaS](/services/developpement-sites-saas)."
             },
             {
-              "title": "Ce que Supabase remplace",
-              "content": "**Firebase** — Supabase offre les mêmes fonctionnalités (auth, base de données, stockage, temps réel) mais avec PostgreSQL au lieu de Firestore. Avantage : requêtes SQL standard, pas de vendor lock-in, données exportables à tout moment.\n\n**Backend custom (Express/NestJS)** — Supabase génère automatiquement des API REST et GraphQL depuis votre schéma de base de données. Plus besoin d'écrire des centaines de routes CRUD manuellement.\n\n**Auth0 / Clerk** — L'authentification Supabase est intégrée et gratuite : email/password, OAuth (Google, GitHub, Apple), magic links, 2FA. Pas de service tiers à payer.\n\n**AWS S3** — Le stockage Supabase gère les uploads, le redimensionnement d'images et les permissions d'accès. Interface simple, API cohérente avec le reste du stack.\n\nPour approfondir cette comparaison, consultez mon article : [Pourquoi Supabase remplace Firebase](/blog/pourquoi-supabase-remplace-firebase)."
+              "title": "Authentification et autorisations à vérifier",
+              "content": "L’authentification identifie un utilisateur ; elle ne définit pas à elle seule ce qu’il peut consulter ou modifier. Je prévois des règles par rôle et organisation, des contrôles côté serveur et des tests d’accès autorisés et refusés.\n\nLes tables exposées via Supabase nécessitent des droits et des [politiques RLS](https://supabase.com/docs/guides/database/postgres/row-level-security) adaptés. Les secrets administratifs restent côté serveur. TypeScript aide à contrôler les types ; la validation des entrées et les tests restent nécessaires."
             },
             {
-              "title": "Architecture type d'un SaaS Next.js + Supabase",
-              "content": "**Frontend** — Next.js App Router avec React Server Components. Pages statiques (SSG) pour le marketing, pages dynamiques (SSR) pour le dashboard. Tailwind CSS pour le design.\n\n**Authentification** — Supabase Auth avec Row Level Security (RLS). Chaque utilisateur ne voit que ses propres données. Pas de middleware custom nécessaire.\n\n**Base de données** — PostgreSQL avec migrations versionnées. Relations, indexes, vues matérialisées. Les requêtes complexes sont possibles contrairement à Firebase/Firestore.\n\n**API** — API REST auto-générée par Supabase + API Routes Next.js pour la logique métier complexe (webhooks, intégrations tierces, traitements IA).\n\n**Temps réel** — Supabase Realtime pour les notifications, le chat, les dashboards live. Les changements en base de données sont poussés instantanément au frontend.\n\n**Déploiement** — Vercel (frontend) + Supabase Cloud (backend). CI/CD automatique, CDN mondial, 99.9% uptime."
+              "title": "Données, API et reprise d’un existant",
+              "content": "Le modèle PostgreSQL décrit les relations, contraintes et règles de propriété. Les changements passent par des migrations versionnées. Les listes sont paginées et les requêtes examinées sur les parcours importants.\n\nUne migration depuis un autre système commence par l’inventaire des données, des comptes et des intégrations. La reprise, les tests, la bascule et le retour arrière sont chiffrés avant toute modification de production."
             },
             {
-              "title": "Pourquoi un développeur Next.js + Supabase à Madagascar ?",
-              "content": "C'est mon stack quotidien : chaque projet que je livre depuis fin 2025 utilise Next.js + Supabase. Ce portfolio, Factumation et le système de tracking visiteurs sont construits sur ce stack.\n\n**Expertise confirmée** : 15+ projets livrés avec Next.js + Supabase. Row Level Security, migrations, Edge Functions et Realtime font partie du socle de production.\n\n**Tarifs compétitifs** : un MVP SaaS démarre à 3 500€, avec authentification, dashboard, base de données et première fonctionnalité métier. Le devis évolue ensuite selon le périmètre, tout en conservant TypeScript strict et une documentation complète.\n\n**Développement IA-assisté** : j'utilise Claude Code pour accélérer chaque étape. Un MVP qui prenait 6 semaines se livre en 2-3 semaines.\n\n**Fuseau GMT+3** : collaboration en temps réel avec l'Europe pendant les heures de bureau."
+              "title": "Charge, coûts et sauvegardes",
+              "content": "La capacité dépend des requêtes, du volume de données, des intégrations et de l’hébergement. Nous définissons les usages attendus puis mesurons les parcours critiques ; aucun nombre d’utilisateurs n’est garanti par le choix de la stack.\n\nLes quotas et coûts des fournisseurs sont vérifiés au moment du devis. Le plan de sauvegarde distingue la base et les fichiers stockés, avec une procédure de restauration à tester. Les options dépendent du forfait : voir la [documentation Supabase sur les sauvegardes](https://supabase.com/docs/guides/platform/backups)."
             },
             {
-              "title": "Sécurité et bonnes pratiques",
-              "content": "**Row Level Security (RLS)** — Chaque table a des policies PostgreSQL qui garantissent que les utilisateurs n'accèdent qu'à leurs propres données. Pas de faille d'autorisation possible.\n\n**TypeScript strict** — Tout le code est typé. Les erreurs sont détectées à la compilation, pas en production.\n\n**Variables d'environnement** — Les clés API et secrets sont stockés côté serveur, jamais exposés au client.\n\n**HTTPS + HSTS** — Chiffrement de bout en bout. Headers de sécurité complets (CSP, X-Frame-Options, Referrer-Policy).\n\n**Backups automatiques** — Supabase effectue des backups quotidiens de la base de données. Restauration en un clic."
-            },
-            {
-              "title": "Performances mesurées",
-              "content": "**Ce portfolio (Next.js 16 + Supabase)** :\n- PageSpeed Desktop : 100/100\n- PageSpeed Mobile : 98/100\n- LCP : 943ms\n- CLS : 0.00\n- 62 pages générées statiquement\n\n**Factumation (SaaS Next.js + Supabase)** :\n- Développé en 3 jours avec Claude Code\n- Auth + dashboard + génération PDF\n- Temps de chargement < 1 seconde\n\n**Temps de livraison moyens** :\n- Site vitrine : 1-2 semaines\n- MVP SaaS : 2-4 semaines\n- Application complète : 6-10 semaines"
+              "title": "Des réalisations pour examiner le périmètre livré",
+              "content": "Le [cas TeamIA Prospection](/projects/logiciel-prospection-b2b-teamia) présente un dashboard Next.js relié à n8n et Lemlist, avec déduplication des entreprises et décisions de revue persistées. Les captures utilisent des données fictives.\n\n[Factumation](/projects/factumation) illustre un produit de facturation et ses parcours métier. Ces exemples permettent de discuter de besoins comparables ; ils ne garantissent ni le même délai ni les mêmes performances pour un autre projet."
             }
           ],
-          "comparisonTable": {
-            "title": "Supabase vs Firebase en 2026",
-            "intro": "Comparaison des deux principales plateformes Backend-as-a-Service sur les critères qui comptent vraiment pour un SaaS.",
-            "headers": ["Critère", "Firebase (Google)", "Supabase (mon choix)"],
-            "rows": [
-              {
-                "criterion": "Base de données",
-                "noCode": "Firestore (NoSQL), pas de JOINs ni d'agrégations complexes.",
-                "nextjs": "PostgreSQL standard, JOINs, vues, fonctions, triggers, full-text search.",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Vendor lock-in",
-                "noCode": "Fort. Migration hors Google = réécriture complète.",
-                "nextjs": "Aucun. Open-source, données exportables, auto-hébergement possible.",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Authentification",
-                "noCode": "Firebase Auth inclus, mais payant au-delà de 50 K MAU.",
-                "nextjs": "Supabase Auth inclus et illimité sur le plan gratuit.",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Tarif à l'échelle (100 K MAU)",
-                "noCode": "Factures Firebase qui explosent souvent à 500-2000$/mois.",
-                "nextjs": "Plan Pro Supabase à 25$/mois, prévisible, sans surprise.",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Realtime",
-                "noCode": "Firestore listeners performants mais facturés à l'opération.",
-                "nextjs": "Supabase Realtime via WebSocket, illimité sur le plan Pro.",
-                "winner": "nextjs"
-              },
-              {
-                "criterion": "Maturité de l'offre",
-                "noCode": "10+ ans, écosystème massif, intégration Google Cloud.",
-                "nextjs": "Plus jeune (lancé en 2020) mais déjà 1M+ projets en production.",
-                "winner": "nocode"
-              }
-            ],
-            "conclusion": "Firebase reste pertinent pour les apps mobiles Google-centric. Pour un SaaS web ou une app moderne où PostgreSQL et la portabilité comptent, Supabase est le choix gagnant en 2026."
-          },
           "features": [
             {
               "icon": "database",
               "title": "PostgreSQL",
-              "description": "Base de données relationnelle, pas de NoSQL limité"
+              "description": "Relations, contraintes et migrations versionnées."
             },
             {
               "icon": "lock",
-              "title": "RLS intégré",
-              "description": "Sécurité au niveau des lignes"
-            },
-            {
-              "icon": "sync",
-              "title": "Temps réel",
-              "description": "Supabase Realtime pour les données live"
+              "title": "Permissions",
+              "description": "Rôles, organisations et contrôles d’accès testés."
             },
             {
               "icon": "key",
-              "title": "Auth complète",
-              "description": "Email, OAuth, magic links, 2FA"
+              "title": "Authentification",
+              "description": "Parcours de connexion adaptés aux utilisateurs."
+            },
+            {
+              "icon": "hub",
+              "title": "Intégrations API",
+              "description": "Validation des données et gestion des erreurs."
             },
             {
               "icon": "cloud_upload",
               "title": "Stockage",
-              "description": "Upload fichiers et images intégré"
+              "description": "Accès aux fichiers et conservation à définir."
             },
             {
-              "icon": "savings",
-              "title": "Open-source",
-              "description": "Pas de vendor lock-in, données portables"
+              "icon": "description",
+              "title": "Transmission",
+              "description": "Code, configuration et documentation utile."
             }
           ],
           "faq": [
@@ -839,29 +791,60 @@
               "answer": "Un MVP SaaS Next.js + Supabase démarre à 3 500€, avec authentification, dashboard, base de données et première fonctionnalité métier. Les fonctions supplémentaires, Stripe, l'administration, les rôles ou l'IA sont chiffrés dans un devis cadré. Les missions évolutives peuvent être facturées au TJM de 350€/jour."
             },
             {
-              "question": "Supabase est-il fiable pour la production ?",
-              "answer": "Oui. Supabase héberge plus de 1 million de projets en production. L'infrastructure tourne sur AWS avec un SLA de 99.9%. Les backups sont automatiques et la restauration se fait en un clic. C'est du PostgreSQL standard — la base de données la plus fiable au monde."
+              "question": "Pouvez-vous reprendre une application existante ?",
+              "answer": "Oui. Un premier audit examine le code, les données, les permissions et le déploiement. Je propose ensuite les corrections prioritaires et un périmètre de reprise."
             },
             {
-              "question": "Peut-on migrer depuis Firebase vers Supabase ?",
-              "answer": "Oui. Je réalise des migrations Firebase → Supabase : export des données Firestore vers PostgreSQL, migration de l'authentification, et adaptation du code frontend. Le processus prend généralement 2 à 4 semaines selon la complexité."
+              "question": "Supabase suffit-il à sécuriser un SaaS ?",
+              "answer": "Non. Il faut configurer les droits, les politiques RLS et les contrôles serveur selon les règles métier, puis tester les accès entre utilisateurs et organisations."
             },
             {
-              "question": "Supabase est-il gratuit ?",
-              "answer": "Supabase offre un plan gratuit généreux : 500 MB de base de données, 1 GB de stockage, 50 000 utilisateurs actifs par mois et 2 millions de requêtes Edge Functions. Pour la plupart des MVP et petits SaaS, le plan gratuit suffit. Les plans payants démarrent à 25$/mois."
+              "question": "Quel délai prévoir ?",
+              "answer": "Le calendrier dépend du périmètre, de l’état de l’existant, des accès et des intégrations. Les étapes et critères de validation sont définis après cadrage."
             },
             {
-              "question": "Quelle est la différence avec Firebase ?",
-              "answer": "Firebase utilise Firestore (NoSQL) tandis que Supabase utilise PostgreSQL (SQL relationnel). PostgreSQL permet des requêtes complexes (JOINs, agrégations) impossibles sur Firestore. Supabase est open-source — vos données ne sont jamais verrouillées chez un fournisseur. Et l'authentification est incluse gratuitement sans limite."
+              "question": "Les coûts d’hébergement sont-ils inclus ?",
+              "answer": "Le devis distingue la réalisation, l’hébergement et les services externes. Les forfaits, quotas, sauvegardes et coûts variables sont vérifiés selon votre usage."
             },
             {
               "question": "Proposez-vous la maintenance après livraison ?",
               "answer": "Oui. 30 jours de support technique sont inclus après chaque livraison. Je propose aussi des contrats de maintenance mensuels pour les mises à jour, corrections de bugs et nouvelles fonctionnalités."
             }
-          ]
+          ],
+          "cta": {
+            "title": "Cadrons votre projet Next.js et Supabase",
+            "description": "Décrivez le parcours à construire ou le problème de votre application. Précisez les intégrations et les contraintes de délai pour préparer un premier échange.",
+            "buttonLabel": "Discuter de mon application"
+          },
+          "comparisonTable": {
+            "title": "Créer une application ou reprendre un existant ?",
+            "intro": "Le cadrage dépend du point de départ. Les deux formats demandent des critères de validation explicites.",
+            "headers": ["Critère", "Application existante", "Nouveau projet"],
+            "rows": [
+              {
+                "criterion": "Première étape",
+                "noCode": "Examiner le code, les données et les incidents.",
+                "nextjs": "Définir les utilisateurs et le parcours prioritaire.",
+                "winner": "tie"
+              },
+              {
+                "criterion": "Livrables",
+                "noCode": "Corrections ciblées, migrations et tests de non-régression.",
+                "nextjs": "Premier parcours métier, modèle de données et tests.",
+                "winner": "tie"
+              },
+              {
+                "criterion": "Budget et calendrier",
+                "noCode": "Estimés après revue des dépendances et de la dette technique.",
+                "nextjs": "Estimés après validation du périmètre initial.",
+                "winner": "tie"
+              }
+            ],
+            "conclusion": "Le devis précise les livrables, les exclusions et les accès nécessaires avant le démarrage."
+          }
         },
         "key": "developpeur-nextjs-supabase-madagascar",
-        "updatedAt": "2026-10-08T00:00:00Z"
+        "updatedAt": "2026-10-15T00:00:00Z"
       },
       {
         "icon": "smart_toy",
@@ -1281,6 +1264,10 @@
             {
               "title": "Quelle spécialisation pour quel projet",
               "content": "Le bon choix dépend de votre besoin réel, pas d'une mode technique. Un site ou un SaaS pointe vers React et Next.js, une API ou un backend vers Node.js, une automatisation intelligente vers un agent IA, et une application temps réel vers Next.js plus Supabase.\n\nEn pratique, la plupart des projets combinent plusieurs de ces briques, et c'est tout l'intérêt d'un profil fullstack JavaScript unique. Vous démarrez sur une spécialisation, puis vous étendez sans changer de langage ni d'équipe. Le tableau ci-dessous résume cette orientation pour vous aider à identifier rapidement la page la plus utile à votre projet, avant d'en discuter ensemble."
+            },
+            {
+              "title": "Vous cherchez surtout un développeur backend ?",
+              "content": "Pour une API, des webhooks ou une intégration de paiement, consultez mon offre de [développement backend Node.js](/services/developpeur-nodejs-madagascar). Pour un produit complet avec interface et données, l’offre [MVP SaaS](/services/developpement-sites-saas) permet de cadrer un premier parcours métier. Le choix dépend du périmètre à livrer et de votre équipe existante."
             }
           ],
           "features": [
@@ -1389,19 +1376,19 @@
           ]
         },
         "key": "developpeur-javascript-madagascar",
-        "updatedAt": "2026-10-08T00:00:00Z"
+        "updatedAt": "2026-10-15T00:00:00Z"
       },
       {
         "icon": "dns",
-        "title": "Développeur Node.js à Madagascar : backend, API et temps réel",
+        "title": "Développeur backend Node.js à Madagascar : API et intégrations",
         "description": "Freelance Node.js à Madagascar : API REST/GraphQL, NestJS, temps réel et intégrations sur mesure.",
         "slug": "developpeur-nodejs-madagascar",
         "color": "emerald",
         "cardTitle": "Node.js Madagascar",
         "cardDescription": "Backend, API REST/GraphQL et temps réel",
         "isLanding": true,
-        "seoTitle": "Développeur Node.js Madagascar | API & Backend Freelance",
-        "seoDescription": "Développeur Node.js freelance à Madagascar pour API REST/GraphQL, NestJS, Supabase et temps réel. Portfolio backend vérifiable, devis sous 48h.",
+        "seoTitle": "Développeur backend Madagascar | Node.js & API",
+        "seoDescription": "Développeur backend freelance à Madagascar : API Node.js, authentification, webhooks et intégrations Mobile Money. Périmètre cadré et exemples de code.",
         "landing": {
           "heroText": "Vous cherchez un développeur Node.js à Madagascar pour créer ou reprendre une API backend ? Je suis indépendant, basé à Antananarivo, et je construis des API REST et GraphQL, des services temps réel et des intégrations sur mesure, pas des slides. Vous travaillez avec une personne identifiable et un portfolio vérifiable, pas avec un pool d'agence anonyme.",
           "sections": [
@@ -1428,6 +1415,10 @@
             {
               "title": "Comment se déroule un projet backend",
               "content": "Chaque projet démarre par un cadrage : je clarifie les besoins, le modèle de données et les contraintes avant d'écrire la moindre ligne. Cette étape évite de construire la mauvaise chose vite.\n\nJe livre ensuite par incréments : un premier endpoint fonctionnel testable rapidement, puis l'API complète, les intégrations et le temps réel. Vous suivez l'avancement sur un dépôt Git, avec des commits clairs et une documentation à jour. Je reste joignable directement (WhatsApp, email) pendant toute la durée, sur le fuseau horaire EAT (UTC+3) compatible avec l'Europe en journée. À la livraison, le code est à vous, documenté et déployable, sans verrouillage propriétaire."
+            },
+            {
+              "title": "API de paiement et webhooks : le cas PaidMada",
+              "content": "Le [dépôt PaidMada](/projects/paidmada-mobile-money) présente une interface REST et un client TypeScript pour Mobile Money. C’est un point de départ concret pour discuter du modèle de transaction et de l’intégration fournisseur.\n\nPour votre backend, je cadre la validation des entrées, les permissions, les événements dupliqués et le rapprochement. La [solution API Mobile Money Madagascar](/solutions/api-mobile-money-madagascar) détaille les accès et les scénarios à valider avant mise en production."
             }
           ],
           "features": [
@@ -1524,11 +1515,15 @@
             {
               "question": "Peux-tu intégrer des paiements ou des services tiers ?",
               "answer": "Oui. J'ai construit le backend mobile money de paidmada et je gère les intégrations tierces (paiement, API externes) ainsi que les automatisations via n8n, avec authentification et gestion des rôles."
+            },
+            {
+              "question": "Pouvez-vous développer uniquement le backend de mon application ?",
+              "answer": "Oui. Nous définissons le contrat API avec votre équipe frontend : données, authentification, permissions, erreurs et critères de validation. La mission peut couvrir une intégration ciblée ou un backend complet."
             }
           ]
         },
         "key": "developpeur-nodejs-madagascar",
-        "updatedAt": "2026-10-08T00:00:00Z"
+        "updatedAt": "2026-10-15T00:00:00Z"
       },
       {
         "icon": "smart_toy",
@@ -1791,6 +1786,10 @@
             {
               "title": "Comment je construis un agent vocal IA en production",
               "content": "Je commence par les conversations réelles : motifs d'appel, informations à collecter, réponses autorisées et cas qui doivent rester humains. Je choisis ensuite l'architecture adaptée : agent conversationnel ElevenLabs pour aller vite, ou chaîne plus contrôlée avec téléphonie, transcription, modèle IA et synthèse vocale lorsque les contraintes métier l'exigent.\n\nLa mise en production couvre aussi les tests de latence, interruptions, silences, accents, échecs d'API et transfert humain. Les coûts récurrents sont suivis séparément par minute de téléphonie, usage du modèle et outils connectés afin que vous connaissiez le coût réel par appel."
+            },
+            {
+              "title": "Agent de réservation Twilio et ElevenLabs : le parcours à cadrer",
+              "content": "Un agent téléphonique de réservation doit vérifier les disponibilités dans votre outil, recueillir les informations utiles et obtenir une confirmation avant de créer le rendez-vous. Si l’API ne répond pas ou si le créneau devient indisponible, il propose une reprise humaine plutôt que d’inventer une réservation.\n\nLe périmètre distingue téléphonie Twilio, conversation ElevenLabs et intégration au calendrier ou CRM. Les essais portent sur la compréhension, les interruptions, les doublons et le transfert. Le [projet MadaVoyage](/projects/madavoyage) présente le contexte métier ; le parcours vocal à livrer reste à convenir avec votre équipe."
             }
           ],
           "features": [
@@ -1895,11 +1894,15 @@
             {
               "question": "Que se passe-t-il pour les demandes complexes ?",
               "answer": "L'agent détecte ce qu'il ne doit pas traiter seul et transfère vers un humain avec le contexte de l'échange. L'objectif n'est pas de tout automatiser, mais d'absorber le volume répétitif et de réserver votre équipe aux cas à valeur."
+            },
+            {
+              "question": "Un agent vocal IA peut-il prendre des rendez-vous dans mon calendrier ?",
+              "answer": "Oui si votre outil fournit les accès et opérations nécessaires. Le périmètre couvre la lecture des disponibilités, la confirmation, la création sans doublon et la reprise humaine en cas d’échec. Les coûts de téléphonie et de conversation sont séparés du développement."
             }
           ]
         },
         "key": "developpeur-agent-vocal-ia",
-        "updatedAt": "2026-10-08T00:00:00Z"
+        "updatedAt": "2026-10-15T00:00:00Z"
       },
       {
         "title": "Audit performance site web & optimisation des coûts cloud",
@@ -2654,7 +2657,7 @@
       },
       {
         "question": "Travaillez-vous avec des clients internationaux ?",
-        "answer": "Absolument. Je travaille avec des clients en France, aux États-Unis et à Madagascar. La communication se fait en français, avec des outils comme Slack, Notion et Google Meet pour un suivi en temps réel."
+        "answer": "Oui, je travaille avec des clients en France, aux États-Unis et à Madagascar depuis le fuseau GMT+3. Les échanges se font en français. Nous convenons au cadrage des horaires communs, des supports écrits et des éventuels besoins de traduction."
       },
       {
         "question": "Quel support proposez-vous après la livraison ?",
