@@ -6,6 +6,10 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import IconScoutIcon from "@/components/icons/IconScoutIcon";
+import {
+  compactMetadataDescription,
+  compactMetadataTitle,
+} from "@/lib/seo-metadata";
 
 export async function generateMetadata({
   params,
@@ -19,9 +23,11 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
 
   const path = locale === "fr" ? "/about" : "/en/about";
+  const title = compactMetadataTitle(dict.meta.about.title);
+  const description = compactMetadataDescription(dict.meta.about.description);
   return {
-    title: dict.meta.about.title,
-    description: dict.meta.about.description,
+    title,
+    description,
     alternates: {
       canonical: `${SITE_URL}${path}`,
       languages: {
@@ -31,8 +37,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: dict.meta.about.title,
-      description: dict.meta.about.description,
+      title,
+      description,
       url: `${SITE_URL}${path}`,
       type: "profile",
       locale: locale === "fr" ? "fr_FR" : "en_US",

@@ -11,6 +11,10 @@ import BlogPostAnim from "@/components/animations/BlogPostAnim";
 import MarkdownRenderer from "@/components/blog/MarkdownRenderer";
 import Button from "@/components/ui/Button";
 import IconScoutIcon from "@/components/icons/IconScoutIcon";
+import {
+  compactMetadataDescription,
+  compactMetadataTitle,
+} from "@/lib/seo-metadata";
 
 export async function generateStaticParams() {
   const slugs = await getAllBlogSlugs();
@@ -33,8 +37,10 @@ export async function generateMetadata({
   if (!post) return {};
 
   const prefix = locale === "fr" ? "" : "/en";
-  const title = post.seoTitle ?? post.title;
-  const description = post.seoDescription ?? post.excerpt;
+  const title = compactMetadataTitle(post.seoTitle ?? post.title);
+  const description = compactMetadataDescription(
+    post.seoDescription ?? post.excerpt,
+  );
 
   return {
     title,

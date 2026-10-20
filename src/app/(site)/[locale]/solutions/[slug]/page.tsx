@@ -19,6 +19,10 @@ import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 import Button from "@/components/ui/Button";
 import GlassCard from "@/components/ui/GlassCard";
 import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
+import {
+  compactMetadataDescription,
+  compactMetadataTitle,
+} from "@/lib/seo-metadata";
 
 export const dynamicParams = false;
 
@@ -295,10 +299,14 @@ export async function generateMetadata({
     locale === "en"
       ? `/en/solutions/${solution.slug}`
       : `/en/solutions/${alternate?.slug ?? solution.slug}`;
+  const metaTitle = compactMetadataTitle(solution.seoTitle);
+  const metaDescription = compactMetadataDescription(
+    solution.seoDescription,
+  );
 
   return {
-    title: solution.seoTitle,
-    description: solution.seoDescription,
+    title: metaTitle,
+    description: metaDescription,
     alternates: {
       canonical: `${SITE_URL}${prefix}/solutions/${solution.slug}`,
       languages: {
@@ -308,8 +316,8 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      title: solution.seoTitle,
-      description: solution.seoDescription,
+      title: metaTitle,
+      description: metaDescription,
       url: `${SITE_URL}${prefix}/solutions/${solution.slug}`,
       type: "article",
       locale: locale === "fr" ? "fr_FR" : "en_US",

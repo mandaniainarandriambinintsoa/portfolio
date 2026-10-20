@@ -7,6 +7,10 @@ import Button from "@/components/ui/Button";
 import ServiceJsonLd from "@/components/seo/ServiceJsonLd";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
+import {
+  compactMetadataDescription,
+  compactMetadataTitle,
+} from "@/lib/seo-metadata";
 
 const path = "/vibe-coding-developpeur";
 
@@ -128,14 +132,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const locale: Locale = rawLocale === "en" ? "en" : "fr";
   const copy = content[locale];
   const url = `${SITE_URL}${locale === "en" ? "/en" : ""}${path}`;
+  const title = compactMetadataTitle(copy.title);
+  const description = compactMetadataDescription(copy.description);
   return {
-    title: copy.title,
-    description: copy.description,
+    title,
+    description,
     alternates: {
       canonical: url,
       languages: { fr: `${SITE_URL}${path}`, en: `${SITE_URL}/en${path}`, "x-default": `${SITE_URL}${path}` },
     },
-    openGraph: { title: copy.title, description: copy.description, url, type: "website", locale: locale === "fr" ? "fr_FR" : "en_US" },
+    openGraph: { title, description, url, type: "website", locale: locale === "fr" ? "fr_FR" : "en_US" },
   };
 }
 

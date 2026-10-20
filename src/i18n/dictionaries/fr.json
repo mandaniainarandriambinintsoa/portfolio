@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Manda — Product Builder IA · Claude Code & n8n · Madagascar",
-      "description": "Manda Randriambinintsoa, Product Builder freelance à Antananarivo. Je livre des MVP SaaS, agents IA et automatisations n8n avec Claude Code et OpenAI Codex. 20+ projets livrés pour clients européens."
+      "title": "Manda — Applications métier & automatisation IA",
+      "description": "Je conçois des SaaS, outils internes et automatisations n8n fiables, du cadrage à la production, pour les équipes locales et internationales."
     },
     "about": {
       "title": "Manda Randriambinintsoa | Développeur No-Code & Expert N8N à Madagascar",
@@ -26,13 +26,13 @@
     "blog": "Blog"
   },
   "hero": {
-    "line1": "Des applications métier et des automatisations",
-    "line2": "pour simplifier votre travail.",
+    "line1": "Des applications métier et automatisations IA",
+    "line2": "pour éliminer vos tâches manuelles.",
     "line3": "",
-    "subtitle_prefix": "Je conçois des",
-    "subtitle_highlight": "SaaS, des sites et des intégrations IA",
-    "subtitle_rest": ", du cadrage à la mise en production, avec des ",
-    "subtitle_highlight2": "livrables vérifiables et un code maintenable",
+    "subtitle_prefix": "Du cadrage à la production, je construis des",
+    "subtitle_highlight": "SaaS, outils internes et workflows n8n",
+    "subtitle_rest": " avec des ",
+    "subtitle_highlight2": "livrables vérifiables, un code maintenable et un transfert clair",
     "subtitle_rest2": ". Basé à Madagascar, j’accompagne les équipes locales et internationales.",
     "cta_primary": "Démarrer un projet",
     "cta_secondary": "Voir mes réalisations"

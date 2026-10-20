@@ -26,6 +26,10 @@ import { LegacyIconScoutIcon } from "@/components/icons/IconScoutIcon";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { getCoreServiceContent } from "@/lib/data/core-service-content";
 import { getBusinessVerticals } from "@/lib/data/business-verticals";
+import {
+  compactMetadataDescription,
+  compactMetadataTitle,
+} from "@/lib/seo-metadata";
 
 export async function generateStaticParams() {
   return getServiceStaticParams();
@@ -146,8 +150,12 @@ export async function generateMetadata({
     : undefined;
 
   return {
-    title: titleWithoutSiteSuffix(service.seoTitle || service.title),
-    description: service.seoDescription || service.description,
+    title: compactMetadataTitle(
+      titleWithoutSiteSuffix(service.seoTitle || service.title),
+    ),
+    description: compactMetadataDescription(
+      service.seoDescription || service.description,
+    ),
     alternates: {
       canonical: `${SITE_URL}${prefix}/services/${slug}`,
       languages: {

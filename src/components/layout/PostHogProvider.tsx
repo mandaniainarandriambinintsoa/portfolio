@@ -7,6 +7,7 @@ import {
   getPortfolioTrackingContext,
   trackPortfolioEvent,
 } from "@/lib/posthog-client";
+import { isCurrentBrowserAutomated } from "@/lib/analytics-browser";
 
 const posthogKey = process.env.NEXT_PUBLIC_POSTHOG_KEY;
 const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST || "https://us.i.posthog.com";
@@ -27,7 +28,7 @@ function PostHogPageView() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (!posthogKey || posthog.__loaded) return;
+    if (!posthogKey || posthog.__loaded || isCurrentBrowserAutomated()) return;
 
     posthog.init(posthogKey, {
       api_host: posthogHost,
@@ -42,7 +43,7 @@ function PostHogPageView() {
   }, []);
 
   useEffect(() => {
-    if (!posthogKey || !pathname) return;
+    if (!posthogKey || !pathname || isCurrentBrowserAutomated()) return;
 
     const queryString = searchParams.toString();
     const url = `${window.location.origin}${pathname}${queryString ? `?${queryString}` : ""}`;
@@ -59,7 +60,7 @@ function PostHogPageView() {
   }, [pathname, searchParams]);
 
   useEffect(() => {
-    if (!posthogKey || !pathname) return;
+    if (!posthogKey || !pathname || isCurrentBrowserAutomated()) return;
 
     const sentMilestones = new Set<number>();
     const milestones = [25, 50, 75, 90];
@@ -84,7 +85,7 @@ function PostHogPageView() {
   }, [pathname]);
 
   useEffect(() => {
-    if (!posthogKey) return;
+    if (!posthogKey || isCurrentBrowserAutomated()) return;
 
     function onClick(event: MouseEvent) {
       const target = event.target instanceof Element

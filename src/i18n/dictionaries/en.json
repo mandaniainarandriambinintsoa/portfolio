@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Manda — AI Product Builder · Claude Code + n8n · Madagascar",
-      "description": "Manda Randriambinintsoa, freelance AI product builder in Antananarivo. I ship SaaS MVPs, AI agents and n8n automations with Claude Code & OpenAI Codex. 20+ projects shipped for European clients."
+      "title": "Manda — Business Apps & AI Automation",
+      "description": "I build reliable SaaS products, internal tools and n8n automations from scoping to production for local and international teams."
     },
     "about": {
       "title": "Manda Randriambinintsoa | No-Code Developer & N8N Expert from Madagascar",
@@ -26,13 +26,13 @@
     "blog": "Blog"
   },
   "hero": {
-    "line1": "Business applications and automation",
-    "line2": "to simplify your work.",
+    "line1": "Business applications and AI automation",
+    "line2": "that remove manual work.",
     "line3": "",
-    "subtitle_prefix": "I build",
-    "subtitle_highlight": "SaaS products, websites and AI integrations",
-    "subtitle_rest": ", from scoping to deployment, with ",
-    "subtitle_highlight2": "verifiable deliverables and maintainable code",
+    "subtitle_prefix": "From scoping to production, I build",
+    "subtitle_highlight": "SaaS products, internal tools and n8n workflows",
+    "subtitle_rest": " with ",
+    "subtitle_highlight2": "verifiable deliverables, maintainable code and a clear handoff",
     "subtitle_rest2": ". Based in Madagascar, I work with local and international teams.",
     "cta_primary": "Start a Project",
     "cta_secondary": "View My Work"

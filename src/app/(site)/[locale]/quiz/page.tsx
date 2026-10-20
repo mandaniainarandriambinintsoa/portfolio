@@ -4,6 +4,10 @@ import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
 import QuizClient from "@/components/quiz/QuizClient";
+import {
+  compactMetadataDescription,
+  compactMetadataTitle,
+} from "@/lib/seo-metadata";
 
 function titleWithoutSiteSuffix(title: string) {
   return title.replace(/\s+(?:[|—–-]\s*)?Manda\s*$/i, "");
@@ -23,10 +27,13 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
 
   const path = locale === "fr" ? "/quiz" : "/en/quiz";
-  const title = titleWithoutSiteSuffix(dict.meta.quiz.title);
+  const title = compactMetadataTitle(
+    titleWithoutSiteSuffix(dict.meta.quiz.title),
+  );
+  const description = compactMetadataDescription(dict.meta.quiz.description);
   return {
     title,
-    description: dict.meta.quiz.description,
+    description,
     alternates: {
       canonical: `${SITE_URL}${path}`,
       languages: {
@@ -37,7 +44,7 @@ export async function generateMetadata({
     },
     openGraph: {
       title,
-      description: dict.meta.quiz.description,
+      description,
       url: `${SITE_URL}${path}`,
       type: "website",
       locale: locale === "fr" ? "fr_FR" : "en_US",

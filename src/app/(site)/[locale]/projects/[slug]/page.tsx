@@ -7,6 +7,10 @@ import { SITE_URL } from "@/lib/constants";
 import { notFound } from "next/navigation";
 import { getAllProjectSlugs, getProjectBySlug } from "@/lib/data/projects";
 import { getProjectSeoDetails } from "@/lib/data/project-seo-details";
+import {
+  compactMetadataDescription,
+  compactMetadataTitle,
+} from "@/lib/seo-metadata";
 import { getCaseStudy } from "@/lib/data/case-studies";
 import { getCategoryLabel, getProjectTone } from "@/lib/project-display";
 import BreadcrumbJsonLd from "@/components/seo/BreadcrumbJsonLd";
@@ -60,10 +64,13 @@ export async function generateMetadata({
   if (!project) return {};
 
   const projectSeo = getProjectSeoDetails(slug, locale);
-  const metaTitle =
+  const metaTitle = compactMetadataTitle(
     projectSeo?.metaTitle ??
-    projectMetadataTitle(project.title, project.subtitle);
-  const metaDescription = projectSeo?.metaDescription ?? project.description;
+      projectMetadataTitle(project.title, project.subtitle),
+  );
+  const metaDescription = compactMetadataDescription(
+    projectSeo?.metaDescription ?? project.description,
+  );
   const prefix = locale === "fr" ? "" : "/en";
   return {
     title: metaTitle,
