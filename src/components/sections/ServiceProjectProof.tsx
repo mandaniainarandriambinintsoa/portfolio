@@ -46,6 +46,11 @@ const projectsByService: Record<string, string[]> = {
     "automatisation-prospection-n8n-lemlist",
     "international-opportunity-agent-n8n",
   ],
+  "agency-ai-technical-partner": [
+    "logiciel-prospection-b2b-teamia",
+    "teamia",
+    "international-opportunity-agent-n8n",
+  ],
 };
 
 export default async function ServiceProjectProof({

@@ -82,6 +82,7 @@ type ServiceGroup = {
 const groupedServiceKeys = {
   applications: [
     "developpement-sites-saas",
+    "agency-ai-technical-partner",
     "scaling-saas-workflows",
     "developpeur-react-nextjs-madagascar",
     "developpeur-nextjs-supabase-madagascar",

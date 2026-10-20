@@ -1,0 +1,288 @@
+{
+  "fr": {
+    "key": "agency-ai-technical-partner",
+    "icon": "business",
+    "title": "Renfort technique freelance pour agence IA",
+    "description": "Renfort technique freelance pour agences IA, ESN et studios : applications Next.js, workflows n8n, API, RAG et agents IA livrés sous votre pilotage.",
+    "slug": "renfort-technique-agence-ia",
+    "color": "purple",
+    "isLanding": true,
+    "cardTitle": "Renfort pour agence IA",
+    "cardDescription": "Un développeur freelance pour absorber un lot technique sans sous-traitance en cascade.",
+    "seoTitle": "Renfort technique freelance pour agence IA",
+    "seoDescription": "Renfort freelance pour agence IA : Next.js, n8n, API, RAG et agents IA. Livraison documentée, confidentialité et code sous votre contrôle.",
+    "createdAt": "2026-10-20T00:00:00Z",
+    "updatedAt": "2026-10-20T00:00:00Z",
+    "landing": {
+      "heroText": "Votre agence a vendu un projet IA, automatisation ou application métier et doit renforcer l'exécution ? J'interviens comme développeur freelance auprès de votre équipe, sur un lot défini : interface Next.js, API, workflow n8n, RAG ou agent IA. Vous gardez la relation client et le pilotage ; je livre un résultat testable, documenté et transférable.",
+      "heroImage": {
+        "src": "/images/projects/teamia-prospection-cockpit.webp",
+        "alt": "Cockpit de prospection TeamIA développé en renfort technique"
+      },
+      "features": [
+        {
+          "icon": "code",
+          "title": "Lot technique cadré",
+          "description": "Périmètre, interfaces, dépendances et critères d'acceptation définis avant le développement."
+        },
+        {
+          "icon": "account_tree",
+          "title": "Next.js, API et n8n",
+          "description": "Interface métier, backend, données et automatisations traités comme un seul parcours."
+        },
+        {
+          "icon": "psychology",
+          "title": "IA avec garde-fous",
+          "description": "RAG, LLM et agents reliés à des règles, des sources et une validation humaine."
+        },
+        {
+          "icon": "lock",
+          "title": "Confidentialité",
+          "description": "Accès limités, secrets hors du code et communication publique uniquement avec accord."
+        },
+        {
+          "icon": "verified",
+          "title": "Revue vérifiable",
+          "description": "Démonstrations, tests convenus et décisions tracées à chaque étape importante."
+        },
+        {
+          "icon": "description",
+          "title": "Transfert propre",
+          "description": "Code, configuration, documentation et procédure de reprise remis à votre équipe."
+        }
+      ],
+      "sections": [
+        {
+          "title": "Quand faire appel à un freelance en renfort d'agence IA",
+          "content": "Ce format convient lorsqu'un projet est déjà vendu ou cadré, mais qu'il manque une capacité technique précise : construire un tableau de bord, intégrer un modèle IA, connecter des API, fiabiliser n8n ou reprendre un prototype avant la production. Je peux rejoindre un projet existant sans imposer une nouvelle méthode à toute l'équipe.\n\nLe premier échange sert à identifier le livrable, les dépendances, la personne qui valide et les contraintes de calendrier. Si le besoin demande plusieurs spécialités disponibles en permanence ou une astreinte large, une équipe dédiée sera plus adaptée qu'un freelance seul."
+        },
+        {
+          "title": "Une collaboration en marque blanche ou visible",
+          "content": "L'agence choisit le niveau d'exposition adapté au contrat. Je peux intervenir en marque blanche dans vos outils et vos rituels, ou être présenté comme partenaire technique lorsque le client doit échanger directement avec la personne qui développe. Dans les deux cas, les responsabilités et les canaux de décision sont écrits.\n\nJe ne contacte pas le client final hors du cadre convenu et je ne réutilise pas ses données, accès ou livrables. Toute étude de cas publique demande un accord et retire les secrets, identifiants et informations commerciales sensibles."
+        },
+        {
+          "title": "Applications, automatisations et systèmes IA",
+          "content": "Je peux prendre en charge un lot Next.js ou React, une API Node.js ou Python, une base PostgreSQL ou Supabase, ainsi que les workflows n8n qui relient le produit au CRM, aux emails, aux documents ou aux services IA. Le périmètre reste orienté vers un résultat utilisateur, pas vers une liste de technologies.\n\nPour un RAG ou un agent IA, nous définissons les sources autorisées, les permissions, les formats de sortie, les cas d'incertitude et les actions qui exigent une validation humaine. Pour n8n, la livraison couvre aussi les erreurs, doublons, reprises, credentials et consignes d'exploitation."
+        },
+        {
+          "title": "Un exemple concret avec TeamIA",
+          "content": "Le [cas TeamIA Prospection](/projects/logiciel-prospection-b2b-teamia) montre ce modèle de collaboration : une application métier pour configurer des campagnes, examiner les prospects, dédupliquer les résultats et valider les messages avant toute action. L'interface complète les workflows n8n au lieu d'exposer les équipes aux détails d'exécution.\n\nLe [projet TeamIA](/projects/teamia) présente aussi une plateforme d'agents IA et de démonstrateurs métier. Ces exemples documentent mon rôle et les livrables visibles ; ils ne signifient pas que chaque mission reprend la même architecture ou garantit le même résultat."
+        },
+        {
+          "title": "Organisation du lot et critères d'acceptation",
+          "content": "Un lot commence par une note courte : objectif, utilisateurs, entrées, sorties, dépendances, cas d'erreur et définition de terminé. Les accès sont limités au nécessaire et restent dans les comptes contrôlés par l'agence ou le client. Les décisions qui modifient le périmètre sont confirmées par écrit.\n\nJe livre par étapes démontrables. La revue porte sur le comportement attendu, les permissions, les erreurs importantes et la capacité de l'équipe à reprendre le système. Le code n'est pas considéré comme terminé tant que les configurations et procédures indispensables restent uniquement dans ma tête."
+        },
+        {
+          "title": "Capacité, tarif et continuité",
+          "content": "Mon tarif standard publié est de **350 € par jour**. L'intervention peut couvrir un audit court, un lot au périmètre défini ou une capacité hebdomadaire réservée. Le devis précise ce qui est inclus, les services tiers, le calendrier, la propriété des livrables et les conditions de maintenance.\n\nComme tout freelance, ma capacité est limitée. Pour réduire le risque de dépendance, les dépôts, comptes, secrets et environnements restent sous votre contrôle. La documentation, les exports versionnés et les points de transfert permettent à votre équipe ou à un autre intervenant de poursuivre le travail."
+        }
+      ],
+      "comparisonTable": {
+        "title": "Renfort freelance ou recrutement d'une équipe ?",
+        "intro": "Le bon format dépend du périmètre et de la continuité attendue.",
+        "headers": ["Besoin", "Renfort freelance", "Équipe dédiée"],
+        "rows": [
+          {
+            "criterion": "Lot spécialisé",
+            "noCode": "Intervention directe sur un périmètre borné.",
+            "nextjs": "Mobilisation plus large que nécessaire.",
+            "winner": "noCode"
+          },
+          {
+            "criterion": "Plusieurs expertises simultanées",
+            "noCode": "Capacité limitée à un intervenant principal.",
+            "nextjs": "Profils disponibles en parallèle.",
+            "winner": "nextjs"
+          },
+          {
+            "criterion": "Communication",
+            "noCode": "Échange direct avec la personne qui réalise.",
+            "nextjs": "Coordination assurée par un responsable d'équipe.",
+            "winner": "noCode"
+          },
+          {
+            "criterion": "Continuité 24/7",
+            "noCode": "Inadaptée sans relais organisé.",
+            "nextjs": "Possible avec rotation et astreinte prévues.",
+            "winner": "nextjs"
+          }
+        ],
+        "conclusion": "Je recommande le renfort freelance pour un lot identifiable ; une équipe dédiée reste préférable lorsque plusieurs rôles ou une continuité permanente sont nécessaires."
+      },
+      "faq": [
+        {
+          "question": "Travaillez-vous en marque blanche pour une agence IA ?",
+          "answer": "Oui, si le rôle, les accès, la confidentialité et les échanges avec le client final sont définis avant le démarrage. Je peux aussi intervenir comme partenaire technique identifié."
+        },
+        {
+          "question": "Pouvez-vous reprendre un projet déjà commencé ?",
+          "answer": "Oui. Je commence par examiner le dépôt, l'architecture, les environnements, les problèmes connus et les critères d'acceptation avant de proposer un premier lot."
+        },
+        {
+          "question": "Qui possède le code et les comptes ?",
+          "answer": "Les dépôts, comptes et environnements restent sous le contrôle de l'agence ou du client. La propriété des livrables et les licences tierces sont précisées dans le contrat."
+        },
+        {
+          "question": "Pouvez-vous intervenir uniquement sur n8n ?",
+          "answer": "Oui. Je peux auditer, corriger ou construire des workflows n8n, leurs API et leur exploitation, sans imposer le développement d'une application complète."
+        },
+        {
+          "question": "Quel est votre tarif pour un renfort technique ?",
+          "answer": "Mon tarif standard est de 350 € par jour. Le budget dépend du périmètre, des dépendances et du niveau de reprise nécessaire."
+        },
+        {
+          "question": "Comment évitez-vous la dépendance à un freelance ?",
+          "answer": "En gardant le code, les comptes et les secrets sous votre contrôle, puis en livrant documentation, configurations, tests convenus et procédure de transfert."
+        }
+      ],
+      "cta": {
+        "title": "Quel lot technique votre agence doit-elle livrer ?",
+        "description": "Partagez le résultat attendu, la stack existante, les dépendances et l'échéance. Je vous répondrai avec un périmètre initial et les points à clarifier.",
+        "buttonLabel": "Cadrer le renfort technique"
+      }
+    }
+  },
+  "en": {
+    "key": "agency-ai-technical-partner",
+    "icon": "business",
+    "title": "Freelance technical partner for AI agencies",
+    "description": "Freelance delivery support for AI agencies and software teams: Next.js applications, n8n workflows, APIs, RAG and AI agents under your project leadership.",
+    "slug": "white-label-ai-development-partner",
+    "color": "purple",
+    "isLanding": true,
+    "cardTitle": "AI agency delivery partner",
+    "cardDescription": "A freelance developer for a defined technical workstream without hidden subcontracting layers.",
+    "seoTitle": "Freelance Technical Partner for AI Agencies",
+    "seoDescription": "White-label AI development support: Next.js, n8n, APIs, RAG and AI agents with documented delivery, confidentiality and clean handoff.",
+    "createdAt": "2026-10-20T00:00:00Z",
+    "updatedAt": "2026-10-20T00:00:00Z",
+    "landing": {
+      "heroText": "Your agency has sold an AI, automation or business application project and needs delivery capacity. I join your team as a freelance developer for a defined workstream: a Next.js interface, API, n8n workflow, RAG system or AI agent. You retain the client relationship and project leadership while I deliver a testable, documented and transferable result.",
+      "heroImage": {
+        "src": "/images/projects/teamia-prospection-cockpit.webp",
+        "alt": "TeamIA prospecting cockpit built as technical delivery support"
+      },
+      "features": [
+        {
+          "icon": "code",
+          "title": "Scoped workstream",
+          "description": "Scope, interfaces, dependencies and acceptance criteria agreed before development."
+        },
+        {
+          "icon": "account_tree",
+          "title": "Next.js, APIs and n8n",
+          "description": "Business UI, backend, data and automation treated as one user journey."
+        },
+        {
+          "icon": "psychology",
+          "title": "Guardrailed AI",
+          "description": "RAG, LLMs and agents connected to rules, sources and human approval."
+        },
+        {
+          "icon": "lock",
+          "title": "Confidential delivery",
+          "description": "Limited access, secrets outside code and public communication only with approval."
+        },
+        {
+          "icon": "verified",
+          "title": "Reviewable progress",
+          "description": "Demonstrations, agreed tests and recorded decisions at meaningful milestones."
+        },
+        {
+          "icon": "description",
+          "title": "Clean handoff",
+          "description": "Code, configuration, documentation and recovery notes transferred to your team."
+        }
+      ],
+      "sections": [
+        {
+          "title": "When an AI agency needs freelance delivery support",
+          "content": "This model works when a project is already sold or scoped but lacks a specific technical capability: building a dashboard, integrating an AI model, connecting APIs, making n8n reliable or taking a prototype toward production. I can join an existing project without replacing the agency's entire delivery process.\n\nThe first discussion identifies the deliverable, dependencies, approver and timeline constraints. If the project needs several disciplines continuously or broad on-call coverage, a dedicated team is more appropriate than one freelancer."
+        },
+        {
+          "title": "White-label or visible collaboration",
+          "content": "The agency chooses the level of visibility that fits the contract. I can work white-label inside your tools and ceremonies, or join as an identified technical partner when the client needs direct access to the developer. Responsibilities and decision channels are written down in both cases.\n\nI do not contact the end client outside the agreed framework or reuse their data, access or deliverables. Any public case study requires approval and removes secrets, identifiers and sensitive commercial information."
+        },
+        {
+          "title": "Applications, automation and AI systems",
+          "content": "I can own a Next.js or React workstream, a Node.js or Python API, PostgreSQL or Supabase data, and the n8n workflows connecting the product to CRM, email, documents or AI services. Scope stays focused on a user outcome rather than a list of technologies.\n\nFor RAG or AI agents, we define approved sources, permissions, output contracts, uncertainty paths and actions requiring human approval. For n8n, handoff also covers failures, duplicates, retries, credentials and operating notes."
+        },
+        {
+          "title": "A concrete TeamIA example",
+          "content": "The [TeamIA prospecting case study](/en/projects/logiciel-prospection-b2b-teamia) shows this delivery model: a business application for campaign setup, prospect review, deduplication and message approval before any action. The interface complements n8n workflows instead of exposing operations teams to execution details.\n\nThe broader [TeamIA project](/en/projects/teamia) also presents an AI agent platform and business demos. These cases document my role and visible deliverables; they do not imply that every engagement uses the same architecture or guarantees the same outcome."
+        },
+        {
+          "title": "Workstream organization and acceptance criteria",
+          "content": "A workstream starts with a short note covering the objective, users, inputs, outputs, dependencies, failure cases and definition of done. Access is limited to what is required and remains in accounts controlled by the agency or client. Decisions that change scope are confirmed in writing.\n\nI deliver in demonstrable increments. Review covers expected behavior, permissions, important failures and the team's ability to operate the system. Code is not considered complete while essential configuration and recovery knowledge exist only in my head."
+        },
+        {
+          "title": "Capacity, rate and continuity",
+          "content": "My published standard rate is **EUR 350 per day or USD 400 per day**, depending on contract currency. The engagement may cover a short audit, a defined workstream or reserved weekly capacity. The proposal specifies included work, third-party services, timing, deliverable ownership and maintenance terms.\n\nLike any freelancer, my capacity is limited. Repositories, accounts, secrets and environments remain under your control to reduce dependency. Documentation, versioned exports and handoff sessions let your team or another contributor continue the work."
+        }
+      ],
+      "comparisonTable": {
+        "title": "Freelance support or a dedicated team?",
+        "intro": "The right model depends on scope and continuity requirements.",
+        "headers": ["Need", "Freelance support", "Dedicated team"],
+        "rows": [
+          {
+            "criterion": "Specialist workstream",
+            "noCode": "Direct delivery on a bounded scope.",
+            "nextjs": "Broader staffing than the work requires.",
+            "winner": "noCode"
+          },
+          {
+            "criterion": "Several skills at once",
+            "noCode": "Capacity limited to one primary contributor.",
+            "nextjs": "Multiple profiles can work in parallel.",
+            "winner": "nextjs"
+          },
+          {
+            "criterion": "Communication",
+            "noCode": "Direct access to the person doing the work.",
+            "nextjs": "Coordination handled by a team lead.",
+            "winner": "noCode"
+          },
+          {
+            "criterion": "24/7 continuity",
+            "noCode": "Not suitable without an organized backup.",
+            "nextjs": "Possible with planned rotation and on-call coverage.",
+            "winner": "nextjs"
+          }
+        ],
+        "conclusion": "Freelance support fits an identifiable workstream; a dedicated team is preferable when several roles or permanent coverage are required."
+      },
+      "faq": [
+        {
+          "question": "Do you work white-label for AI agencies?",
+          "answer": "Yes, when responsibilities, access, confidentiality and end-client communication are defined before work starts. I can also join as an identified technical partner."
+        },
+        {
+          "question": "Can you take over an existing project?",
+          "answer": "Yes. I first review the repository, architecture, environments, known issues and acceptance criteria before proposing the first workstream."
+        },
+        {
+          "question": "Who owns the code and accounts?",
+          "answer": "Repositories, accounts and environments remain controlled by the agency or client. Deliverable ownership and third-party licenses are specified in the contract."
+        },
+        {
+          "question": "Can you work only on n8n?",
+          "answer": "Yes. I can audit, repair or build n8n workflows, their APIs and operating setup without requiring a complete application project."
+        },
+        {
+          "question": "What is your rate for technical delivery support?",
+          "answer": "My standard rate is EUR 350 per day or USD 400 per day depending on contract currency. Budget depends on scope, dependencies and the amount of recovery work required."
+        },
+        {
+          "question": "How do you prevent freelancer dependency?",
+          "answer": "Code, accounts and secrets stay under your control, while delivery includes documentation, configuration, agreed tests and a handoff procedure."
+        }
+      ],
+      "cta": {
+        "title": "What technical workstream does your agency need to deliver?",
+        "description": "Share the expected result, existing stack, dependencies and deadline. I will reply with an initial scope and the questions that need clarification.",
+        "buttonLabel": "Scope delivery support"
+      }
+    }
+  }
+}

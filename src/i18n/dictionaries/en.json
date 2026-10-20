@@ -1724,6 +1724,10 @@
             {
               "title": "Verify before committing",
               "content": "Ask for documented cases, roles, acceptance criteria, code ownership and handover terms. Repositories, accounts and access should be covered by the agreement. A bounded first milestone helps evaluate collaboration."
+            },
+            {
+              "title": "Freelancer or AI agency: compare ownership",
+              "content": "For an AI project, compare who scopes the use case, builds the integration, approves outputs and operates the system after delivery. An experienced freelancer fits a focused workstream with direct communication. An agency is better suited when several disciplines must work in parallel or extended continuity is required.\n\nBoth models can also work together: an agency retains project leadership and the client relationship while a specialist owns a technical workstream. See my [technical delivery support for AI agencies](/en/services/white-label-ai-development-partner)."
             }
           ],
           "features": [
@@ -1766,11 +1770,15 @@
             {
               "question": "Who owns the code?",
               "answer": "Ownership, third-party licenses and access are specified in the contract regardless of provider type."
+            },
+            {
+              "question": "Should I choose a freelancer or an agency for an AI project?",
+              "answer": "A freelancer fits a focused technical scope and direct collaboration. An agency is preferable when several disciplines or permanent continuity are required. The right choice depends on scope, ownership and backup needs."
             }
           ]
         },
         "key": "freelance-vs-agence-offshore-madagascar",
-        "updatedAt": "2026-10-08T00:00:00Z"
+        "updatedAt": "2026-10-20T00:00:00Z"
       },
       {
         "title": "AI Voice Agent Developer (ElevenLabs, Twilio)",

@@ -104,18 +104,18 @@
       },
       {
         "icon": "psychology",
-        "title": "Consultant IA générative freelance : prompts & LLM",
-        "description": "Intégration d'IA générative, optimisation de prompts et évaluation de LLM dans vos produits et processus métier.",
+        "title": "Consultant IA freelance : intégration, prompts & LLM",
+        "description": "Consultant IA freelance pour cadrer et intégrer l'IA générative dans vos produits : audit, prompts, RAG, automatisation, évaluations et garde-fous.",
         "slug": "integration-ia",
         "color": "blue",
-        "cardTitle": "IA générative & LLM",
-        "cardDescription": "Prompts évalués, intégrations LLM et systèmes IA mesurables",
+        "cardTitle": "Consultant IA freelance",
+        "cardDescription": "Audit, intégrations LLM et systèmes IA mesurables",
         "isLanding": true,
-        "seoTitle": "Consultant IA générative freelance | Prompt & LLM",
-        "seoDescription": "Consultant IA générative freelance : prompt engineering, intégration Claude, GPT et Gemini, évaluations, garde-fous et mise en production.",
-        "updatedAt": "2026-10-08T00:00:00Z",
+        "seoTitle": "Consultant IA freelance | Intégration LLM & RAG",
+        "seoDescription": "Consultant IA freelance : audit, automatisation, RAG et intégration Claude, GPT ou Gemini avec évaluations, garde-fous et mise en production.",
+        "updatedAt": "2026-10-20T00:00:00Z",
         "landing": {
-          "heroText": "J'intègre l'IA générative dans vos outils à partir d'un résultat métier mesurable : classer des demandes, extraire des informations, rédiger sous contraintes ou assister une équipe. Le prompt n'est qu'une partie du système. Je versionne les instructions, construis un jeu de tests, mesure les réponses et encadre les actions sensibles avant la mise en production.",
+          "heroText": "Comme consultant IA freelance, je pars d'un résultat métier mesurable : classer des demandes, extraire des informations, chercher dans vos documents ou assister une équipe. J'audite d'abord le processus, puis j'intègre le bon niveau d'IA dans votre produit ou workflow. Le prompt n'est qu'une partie du système : les tests, les données, les coûts et les garde-fous déterminent la mise en production.",
           "features": [
             {
               "icon": "psychology",
@@ -150,8 +150,8 @@
           ],
           "sections": [
             {
-              "title": "Une IA générative utile, pas une démonstration isolée",
-              "content": "Une intégration GenAI devient utile lorsqu'elle reçoit un contexte fiable, produit un format exploitable et s'insère dans un parcours métier. Un simple chat branché sur une API ne suffit pas : il faut définir les entrées, les sorties attendues, les erreurs acceptables et les décisions qui restent humaines.\n\nJe pars d'un flux réel puis j'intègre le modèle dans votre site, SaaS, CRM, base documentaire ou workflow n8n. Les cas pertinents incluent la classification d'emails, l'extraction de données depuis des documents, la préparation de réponses, la synthèse et l'assistance à la recherche."
+              "title": "Ce que couvre une mission de consultant IA freelance",
+              "content": "Une mission peut commencer par l'audit d'un processus, la sélection d'un premier cas d'usage et un prototype limité. Si la valeur et la qualité sont vérifiées, je construis ensuite l'intégration : contexte, API, interface, automatisation, évaluation et suivi en production. Une intégration GenAI devient utile lorsqu'elle reçoit un contexte fiable, produit un format exploitable et s'insère dans un parcours métier.\n\nJe pars d'un flux réel puis j'intègre le modèle dans votre site, SaaS, CRM, base documentaire ou workflow n8n. Les cas pertinents incluent la classification d'emails, l'extraction de données depuis des documents, la préparation de réponses, la synthèse et l'assistance à la recherche. Un simple chat branché sur une API ne suffit pas : il faut définir les entrées, les sorties attendues, les erreurs acceptables et les décisions qui restent humaines."
             },
             {
               "title": "Prompt engineer freelance : ce que je livre réellement",
@@ -1705,6 +1705,10 @@
             {
               "title": "Vérifier avant de signer",
               "content": "Demandez des cas documentés, le rôle de chacun, les critères d’acceptation, la propriété du code et les conditions de transfert. Les dépôts, comptes et accès doivent être prévus dans le contrat. Un premier jalon borné permet d’évaluer la collaboration."
+            },
+            {
+              "title": "Freelance ou agence IA : un choix de responsabilité",
+              "content": "Pour un projet IA, comparez surtout qui cadre le cas d’usage, qui développe l’intégration, qui valide les sorties et qui exploite le système après la livraison. Un freelance expérimenté convient à un lot ciblé avec un interlocuteur direct. Une agence est plus adaptée lorsqu’il faut mobiliser plusieurs métiers en parallèle ou organiser une continuité étendue.\n\nLes deux modèles peuvent aussi collaborer : une agence garde le pilotage et la relation client tandis qu’un spécialiste prend en charge un lot technique. Voir mon offre de [renfort technique pour agence IA](/services/renfort-technique-agence-ia)."
             }
           ],
           "features": [
@@ -1747,11 +1751,15 @@
             {
               "question": "Qui possède le code ?",
               "answer": "La propriété, les licences tierces et les accès sont précisés dans le contrat, quel que soit le type de prestataire."
+            },
+            {
+              "question": "Faut-il choisir un freelance ou une agence pour un projet IA ?",
+              "answer": "Un freelance convient à un périmètre technique ciblé et une relation directe. Une agence est préférable si plusieurs expertises ou une continuité permanente sont nécessaires. Le choix dépend du lot, des responsabilités et du relais attendu."
             }
           ]
         },
         "key": "freelance-vs-agence-offshore-madagascar",
-        "updatedAt": "2026-10-08T00:00:00Z"
+        "updatedAt": "2026-10-20T00:00:00Z"
       },
       {
         "title": "Développeur d'agents vocaux IA (ElevenLabs, Twilio)",

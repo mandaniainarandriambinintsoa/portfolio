@@ -2,18 +2,18 @@
   "fr": {
     "key": "remote-n8n-consultant",
     "icon": "hub",
-    "title": "Développeur et consultant n8n freelance à distance",
-    "description": "Développeur n8n freelance : workflows métier, API, audit et migration. Exemples livrés, documentation et accompagnement à distance depuis Madagascar.",
+    "title": "Consultant n8n freelance pour la France et à distance",
+    "description": "Consultant n8n freelance pour entreprises en France et équipes à distance : workflows métier, API, audit, migration et documentation.",
     "slug": "consultant-automatisation-n8n-international",
     "color": "emerald",
     "isLanding": true,
-    "cardTitle": "Développeur n8n à distance",
+    "cardTitle": "Consultant n8n freelance",
     "cardDescription": "Migration, self-hosting, scaling et workflows IA pour des automatisations n8n fiables en production.",
-    "seoTitle": "Développeur n8n freelance | Automatisation & intégrations",
-    "seoDescription": "Développeur n8n freelance : workflows métier, API, audit et migration. Exemples livrés, documentation et accompagnement à distance depuis Madagascar.",
-    "updatedAt": "2026-10-15T00:00:00Z",
+    "seoTitle": "Consultant n8n freelance France | Automatisation",
+    "seoDescription": "Consultant n8n freelance pour la France : workflows métier, API, audit, migration et self-hosting avec documentation et livraison à distance.",
+    "updatedAt": "2026-10-20T00:00:00Z",
     "landing": {
-      "heroText": "Vous cherchez un développeur n8n pour connecter vos outils ou reprendre des workflows difficiles à maintenir ? Je construis des automatisations métier, intègre vos API et audite vos scénarios existants. Chaque mission commence par un processus précis, des critères de validation et un périmètre de livraison convenu.",
+      "heroText": "Vous cherchez un consultant n8n freelance en France ou à distance pour connecter vos outils et fiabiliser vos workflows ? Depuis Madagascar, je travaille en français avec des équipes européennes : automatisations métier, intégrations API, audit et migration. Chaque mission commence par un processus précis, des critères de validation et un périmètre de livraison convenu.",
       "heroImage": {
         "src": "/images/projects/leads-automation-showcase.png",
         "alt": "Workflow n8n de collecte et qualification de leads livré par Manda"
@@ -76,8 +76,8 @@
           "content": "Mon [template officiel n8n](https://n8n.io/workflows/17715-score-rss-opportunities-to-google-sheets-and-send-priority-digests-with-gmail/) classe des opportunités RSS, retire les doublons et prépare un récapitulatif Gmail. Consultez aussi le [cas de veille d’opportunités](/projects/international-opportunity-agent-n8n) pour comprendre le périmètre et la validation humaine.\n\nLe [cas TeamIA Prospection](/projects/logiciel-prospection-b2b-teamia) montre comment une interface métier complète n8n : campagnes, recherche, déduplication et revue humaine des messages. La validation enregistre une décision ; elle ne déclenche pas un envoi."
         },
         {
-          "title": "Une collaboration a distance qui reste lisible",
-          "content": "Je travaille depuis Antananarivo, en GMT+3, avec des équipes européennes et internationales. Pour une équipe américaine, nous définissons une plage de recouvrement utile, puis nous gardons le reste de la collaboration asynchrone : spécifications écrites, points d'avancement courts, décisions tracées et démonstrations vidéo ou live.\n\nLes workflows sont livrés avec des noms stables, des notes d'exploitation, des exports versionnés et une liste claire des credentials à configurer. Cette discipline réduit la dépendance à une personne et permet à l'équipe de reprendre la main."
+          "title": "Un consultant n8n pour la France, à distance",
+          "content": "Je travaille depuis Antananarivo, en GMT+3, en français avec des entreprises et agences situées en France ou ailleurs en Europe. Nous définissons une plage de recouvrement utile, puis nous gardons le reste de la collaboration asynchrone : spécifications écrites, points d'avancement courts, décisions tracées et démonstrations vidéo ou en direct. Il ne s'agit pas d'une présence locale en France, mais d'une prestation distante avec un interlocuteur technique direct.\n\nLes workflows sont livrés avec des noms stables, des notes d'exploitation, des exports versionnés et une liste claire des credentials à configurer. Cette discipline réduit la dépendance à une personne et permet à l'équipe de reprendre la main."
         },
         {
           "title": "Format d'intervention et tarif",
@@ -123,6 +123,10 @@
         "conclusion": "Si n8n porte déjà une partie du chiffre d'affaires ou des opérations, la mission doit couvrir la continuité de service, pas seulement le canvas du workflow."
       },
       "faq": [
+        {
+          "question": "Intervenez-vous comme consultant n8n pour des entreprises en France ?",
+          "answer": "Oui, à distance depuis Madagascar. Les échanges se font en français, avec des horaires de recouvrement convenus, des livrables écrits et des démonstrations. Je ne revendique pas de bureau ou de présence locale en France."
+        },
         {
           "question": "Combien coûte un consultant n8n à distance ?",
           "answer": "Mon tarif standard est de 400 $/jour ou 350 EUR/jour selon la devise du contrat. Après un audit initial, je peux proposer une estimation par lot ou une capacité hebdomadaire pour une mission longue."

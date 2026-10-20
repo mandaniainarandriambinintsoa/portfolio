@@ -30,6 +30,8 @@ const SLUG_MAP_FR_TO_EN: Record<string, string> = {
     "services/n8n-automation-expert-madagascar",
   "services/consultant-automatisation-n8n-international":
     "services/remote-n8n-automation-consultant",
+  "services/renfort-technique-agence-ia":
+    "services/white-label-ai-development-partner",
   "services/developpeur-react-nextjs-madagascar":
     "services/hire-react-nextjs-developer-madagascar",
   "services/developpeur-nextjs-supabase-madagascar":

@@ -1,6 +1,7 @@
 import { getStaticDictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import type { ServiceItem } from "@/lib/types";
+import agencyAiTechnicalPartner from "./services/agency-ai-technical-partner.json";
 import remoteN8nConsultant from "./services/remote-n8n-consultant.json";
 
 function withFallbackKeys(items: ServiceItem[]): ServiceItem[] {
@@ -14,6 +15,7 @@ async function getDictionaryServices(locale: Locale): Promise<ServiceItem[]> {
   const dict = await getStaticDictionary(locale);
   return withFallbackKeys([
     ...(dict.services.items as ServiceItem[]),
+    agencyAiTechnicalPartner[locale] as ServiceItem,
     remoteN8nConsultant[locale] as ServiceItem,
   ]);
 }
