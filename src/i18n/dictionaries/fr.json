@@ -1250,6 +1250,10 @@
               "content": "Un développeur web freelance full stack prend en charge le parcours complet : cadrage, interface, API, données, déploiement et suivi. Vous évitez les passages répétés entre un commercial, un chef de projet, une équipe front et une équipe back pour chaque décision.\n\nMa stack principale reste JavaScript et TypeScript : React et Next.js pour l'interface, Node.js pour les API, PostgreSQL ou Supabase pour les données. Ce socle commun garde les types et les règles métier cohérents d'un bout à l'autre. Pour les clients en France, le travail à distance reste simple : je suis francophone, basé à Antananarivo en UTC+3, avec plusieurs heures de recouvrement chaque jour.\n\nMon TJM indicatif est de 350 €/jour. Le devis précise le périmètre, les livrables et les critères de validation avant le démarrage. Vous pouvez vérifier le niveau attendu dans le portfolio, puis choisir la spécialisation adaptée : React/Next.js, Node.js/API, Supabase ou agents IA."
             },
             {
+              "title": "Des réalisations vérifiables avant de choisir votre développeur",
+              "content": "Un portfolio utile doit montrer le rôle réellement tenu, les choix techniques et les limites du projet. [Factumation](/projects/factumation) présente une application métier de facturation avec données structurées et parcours opérationnels. [PaidMada](/projects/paidmada-mobile-money) documente une architecture d'API Mobile Money avec statuts, callbacks et mode de test. [TeamIA](/projects/teamia) illustre une plateforme d'agents IA reliée à des besoins métier.\n\nCes études de cas permettent d'évaluer mon travail sur l'interface, le backend, les données et les intégrations avant un échange commercial. Pour votre projet, je précise ensuite ce qui est réutilisable, ce qui doit être développé et comment la livraison sera validée."
+            },
+            {
               "title": "Le front-end : React et Next.js",
               "content": "Le front-end JavaScript moderne repose sur React et son framework Next.js, qui gèrent le rendu serveur, le SEO et les performances. C'est la brique visible de votre produit, celle que vos utilisateurs touchent en premier.\n\nPour un site vitrine rapide, un SaaS ou un tableau de bord, la spécialisation à choisir est le [développeur React / Next.js à Madagascar](/services/developpeur-react-nextjs-madagascar). Vous y trouverez le détail des compétences attendues, le rendu statique ou serveur, l'optimisation Core Web Vitals et l'accessibilité. Next.js permet aussi de servir front et API depuis un même projet, ce qui simplifie le déploiement et réduit la surface technique à maintenir sur la durée."
             },
@@ -1376,7 +1380,7 @@
           ]
         },
         "key": "developpeur-javascript-madagascar",
-        "updatedAt": "2026-10-15T00:00:00Z"
+        "updatedAt": "2026-10-20T00:00:00Z"
       },
       {
         "icon": "dns",

@@ -1281,6 +1281,10 @@
               "content": "A freelance full stack web developer can own the complete delivery path: scoping, interface, API, data, deployment and follow-up. You avoid routing every decision through a sales contact, project manager, front-end team and back-end team.\n\nMy main stack is JavaScript and TypeScript: React and Next.js for the interface, Node.js for APIs, PostgreSQL or Supabase for data. That shared foundation keeps types and business rules consistent from end to end. Remote work with European clients is straightforward: I work in French and English from Antananarivo on UTC+3, with several hours of daily overlap.\n\nMy indicative day rate is €350. The quote defines scope, deliverables and acceptance criteria before work starts. You can check the expected level in the portfolio, then choose the relevant specialization: React/Next.js, Node.js/API, Supabase or AI agents."
             },
             {
+              "title": "Review verifiable delivery before choosing a developer",
+              "content": "A useful portfolio should explain the role performed, the technical choices and the limits of each project. [Factumation](/en/projects/factumation) presents an invoicing business application with structured data and operational workflows. [PaidMada](/en/projects/paidmada-mobile-money) documents a Mobile Money API architecture with statuses, callbacks and a test mode. [TeamIA](/en/projects/teamia) shows an AI-agent platform connected to business requirements.\n\nThese case studies let you assess my work across interfaces, backend services, data and integrations before a sales call. For your project, I then identify what can be reused, what needs to be built and how delivery will be accepted."
+            },
+            {
               "title": "The front-end: React and Next.js",
               "content": "Modern JavaScript front-end relies on React and its framework Next.js, which handle server rendering, SEO and performance. It is the visible part of your product, the one your users touch first.\n\nFor a fast marketing site, a SaaS or a dashboard, the specialization to choose is the [React / Next.js developer](/en/services/hire-react-nextjs-developer-madagascar). There you will find the expected skills, static or server rendering, Core Web Vitals optimization and accessibility. Next.js can also serve the front-end and the API from the same project, which simplifies deployment and reduces the technical surface to maintain over time."
             },
@@ -1407,7 +1411,7 @@
           ]
         },
         "key": "developpeur-javascript-madagascar",
-        "updatedAt": "2026-10-15T00:00:00Z"
+        "updatedAt": "2026-10-20T00:00:00Z"
       },
       {
         "icon": "dns",

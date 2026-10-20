@@ -846,6 +846,12 @@ export const frSolutions: Solution[] = [
           "Étude de cas avec qualification des conversations, scoring, dashboard et actions commerciales contrôlées.",
       },
       {
+        label: "Guide : créer un agent IA Facebook Messenger",
+        href: "/blog/creer-agent-ia-facebook-messenger",
+        description:
+          "Architecture, choix entre chatbot et agent, métriques de suivi et étapes de mise en production.",
+      },
+      {
         label: "Solution Agent IA prospection",
         href: "/solutions/agent-ia-prospection",
         description:
@@ -915,6 +921,7 @@ export const frSolutions: Solution[] = [
         "Nous pouvons commencer par un périmètre mesurable : une source Messenger, quatre intentions, un CRM et une validation humaine avant les réponses sensibles.",
       buttonLabel: "Cadrer mon agent Facebook",
     },
+    updatedAt: "2026-10-20",
   },
   {
     slug: "agent-ia-prospection",
@@ -2551,6 +2558,12 @@ export const enSolutions: Solution[] = [
           "Case study covering conversation qualification, scoring, dashboard and controlled sales actions.",
       },
       {
+        label: "Guide: build a Facebook Messenger AI agent",
+        href: "/en/blog/creer-agent-ia-facebook-messenger",
+        description:
+          "Architecture, chatbot-versus-agent decisions, operating metrics and production rollout steps.",
+      },
+      {
         label: "AI prospecting agent solution",
         href: "/en/solutions/ai-prospecting-agent",
         description:
@@ -2619,6 +2632,7 @@ export const enSolutions: Solution[] = [
         "We can start with a measurable scope: one Messenger source, four intents, one CRM and human approval before sensitive replies.",
       buttonLabel: "Scope my Facebook agent",
     },
+    updatedAt: "2026-10-20",
   },
   {
     slug: "ai-prospecting-agent",

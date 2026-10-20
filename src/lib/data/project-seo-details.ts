@@ -1271,6 +1271,12 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
             "Voir la solution complète pour qualifier Messenger, préparer les réponses et synchroniser le CRM avec n8n.",
         },
         {
+          label: "Guide d'architecture Agent IA Facebook",
+          href: "/blog/creer-agent-ia-facebook-messenger",
+          description:
+            "Comparer chatbot et agent, choisir les garde-fous et suivre les résultats pendant les premières semaines.",
+        },
+        {
           label: "Développeur agent IA",
           href: "/services/developpeur-agent-ia-madagascar",
           description:
@@ -1345,6 +1351,12 @@ const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
           href: "/en/solutions/facebook-ai-agent",
           description:
             "Complete architecture for Messenger qualification, reply drafts and CRM synchronization with n8n.",
+        },
+        {
+          label: "Facebook AI agent architecture guide",
+          href: "/en/blog/creer-agent-ia-facebook-messenger",
+          description:
+            "Compare chatbots and agents, choose safeguards and track outcomes during the first weeks.",
         },
         {
           label: "AI Agent Developer",
