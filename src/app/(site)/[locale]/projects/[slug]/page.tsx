@@ -72,6 +72,10 @@ export async function generateMetadata({
     projectSeo?.metaDescription ?? project.description,
   );
   const prefix = locale === "fr" ? "" : "/en";
+  const imageDimensions =
+    slug === "audio-recorder-windows"
+      ? { width: 618, height: 848 }
+      : { width: 1200, height: 675 };
   return {
     title: metaTitle,
     description: metaDescription,
@@ -89,8 +93,7 @@ export async function generateMetadata({
       images: [
         {
           url: `${SITE_URL}${project.image}`,
-          width: 1200,
-          height: 675,
+          ...imageDimensions,
           alt: metaTitle,
         },
       ],
@@ -267,7 +270,9 @@ export default async function ProjectPage({
                 fill
                 sizes="(max-width: 768px) 100vw, 896px"
                 className={
-                  usesWideWorkflowScreenshot ? "object-contain" : "object-cover"
+                  usesWideWorkflowScreenshot || slug === "audio-recorder-windows"
+                    ? "bg-[#f7f9fc] object-contain"
+                    : "object-cover"
                 }
                 priority
               />
@@ -294,7 +299,13 @@ export default async function ProjectPage({
                   },
                 }}
               >
-                {locale === "fr" ? "Voir le projet" : "View project"}
+                {slug === "audio-recorder-windows"
+                  ? locale === "fr"
+                    ? "Télécharger pour Windows"
+                    : "Download for Windows"
+                  : locale === "fr"
+                    ? "Voir le projet"
+                    : "View project"}
               </Button>
             </div>
           )}
@@ -534,13 +545,17 @@ export default async function ProjectPage({
                 },
               }}
             >
-              {slug === "factumation"
+              {slug === "audio-recorder-windows"
                 ? locale === "fr"
-                  ? "Créer une facture gratuitement"
-                  : "Create a free invoice"
-                : locale === "fr"
-                  ? "Voir le projet"
-                  : "View Project"}
+                  ? "Télécharger pour Windows"
+                  : "Download for Windows"
+                : slug === "factumation"
+                  ? locale === "fr"
+                    ? "Créer une facture gratuitement"
+                    : "Create a free invoice"
+                  : locale === "fr"
+                    ? "Voir le projet"
+                    : "View Project"}
             </Button>
           )}
           <Button

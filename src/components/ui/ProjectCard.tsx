@@ -54,7 +54,8 @@ export default function ProjectCard({
           sizes="(max-width: 640px) 100vw, (max-width: 1152px) 50vw, 560px"
           className={`transition-transform duration-700 ease-out group-hover:scale-[1.04] ${
             project.slug === "geo-seo-boost" ||
-            project.slug === "automatisation-prospection-n8n-lemlist"
+            project.slug === "automatisation-prospection-n8n-lemlist" ||
+            project.slug === "audio-recorder-windows"
               ? "bg-[#f7f9fc] object-contain"
               : "object-cover object-top"
           }`}

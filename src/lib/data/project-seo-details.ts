@@ -43,6 +43,238 @@ export type ProjectSeoDetails = {
 
 const projectSeoDetails: Record<string, Record<Locale, ProjectSeoDetails>> = {
   "logiciel-prospection-b2b-teamia": teamiaProspectionCaseStudy,
+  "audio-recorder-windows": {
+    fr: {
+      metaTitle: "Enregistreur audio Windows : application + micro",
+      metaDescription:
+        "Téléchargez un enregistreur audio Windows open source pour capturer une application et le micro en MP3 local, sans vidéo, compte ni envoi cloud.",
+      kicker: "Outil audio local pour Windows",
+      title:
+        "Enregistrer le son d’une application et le microphone sous Windows",
+      summary:
+        "Audio Recorder est une application de bureau légère conçue pour enregistrer un appel sans capturer la vidéo. Elle isole le son d’une application Windows, peut y ajouter le microphone et sauvegarde le résultat en MP3 sur le PC. Le projet est une adaptation transparente du dépôt open source apecia-org/audio-recorder sous licence MIT, forkée puis améliorée pour mon propre usage : interface simplifiée, stockage explicite, permissions réduites, configuration Tauri durcie et création de fichier plus fiable.",
+      facts: [
+        { label: "Capture", value: "Une application Windows + microphone" },
+        { label: "Format", value: "MP3 mono, 64 kbit/s, environ 29 Mo/heure" },
+        { label: "Stockage", value: "Local, dans Documents\\AudioRecorder" },
+        { label: "Base", value: "Fork open source MIT amélioré" },
+      ],
+      sections: [
+        {
+          title: "Un enregistreur d’appel sans vidéo ni cloud",
+          paragraphs: [
+            "Le besoin de départ était simple : conserver l’audio d’un échange avec un prospect tout en évitant le poids, la complexité et les données supplémentaires d’une capture vidéo. Les outils de visioconférence et les logiciels de capture d’écran savent souvent enregistrer une réunion entière, mais ils sont surdimensionnés lorsqu’un fichier audio suffit.",
+            "Audio Recorder ne filme pas l’écran. L’utilisateur choisit l’application qui diffuse l’appel, active ou non son microphone, puis lance l’enregistrement. Le résultat est un fichier MP3 compact, lisible par les lecteurs habituels et facile à archiver ou à transmettre à un outil de transcription. L’application rappelle également qu’il faut informer son interlocuteur et obtenir son accord avant d’enregistrer.",
+          ],
+        },
+        {
+          title: "Enregistrer une application précise et son microphone",
+          paragraphs: [
+            "Au démarrage, l’interface liste les applications audio détectées sous Windows, par exemple Google Chrome, Discord ou un logiciel de réunion. La recherche permet de retrouver rapidement la bonne fenêtre. Cette sélection évite de mélanger volontairement tous les sons du PC avec la conversation ciblée.",
+            "L’option « Inclure mon microphone » ajoute la voix de l’utilisateur au même fichier. Après l’arrêt, le MP3 finalisé se trouve dans le dossier Documents\\AudioRecorder. Un bouton ouvre directement ce dossier afin que l’emplacement de sauvegarde ne soit jamais ambigu. À 64 kbit/s en mono, l’estimation affichée est d’environ 29 Mo par heure : un compromis adapté à la parole et nettement plus léger qu’une vidéo.",
+          ],
+        },
+        {
+          title: "Une application Tauri 2, Rust et React",
+          paragraphs: [
+            "L’interface est développée en React et TypeScript, tandis que Tauri 2 relie la fenêtre de bureau au moteur Rust. La partie native utilise les capacités audio de Windows pour récupérer le flux du processus sélectionné et le combiner, si demandé, avec l’entrée microphone. Le traitement reste sur la machine et l’application n’exige ni compte utilisateur ni service distant.",
+            "Cette architecture permet de distribuer un véritable installateur Windows sans embarquer un navigateur complet. Les autorisations Tauri ont été limitées aux commandes nécessaires, la politique de sécurité du contenu a été renforcée et les dépendances ont été actualisées. L’enregistrement passe d’abord par un fichier temporaire .part, puis par un renommage final, ce qui réduit le risque de présenter comme terminé un MP3 interrompu ou incomplet.",
+          ],
+        },
+        {
+          title: "Un fork GitHub amélioré, pas un projet présenté comme créé de zéro",
+          paragraphs: [
+            "Le point de départ est le projet apecia-org/audio-recorder publié sur GitHub sous licence MIT. Je l’ai forké sur mon compte personnel, audité, adapté et maintenu pour répondre à mon scénario d’usage. L’attribution au dépôt d’origine et sa licence sont conservées dans le code source et dans la publication téléchargeable.",
+            "Les améliorations portent notamment sur une interface française orientée appel, une explication claire du stockage local, l’ouverture du dossier de sortie, l’estimation du poids, la réduction des permissions, le durcissement de la configuration de l’application et la fiabilisation de la sauvegarde. Cette démarche montre aussi un travail important en ingénierie logicielle : savoir analyser une base existante, vérifier ses frontières de confiance et transformer un prototype open source en outil cohérent pour un besoin réel.",
+          ],
+        },
+        {
+          title: "Confidentialité, vérifications et limites connues",
+          paragraphs: [
+            "L’audit du code de cette version n’a identifié ni télémétrie, ni téléversement des enregistrements, ni compte en ligne, ni mécanisme de mise à jour distant. Les fichiers audio restent dans le dossier local indiqué. Les contrôles automatisés couvrent l’audit des dépendances JavaScript, la compilation de l’interface, le formatage et les tests Rust ainsi que Clippy. Des enregistrements MP3 réels ont également été ouverts et inspectés après un test local.",
+            "L’application est actuellement distribuée sans certificat de signature de code. Windows SmartScreen peut donc afficher un avertissement au premier téléchargement : cela ne constitue pas une preuve de danger, mais l’absence de signature doit être annoncée clairement. Le code source public permet de vérifier la version et de la compiler soi-même. Comme pour tout enregistrement de conversation, l’utilisateur reste responsable d’obtenir le consentement requis et de protéger les fichiers produits.",
+          ],
+        },
+        {
+          title: "Télécharger l’installeur ou examiner le code source",
+          paragraphs: [
+            "La version 0.1.1 est publiée sur mon GitHub personnel avec un installeur EXE et un paquet MSI pour Windows x64. La page de publication regroupe les binaires, les notes de version, l’attribution open source et les limites connues. Elle constitue le point de téléchargement recommandé plutôt qu’un fichier opaque hébergé séparément.",
+            "Le dépôt du fork reste public pour permettre l’examen du code et le suivi des évolutions. Cette réalisation n’est pas un service cloud : elle fonctionne localement sur Windows et vise d’abord les appels où seule une trace audio compacte est nécessaire. Une courte vérification du microphone, de l’application choisie et du fichier produit reste conseillée avant un échange important.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Télécharger Audio Recorder v0.1.1",
+          href: "https://github.com/mandaniainarandriambinintsoa/audio-recorder/releases/tag/v0.1.1",
+          description: "Installeur EXE et paquet MSI pour Windows x64.",
+        },
+        {
+          label: "Consulter le fork et son code source",
+          href: "https://github.com/mandaniainarandriambinintsoa/audio-recorder",
+          description: "Dépôt public de la version adaptée et améliorée.",
+        },
+        {
+          label: "Voir le projet open source d’origine",
+          href: "https://github.com/apecia-org/audio-recorder",
+          description: "Dépôt apecia-org sous licence MIT utilisé comme base.",
+        },
+        {
+          label: "Discuter d’un outil métier sur mesure",
+          href: "/contact",
+          description: "Transformer un besoin concret en application locale ou web.",
+        },
+      ],
+      faq: [
+        {
+          question:
+            "Comment enregistrer le son d’une application et mon micro sous Windows ?",
+          answer:
+            "Ouvrez Audio Recorder, sélectionnez l’application qui diffuse l’appel, cochez « Inclure mon microphone », puis lancez l’enregistrement. Le MP3 final est sauvegardé dans Documents\\AudioRecorder.",
+        },
+        {
+          question: "L’outil enregistre-t-il la vidéo ou l’écran ?",
+          answer:
+            "Non. Cette version enregistre uniquement l’audio de l’application choisie et, si l’option est activée, le microphone.",
+        },
+        {
+          question: "Les enregistrements sont-ils envoyés dans le cloud ?",
+          answer:
+            "Non. Cette version ne nécessite pas de compte et sauvegarde les MP3 localement sur le PC. L’audit du code n’a identifié aucun envoi des enregistrements ni télémétrie.",
+        },
+        {
+          question: "Combien pèse une heure d’enregistrement ?",
+          answer:
+            "Le MP3 mono à 64 kbit/s représente environ 29 Mo par heure. La taille réelle peut légèrement varier selon la durée et la finalisation du fichier.",
+        },
+        {
+          question:
+            "Pourquoi Windows SmartScreen peut-il afficher un avertissement ?",
+          answer:
+            "La version téléchargeable n’est pas encore signée avec un certificat de signature de code. Le dépôt est public pour permettre la vérification du code et une compilation indépendante.",
+        },
+        {
+          question: "Ce logiciel a-t-il été créé entièrement de zéro ?",
+          answer:
+            "Non. Il s’agit d’un fork amélioré du projet GitHub apecia-org/audio-recorder sous licence MIT. Le dépôt d’origine est crédité dans le code, la publication et cette étude de cas.",
+        },
+      ],
+    },
+    en: {
+      metaTitle: "Windows audio recorder for one app and microphone",
+      metaDescription:
+        "Download an open-source Windows audio recorder that captures one application and your microphone to a local MP3, with no video, account or cloud upload.",
+      kicker: "Local audio tool for Windows",
+      title: "Record one application and your microphone on Windows",
+      summary:
+        "Audio Recorder is a lightweight desktop application built to record a call without capturing video. It isolates the audio of one Windows application, optionally mixes in the microphone and saves the result as an MP3 on the computer. The project transparently builds on a fork of the MIT-licensed apecia-org/audio-recorder GitHub repository and improves it for my own use case with a simpler interface, explicit local storage, reduced permissions, a hardened Tauri configuration and more reliable file finalization.",
+      facts: [
+        { label: "Capture", value: "One Windows application + microphone" },
+        { label: "Format", value: "Mono MP3, 64 kbps, about 29 MB/hour" },
+        { label: "Storage", value: "Local, in Documents\\AudioRecorder" },
+        { label: "Foundation", value: "Improved MIT open-source fork" },
+      ],
+      sections: [
+        {
+          title: "A call recorder without video or cloud storage",
+          paragraphs: [
+            "The original need was straightforward: keep the audio of a prospect call without the weight, complexity and extra personal data of a video capture. Meeting platforms and screen recorders can often save an entire session, but they are oversized when a compact speech recording is all that is required.",
+            "Audio Recorder does not capture the screen. The user chooses the application playing the call, decides whether to include the microphone and starts recording. The output is a compact MP3 that works with standard players and can later be archived or passed to a transcription tool. The interface also reminds users to inform the other participant and obtain consent before recording.",
+          ],
+        },
+        {
+          title: "Capture a specific application and the microphone",
+          paragraphs: [
+            "At launch, the interface lists audio-enabled Windows applications such as Google Chrome, Discord or a meeting client. Search makes it easier to identify the right process. Selecting one source keeps the intended conversation separate from unrelated computer sounds.",
+            "The microphone option adds the user's voice to the same file. When recording stops, the completed MP3 is stored in Documents\\AudioRecorder, and a dedicated button opens that folder. At mono 64 kbps, the interface estimates roughly 29 MB per hour, a practical compromise for speech and far smaller than a video recording.",
+          ],
+        },
+        {
+          title: "Built with Tauri 2, Rust and React",
+          paragraphs: [
+            "The user interface uses React and TypeScript, while Tauri 2 connects the desktop window to the Rust engine. The native layer uses Windows audio capabilities to capture the selected process and, when requested, mix it with microphone input. Processing stays on the computer and the application requires neither an account nor a remote service.",
+            "This architecture produces a real Windows installer without bundling a complete browser. Tauri permissions were narrowed to the required commands, the content security policy was hardened and dependencies were updated. Recordings are first written to a temporary .part file and renamed only after successful finalization, reducing the chance that an interrupted file appears complete.",
+          ],
+        },
+        {
+          title: "An improved GitHub fork, not a project claimed as built from scratch",
+          paragraphs: [
+            "The starting point is apecia-org/audio-recorder, an MIT-licensed GitHub project. I forked it to my personal account, audited it, adapted it and maintained it for this specific workflow. The upstream repository and licence remain credited in the source and downloadable release.",
+            "The improvements include a call-focused French interface, explicit local-storage information, a direct output-folder action, file-size guidance, reduced permissions, hardened application settings and more reliable saving. The work demonstrates a valuable engineering capability: assessing an existing open-source foundation, checking its trust boundaries and turning it into a coherent tool for a real operational need.",
+          ],
+        },
+        {
+          title: "Privacy, verification and known limitations",
+          paragraphs: [
+            "The reviewed version contains no recording upload, telemetry, online account or remote updater. Audio stays in the displayed local folder. Automated checks cover the JavaScript dependency audit, frontend build, Rust formatting, tests and Clippy. Real MP3 outputs were also opened and inspected after a local recording test.",
+            "The application is currently distributed without a code-signing certificate, so Windows SmartScreen may warn on first download. That warning is not proof of malware, but the missing signature must be stated clearly. The public source lets users inspect and build the same project themselves. Users remain responsible for obtaining the consent required to record a conversation and protecting the resulting files.",
+          ],
+        },
+        {
+          title: "Download the installer or inspect the source",
+          paragraphs: [
+            "Version 0.1.1 is available from my personal GitHub account as an EXE installer and an x64 Windows MSI package. The release page keeps the binaries, release notes, upstream attribution and known limitations together, making it the recommended download location instead of an opaque standalone file.",
+            "The fork remains public for code review and future changes. This is not a cloud service: it runs locally on Windows and targets calls where a compact audio record is enough. Before an important conversation, a short test of the selected application, microphone and completed MP3 is still recommended.",
+          ],
+        },
+      ],
+      relatedLinks: [
+        {
+          label: "Download Audio Recorder v0.1.1",
+          href: "https://github.com/mandaniainarandriambinintsoa/audio-recorder/releases/tag/v0.1.1",
+          description: "EXE installer and MSI package for Windows x64.",
+        },
+        {
+          label: "Inspect the fork and source code",
+          href: "https://github.com/mandaniainarandriambinintsoa/audio-recorder",
+          description: "Public repository for the adapted and improved version.",
+        },
+        {
+          label: "View the upstream open-source project",
+          href: "https://github.com/apecia-org/audio-recorder",
+          description: "The MIT-licensed apecia-org repository used as the foundation.",
+        },
+        {
+          label: "Discuss a custom business tool",
+          href: "/en/contact",
+          description: "Turn a practical need into a local or web application.",
+        },
+      ],
+      faq: [
+        {
+          question:
+            "How do I record one application and my microphone on Windows?",
+          answer:
+            "Open Audio Recorder, select the application playing the call, enable the microphone option and start recording. The completed MP3 is saved in Documents\\AudioRecorder.",
+        },
+        {
+          question: "Does the tool record video or the screen?",
+          answer:
+            "No. This version records only the selected application's audio and, when enabled, the microphone.",
+        },
+        {
+          question: "Are recordings uploaded to the cloud?",
+          answer:
+            "No. This version requires no account and saves MP3 files locally. The code audit found no recording upload or telemetry.",
+        },
+        {
+          question: "How large is one hour of recording?",
+          answer:
+            "A mono MP3 at 64 kbps uses roughly 29 MB per hour. The final size can vary slightly with duration and file finalization.",
+        },
+        {
+          question: "Why can Windows SmartScreen display a warning?",
+          answer:
+            "The downloadable build is not yet signed with a code-signing certificate. The repository is public so the code can be inspected and built independently.",
+        },
+        {
+          question: "Was this software created entirely from scratch?",
+          answer:
+            "No. It is an improved fork of the MIT-licensed apecia-org/audio-recorder GitHub project. The upstream repository is credited in the source, release and this case study.",
+        },
+      ],
+    },
+  },
   "optimisation-performance-manda-ia": {
     fr: {
       metaTitle: "Audit performance Next.js : étude de cas manda-ia.com",

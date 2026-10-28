@@ -1,5 +1,25 @@
 [
   {
+    "id": "52be0f70-dc80-4bcb-9d2f-f17f8e9f6d21",
+    "slug": "audio-recorder-windows",
+    "title_fr": "Audio Recorder — enregistreur audio Windows",
+    "title_en": "Audio Recorder — Windows audio recorder",
+    "subtitle_fr": "Enregistrer une application et le microphone dans un MP3 local",
+    "subtitle_en": "Record one application and your microphone to a local MP3",
+    "description_fr": "Adaptation open source d’un projet GitHub sous licence MIT pour répondre à un besoin concret : enregistrer uniquement l’audio d’un appel, sans capturer la vidéo. Cette version améliorée permet de sélectionner une application Windows, d’ajouter le microphone et de produire un MP3 mono 64 kbit/s stocké localement dans Documents\\AudioRecorder. J’ai simplifié l’interface, ajouté l’ouverture directe du dossier, durci la configuration Tauri, réduit les permissions et fiabilisé la finalisation des fichiers. Le code source et l’installeur sont publics sur mon GitHub personnel. L’application n’est pas signée numériquement : Windows SmartScreen peut donc afficher un avertissement au premier lancement.",
+    "description_en": "An open-source adaptation of an MIT-licensed GitHub project built for a practical need: recording only the audio of a call without capturing video. This improved version lets the user select a Windows application, add the microphone and create a mono 64 kbit/s MP3 stored locally in Documents\\AudioRecorder. I simplified the interface, added direct access to the output folder, hardened the Tauri configuration, reduced permissions and made file finalization more reliable. The source code and installer are public on my personal GitHub. The application is not digitally signed, so Windows SmartScreen may display a warning on first launch.",
+    "tags": ["Tauri 2", "Rust", "React", "Windows", "Open source"],
+    "link": "https://github.com/mandaniainarandriambinintsoa/audio-recorder/releases/tag/v0.1.1",
+    "featured": true,
+    "category": "webapp",
+    "image": "/images/projects/audio-recorder-windows.png",
+    "workflow_file": null,
+    "sort_order": 2,
+    "published": true,
+    "created_at": "2026-10-28T00:00:00.000000+03:00",
+    "updated_at": "2026-10-28T00:00:00.000000+03:00"
+  },
+  {
     "id": "a49e8015-3dea-4ff8-a61f-70eb9e30b437",
     "slug": "logiciel-prospection-b2b-teamia",
     "title_fr": "Automatisation de prospection TeamIA avec Lemlist et n8n",

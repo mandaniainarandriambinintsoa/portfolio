@@ -19,6 +19,7 @@ type FilterType = "all" | ProjectCategory;
 const HOME_PROJECT_ORDER = [
   "teamia",
   "meckia",
+  "audio-recorder-windows",
   "madavoyage",
   "garagiste",
   "logiciel-prospection-b2b-teamia",
