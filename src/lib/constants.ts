@@ -32,8 +32,8 @@ export const PERSONAL_INFO = {
     full: "LOT VT 85 HE BIS DB ANDOHANIMANDROSEZA, Antananarivo, Analamanga, 101, Madagascar",
   },
   jobTitle: {
-    fr: "Architecte IA & Automatisation Builder",
-    en: "AI Architect & Automation Builder",
+    fr: "Développeur d’applications métier & consultant n8n",
+    en: "Business Application Developer & n8n Consultant",
   },
 } as const;
 

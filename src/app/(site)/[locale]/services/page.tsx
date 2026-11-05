@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { i18n, type Locale } from "@/i18n/config";
-import { getDictionary } from "@/i18n/dictionaries";
 import { SITE_URL } from "@/lib/constants";
 import GlassCard from "@/components/ui/GlassCard";
 import { getServices } from "@/lib/data/services";
@@ -24,12 +23,12 @@ export async function generateMetadata({
 
   const title =
     locale === "fr"
-      ? "Mes services freelance : Développement, IA & Automatisation"
-      : "My freelance services: Development, AI & Automation";
+      ? "Applications métier, n8n et renfort technique freelance"
+      : "Business apps, n8n automation and technical delivery";
   const description =
     locale === "fr"
-      ? "Mes prestations freelance : développement de sites et SaaS, intégration IA, automatisation n8n, scaling cloud. Index complet pour explorer chaque service en détail."
-      : "My freelance services: site and SaaS development, AI integration, n8n automation, cloud scaling. Full index to explore each service in detail.";
+      ? "Développement d'applications métier, automatisation n8n et renfort technique pour PME et agences. Des livrables testés, documentés et transférables."
+      : "Business application development, n8n automation and technical delivery for companies and agencies, with tested, documented and transferable work.";
 
   const prefix = locale === "fr" ? "" : "/en";
 
@@ -81,18 +80,17 @@ type ServiceGroup = {
 
 const groupedServiceKeys = {
   applications: [
+    "developpeur-javascript-madagascar",
     "developpement-sites-saas",
-    "agency-ai-technical-partner",
     "scaling-saas-workflows",
     "developpeur-react-nextjs-madagascar",
     "developpeur-nextjs-supabase-madagascar",
-    "developpeur-javascript-madagascar",
     "developpeur-nodejs-madagascar",
   ],
   automation: [
-    "automatisation-n8n",
     "automatisation-n8n-madagascar",
     "remote-n8n-consultant",
+    "automatisation-n8n",
     "integration-ia",
     "developpeur-rag",
     "developpeur-python-ia-madagascar",
@@ -101,7 +99,8 @@ const groupedServiceKeys = {
     "developpeur-agent-ia-madagascar",
     "developpeur-agent-vocal-ia",
   ],
-  recovery: [
+  partner: [
+    "agency-ai-technical-partner",
     "forward-deployed-engineer",
     "audit-performance-site-web",
     "consultant-seo-geo",
@@ -115,27 +114,27 @@ function getServiceGroups(locale: Locale): ServiceGroup[] {
       ? [
           {
             id: "applications",
-            title: "Construire une application métier",
+            title: "Développer une application métier",
             description:
-              "SaaS, outil interne ou API : un produit maintenable, livré avec son architecture et son transfert.",
-            primaryKey: "developpement-sites-saas",
+              "SaaS, outil interne ou API : un produit maintenable, testé et livré avec un transfert clair.",
+            primaryKey: "developpeur-javascript-madagascar",
             keys: [...groupedServiceKeys.applications],
           },
           {
             id: "automatisation-ia",
-            title: "Automatiser un processus avec l’IA",
+            title: "Automatiser avec n8n et l’IA",
             description:
-              "Workflows n8n, agents IA et RAG avec des règles explicites, des reprises sur erreur et une validation humaine.",
-            primaryKey: "automatisation-n8n",
+              "Workflows n8n reliés à vos outils, avec contrôles, alertes, documentation et reprise humaine.",
+            primaryKey: "automatisation-n8n-madagascar",
             keys: [...groupedServiceKeys.automation],
           },
           {
-            id: "audit-reprise",
-            title: "Auditer ou reprendre un produit existant",
+            id: "renfort-technique",
+            title: "Renforcer une équipe ou reprendre un produit",
             description:
-              "Performance, coûts cloud, SEO/GEO ou reprise technique : partir des mesures avant de modifier le système.",
-            primaryKey: "forward-deployed-engineer",
-            keys: [...groupedServiceKeys.recovery],
+              "Un lot technique cadré pour une agence ou une PME, sans sous-traitance en cascade ni dépendance cachée.",
+            primaryKey: "agency-ai-technical-partner",
+            keys: [...groupedServiceKeys.partner],
           },
         ]
       : [
@@ -143,25 +142,25 @@ function getServiceGroups(locale: Locale): ServiceGroup[] {
             id: "applications",
             title: "Build a business application",
             description:
-              "SaaS, internal tool or API: a maintainable product delivered with its architecture and handoff.",
-            primaryKey: "developpement-sites-saas",
+              "SaaS, internal tool or API: a maintainable, tested product delivered with a clear handoff.",
+            primaryKey: "developpeur-javascript-madagascar",
             keys: [...groupedServiceKeys.applications],
           },
           {
             id: "ai-automation",
-            title: "Automate a process with AI",
+            title: "Automate with n8n and AI",
             description:
-              "n8n workflows, AI agents and RAG with explicit rules, failure paths and human approval.",
-            primaryKey: "automatisation-n8n",
+              "n8n workflows connected to your tools, with controls, alerts, documentation and human recovery.",
+            primaryKey: "automatisation-n8n-madagascar",
             keys: [...groupedServiceKeys.automation],
           },
           {
-            id: "audit-recovery",
-            title: "Audit or recover an existing product",
+            id: "technical-partner",
+            title: "Extend a team or recover a product",
             description:
-              "Performance, cloud cost, SEO/GEO or technical recovery: start with evidence before changing the system.",
-            primaryKey: "forward-deployed-engineer",
-            keys: [...groupedServiceKeys.recovery],
+              "A clearly scoped delivery package for an agency or company, without subcontracting chains or hidden dependency.",
+            primaryKey: "agency-ai-technical-partner",
+            keys: [...groupedServiceKeys.partner],
           },
         ];
 
@@ -177,7 +176,6 @@ export default async function ServicesPage({
   const locale = (
     i18n.locales.includes(rawLocale as Locale) ? rawLocale : i18n.defaultLocale
   ) as Locale;
-  const dict = await getDictionary(locale);
   const services = await getServices(locale);
   const prefix = locale === "fr" ? "" : "/en";
 
@@ -196,13 +194,18 @@ export default async function ServicesPage({
   return (
     <main id="main-content" className="relative min-h-screen pt-32 pb-24 px-6">
       <div className="max-w-6xl mx-auto">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
+          {locale === "fr" ? "Trois offres piliers" : "Three core offers"}
+        </p>
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 gradient-text">
-          {dict.services.title}
+          {locale === "fr"
+            ? "Applications métier et automatisation n8n"
+            : "Business applications and n8n automation"}
         </h1>
         <p className="mb-16 max-w-3xl text-xl text-slate-400">
           {locale === "fr"
-            ? "Choisissez d’abord le résultat attendu. Les expertises techniques viennent ensuite, selon votre produit, vos données et vos contraintes."
-            : "Start with the outcome you need. The technical expertise comes next, based on your product, data and constraints."}
+            ? "Choisissez l’offre qui correspond au résultat attendu. Les expertises plus spécialisées restent disponibles ensuite selon votre produit, vos données et vos contraintes."
+            : "Choose the offer that matches the outcome you need. More specialized expertise remains available based on your product, data and constraints."}
         </p>
 
         <nav
@@ -213,7 +216,11 @@ export default async function ServicesPage({
             const colors =
               colorMap[group.primary?.color ?? "indigo"] || colorMap.indigo;
             return (
-              <a key={group.id} href={`#${group.id}`} className="group block">
+              <Link
+                key={group.id}
+                href={group.primary ? `${prefix}/services/${group.primary.slug}` : `#${group.id}`}
+                className="group block"
+              >
                 <GlassCard
                   borderColor={colors.border}
                   className="relative h-full overflow-hidden transition-colors group-hover:bg-white/5"
@@ -231,11 +238,11 @@ export default async function ServicesPage({
                   </p>
                   <span className={`mt-7 inline-flex text-sm font-semibold ${colors.icon}`}>
                     {locale === "fr"
-                      ? "Explorer ce parcours →"
-                      : "Explore this path →"}
+                      ? "Voir l’offre principale →"
+                      : "View the core offer →"}
                   </span>
                 </GlassCard>
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -257,6 +264,7 @@ export default async function ServicesPage({
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                 {group.services.map((service: ServiceItem) => {
                   const colors = colorMap[service.color] || colorMap.indigo;
+                  const isPrimary = service.key === group.primaryKey;
                   return (
                     <Link
                       key={service.slug}
@@ -269,22 +277,37 @@ export default async function ServicesPage({
                         href: `${prefix}/services/${service.slug}`,
                         locale,
                       })}
+                      className={isPrimary ? "md:col-span-2 lg:col-span-3" : undefined}
                     >
                       <GlassCard
                         borderColor={colors.border}
-                        className="h-full transition-colors hover:bg-white/5"
+                        className={`h-full transition-colors hover:bg-white/5 ${
+                          isPrimary ? "bg-white/[0.045] md:grid md:grid-cols-[auto_1fr_auto] md:items-center md:gap-6" : ""
+                        }`}
                       >
                         <LegacyIconScoutIcon
                           name={service.icon}
                           size={30}
-                          className={`mb-3 ${colors.icon}`}
+                          className={`${isPrimary ? "mb-3 md:mb-0" : "mb-3"} ${colors.icon}`}
                         />
-                        <h3 className="mb-2 text-lg font-bold">
-                          {service.cardTitle || service.title}
-                        </h3>
-                        <p className="text-sm leading-relaxed text-slate-400">
-                          {service.cardDescription || service.description}
-                        </p>
+                        <div>
+                          {isPrimary && (
+                            <p className={`mb-2 text-xs font-semibold uppercase tracking-[0.18em] ${colors.icon}`}>
+                              {locale === "fr" ? "Offre principale" : "Core offer"}
+                            </p>
+                          )}
+                          <h3 className="mb-2 text-lg font-bold">
+                            {service.cardTitle || service.title}
+                          </h3>
+                          <p className="text-sm leading-relaxed text-slate-400">
+                            {service.cardDescription || service.description}
+                          </p>
+                        </div>
+                        {isPrimary && (
+                          <span className={`mt-5 whitespace-nowrap text-sm font-semibold md:mt-0 ${colors.icon}`}>
+                            {locale === "fr" ? "Découvrir l’offre →" : "Explore the offer →"}
+                          </span>
+                        )}
                       </GlassCard>
                     </Link>
                   );

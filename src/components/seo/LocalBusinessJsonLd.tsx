@@ -8,14 +8,14 @@ export default function LocalBusinessJsonLd() {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "@id": `${SITE_URL}/#business`,
-        name: "Manda — Applications métier, IA et automatisation",
+        name: "Manda — Applications métier et automatisation n8n",
         legalName: PERSONAL_INFO.legalName,
         alternateName: "Manda Dev",
         url: SITE_URL,
         telephone: PERSONAL_INFO.phone,
         email: PERSONAL_INFO.email,
         description:
-          "Développeur d’applications métier, SaaS, API et intégrations IA avec Next.js, Node.js et Supabase basé à Antananarivo, Madagascar. Applications sur mesure et workflows intelligents pour entreprises françaises et internationales.",
+          "Développeur d’applications métier et consultant n8n basé à Antananarivo, Madagascar. SaaS, outils internes, API et workflows documentés pour PME et agences francophones.",
         image: `${SITE_URL}/images/manda-photo2.webp`,
         priceRange: "€€",
         address: {
@@ -96,23 +96,27 @@ export default function LocalBusinessJsonLd() {
                 name: "Applications métier et SaaS",
                 description:
                   "Applications Next.js, API et bases de données pour entreprises",
+                url: "https://manda-ia.com/services/developpeur-javascript-madagascar",
               },
             },
             {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Automatisation N8N",
-                description: "Workflows d'automatisation sur mesure avec N8N",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Développement Low-Code",
+                name: "Conseil et automatisation n8n",
                 description:
-                  "Applications Next.js et Supabase avec IA intégrée",
+                  "Workflows métier, intégrations API, contrôles et documentation avec n8n",
+                url: "https://manda-ia.com/services/automatisation-n8n-madagascar",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Renfort technique pour agence IA",
+                description:
+                  "Développement en marque blanche de lots Next.js, API, n8n, RAG et agents IA",
+                url: "https://manda-ia.com/services/renfort-technique-agence-ia",
               },
             },
           ],

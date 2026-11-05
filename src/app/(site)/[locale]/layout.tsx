@@ -49,7 +49,7 @@ export async function generateMetadata({
           url: `${SITE_URL}/images/og-default.png`,
           width: 1200,
           height: 630,
-          alt: "Manda — Développeur Full Stack & Architecte IA",
+          alt: "Manda — Développeur d’applications métier & consultant n8n",
         },
       ],
     },

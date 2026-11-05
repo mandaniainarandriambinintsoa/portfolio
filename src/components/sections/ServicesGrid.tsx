@@ -11,55 +11,36 @@ type LandingLink = {
 
 const landingLinks: Record<Locale, LandingLink[]> = {
   fr: [
-    { label: "Développeur No-Code Madagascar", href: "/services/developpeur-no-code-madagascar" },
-    { label: "Expert N8N & Automatisation", href: "/services/automatisation-n8n-madagascar" },
-    { label: "Développeur Low-Code Madagascar", href: "/services/developpeur-low-code-madagascar" },
-    { label: "Développeur React & Next.js", href: "/services/developpeur-react-nextjs-madagascar" },
-    { label: "Next.js + Supabase", href: "/services/developpeur-nextjs-supabase-madagascar" },
-    { label: "Développeur Python IA Madagascar", href: "/services/developpeur-python-ia-madagascar" },
+    { label: "Applications métier & SaaS", href: "/services/developpeur-javascript-madagascar" },
+    { label: "Consultant n8n freelance", href: "/services/automatisation-n8n-madagascar" },
+    { label: "Renfort pour agence IA", href: "/services/renfort-technique-agence-ia" },
   ],
   en: [
-    { label: "No-Code Developer Madagascar", href: "/en/services/no-code-developer-madagascar" },
-    { label: "N8N Automation Expert", href: "/en/services/n8n-automation-expert-madagascar" },
-    { label: "Low-Code Developer Madagascar", href: "/en/services/low-code-developer-madagascar" },
-    { label: "React & Next.js Developer", href: "/en/services/hire-react-nextjs-developer-madagascar" },
-    { label: "Next.js + Supabase", href: "/en/services/nextjs-supabase-developer-madagascar" },
-    { label: "Python AI Developer Madagascar", href: "/en/services/python-ai-developer-madagascar" },
+    { label: "Business apps & SaaS", href: "/en/services/javascript-developer-madagascar" },
+    { label: "Freelance n8n consultant", href: "/en/services/n8n-automation-expert-madagascar" },
+    { label: "AI agency delivery partner", href: "/en/services/white-label-ai-development-partner" },
   ],
 };
 
 const sectionLabel: Record<Locale, string> = {
-  fr: "Pages dédiées par expertise",
-  en: "Dedicated pages by expertise",
+  fr: "Trois offres pour passer du besoin à la production",
+  en: "Three offers from business need to production",
 };
 
-const priorityLandingSlugs: Record<Locale, string[]> = {
-  fr: [
-    "developpeur-agent-ia-madagascar",
-    "developpeur-rag",
-    "integration-ia",
-    "automatisation-n8n-madagascar",
-    "developpeur-react-nextjs-madagascar",
-    "developpeur-nextjs-supabase-madagascar",
-  ],
-  en: [
-    "ai-agent-developer-madagascar",
-    "rag-developer",
-    "ai-integration",
-    "n8n-automation-expert-madagascar",
-    "hire-react-nextjs-developer-madagascar",
-    "nextjs-supabase-developer-madagascar",
-  ],
-};
+const priorityServiceKeys = [
+  "developpeur-javascript-madagascar",
+  "automatisation-n8n-madagascar",
+  "agency-ai-technical-partner",
+];
 
 export default async function ServicesGrid({ locale }: { locale: Locale }) {
   const services = await getServices(locale);
   const prefix = locale === "fr" ? "" : "/en";
-  const landingServicesBySlug = new Map(
-    services.filter((service) => service.isLanding).map((service) => [service.slug, service]),
+  const landingServicesByKey = new Map(
+    services.filter((service) => service.isLanding).map((service) => [service.key, service]),
   );
-  const links = priorityLandingSlugs[locale]
-    .map((slug) => landingServicesBySlug.get(slug))
+  const links = priorityServiceKeys
+    .map((key) => landingServicesByKey.get(key))
     .filter((service) => service !== undefined)
     .map((service) => ({
       href: `${prefix}/services/${service.slug}`,

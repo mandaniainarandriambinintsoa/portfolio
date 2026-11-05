@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Manda — Applications métier & automatisation IA",
-      "description": "Je conçois des SaaS, outils internes et automatisations n8n fiables, du cadrage à la production, pour les équipes locales et internationales."
+      "title": "Manda — Développeur d’applications métier & consultant n8n",
+      "description": "Développeur d’applications métier et consultant n8n à Madagascar. Je conçois SaaS, outils internes et automatisations fiables pour PME et agences francophones."
     },
     "about": {
       "title": "Manda Randriambinintsoa | Développeur No-Code & Expert N8N à Madagascar",
@@ -26,16 +26,16 @@
     "blog": "Blog"
   },
   "hero": {
-    "line1": "Des applications métier et automatisations IA",
-    "line2": "pour éliminer vos tâches manuelles.",
+    "line1": "Développeur d’applications métier",
+    "line2": "et consultant n8n pour PME et agences.",
     "line3": "",
-    "subtitle_prefix": "Du cadrage à la production, je construis des",
+    "subtitle_prefix": "Du cadrage à la production, je conçois des",
     "subtitle_highlight": "SaaS, outils internes et workflows n8n",
     "subtitle_rest": " avec des ",
-    "subtitle_highlight2": "livrables vérifiables, un code maintenable et un transfert clair",
-    "subtitle_rest2": ". Basé à Madagascar, j’accompagne les équipes locales et internationales.",
-    "cta_primary": "Démarrer un projet",
-    "cta_secondary": "Voir mes réalisations"
+    "subtitle_highlight2": "tests, une documentation exploitable et un transfert clair",
+    "subtitle_rest2": ". Basé à Madagascar, je travaille en remote avec des équipes francophones et internationales.",
+    "cta_primary": "Décrire mon projet",
+    "cta_secondary": "Voir mes projets livrés"
   },
   "client_logos": {
     "label": "Ils m'ont fait confiance",
@@ -392,17 +392,17 @@
       },
       {
         "icon": "precision_manufacturing",
-        "title": "Expert Automatisation & N8N à Madagascar",
-        "description": "Workflows d'automatisation sur mesure avec N8N. Connexion de vos outils métier, scraping, agents IA et élimination du travail manuel répétitif.",
+        "title": "Consultant n8n freelance à Madagascar",
+        "description": "Workflows n8n fiables pour PME et agences : intégrations API, CRM, données, alertes, documentation et reprise humaine.",
         "slug": "automatisation-n8n-madagascar",
         "color": "emerald",
-        "cardTitle": "Automatisation N8N",
-        "cardDescription": "Workflows sur mesure, scraping, agents IA, élimination du travail manuel répétitif.",
+        "cardTitle": "Consultant n8n freelance",
+        "cardDescription": "Workflows métier, API et CRM documentés, avec contrôles et reprise sur erreur.",
         "isLanding": true,
-        "seoTitle": "Expert N8N & Automatisation Madagascar | Workflows Sur Mesure",
-        "seoDescription": "Expert N8N à Madagascar. Automatisation de workflows, intégrations API, scraping et agents IA. Optimisez vos processus métier. Devis gratuit.",
+        "seoTitle": "Consultant n8n freelance à Madagascar | Workflows PME",
+        "seoDescription": "Consultant n8n freelance à Madagascar pour PME et agences : workflows métier, API, CRM, alertes, documentation et mise en production.",
         "landing": {
-          "heroText": "Vos équipes perdent des heures sur des tâches répétitives ? En tant qu'expert N8N basé à Antananarivo, je conçois des workflows d'automatisation sur mesure qui éliminent le travail manuel et connectent tous vos outils métier — CRM, facturation, email, bases de données.",
+          "heroText": "Vos équipes perdent des heures à déplacer des données entre un CRM, des emails, la facturation ou des tableaux de suivi ? Consultant n8n freelance basé à Antananarivo, je conçois des workflows métier fiables pour les PME et agences francophones : intégrations API, contrôles, alertes, documentation et reprise humaine quand un cas sort du cadre.",
           "sections": [
             {
               "title": "Pourquoi automatiser avec N8N ?",
@@ -1229,17 +1229,17 @@
       },
       {
         "icon": "javascript",
-        "title": "Développeur web freelance full stack à Madagascar",
-        "description": "Freelance full stack pour sites, SaaS et applications métier : front React, API Node.js, Supabase et automatisations IA.",
+        "title": "Développeur full-stack freelance à Madagascar",
+        "description": "Applications métier et SaaS de bout en bout : interface React, API Node.js, Supabase et automatisations utiles au produit.",
         "slug": "developpeur-javascript-madagascar",
         "color": "blue",
-        "cardTitle": "Freelance full stack",
-        "cardDescription": "Sites, SaaS, front React, API Node.js et IA à Madagascar",
+        "cardTitle": "Applications métier & SaaS",
+        "cardDescription": "Développement full-stack : React, Node.js, Supabase et intégrations métier.",
         "isLanding": true,
-        "seoTitle": "Développeur web freelance full stack Madagascar",
-        "seoDescription": "Développeur web freelance full stack à Madagascar : React, Next.js, Node.js, Supabase et IA. Un interlocuteur direct pour votre site ou SaaS.",
+        "seoTitle": "Développeur full-stack freelance à Madagascar",
+        "seoDescription": "Développeur full-stack freelance à Madagascar pour applications métier et SaaS : React, Next.js, Node.js, Supabase et intégrations API.",
         "landing": {
-          "heroText": "Je conçois des sites, SaaS et applications métier de bout en bout : interface React ou Next.js, API Node.js, base Supabase et automatisations IA quand elles servent vraiment le produit. Vous travaillez directement avec la personne qui cadre, développe, teste et met en production.",
+          "heroText": "Je développe des applications métier et SaaS de bout en bout : interface React ou Next.js, API Node.js, base Supabase et automatisations quand elles servent réellement le produit. Vous travaillez directement avec la personne qui cadre, développe, teste, documente et prépare la mise en production.",
           "sections": [
             {
               "title": "JavaScript et développement assisté par IA",

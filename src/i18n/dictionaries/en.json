@@ -1,8 +1,8 @@
 {
   "meta": {
     "home": {
-      "title": "Manda — Business Apps & AI Automation",
-      "description": "I build reliable SaaS products, internal tools and n8n automations from scoping to production for local and international teams."
+      "title": "Manda — Business App Developer & n8n Consultant",
+      "description": "Business application developer and n8n consultant in Madagascar. I build reliable SaaS, internal tools and automations for companies and agencies."
     },
     "about": {
       "title": "Manda Randriambinintsoa | No-Code Developer & N8N Expert from Madagascar",
@@ -26,16 +26,16 @@
     "blog": "Blog"
   },
   "hero": {
-    "line1": "Business applications and AI automation",
-    "line2": "that remove manual work.",
+    "line1": "Business application developer",
+    "line2": "and n8n consultant for companies and agencies.",
     "line3": "",
-    "subtitle_prefix": "From scoping to production, I build",
+    "subtitle_prefix": "From scoping to production, I design and build",
     "subtitle_highlight": "SaaS products, internal tools and n8n workflows",
     "subtitle_rest": " with ",
-    "subtitle_highlight2": "verifiable deliverables, maintainable code and a clear handoff",
-    "subtitle_rest2": ". Based in Madagascar, I work with local and international teams.",
-    "cta_primary": "Start a Project",
-    "cta_secondary": "View My Work"
+    "subtitle_highlight2": "tests, usable documentation and a clear handoff",
+    "subtitle_rest2": ". Based in Madagascar, I work remotely with international teams.",
+    "cta_primary": "Describe Your Project",
+    "cta_secondary": "View Delivered Projects"
   },
   "client_logos": {
     "label": "Trusted by",
@@ -427,17 +427,17 @@
       },
       {
         "icon": "precision_manufacturing",
-        "title": "N8N Automation Expert in Madagascar",
-        "description": "Custom automation workflows with N8N. Connect your business tools, scraping, AI agents and eliminate repetitive manual work.",
+        "title": "Freelance n8n Consultant in Madagascar",
+        "description": "Reliable n8n workflows for companies and agencies: APIs, CRM, data, alerts, documentation and human recovery.",
         "slug": "n8n-automation-expert-madagascar",
         "color": "emerald",
-        "cardTitle": "N8N Automation",
-        "cardDescription": "Custom workflows, scraping, AI agents, eliminate repetitive manual work.",
+        "cardTitle": "Freelance n8n consultant",
+        "cardDescription": "Documented business workflows, APIs and CRM integrations with controls and recovery paths.",
         "isLanding": true,
-        "seoTitle": "N8N Expert & Automation Madagascar | Custom Workflows",
-        "seoDescription": "N8N automation expert in Madagascar. Custom workflows, API integrations, scraping and AI agents. Optimize your business processes. Free quote.",
+        "seoTitle": "Freelance n8n Consultant in Madagascar | Workflows",
+        "seoDescription": "Freelance n8n consultant in Madagascar for companies and agencies: business workflows, APIs, CRM, alerts, documentation and production delivery.",
         "landing": {
-          "heroText": "Your teams are spending hours on repetitive tasks? As an N8N expert based in Antananarivo, I design custom automation workflows that eliminate manual work and connect all your business tools — CRM, billing, email, databases.",
+          "heroText": "Are your teams spending hours moving data between a CRM, email, billing and reporting tools? As a freelance n8n consultant based in Antananarivo, I build reliable business workflows for international companies and agencies: API integrations, controls, alerts, documentation and human recovery when a case falls outside the expected path.",
           "sections": [
             {
               "title": "Why automate with N8N?",
@@ -1260,17 +1260,17 @@
       },
       {
         "icon": "javascript",
-        "title": "Freelance full stack web developer in Madagascar",
-        "description": "Full stack freelancer for websites, SaaS and business applications: React, Node.js APIs, Supabase and practical AI automation.",
+        "title": "Freelance full-stack developer in Madagascar",
+        "description": "End-to-end business applications and SaaS: React interfaces, Node.js APIs, Supabase and automation that supports the product.",
         "slug": "javascript-developer-madagascar",
         "color": "blue",
-        "cardTitle": "Full stack freelancer",
-        "cardDescription": "Websites, SaaS, React, Node.js and AI from Madagascar",
+        "cardTitle": "Business apps & SaaS",
+        "cardDescription": "Full-stack delivery with React, Node.js, Supabase and business integrations.",
         "isLanding": true,
-        "seoTitle": "Freelance Full Stack Web Developer Madagascar",
-        "seoDescription": "Freelance full stack web developer in Madagascar: React, Next.js, Node.js, Supabase and AI. One direct contact for your website or SaaS.",
+        "seoTitle": "Freelance Full-Stack Developer in Madagascar",
+        "seoDescription": "Freelance full-stack developer in Madagascar for business applications and SaaS: React, Next.js, Node.js, Supabase and API integrations.",
         "landing": {
-          "heroText": "I build websites, SaaS products and business applications end to end: React or Next.js interfaces, Node.js APIs, Supabase data and AI automation when it serves the product. You work directly with the person who scopes, builds, tests and deploys the project.",
+          "heroText": "I build business applications and SaaS products end to end: React or Next.js interfaces, Node.js APIs, Supabase data and automation when it genuinely supports the product. You work directly with the person who scopes, builds, tests, documents and prepares the production release.",
           "sections": [
             {
               "title": "JavaScript and AI-assisted delivery",
