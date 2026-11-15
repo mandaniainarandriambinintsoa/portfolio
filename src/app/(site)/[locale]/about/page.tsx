@@ -55,6 +55,19 @@ function getCompanyInitials(company: string) {
     .toUpperCase();
 }
 
+const experiencePriority: Record<string, number> = {
+  TeamIA: 0,
+  ARPON: 1,
+};
+
+function orderExperiences<T extends { company: string }>(experiences: T[]) {
+  return [...experiences].reverse().sort((first, second) => {
+    const firstPriority = experiencePriority[first.company] ?? 2;
+    const secondPriority = experiencePriority[second.company] ?? 2;
+    return firstPriority - secondPriority;
+  });
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -219,7 +232,7 @@ export default async function AboutPage({
           </div>
 
           <ol className="relative divide-y divide-white/10 before:absolute before:bottom-10 before:left-4 before:top-8 before:w-px before:bg-gradient-to-b before:from-indigo-400/60 before:via-indigo-500/20 before:to-transparent md:before:left-6">
-            {[...about.timeline].reverse().map((item) => (
+            {orderExperiences(about.timeline).map((item) => (
               <li
                 key={`${item.company}-${item.period}`}
                 className="relative py-10 pl-12 md:pl-20"
