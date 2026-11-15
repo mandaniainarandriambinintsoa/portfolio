@@ -11,6 +11,50 @@ import {
   compactMetadataTitle,
 } from "@/lib/seo-metadata";
 
+const experienceCopy: Record<
+  Locale,
+  {
+    eyebrow: string;
+    title: string;
+    introduction: string;
+    responsibilities: string;
+    skills: string;
+    recentProjects: string;
+    viewProject: string;
+  }
+> = {
+  fr: {
+    eyebrow: "EXPÉRIENCE",
+    title: "Un parcours construit par la livraison",
+    introduction:
+      "Du développement React aux applications métier, puis aux systèmes full-stack et aux automatisations : chaque étape a ajouté une couche de méthode à ma façon de construire.",
+    responsibilities: "Responsabilités principales",
+    skills: "Compétences mobilisées",
+    recentProjects: "Réalisations récentes",
+    viewProject: "Voir l’étude de cas",
+  },
+  en: {
+    eyebrow: "EXPERIENCE",
+    title: "A career shaped by delivery",
+    introduction:
+      "From React development to business applications, then full-stack systems and automation: each role added another layer to the way I build products.",
+    responsibilities: "Key responsibilities",
+    skills: "Skills used",
+    recentProjects: "Recent work",
+    viewProject: "View case study",
+  },
+};
+
+function getCompanyInitials(company: string) {
+  return company
+    .split(/[.\s]+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -65,6 +109,7 @@ export default async function AboutPage({
   ) as Locale;
   const dict = await getDictionary(locale);
   const about = dict.about;
+  const labels = experienceCopy[locale];
 
   const breadcrumbs = [
     {
@@ -157,41 +202,141 @@ export default async function AboutPage({
           </div>
         </div>
 
-        {/* Timeline */}
-        <h2 className="text-3xl font-bold mb-8">
-          {locale === "fr" ? "Parcours" : "Career Path"}
-        </h2>
-        <div className="space-y-8">
-          {[...about.timeline]
-            .reverse()
-            .map(
-              (item: {
-                period: string;
-                title: string;
-                company: string;
-                description: string;
-              }) => (
-                <div key={item.period} className="flex gap-6">
-                  <div className="flex flex-col items-center">
-                    <div className="w-3 h-3 bg-indigo-500 rounded-full" />
-                    <div className="w-0.5 flex-1 bg-white/10" />
-                  </div>
-                  <div className="pb-8">
-                    <p className="text-sm text-indigo-400 font-bold mb-1">
-                      {item.period}
-                    </p>
-                    <h3 className="text-lg font-bold text-white mb-1">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm text-slate-500 mb-2">
-                      {item.company}
-                    </p>
-                    <p className="text-slate-400">{item.description}</p>
-                  </div>
+        <section aria-labelledby="experience-title" className="pt-4">
+          <div className="mb-10 max-w-3xl">
+            <p className="mb-3 text-xs font-bold tracking-[0.24em] text-indigo-400">
+              {labels.eyebrow}
+            </p>
+            <h2
+              id="experience-title"
+              className="text-3xl font-bold tracking-tight text-white md:text-4xl"
+            >
+              {labels.title}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-slate-400 md:text-lg">
+              {labels.introduction}
+            </p>
+          </div>
+
+          <ol className="relative divide-y divide-white/10 before:absolute before:bottom-10 before:left-4 before:top-8 before:w-px before:bg-gradient-to-b before:from-indigo-400/60 before:via-indigo-500/20 before:to-transparent md:before:left-6">
+            {[...about.timeline].reverse().map((item) => (
+              <li
+                key={`${item.company}-${item.period}`}
+                className="relative py-10 pl-12 md:pl-20"
+              >
+                <div
+                  aria-hidden="true"
+                  className="absolute left-0 top-11 flex h-8 w-8 items-center justify-center rounded-full border border-indigo-400/35 bg-slate-950 text-[10px] font-black tracking-tight text-indigo-300 md:left-2"
+                >
+                  {getCompanyInitials(item.company)}
                 </div>
-              ),
-            )}
-        </div>
+
+                <article>
+                  <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+                    <div>
+                      <p className="mb-3 text-sm font-semibold text-indigo-300">
+                        {item.period}
+                      </p>
+                      <h3 className="text-xl font-bold leading-snug text-white md:text-2xl">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-base font-semibold text-slate-200">
+                        {item.company}
+                        <span className="font-normal text-slate-500">
+                          {" "}· {item.employmentType}
+                        </span>
+                      </p>
+                    </div>
+
+                    <div className="flex shrink-0 items-center gap-2 text-sm text-slate-500 lg:max-w-64 lg:justify-end lg:text-right">
+                      <IconScoutIcon name="location" size={17} />
+                      <span>{item.location}</span>
+                    </div>
+                  </div>
+
+                  <p className="mt-6 max-w-3xl text-base leading-relaxed text-slate-300">
+                    {item.description}
+                  </p>
+
+                  <div className="mt-7 grid gap-7 border-t border-white/8 pt-6 lg:grid-cols-[minmax(0,1fr)_minmax(13rem,0.42fr)]">
+                    <div>
+                      <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+                        {labels.responsibilities}
+                      </h4>
+                      <ul className="space-y-3">
+                        {item.highlights.map((highlight) => (
+                          <li
+                            key={highlight}
+                            className="flex items-start gap-3 text-sm leading-relaxed text-slate-300"
+                          >
+                            <IconScoutIcon
+                              name="check"
+                              size={17}
+                              className="mt-0.5 shrink-0 text-emerald-400"
+                            />
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div>
+                      <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-slate-500">
+                        {labels.skills}
+                      </h4>
+                      <ul className="flex flex-wrap gap-2">
+                        {item.skills.map((skill) => (
+                          <li
+                            key={skill}
+                            className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-slate-300"
+                          >
+                            {skill}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {item.recentProjects.length > 0 ? (
+                    <div className="mt-8">
+                      <h4 className="mb-3 text-xs font-bold uppercase tracking-[0.16em] text-indigo-300">
+                        {labels.recentProjects}
+                      </h4>
+                      <ul className="divide-y divide-white/10 border-y border-white/10">
+                        {item.recentProjects.map((project) => (
+                          <li key={project.href}>
+                            <Link
+                              href={project.href}
+                              className="group flex items-start justify-between gap-4 py-4"
+                            >
+                              <span>
+                                <span className="block font-semibold text-white transition-colors group-hover:text-indigo-300">
+                                  {project.title}
+                                </span>
+                                <span className="mt-1 block text-sm leading-relaxed text-slate-400">
+                                  {project.description}
+                                </span>
+                              </span>
+                              <span className="mt-0.5 flex shrink-0 items-center gap-1 text-xs font-semibold text-indigo-300">
+                                <span className="hidden sm:inline">
+                                  {labels.viewProject}
+                                </span>
+                                <IconScoutIcon
+                                  name="arrowUpRight"
+                                  size={17}
+                                />
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </article>
+              </li>
+            ))}
+          </ol>
+        </section>
       </div>
     </main>
   );

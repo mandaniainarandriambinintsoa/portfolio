@@ -2744,22 +2744,89 @@
     "cta": "Open to global collaboration.",
     "timeline": [
       {
-        "period": "2021-2023",
-        "title": "JavaScript Developer",
+        "period": "2021 – 2023",
+        "title": "Junior React Developer",
         "company": "PRESCOI Service",
-        "description": "Internship, React development, web architecture foundations"
+        "employmentType": "Work-study position",
+        "location": "Antananarivo, Madagascar · On-site",
+        "description": "My first professional role focused on JavaScript and React, building web interfaces while learning the foundations of maintainable front-end architecture.",
+        "highlights": [
+          "Develop and integrate reusable React components",
+          "Contribute to interface fixes, testing and maintenance"
+        ],
+        "skills": ["React", "JavaScript", "HTML", "CSS", "Git"],
+        "recentProjects": []
       },
       {
-        "period": "2023-2026",
-        "title": "No-Code Developer",
-        "company": "GetHumanCall & ScalApp.fr",
-        "description": "Bubble apps, Webflow sites, fast client solution delivery"
+        "period": "Jan 2023 – Jan 2026 · 3 yrs 1 mo",
+        "title": "Business Website and Application Developer",
+        "company": "GetHumanCall",
+        "employmentType": "Full-time",
+        "location": "Antananarivo, Madagascar · On-site",
+        "description": "Development of internal Bubble applications addressing the company’s operational needs, together with ongoing website maintenance and improvements.",
+        "highlights": [
+          "Turn internal requirements into usable journeys and tools",
+          "Build Bubble applications and improve existing features",
+          "Maintain and update the company website"
+        ],
+        "skills": ["Bubble", "Webflow", "Figma", "Business applications"],
+        "recentProjects": []
       },
       {
-        "period": "2026+",
-        "title": "Business Application Developer & AI Architect",
+        "period": "Jan 2023 – Jan 2026 · 3 yrs 1 mo",
+        "title": "Low-Code Website and Application Developer",
+        "company": "Scalapp.fr",
+        "employmentType": "Full-time",
+        "location": "France · Remote",
+        "description": "Design and development of interactive Webflow websites and Bubble applications, aligning each user journey with project goals and user requirements.",
+        "highlights": [
+          "Build responsive Webflow websites from Figma designs",
+          "Develop Bubble applications and their business workflows",
+          "Iterate quickly from client and user feedback"
+        ],
+        "skills": ["Webflow", "Bubble", "Figma", "UI/UX"],
+        "recentProjects": []
+      },
+      {
+        "period": "2026",
+        "title": "Full-Stack & Automation Developer",
+        "company": "TeamIA",
+        "employmentType": "Freelance engagement",
+        "location": "France & Luxembourg · Remote",
+        "description": "I support TeamIA across its web products and automation systems: a strategic and technical platform redesign, followed by a B2B prospecting system connected to n8n and Lemlist.",
+        "highlights": [
+          "Redesign TeamIA’s positioning, UX and website architecture",
+          "Build the Next.js platform connected to Payload CMS, Supabase, n8n and Resend",
+          "Design multi-campaign prospecting with deduplication and human review"
+        ],
+        "skills": ["Next.js", "Payload CMS", "Supabase", "n8n", "Lemlist", "SEO/GEO"],
+        "recentProjects": [
+          {
+            "title": "TeamIA website redesign",
+            "description": "Complete redesign of TeamIA’s positioning, interface and conversion journey.",
+            "href": "/en/projects/teamia"
+          },
+          {
+            "title": "TeamIA prospecting — n8n × Lemlist",
+            "description": "B2B prospecting automation, from campaign preparation to delivery monitoring.",
+            "href": "/en/projects/automatisation-prospection-n8n-lemlist"
+          }
+        ]
+      },
+      {
+        "period": "Jan 2026 – Present",
+        "title": "Full-Stack Developer — AI & Automation",
         "company": "ARPON",
-        "description": "Back to pure code: sites, SaaS, n8n automations, AI integrations with Claude Code"
+        "employmentType": "Freelance",
+        "location": "Antananarivo, Madagascar · Remote",
+        "description": "I design and build business applications and advanced automations by combining full-stack development, generative AI and workflow orchestration.",
+        "highlights": [
+          "Scope and develop Next.js applications, APIs and business interfaces",
+          "Build n8n workflows with integrations, controls and error handling",
+          "Use AI to accelerate delivery while retaining human testing and validation"
+        ],
+        "skills": ["Next.js", "React", "Node.js", "n8n", "Claude Code", "PostgreSQL"],
+        "recentProjects": []
       }
     ]
   },

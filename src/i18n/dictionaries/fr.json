@@ -2721,22 +2721,89 @@
     "cta": "Ouvert à la collaboration mondiale.",
     "timeline": [
       {
-        "period": "2021-2023",
-        "title": "Développeur JavaScript",
+        "period": "2021 – 2023",
+        "title": "Développeur junior React",
         "company": "PRESCOI Service",
-        "description": "Alternance, développement React, bases en architecture web"
+        "employmentType": "Alternance",
+        "location": "Antananarivo, Madagascar · Sur site",
+        "description": "Première expérience professionnelle centrée sur JavaScript et React, avec la construction d’interfaces web et l’apprentissage des bases d’une architecture front-end maintenable.",
+        "highlights": [
+          "Développer et intégrer des composants React réutilisables",
+          "Participer aux corrections, aux tests et à la maintenance des interfaces"
+        ],
+        "skills": ["React", "JavaScript", "HTML", "CSS", "Git"],
+        "recentProjects": []
       },
       {
-        "period": "2023-2026",
-        "title": "Développeur No-Code",
-        "company": "GetHumanCall & ScalApp.fr",
-        "description": "Apps Bubble, sites Webflow, livraison rapide de solutions clients"
+        "period": "janv. 2023 – janv. 2026 · 3 ans 1 mois",
+        "title": "Développeur de sites et applications métier",
+        "company": "GetHumanCall",
+        "employmentType": "Temps plein",
+        "location": "Antananarivo, Madagascar · Sur site",
+        "description": "Développement d’applications web internes avec Bubble pour répondre aux besoins opérationnels de l’entreprise, ainsi que maintenance et évolution du site web.",
+        "highlights": [
+          "Transformer les besoins internes en parcours et outils utilisables",
+          "Construire des applications Bubble et faire évoluer les fonctionnalités existantes",
+          "Assurer la maintenance et les mises à jour du site"
+        ],
+        "skills": ["Bubble", "Webflow", "Figma", "Applications métier"],
+        "recentProjects": []
       },
       {
-        "period": "2026+",
-        "title": "Développeur d’applications & Architecte IA",
+        "period": "janv. 2023 – janv. 2026 · 3 ans 1 mois",
+        "title": "Développeur low-code — sites et applications web",
+        "company": "Scalapp.fr",
+        "employmentType": "Temps plein",
+        "location": "France · À distance",
+        "description": "Conception de sites interactifs avec Webflow et d’applications web avec Bubble, en alignant chaque parcours sur les demandes des utilisateurs et les objectifs du projet.",
+        "highlights": [
+          "Intégrer des sites Webflow responsives à partir de maquettes Figma",
+          "Développer des applications Bubble et leurs workflows métier",
+          "Itérer rapidement à partir des retours client et utilisateur"
+        ],
+        "skills": ["Webflow", "Bubble", "Figma", "UI/UX"],
+        "recentProjects": []
+      },
+      {
+        "period": "2026",
+        "title": "Développeur full-stack & automatisation",
+        "company": "TeamIA",
+        "employmentType": "Mission freelance",
+        "location": "France & Luxembourg · À distance",
+        "description": "J’accompagne TeamIA sur ses produits web et ses automatisations : refonte stratégique et technique de la plateforme, puis conception d’un système de prospection B2B relié à n8n et Lemlist.",
+        "highlights": [
+          "Refondre le positionnement, l’UX et l’architecture du site TeamIA",
+          "Construire la plateforme Next.js reliée à Payload CMS, Supabase, n8n et Resend",
+          "Concevoir la prospection multi-campagnes avec déduplication et validation humaine"
+        ],
+        "skills": ["Next.js", "Payload CMS", "Supabase", "n8n", "Lemlist", "SEO/GEO"],
+        "recentProjects": [
+          {
+            "title": "Refonte du site TeamIA",
+            "description": "Refonte complète du positionnement, de l’interface et du parcours de conversion du site TeamIA.",
+            "href": "/projects/teamia"
+          },
+          {
+            "title": "Prospection TeamIA — n8n × Lemlist",
+            "description": "Automatisation de la prospection B2B, de la préparation des campagnes au suivi des envois.",
+            "href": "/projects/automatisation-prospection-n8n-lemlist"
+          }
+        ]
+      },
+      {
+        "period": "janv. 2026 – aujourd’hui",
+        "title": "Développeur full-stack — IA & automatisation",
         "company": "ARPON",
-        "description": "Retour au code pur : sites, SaaS, automatisations n8n, intégrations IA avec Claude Code"
+        "employmentType": "Freelance",
+        "location": "Antananarivo, Madagascar · À distance",
+        "description": "Je conçois et construis des applications métier et des automatisations avancées en combinant développement full-stack, IA générative et orchestration de workflows.",
+        "highlights": [
+          "Cadrer et développer des applications Next.js, API et interfaces métier",
+          "Construire des workflows n8n avec intégrations, contrôles et gestion des erreurs",
+          "Utiliser l’IA pour accélérer l’exécution tout en gardant les tests et la validation humaine"
+        ],
+        "skills": ["Next.js", "React", "Node.js", "n8n", "Claude Code", "PostgreSQL"],
+        "recentProjects": []
       }
     ]
   },
