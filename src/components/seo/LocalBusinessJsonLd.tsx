@@ -1,21 +1,86 @@
 import JsonLd from "./JsonLd";
 import { SITE_URL, PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/constants";
+import type { Locale } from "@/i18n/config";
 
-export default function LocalBusinessJsonLd() {
+const localizedContent = {
+  fr: {
+    name: "Manda — Applications métier et automatisation n8n",
+    description:
+      "Développeur d’applications métier et consultant n8n basé à Antananarivo, Madagascar. SaaS, outils internes, API et workflows documentés pour PME et agences francophones.",
+    catalogName: "Services",
+    offers: [
+      {
+        name: "Applications métier et SaaS",
+        description:
+          "Applications Next.js, API et bases de données pour entreprises",
+        url: `${SITE_URL}/services/developpeur-javascript-madagascar`,
+      },
+      {
+        name: "Conseil et automatisation n8n",
+        description:
+          "Workflows métier, intégrations API, contrôles et documentation avec n8n",
+        url: `${SITE_URL}/services/automatisation-n8n-madagascar`,
+      },
+      {
+        name: "Renfort technique pour agence IA",
+        description:
+          "Développement en marque blanche de lots Next.js, API, n8n, RAG et agents IA",
+        url: `${SITE_URL}/services/renfort-technique-agence-ia`,
+      },
+    ],
+  },
+  en: {
+    name: "Manda — Business applications and n8n automation",
+    description:
+      "Business application developer and n8n consultant based in Antananarivo, Madagascar. Documented SaaS products, internal tools, APIs and workflows for companies and agencies.",
+    catalogName: "Services",
+    offers: [
+      {
+        name: "Business applications and SaaS",
+        description:
+          "Next.js applications, APIs and databases for companies",
+        url: `${SITE_URL}/en/services/javascript-developer-madagascar`,
+      },
+      {
+        name: "n8n consulting and automation",
+        description:
+          "Business workflows, API integrations, controls and n8n documentation",
+        url: `${SITE_URL}/en/services/n8n-automation-expert-madagascar`,
+      },
+      {
+        name: "Technical delivery support for AI agencies",
+        description:
+          "White-label delivery of Next.js, API, n8n, RAG and AI agent workstreams",
+        url: `${SITE_URL}/en/services/white-label-ai-development-partner`,
+      },
+    ],
+  },
+} satisfies Record<
+  Locale,
+  {
+    name: string;
+    description: string;
+    catalogName: string;
+    offers: { name: string; description: string; url: string }[];
+  }
+>;
+
+export default function LocalBusinessJsonLd({ locale }: { locale: Locale }) {
+  const content = localizedContent[locale];
+
   return (
     <JsonLd
       data={{
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "@id": `${SITE_URL}/#business`,
-        name: "Manda — Applications métier et automatisation n8n",
+        name: content.name,
         legalName: PERSONAL_INFO.legalName,
         alternateName: "Manda Dev",
         url: SITE_URL,
         telephone: PERSONAL_INFO.phone,
         email: PERSONAL_INFO.email,
-        description:
-          "Développeur d’applications métier et consultant n8n basé à Antananarivo, Madagascar. SaaS, outils internes, API et workflows documentés pour PME et agences francophones.",
+        description: content.description,
         image: `${SITE_URL}/images/manda-photo2.webp`,
         priceRange: "€€",
         address: {
@@ -53,7 +118,7 @@ export default function LocalBusinessJsonLd() {
         },
         logo: {
           "@type": "ImageObject",
-          url: `${SITE_URL}/favicon.svg`,
+          url: `${SITE_URL}/icon.svg`,
           width: 512,
           height: 512,
         },
@@ -87,39 +152,14 @@ export default function LocalBusinessJsonLd() {
         ],
         hasOfferCatalog: {
           "@type": "OfferCatalog",
-          name: "Services",
-          itemListElement: [
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Applications métier et SaaS",
-                description:
-                  "Applications Next.js, API et bases de données pour entreprises",
-                url: "https://manda-ia.com/services/developpeur-javascript-madagascar",
-              },
+          name: content.catalogName,
+          itemListElement: content.offers.map((offer) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              ...offer,
             },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Conseil et automatisation n8n",
-                description:
-                  "Workflows métier, intégrations API, contrôles et documentation avec n8n",
-                url: "https://manda-ia.com/services/automatisation-n8n-madagascar",
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Renfort technique pour agence IA",
-                description:
-                  "Développement en marque blanche de lots Next.js, API, n8n, RAG et agents IA",
-                url: "https://manda-ia.com/services/renfort-technique-agence-ia",
-              },
-            },
-          ],
+          })),
         },
       }}
     />

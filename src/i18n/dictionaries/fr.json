@@ -5,12 +5,12 @@
       "description": "Développeur d’applications métier et consultant n8n à Madagascar. Je conçois SaaS, outils internes et automatisations fiables pour PME et agences francophones."
     },
     "about": {
-      "title": "Manda Randriambinintsoa | Développeur No-Code & Expert N8N à Madagascar",
-      "description": "Product Builder freelance basé à Antananarivo. +4 ans d'expérience : Next.js, Supabase, Python, n8n, Claude Code, Codex et prompt engineering. Découvrez mon parcours et mes réalisations."
+      "title": "Manda | Développeur d’applications métier & consultant n8n",
+      "description": "Développeur d’applications métier et consultant n8n à Antananarivo. Plus de 4 ans d’expérience en SaaS, outils internes, API et automatisation."
     },
     "contact": {
-      "title": "Contacter Manda | Démarrer un projet d'automatisation",
-      "description": "Contactez Mandaniaina Randriambinintsoa pour vos projets d'automatisation, développement no-code et intégration IA."
+      "title": "Contacter Manda | Application métier ou automatisation n8n",
+      "description": "Décrivez votre besoin d’application métier, de SaaS, d’API, d’automatisation n8n ou de renfort technique pour agence."
     },
     "quiz": {
       "title": "Quiz Automatisation | Trouvez la solution idéale pour votre business",
@@ -555,7 +555,7 @@
           ]
         },
         "key": "automatisation-n8n-madagascar",
-        "updatedAt": "2026-10-08T00:00:00Z"
+        "updatedAt": "2026-11-15T00:00:00+03:00"
       },
       {
         "icon": "code",
@@ -1380,7 +1380,7 @@
           ]
         },
         "key": "developpeur-javascript-madagascar",
-        "updatedAt": "2026-10-20T00:00:00Z"
+        "updatedAt": "2026-11-15T00:00:00+03:00"
       },
       {
         "icon": "dns",
@@ -2342,11 +2342,11 @@
   },
   "approach": {
     "title": "L'APPROCHE",
-    "heading": "Une expérience du no-code au développement applicatif",
+    "heading": "Du problème métier à une application maintenable",
     "paragraphs": [
-      "À partir de 2023, j'ai livré depuis Madagascar des dizaines de sites vitrines et de MVP SaaS en [no-code](/services/developpeur-no-code-madagascar). Webflow pour les sites premium, Bubble pour les apps métier, [n8n pour brancher tout ça](/services/automatisation-n8n-madagascar) aux outils des clients. Une approche qui a fait ses preuves auprès de mes clients français et internationaux : itération en jours plutôt qu'en mois, livraison propre, et un coût qui tient debout.",
-      "Fin 2025, Claude Code a changé la donne. En quelques mois d'usage quotidien sur des projets pro, j'ai vu le code pur retrouver la vitesse du no-code, avec davantage de contrôle sur l’architecture. Aujourd'hui je développe en [Next.js et React](/services/developpeur-react-nextjs-madagascar) et en [Python avec un agent IA](/services/developpeur-python-ia-madagascar) en copilote permanent. Même rapidité de livraison qu'avant, profondeur d'un vrai dev fullstack.",
-      "Mon positionnement actuel : développeur fullstack JavaScript basé à Madagascar, avec une [double culture no-code et low-code](/services/developpeur-low-code-madagascar) que peu de freelances cumulent. Que vous visiez un site web performant, conçu pour être découvert sur Google et compris par les moteurs IA (SEO + GEO), un [SaaS Next.js + Supabase à sortir en quelques semaines](/services/developpeur-nextjs-supabase-madagascar), ou une [intégration d'agents IA dans votre produit existant](/services/developpeur-agent-ia-madagascar), c'est exactement ce que je livre au quotidien depuis Madagascar. C'est la posture d'un [Forward Deployed Engineer](/services/forward-deployed-engineer) : partir du problème métier, en discuter avec le client, puis construire la solution qui colle au besoin, pas du code livré en silo."
+      "Mon passage par Bubble et Webflow m’a appris à prototyper vite, à montrer un parcours concret et à confronter les choix techniques au besoin réel. Je conserve cette discipline produit, mais le no-code n’est plus mon positionnement principal.",
+      "Aujourd’hui, je construis des [applications métier et SaaS](/services/developpeur-javascript-madagascar) avec React, Next.js, Node.js et PostgreSQL, puis je relie les processus avec des [workflows n8n documentés](/services/automatisation-n8n-madagascar). Le développement assisté par IA accélère l’exécution ; les choix d’architecture, les tests et la validation restent sous contrôle humain.",
+      "Pour une PME, je peux prendre en charge un produit de bout en bout. Pour une agence, j’interviens aussi comme [renfort technique sur un lot défini](/services/renfort-technique-agence-ia). Dans les deux cas, la méthode reste la même : partir du problème, expliciter les dépendances et les erreurs importantes, puis livrer un système testable, documenté et transférable."
     ]
   },
   "testimonials": {
@@ -2708,16 +2708,16 @@
   },
   "about": {
     "title": "À propos de Manda",
-    "subtitle": "Forward Deployed Engineer · Développeur Full Stack · Architecte IA & Automatisation",
-    "bio": "Je suis Mandaniaina Randriambinintsoa, développeur freelance à Antananarivo. Formé en développement informatique (Master 1, ESTI), j'ai commencé par du JavaScript en alternance. En 2023 je suis passé au No-Code, Bubble et Webflow, parce que ça permettait de sortir des projets livrables en quelques semaines. Ça a bien marché pendant trois ans. Fin 2025, le développement assisté par IA a changé la donne. Je suis revenu au code pur, parce que le code reste ce qu'il y a de plus flexible quand on veut configurer des serveurs, poser une vraie architecture et tenir la montée en charge. Ma stack aujourd'hui : React et Next.js côté front, Supabase et Neon côté back, n8n et Python pour l'automatisation. Concrètement, je travaille comme un Forward Deployed Engineer : je pars du problème métier du client, j'en discute avec lui, puis je construis la solution qui colle au besoin (agent IA, automatisation n8n, app sur mesure), pas du code livré en silo.",
+    "subtitle": "Développeur d’applications métier · Consultant n8n · Forward Deployed Engineer",
+    "bio": "Je suis Mandaniaina Randriambinintsoa, développeur d’applications métier et consultant n8n à Antananarivo. Formé en développement informatique (Master 1, ESTI), j’ai commencé par JavaScript avant de livrer des produits avec Bubble et Webflow. Cette expérience no-code m’a appris à cadrer vite un besoin, montrer un parcours utilisable et éviter de construire des fonctions sans valeur. Depuis fin 2025, je combine cette culture produit avec le contrôle du code : React et Next.js pour les interfaces, Supabase et Neon pour les données, n8n et Python pour les automatisations. Je travaille comme un Forward Deployed Engineer : je pars du problème métier, je clarifie les contraintes avec le client, puis je livre une application, une API ou un workflow testé, documenté et transférable.",
     "philosophy": "La création d'une œuvre d'art n'est pas le fruit du hasard, c'est le résultat de l'imagination, du travail et de la détermination.",
     "approach_title": "Mon approche",
     "approach_items": [
-      "Définir l'architecture technique des projets",
-      "Utiliser les AI builders (Claude Code, LLMs) pour générer rapidement les applications",
-      "Vérifier, tester et itérer jusqu'à obtenir des fonctionnalités fiables et scalables"
+      "Transformer le besoin métier en périmètre, architecture et critères d’acceptation",
+      "Construire l’interface, les données, les API et les workflows comme un seul parcours",
+      "Tester les cas importants, documenter l’exploitation et organiser un transfert clair"
     ],
-    "experience": "+4 ans de développement. JavaScript en alternance, puis No-Code chez GetHumanCall et ScalApp.fr, et maintenant full stack IA chez ARPON. De chaque phase j'ai gardé ce qui marchait : la rapidité du No-Code, le contrôle du code, la vitesse de l'IA.",
+    "experience": "Plus de 4 ans de développement : JavaScript en alternance, livraison rapide de produits avec Bubble et Webflow, puis applications full-stack et automatisations chez ARPON. Le no-code fait partie de mon parcours ; mon activité actuelle porte sur les applications métier, les API et les workflows n8n maintenables.",
     "cta": "Ouvert à la collaboration mondiale.",
     "timeline": [
       {
@@ -2734,7 +2734,7 @@
       },
       {
         "period": "2026+",
-        "title": "Développeur Full Stack & Architecte IA",
+        "title": "Développeur d’applications & Architecte IA",
         "company": "ARPON",
         "description": "Retour au code pur : sites, SaaS, automatisations n8n, intégrations IA avec Claude Code"
       }
@@ -2742,7 +2742,7 @@
   },
   "contact": {
     "title": "Démarrer un projet",
-    "subtitle": "Discutons de votre prochain projet d'automatisation ou de développement.",
+    "subtitle": "Décrivez l’application, le workflow n8n ou le lot technique à cadrer.",
     "name_label": "Nom",
     "email_label": "Email",
     "message_label": "Message",

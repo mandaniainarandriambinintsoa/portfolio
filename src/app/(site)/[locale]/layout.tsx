@@ -85,9 +85,9 @@ export default async function LocaleLayout({
       <a href="#main-content" className="skip-to-content">
         {locale === "fr" ? "Aller au contenu" : "Skip to content"}
       </a>
-      <PersonJsonLd />
+      <PersonJsonLd locale={locale} />
       <WebSiteJsonLd />
-      <LocalBusinessJsonLd />
+      <LocalBusinessJsonLd locale={locale} />
       <div className="mesh-gradient-bg" aria-hidden="true" />
       <Header locale={locale} />
       {children}

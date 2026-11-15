@@ -82,6 +82,10 @@ export default function Footer({
             href: "/services/automatisation-n8n-madagascar",
           },
           {
+            label: "Renfort agence IA",
+            href: "/services/renfort-technique-agence-ia",
+          },
+          {
             label: "Freelance ou agence ?",
             href: "/services/freelance-vs-agence-offshore-madagascar",
           },
@@ -161,6 +165,10 @@ export default function Footer({
             href: "/en/services/n8n-automation-expert-madagascar",
           },
           {
+            label: "AI agency delivery partner",
+            href: "/en/services/white-label-ai-development-partner",
+          },
+          {
             label: "Freelance or agency?",
             href: "/en/services/freelance-vs-offshore-agency-madagascar",
           },
@@ -208,7 +216,7 @@ export default function Footer({
         ];
 
   const groupFor = (href: string) => {
-    if (/seo|offshore/.test(href)) return "advice";
+    if (/seo|offshore|agence-ia|agency|partner/.test(href)) return "advice";
     if (
       /javascript|react|nodejs|supabase|python|codex|claude|forward/.test(href)
     )

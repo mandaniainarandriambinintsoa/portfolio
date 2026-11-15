@@ -91,7 +91,11 @@ export default async function AboutPage({
             <div className="flex-shrink-0 mx-auto md:mx-0">
               <Image
                 src="/images/manda-photo2.webp"
-                alt="Mandaniaina Randriambinintsoa - Architecte IA & Automatisation Builder"
+                alt={
+                  locale === "fr"
+                    ? "Mandaniaina Randriambinintsoa, développeur d’applications métier et consultant n8n"
+                    : "Mandaniaina Randriambinintsoa, business application developer and n8n consultant"
+                }
                 width={288}
                 height={336}
                 className="rounded-2xl object-cover border border-white/10"

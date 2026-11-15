@@ -1,11 +1,12 @@
 import JsonLd from "./JsonLd";
 import { SITE_URL, PERSONAL_INFO, SOCIAL_LINKS } from "@/lib/constants";
+import type { Locale } from "@/i18n/config";
 
 type BlogPostJsonLdProps = {
   title: string;
   description: string;
   slug: string;
-  locale: string;
+  locale: Locale;
   publishedAt: string | null;
   updatedAt?: string | null;
   author: string;
@@ -44,18 +45,21 @@ export default function BlogPostJsonLd({
           "@id": `${SITE_URL}/#person`,
           name: author,
           url: `${SITE_URL}${prefix}/about`,
-          jobTitle: PERSONAL_INFO.jobTitle[locale as "fr" | "en"],
+          jobTitle: PERSONAL_INFO.jobTitle[locale],
           image: `${SITE_URL}/images/manda-photo2.webp`,
           sameAs: [SOCIAL_LINKS.linkedin, SOCIAL_LINKS.github],
         },
         publisher: {
           "@type": "ProfessionalService",
           "@id": `${SITE_URL}/#business`,
-          name: "Manda — Applications métier, IA et automatisation",
+          name:
+            locale === "fr"
+              ? "Manda — Applications métier et automatisation n8n"
+              : "Manda — Business applications and n8n automation",
           url: SITE_URL,
           logo: {
             "@type": "ImageObject",
-            url: `${SITE_URL}/favicon.svg`,
+            url: `${SITE_URL}/icon.svg`,
           },
         },
         ...(coverImage

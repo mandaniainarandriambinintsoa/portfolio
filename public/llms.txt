@@ -1,6 +1,6 @@
-# Manda - Product Builder IA et automatisation n8n
+# Manda - Applications metier et automatisation n8n
 
-> Portfolio professionnel de Mandaniaina "Manda" Randriambinintsoa, Product Builder freelance base a Antananarivo, Madagascar. Le site documente des services de developpement Next.js, d'automatisation n8n, d'integration IA et d'optimisation SEO/GEO, ainsi que des projets livres pour des clients en France, aux Etats-Unis et a Madagascar.
+> Portfolio professionnel de Mandaniaina "Manda" Randriambinintsoa, developpeur d'applications metier et consultant n8n base a Antananarivo, Madagascar. Le site documente des applications SaaS, outils internes, API, automatisations n8n et missions de renfort technique livres pour des entreprises et des agences.
 
 ## Identite et methode
 
@@ -12,6 +12,9 @@
 
 ## Services principaux
 
+- [Applications metier et SaaS](https://manda-ia.com/services/developpeur-javascript-madagascar): Developpement fullstack JavaScript et TypeScript avec React, Next.js, Node.js, API et PostgreSQL.
+- [Consultant n8n freelance](https://manda-ia.com/services/automatisation-n8n-madagascar): Workflows n8n documentes, integrations API, gestion des erreurs et deploiement pour PME et equipes distantes.
+- [Renfort technique pour agence IA](https://manda-ia.com/services/renfort-technique-agence-ia): Prise en charge d'un lot defini en marque blanche avec code, tests, documentation et transfert sous le controle de l'agence.
 - [Developpement de sites et SaaS](https://manda-ia.com/services/developpement-sites-saas): Conception de sites metier et applications SaaS avec Next.js, API, authentification et base de donnees.
 - [Integration IA](https://manda-ia.com/services/integration-ia): Integration d'agents IA, recherche documentaire, outils metier et validation humaine.
 - [Automatisation n8n](https://manda-ia.com/services/automatisation-n8n): Workflows n8n reliant formulaires, CRM, emails, API et outils internes.
@@ -31,6 +34,9 @@
 
 ## English services
 
+- [Business application developer](https://manda-ia.com/en/services/javascript-developer-madagascar): Full-stack JavaScript and TypeScript delivery with React, Next.js, Node.js, APIs and PostgreSQL.
+- [Freelance n8n consultant](https://manda-ia.com/en/services/n8n-automation-expert-madagascar): Documented n8n workflows, API integrations, error handling and deployment for remote teams.
+- [Technical delivery partner for AI agencies](https://manda-ia.com/en/services/white-label-ai-development-partner): White-label delivery for a defined workstream with testing, documentation and clean handoff.
 - [Remote n8n automation consultant](https://manda-ia.com/en/services/remote-n8n-automation-consultant): Production n8n workflows, API integrations, monitoring and self-hosted deployments for international teams.
 - [Forward Deployed AI Engineer for US teams](https://manda-ia.com/en/services/forward-deployed-engineer): Contract delivery from operational problem discovery to production AI agents, automations and custom applications.
 - [Next.js and Supabase developer](https://manda-ia.com/en/services/nextjs-supabase-developer-madagascar): SaaS MVP development with authentication, PostgreSQL, dashboards and real-time features.
@@ -51,6 +57,7 @@
 ## Realisations
 
 - [Toutes les realisations](https://manda-ia.com/projects): Index des produits, automatisations, integrations IA et sites livres.
+- [Audio Recorder pour Windows](https://manda-ia.com/projects/audio-recorder-windows): Application locale Tauri et Rust qui enregistre le son du systeme et le microphone en MP3, avec code source et version telechargeable publics.
 - [Audit performance de manda-ia.com](https://manda-ia.com/projects/optimisation-performance-manda-ia): Etude de cas Next.js avec Lighthouse, Core Web Vitals, architecture CSS, cache, Vercel, Supabase et cout cloud.
 - [PaidMada Mobile Money](https://manda-ia.com/projects/paidmada-mobile-money): Backend et tableau de bord Mobile Money avec Orange Money, MVola et Airtel Money.
 - [Qualification de leads Facebook avec n8n](https://manda-ia.com/projects/facebook-agen-ia): Etude de cas sur la qualification de conversations, le scoring et la synchronisation CRM.
@@ -61,6 +68,7 @@
 
 ## Ressources
 
+- [Automatiser la creation video avec ChatGPT, Codex et HyperFrames](https://manda-ia.com/blog/automatiser-creation-video-ia): Retour d'experience sur un pipeline video avec validations humaines, production sur VPS et boucle de controle qualite bornee.
 - [Automatiser son entreprise avec n8n](https://manda-ia.com/blog/automatiser-business-n8n-guide-complet): Choix d'hebergement, architecture, couts, erreurs et integration IA.
 - [Claude Code et n8n](https://manda-ia.com/blog/claude-code-developper-avec-ia): Methode de developpement assiste par IA et automatisation des taches techniques.
 - [Pourquoi Supabase remplace Firebase dans certains projets](https://manda-ia.com/blog/pourquoi-supabase-remplace-firebase): Comparaison de modele de donnees, open source, cout et exploitation.

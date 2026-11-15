@@ -5,12 +5,12 @@
       "description": "Business application developer and n8n consultant in Madagascar. I build reliable SaaS, internal tools and automations for companies and agencies."
     },
     "about": {
-      "title": "Manda Randriambinintsoa | No-Code Developer & N8N Expert from Madagascar",
-      "description": "Freelance Product Builder based in Antananarivo. 4+ years building with Next.js, Supabase, Python, n8n, Claude Code, Codex and prompt engineering. See my journey and projects."
+      "title": "Manda | Business Application Developer & n8n Consultant",
+      "description": "Business application developer and n8n consultant in Antananarivo with 4+ years of experience building SaaS products, internal tools, APIs and automation."
     },
     "contact": {
-      "title": "Contact Manda | Start an Automation Project",
-      "description": "Contact Mandaniaina Randriambinintsoa for your automation projects, no-code development and AI integration."
+      "title": "Contact Manda | Business applications and n8n automation",
+      "description": "Describe your business application, SaaS, API, n8n automation or technical delivery support requirement."
     },
     "quiz": {
       "title": "Automation Quiz | Find the Perfect Solution for Your Business",
@@ -590,7 +590,7 @@
           ]
         },
         "key": "automatisation-n8n-madagascar",
-        "updatedAt": "2026-10-08T00:00:00Z"
+        "updatedAt": "2026-11-15T00:00:00+03:00"
       },
       {
         "icon": "code",
@@ -1411,7 +1411,7 @@
           ]
         },
         "key": "developpeur-javascript-madagascar",
-        "updatedAt": "2026-10-20T00:00:00Z"
+        "updatedAt": "2026-11-15T00:00:00+03:00"
       },
       {
         "icon": "dns",
@@ -2365,11 +2365,11 @@
   },
   "approach": {
     "title": "THE APPROACH",
-    "heading": "From no-code experience to business application development",
+    "heading": "From a business problem to a maintainable application",
     "paragraphs": [
-      "From 2023, I delivered from Madagascar dozens of marketing sites and SaaS MVPs entirely in [no-code](/en/services/no-code-developer-madagascar). Webflow for premium sites, Bubble for business apps, [n8n to plug everything](/en/services/n8n-automation-expert-madagascar) into client tools. An approach proven with my French and international clients: iteration in days rather than months, clean delivery, and pricing that stays grounded.",
-      "Late 2025, Claude Code changed the game. After months of daily use on production projects, I watched pure code regain the speed of no-code, with more control over architecture. Today I build with [Next.js and React](/en/services/hire-react-nextjs-developer-madagascar) and with [Python plus AI agents](/en/services/python-ai-developer-madagascar) as permanent copilot. Same delivery speed as before, depth of a real fullstack dev.",
-      "Current positioning: fullstack JavaScript developer based in Madagascar, with a [no-code and low-code dual culture](/en/services/low-code-developer-madagascar) few freelancers combine. Whether you're aiming for a high-performance website, designed for search discoverability and clear AI-readable content (SEO + GEO), a [Next.js + Supabase SaaS to ship in weeks](/en/services/nextjs-supabase-developer-madagascar), or AI agents integrated into your existing product, that's exactly what I deliver daily from Madagascar. This is the posture of a [Forward Deployed Engineer](/en/services/forward-deployed-engineer): start from the business problem, talk it through with the client, then build the solution that fits the need, not code shipped in a silo."
+      "Working with Bubble and Webflow taught me to prototype quickly, demonstrate a concrete journey and test technical choices against the real need. I keep that product discipline, but no-code is no longer my primary positioning.",
+      "Today I build [business applications and SaaS products](/en/services/javascript-developer-madagascar) with React, Next.js, Node.js and PostgreSQL, then connect operations through [documented n8n workflows](/en/services/n8n-automation-expert-madagascar). AI-assisted development speeds up execution; architecture decisions, testing and validation remain under human control.",
+      "For a company, I can own a product from scope to handoff. For an agency, I can join as [technical delivery support for a defined workstream](/en/services/white-label-ai-development-partner). In both cases, the method is the same: start from the problem, make dependencies and important failures explicit, then deliver a system that is testable, documented and transferable."
     ]
   },
   "testimonials": {
@@ -2731,16 +2731,16 @@
   },
   "about": {
     "title": "About Manda",
-    "subtitle": "Forward Deployed Engineer · Full Stack Developer · AI & Automation Architect",
-    "bio": "I'm Mandaniaina Randriambinintsoa, freelance developer based in Antananarivo. Trained in Computer Science (Master's, ESTI), I started with JavaScript development. In 2023 I moved to No-Code, Bubble and Webflow, because it let me ship working products in a few weeks. That worked well for three years. Late 2025, AI-assisted development changed the game. I went back to pure code, because code is still the most flexible option when you need to configure servers, build real architecture and handle scale. My stack today: React and Next.js on the front, Supabase and Neon on the back, n8n and Python for automation. Concretely, I work as a Forward Deployed Engineer: I start from the client's business problem, talk it through with them, then build the solution that fits the need (AI agent, n8n automation, custom app), not code shipped in a silo.",
+    "subtitle": "Business Application Developer · n8n Consultant · Forward Deployed Engineer",
+    "bio": "I’m Mandaniaina Randriambinintsoa, a business application developer and n8n consultant based in Antananarivo. Trained in Computer Science (Master’s, ESTI), I started with JavaScript before shipping products with Bubble and Webflow. That no-code experience taught me to scope quickly, demonstrate a usable journey and avoid building features without business value. Since late 2025, I have combined that product discipline with the control of code: React and Next.js for interfaces, Supabase and Neon for data, and n8n and Python for automation. I work as a Forward Deployed Engineer: I start from the business problem, clarify constraints with the client, then deliver a tested, documented and transferable application, API or workflow.",
     "philosophy": "Creating a work of art is not the result of chance—it's the result of imagination, hard work, and determination.",
     "approach_title": "My approach",
     "approach_items": [
-      "Define the technical architecture of projects",
-      "Use AI builders (Claude Code, LLMs) to rapidly generate applications",
-      "Verify, test and iterate until features are reliable, scalable and production-ready"
+      "Turn the business need into scope, architecture and acceptance criteria",
+      "Build the interface, data, APIs and workflows as one user journey",
+      "Test important cases, document operations and organize a clear handoff"
     ],
-    "experience": "4+ years of development. JavaScript internship, then No-Code at GetHumanCall and ScalApp.fr, and now full stack AI at ARPON. From each phase I kept what worked: the speed of No-Code, the control of code, the velocity of AI.",
+    "experience": "More than four years of development: JavaScript training, rapid product delivery with Bubble and Webflow, then full-stack applications and automation at ARPON. No-code is part of my background; my current work focuses on maintainable business applications, APIs and n8n workflows.",
     "cta": "Open to global collaboration.",
     "timeline": [
       {
@@ -2757,7 +2757,7 @@
       },
       {
         "period": "2026+",
-        "title": "Full Stack Developer & AI Architect",
+        "title": "Business Application Developer & AI Architect",
         "company": "ARPON",
         "description": "Back to pure code: sites, SaaS, n8n automations, AI integrations with Claude Code"
       }
@@ -2765,7 +2765,7 @@
   },
   "contact": {
     "title": "Start a Project",
-    "subtitle": "Let's discuss your next automation or development project.",
+    "subtitle": "Describe the application, n8n workflow or technical workstream you need to scope.",
     "name_label": "Name",
     "email_label": "Email",
     "message_label": "Message",

@@ -1,7 +1,26 @@
 import JsonLd from "./JsonLd";
 import { SITE_URL, SOCIAL_LINKS, PERSONAL_INFO } from "@/lib/constants";
+import type { Locale } from "@/i18n/config";
 
-export default function PersonJsonLd() {
+const localizedContent: Record<
+  Locale,
+  { description: string; businessName: string }
+> = {
+  fr: {
+    description:
+      "Développeur d’applications métier et consultant n8n basé à Antananarivo, Madagascar. SaaS, outils internes, API et automatisations fiables.",
+    businessName: "Manda — Applications métier et automatisation n8n",
+  },
+  en: {
+    description:
+      "Business application developer and n8n consultant based in Antananarivo, Madagascar. SaaS products, internal tools, APIs and reliable automation.",
+    businessName: "Manda — Business applications and n8n automation",
+  },
+};
+
+export default function PersonJsonLd({ locale }: { locale: Locale }) {
+  const content = localizedContent[locale];
+
   return (
     <JsonLd
       data={{
@@ -12,11 +31,10 @@ export default function PersonJsonLd() {
         alternateName: PERSONAL_INFO.shortName,
         url: SITE_URL,
         image: `${SITE_URL}/images/manda-photo2.webp`,
-        description:
-          "Développeur d’applications métier et consultant n8n basé à Antananarivo, Madagascar. SaaS, outils internes, API et automatisations fiables.",
+        description: content.description,
         email: `mailto:${PERSONAL_INFO.email}`,
         telephone: PERSONAL_INFO.phone,
-        jobTitle: PERSONAL_INFO.jobTitle.en,
+        jobTitle: PERSONAL_INFO.jobTitle[locale],
         address: {
           "@type": "PostalAddress",
           addressLocality: "Antananarivo",
@@ -26,7 +44,7 @@ export default function PersonJsonLd() {
         worksFor: {
           "@type": "ProfessionalService",
           "@id": `${SITE_URL}/#business`,
-          name: "Manda — Applications métier et automatisation n8n",
+          name: content.businessName,
           url: SITE_URL,
         },
         sameAs: [

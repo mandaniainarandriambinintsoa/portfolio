@@ -49,11 +49,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const items: MetadataRoute.Sitemap = [];
 
   // Static top-level routes (FR + EN)
-  const staticRoutes: { fr: string; en: string }[] = [
-    { fr: "/", en: "/en" },
-    { fr: "/about", en: "/en/about" },
-    { fr: "/contact", en: "/en/contact" },
-    { fr: "/services", en: "/en/services" },
+  const positioningUpdatedAt = new Date("2026-11-15T00:00:00+03:00");
+  const staticRoutes: {
+    fr: string;
+    en: string;
+    lastModified?: Date;
+  }[] = [
+    { fr: "/", en: "/en", lastModified: positioningUpdatedAt },
+    { fr: "/about", en: "/en/about", lastModified: positioningUpdatedAt },
+    { fr: "/contact", en: "/en/contact", lastModified: positioningUpdatedAt },
+    {
+      fr: "/services",
+      en: "/en/services",
+      lastModified: positioningUpdatedAt,
+    },
     { fr: "/projects", en: "/en/projects" },
     { fr: "/labs", en: "/en/labs" },
     { fr: "/site-metier", en: "/en/site-metier" },
@@ -65,8 +74,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ];
 
   for (const route of staticRoutes) {
-    items.push(entry(route.fr, route.en, undefined, "fr"));
-    items.push(entry(route.fr, route.en, undefined, "en"));
+    items.push(entry(route.fr, route.en, route.lastModified, "fr"));
+    items.push(entry(route.fr, route.en, route.lastModified, "en"));
   }
 
   // Solutions SEO/GEO — map by array index to keep FR/EN pairs in sync
