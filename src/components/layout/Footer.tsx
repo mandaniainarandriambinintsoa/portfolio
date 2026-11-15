@@ -38,6 +38,7 @@ export default function Footer({
           : "View business website catalog",
     },
     { label: locale === "fr" ? "À propos" : "About", href: `${prefix}/about` },
+    { label: locale === "fr" ? "Objectifs" : "Goals", href: `${prefix}/goals` },
     { label: "Contact", href: `${prefix}/contact` },
   ];
 

@@ -21,6 +21,10 @@ export const navItems: NavItem[] = [
     href: { fr: "/about", en: "/en/about" },
   },
   {
+    label: { fr: "Objectifs", en: "Goals" },
+    href: { fr: "/goals", en: "/en/goals" },
+  },
+  {
     label: { fr: "Blog", en: "Blog" },
     href: { fr: "/blog", en: "/en/blog" },
   },

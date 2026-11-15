@@ -57,6 +57,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }[] = [
     { fr: "/", en: "/en", lastModified: positioningUpdatedAt },
     { fr: "/about", en: "/en/about", lastModified: positioningUpdatedAt },
+    { fr: "/goals", en: "/en/goals", lastModified: positioningUpdatedAt },
     { fr: "/contact", en: "/en/contact", lastModified: positioningUpdatedAt },
     {
       fr: "/services",

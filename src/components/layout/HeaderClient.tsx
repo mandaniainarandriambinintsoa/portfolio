@@ -65,7 +65,7 @@ export default function HeaderClient({
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((item) => (
               <Link
                 key={item.href}
@@ -90,7 +90,7 @@ export default function HeaderClient({
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-3 relative z-50"
+            className="lg:hidden flex flex-col gap-1.5 p-3 relative z-50"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
@@ -116,7 +116,7 @@ export default function HeaderClient({
 
       {/* Mobile menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[#050507]/95 backdrop-blur-xl pt-28 px-8 transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 z-40 bg-[#050507]/95 backdrop-blur-xl pt-28 px-8 transition-all duration-300 lg:hidden ${
           mobileOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"

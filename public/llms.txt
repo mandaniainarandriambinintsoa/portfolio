@@ -6,6 +6,7 @@
 
 - [Accueil](https://manda-ia.com): Positionnement, services, realisations selectionnees et moyens de contact.
 - [A propos](https://manda-ia.com/about): Parcours, stack technique, experience et facon de travailler de Mandaniaina Randriambinintsoa.
+- [Objectifs](https://manda-ia.com/goals): Feuille de route publique de formation, developpement professionnel, entrepreneuriat, investissement et apprentissage.
 - [Services](https://manda-ia.com/services): Vue d'ensemble des prestations de developpement, automatisation, IA et optimisation web.
 - [Processus](https://manda-ia.com/#process): Etapes utilisees pour cadrer, construire, deployer et mesurer un projet.
 - [Contact](https://manda-ia.com/contact): Formulaire pour decrire un besoin et demander un cadrage.
